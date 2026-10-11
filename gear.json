@@ -5087,66 +5087,109 @@
     "proofreadingNote": "Transcribed from images by Claude. Please spot-check prices and weights against your book before relying on them."
   },
   "startingFunds": {
-    "status": "from-PHB-table-43",
-    "source": "PHB Table 43: Initial Character Funds (image supplied by owner)",
+    "status": "owner house rules: 10 gp x the dice roll (this is the only ruleset; PHB Table 43 kept as phbOriginal for reference)",
+    "source": "Owner-supplied dice. PHB Table 43 values retained per group as phbOriginal, reference only.",
     "unit": "gp",
     "byGroup": {
       "warrior": {
         "dice": {
-          "count": 5,
+          "count": 8,
           "sides": 4,
           "bonus": 0
         },
         "multiplier": 10,
         "unit": "gp",
-        "text": "5d4 x 10 gp",
+        "text": "8d4 x 10 gp",
         "rolledRangeGp": {
-          "min": 50,
-          "max": 200
-        }
+          "min": 80,
+          "max": 320
+        },
+        "phbOriginal": {
+          "text": "5d4 x 10 gp",
+          "rolledRangeGp": {
+            "min": 50,
+            "max": 200
+          }
+        },
+        "status": "confirmed-by-owner (8d4 x 10 = 80-320 gp)"
       },
       "wizard": {
         "dice": {
           "count": 1,
           "sides": 4,
-          "bonus": 1
+          "bonus": 4
         },
         "multiplier": 10,
         "unit": "gp",
-        "text": "(1d4+1) x 10 gp",
+        "text": "(1d4+4) x 10 gp",
         "rolledRangeGp": {
-          "min": 20,
-          "max": 50
+          "min": 50,
+          "max": 80
+        },
+        "phbOriginal": {
+          "text": "(1d4+1) x 10 gp",
+          "rolledRangeGp": {
+            "min": 20,
+            "max": 50
+          }
         }
       },
       "rogue": {
         "dice": {
-          "count": 2,
+          "count": 4,
           "sides": 6,
           "bonus": 0
         },
         "multiplier": 10,
         "unit": "gp",
-        "text": "2d6 x 10 gp",
+        "text": "4d6 x 10 gp",
         "rolledRangeGp": {
-          "min": 20,
-          "max": 120
+          "min": 40,
+          "max": 240
+        },
+        "phbOriginal": {
+          "text": "2d6 x 10 gp",
+          "rolledRangeGp": {
+            "min": 20,
+            "max": 120
+          }
         }
       },
       "priest": {
         "dice": {
-          "count": 3,
+          "count": 4,
           "sides": 6,
-          "bonus": 0
+          "bonus": 1
         },
         "multiplier": 10,
         "unit": "gp",
-        "text": "3d6 x 10 gp",
+        "text": "(4d6+1) x 10 gp",
         "rolledRangeGp": {
-          "min": 30,
-          "max": 180
+          "min": 50,
+          "max": 250
+        },
+        "phbOriginal": {
+          "text": "3d6 x 10 gp",
+          "rolledRangeGp": {
+            "min": 30,
+            "max": 180
+          }
         },
         "note": "Priest restriction applies (see priestRestriction)."
+      },
+      "monk": {
+        "dice": {
+          "count": 1,
+          "sides": 3,
+          "bonus": 1
+        },
+        "multiplier": 10,
+        "unit": "gp",
+        "text": "(1d3+1) x 10 gp",
+        "rolledRangeGp": {
+          "min": 20,
+          "max": 40
+        }
       }
     },
     "classToGroup": "Use classGroups in rules-core.json (fighter/paladin/ranger = warrior, cleric/druid = priest, wizard = wizard, thief/bard = rogue).",
@@ -5169,12 +5212,16 @@
       "toConfirm": "Whether to also let the user set the amount as a mix of coins (PP/GP/EP/SP/CP), or gp only."
     },
     "multiClass": {
-      "status": "needs-source",
-      "note": "Table 43 does not say which group's dice a multi-class character uses. Enter the PHB rule."
-    },
-    "monk": {
-      "status": "undefined",
-      "note": "100% house class, not on Table 43. Owner to say which group's dice it uses. Monks keep no more than 25 gp per level (house.json)."
+      "status": "confirmed-by-owner (rounding to confirm)",
+      "rule": "Roll the dice for each class (using that class's group dice, 10 gp x roll), add the results, and divide by the number of classes (the average of the rolls).",
+      "formula": "startingFundsGp = sum(10 x roll[class]) / numberOfClasses",
+      "classToGroup": "fighter/paladin/ranger = warrior; cleric/druid = priest; wizard/illusionist = wizard; thief/bard = rogue; monk = monk",
+      "rounding": {
+        "status": "to confirm",
+        "assumption": "round up to a whole gp, matching the hit die rule"
+      },
+      "example": "Fighter/Thief: 8d4 rolls 20 (200 gp) and 4d6 rolls 14 (140 gp): (200 + 140) / 2 = 170 gp.",
+      "override": "The manual override still applies."
     }
   }
 }

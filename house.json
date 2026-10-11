@@ -3,7 +3,7 @@
     "file": "house",
     "schemaVersion": "0.1.0",
     "provenance": "Extracted from the Tradestands character record sheets (v6.0; Monk v6.3). Everything here is treated as an overlay on rules-core / rules-skills. Items marked 'unconfirmed' need you to say whether they are house rules.",
-    "mergeOrder": "Base rules (rules-core, rules-skills, gear) first, then this file overrides or adds. A 'core rules only' mode ignores this file.",
+    "mergeOrder": "Base rules (rules-core, rules-skills, gear) first, then this file overrides or adds. There is no core-rules-only mode: this file is always applied.",
     "openIssues": [
       "houseRules: intBonusSpells, meleeMove and monkClass are confirmed as house rules. The rest (mentalSave, encumbranceSplit, tallyRows, nonProficientPenalty) still need marking.",
       "Druid: 'locate pure water' (level 3) and 'converse with neutral woodland creatures' (level 7) are on your sheets but not in the PHB druid text you supplied. Kept under sheetOnlyAbilities. Confirm whether they are house additions to keep or should be dropped."
@@ -1238,5 +1238,17 @@
     "abilityMinimums": "A character must meet the minimum abilities of each individual class in the combination.",
     "combinationsByRace": "rules-core.json races.multiClass",
     "dualClassing": "ignored (confirmed by owner)"
+  },
+  "startingFunds": {
+    "status": "applied in gear.json startingFunds.byGroup (owner dice, 10 gp x roll)",
+    "dice": {
+      "warrior": "8d4 x 10 gp",
+      "wizard": "(1d4+4) x 10 gp",
+      "rogue": "4d6 x 10 gp",
+      "priest": "(4d6+1) x 10 gp",
+      "monk": "(1d3+1) x 10 gp"
+    },
+    "monkNote": "Monks also keep no more than 25 gp per level (house rule above).",
+    "multiClass": "see gear.json startingFunds.multiClass (average of the per-class rolls)"
   }
 }

@@ -3682,7 +3682,7 @@
         }
       }
     },
-    "coreRuleNote": "hitPointsAfterNameLevel.conBonusApplies stores the core (PHB) value. The engine should apply house.json overrides unless a 'core rules only' mode is selected."
+    "coreRuleNote": "hitPointsAfterNameLevel.conBonusApplies stores the PHB value. The engine always applies house.json overrides (conBonusAllLevels); there is no core-rules-only mode."
   },
   "xpTables": {
     "status": "from-sheets-with-flags",
