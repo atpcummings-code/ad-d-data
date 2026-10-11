@@ -1,0 +1,6130 @@
+{
+  "meta": {
+    "file": "rules-core",
+    "schemaVersion": "0.1.0",
+    "ruleset": "AD&D 2nd Edition (Player's Handbook / Dungeon Master's Guide). NOT 5th edition.",
+    "provenance": "xpTables, classGroups, saveCategories and abilityScores.fields were extracted from the Tradestands character record sheets (v6.0; Monk v6.3). Sections with status 'needs-source' are empty skeletons: enter them from your PHB/DMG and run the validator. spellProgression comes from PHB Tables 21 and 24 (images supplied by owner). specialistWizards comes from PHB Table 22 (image supplied by owner). Paladin spell progression comes from PHB Table 17 (image supplied by owner). Ranger spell progression comes from PHB Table 18 (image supplied by owner). Bard spell progression comes from PHB Table 32 (image supplied by owner). Race height, weight, age and aging come from PHB Tables 10-12 (images supplied by owner). Strength table comes from PHB Table 1 (image supplied by owner). Dexterity table comes from PHB Table 2 (image supplied by owner). Intelligence, Wisdom and Charisma tables come from PHB Tables 4-6 (images supplied by owner). Constitution table comes from PHB Table 3 (image supplied by owner). Alignments and class requirements were supplied by the owner. Ranger ability minimums, prime requisites, alignment and XP bonus come from PHB text supplied by the owner. Paladin requirements come from PHB text supplied by the owner. Class ability minimums come from PHB Table 13 (image supplied by owner). Warrior hit dice, melee attacks (Table 15) and Fighter requirements come from PHB text and a table supplied by the owner. Mage requirements come from PHB text supplied by the owner. Illusionist requirements come from PHB text supplied by the owner. Cleric requirements come from PHB text supplied by the owner. Druid requirements come from PHB text supplied by the owner. Thief requirements come from PHB text supplied by the owner. Bard requirements come from PHB text supplied by the owner. THAC0 comes from PHB Table 53 (image supplied by owner). Saving throws come from PHB Table 60 (image supplied by owner). Base movement by race was supplied by the owner. Encumbrance and modified movement come from PHB Tables 47 and 48 (images supplied by owner).",
+    "sectionStatus": {
+      "classGroups": "draft",
+      "saveCategories": "from-sheets",
+      "abilityScores": "all six ability tables done (Tables 1-6); wizard/priest-specific columns kept",
+      "races": "partial: height, weight, age and aging (Tables 10-12) done; ability limits, class restrictions, saves and abilities still needed",
+      "classes": "all standard classes and the Illusionist entered with hit dice; monk and a few restrictions still needed",
+      "xpTables": "from-sheets",
+      "thac0": "from-PHB-table-53",
+      "savingThrows": "from-PHB-table-60",
+      "movement": "base move, Table 47 encumbrance and Table 48 modified movement entered; melee move and swimming still needed",
+      "spellProgression": "from-tables-21-24-17-18-and-32 (wizard, cleric/druid, paladin, ranger, bard)",
+      "specialistWizards": "from-PHB-table-22",
+      "alignments": "nine alignments with Paladin, Druid, Ranger and Druid/Ranger rules; other classes not supplied"
+    },
+    "openIssues": [
+      "Monk is entirely a house class (confirmed). Its level table lives in house.json; its saving throw table and proficiency slots are still undefined.",
+      "Spell progression for bard, paladin, ranger and specialist wizards not supplied yet. House spell rules not defined yet.",
+      "Specialist wizards: confirm they share the Wizard XP, THAC0, saves and proficiency groups (only the Illusionist is on Table 38). Thief/bard kits and other PHB variants are not covered.",
+      "Alignment rule for the Monk (house class) not supplied.",
+      "Half-orc: named for base movement but missing from the race tables supplied so far.",
+      "Table 48 rows for STR 2 and 3 were read from a sparse part of the image and need proofreading."
+    ]
+  },
+  "classGroups": {
+    "warrior": [
+      "fighter",
+      "paladin",
+      "ranger"
+    ],
+    "wizard": [
+      "wizard"
+    ],
+    "priest": [
+      "cleric",
+      "druid"
+    ],
+    "rogue": [
+      "thief",
+      "bard"
+    ],
+    "unassigned": [
+      "monk"
+    ],
+    "note": "Group membership drives THAC0, saving throws and non-weapon proficiency slots. Monk is a 100% house class with no PHB group; its THAC0 comes from its own level table, and its saves and slots are still to be defined.",
+    "monkOverrides": {
+      "thac0": "priest"
+    }
+  },
+  "classIds": {
+    "fighter": {
+      "name": "Fighter",
+      "sheetNames": [
+        "Fighter"
+      ]
+    },
+    "paladin": {
+      "name": "Paladin",
+      "sheetNames": [
+        "Paladin"
+      ]
+    },
+    "ranger": {
+      "name": "Ranger",
+      "sheetNames": [
+        "Ranger"
+      ]
+    },
+    "wizard": {
+      "name": "Wizard",
+      "sheetNames": [
+        "Wizard",
+        "Mage"
+      ]
+    },
+    "cleric": {
+      "name": "Cleric",
+      "sheetNames": [
+        "Cleric"
+      ]
+    },
+    "druid": {
+      "name": "Druid",
+      "sheetNames": [
+        "Druid"
+      ]
+    },
+    "thief": {
+      "name": "Thief",
+      "sheetNames": [
+        "Thief",
+        "Theif"
+      ]
+    },
+    "bard": {
+      "name": "Bard",
+      "sheetNames": [
+        "Bard"
+      ]
+    },
+    "monk": {
+      "name": "Monk",
+      "sheetNames": [
+        "Monk"
+      ],
+      "source": "house"
+    }
+  },
+  "saveCategories": [
+    {
+      "id": "paralyzationPoisonDeath",
+      "code": "PPD",
+      "label": "Paralyzation, Poison, Death"
+    },
+    {
+      "id": "rodStaffWand",
+      "code": "RSW",
+      "label": "Rod, Staff or Wand"
+    },
+    {
+      "id": "petrificationPolymorph",
+      "code": "PP",
+      "label": "Petrification, Polymorph"
+    },
+    {
+      "id": "breathWeapon",
+      "code": "BW",
+      "label": "Breath Weapon"
+    },
+    {
+      "id": "spells",
+      "code": "SP",
+      "label": "Spells"
+    }
+  ],
+  "abilityScores": {
+    "status": "fields-defined-values-needed",
+    "scoreRange": {
+      "min": 3,
+      "max": 25
+    },
+    "fields": {
+      "str": [
+        {
+          "id": "hitProb",
+          "label": "Hit Prob"
+        },
+        {
+          "id": "dmgAdj",
+          "label": "Dmg Adj"
+        },
+        {
+          "id": "weightAllowance",
+          "label": "Wt Adj"
+        },
+        {
+          "id": "maxPress",
+          "label": "Max Press"
+        },
+        {
+          "id": "openDoors",
+          "label": "Open Doors"
+        },
+        {
+          "id": "bendBars",
+          "label": "Bend Bars"
+        }
+      ],
+      "dex": [
+        {
+          "id": "reactionAdj",
+          "label": "Reaction Adjustment"
+        },
+        {
+          "id": "missileAdj",
+          "label": "Missile Adjustment"
+        },
+        {
+          "id": "defenseAdj",
+          "label": "Defense Adjustment"
+        }
+      ],
+      "con": [
+        {
+          "id": "hpAdj",
+          "label": "HP Adjustment",
+          "tableColumn": "hpAdjPerDie"
+        },
+        {
+          "id": "systemShock",
+          "label": "System Shock",
+          "tableColumn": "systemShockPct"
+        },
+        {
+          "id": "resurrectionSurvival",
+          "label": "Resurrect Survival",
+          "tableColumn": "resurrectionSurvivalPct"
+        },
+        {
+          "id": "poisonSave",
+          "label": "Poison Save",
+          "tableColumn": "poisonSave"
+        },
+        {
+          "id": "regeneration",
+          "label": "Regeneration",
+          "onSheet": false
+        }
+      ],
+      "int": [
+        {
+          "id": "additionalLanguages",
+          "label": "Additional Languages/NWP",
+          "tableColumn": "languages"
+        },
+        {
+          "id": "bonusSpells",
+          "label": "Bonus Spells (1st-4th)",
+          "flag": "house-rule",
+          "mechanism": "Uses the same bonus-spell table as WIS, looked up with the INT score. Wizard only (house rule).",
+          "appliesTo": [
+            "wizard"
+          ],
+          "excludes": [
+            "bard"
+          ]
+        },
+        {
+          "id": "maxSpellLevel",
+          "label": "Spell Level (max)",
+          "onSheet": false
+        },
+        {
+          "id": "chanceToLearnSpellPct",
+          "label": "Chance to Learn Spell",
+          "onSheet": false
+        },
+        {
+          "id": "maxSpellsPerLevel",
+          "label": "Max # of Spells/Level",
+          "onSheet": false
+        },
+        {
+          "id": "illusionImmunityUpToLevel",
+          "label": "Illusion Immunity",
+          "onSheet": false
+        }
+      ],
+      "wis": [
+        {
+          "id": "mentalSave",
+          "label": "Mental Save",
+          "flag": "label-unconfirmed",
+          "tableColumn": "magicalDefenseAdj",
+          "phbName": "Magical Defense Adjustment"
+        },
+        {
+          "id": "bonusSpells",
+          "label": "Bonus Spells (1st-4th)",
+          "appliesTo": [
+            "cleric",
+            "druid"
+          ],
+          "excludes": [
+            "paladin",
+            "ranger"
+          ],
+          "tableColumn": "bonusSpellLevels"
+        },
+        {
+          "id": "spellFailurePct",
+          "label": "Chance of Spell Failure",
+          "onSheet": false
+        },
+        {
+          "id": "spellImmunity",
+          "label": "Spell Immunity",
+          "onSheet": false
+        }
+      ],
+      "cha": [
+        {
+          "id": "maxHenchmen",
+          "label": "Max # Henchmen"
+        },
+        {
+          "id": "loyaltyBase",
+          "label": "Loyalty Base"
+        },
+        {
+          "id": "reactionAdj",
+          "label": "Reaction Adjustment"
+        }
+      ]
+    },
+    "exceptionalStrength": {
+      "range": "18/01-18/00",
+      "note": "Warriors only. Enter as extra rows in the STR table."
+    },
+    "monkOverride": "Monk sheet omits STR Hit Prob and Dmg Adj. See house.json monk.",
+    "table": {
+      "status": "done: STR, DEX, CON, INT, WIS and CHA",
+      "keyNote": "One entry per ability: a list of rows keyed by score or score band. Exceptional strength (18/01 to 18/00) uses exceptionalFrom/exceptionalTo; 18/00 is stored as 100.",
+      "str": {
+        "source": "PHB Table 1: Strength (image supplied by owner)",
+        "units": {
+          "weightAllowance": "pounds",
+          "maxPress": "pounds",
+          "bendBars": "percent chance",
+          "openDoors": "number on d20"
+        },
+        "printedAs": {
+          "hitProb": "0 prints as 'Normal'",
+          "dmgAdj": "0 prints as 'None'"
+        },
+        "openDoorsHeldNote": "The figure in parentheses on the table (e.g. 15(3)) is stored as openDoorsHeld. Its meaning is not explained in the image: confirm (I believe it is for locked, barred or magically held doors).",
+        "fieldIds": {
+          "hitProb": "Hit Prob.",
+          "dmgAdj": "Damage Adjust.",
+          "weightAllowance": "Weight Allow. (sheet: Wt Adj)",
+          "maxPress": "Max. Press",
+          "openDoors": "Open Doors",
+          "bendBars": "Bend Bars/Lift Gates"
+        },
+        "exceptionalStrengthNote": "18/xx applies to warriors only (see exceptionalStrength). Scores 19 to 25 carry giant-type notes as printed.",
+        "rows": [
+          {
+            "key": "1",
+            "scoreFrom": 1,
+            "scoreTo": 1,
+            "hitProb": -5,
+            "dmgAdj": -4,
+            "weightAllowance": 1,
+            "maxPress": 3,
+            "openDoors": 1,
+            "bendBars": 0
+          },
+          {
+            "key": "2",
+            "scoreFrom": 2,
+            "scoreTo": 2,
+            "hitProb": -3,
+            "dmgAdj": -2,
+            "weightAllowance": 1,
+            "maxPress": 5,
+            "openDoors": 1,
+            "bendBars": 0
+          },
+          {
+            "key": "3",
+            "scoreFrom": 3,
+            "scoreTo": 3,
+            "hitProb": -3,
+            "dmgAdj": -1,
+            "weightAllowance": 5,
+            "maxPress": 10,
+            "openDoors": 2,
+            "bendBars": 0
+          },
+          {
+            "key": "4-5",
+            "scoreFrom": 4,
+            "scoreTo": 5,
+            "hitProb": -2,
+            "dmgAdj": -1,
+            "weightAllowance": 10,
+            "maxPress": 25,
+            "openDoors": 3,
+            "bendBars": 0
+          },
+          {
+            "key": "6-7",
+            "scoreFrom": 6,
+            "scoreTo": 7,
+            "hitProb": -1,
+            "dmgAdj": 0,
+            "weightAllowance": 20,
+            "maxPress": 55,
+            "openDoors": 4,
+            "bendBars": 0
+          },
+          {
+            "key": "8-9",
+            "scoreFrom": 8,
+            "scoreTo": 9,
+            "hitProb": 0,
+            "dmgAdj": 0,
+            "weightAllowance": 35,
+            "maxPress": 90,
+            "openDoors": 5,
+            "bendBars": 1
+          },
+          {
+            "key": "10-11",
+            "scoreFrom": 10,
+            "scoreTo": 11,
+            "hitProb": 0,
+            "dmgAdj": 0,
+            "weightAllowance": 40,
+            "maxPress": 115,
+            "openDoors": 6,
+            "bendBars": 2
+          },
+          {
+            "key": "12-13",
+            "scoreFrom": 12,
+            "scoreTo": 13,
+            "hitProb": 0,
+            "dmgAdj": 0,
+            "weightAllowance": 45,
+            "maxPress": 140,
+            "openDoors": 7,
+            "bendBars": 4
+          },
+          {
+            "key": "14-15",
+            "scoreFrom": 14,
+            "scoreTo": 15,
+            "hitProb": 0,
+            "dmgAdj": 0,
+            "weightAllowance": 55,
+            "maxPress": 170,
+            "openDoors": 8,
+            "bendBars": 7
+          },
+          {
+            "key": "16",
+            "scoreFrom": 16,
+            "scoreTo": 16,
+            "hitProb": 0,
+            "dmgAdj": 1,
+            "weightAllowance": 70,
+            "maxPress": 195,
+            "openDoors": 9,
+            "bendBars": 10
+          },
+          {
+            "key": "17",
+            "scoreFrom": 17,
+            "scoreTo": 17,
+            "hitProb": 1,
+            "dmgAdj": 1,
+            "weightAllowance": 85,
+            "maxPress": 220,
+            "openDoors": 10,
+            "bendBars": 13
+          },
+          {
+            "key": "18",
+            "scoreFrom": 18,
+            "scoreTo": 18,
+            "hitProb": 1,
+            "dmgAdj": 2,
+            "weightAllowance": 110,
+            "maxPress": 255,
+            "openDoors": 11,
+            "bendBars": 16
+          },
+          {
+            "key": "18/01-50",
+            "scoreFrom": 18,
+            "scoreTo": 18,
+            "exceptionalFrom": 1,
+            "exceptionalTo": 50,
+            "hitProb": 1,
+            "dmgAdj": 3,
+            "weightAllowance": 135,
+            "maxPress": 280,
+            "openDoors": 12,
+            "bendBars": 20
+          },
+          {
+            "key": "18/51-75",
+            "scoreFrom": 18,
+            "scoreTo": 18,
+            "exceptionalFrom": 51,
+            "exceptionalTo": 75,
+            "hitProb": 2,
+            "dmgAdj": 3,
+            "weightAllowance": 160,
+            "maxPress": 305,
+            "openDoors": 13,
+            "bendBars": 25
+          },
+          {
+            "key": "18/76-90",
+            "scoreFrom": 18,
+            "scoreTo": 18,
+            "exceptionalFrom": 76,
+            "exceptionalTo": 90,
+            "hitProb": 2,
+            "dmgAdj": 4,
+            "weightAllowance": 185,
+            "maxPress": 330,
+            "openDoors": 14,
+            "bendBars": 30
+          },
+          {
+            "key": "18/91-99",
+            "scoreFrom": 18,
+            "scoreTo": 18,
+            "exceptionalFrom": 91,
+            "exceptionalTo": 99,
+            "hitProb": 2,
+            "dmgAdj": 5,
+            "weightAllowance": 235,
+            "maxPress": 380,
+            "openDoors": 15,
+            "bendBars": 35,
+            "openDoorsHeld": 3
+          },
+          {
+            "key": "18/00",
+            "scoreFrom": 18,
+            "scoreTo": 18,
+            "exceptionalFrom": 100,
+            "exceptionalTo": 100,
+            "hitProb": 3,
+            "dmgAdj": 6,
+            "weightAllowance": 335,
+            "maxPress": 480,
+            "openDoors": 16,
+            "bendBars": 40,
+            "openDoorsHeld": 6
+          },
+          {
+            "key": "19",
+            "scoreFrom": 19,
+            "scoreTo": 19,
+            "hitProb": 3,
+            "dmgAdj": 7,
+            "weightAllowance": 485,
+            "maxPress": 640,
+            "openDoors": 16,
+            "bendBars": 50,
+            "openDoorsHeld": 8,
+            "note": "Hill Giant"
+          },
+          {
+            "key": "20",
+            "scoreFrom": 20,
+            "scoreTo": 20,
+            "hitProb": 3,
+            "dmgAdj": 8,
+            "weightAllowance": 535,
+            "maxPress": 700,
+            "openDoors": 17,
+            "bendBars": 60,
+            "openDoorsHeld": 10,
+            "note": "Stone Giant"
+          },
+          {
+            "key": "21",
+            "scoreFrom": 21,
+            "scoreTo": 21,
+            "hitProb": 4,
+            "dmgAdj": 9,
+            "weightAllowance": 635,
+            "maxPress": 810,
+            "openDoors": 17,
+            "bendBars": 70,
+            "openDoorsHeld": 12,
+            "note": "Frost Giant"
+          },
+          {
+            "key": "22",
+            "scoreFrom": 22,
+            "scoreTo": 22,
+            "hitProb": 4,
+            "dmgAdj": 10,
+            "weightAllowance": 785,
+            "maxPress": 970,
+            "openDoors": 18,
+            "bendBars": 80,
+            "openDoorsHeld": 14,
+            "note": "Fire Giant"
+          },
+          {
+            "key": "23",
+            "scoreFrom": 23,
+            "scoreTo": 23,
+            "hitProb": 5,
+            "dmgAdj": 11,
+            "weightAllowance": 935,
+            "maxPress": 1130,
+            "openDoors": 18,
+            "bendBars": 90,
+            "openDoorsHeld": 16,
+            "note": "Cloud Giant"
+          },
+          {
+            "key": "24",
+            "scoreFrom": 24,
+            "scoreTo": 24,
+            "hitProb": 6,
+            "dmgAdj": 12,
+            "weightAllowance": 1235,
+            "maxPress": 1440,
+            "openDoors": 19,
+            "bendBars": 95,
+            "openDoorsHeld": 17,
+            "note": "Storm Giant"
+          },
+          {
+            "key": "25",
+            "scoreFrom": 25,
+            "scoreTo": 25,
+            "hitProb": 7,
+            "dmgAdj": 14,
+            "weightAllowance": 1535,
+            "maxPress": 1750,
+            "openDoors": 19,
+            "bendBars": 99,
+            "openDoorsHeld": 18,
+            "note": "Titan"
+          }
+        ]
+      },
+      "dex": {
+        "source": "PHB Table 2: Dexterity (image supplied by owner)",
+        "fieldIds": {
+          "reactionAdj": "Reaction Adj. (sheet: Reaction Adjustment)",
+          "missileAdj": "Missile Attack Adj. (sheet: Missile Adjustment)",
+          "defenseAdj": "Defensive Adj. (sheet: Defense Adjustment)"
+        },
+        "engineHint": "Defensive Adj. modifies Armour Class: a negative number lowers (improves) AC. Confirm sign handling against the PHB text.",
+        "thiefSkillCrossRef": "Thief Dexterity skill adjustments (rules-skills.json, Table 28) are a separate table keyed by DEX 9-19.",
+        "rows": [
+          {
+            "key": "1",
+            "scoreFrom": 1,
+            "scoreTo": 1,
+            "reactionAdj": -6,
+            "missileAdj": -6,
+            "defenseAdj": 5
+          },
+          {
+            "key": "2",
+            "scoreFrom": 2,
+            "scoreTo": 2,
+            "reactionAdj": -4,
+            "missileAdj": -4,
+            "defenseAdj": 5
+          },
+          {
+            "key": "3",
+            "scoreFrom": 3,
+            "scoreTo": 3,
+            "reactionAdj": -3,
+            "missileAdj": -3,
+            "defenseAdj": 4
+          },
+          {
+            "key": "4",
+            "scoreFrom": 4,
+            "scoreTo": 4,
+            "reactionAdj": -2,
+            "missileAdj": -2,
+            "defenseAdj": 3
+          },
+          {
+            "key": "5",
+            "scoreFrom": 5,
+            "scoreTo": 5,
+            "reactionAdj": -1,
+            "missileAdj": -1,
+            "defenseAdj": 2
+          },
+          {
+            "key": "6",
+            "scoreFrom": 6,
+            "scoreTo": 6,
+            "reactionAdj": 0,
+            "missileAdj": 0,
+            "defenseAdj": 1
+          },
+          {
+            "key": "7",
+            "scoreFrom": 7,
+            "scoreTo": 7,
+            "reactionAdj": 0,
+            "missileAdj": 0,
+            "defenseAdj": 0
+          },
+          {
+            "key": "8",
+            "scoreFrom": 8,
+            "scoreTo": 8,
+            "reactionAdj": 0,
+            "missileAdj": 0,
+            "defenseAdj": 0
+          },
+          {
+            "key": "9",
+            "scoreFrom": 9,
+            "scoreTo": 9,
+            "reactionAdj": 0,
+            "missileAdj": 0,
+            "defenseAdj": 0
+          },
+          {
+            "key": "10-14",
+            "scoreFrom": 10,
+            "scoreTo": 14,
+            "reactionAdj": 0,
+            "missileAdj": 0,
+            "defenseAdj": 0
+          },
+          {
+            "key": "15",
+            "scoreFrom": 15,
+            "scoreTo": 15,
+            "reactionAdj": 0,
+            "missileAdj": 0,
+            "defenseAdj": -1
+          },
+          {
+            "key": "16",
+            "scoreFrom": 16,
+            "scoreTo": 16,
+            "reactionAdj": 1,
+            "missileAdj": 1,
+            "defenseAdj": -2
+          },
+          {
+            "key": "17",
+            "scoreFrom": 17,
+            "scoreTo": 17,
+            "reactionAdj": 2,
+            "missileAdj": 2,
+            "defenseAdj": -3
+          },
+          {
+            "key": "18",
+            "scoreFrom": 18,
+            "scoreTo": 18,
+            "reactionAdj": 2,
+            "missileAdj": 2,
+            "defenseAdj": -4
+          },
+          {
+            "key": "19",
+            "scoreFrom": 19,
+            "scoreTo": 19,
+            "reactionAdj": 3,
+            "missileAdj": 3,
+            "defenseAdj": -4
+          },
+          {
+            "key": "20",
+            "scoreFrom": 20,
+            "scoreTo": 20,
+            "reactionAdj": 3,
+            "missileAdj": 3,
+            "defenseAdj": -4
+          },
+          {
+            "key": "21",
+            "scoreFrom": 21,
+            "scoreTo": 21,
+            "reactionAdj": 4,
+            "missileAdj": 4,
+            "defenseAdj": -5
+          },
+          {
+            "key": "22",
+            "scoreFrom": 22,
+            "scoreTo": 22,
+            "reactionAdj": 4,
+            "missileAdj": 4,
+            "defenseAdj": -5
+          },
+          {
+            "key": "23",
+            "scoreFrom": 23,
+            "scoreTo": 23,
+            "reactionAdj": 4,
+            "missileAdj": 4,
+            "defenseAdj": -5
+          },
+          {
+            "key": "24",
+            "scoreFrom": 24,
+            "scoreTo": 24,
+            "reactionAdj": 5,
+            "missileAdj": 5,
+            "defenseAdj": -6
+          },
+          {
+            "key": "25",
+            "scoreFrom": 25,
+            "scoreTo": 25,
+            "reactionAdj": 5,
+            "missileAdj": 5,
+            "defenseAdj": -6
+          }
+        ]
+      },
+      "con": {
+        "source": "PHB Table 3: Constitution (image supplied by owner)",
+        "columns": {
+          "hpAdjPerDie": "Hit Point Adjustment: bonus or penalty per Hit Die (sheet: HP Adjustment). Non-warriors are capped at +2 per die.",
+          "hpAdjPerDieWarrior": "The parenthetical figure, applying to warriors only. Equal to hpAdjPerDie where the table prints no parenthesis.",
+          "minHitDieResult": "Lowest value a rolled Hit Die counts as (see footnotes). null = no minimum.",
+          "systemShockPct": "System Shock (sheet: System Shock)",
+          "resurrectionSurvivalPct": "Resurrection Survival (sheet: Resurrect Survival)",
+          "poisonSave": "Poison Save modifier (sheet: Poison Save)",
+          "regeneration": "Regeneration, stored as 1 hit point every N turns (not on the sheets)"
+        },
+        "footnotes": {
+          "*": "The parenthetical bonus applies to warriors only. All other classes receive a maximum bonus of +2 per die.",
+          "**": "All 1s rolled for Hit Dice are automatically considered 2s.",
+          "***": "All 1s and 2s rolled for Hit Dice are automatically considered 3s.",
+          "****": "All 1s, 2s and 3s rolled for Hit Dice are automatically considered 4s."
+        },
+        "regenerationNote": "Printed as '1/6 turns' ... '1/1 turn'. Read as one hit point regained every N turns. Confirm.",
+        "warriorClasses": "fighter, paladin, ranger (class group warrior in classGroups). Confirm that the Monk (house class) is not treated as a warrior for this.",
+        "rows": [
+          {
+            "key": "1",
+            "scoreFrom": 1,
+            "scoreTo": 1,
+            "hpAdjPerDie": -3,
+            "hpAdjPerDieWarrior": -3,
+            "minHitDieResult": null,
+            "systemShockPct": 25,
+            "resurrectionSurvivalPct": 30,
+            "poisonSave": -2,
+            "regeneration": null
+          },
+          {
+            "key": "2",
+            "scoreFrom": 2,
+            "scoreTo": 2,
+            "hpAdjPerDie": -2,
+            "hpAdjPerDieWarrior": -2,
+            "minHitDieResult": null,
+            "systemShockPct": 30,
+            "resurrectionSurvivalPct": 35,
+            "poisonSave": -1,
+            "regeneration": null
+          },
+          {
+            "key": "3",
+            "scoreFrom": 3,
+            "scoreTo": 3,
+            "hpAdjPerDie": -2,
+            "hpAdjPerDieWarrior": -2,
+            "minHitDieResult": null,
+            "systemShockPct": 35,
+            "resurrectionSurvivalPct": 40,
+            "poisonSave": 0,
+            "regeneration": null
+          },
+          {
+            "key": "4",
+            "scoreFrom": 4,
+            "scoreTo": 4,
+            "hpAdjPerDie": -1,
+            "hpAdjPerDieWarrior": -1,
+            "minHitDieResult": null,
+            "systemShockPct": 40,
+            "resurrectionSurvivalPct": 45,
+            "poisonSave": 0,
+            "regeneration": null
+          },
+          {
+            "key": "5",
+            "scoreFrom": 5,
+            "scoreTo": 5,
+            "hpAdjPerDie": -1,
+            "hpAdjPerDieWarrior": -1,
+            "minHitDieResult": null,
+            "systemShockPct": 45,
+            "resurrectionSurvivalPct": 50,
+            "poisonSave": 0,
+            "regeneration": null
+          },
+          {
+            "key": "6",
+            "scoreFrom": 6,
+            "scoreTo": 6,
+            "hpAdjPerDie": -1,
+            "hpAdjPerDieWarrior": -1,
+            "minHitDieResult": null,
+            "systemShockPct": 50,
+            "resurrectionSurvivalPct": 55,
+            "poisonSave": 0,
+            "regeneration": null
+          },
+          {
+            "key": "7",
+            "scoreFrom": 7,
+            "scoreTo": 7,
+            "hpAdjPerDie": 0,
+            "hpAdjPerDieWarrior": 0,
+            "minHitDieResult": null,
+            "systemShockPct": 55,
+            "resurrectionSurvivalPct": 60,
+            "poisonSave": 0,
+            "regeneration": null
+          },
+          {
+            "key": "8",
+            "scoreFrom": 8,
+            "scoreTo": 8,
+            "hpAdjPerDie": 0,
+            "hpAdjPerDieWarrior": 0,
+            "minHitDieResult": null,
+            "systemShockPct": 60,
+            "resurrectionSurvivalPct": 65,
+            "poisonSave": 0,
+            "regeneration": null
+          },
+          {
+            "key": "9",
+            "scoreFrom": 9,
+            "scoreTo": 9,
+            "hpAdjPerDie": 0,
+            "hpAdjPerDieWarrior": 0,
+            "minHitDieResult": null,
+            "systemShockPct": 65,
+            "resurrectionSurvivalPct": 70,
+            "poisonSave": 0,
+            "regeneration": null
+          },
+          {
+            "key": "10",
+            "scoreFrom": 10,
+            "scoreTo": 10,
+            "hpAdjPerDie": 0,
+            "hpAdjPerDieWarrior": 0,
+            "minHitDieResult": null,
+            "systemShockPct": 70,
+            "resurrectionSurvivalPct": 75,
+            "poisonSave": 0,
+            "regeneration": null
+          },
+          {
+            "key": "11",
+            "scoreFrom": 11,
+            "scoreTo": 11,
+            "hpAdjPerDie": 0,
+            "hpAdjPerDieWarrior": 0,
+            "minHitDieResult": null,
+            "systemShockPct": 75,
+            "resurrectionSurvivalPct": 80,
+            "poisonSave": 0,
+            "regeneration": null
+          },
+          {
+            "key": "12",
+            "scoreFrom": 12,
+            "scoreTo": 12,
+            "hpAdjPerDie": 0,
+            "hpAdjPerDieWarrior": 0,
+            "minHitDieResult": null,
+            "systemShockPct": 80,
+            "resurrectionSurvivalPct": 85,
+            "poisonSave": 0,
+            "regeneration": null
+          },
+          {
+            "key": "13",
+            "scoreFrom": 13,
+            "scoreTo": 13,
+            "hpAdjPerDie": 0,
+            "hpAdjPerDieWarrior": 0,
+            "minHitDieResult": null,
+            "systemShockPct": 85,
+            "resurrectionSurvivalPct": 90,
+            "poisonSave": 0,
+            "regeneration": null
+          },
+          {
+            "key": "14",
+            "scoreFrom": 14,
+            "scoreTo": 14,
+            "hpAdjPerDie": 0,
+            "hpAdjPerDieWarrior": 0,
+            "minHitDieResult": null,
+            "systemShockPct": 88,
+            "resurrectionSurvivalPct": 92,
+            "poisonSave": 0,
+            "regeneration": null
+          },
+          {
+            "key": "15",
+            "scoreFrom": 15,
+            "scoreTo": 15,
+            "hpAdjPerDie": 1,
+            "hpAdjPerDieWarrior": 1,
+            "minHitDieResult": null,
+            "systemShockPct": 90,
+            "resurrectionSurvivalPct": 94,
+            "poisonSave": 0,
+            "regeneration": null
+          },
+          {
+            "key": "16",
+            "scoreFrom": 16,
+            "scoreTo": 16,
+            "hpAdjPerDie": 2,
+            "hpAdjPerDieWarrior": 2,
+            "minHitDieResult": null,
+            "systemShockPct": 95,
+            "resurrectionSurvivalPct": 96,
+            "poisonSave": 0,
+            "regeneration": null
+          },
+          {
+            "key": "17",
+            "scoreFrom": 17,
+            "scoreTo": 17,
+            "hpAdjPerDie": 2,
+            "hpAdjPerDieWarrior": 3,
+            "hpAdjFootnote": "*",
+            "minHitDieResult": null,
+            "systemShockPct": 97,
+            "resurrectionSurvivalPct": 98,
+            "poisonSave": 0,
+            "regeneration": null
+          },
+          {
+            "key": "18",
+            "scoreFrom": 18,
+            "scoreTo": 18,
+            "hpAdjPerDie": 2,
+            "hpAdjPerDieWarrior": 4,
+            "hpAdjFootnote": "*",
+            "minHitDieResult": null,
+            "systemShockPct": 99,
+            "resurrectionSurvivalPct": 100,
+            "poisonSave": 0,
+            "regeneration": null
+          },
+          {
+            "key": "19",
+            "scoreFrom": 19,
+            "scoreTo": 19,
+            "hpAdjPerDie": 2,
+            "hpAdjPerDieWarrior": 5,
+            "hpAdjFootnote": "*",
+            "minHitDieResult": null,
+            "systemShockPct": 99,
+            "resurrectionSurvivalPct": 100,
+            "poisonSave": 1,
+            "regeneration": null
+          },
+          {
+            "key": "20",
+            "scoreFrom": 20,
+            "scoreTo": 20,
+            "hpAdjPerDie": 2,
+            "hpAdjPerDieWarrior": 5,
+            "hpAdjFootnote": "**",
+            "minHitDieResult": 2,
+            "systemShockPct": 99,
+            "resurrectionSurvivalPct": 100,
+            "poisonSave": 1,
+            "regeneration": {
+              "hp": 1,
+              "everyTurns": 6,
+              "printed": "1/6 turns"
+            }
+          },
+          {
+            "key": "21",
+            "scoreFrom": 21,
+            "scoreTo": 21,
+            "hpAdjPerDie": 2,
+            "hpAdjPerDieWarrior": 6,
+            "hpAdjFootnote": "***",
+            "minHitDieResult": 3,
+            "systemShockPct": 99,
+            "resurrectionSurvivalPct": 100,
+            "poisonSave": 2,
+            "regeneration": {
+              "hp": 1,
+              "everyTurns": 5,
+              "printed": "1/5 turns"
+            }
+          },
+          {
+            "key": "22",
+            "scoreFrom": 22,
+            "scoreTo": 22,
+            "hpAdjPerDie": 2,
+            "hpAdjPerDieWarrior": 6,
+            "hpAdjFootnote": "***",
+            "minHitDieResult": 3,
+            "systemShockPct": 99,
+            "resurrectionSurvivalPct": 100,
+            "poisonSave": 2,
+            "regeneration": {
+              "hp": 1,
+              "everyTurns": 4,
+              "printed": "1/4 turns"
+            }
+          },
+          {
+            "key": "23",
+            "scoreFrom": 23,
+            "scoreTo": 23,
+            "hpAdjPerDie": 2,
+            "hpAdjPerDieWarrior": 6,
+            "hpAdjFootnote": "****",
+            "minHitDieResult": 4,
+            "systemShockPct": 99,
+            "resurrectionSurvivalPct": 100,
+            "poisonSave": 3,
+            "regeneration": {
+              "hp": 1,
+              "everyTurns": 3,
+              "printed": "1/3 turns"
+            }
+          },
+          {
+            "key": "24",
+            "scoreFrom": 24,
+            "scoreTo": 24,
+            "hpAdjPerDie": 2,
+            "hpAdjPerDieWarrior": 7,
+            "hpAdjFootnote": "****",
+            "minHitDieResult": 4,
+            "systemShockPct": 99,
+            "resurrectionSurvivalPct": 100,
+            "poisonSave": 3,
+            "regeneration": {
+              "hp": 1,
+              "everyTurns": 2,
+              "printed": "1/2 turns"
+            }
+          },
+          {
+            "key": "25",
+            "scoreFrom": 25,
+            "scoreTo": 25,
+            "hpAdjPerDie": 2,
+            "hpAdjPerDieWarrior": 7,
+            "hpAdjFootnote": "****",
+            "minHitDieResult": 4,
+            "systemShockPct": 100,
+            "resurrectionSurvivalPct": 100,
+            "poisonSave": 4,
+            "regeneration": {
+              "hp": 1,
+              "everyTurns": 1,
+              "printed": "1/1 turn"
+            }
+          }
+        ],
+        "houseRuleNote": "House rule: the CON hit point adjustment continues at every level for every class (house.json hitPointRules.conBonusAllLevels). The core rule stops it at name level."
+      },
+      "int": {
+        "source": "PHB Table 4: Intelligence (image supplied by owner)",
+        "columns": {
+          "languages": "# of Lang. (sheet field: Additional Languages/NWP)",
+          "maxSpellLevel": "Spell Level: the highest spell level a wizard with this INT can learn",
+          "chanceToLearnSpellPct": "Chance to Learn Spell",
+          "maxSpellsPerLevel": "Max. # of Spells/Level ('all' = no limit)",
+          "illusionImmunityUpToLevel": "Illusion Immunity: immune to illusion spells up to this spell level"
+        },
+        "languagesMeaning": "As printed. The sheet labels this 'Additional Languages/NWP'. Confirm whether the figure includes the character's native tongue.",
+        "bonusSpellsNote": "Table 4 has no bonus spells column. INT bonus spells are the Wizard-only house rule (house.json bonusSpells), using the WIS bonus-spell table.",
+        "rows": [
+          {
+            "key": "1",
+            "scoreFrom": 1,
+            "scoreTo": 1,
+            "languages": 0,
+            "maxSpellLevel": null,
+            "chanceToLearnSpellPct": null,
+            "maxSpellsPerLevel": null,
+            "illusionImmunityUpToLevel": null,
+            "languagesNote": "Printed 0*: while unable to speak a language the character can communicate with grunts and gestures."
+          },
+          {
+            "key": "2",
+            "scoreFrom": 2,
+            "scoreTo": 2,
+            "languages": 1,
+            "maxSpellLevel": null,
+            "chanceToLearnSpellPct": null,
+            "maxSpellsPerLevel": null,
+            "illusionImmunityUpToLevel": null
+          },
+          {
+            "key": "3",
+            "scoreFrom": 3,
+            "scoreTo": 3,
+            "languages": 1,
+            "maxSpellLevel": null,
+            "chanceToLearnSpellPct": null,
+            "maxSpellsPerLevel": null,
+            "illusionImmunityUpToLevel": null
+          },
+          {
+            "key": "4",
+            "scoreFrom": 4,
+            "scoreTo": 4,
+            "languages": 1,
+            "maxSpellLevel": null,
+            "chanceToLearnSpellPct": null,
+            "maxSpellsPerLevel": null,
+            "illusionImmunityUpToLevel": null
+          },
+          {
+            "key": "5",
+            "scoreFrom": 5,
+            "scoreTo": 5,
+            "languages": 1,
+            "maxSpellLevel": null,
+            "chanceToLearnSpellPct": null,
+            "maxSpellsPerLevel": null,
+            "illusionImmunityUpToLevel": null
+          },
+          {
+            "key": "6",
+            "scoreFrom": 6,
+            "scoreTo": 6,
+            "languages": 1,
+            "maxSpellLevel": null,
+            "chanceToLearnSpellPct": null,
+            "maxSpellsPerLevel": null,
+            "illusionImmunityUpToLevel": null
+          },
+          {
+            "key": "7",
+            "scoreFrom": 7,
+            "scoreTo": 7,
+            "languages": 1,
+            "maxSpellLevel": null,
+            "chanceToLearnSpellPct": null,
+            "maxSpellsPerLevel": null,
+            "illusionImmunityUpToLevel": null
+          },
+          {
+            "key": "8",
+            "scoreFrom": 8,
+            "scoreTo": 8,
+            "languages": 1,
+            "maxSpellLevel": null,
+            "chanceToLearnSpellPct": null,
+            "maxSpellsPerLevel": null,
+            "illusionImmunityUpToLevel": null
+          },
+          {
+            "key": "9",
+            "scoreFrom": 9,
+            "scoreTo": 9,
+            "languages": 2,
+            "maxSpellLevel": 4,
+            "chanceToLearnSpellPct": 35,
+            "maxSpellsPerLevel": 6,
+            "illusionImmunityUpToLevel": null
+          },
+          {
+            "key": "10",
+            "scoreFrom": 10,
+            "scoreTo": 10,
+            "languages": 2,
+            "maxSpellLevel": 5,
+            "chanceToLearnSpellPct": 40,
+            "maxSpellsPerLevel": 7,
+            "illusionImmunityUpToLevel": null
+          },
+          {
+            "key": "11",
+            "scoreFrom": 11,
+            "scoreTo": 11,
+            "languages": 2,
+            "maxSpellLevel": 5,
+            "chanceToLearnSpellPct": 45,
+            "maxSpellsPerLevel": 7,
+            "illusionImmunityUpToLevel": null
+          },
+          {
+            "key": "12",
+            "scoreFrom": 12,
+            "scoreTo": 12,
+            "languages": 3,
+            "maxSpellLevel": 6,
+            "chanceToLearnSpellPct": 50,
+            "maxSpellsPerLevel": 7,
+            "illusionImmunityUpToLevel": null
+          },
+          {
+            "key": "13",
+            "scoreFrom": 13,
+            "scoreTo": 13,
+            "languages": 3,
+            "maxSpellLevel": 6,
+            "chanceToLearnSpellPct": 55,
+            "maxSpellsPerLevel": 9,
+            "illusionImmunityUpToLevel": null
+          },
+          {
+            "key": "14",
+            "scoreFrom": 14,
+            "scoreTo": 14,
+            "languages": 4,
+            "maxSpellLevel": 7,
+            "chanceToLearnSpellPct": 60,
+            "maxSpellsPerLevel": 9,
+            "illusionImmunityUpToLevel": null
+          },
+          {
+            "key": "15",
+            "scoreFrom": 15,
+            "scoreTo": 15,
+            "languages": 4,
+            "maxSpellLevel": 7,
+            "chanceToLearnSpellPct": 65,
+            "maxSpellsPerLevel": 11,
+            "illusionImmunityUpToLevel": null
+          },
+          {
+            "key": "16",
+            "scoreFrom": 16,
+            "scoreTo": 16,
+            "languages": 5,
+            "maxSpellLevel": 8,
+            "chanceToLearnSpellPct": 70,
+            "maxSpellsPerLevel": 11,
+            "illusionImmunityUpToLevel": null
+          },
+          {
+            "key": "17",
+            "scoreFrom": 17,
+            "scoreTo": 17,
+            "languages": 6,
+            "maxSpellLevel": 8,
+            "chanceToLearnSpellPct": 75,
+            "maxSpellsPerLevel": 14,
+            "illusionImmunityUpToLevel": null
+          },
+          {
+            "key": "18",
+            "scoreFrom": 18,
+            "scoreTo": 18,
+            "languages": 7,
+            "maxSpellLevel": 9,
+            "chanceToLearnSpellPct": 85,
+            "maxSpellsPerLevel": 18,
+            "illusionImmunityUpToLevel": null
+          },
+          {
+            "key": "19",
+            "scoreFrom": 19,
+            "scoreTo": 19,
+            "languages": 8,
+            "maxSpellLevel": 9,
+            "chanceToLearnSpellPct": 95,
+            "maxSpellsPerLevel": "all",
+            "illusionImmunityUpToLevel": 1
+          },
+          {
+            "key": "20",
+            "scoreFrom": 20,
+            "scoreTo": 20,
+            "languages": 9,
+            "maxSpellLevel": 9,
+            "chanceToLearnSpellPct": 96,
+            "maxSpellsPerLevel": "all",
+            "illusionImmunityUpToLevel": 2
+          },
+          {
+            "key": "21",
+            "scoreFrom": 21,
+            "scoreTo": 21,
+            "languages": 10,
+            "maxSpellLevel": 9,
+            "chanceToLearnSpellPct": 97,
+            "maxSpellsPerLevel": "all",
+            "illusionImmunityUpToLevel": 3
+          },
+          {
+            "key": "22",
+            "scoreFrom": 22,
+            "scoreTo": 22,
+            "languages": 11,
+            "maxSpellLevel": 9,
+            "chanceToLearnSpellPct": 98,
+            "maxSpellsPerLevel": "all",
+            "illusionImmunityUpToLevel": 4
+          },
+          {
+            "key": "23",
+            "scoreFrom": 23,
+            "scoreTo": 23,
+            "languages": 12,
+            "maxSpellLevel": 9,
+            "chanceToLearnSpellPct": 99,
+            "maxSpellsPerLevel": "all",
+            "illusionImmunityUpToLevel": 5
+          },
+          {
+            "key": "24",
+            "scoreFrom": 24,
+            "scoreTo": 24,
+            "languages": 15,
+            "maxSpellLevel": 9,
+            "chanceToLearnSpellPct": 100,
+            "maxSpellsPerLevel": "all",
+            "illusionImmunityUpToLevel": 6
+          },
+          {
+            "key": "25",
+            "scoreFrom": 25,
+            "scoreTo": 25,
+            "languages": 20,
+            "maxSpellLevel": 9,
+            "chanceToLearnSpellPct": 100,
+            "maxSpellsPerLevel": "all",
+            "illusionImmunityUpToLevel": 7
+          }
+        ]
+      },
+      "wis": {
+        "source": "PHB Table 5: Wisdom (image supplied by owner)",
+        "columns": {
+          "magicalDefenseAdj": "Magical Defense Adjustment (sheet label: Mental Save)",
+          "bonusSpellLevels": "Bonus Spells: list of spell levels that gain a bonus spell (e.g. [1,3] = 1st and 3rd)",
+          "spellFailurePct": "Chance of Spell Failure",
+          "spellImmunity": "Spell Immunity: spells the character is immune to"
+        },
+        "sheetMapping": {
+          "status": "assumed",
+          "note": "The sheet's 'Mental Save' is read as the Magical Defense Adjustment column. Confirm."
+        },
+        "bonusSpellsNote": "Applies to priests (cleric, druid). Whether bonus spells from lower scores are added to those of higher scores (cumulative) is not shown on the table: confirm from the PHB text before the engine totals them. Paladins and rangers never gain them. INT bonus spells (Wizard, house rule) reuse this table with the INT score.",
+        "spellFailureNote": "Applies to priests; the table shows 0% from WIS 13 up.",
+        "rows": [
+          {
+            "key": "1",
+            "scoreFrom": 1,
+            "scoreTo": 1,
+            "magicalDefenseAdj": -6,
+            "bonusSpellLevels": [],
+            "spellFailurePct": 80,
+            "spellImmunity": []
+          },
+          {
+            "key": "2",
+            "scoreFrom": 2,
+            "scoreTo": 2,
+            "magicalDefenseAdj": -4,
+            "bonusSpellLevels": [],
+            "spellFailurePct": 60,
+            "spellImmunity": []
+          },
+          {
+            "key": "3",
+            "scoreFrom": 3,
+            "scoreTo": 3,
+            "magicalDefenseAdj": -3,
+            "bonusSpellLevels": [],
+            "spellFailurePct": 50,
+            "spellImmunity": []
+          },
+          {
+            "key": "4",
+            "scoreFrom": 4,
+            "scoreTo": 4,
+            "magicalDefenseAdj": -2,
+            "bonusSpellLevels": [],
+            "spellFailurePct": 45,
+            "spellImmunity": []
+          },
+          {
+            "key": "5",
+            "scoreFrom": 5,
+            "scoreTo": 5,
+            "magicalDefenseAdj": -1,
+            "bonusSpellLevels": [],
+            "spellFailurePct": 40,
+            "spellImmunity": []
+          },
+          {
+            "key": "6",
+            "scoreFrom": 6,
+            "scoreTo": 6,
+            "magicalDefenseAdj": -1,
+            "bonusSpellLevels": [],
+            "spellFailurePct": 35,
+            "spellImmunity": []
+          },
+          {
+            "key": "7",
+            "scoreFrom": 7,
+            "scoreTo": 7,
+            "magicalDefenseAdj": -1,
+            "bonusSpellLevels": [],
+            "spellFailurePct": 30,
+            "spellImmunity": []
+          },
+          {
+            "key": "8",
+            "scoreFrom": 8,
+            "scoreTo": 8,
+            "magicalDefenseAdj": 0,
+            "bonusSpellLevels": [],
+            "spellFailurePct": 25,
+            "spellImmunity": []
+          },
+          {
+            "key": "9",
+            "scoreFrom": 9,
+            "scoreTo": 9,
+            "magicalDefenseAdj": 0,
+            "bonusSpellLevels": [],
+            "spellFailurePct": 20,
+            "spellImmunity": []
+          },
+          {
+            "key": "10",
+            "scoreFrom": 10,
+            "scoreTo": 10,
+            "magicalDefenseAdj": 0,
+            "bonusSpellLevels": [],
+            "spellFailurePct": 15,
+            "spellImmunity": []
+          },
+          {
+            "key": "11",
+            "scoreFrom": 11,
+            "scoreTo": 11,
+            "magicalDefenseAdj": 0,
+            "bonusSpellLevels": [],
+            "spellFailurePct": 10,
+            "spellImmunity": []
+          },
+          {
+            "key": "12",
+            "scoreFrom": 12,
+            "scoreTo": 12,
+            "magicalDefenseAdj": 0,
+            "bonusSpellLevels": [],
+            "spellFailurePct": 5,
+            "spellImmunity": []
+          },
+          {
+            "key": "13",
+            "scoreFrom": 13,
+            "scoreTo": 13,
+            "magicalDefenseAdj": 0,
+            "bonusSpellLevels": [
+              1
+            ],
+            "spellFailurePct": 0,
+            "spellImmunity": []
+          },
+          {
+            "key": "14",
+            "scoreFrom": 14,
+            "scoreTo": 14,
+            "magicalDefenseAdj": 0,
+            "bonusSpellLevels": [
+              1
+            ],
+            "spellFailurePct": 0,
+            "spellImmunity": []
+          },
+          {
+            "key": "15",
+            "scoreFrom": 15,
+            "scoreTo": 15,
+            "magicalDefenseAdj": 1,
+            "bonusSpellLevels": [
+              2
+            ],
+            "spellFailurePct": 0,
+            "spellImmunity": []
+          },
+          {
+            "key": "16",
+            "scoreFrom": 16,
+            "scoreTo": 16,
+            "magicalDefenseAdj": 2,
+            "bonusSpellLevels": [
+              2
+            ],
+            "spellFailurePct": 0,
+            "spellImmunity": []
+          },
+          {
+            "key": "17",
+            "scoreFrom": 17,
+            "scoreTo": 17,
+            "magicalDefenseAdj": 3,
+            "bonusSpellLevels": [
+              3
+            ],
+            "spellFailurePct": 0,
+            "spellImmunity": []
+          },
+          {
+            "key": "18",
+            "scoreFrom": 18,
+            "scoreTo": 18,
+            "magicalDefenseAdj": 4,
+            "bonusSpellLevels": [
+              4
+            ],
+            "spellFailurePct": 0,
+            "spellImmunity": []
+          },
+          {
+            "key": "19",
+            "scoreFrom": 19,
+            "scoreTo": 19,
+            "magicalDefenseAdj": 4,
+            "bonusSpellLevels": [
+              1,
+              3
+            ],
+            "spellFailurePct": 0,
+            "spellImmunity": [
+              "cause fear",
+              "charm person",
+              "command",
+              "friends",
+              "hypnotism"
+            ]
+          },
+          {
+            "key": "20",
+            "scoreFrom": 20,
+            "scoreTo": 20,
+            "magicalDefenseAdj": 4,
+            "bonusSpellLevels": [
+              2,
+              4
+            ],
+            "spellFailurePct": 0,
+            "spellImmunity": [
+              "forget",
+              "hold person",
+              "ray of enfeeblement",
+              "scare"
+            ]
+          },
+          {
+            "key": "21",
+            "scoreFrom": 21,
+            "scoreTo": 21,
+            "magicalDefenseAdj": 4,
+            "bonusSpellLevels": [
+              3,
+              5
+            ],
+            "spellFailurePct": 0,
+            "spellImmunity": [
+              "fear"
+            ]
+          },
+          {
+            "key": "22",
+            "scoreFrom": 22,
+            "scoreTo": 22,
+            "magicalDefenseAdj": 4,
+            "bonusSpellLevels": [
+              4,
+              5
+            ],
+            "spellFailurePct": 0,
+            "spellImmunity": [
+              "charm monster",
+              "confusion",
+              "emotion",
+              "fumble",
+              "suggestion"
+            ]
+          },
+          {
+            "key": "23",
+            "scoreFrom": 23,
+            "scoreTo": 23,
+            "magicalDefenseAdj": 4,
+            "bonusSpellLevels": [
+              1,
+              6
+            ],
+            "spellFailurePct": 0,
+            "spellImmunity": [
+              "chaos",
+              "feeblemind",
+              "hold monster",
+              "magic jar",
+              "quest"
+            ]
+          },
+          {
+            "key": "24",
+            "scoreFrom": 24,
+            "scoreTo": 24,
+            "magicalDefenseAdj": 4,
+            "bonusSpellLevels": [
+              5,
+              6
+            ],
+            "spellFailurePct": 0,
+            "spellImmunity": [
+              "geas",
+              "mass suggestion",
+              "rod of rulership"
+            ]
+          },
+          {
+            "key": "25",
+            "scoreFrom": 25,
+            "scoreTo": 25,
+            "magicalDefenseAdj": 4,
+            "bonusSpellLevels": [
+              6,
+              7
+            ],
+            "spellFailurePct": 0,
+            "spellImmunity": [
+              "antipathy/sympathy",
+              "death spell",
+              "mass charm"
+            ]
+          }
+        ]
+      },
+      "cha": {
+        "source": "PHB Table 6: Charisma (image supplied by owner)",
+        "columns": {
+          "maxHenchmen": "Maximum # of Henchmen (sheet: Max # Henchmen)",
+          "loyaltyBase": "Loyalty Base (sheet: Loyalty Base)",
+          "reactionAdj": "Reaction Adjustment (sheet: Reaction Adjustment)"
+        },
+        "rows": [
+          {
+            "key": "1",
+            "scoreFrom": 1,
+            "scoreTo": 1,
+            "maxHenchmen": 0,
+            "loyaltyBase": -8,
+            "reactionAdj": -7
+          },
+          {
+            "key": "2",
+            "scoreFrom": 2,
+            "scoreTo": 2,
+            "maxHenchmen": 1,
+            "loyaltyBase": -7,
+            "reactionAdj": -6
+          },
+          {
+            "key": "3",
+            "scoreFrom": 3,
+            "scoreTo": 3,
+            "maxHenchmen": 1,
+            "loyaltyBase": -6,
+            "reactionAdj": -5
+          },
+          {
+            "key": "4",
+            "scoreFrom": 4,
+            "scoreTo": 4,
+            "maxHenchmen": 1,
+            "loyaltyBase": -5,
+            "reactionAdj": -4
+          },
+          {
+            "key": "5",
+            "scoreFrom": 5,
+            "scoreTo": 5,
+            "maxHenchmen": 2,
+            "loyaltyBase": -4,
+            "reactionAdj": -3
+          },
+          {
+            "key": "6",
+            "scoreFrom": 6,
+            "scoreTo": 6,
+            "maxHenchmen": 2,
+            "loyaltyBase": -3,
+            "reactionAdj": -2
+          },
+          {
+            "key": "7",
+            "scoreFrom": 7,
+            "scoreTo": 7,
+            "maxHenchmen": 3,
+            "loyaltyBase": -2,
+            "reactionAdj": -1
+          },
+          {
+            "key": "8",
+            "scoreFrom": 8,
+            "scoreTo": 8,
+            "maxHenchmen": 3,
+            "loyaltyBase": -1,
+            "reactionAdj": 0
+          },
+          {
+            "key": "9",
+            "scoreFrom": 9,
+            "scoreTo": 9,
+            "maxHenchmen": 4,
+            "loyaltyBase": 0,
+            "reactionAdj": 0
+          },
+          {
+            "key": "10",
+            "scoreFrom": 10,
+            "scoreTo": 10,
+            "maxHenchmen": 4,
+            "loyaltyBase": 0,
+            "reactionAdj": 0
+          },
+          {
+            "key": "11",
+            "scoreFrom": 11,
+            "scoreTo": 11,
+            "maxHenchmen": 4,
+            "loyaltyBase": 0,
+            "reactionAdj": 0
+          },
+          {
+            "key": "12",
+            "scoreFrom": 12,
+            "scoreTo": 12,
+            "maxHenchmen": 5,
+            "loyaltyBase": 0,
+            "reactionAdj": 0
+          },
+          {
+            "key": "13",
+            "scoreFrom": 13,
+            "scoreTo": 13,
+            "maxHenchmen": 5,
+            "loyaltyBase": 0,
+            "reactionAdj": 1
+          },
+          {
+            "key": "14",
+            "scoreFrom": 14,
+            "scoreTo": 14,
+            "maxHenchmen": 6,
+            "loyaltyBase": 1,
+            "reactionAdj": 2
+          },
+          {
+            "key": "15",
+            "scoreFrom": 15,
+            "scoreTo": 15,
+            "maxHenchmen": 7,
+            "loyaltyBase": 3,
+            "reactionAdj": 3
+          },
+          {
+            "key": "16",
+            "scoreFrom": 16,
+            "scoreTo": 16,
+            "maxHenchmen": 8,
+            "loyaltyBase": 4,
+            "reactionAdj": 5
+          },
+          {
+            "key": "17",
+            "scoreFrom": 17,
+            "scoreTo": 17,
+            "maxHenchmen": 10,
+            "loyaltyBase": 6,
+            "reactionAdj": 6
+          },
+          {
+            "key": "18",
+            "scoreFrom": 18,
+            "scoreTo": 18,
+            "maxHenchmen": 15,
+            "loyaltyBase": 8,
+            "reactionAdj": 7
+          },
+          {
+            "key": "19",
+            "scoreFrom": 19,
+            "scoreTo": 19,
+            "maxHenchmen": 20,
+            "loyaltyBase": 10,
+            "reactionAdj": 8
+          },
+          {
+            "key": "20",
+            "scoreFrom": 20,
+            "scoreTo": 20,
+            "maxHenchmen": 25,
+            "loyaltyBase": 12,
+            "reactionAdj": 9
+          },
+          {
+            "key": "21",
+            "scoreFrom": 21,
+            "scoreTo": 21,
+            "maxHenchmen": 30,
+            "loyaltyBase": 14,
+            "reactionAdj": 10
+          },
+          {
+            "key": "22",
+            "scoreFrom": 22,
+            "scoreTo": 22,
+            "maxHenchmen": 35,
+            "loyaltyBase": 16,
+            "reactionAdj": 11
+          },
+          {
+            "key": "23",
+            "scoreFrom": 23,
+            "scoreTo": 23,
+            "maxHenchmen": 40,
+            "loyaltyBase": 18,
+            "reactionAdj": 12
+          },
+          {
+            "key": "24",
+            "scoreFrom": 24,
+            "scoreTo": 24,
+            "maxHenchmen": 45,
+            "loyaltyBase": 20,
+            "reactionAdj": 13
+          },
+          {
+            "key": "25",
+            "scoreFrom": 25,
+            "scoreTo": 25,
+            "maxHenchmen": 50,
+            "loyaltyBase": 20,
+            "reactionAdj": 14
+          }
+        ]
+      }
+    }
+  },
+  "races": {
+    "status": "partial",
+    "expects": "human, dwarf, elf, gnome, halfElf, halfling. Per race: abilityMin/abilityMax per ability, abilityModifiers, allowedClasses with level limits, allowedMultiClasses, racialSaveBonuses, infravision, ageTable, heightWeightTable, racialAbilities (text).",
+    "physicalTraits": {
+      "source": "PHB Table 10: Average Height and Weight, Table 11: Age, Table 12: Aging Effects (images supplied by owner)",
+      "sexKey": {
+        "male": "first value on Table 10",
+        "female": "second value on Table 10",
+        "note": "The table prints male/female base figures because females tend to be lighter and shorter. The modifier dice still allow a broad range."
+      },
+      "howToRoll": {
+        "height": "baseHeight (by sex) + modifier dice, in inches",
+        "weight": "baseWeight (by sex) + modifier dice, in pounds",
+        "startingAge": "baseAge + variable dice, in years",
+        "maximumAge": "base + dice, in years"
+      },
+      "agingEffects": {
+        "source": "PHB Table 12: Aging Effects",
+        "categories": {
+          "middleAge": {
+            "label": "Middle Age",
+            "thresholdRule": "1/2 of base maximum age",
+            "effects": {
+              "str": -1,
+              "con": -1,
+              "int": 1,
+              "wis": 1
+            }
+          },
+          "oldAge": {
+            "label": "Old Age",
+            "thresholdRule": "2/3 of base maximum age",
+            "effects": {
+              "str": -2,
+              "dex": -2,
+              "con": -1,
+              "wis": 1
+            }
+          },
+          "venerable": {
+            "label": "Venerable",
+            "thresholdRule": "base maximum age",
+            "effects": {
+              "str": -1,
+              "dex": -1,
+              "con": -1,
+              "int": 1,
+              "wis": 1
+            }
+          }
+        },
+        "stackingNote": "Table 12 does not say whether each category's effects are added to the previous ones. Confirm from the PHB text before the engine applies them.",
+        "thresholdRounding": "Middle age rounds down, old age rounds to the nearest whole year (checked against every printed value)."
+      },
+      "races": {
+        "dwarf": {
+          "height": {
+            "unit": "inches",
+            "base": {
+              "male": 43,
+              "female": 41
+            },
+            "modifier": {
+              "text": "1d10",
+              "count": 1,
+              "sides": 10
+            }
+          },
+          "weight": {
+            "unit": "pounds",
+            "base": {
+              "male": 130,
+              "female": 105
+            },
+            "modifier": {
+              "text": "4d10",
+              "count": 4,
+              "sides": 10
+            }
+          },
+          "age": {
+            "startingAge": {
+              "base": 40,
+              "variable": {
+                "text": "5d6",
+                "count": 5,
+                "sides": 6
+              }
+            },
+            "maximumAge": {
+              "base": 250,
+              "variable": {
+                "text": "2d100",
+                "count": 2,
+                "sides": 100
+              }
+            }
+          },
+          "agingThresholdsYears": {
+            "middleAge": 125,
+            "oldAge": 167,
+            "venerable": 250
+          }
+        },
+        "elf": {
+          "height": {
+            "unit": "inches",
+            "base": {
+              "male": 55,
+              "female": 50
+            },
+            "modifier": {
+              "text": "1d10",
+              "count": 1,
+              "sides": 10
+            }
+          },
+          "weight": {
+            "unit": "pounds",
+            "base": {
+              "male": 90,
+              "female": 70
+            },
+            "modifier": {
+              "text": "3d10",
+              "count": 3,
+              "sides": 10
+            }
+          },
+          "age": {
+            "startingAge": {
+              "base": 100,
+              "variable": {
+                "text": "5d6",
+                "count": 5,
+                "sides": 6
+              }
+            },
+            "maximumAge": {
+              "base": 350,
+              "variable": {
+                "text": "4d100",
+                "count": 4,
+                "sides": 100
+              },
+              "note": "An elf reaching this age does not die: he feels compelled to leave for a mysterious other land (printed with an asterisk on Table 11).",
+              "noDeathAtMaximum": true
+            }
+          },
+          "agingThresholdsYears": {
+            "middleAge": 175,
+            "oldAge": 233,
+            "venerable": 350
+          }
+        },
+        "gnome": {
+          "height": {
+            "unit": "inches",
+            "base": {
+              "male": 38,
+              "female": 36
+            },
+            "modifier": {
+              "text": "1d6",
+              "count": 1,
+              "sides": 6
+            }
+          },
+          "weight": {
+            "unit": "pounds",
+            "base": {
+              "male": 72,
+              "female": 68
+            },
+            "modifier": {
+              "text": "5d4",
+              "count": 5,
+              "sides": 4
+            }
+          },
+          "age": {
+            "startingAge": {
+              "base": 60,
+              "variable": {
+                "text": "3d12",
+                "count": 3,
+                "sides": 12
+              }
+            },
+            "maximumAge": {
+              "base": 200,
+              "variable": {
+                "text": "3d100",
+                "count": 3,
+                "sides": 100
+              }
+            }
+          },
+          "agingThresholdsYears": {
+            "middleAge": 100,
+            "oldAge": 133,
+            "venerable": 200
+          }
+        },
+        "halfElf": {
+          "height": {
+            "unit": "inches",
+            "base": {
+              "male": 60,
+              "female": 58
+            },
+            "modifier": {
+              "text": "2d6",
+              "count": 2,
+              "sides": 6
+            }
+          },
+          "weight": {
+            "unit": "pounds",
+            "base": {
+              "male": 110,
+              "female": 85
+            },
+            "modifier": {
+              "text": "3d12",
+              "count": 3,
+              "sides": 12
+            }
+          },
+          "age": {
+            "startingAge": {
+              "base": 15,
+              "variable": {
+                "text": "1d6",
+                "count": 1,
+                "sides": 6
+              }
+            },
+            "maximumAge": {
+              "base": 125,
+              "variable": {
+                "text": "3d20",
+                "count": 3,
+                "sides": 20
+              }
+            }
+          },
+          "agingThresholdsYears": {
+            "middleAge": 62,
+            "oldAge": 83,
+            "venerable": 125
+          }
+        },
+        "halfling": {
+          "height": {
+            "unit": "inches",
+            "base": {
+              "male": 32,
+              "female": 30
+            },
+            "modifier": {
+              "text": "2d8",
+              "count": 2,
+              "sides": 8
+            }
+          },
+          "weight": {
+            "unit": "pounds",
+            "base": {
+              "male": 52,
+              "female": 48
+            },
+            "modifier": {
+              "text": "5d4",
+              "count": 5,
+              "sides": 4
+            }
+          },
+          "age": {
+            "startingAge": {
+              "base": 20,
+              "variable": {
+                "text": "3d4",
+                "count": 3,
+                "sides": 4
+              }
+            },
+            "maximumAge": {
+              "base": 100,
+              "variable": {
+                "text": "1d100",
+                "count": 1,
+                "sides": 100
+              }
+            }
+          },
+          "agingThresholdsYears": {
+            "middleAge": 50,
+            "oldAge": 67,
+            "venerable": 100
+          }
+        },
+        "human": {
+          "height": {
+            "unit": "inches",
+            "base": {
+              "male": 60,
+              "female": 59
+            },
+            "modifier": {
+              "text": "2d10",
+              "count": 2,
+              "sides": 10
+            }
+          },
+          "weight": {
+            "unit": "pounds",
+            "base": {
+              "male": 140,
+              "female": 100
+            },
+            "modifier": {
+              "text": "6d10",
+              "count": 6,
+              "sides": 10
+            }
+          },
+          "age": {
+            "startingAge": {
+              "base": 15,
+              "variable": {
+                "text": "1d4",
+                "count": 1,
+                "sides": 4
+              }
+            },
+            "maximumAge": {
+              "base": 90,
+              "variable": {
+                "text": "2d20",
+                "count": 2,
+                "sides": 20
+              }
+            }
+          },
+          "agingThresholdsYears": {
+            "middleAge": 45,
+            "oldAge": 60,
+            "venerable": 90
+          }
+        }
+      }
+    },
+    "halfOrc": {
+      "status": "named-in-movement-only",
+      "note": "The half-orc was listed with base move 12. It is not in the height/weight/age/aging tables (Tables 10-12) or the thief racial adjustments supplied so far. Its ability limits, class access, level limits and physical tables still need to be supplied if the app should offer it.",
+      "optionalRace": "to confirm whether the app should include it, and whether it is a core or house race"
+    },
+    "raceIdsSeen": [
+      "human",
+      "dwarf",
+      "elf",
+      "gnome",
+      "halfElf",
+      "halfling",
+      "halfOrc"
+    ],
+    "stillNeeded": [
+      "Ability score minimums and maximums and racial ability modifiers for each race.",
+      "Allowed classes with level limits, and multi-class combinations.",
+      "Racial saving throw bonuses and racial abilities (e.g. infravision).",
+      "Half-orc: everything (only its base move is known)."
+    ]
+  },
+  "classes": {
+    "status": "partial: ability minimums for all classes (Table 13); Fighter, Paladin, Ranger, Mage, Illusionist, Cleric and Druid requirements entered; thief and bard still needed",
+    "expects": "Per class id: hitDie, nameLevel, hpAfterNameLevel, primeRequisites, abilityMinimums, allowedRaces, allowedAlignments, classGroup, weaponRestrictions, armourRestrictions, startingProficiencies {weapon, nonweapon}, proficiencyPenalty {nonProficient, related}, maxLevel.",
+    "byClass": {
+      "ranger": {
+        "source": "PHB ranger description (text supplied by owner)",
+        "abilityMinimums": {
+          "str": 13,
+          "dex": 13,
+          "con": 14,
+          "wis": 14
+        },
+        "primeRequisites": [
+          "str",
+          "dex",
+          "wis"
+        ],
+        "xpBonus": {
+          "percent": 10,
+          "requires": {
+            "str": 16,
+            "dex": 16,
+            "wis": 16
+          },
+          "rule": "A ranger whose Strength, Dexterity and Wisdom are all 16 or more gains a 10% bonus to the experience points he earns.",
+          "appliesWhen": "every prime requisite is 16 or more"
+        },
+        "allowedAlignments": [
+          "lawfulGood",
+          "neutralGood",
+          "chaoticGood"
+        ],
+        "alignmentNote": "Always good; may be lawful, neutral or chaotic.",
+        "optionalClass": true,
+        "minimumsSource": "PHB Table 13: Class Ability Minimums (image supplied by owner)",
+        "classGroup": "warrior",
+        "hitDie": {
+          "sides": 10
+        },
+        "hitPointsAfterNameLevel": "see classes.groups.warrior"
+      },
+      "paladin": {
+        "source": "PHB paladin description (text supplied by owner)",
+        "allowedRaces": [
+          "human"
+        ],
+        "abilityMinimums": {
+          "str": 12,
+          "con": 9,
+          "wis": 13,
+          "cha": 17
+        },
+        "primeRequisites": [
+          "str",
+          "cha"
+        ],
+        "xpBonus": {
+          "percent": 10,
+          "requires": {
+            "str": 16,
+            "cha": 16
+          },
+          "rule": "A paladin whose Strength and Charisma are both 16 or more gains a 10% bonus to the experience points he earns.",
+          "appliesWhen": "every prime requisite is 16 or more"
+        },
+        "allowedAlignments": [
+          "lawfulGood"
+        ],
+        "alignmentRule": {
+          "mustAlwaysRemain": "lawfulGood",
+          "ifChanged": "A paladin who changes alignment, deliberately or inadvertently, loses all his special powers, sometimes only temporarily and sometimes forever.",
+          "engineHint": "If the app lets a character's alignment be edited after creation, warn that a paladin who leaves Lawful Good loses his special powers."
+        },
+        "weaponRestrictions": "none (any weapon)",
+        "armourRestrictions": "none (any type of armour)",
+        "optionalClass": true,
+        "minimumsSource": "PHB Table 13: Class Ability Minimums (image supplied by owner)",
+        "classGroup": "warrior",
+        "hitDie": {
+          "sides": 10
+        },
+        "hitPointsAfterNameLevel": "see classes.groups.warrior"
+      },
+      "fighter": {
+        "abilityMinimums": {
+          "str": 9
+        },
+        "optionalClass": false,
+        "minimumsSource": "PHB Table 13: Class Ability Minimums (image supplied by owner)",
+        "source": "PHB fighter text (supplied by owner)",
+        "primeRequisites": [
+          "str"
+        ],
+        "xpBonus": {
+          "percent": 10,
+          "requires": {
+            "str": 16
+          },
+          "rule": "A fighter with a Strength score (his prime requisite) of 16 or more gains a 10% bonus to the experience points he earns.",
+          "appliesWhen": "every prime requisite is 16 or more"
+        },
+        "classGroup": "warrior",
+        "hitDie": {
+          "sides": 10
+        },
+        "hitPointsAfterNameLevel": "see classes.groups.warrior",
+        "allowedRaces": "all",
+        "allowedRacesList": [
+          "human",
+          "dwarf",
+          "elf",
+          "gnome",
+          "halfElf",
+          "halfling"
+        ],
+        "allowedRacesNote": "All races allowed (owner). The list is the six player races in Tables 10-12.",
+        "stillNeeded": [],
+        "allowedAlignments": [
+          "lawfulGood",
+          "lawfulNeutral",
+          "lawfulEvil",
+          "neutralGood",
+          "neutral",
+          "neutralEvil",
+          "chaoticGood",
+          "chaoticNeutral",
+          "chaoticEvil"
+        ],
+        "alignmentNote": "No alignment restriction (confirmed by owner): any of the nine.",
+        "weaponRestrictions": {
+          "rule": "No restrictions: any weapon.",
+          "restricted": false,
+          "status": "confirmed-by-owner"
+        },
+        "armourRestrictions": {
+          "rule": "No restrictions: any armour and any shield.",
+          "restricted": false,
+          "status": "confirmed-by-owner"
+        }
+      },
+      "wizard": {
+        "abilityMinimums": {
+          "int": 9
+        },
+        "optionalClass": false,
+        "minimumsSource": "PHB Table 13: Class Ability Minimums (image supplied by owner)",
+        "source": "PHB mage description (text supplied by owner)",
+        "displayName": "Mage",
+        "primeRequisites": [
+          "int"
+        ],
+        "allowedRaces": [
+          "human",
+          "elf",
+          "halfElf"
+        ],
+        "xpBonus": {
+          "percent": 10,
+          "requires": {
+            "int": 16
+          },
+          "rule": "A mage with an Intelligence score of 16 or higher gains a 10% bonus to the experience points he earns.",
+          "appliesWhen": "every prime requisite is 16 or more"
+        },
+        "classGroup": "wizard",
+        "specialistsNote": "These details are for the generalist mage. Specialist wizards have their own race lists (Table 22, specialistWizards). Specialist wizards are assumed to use the same hit dice (confirm). Specialist wizards are assumed to share these weapon and armour restrictions (confirm).",
+        "hitDie": {
+          "sides": 4,
+          "perLevelFrom": 1,
+          "perLevelTo": 10
+        },
+        "nameLevel": 10,
+        "nameLevelNote": "Confirmed by owner: name level for the mage is 10th (d4 per level up to 10th level). An earlier message said 12th; the owner corrected it to 10th.",
+        "hitPointsAfterNameLevel": {
+          "perLevel": 1,
+          "conBonusApplies": false,
+          "conBonusNote": "Core rule: no CON bonus after name level. Your house rule (house.json hitPointRules.conBonusAllLevels) adds the CON bonus at every level, so a mage above name level gains 1 hp plus his CON bonus per level.",
+          "houseOverride": "house.json hitPointRules.conBonusAllLevels",
+          "source": "Owner statement"
+        },
+        "armourRestrictions": {
+          "rule": "Wizards and mages cannot wear any armour.",
+          "allowedArmourIds": [],
+          "restricted": true,
+          "shields": "not mentioned; treated as not allowed because no armour may be worn (confirm)",
+          "spellcastingLink": "The wizard's spellcasting prohibition on armour also binds the bard (see bard.spellcasting)."
+        },
+        "weaponRestrictions": {
+          "rule": "A wizard or mage can use a dagger, staff, darts, knives and slings.",
+          "allowedWeaponIds": [
+            "daggerOrDirk",
+            "quarterstaff",
+            "dart",
+            "knife",
+            "sling"
+          ],
+          "mapping": {
+            "dagger": "daggerOrDirk",
+            "staff": "quarterstaff (assumed, as for the druid and thief)",
+            "darts": "dart",
+            "knives": "knife",
+            "slings": "sling (assumed to include sling bullets and sling stones as ammunition)"
+          },
+          "assumedAmmunition": [
+            "slingBullet",
+            "slingStone"
+          ],
+          "needsConfirming": [
+            "staff = quarterstaff",
+            "sling ammunition allowed",
+            "shields"
+          ]
+        },
+        "stillNeeded": [],
+        "allowedAlignments": [
+          "lawfulGood",
+          "lawfulNeutral",
+          "lawfulEvil",
+          "neutralGood",
+          "neutral",
+          "neutralEvil",
+          "chaoticGood",
+          "chaoticNeutral",
+          "chaoticEvil"
+        ],
+        "alignmentNote": "Any alignment (confirmed by owner)."
+      },
+      "cleric": {
+        "abilityMinimums": {
+          "wis": 9
+        },
+        "optionalClass": false,
+        "minimumsSource": "PHB Table 13: Class Ability Minimums (image supplied by owner)",
+        "source": "PHB cleric description (text supplied by owner)",
+        "classGroup": "priest",
+        "primeRequisites": [
+          "wis"
+        ],
+        "primeRequisitesNote": "Confirmed by owner: Wisdom is the cleric's prime requisite. High Constitution and Charisma are described as particularly useful (not requirements).",
+        "usefulAbilities": [
+          "con",
+          "cha"
+        ],
+        "xpBonus": {
+          "percent": 10,
+          "requires": {
+            "wis": 16
+          },
+          "rule": "A cleric with a Wisdom of 16 or more gains a 10% bonus to the experience points he earns.",
+          "appliesWhen": "every prime requisite is 16 or more"
+        },
+        "armourRestrictions": {
+          "body": "any type of armour",
+          "shield": "any shield",
+          "restricted": false
+        },
+        "weaponRestrictions": {
+          "appliesTo": "standard clerics",
+          "rule": "Allowed to use only blunt, bludgeoning weapons (clerics are reluctant to shed blood or spread violence).",
+          "allowedWeaponTypes": [
+            "B"
+          ],
+          "derivation": "Derived from the Type column of the weapons table in gear.json. Marked for your review.",
+          "candidatesBludgeoningOnly": [
+            "club",
+            "footmansFlail",
+            "footmansMace",
+            "horsemansFlail",
+            "horsemansMace",
+            "quarterstaff",
+            "slingBullet",
+            "slingStone",
+            "warhammer"
+          ],
+          "needsRuling": {
+            "mixedTypeWithBludgeoning": [
+              "morningStar",
+              "becDeCorbin",
+              "lucernHammer"
+            ],
+            "mixedTypeNote": "These are listed as P/B (piercing or bludgeoning). Strictly they are not 'only bludgeoning'.",
+            "launchersWithoutType": [
+              "blowgun",
+              "shortBow",
+              "longBow",
+              "compositeShortBow",
+              "compositeLongBow",
+              "handCrossbow",
+              "lightCrossbow",
+              "heavyCrossbow",
+              "sling",
+              "staffSling"
+            ],
+            "launchersNote": "Bows, crossbows, sling and similar have no Type on the table (shown as a dash); ammunition has its own type. A ruling is needed on missile weapons."
+          },
+          "specialtyPriests": "Not covered: the text says 'standard clerics'. Specialty priests may differ."
+        },
+        "stillNeeded": [
+          "The ruling on mixed-type and missile weapons for the bludgeoning-only rule."
+        ],
+        "hitDie": {
+          "sides": 8,
+          "perLevelFrom": 1,
+          "perLevelTo": 9
+        },
+        "nameLevel": 9,
+        "hitPointsAfterNameLevel": {
+          "perLevel": 2,
+          "conBonusApplies": false,
+          "conBonusNote": "Core rule: no CON bonus after name level. Your house rule (house.json hitPointRules.conBonusAllLevels) adds the CON bonus at every level, so a cleric above 9th level gains 2 hp plus his CON bonus per level.",
+          "houseOverride": "house.json hitPointRules.conBonusAllLevels",
+          "source": "Owner statement"
+        },
+        "allowedRaces": "all",
+        "allowedRacesList": [
+          "human",
+          "dwarf",
+          "elf",
+          "gnome",
+          "halfElf",
+          "halfling"
+        ],
+        "allowedRacesNote": "All races allowed (owner). The list is the six player races in Tables 10-12; the engine can use either form.",
+        "allowedAlignments": [
+          "lawfulGood",
+          "lawfulNeutral",
+          "lawfulEvil",
+          "neutralGood",
+          "neutral",
+          "neutralEvil",
+          "chaoticGood",
+          "chaoticNeutral",
+          "chaoticEvil"
+        ],
+        "alignmentNote": "Any alignment (confirmed by owner)."
+      },
+      "druid": {
+        "abilityMinimums": {
+          "wis": 12,
+          "cha": 15
+        },
+        "optionalClass": true,
+        "minimumsSource": "PHB Table 13: Class Ability Minimums (image supplied by owner)",
+        "source": "PHB druid description (text supplied by owner)",
+        "classGroup": "priest",
+        "allowedRaces": [
+          "human",
+          "halfElf"
+        ],
+        "primeRequisites": [
+          "wis",
+          "cha"
+        ],
+        "primeRequisitesNote": "Both Wisdom and Charisma are prime requisites (text supplied).",
+        "xpBonus": {
+          "percent": 10,
+          "requires": {
+            "wis": 16,
+            "cha": 16
+          },
+          "rule": "A druid whose Wisdom and Charisma (both prime requisites) are 16 gains a 10% bonus to the experience points he earns.",
+          "appliesWhen": "every prime requisite is 16 or more",
+          "status": "confirmed-by-owner",
+          "note": "Stated as 'if wis and cha are 16'. Read as 16 or more, the same as the other classes. Confirm."
+        },
+        "allowedAlignments": [
+          "neutral"
+        ],
+        "alignmentNote": "Neutral required (see alignments); a Druid/Ranger multi-class must be Neutral Good.",
+        "armourRestrictions": {
+          "rule": "Only 'natural' armours: leather armour and wooden shields, including those with magical enhancements. All other armours are forbidden.",
+          "allowedArmourIds": [
+            "leather",
+            "padded",
+            "hide"
+          ],
+          "shields": "wooden shields only; ruling: all shield types can be wooden, so every shield is allowed",
+          "magicalEnhancementsAllowed": true,
+          "needsRuling": {
+            "shieldsNote": "Resolved: all shields allowed (owner ruling)."
+          },
+          "allowedShieldIds": [
+            "shieldBody",
+            "shieldBuckler",
+            "shieldMedium",
+            "shieldSmall"
+          ],
+          "shieldRuling": {
+            "status": "confirmed-by-owner",
+            "text": "Assume all shields can be wooden."
+          },
+          "excludedArmourIds": [
+            "bandedMail",
+            "brigandine",
+            "bronzePlateMail",
+            "chainMail",
+            "fieldPlate",
+            "fullPlate",
+            "plateMail",
+            "ringMail",
+            "scaleMail",
+            "splintMail",
+            "studdedLeather"
+          ],
+          "ruling": {
+            "status": "confirmed-by-owner",
+            "text": "Padded armour and hide count as leather armour for a druid. Studded leather does not.",
+            "acNote": "By Table 46 these are AC leather 8, padded 8, hide 6 (without a shield)."
+          }
+        },
+        "weaponRestrictions": {
+          "rule": "Weapons limited to club, sickle, dart, spear, dagger, scimitar, sling and staff.",
+          "allowedWeaponIds": [
+            "club",
+            "sickle",
+            "dart",
+            "spear",
+            "daggerOrDirk",
+            "scimitar",
+            "sling",
+            "quarterstaff"
+          ],
+          "mapping": {
+            "staff": "quarterstaff (assumed; the weapons table has no weapon simply called 'staff', and 'staff sling' is a separate item)",
+            "dagger": "daggerOrDirk",
+            "sling": "sling (assumed to include sling bullets and sling stones as ammunition)"
+          },
+          "assumedAmmunition": [
+            "slingBullet",
+            "slingStone"
+          ],
+          "needsConfirming": [
+            "staff = quarterstaff",
+            "sling ammunition allowed"
+          ]
+        },
+        "stillNeeded": [],
+        "hitDie": {
+          "sides": 8,
+          "perLevelFrom": 1,
+          "perLevelTo": 9
+        },
+        "nameLevel": 9,
+        "hitPointsAfterNameLevel": {
+          "perLevel": 2,
+          "conBonusApplies": false,
+          "conBonusNote": "Core rule: no CON bonus after name level, as for every class. Your house rule (house.json hitPointRules.conBonusAllLevels) gives the bonus at all levels.",
+          "source": "Owner statement",
+          "houseOverride": "house.json hitPointRules.conBonusAllLevels"
+        }
+      },
+      "thief": {
+        "abilityMinimums": {
+          "dex": 9
+        },
+        "optionalClass": false,
+        "minimumsSource": "PHB Table 13: Class Ability Minimums (image supplied by owner)",
+        "source": "PHB thief description (text supplied by owner)",
+        "classGroup": "rogue",
+        "primeRequisites": [
+          "dex"
+        ],
+        "allowedRaces": "all",
+        "allowedRacesList": [
+          "human",
+          "dwarf",
+          "elf",
+          "gnome",
+          "halfElf",
+          "halfling"
+        ],
+        "xpBonus": {
+          "percent": 10,
+          "requires": {
+            "dex": 16
+          },
+          "rule": "A thief with a Dexterity score of 16 or more gains a 10% bonus to the experience points he earns.",
+          "appliesWhen": "every prime requisite is 16 or more"
+        },
+        "allowedAlignments": [
+          "lawfulNeutral",
+          "lawfulEvil",
+          "neutralGood",
+          "neutral",
+          "neutralEvil",
+          "chaoticGood",
+          "chaoticNeutral",
+          "chaoticEvil"
+        ],
+        "alignmentNote": "Any alignment except lawful good. Many thieves are at least partially neutral.",
+        "weaponRestrictions": {
+          "rule": "Limited selection of weapons: club, dagger, dart, hand crossbow, knife, lasso, short bow, sling, broad sword, long sword, short sword and staff.",
+          "allowedWeaponIds": [
+            "club",
+            "daggerOrDirk",
+            "dart",
+            "handCrossbow",
+            "knife",
+            "shortBow",
+            "sling",
+            "broadSword",
+            "longSword",
+            "shortSword",
+            "quarterstaff"
+          ],
+          "mapping": {
+            "dagger": "daggerOrDirk",
+            "staff": "quarterstaff (assumed, as for the druid)"
+          },
+          "notInWeaponsTable": [
+            "lasso"
+          ],
+          "notInWeaponsTableNote": "The class text lists the lasso, but it is not in the weapons table supplied (see gear.json openIssues).",
+          "needsConfirming": [
+            "staff = quarterstaff"
+          ]
+        },
+        "armourRestrictions": {
+          "rule": "May wear leather, studded leather, padded leather or elven chain armour. Any allowed armour other than leather penalises thief abilities (Table 29).",
+          "allowedArmourIds": [
+            "leather",
+            "studdedLeather",
+            "padded"
+          ],
+          "allowedButNotInArmourTable": [
+            "elvenChain"
+          ],
+          "elvenChainNote": "Elven chain is named in the class text and in Table 29, but it is not in the armour table supplied.",
+          "penaltiesRef": "rules-skills.json thiefSkills.armourAdjustmentsPct",
+          "shields": "not mentioned in the text supplied"
+        },
+        "stillNeeded": [
+          "Whether the thief may use shields (not mentioned)."
+        ],
+        "hitDie": {
+          "sides": 6,
+          "perLevelFrom": 1,
+          "perLevelTo": 10
+        },
+        "nameLevel": 10,
+        "hitPointsAfterNameLevel": {
+          "perLevel": 2,
+          "conBonusApplies": false,
+          "conBonusNote": "Core rule: no CON bonus after name level. Your house rule (house.json hitPointRules.conBonusAllLevels) adds the CON bonus at every level, so above 10th level this class gains 2 hp plus his CON bonus per level.",
+          "houseOverride": "house.json hitPointRules.conBonusAllLevels",
+          "source": "Owner statement"
+        }
+      },
+      "bard": {
+        "abilityMinimums": {
+          "dex": 12,
+          "int": 13,
+          "cha": 15
+        },
+        "optionalClass": true,
+        "minimumsSource": "PHB Table 13: Class Ability Minimums (image supplied by owner)",
+        "source": "PHB bard description (text supplied by owner)",
+        "classGroup": "rogue",
+        "fightsAs": "rogue",
+        "primeRequisites": [
+          "dex",
+          "cha"
+        ],
+        "allowedRaces": [
+          "human",
+          "halfElf"
+        ],
+        "allowedAlignments": [
+          "lawfulNeutral",
+          "neutralGood",
+          "neutral",
+          "neutralEvil",
+          "chaoticNeutral"
+        ],
+        "alignmentNote": "May be lawful, neutral or chaotic, good or evil, but must always be partially neutral: neutral on at least one axis. That leaves five of the nine alignments.",
+        "xpBonus": {
+          "percent": 10,
+          "requires": {
+            "dex": 16,
+            "cha": 16
+          },
+          "rule": "A bard whose Dexterity and Charisma (both prime requisites) are 16 or more gains a 10% bonus to the experience points he earns.",
+          "appliesWhen": "every prime requisite is 16 or more",
+          "status": "confirmed-by-owner"
+        },
+        "weaponRestrictions": {
+          "rule": "Fights as a rogue but can use any weapon.",
+          "restricted": false
+        },
+        "armourRestrictions": {
+          "rule": "Can wear any armour up to and including chain mail. Cannot use a shield.",
+          "shield": false,
+          "upToAndIncludingChainMail": {
+            "status": "calculated-from-table-46",
+            "rule": "Armour with a lower AC number than chain mail (AC 5) is excluded (owner rule).",
+            "chainMailAc": 5,
+            "allowedArmourIds": [
+              "leather",
+              "padded",
+              "studdedLeather",
+              "ringMail",
+              "brigandine",
+              "scaleMail",
+              "hide",
+              "chainMail"
+            ],
+            "excludedArmourIds": [
+              "splintMail",
+              "bandedMail",
+              "bronzePlateMail",
+              "plateMail",
+              "fieldPlate",
+              "fullPlate"
+            ],
+            "elvenChainNote": "Elven chain is not in the armour table, so it is not in these lists."
+          },
+          "elvenChainNote": "Table 29 includes elven chain, which is not in the armour table supplied.",
+          "thiefSkillPenalties": "Thief skill armour adjustments apply to bards, with an extra -5% for non-elven chain mail (see rules-skills.json thiefSkills.armourAdjustmentsPct).",
+          "allowedArmourIds": [
+            "leather",
+            "padded",
+            "studdedLeather",
+            "ringMail",
+            "brigandine",
+            "scaleMail",
+            "hide",
+            "chainMail"
+          ]
+        },
+        "spellcasting": {
+          "spellType": "wizard",
+          "status": "confirmed: the bard learns a few wizard spells",
+          "spellbook": true,
+          "intRules": "As for a wizard, Intelligence determines the number of spells he can know and the chance to know any given spell (Table 4 chance to learn and max spells per level).",
+          "restrictions": "Abides by all the restrictions on memorization and spell use that bind a wizard, especially the prohibition of armour: a bard in armour cannot cast. Spells are used more to entertain and impress than to fight.",
+          "progression": "rules-core.json spellProgression.bard (Table 32)"
+        },
+        "musicalAbilities": {
+          "rule": "All bards are proficient singers, chanters or vocalists and play one musical instrument of the player's choice (preferably portable).",
+          "extraInstruments": "Under the optional proficiency rules, additional instruments can be learned: two instruments for every proficiency slot spent.",
+          "startingInstruments": 1
+        },
+        "stillNeeded": [],
+        "hitDie": {
+          "sides": 6,
+          "perLevelFrom": 1,
+          "perLevelTo": 10
+        },
+        "nameLevel": 10,
+        "hitPointsAfterNameLevel": {
+          "perLevel": 2,
+          "conBonusApplies": false,
+          "conBonusNote": "Core rule: no CON bonus after name level. Your house rule (house.json hitPointRules.conBonusAllLevels) adds the CON bonus at every level, so above 10th level this class gains 2 hp plus his CON bonus per level.",
+          "houseOverride": "house.json hitPointRules.conBonusAllLevels",
+          "source": "Owner statement"
+        }
+      },
+      "specialistWizards": {
+        "abilityMinimums": "variable",
+        "abilityMinimumsNote": "Table 13 prints 'Var' for every ability for specialists. The actual minimum depends on the specialty: see specialistWizards.specialists[].minimumAbility (Table 22). The table says the Specialist row includes the illusionist.",
+        "optionalClass": true,
+        "minimumsSource": "PHB Table 13: Class Ability Minimums (image supplied by owner)"
+      }
+    },
+    "stillNeededPerClass": [
+      "Monk: ability minimums, requirements, hit dice and its saving throw table (house class).",
+      "Armour: shield details (the 'Shields' section) and movement effects.",
+      "Cleric: the ruling on mixed-type and missile weapons for the bludgeoning-only rule."
+    ],
+    "optionalClasses": {
+      "source": "PHB Table 13 (asterisk: optional character class)",
+      "classes": [
+        "paladin",
+        "ranger",
+        "druid",
+        "bard",
+        "specialistWizards"
+      ],
+      "appIdea": "A 'core classes only' switch in the app could hide the optional classes (Paladin, Ranger, Druid, Bard, specialist wizards). Monk is a separate house class (see house.json)."
+    },
+    "abilityMinimumsTable": {
+      "source": "PHB Table 13: Class Ability Minimums (image supplied by owner)",
+      "note": "A dash on the table means no minimum. Stored per class in classes.byClass[class].abilityMinimums.",
+      "monk": "Not on Table 13 (house class). Minimums still to be supplied."
+    },
+    "groups": {
+      "warrior": {
+        "classes": [
+          "fighter",
+          "paladin",
+          "ranger"
+        ],
+        "source": "PHB warrior text and Table 15: Warrior Melee Attacks per Round (supplied by owner)",
+        "hitDie": {
+          "sides": 10,
+          "perLevelFrom": 1,
+          "perLevelTo": 9
+        },
+        "nameLevel": 9,
+        "hitPointsAfterNameLevel": {
+          "perLevel": 3,
+          "conBonusApplies": false,
+          "rule": "Warriors gain one 10-sided hit die per level from 1st through 9th. After 9th level they gain just 3 hit points per level and no longer gain additional hit point bonuses for high Constitution.",
+          "houseOverride": "house.json hitPointRules.conBonusAllLevels (ALL classes keep the CON bonus at all levels)"
+        },
+        "meleeAttacksPerRound": {
+          "source": "PHB Table 15: Warrior Melee Attacks per Round",
+          "appliesTo": [
+            "fighter",
+            "paladin",
+            "ranger"
+          ],
+          "meaning": "attacks / rounds, e.g. 3/2 = three attacks every two rounds",
+          "bands": [
+            {
+              "label": "1-6",
+              "levels": {
+                "from": 1,
+                "to": 6
+              },
+              "attacks": 1,
+              "perRounds": 1,
+              "printed": "1/round"
+            },
+            {
+              "label": "7-12",
+              "levels": {
+                "from": 7,
+                "to": 12
+              },
+              "attacks": 3,
+              "perRounds": 2,
+              "printed": "3/2 rounds"
+            },
+            {
+              "label": "13+",
+              "levels": {
+                "from": 13,
+                "to": null
+              },
+              "attacks": 2,
+              "perRounds": 1,
+              "printed": "2/round"
+            }
+          ],
+          "crossRef": "Single-class fighter specialists use the separate Table 35 (rules-skills.json proficiencies.weapon.specialization)."
+        },
+        "xpAdvancement": {
+          "table": "Table 14 (not supplied)",
+          "note": "All warriors advance using Table 14. The per-class XP columns in xpTables come from your sheets; send Table 14 if you want them cross-checked."
+        }
+      }
+    },
+    "coreRuleNote": "hitPointsAfterNameLevel.conBonusApplies stores the core (PHB) value. The engine should apply house.json overrides unless a 'core rules only' mode is selected."
+  },
+  "xpTables": {
+    "status": "from-sheets-with-flags",
+    "convention": "xp[0] is level 1 (always 0). xp[n-1] is the XP needed to reach level n. Values are cumulative. Exception: classes with an 'xpReset' block (druid) only have xp[] up to the reset level; levels above it use thresholdsFromReset, counted from the reset XP total.",
+    "multiClass": {
+      "split": "equal",
+      "note": "Sheets show one XP column per class. In the app, total XP is divided equally among a character's classes; each class is looked up in its own column."
+    },
+    "classes": {
+      "fighter": {
+        "maxLevel": 20,
+        "xp": [
+          0,
+          2000,
+          4000,
+          8000,
+          16000,
+          32000,
+          64000,
+          125000,
+          250000,
+          500000,
+          750000,
+          1000000,
+          1250000,
+          1500000,
+          1750000,
+          2000000,
+          2250000,
+          2500000,
+          2750000,
+          3000000
+        ]
+      },
+      "paladin": {
+        "maxLevel": 20,
+        "xp": [
+          0,
+          2250,
+          4500,
+          9000,
+          18000,
+          36000,
+          75000,
+          150000,
+          300000,
+          600000,
+          900000,
+          1200000,
+          1500000,
+          1800000,
+          2100000,
+          2400000,
+          2700000,
+          3000000,
+          3300000,
+          3600000
+        ]
+      },
+      "ranger": {
+        "maxLevel": 20,
+        "xp": [
+          0,
+          2250,
+          4500,
+          9000,
+          18000,
+          36000,
+          75000,
+          150000,
+          300000,
+          600000,
+          900000,
+          1200000,
+          1500000,
+          1800000,
+          2100000,
+          2400000,
+          2700000,
+          3000000,
+          3300000,
+          3600000
+        ]
+      },
+      "wizard": {
+        "maxLevel": 20,
+        "xp": [
+          0,
+          2500,
+          5000,
+          10000,
+          20000,
+          40000,
+          60000,
+          90000,
+          135000,
+          250000,
+          375000,
+          750000,
+          1125000,
+          1500000,
+          1875000,
+          2250000,
+          2625000,
+          3000000,
+          3375000,
+          3750000
+        ]
+      },
+      "cleric": {
+        "maxLevel": 20,
+        "xp": [
+          0,
+          1500,
+          3000,
+          6000,
+          13000,
+          27500,
+          55000,
+          110000,
+          225000,
+          450000,
+          675000,
+          900000,
+          1125000,
+          1350000,
+          1575000,
+          1800000,
+          2025000,
+          2250000,
+          2475000,
+          2700000
+        ]
+      },
+      "druid": {
+        "maxLevel": 20,
+        "xp": [
+          0,
+          2000,
+          4000,
+          7500,
+          12500,
+          20000,
+          35000,
+          60000,
+          90000,
+          125000,
+          200000,
+          300000,
+          750000,
+          1500000,
+          3000000,
+          3500000
+        ],
+        "xpReset": {
+          "afterReaching": 16,
+          "resetTo": 1,
+          "thresholdsFromReset": {
+            "17": 500000,
+            "18": 1000000,
+            "19": 1500000,
+            "20": 2000000
+          },
+          "sheetMarker": "The asterisk on '500,000*' on the druid sheets marks this reset.",
+          "note": "XP is cumulative only up to level 16. After reaching 16th level the druid's XP resets to 1 and levels 17-20 are measured from that reset. Confirmed by owner. Reading assumed: 18th level needs 1,000,000 total since the reset (not 1,000,000 on top of the 500,000)."
+        }
+      },
+      "thief": {
+        "maxLevel": 20,
+        "xp": [
+          0,
+          1250,
+          2500,
+          5000,
+          10000,
+          20000,
+          40000,
+          70000,
+          110000,
+          160000,
+          220000,
+          440000,
+          660000,
+          880000,
+          1100000,
+          1320000,
+          1540000,
+          1760000,
+          1980000,
+          2200000
+        ]
+      },
+      "bard": {
+        "maxLevel": 20,
+        "xp": [
+          0,
+          1250,
+          2500,
+          5000,
+          10000,
+          20000,
+          40000,
+          70000,
+          110000,
+          160000,
+          220000,
+          440000,
+          660000,
+          880000,
+          1100000,
+          1320000,
+          1540000,
+          1760000,
+          1980000,
+          2200000
+        ],
+        "note": "Identical to the Thief table (confirmed by owner)."
+      },
+      "monk": {
+        "maxLevel": 19,
+        "source": "house",
+        "xp": [
+          0,
+          2250,
+          4500,
+          9000,
+          18000,
+          36000,
+          75000,
+          150000,
+          300000,
+          600000,
+          900000,
+          1200000,
+          1500000,
+          1800000,
+          2100000,
+          2400000,
+          2700000,
+          3500000,
+          5000000
+        ],
+        "note": "Monk sheet states: no XP bonuses for high prime requisites."
+      }
+    }
+  },
+  "thac0": {
+    "status": "from-PHB-table-53",
+    "source": "PHB Table 53: Calculated THAC0s (image supplied by owner)",
+    "byClassGroup": {
+      "priest": {
+        "1": 20,
+        "2": 20,
+        "3": 20,
+        "4": 18,
+        "5": 18,
+        "6": 18,
+        "7": 16,
+        "8": 16,
+        "9": 16,
+        "10": 14,
+        "11": 14,
+        "12": 14,
+        "13": 12,
+        "14": 12,
+        "15": 12,
+        "16": 10,
+        "17": 10,
+        "18": 10,
+        "19": 8,
+        "20": 8
+      },
+      "rogue": {
+        "1": 20,
+        "2": 20,
+        "3": 19,
+        "4": 19,
+        "5": 18,
+        "6": 18,
+        "7": 17,
+        "8": 17,
+        "9": 16,
+        "10": 16,
+        "11": 15,
+        "12": 15,
+        "13": 14,
+        "14": 14,
+        "15": 13,
+        "16": 13,
+        "17": 12,
+        "18": 12,
+        "19": 11,
+        "20": 11
+      },
+      "warrior": {
+        "1": 20,
+        "2": 19,
+        "3": 18,
+        "4": 17,
+        "5": 16,
+        "6": 15,
+        "7": 14,
+        "8": 13,
+        "9": 12,
+        "10": 11,
+        "11": 10,
+        "12": 9,
+        "13": 8,
+        "14": 7,
+        "15": 6,
+        "16": 5,
+        "17": 4,
+        "18": 3,
+        "19": 2,
+        "20": 1
+      },
+      "wizard": {
+        "1": 20,
+        "2": 20,
+        "3": 20,
+        "4": 19,
+        "5": 19,
+        "6": 19,
+        "7": 18,
+        "8": 18,
+        "9": 18,
+        "10": 17,
+        "11": 17,
+        "12": 17,
+        "13": 16,
+        "14": 16,
+        "15": 16,
+        "16": 15,
+        "17": 15,
+        "18": 15,
+        "19": 14,
+        "20": 14
+      }
+    },
+    "classToGroup": "Use classGroups: fighter/paladin/ranger = warrior, cleric/druid = priest, thief/bard = rogue, wizard (and specialists) = wizard.",
+    "monk": {
+      "thac0Group": "priest",
+      "status": "confirmed-by-owner",
+      "text": "The Monk uses the Cleric (priest) THAC0.",
+      "conflict": "The Monk's own level table (house.json monk.levelTable) lists a different THAC0 column: 20 at level 1 down to 0 at level 19. Confirm which applies, e.g. whether that column is only for Open Hand attacks.",
+      "supportingHint": "The Monk sheet's non-proficient penalty of -3 is the priest group's penalty on Table 34."
+    },
+    "multiClass": {
+      "status": "assumed",
+      "rule": "A multi-class character uses the best (lowest) THAC0 of his classes at their levels.",
+      "note": "Standard PHB multi-class rule; not shown on the table. Confirm."
+    },
+    "engineHint": "THAC0 for the sheet's 'Natural THAC0' field. The weapon combat grid's to-hit numbers for AC 10 down to 0 are THAC0 minus AC, adjusted by STR, proficiency, specialisation and magical bonuses."
+  },
+  "savingThrows": {
+    "status": "from-PHB-table-60",
+    "source": "PHB Table 60: Character Saving Throws (image supplied by owner)",
+    "categories": [
+      "paralyzationPoisonDeath",
+      "rodStaffWand",
+      "petrificationPolymorph",
+      "breathWeapon",
+      "spells"
+    ],
+    "categoryLabels": {
+      "paralyzationPoisonDeath": "Paralyzation, Poison, or Death Magic",
+      "rodStaffWand": "Rod, Staff, or Wand",
+      "petrificationPolymorph": "Petrification or Polymorph",
+      "breathWeapon": "Breath Weapon",
+      "spells": "Spell"
+    },
+    "footnotes": {
+      "petrificationPolymorph": "Excluding polymorph wand attacks.",
+      "breathWeapon": "Excluding those that cause petrification or polymorph.",
+      "spells": "Excluding those for which another saving throw type is specified, such as death, petrification, polymorph, etc."
+    },
+    "meaning": "The number is the target on a d20 saving throw; a lower number is a better save. Read as 'roll this number or higher'; confirm.",
+    "byClassGroup": {
+      "priest": [
+        {
+          "label": "1-3",
+          "levels": {
+            "from": 1,
+            "to": 3
+          },
+          "saves": {
+            "paralyzationPoisonDeath": 10,
+            "rodStaffWand": 14,
+            "petrificationPolymorph": 13,
+            "breathWeapon": 16,
+            "spells": 15
+          }
+        },
+        {
+          "label": "4-6",
+          "levels": {
+            "from": 4,
+            "to": 6
+          },
+          "saves": {
+            "paralyzationPoisonDeath": 9,
+            "rodStaffWand": 13,
+            "petrificationPolymorph": 12,
+            "breathWeapon": 15,
+            "spells": 14
+          }
+        },
+        {
+          "label": "7-9",
+          "levels": {
+            "from": 7,
+            "to": 9
+          },
+          "saves": {
+            "paralyzationPoisonDeath": 7,
+            "rodStaffWand": 11,
+            "petrificationPolymorph": 10,
+            "breathWeapon": 13,
+            "spells": 12
+          }
+        },
+        {
+          "label": "10-12",
+          "levels": {
+            "from": 10,
+            "to": 12
+          },
+          "saves": {
+            "paralyzationPoisonDeath": 6,
+            "rodStaffWand": 10,
+            "petrificationPolymorph": 9,
+            "breathWeapon": 12,
+            "spells": 11
+          }
+        },
+        {
+          "label": "13-15",
+          "levels": {
+            "from": 13,
+            "to": 15
+          },
+          "saves": {
+            "paralyzationPoisonDeath": 5,
+            "rodStaffWand": 9,
+            "petrificationPolymorph": 8,
+            "breathWeapon": 11,
+            "spells": 10
+          }
+        },
+        {
+          "label": "16-18",
+          "levels": {
+            "from": 16,
+            "to": 18
+          },
+          "saves": {
+            "paralyzationPoisonDeath": 4,
+            "rodStaffWand": 8,
+            "petrificationPolymorph": 7,
+            "breathWeapon": 10,
+            "spells": 9
+          }
+        },
+        {
+          "label": "19+",
+          "levels": {
+            "from": 19,
+            "to": null
+          },
+          "saves": {
+            "paralyzationPoisonDeath": 2,
+            "rodStaffWand": 6,
+            "petrificationPolymorph": 5,
+            "breathWeapon": 8,
+            "spells": 7
+          }
+        }
+      ],
+      "rogue": [
+        {
+          "label": "1-4",
+          "levels": {
+            "from": 1,
+            "to": 4
+          },
+          "saves": {
+            "paralyzationPoisonDeath": 13,
+            "rodStaffWand": 14,
+            "petrificationPolymorph": 12,
+            "breathWeapon": 16,
+            "spells": 15
+          }
+        },
+        {
+          "label": "5-8",
+          "levels": {
+            "from": 5,
+            "to": 8
+          },
+          "saves": {
+            "paralyzationPoisonDeath": 12,
+            "rodStaffWand": 12,
+            "petrificationPolymorph": 11,
+            "breathWeapon": 15,
+            "spells": 13
+          }
+        },
+        {
+          "label": "9-12",
+          "levels": {
+            "from": 9,
+            "to": 12
+          },
+          "saves": {
+            "paralyzationPoisonDeath": 11,
+            "rodStaffWand": 10,
+            "petrificationPolymorph": 10,
+            "breathWeapon": 14,
+            "spells": 11
+          }
+        },
+        {
+          "label": "13-16",
+          "levels": {
+            "from": 13,
+            "to": 16
+          },
+          "saves": {
+            "paralyzationPoisonDeath": 10,
+            "rodStaffWand": 8,
+            "petrificationPolymorph": 9,
+            "breathWeapon": 13,
+            "spells": 9
+          }
+        },
+        {
+          "label": "17-20",
+          "levels": {
+            "from": 17,
+            "to": 20
+          },
+          "saves": {
+            "paralyzationPoisonDeath": 9,
+            "rodStaffWand": 6,
+            "petrificationPolymorph": 8,
+            "breathWeapon": 12,
+            "spells": 7
+          }
+        },
+        {
+          "label": "21+",
+          "levels": {
+            "from": 21,
+            "to": null
+          },
+          "saves": {
+            "paralyzationPoisonDeath": 8,
+            "rodStaffWand": 4,
+            "petrificationPolymorph": 7,
+            "breathWeapon": 11,
+            "spells": 5
+          }
+        }
+      ],
+      "warrior": [
+        {
+          "label": "0",
+          "levels": {
+            "from": 0,
+            "to": 0
+          },
+          "saves": {
+            "paralyzationPoisonDeath": 16,
+            "rodStaffWand": 18,
+            "petrificationPolymorph": 17,
+            "breathWeapon": 20,
+            "spells": 19
+          }
+        },
+        {
+          "label": "1-2",
+          "levels": {
+            "from": 1,
+            "to": 2
+          },
+          "saves": {
+            "paralyzationPoisonDeath": 14,
+            "rodStaffWand": 16,
+            "petrificationPolymorph": 15,
+            "breathWeapon": 17,
+            "spells": 17
+          }
+        },
+        {
+          "label": "3-4",
+          "levels": {
+            "from": 3,
+            "to": 4
+          },
+          "saves": {
+            "paralyzationPoisonDeath": 13,
+            "rodStaffWand": 15,
+            "petrificationPolymorph": 14,
+            "breathWeapon": 16,
+            "spells": 16
+          }
+        },
+        {
+          "label": "5-6",
+          "levels": {
+            "from": 5,
+            "to": 6
+          },
+          "saves": {
+            "paralyzationPoisonDeath": 11,
+            "rodStaffWand": 13,
+            "petrificationPolymorph": 12,
+            "breathWeapon": 13,
+            "spells": 14
+          }
+        },
+        {
+          "label": "7-8",
+          "levels": {
+            "from": 7,
+            "to": 8
+          },
+          "saves": {
+            "paralyzationPoisonDeath": 10,
+            "rodStaffWand": 12,
+            "petrificationPolymorph": 11,
+            "breathWeapon": 12,
+            "spells": 13
+          }
+        },
+        {
+          "label": "9-10",
+          "levels": {
+            "from": 9,
+            "to": 10
+          },
+          "saves": {
+            "paralyzationPoisonDeath": 8,
+            "rodStaffWand": 10,
+            "petrificationPolymorph": 9,
+            "breathWeapon": 9,
+            "spells": 11
+          }
+        },
+        {
+          "label": "11-12",
+          "levels": {
+            "from": 11,
+            "to": 12
+          },
+          "saves": {
+            "paralyzationPoisonDeath": 7,
+            "rodStaffWand": 9,
+            "petrificationPolymorph": 8,
+            "breathWeapon": 8,
+            "spells": 10
+          }
+        },
+        {
+          "label": "13-14",
+          "levels": {
+            "from": 13,
+            "to": 14
+          },
+          "saves": {
+            "paralyzationPoisonDeath": 5,
+            "rodStaffWand": 7,
+            "petrificationPolymorph": 6,
+            "breathWeapon": 5,
+            "spells": 8
+          }
+        },
+        {
+          "label": "15-16",
+          "levels": {
+            "from": 15,
+            "to": 16
+          },
+          "saves": {
+            "paralyzationPoisonDeath": 4,
+            "rodStaffWand": 6,
+            "petrificationPolymorph": 5,
+            "breathWeapon": 4,
+            "spells": 7
+          }
+        },
+        {
+          "label": "17+",
+          "levels": {
+            "from": 17,
+            "to": null
+          },
+          "saves": {
+            "paralyzationPoisonDeath": 3,
+            "rodStaffWand": 5,
+            "petrificationPolymorph": 4,
+            "breathWeapon": 4,
+            "spells": 6
+          }
+        }
+      ],
+      "wizard": [
+        {
+          "label": "1-5",
+          "levels": {
+            "from": 1,
+            "to": 5
+          },
+          "saves": {
+            "paralyzationPoisonDeath": 14,
+            "rodStaffWand": 11,
+            "petrificationPolymorph": 13,
+            "breathWeapon": 15,
+            "spells": 12
+          }
+        },
+        {
+          "label": "6-10",
+          "levels": {
+            "from": 6,
+            "to": 10
+          },
+          "saves": {
+            "paralyzationPoisonDeath": 13,
+            "rodStaffWand": 9,
+            "petrificationPolymorph": 11,
+            "breathWeapon": 13,
+            "spells": 10
+          }
+        },
+        {
+          "label": "11-15",
+          "levels": {
+            "from": 11,
+            "to": 15
+          },
+          "saves": {
+            "paralyzationPoisonDeath": 11,
+            "rodStaffWand": 7,
+            "petrificationPolymorph": 9,
+            "breathWeapon": 11,
+            "spells": 8
+          }
+        },
+        {
+          "label": "16-20",
+          "levels": {
+            "from": 16,
+            "to": 20
+          },
+          "saves": {
+            "paralyzationPoisonDeath": 10,
+            "rodStaffWand": 5,
+            "petrificationPolymorph": 7,
+            "breathWeapon": 9,
+            "spells": 6
+          }
+        },
+        {
+          "label": "21+",
+          "levels": {
+            "from": 21,
+            "to": null
+          },
+          "saves": {
+            "paralyzationPoisonDeath": 8,
+            "rodStaffWand": 3,
+            "petrificationPolymorph": 5,
+            "breathWeapon": 7,
+            "spells": 4
+          }
+        }
+      ]
+    },
+    "levelZero": "Only the warrior group has a level 0 row (for zero-level characters).",
+    "classToGroup": "Use classGroups: fighter/paladin/ranger = warrior, cleric/druid = priest, thief/bard = rogue, wizard (and specialists) = wizard. The Bard fights and saves as a rogue (class text).",
+    "monk": {
+      "group": "undefined",
+      "note": "The Monk (house class) has no saving throw group yet. Owner has said it uses the Cleric (priest) THAC0; confirm whether it also saves as a priest."
+    },
+    "multiClass": {
+      "status": "assumed",
+      "rule": "A multi-class character takes the best (lowest) number in each category across his classes at their levels. Standard PHB rule; not on the table. Confirm."
+    },
+    "modifiersElsewhere": [
+      "Paladin: +2 to all saves (house.json classAbilities.paladin).",
+      "Druid: +2 vs fire and electrical attacks (house.json classAbilities.druid).",
+      "Monk area-effects note (house.json monk.abilities.areaEffects).",
+      "CON poison save (rules-core abilityScores.table.con) and WIS magical defense (table.wis) apply on top; how they combine with these numbers is to be confirmed.",
+      "Racial saving throw bonuses are not entered yet (races data still to come)."
+    ]
+  },
+  "movement": {
+    "status": "partial: base move, encumbrance bands and modified movement entered; melee move (house rule) and swimming still needed",
+    "baseMoveByRace": {
+      "source": "Owner statement",
+      "unit": "movement rate (the sheet's 'Normal' movement)",
+      "values": {
+        "human": 12,
+        "elf": 12,
+        "halfElf": 12,
+        "halfOrc": 12,
+        "gnome": 6,
+        "halfling": 6,
+        "dwarf": 6
+      },
+      "groups": {
+        "12": [
+          "human",
+          "elf",
+          "halfElf",
+          "halfOrc"
+        ],
+        "6": [
+          "gnome",
+          "halfling",
+          "dwarf"
+        ]
+      }
+    },
+    "stillNeeded": [
+      "Melee Move (house rule): how it is calculated (your sheets carry both a Melee Encumbrance and a Normal Encumbrance list).",
+      "Swimming rate.",
+      "Whether armour changes movement (not on the armour table supplied)."
+    ],
+    "encumbrance": {
+      "status": "from-PHB-table-47",
+      "source": "PHB Table 47: Character Encumbrance (image supplied by owner)",
+      "unit": "pounds",
+      "categories": [
+        "unencumbered",
+        "light",
+        "moderate",
+        "heavy",
+        "severe"
+      ],
+      "strengthRows": "Keys match abilityScores.table.str rows. The table starts at STR 2 (no STR 1 row).",
+      "crossCheck": "The Unencumbered upper limit equals the Weight Allowance on the Strength table (Table 1) for every row, and the Severe upper limit equals the Max Carried Weight.",
+      "howToUse": "Total the weight carried and find which band it falls in for the character's Strength. Max carried weight is the most he can carry.",
+      "effectsOfCategories": "Table 47 gives the weight bands only. The movement effect of each band comes from Table 48 (modified movement rate).",
+      "rows": [
+        {
+          "key": "2",
+          "unencumbered": [
+            0,
+            1
+          ],
+          "light": [
+            2,
+            2
+          ],
+          "moderate": [
+            3,
+            3
+          ],
+          "heavy": [
+            4,
+            4
+          ],
+          "severe": [
+            5,
+            6
+          ],
+          "maxCarriedWeight": 6
+        },
+        {
+          "key": "3",
+          "unencumbered": [
+            0,
+            5
+          ],
+          "light": [
+            6,
+            6
+          ],
+          "moderate": [
+            7,
+            7
+          ],
+          "heavy": [
+            8,
+            9
+          ],
+          "severe": [
+            10,
+            10
+          ],
+          "maxCarriedWeight": 10
+        },
+        {
+          "key": "4-5",
+          "unencumbered": [
+            0,
+            10
+          ],
+          "light": [
+            11,
+            13
+          ],
+          "moderate": [
+            14,
+            16
+          ],
+          "heavy": [
+            17,
+            19
+          ],
+          "severe": [
+            20,
+            25
+          ],
+          "maxCarriedWeight": 25
+        },
+        {
+          "key": "6-7",
+          "unencumbered": [
+            0,
+            20
+          ],
+          "light": [
+            21,
+            29
+          ],
+          "moderate": [
+            30,
+            38
+          ],
+          "heavy": [
+            39,
+            46
+          ],
+          "severe": [
+            47,
+            55
+          ],
+          "maxCarriedWeight": 55
+        },
+        {
+          "key": "8-9",
+          "unencumbered": [
+            0,
+            35
+          ],
+          "light": [
+            36,
+            50
+          ],
+          "moderate": [
+            51,
+            65
+          ],
+          "heavy": [
+            66,
+            80
+          ],
+          "severe": [
+            81,
+            90
+          ],
+          "maxCarriedWeight": 90
+        },
+        {
+          "key": "10-11",
+          "unencumbered": [
+            0,
+            40
+          ],
+          "light": [
+            41,
+            58
+          ],
+          "moderate": [
+            59,
+            76
+          ],
+          "heavy": [
+            77,
+            96
+          ],
+          "severe": [
+            97,
+            110
+          ],
+          "maxCarriedWeight": 110
+        },
+        {
+          "key": "12-13",
+          "unencumbered": [
+            0,
+            45
+          ],
+          "light": [
+            46,
+            69
+          ],
+          "moderate": [
+            70,
+            93
+          ],
+          "heavy": [
+            94,
+            117
+          ],
+          "severe": [
+            118,
+            140
+          ],
+          "maxCarriedWeight": 140
+        },
+        {
+          "key": "14-15",
+          "unencumbered": [
+            0,
+            55
+          ],
+          "light": [
+            56,
+            85
+          ],
+          "moderate": [
+            86,
+            115
+          ],
+          "heavy": [
+            116,
+            145
+          ],
+          "severe": [
+            146,
+            170
+          ],
+          "maxCarriedWeight": 170
+        },
+        {
+          "key": "16",
+          "unencumbered": [
+            0,
+            70
+          ],
+          "light": [
+            71,
+            100
+          ],
+          "moderate": [
+            101,
+            130
+          ],
+          "heavy": [
+            131,
+            160
+          ],
+          "severe": [
+            161,
+            195
+          ],
+          "maxCarriedWeight": 195
+        },
+        {
+          "key": "17",
+          "unencumbered": [
+            0,
+            85
+          ],
+          "light": [
+            86,
+            121
+          ],
+          "moderate": [
+            122,
+            157
+          ],
+          "heavy": [
+            158,
+            193
+          ],
+          "severe": [
+            194,
+            220
+          ],
+          "maxCarriedWeight": 220
+        },
+        {
+          "key": "18",
+          "unencumbered": [
+            0,
+            110
+          ],
+          "light": [
+            111,
+            149
+          ],
+          "moderate": [
+            150,
+            188
+          ],
+          "heavy": [
+            189,
+            227
+          ],
+          "severe": [
+            228,
+            255
+          ],
+          "maxCarriedWeight": 255
+        },
+        {
+          "key": "18/01-50",
+          "unencumbered": [
+            0,
+            135
+          ],
+          "light": [
+            136,
+            174
+          ],
+          "moderate": [
+            175,
+            213
+          ],
+          "heavy": [
+            214,
+            252
+          ],
+          "severe": [
+            253,
+            280
+          ],
+          "maxCarriedWeight": 280
+        },
+        {
+          "key": "18/51-75",
+          "unencumbered": [
+            0,
+            160
+          ],
+          "light": [
+            161,
+            199
+          ],
+          "moderate": [
+            200,
+            238
+          ],
+          "heavy": [
+            239,
+            277
+          ],
+          "severe": [
+            278,
+            305
+          ],
+          "maxCarriedWeight": 305
+        },
+        {
+          "key": "18/76-90",
+          "unencumbered": [
+            0,
+            185
+          ],
+          "light": [
+            186,
+            224
+          ],
+          "moderate": [
+            225,
+            263
+          ],
+          "heavy": [
+            264,
+            302
+          ],
+          "severe": [
+            303,
+            330
+          ],
+          "maxCarriedWeight": 330
+        },
+        {
+          "key": "18/91-99",
+          "unencumbered": [
+            0,
+            235
+          ],
+          "light": [
+            236,
+            274
+          ],
+          "moderate": [
+            275,
+            313
+          ],
+          "heavy": [
+            314,
+            352
+          ],
+          "severe": [
+            353,
+            380
+          ],
+          "maxCarriedWeight": 380
+        },
+        {
+          "key": "18/00",
+          "unencumbered": [
+            0,
+            335
+          ],
+          "light": [
+            336,
+            374
+          ],
+          "moderate": [
+            375,
+            413
+          ],
+          "heavy": [
+            414,
+            452
+          ],
+          "severe": [
+            453,
+            480
+          ],
+          "maxCarriedWeight": 480
+        }
+      ]
+    },
+    "modifiedMovement": {
+      "status": "from-PHB-table-48",
+      "source": "PHB Table 48: Modified Movement Rates (image supplied by owner)",
+      "columns": [
+        {
+          "index": 0,
+          "baseMove12Rate": 12,
+          "baseMove6Rate": 6
+        },
+        {
+          "index": 1,
+          "baseMove12Rate": 11,
+          "baseMove6Rate": 5
+        },
+        {
+          "index": 2,
+          "baseMove12Rate": 10,
+          "baseMove6Rate": 5
+        },
+        {
+          "index": 3,
+          "baseMove12Rate": 9,
+          "baseMove6Rate": 4
+        },
+        {
+          "index": 4,
+          "baseMove12Rate": 8,
+          "baseMove6Rate": 4
+        },
+        {
+          "index": 5,
+          "baseMove12Rate": 7,
+          "baseMove6Rate": 3
+        },
+        {
+          "index": 6,
+          "baseMove12Rate": 6,
+          "baseMove6Rate": 3
+        },
+        {
+          "index": 7,
+          "baseMove12Rate": 5,
+          "baseMove6Rate": 2
+        },
+        {
+          "index": 8,
+          "baseMove12Rate": 4,
+          "baseMove6Rate": 2
+        },
+        {
+          "index": 9,
+          "baseMove12Rate": 3,
+          "baseMove6Rate": 1
+        },
+        {
+          "index": 10,
+          "baseMove12Rate": 2,
+          "baseMove6Rate": 1
+        },
+        {
+          "index": 11,
+          "baseMove12Rate": 1,
+          "baseMove6Rate": 1
+        }
+      ],
+      "meaning": "Each column is a movement rate. The numbers in a Strength row are the heaviest weight (in pounds) the character can carry and still move at that column's rate. The top figure of each column is the rate for base move 12, the lower figure the rate for base move 6.",
+      "howToUse": "Find the character's Strength row, then the first column (from the left) whose weight limit is at least the weight he is carrying. The rate is the column's baseMove12Rate or baseMove6Rate, depending on his base move.",
+      "howToUseStatus": "interpretation: confirm against the PHB wording",
+      "baseMovesCovered": [
+        12,
+        6
+      ],
+      "baseMovesNote": "Table 48 only covers base moves 12 and 6, which are the only base moves in the race data (Monk movement is separate, in house.json).",
+      "dashes": "A dash is stored as null: that rate is not reached at that Strength (the two lowest rows are sparse).",
+      "rows": [
+        {
+          "key": "2",
+          "weightLimitByColumn": [
+            1,
+            null,
+            2,
+            null,
+            null,
+            3,
+            null,
+            null,
+            4,
+            null,
+            null,
+            5
+          ],
+          "needsProofreading": true,
+          "note": "Sparse row in the image, read with less certainty. Please check against your book."
+        },
+        {
+          "key": "3",
+          "weightLimitByColumn": [
+            5,
+            null,
+            6,
+            null,
+            null,
+            7,
+            null,
+            null,
+            8,
+            null,
+            null,
+            9
+          ],
+          "needsProofreading": true,
+          "note": "Sparse row in the image, read with less certainty. Please check against your book."
+        },
+        {
+          "key": "4-5",
+          "weightLimitByColumn": [
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21
+          ]
+        },
+        {
+          "key": "6-7",
+          "weightLimitByColumn": [
+            20,
+            23,
+            26,
+            29,
+            32,
+            35,
+            38,
+            41,
+            44,
+            47,
+            50,
+            53
+          ]
+        },
+        {
+          "key": "8-9",
+          "weightLimitByColumn": [
+            35,
+            40,
+            45,
+            50,
+            55,
+            60,
+            65,
+            70,
+            75,
+            80,
+            85,
+            89
+          ]
+        },
+        {
+          "key": "10-11",
+          "weightLimitByColumn": [
+            40,
+            46,
+            52,
+            58,
+            64,
+            70,
+            76,
+            82,
+            88,
+            94,
+            100,
+            106
+          ]
+        },
+        {
+          "key": "12-13",
+          "weightLimitByColumn": [
+            45,
+            53,
+            61,
+            69,
+            77,
+            85,
+            93,
+            101,
+            109,
+            117,
+            125,
+            133
+          ]
+        },
+        {
+          "key": "14-15",
+          "weightLimitByColumn": [
+            55,
+            65,
+            75,
+            85,
+            95,
+            105,
+            115,
+            125,
+            135,
+            145,
+            155,
+            165
+          ]
+        },
+        {
+          "key": "16",
+          "weightLimitByColumn": [
+            70,
+            80,
+            90,
+            100,
+            110,
+            120,
+            130,
+            140,
+            150,
+            160,
+            170,
+            180
+          ]
+        },
+        {
+          "key": "17",
+          "weightLimitByColumn": [
+            85,
+            97,
+            109,
+            121,
+            133,
+            145,
+            157,
+            169,
+            181,
+            193,
+            205,
+            217
+          ]
+        },
+        {
+          "key": "18",
+          "weightLimitByColumn": [
+            110,
+            123,
+            136,
+            149,
+            162,
+            175,
+            188,
+            201,
+            214,
+            227,
+            240,
+            253
+          ]
+        },
+        {
+          "key": "18/01-50",
+          "weightLimitByColumn": [
+            135,
+            148,
+            161,
+            174,
+            187,
+            200,
+            213,
+            226,
+            239,
+            252,
+            265,
+            278
+          ]
+        },
+        {
+          "key": "18/51-75",
+          "weightLimitByColumn": [
+            160,
+            173,
+            186,
+            199,
+            212,
+            225,
+            238,
+            251,
+            264,
+            277,
+            290,
+            303
+          ]
+        },
+        {
+          "key": "18/76-90",
+          "weightLimitByColumn": [
+            185,
+            198,
+            211,
+            224,
+            237,
+            250,
+            263,
+            276,
+            289,
+            302,
+            315,
+            328
+          ]
+        },
+        {
+          "key": "18/91-99",
+          "weightLimitByColumn": [
+            235,
+            248,
+            261,
+            274,
+            287,
+            300,
+            313,
+            326,
+            339,
+            352,
+            365,
+            378
+          ]
+        },
+        {
+          "key": "18/00",
+          "weightLimitByColumn": [
+            335,
+            348,
+            361,
+            374,
+            387,
+            400,
+            413,
+            426,
+            439,
+            452,
+            465,
+            478
+          ]
+        }
+      ]
+    }
+  },
+  "spellProgression": {
+    "status": "from-PHB-tables-21-and-24",
+    "source": "PHB Table 21: Wizard Spell Progression and Table 24: Priest Spell Progression (images supplied by owner)",
+    "format": "slotsByLevel[classLevel] = [slots at spell level 1, 2, 3, ...]. A 0 means no spells of that level (printed as a dash on the table).",
+    "wizard": {
+      "appliesTo": [
+        "wizard"
+      ],
+      "spellLevels": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "slotsByLevel": {
+        "1": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "2": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "3": [
+          2,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "4": [
+          3,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "5": [
+          4,
+          2,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "6": [
+          4,
+          2,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "7": [
+          4,
+          3,
+          2,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "8": [
+          4,
+          3,
+          3,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "9": [
+          4,
+          3,
+          3,
+          2,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "10": [
+          4,
+          4,
+          3,
+          2,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "11": [
+          4,
+          4,
+          4,
+          3,
+          3,
+          0,
+          0,
+          0,
+          0
+        ],
+        "12": [
+          4,
+          4,
+          4,
+          4,
+          4,
+          1,
+          0,
+          0,
+          0
+        ],
+        "13": [
+          5,
+          5,
+          5,
+          4,
+          4,
+          2,
+          0,
+          0,
+          0
+        ],
+        "14": [
+          5,
+          5,
+          5,
+          4,
+          4,
+          2,
+          1,
+          0,
+          0
+        ],
+        "15": [
+          5,
+          5,
+          5,
+          5,
+          5,
+          2,
+          1,
+          0,
+          0
+        ],
+        "16": [
+          5,
+          5,
+          5,
+          5,
+          5,
+          3,
+          2,
+          1,
+          0
+        ],
+        "17": [
+          5,
+          5,
+          5,
+          5,
+          5,
+          3,
+          3,
+          2,
+          0
+        ],
+        "18": [
+          5,
+          5,
+          5,
+          5,
+          5,
+          3,
+          3,
+          2,
+          1
+        ],
+        "19": [
+          5,
+          5,
+          5,
+          5,
+          5,
+          3,
+          3,
+          3,
+          1
+        ],
+        "20": [
+          5,
+          5,
+          5,
+          5,
+          5,
+          4,
+          3,
+          3,
+          2
+        ]
+      },
+      "highestSpellLevelByLevel": {
+        "1": 1,
+        "2": 1,
+        "3": 2,
+        "4": 2,
+        "5": 3,
+        "6": 3,
+        "7": 4,
+        "8": 4,
+        "9": 5,
+        "10": 5,
+        "11": 5,
+        "12": 6,
+        "13": 6,
+        "14": 7,
+        "15": 7,
+        "16": 8,
+        "17": 8,
+        "18": 9,
+        "19": 9,
+        "20": 9
+      },
+      "appliesToSpecialists": true
+    },
+    "priest": {
+      "appliesTo": [
+        "cleric",
+        "druid"
+      ],
+      "spellLevels": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "slotsByLevel": {
+        "1": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "2": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "3": [
+          2,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "4": [
+          3,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "5": [
+          3,
+          3,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "6": [
+          3,
+          3,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "7": [
+          3,
+          3,
+          2,
+          1,
+          0,
+          0,
+          0
+        ],
+        "8": [
+          3,
+          3,
+          3,
+          2,
+          0,
+          0,
+          0
+        ],
+        "9": [
+          4,
+          4,
+          3,
+          2,
+          1,
+          0,
+          0
+        ],
+        "10": [
+          4,
+          4,
+          3,
+          3,
+          2,
+          0,
+          0
+        ],
+        "11": [
+          5,
+          4,
+          4,
+          3,
+          2,
+          1,
+          0
+        ],
+        "12": [
+          6,
+          5,
+          5,
+          3,
+          2,
+          2,
+          0
+        ],
+        "13": [
+          6,
+          6,
+          6,
+          4,
+          2,
+          2,
+          0
+        ],
+        "14": [
+          6,
+          6,
+          6,
+          5,
+          3,
+          2,
+          1
+        ],
+        "15": [
+          6,
+          6,
+          6,
+          6,
+          4,
+          2,
+          1
+        ],
+        "16": [
+          7,
+          7,
+          7,
+          6,
+          4,
+          3,
+          1
+        ],
+        "17": [
+          7,
+          7,
+          7,
+          7,
+          5,
+          3,
+          2
+        ],
+        "18": [
+          8,
+          8,
+          8,
+          8,
+          6,
+          4,
+          2
+        ],
+        "19": [
+          9,
+          9,
+          8,
+          8,
+          6,
+          4,
+          2
+        ],
+        "20": [
+          9,
+          9,
+          9,
+          8,
+          7,
+          5,
+          2
+        ]
+      },
+      "highestSpellLevelByLevel": {
+        "1": 1,
+        "2": 1,
+        "3": 2,
+        "4": 2,
+        "5": 3,
+        "6": 3,
+        "7": 4,
+        "8": 4,
+        "9": 5,
+        "10": 5,
+        "11": 6,
+        "12": 6,
+        "13": 6,
+        "14": 7,
+        "15": 7,
+        "16": 7,
+        "17": 7,
+        "18": 7,
+        "19": 7,
+        "20": 7
+      },
+      "wisdomRequirements": {
+        "6": {
+          "minWisdom": 17,
+          "note": "6th-level spells are usable only by priests with 17 or greater Wisdom."
+        },
+        "7": {
+          "minWisdom": 18,
+          "note": "7th-level spells are usable only by priests with 18 or greater Wisdom."
+        }
+      },
+      "engineHint": "The table shows the 6th and 7th-level slots a priest would have by level; the engine should only grant them if the character's WIS meets the requirement."
+    },
+    "bonusSpells": "See house.json bonusSpells: WIS bonus spells for cleric and druid; INT bonus spells (house rule) for the wizard. Bonus-spell rows on the sheets cover spell levels 1-4.",
+    "notYetCovered": {
+      "illusionistAndOtherSpecialists": "Specialist wizards are now defined in specialistWizards (requirements, opposition schools, extra spell). They use the wizard progression plus one extra specialist-school spell per spell level (x+1)."
+    },
+    "houseRulesNote": "The owner said the spell system has house rules. They are not applied to these tables: add them in house.json when defined.",
+    "proofreadingNote": "Transcribed from images by Claude. Please spot-check against your book.",
+    "paladin": {
+      "appliesTo": [
+        "paladin"
+      ],
+      "source": "PHB Table 17: Paladin Spell Progression (image supplied by owner)",
+      "spellType": "priest",
+      "spellLevels": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "startsAtPaladinLevel": 9,
+      "castingLevelByPaladinLevel": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 1,
+        "10": 2,
+        "11": 3,
+        "12": 4,
+        "13": 5,
+        "14": 6,
+        "15": 7,
+        "16": 8,
+        "17": 9,
+        "18": 9,
+        "19": 9,
+        "20": 9
+      },
+      "castingLevelRule": "castingLevel = paladinLevel - 8 from paladin level 9, capped at 9 (levels 17 and above all print 9*).",
+      "slotsByLevel": {
+        "1": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "2": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "3": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "4": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "5": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "6": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "7": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "8": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "9": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "10": [
+          2,
+          0,
+          0,
+          0
+        ],
+        "11": [
+          2,
+          1,
+          0,
+          0
+        ],
+        "12": [
+          2,
+          2,
+          0,
+          0
+        ],
+        "13": [
+          2,
+          2,
+          1,
+          0
+        ],
+        "14": [
+          3,
+          2,
+          1,
+          0
+        ],
+        "15": [
+          3,
+          2,
+          1,
+          1
+        ],
+        "16": [
+          3,
+          3,
+          2,
+          1
+        ],
+        "17": [
+          3,
+          3,
+          3,
+          1
+        ],
+        "18": [
+          3,
+          3,
+          3,
+          1
+        ],
+        "19": [
+          3,
+          3,
+          3,
+          2
+        ],
+        "20": [
+          3,
+          3,
+          3,
+          3
+        ]
+      },
+      "highestSpellLevelByLevel": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 1,
+        "10": 1,
+        "11": 2,
+        "12": 2,
+        "13": 3,
+        "14": 3,
+        "15": 4,
+        "16": 4,
+        "17": 4,
+        "18": 4,
+        "19": 4,
+        "20": 4
+      },
+      "tableMarkers": {
+        "*": "Maximum spell ability.",
+        "printedOn": "Casting level 9 at paladin levels 17-20, and paladin level 20."
+      },
+      "bonusSpells": "None: paladins never gain bonus spells for WIS or INT (house.json bonusSpells.never).",
+      "stillNeeded": [
+        "The spell lists for those four spheres (part of the spell module).",
+        "Whether the casting level (not the paladin level) is used for spell effects: Table 17 gives 'spell progression and casting level'; confirm how it is applied."
+      ],
+      "spheres": [
+        "combat",
+        "divination",
+        "healing",
+        "protection"
+      ],
+      "sphereNote": "Paladins may cast only spells of the combat, divination, healing and protective spheres (PHB text supplied by owner). Scrolls: not clerical or druidical scrolls."
+    },
+    "ranger": {
+      "appliesTo": [
+        "ranger"
+      ],
+      "source": "PHB Table 18: Ranger Abilities, casting level and priest spell columns (image supplied by owner)",
+      "spellType": "priest",
+      "spellLevels": [
+        1,
+        2,
+        3
+      ],
+      "startsAtRangerLevel": 8,
+      "castingLevelByRangerLevel": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 1,
+        "9": 2,
+        "10": 3,
+        "11": 4,
+        "12": 5,
+        "13": 6,
+        "14": 7,
+        "15": 8,
+        "16": 9,
+        "17": 9,
+        "18": 9,
+        "19": 9,
+        "20": 9
+      },
+      "castingLevelRule": "castingLevel = rangerLevel - 7 from ranger level 8, capped at 9 (printed 9* at level 16).",
+      "slotsByLevel": {
+        "1": [
+          0,
+          0,
+          0
+        ],
+        "2": [
+          0,
+          0,
+          0
+        ],
+        "3": [
+          0,
+          0,
+          0
+        ],
+        "4": [
+          0,
+          0,
+          0
+        ],
+        "5": [
+          0,
+          0,
+          0
+        ],
+        "6": [
+          0,
+          0,
+          0
+        ],
+        "7": [
+          0,
+          0,
+          0
+        ],
+        "8": [
+          1,
+          0,
+          0
+        ],
+        "9": [
+          2,
+          0,
+          0
+        ],
+        "10": [
+          2,
+          1,
+          0
+        ],
+        "11": [
+          2,
+          2,
+          0
+        ],
+        "12": [
+          2,
+          2,
+          1
+        ],
+        "13": [
+          3,
+          2,
+          1
+        ],
+        "14": [
+          3,
+          2,
+          2
+        ],
+        "15": [
+          3,
+          3,
+          2
+        ],
+        "16": [
+          3,
+          3,
+          3
+        ],
+        "17": [
+          3,
+          3,
+          3
+        ],
+        "18": [
+          3,
+          3,
+          3
+        ],
+        "19": [
+          3,
+          3,
+          3
+        ],
+        "20": [
+          3,
+          3,
+          3
+        ]
+      },
+      "highestSpellLevelByLevel": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 1,
+        "9": 1,
+        "10": 2,
+        "11": 2,
+        "12": 3,
+        "13": 3,
+        "14": 3,
+        "15": 3,
+        "16": 3,
+        "17": 3,
+        "18": 3,
+        "19": 3,
+        "20": 3
+      },
+      "tableMarkers": {
+        "*": "Maximum attainable.",
+        "printedOn": "Casting level 9 and the 3/3/3 spell slots at ranger level 16."
+      },
+      "levelsAbove16": {
+        "status": "assumed",
+        "rule": "Table 18 stops at level 16, which is marked maximum attainable. Levels 17-20 use the level 16 values."
+      },
+      "bonusSpells": "None: rangers never gain bonus spells for WIS or INT (house.json bonusSpells.never).",
+      "stillNeeded": [
+        "Which priest spheres and spells a ranger may use (not on this table).",
+        "Whether the casting level (not the ranger level) is used for spell effects: confirm from the PHB text."
+      ]
+    },
+    "bard": {
+      "appliesTo": [
+        "bard"
+      ],
+      "source": "PHB Table 32: Bard Spell Progression (image supplied by owner)",
+      "spellType": "wizard",
+      "spellTypeStatus": "confirmed: the bard learns wizard spells and keeps them in a spell book (PHB text supplied by owner)",
+      "spellLevels": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "startsAtBardLevel": 2,
+      "slotsByLevel": {
+        "1": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "2": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "3": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "4": [
+          2,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "5": [
+          3,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "6": [
+          3,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "7": [
+          3,
+          2,
+          1,
+          0,
+          0,
+          0
+        ],
+        "8": [
+          3,
+          3,
+          1,
+          0,
+          0,
+          0
+        ],
+        "9": [
+          3,
+          3,
+          2,
+          0,
+          0,
+          0
+        ],
+        "10": [
+          3,
+          3,
+          2,
+          1,
+          0,
+          0
+        ],
+        "11": [
+          3,
+          3,
+          3,
+          1,
+          0,
+          0
+        ],
+        "12": [
+          3,
+          3,
+          3,
+          2,
+          0,
+          0
+        ],
+        "13": [
+          3,
+          3,
+          3,
+          2,
+          1,
+          0
+        ],
+        "14": [
+          3,
+          3,
+          3,
+          3,
+          1,
+          0
+        ],
+        "15": [
+          3,
+          3,
+          3,
+          3,
+          2,
+          0
+        ],
+        "16": [
+          4,
+          3,
+          3,
+          3,
+          2,
+          1
+        ],
+        "17": [
+          4,
+          4,
+          3,
+          3,
+          3,
+          1
+        ],
+        "18": [
+          4,
+          4,
+          4,
+          3,
+          3,
+          2
+        ],
+        "19": [
+          4,
+          4,
+          4,
+          4,
+          3,
+          2
+        ],
+        "20": [
+          4,
+          4,
+          4,
+          4,
+          4,
+          3
+        ]
+      },
+      "highestSpellLevelByLevel": {
+        "1": 0,
+        "2": 1,
+        "3": 1,
+        "4": 2,
+        "5": 2,
+        "6": 2,
+        "7": 3,
+        "8": 3,
+        "9": 3,
+        "10": 4,
+        "11": 4,
+        "12": 4,
+        "13": 5,
+        "14": 5,
+        "15": 5,
+        "16": 6,
+        "17": 6,
+        "18": 6,
+        "19": 6,
+        "20": 6
+      },
+      "bonusSpells": "None for the bard: INT bonus spells are a Wizard-only house rule (house.json bonusSpells).",
+      "stillNeeded": [
+        "Whether the bard has a separate casting level (the table gives none)."
+      ],
+      "intNote": "INT sets the number of spells known and the chance to know a given spell, as for a wizard (Table 4).",
+      "armourNote": "A bard in armour cannot cast, as for a wizard."
+    }
+  },
+  "specialistWizards": {
+    "status": "from-PHB-table-22",
+    "source": "PHB Table 22: Wizard Specialist Requirements (image supplied by owner)",
+    "baseClass": "wizard",
+    "raceKey": {
+      "human": "H",
+      "halfElf": "1/2E",
+      "elf": "E",
+      "gnome": "G",
+      "note": "Race letters are not defined in the image; read as H = human, 1/2E = half-elf, E = elf, G = gnome. Confirm."
+    },
+    "schools": [
+      {
+        "id": "abjuration",
+        "label": "Abjuration",
+        "tableAbbrev": "Abjur."
+      },
+      {
+        "id": "alteration",
+        "label": "Alteration",
+        "tableAbbrev": "Alteration"
+      },
+      {
+        "id": "conjurationSummoning",
+        "label": "Conjuration/Summoning",
+        "tableAbbrev": "Conj./Summ."
+      },
+      {
+        "id": "greaterDivination",
+        "label": "Greater Divination",
+        "tableAbbrev": "Gr. Divin."
+      },
+      {
+        "id": "enchantmentCharm",
+        "label": "Enchantment/Charm",
+        "tableAbbrev": "Ench./Charm"
+      },
+      {
+        "id": "illusion",
+        "label": "Illusion",
+        "tableAbbrev": "Illusion"
+      },
+      {
+        "id": "invocationEvocation",
+        "label": "Invocation/Evocation",
+        "tableAbbrev": "Invoc./Evoc."
+      },
+      {
+        "id": "necromancy",
+        "label": "Necromancy",
+        "tableAbbrev": "Necro."
+      }
+    ],
+    "specialists": [
+      {
+        "id": "abjurer",
+        "name": "Abjurer",
+        "school": "abjuration",
+        "allowedRaces": [
+          "human"
+        ],
+        "minimumAbility": {
+          "ability": "wis",
+          "score": 15
+        },
+        "oppositionSchools": [
+          "alteration",
+          "illusion"
+        ]
+      },
+      {
+        "id": "conjurer",
+        "name": "Conjurer",
+        "school": "conjurationSummoning",
+        "allowedRaces": [
+          "human",
+          "halfElf"
+        ],
+        "minimumAbility": {
+          "ability": "con",
+          "score": 15
+        },
+        "oppositionSchools": [
+          "greaterDivination",
+          "invocationEvocation"
+        ]
+      },
+      {
+        "id": "diviner",
+        "name": "Diviner",
+        "school": "greaterDivination",
+        "allowedRaces": [
+          "human",
+          "halfElf",
+          "elf"
+        ],
+        "minimumAbility": {
+          "ability": "wis",
+          "score": 16
+        },
+        "oppositionSchools": [
+          "conjurationSummoning"
+        ]
+      },
+      {
+        "id": "enchanter",
+        "name": "Enchanter",
+        "school": "enchantmentCharm",
+        "allowedRaces": [
+          "human",
+          "halfElf",
+          "elf"
+        ],
+        "minimumAbility": {
+          "ability": "cha",
+          "score": 16
+        },
+        "oppositionSchools": [
+          "invocationEvocation",
+          "necromancy"
+        ]
+      },
+      {
+        "id": "illusionist",
+        "name": "Illusionist",
+        "school": "illusion",
+        "allowedRaces": [
+          "human",
+          "gnome"
+        ],
+        "minimumAbility": {
+          "ability": "dex",
+          "score": 16
+        },
+        "oppositionSchools": [
+          "necromancy",
+          "invocationEvocation",
+          "abjuration"
+        ],
+        "abilityMinimums": {
+          "int": 9,
+          "dex": 16
+        },
+        "primeRequisites": [
+          "int"
+        ],
+        "xpBonus": {
+          "percent": 10,
+          "requires": {
+            "int": 16
+          },
+          "rule": "An illusionist with an Intelligence of 16 or more gains a 10% bonus to the experience points he earns.",
+          "appliesWhen": "every prime requisite is 16 or more"
+        },
+        "source": "Table 22 plus PHB illusionist text (supplied by owner)"
+      },
+      {
+        "id": "invoker",
+        "name": "Invoker",
+        "school": "invocationEvocation",
+        "allowedRaces": [
+          "human"
+        ],
+        "minimumAbility": {
+          "ability": "con",
+          "score": 16
+        },
+        "oppositionSchools": [
+          "enchantmentCharm",
+          "conjurationSummoning"
+        ]
+      },
+      {
+        "id": "necromancer",
+        "name": "Necromancer",
+        "school": "necromancy",
+        "allowedRaces": [
+          "human"
+        ],
+        "minimumAbility": {
+          "ability": "wis",
+          "score": 16
+        },
+        "oppositionSchools": [
+          "illusion",
+          "enchantmentCharm"
+        ]
+      },
+      {
+        "id": "transmuter",
+        "name": "Transmuter",
+        "school": "alteration",
+        "allowedRaces": [
+          "human",
+          "halfElf"
+        ],
+        "minimumAbility": {
+          "ability": "dex",
+          "score": 15
+        },
+        "oppositionSchools": [
+          "abjuration",
+          "necromancy"
+        ]
+      }
+    ],
+    "extraSpell": {
+      "status": "confirmed-by-owner",
+      "rule": "A specialist wizard gains one extra spell in his specialist school at each spell level he can cast.",
+      "extraSlotsPerSpellLevel": 1,
+      "restrictedToSpecialistSchool": true,
+      "spellSheetNotation": "x+1 per spell level, where x is the standard number of slots from the wizard spell progression (e.g. 4+1).",
+      "note": "To be used when the spell sheet is designed."
+    },
+    "assumptions": [
+      "Specialists use the Wizard tables (XP, THAC0, saves, spell progression, proficiency slots) unless you say otherwise.",
+      "Only the Illusionist appears on Table 38 (proficiency groups: Wizard, General). The other specialists are assumed to use the same groups.",
+      "Table 13 prints 'Var' for specialists and Table 22 gives the specialty's minimum score. The usual Wizard INT 9 also applies (confirmed for the illusionist, assumed for the others)."
+    ],
+    "baseRequirement": {
+      "int": 9,
+      "status": "confirmed for the illusionist; assumed for the other specialists",
+      "note": "The illusionist text lists INT 9 as well as the specialty minimum (DEX 16), so the Wizard's INT 9 applies on top of the Table 22 score. Assumed to be the same for the other specialists: confirm."
+    },
+    "primeRequisite": {
+      "ability": "int",
+      "status": "confirmed for the illusionist; assumed INT for the other specialists (as for the generalist mage)"
+    }
+  },
+  "alignments": {
+    "status": "complete for all standard classes; Monk not supplied",
+    "source": "Supplied by owner (text)",
+    "list": [
+      {
+        "id": "lawfulGood",
+        "label": "Lawful Good",
+        "ethical": "lawful",
+        "moral": "good"
+      },
+      {
+        "id": "lawfulNeutral",
+        "label": "Lawful Neutral",
+        "ethical": "lawful",
+        "moral": "neutral"
+      },
+      {
+        "id": "lawfulEvil",
+        "label": "Lawful Evil",
+        "ethical": "lawful",
+        "moral": "evil"
+      },
+      {
+        "id": "neutralGood",
+        "label": "Neutral Good",
+        "ethical": "neutral",
+        "moral": "good"
+      },
+      {
+        "id": "neutral",
+        "label": "Neutral",
+        "ethical": "neutral",
+        "moral": "neutral"
+      },
+      {
+        "id": "neutralEvil",
+        "label": "Neutral Evil",
+        "ethical": "neutral",
+        "moral": "evil"
+      },
+      {
+        "id": "chaoticGood",
+        "label": "Chaotic Good",
+        "ethical": "chaotic",
+        "moral": "good"
+      },
+      {
+        "id": "chaoticNeutral",
+        "label": "Chaotic Neutral",
+        "ethical": "chaotic",
+        "moral": "neutral"
+      },
+      {
+        "id": "chaoticEvil",
+        "label": "Chaotic Evil",
+        "ethical": "chaotic",
+        "moral": "evil"
+      }
+    ],
+    "listNote": "The owner listed eight names and said nine. Neutral Good is the ninth, named in the Druid/Ranger rule below. 'Neutral' means true neutral (neutral on both axes).",
+    "classRequirements": {
+      "paladin": {
+        "allowed": [
+          "lawfulGood"
+        ],
+        "note": "Lawful Good is required for the Paladin class."
+      },
+      "druid": {
+        "allowed": [
+          "neutral"
+        ],
+        "note": "Neutral is required for the Druid class."
+      },
+      "ranger": {
+        "allowed": [
+          "lawfulGood",
+          "neutralGood",
+          "chaoticGood"
+        ],
+        "note": "Rangers are always good, but may be lawful, neutral or chaotic (PHB text supplied by owner)."
+      },
+      "thief": {
+        "allowed": [
+          "lawfulNeutral",
+          "lawfulEvil",
+          "neutralGood",
+          "neutral",
+          "neutralEvil",
+          "chaoticGood",
+          "chaoticNeutral",
+          "chaoticEvil"
+        ],
+        "note": "The thief can have any alignment except lawful good (PHB text supplied by owner)."
+      },
+      "bard": {
+        "allowed": [
+          "lawfulNeutral",
+          "neutralGood",
+          "neutral",
+          "neutralEvil",
+          "chaoticNeutral"
+        ],
+        "note": "A bard may be lawful, neutral or chaotic, good or evil, but must always be partially neutral (PHB text supplied by owner)."
+      },
+      "fighter": {
+        "allowed": [
+          "lawfulGood",
+          "lawfulNeutral",
+          "lawfulEvil",
+          "neutralGood",
+          "neutral",
+          "neutralEvil",
+          "chaoticGood",
+          "chaoticNeutral",
+          "chaoticEvil"
+        ],
+        "note": "No alignment restriction (confirmed by owner)."
+      },
+      "cleric": {
+        "allowed": [
+          "lawfulGood",
+          "lawfulNeutral",
+          "lawfulEvil",
+          "neutralGood",
+          "neutral",
+          "neutralEvil",
+          "chaoticGood",
+          "chaoticNeutral",
+          "chaoticEvil"
+        ],
+        "note": "Any alignment (confirmed by owner)."
+      },
+      "wizard": {
+        "allowed": [
+          "lawfulGood",
+          "lawfulNeutral",
+          "lawfulEvil",
+          "neutralGood",
+          "neutral",
+          "neutralEvil",
+          "chaoticGood",
+          "chaoticNeutral",
+          "chaoticEvil"
+        ],
+        "note": "Any alignment (confirmed by owner)."
+      }
+    },
+    "multiClassOverrides": [
+      {
+        "classes": [
+          "druid",
+          "ranger"
+        ],
+        "allowed": [
+          "neutralGood"
+        ],
+        "note": "A Druid/Ranger multi-class must be Neutral Good (overrides the Druid's Neutral requirement).",
+        "consistencyNote": "Druid allows only Neutral and Ranger allows only the three Good alignments, so the two never overlap. The Druid/Ranger rule (Neutral Good) resolves that."
+      }
+    ],
+    "prefillRule": "When a class or class combination allows exactly one alignment, set it automatically and lock the field. Otherwise let the user choose any of the nine.",
+    "notYetCovered": "Only the Monk (house class) has no alignment rule yet. Every other class is covered."
+  }
+}

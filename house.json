@@ -1,0 +1,928 @@
+{
+  "meta": {
+    "file": "house",
+    "schemaVersion": "0.1.0",
+    "provenance": "Extracted from the Tradestands character record sheets (v6.0; Monk v6.3). Everything here is treated as an overlay on rules-core / rules-skills. Items marked 'unconfirmed' need you to say whether they are house rules.",
+    "mergeOrder": "Base rules (rules-core, rules-skills, gear) first, then this file overrides or adds. A 'core rules only' mode ignores this file.",
+    "openIssues": [
+      "houseRules: intBonusSpells, meleeMove and monkClass are confirmed as house rules. The rest (mentalSave, encumbranceSplit, tallyRows, nonProficientPenalty) still need marking.",
+      "Druid: 'locate pure water' (level 3) and 'converse with neutral woodland creatures' (level 7) are on your sheets but not in the PHB druid text you supplied. Kept under sheetOnlyAbilities. Confirm whether they are house additions to keep or should be dropped."
+    ]
+  },
+  "houseRules": [
+    {
+      "id": "monkClass",
+      "description": "The Monk is a 100% house class (confirmed by owner): its level table, abilities, XP, skills, prohibitions and prefills all come from house rules, none from the PHB/DMG.",
+      "status": "confirmed"
+    },
+    {
+      "id": "intBonusSpells",
+      "description": "INT 'Bonus Spells 1st-4th'. Wizard only (confirmed by owner, not the Bard). Uses the same bonus-spell table as WIS, looked up with the INT score. Shown on wizard sheets and multi-classes containing a wizard.",
+      "status": "confirmed"
+    },
+    {
+      "id": "mentalSave",
+      "description": "WIS field labelled 'Mental Save' on the sheets. PHB Table 5 calls the WIS value 'Magical Defense Adjustment'; the sheet label is probably the same value renamed. Confirm.",
+      "status": "unconfirmed"
+    },
+    {
+      "id": "meleeMove",
+      "description": "'Melee Move' movement rate shown alongside Normal, Encumbered and Swimming.",
+      "status": "confirmed"
+    },
+    {
+      "id": "encumbranceSplit",
+      "description": "Equipment tracked in two lists: Melee Encumbrance and Normal Encumbrance, each with its own total.",
+      "status": "unconfirmed"
+    },
+    {
+      "id": "tallyRows",
+      "description": "Sheet rows for Raised from Dead, Hasted and Unnatural Ageing (20 boxes each). Probably tallies rather than per-level values.",
+      "status": "unconfirmed"
+    },
+    {
+      "id": "nonProficientPenalty",
+      "description": "Sheets print 'Non Proficient/Related Penalty' as two values (e.g. -3/-2 on the Monk). PHB Table 34 gives the non-proficient weapon penalty per group (Warrior -2, Wizard -5, Priest -3, Rogue -3); the second ('related') value is not on that table.",
+      "status": "unconfirmed"
+    },
+    {
+      "id": "conBonusAllLevels",
+      "description": "No class loses its Constitution hit point bonus after name level. ALL classes receive the relevant CON bonus at ALL levels.",
+      "status": "confirmed"
+    }
+  ],
+  "monk": {
+    "source": "house",
+    "maxLevel": 19,
+    "alignment": null,
+    "prefill": {
+      "nonProficientRelatedPenalty": "-3/-2",
+      "weapon": {
+        "name": "Open Hand",
+        "speedFactor": 0,
+        "attacks": "from table",
+        "bonus": 0
+      },
+      "nonWeaponProficiencies": [
+        "endurance",
+        "running",
+        "religion"
+      ],
+      "coinLimitPerLevelGp": 25
+    },
+    "sheetVariations": [
+      "No Hit Prob / Dmg Adj on the STR row.",
+      "No Adjusted AC sub-lines (Surprised, Shieldless, Rear, Natural); the area has an area-effects note instead.",
+      "Thief skills subset: Move Silently, Find Traps, Climb Walls, Hide in Shadows, Hear Noise.",
+      "Extra damage with proficient weapons: 1 point per 2 levels."
+    ],
+    "thiefSkillSubset": [
+      "moveSilently",
+      "findRemoveTraps",
+      "climbWalls",
+      "hideInShadows",
+      "detectNoise"
+    ],
+    "abilities": {
+      "stunAndFatalBlow": "With Open Hand a Monk may stun a humanoid opponent if the to-hit roll is exceeded by 5 or more, or a natural 20 is rolled (unless a 20 is required to hit). An opponent can only be affected once. Opponents are stunned for the remainder of that round and 1d4 additional rounds. Stunned victims suffer a loss of dexterity bonuses, -4 on AC, to hit and all saves, and are unable to cast spells.",
+      "dodgingMissiles": "Daggers, axes, arrows and crossbow bolts can be dodged or knocked aside; machine-launched missiles and thrown boulders can be dodged but not knocked aside. Saving throw vs Petrification (DEX bonus applies), -1 for each magical plus of the missile. One missile per level per round can be dodged. -1 Move per missile avoided, and the Monk cannot attack or activate any other special abilities. Magic Missiles or similar spells cannot be dodged.",
+      "magicalAlignmentChange": "Immune from level 9.",
+      "prohibitions": "Cannot use flaming oil or poisons. Cannot turn or command undead.",
+      "qigong": "The Monk's body counts as magical weapons for deciding which creatures may be hit (see the Qi column). This bonus does not apply to hit or damage rolls.",
+      "areaEffects": "Against magical damaging spells or breath weapons where saving throws are allowed, the Monk sustains no damage if the save succeeds and only 50% of the total damage if it fails.",
+      "noPrimeRequisiteXpBonus": true
+    },
+    "levelTable": {
+      "columns": [
+        "level",
+        "specialAbility",
+        "mv",
+        "ac",
+        "thac0",
+        "attacks",
+        "dmgRange",
+        "dmgDice",
+        "qi",
+        "surprisedPct",
+        "stunHeightFt",
+        "fatalBlowPct"
+      ],
+      "rows": [
+        {
+          "level": 1,
+          "specialAbility": "Mind Over Body",
+          "mv": 15,
+          "ac": 8,
+          "thac0": 20,
+          "attacks": 1,
+          "dmgRange": "1-4",
+          "dmgDice": "1d4",
+          "qi": 0,
+          "surprisedPct": 36,
+          "stunHeightFt": 7,
+          "fatalBlowPct": 0
+        },
+        {
+          "level": 2,
+          "specialAbility": "Mind Mask vs ESP etc",
+          "mv": 16,
+          "ac": 7,
+          "thac0": 19,
+          "attacks": 1,
+          "dmgRange": "1-6",
+          "dmgDice": "1d6",
+          "qi": 0,
+          "surprisedPct": 34,
+          "stunHeightFt": 8,
+          "fatalBlowPct": 0
+        },
+        {
+          "level": 3,
+          "specialAbility": "Body Control",
+          "mv": 17,
+          "ac": 6,
+          "thac0": 18,
+          "attacks": 1,
+          "dmgRange": "2-7",
+          "dmgDice": "1d6+1",
+          "qi": 0,
+          "surprisedPct": 32,
+          "stunHeightFt": 9,
+          "fatalBlowPct": 0
+        },
+        {
+          "level": 4,
+          "specialAbility": "Immunity to Disease, Haste, Slow",
+          "mv": 18,
+          "ac": 5,
+          "thac0": 17,
+          "attacks": 1,
+          "dmgRange": "2-8",
+          "dmgDice": "2d4",
+          "qi": 0,
+          "surprisedPct": 30,
+          "stunHeightFt": 10,
+          "fatalBlowPct": 0
+        },
+        {
+          "level": 5,
+          "specialAbility": "Tower of Iron Will",
+          "mv": 19,
+          "ac": 4,
+          "thac0": 16,
+          "attacks": 2,
+          "dmgRange": "3-9",
+          "dmgDice": "2d4+1",
+          "qi": 1,
+          "surprisedPct": 28,
+          "stunHeightFt": 11,
+          "fatalBlowPct": 1
+        },
+        {
+          "level": 6,
+          "specialAbility": "Body Equilibrium",
+          "mv": 20,
+          "ac": 3,
+          "thac0": 15,
+          "attacks": 2,
+          "dmgRange": "3-10",
+          "dmgDice": "1d8+2",
+          "qi": 1,
+          "surprisedPct": 26,
+          "stunHeightFt": 12,
+          "fatalBlowPct": 2
+        },
+        {
+          "level": 7,
+          "specialAbility": "Empathy",
+          "mv": 21,
+          "ac": 2,
+          "thac0": 14,
+          "attacks": 2,
+          "dmgRange": "2-12",
+          "dmgDice": "2d6",
+          "qi": 1,
+          "surprisedPct": 24,
+          "stunHeightFt": 13,
+          "fatalBlowPct": 3
+        },
+        {
+          "level": 8,
+          "specialAbility": "Youthfulness",
+          "mv": 22,
+          "ac": 1,
+          "thac0": 13,
+          "attacks": 2,
+          "dmgRange": "3-12",
+          "dmgDice": "1d10+2",
+          "qi": 2,
+          "surprisedPct": 22,
+          "stunHeightFt": 14,
+          "fatalBlowPct": 4
+        },
+        {
+          "level": 9,
+          "specialAbility": "Molecular Manipulation",
+          "mv": 23,
+          "ac": 0,
+          "thac0": 12,
+          "attacks": 2,
+          "dmgRange": "3-14",
+          "dmgDice": "1d12+2",
+          "qi": 2,
+          "surprisedPct": 20,
+          "stunHeightFt": 15,
+          "fatalBlowPct": 5
+        },
+        {
+          "level": 10,
+          "specialAbility": "Immunity to Poison, Geas, Quest",
+          "mv": 24,
+          "ac": -1,
+          "thac0": 11,
+          "attacks": 2,
+          "dmgRange": "4-15",
+          "dmgDice": "1d12+3",
+          "qi": 2,
+          "surprisedPct": 18,
+          "stunHeightFt": 16,
+          "fatalBlowPct": 6
+        },
+        {
+          "level": 11,
+          "specialAbility": "Psychic Impression",
+          "mv": 25,
+          "ac": -2,
+          "thac0": 10,
+          "attacks": 3,
+          "dmgRange": "4-16",
+          "dmgDice": "4d4",
+          "qi": 3,
+          "surprisedPct": 16,
+          "stunHeightFt": 17,
+          "fatalBlowPct": 7
+        },
+        {
+          "level": 12,
+          "specialAbility": "Quivering Palm",
+          "mv": 26,
+          "ac": -3,
+          "thac0": 9,
+          "attacks": 3,
+          "dmgRange": "5-16",
+          "dmgDice": "1d12+4",
+          "qi": 3,
+          "surprisedPct": 14,
+          "stunHeightFt": 18,
+          "fatalBlowPct": 8
+        },
+        {
+          "level": 13,
+          "specialAbility": "Dimension Walk",
+          "mv": 27,
+          "ac": -4,
+          "thac0": 8,
+          "attacks": 3,
+          "dmgRange": "5-17",
+          "dmgDice": "4d4+1",
+          "qi": 3,
+          "surprisedPct": 12,
+          "stunHeightFt": 19,
+          "fatalBlowPct": 9
+        },
+        {
+          "level": 14,
+          "specialAbility": "True Seeing",
+          "mv": 28,
+          "ac": -5,
+          "thac0": 7,
+          "attacks": 3,
+          "dmgRange": "5-20",
+          "dmgDice": "5d4",
+          "qi": 4,
+          "surprisedPct": 10,
+          "stunHeightFt": 20,
+          "fatalBlowPct": 10
+        },
+        {
+          "level": 15,
+          "specialAbility": "Mind Blank",
+          "mv": 29,
+          "ac": -6,
+          "thac0": 6,
+          "attacks": 4,
+          "dmgRange": "6-24",
+          "dmgDice": "6d4",
+          "qi": 4,
+          "surprisedPct": 8,
+          "stunHeightFt": 21,
+          "fatalBlowPct": 11
+        },
+        {
+          "level": 16,
+          "specialAbility": "Plane Shift",
+          "mv": 30,
+          "ac": -7,
+          "thac0": 5,
+          "attacks": 4,
+          "dmgRange": "6-27",
+          "dmgDice": "3d8+3",
+          "qi": 4,
+          "surprisedPct": 6,
+          "stunHeightFt": 22,
+          "fatalBlowPct": 12
+        },
+        {
+          "level": 17,
+          "specialAbility": "Word of Recall",
+          "mv": 31,
+          "ac": -8,
+          "thac0": 4,
+          "attacks": 4,
+          "dmgRange": "5-30",
+          "dmgDice": "5d6",
+          "qi": 5,
+          "surprisedPct": 4,
+          "stunHeightFt": 23,
+          "fatalBlowPct": 13
+        },
+        {
+          "level": 18,
+          "specialAbility": "Astral Spell",
+          "mv": 32,
+          "ac": -9,
+          "thac0": 3,
+          "attacks": 4,
+          "dmgRange": "6-36",
+          "dmgDice": "6d6",
+          "qi": 5,
+          "surprisedPct": 2,
+          "stunHeightFt": 24,
+          "fatalBlowPct": 14
+        },
+        {
+          "level": 19,
+          "specialAbility": "Time Stop",
+          "mv": 48,
+          "ac": -10,
+          "thac0": 0,
+          "attacks": 6,
+          "dmgRange": "5-50",
+          "dmgDice": "5d10",
+          "qi": "any",
+          "surprisedPct": 0,
+          "stunHeightFt": 30,
+          "fatalBlowPct": 25
+        }
+      ],
+      "notes": "Qi is the magical-weapon equivalence for deciding which creatures can be hit (shown as +N). dmgRange is as printed on the sheet. Note: level 5 qi printed '+1', level 19 printed 'Any'."
+    },
+    "coverage": "100% house rules (confirmed by owner)",
+    "undefinedForEngine": [
+      "savingThrowTable: sheet gives no save values or class group for the Monk",
+      "proficiencySlots: weapon and non-weapon slot progression not on the sheet"
+    ],
+    "thac0Group": "priest",
+    "thac0Note": "Owner: the Monk uses the Cleric (priest) THAC0 (rules-core.json thac0). The THAC0 column in levelTable below is the sheet's own and conflicts with it: confirm whether it applies only to Open Hand attacks or is replaced."
+  },
+  "classAbilities": {
+    "druid": {
+      "alignmentPrefill": "Neutral",
+      "savesAs": "priest",
+      "turnUndead": false,
+      "saveModifiers": [
+        {
+          "vs": "fire",
+          "value": 2
+        },
+        {
+          "vs": "electrical",
+          "value": 2
+        }
+      ],
+      "source": "2e PHB druid Granted Powers (text supplied by owner), paraphrased",
+      "grantedPowers": [
+        {
+          "id": "d1",
+          "level": 1,
+          "text": "Saves as a priest, with a +2 bonus to all saving throws against fire or electrical attacks."
+        },
+        {
+          "id": "d2",
+          "level": 1,
+          "text": "Speaks the secret druidic language in addition to any other tongues. Its vocabulary is limited to nature and natural events. Under the optional proficiency rules it does not use a proficiency slot."
+        },
+        {
+          "id": "d3",
+          "level": 3,
+          "text": "Identifies plants, animals and pure water with perfect accuracy."
+        },
+        {
+          "id": "d4",
+          "level": 3,
+          "text": "Passes through overgrown areas (thick thorn bushes, tangled vines, briar patches, etc.) without leaving a trail and at normal movement rate."
+        },
+        {
+          "id": "d5",
+          "level": 3,
+          "text": "Can learn the languages of woodland creatures: one at 3rd level and one more for each level advanced above 3rd. Under the optional proficiency rules the druid chooses whether to spend a proficiency slot on these.",
+          "languageOptions": [
+            "centaurs",
+            "dryads",
+            "elves",
+            "fauns",
+            "gnomes",
+            "dragons",
+            "giants",
+            "lizard men",
+            "manticores",
+            "nixies",
+            "pixies",
+            "sprites",
+            "treants"
+          ]
+        },
+        {
+          "id": "d6",
+          "level": 7,
+          "text": "Immune to charm spells cast by woodland creatures (dryads, nixies, etc.)."
+        },
+        {
+          "id": "d7",
+          "level": 7,
+          "text": "Can shapechange into a reptile, bird or mammal up to three times per day; each of the three animal types can be used only once per day. Size ranges from a bullfrog or small bird up to a black bear. On assuming a new form the druid heals 10-60% (1d6 x 10%) of the damage he has suffered, rounding fractions down. Only normal, real-world animals in normal proportions, taking on all of the creature's characteristics (movement, abilities, AC, attacks, damage). Clothing and one item held in each hand become part of the new body and cannot be used until normal form resumes.",
+          "usesPerDay": 3,
+          "healing": {
+            "dice": "1d6",
+            "multiplierPct": 10,
+            "of": "damage suffered",
+            "rounding": "down"
+          }
+        },
+        {
+          "id": "d8",
+          "level": 1,
+          "type": "restriction",
+          "text": "A druid cannot turn undead."
+        }
+      ],
+      "sheetOnlyAbilities": [
+        {
+          "id": "s1",
+          "level": 3,
+          "text": "Can locate pure water within 1 mile + 1 mile per level above 3rd level (sheet wording ambiguous).",
+          "status": "on your sheets, not in the PHB text supplied: house addition?"
+        },
+        {
+          "id": "s2",
+          "level": 7,
+          "text": "Can converse with all neutral/non-aligned woodland creatures.",
+          "status": "on your sheets, not in the PHB text supplied: house addition?"
+        }
+      ]
+    },
+    "paladin": {
+      "alignmentPrefill": "Lawful Good",
+      "saveModifiers": [
+        {
+          "vs": "all",
+          "value": 2
+        }
+      ],
+      "source": "2e PHB paladin special benefits (text supplied by owner), paraphrased",
+      "specialAbilities": [
+        {
+          "id": "p1",
+          "name": "Detect evil",
+          "level": 1,
+          "text": "Detects evil intent up to 60 feet away by concentrating on a direction. Can be used as often as desired, but each attempt takes one round. Detects evil monsters and characters.",
+          "mechanics": {
+            "rangeFeet": 60,
+            "timePerAttackRounds": 1,
+            "usesPerDay": "unlimited"
+          }
+        },
+        {
+          "id": "p2",
+          "name": "Saving throw bonus",
+          "level": 1,
+          "text": "+2 bonus to all saving throws.",
+          "mechanics": {
+            "saveBonus": 2,
+            "vs": "all"
+          }
+        },
+        {
+          "id": "p3",
+          "name": "Immunity to disease",
+          "level": 1,
+          "text": "Immune to all forms of disease. Cursed afflictions such as lycanthropy and mummy rot are not diseases.",
+          "mechanics": {
+            "excludes": [
+              "lycanthropy",
+              "mummy rot"
+            ]
+          }
+        },
+        {
+          "id": "p4",
+          "name": "Lay on hands",
+          "level": 1,
+          "text": "Heals by laying on hands, restoring 2 hit points per experience level, to himself or another. Once per day.",
+          "mechanics": {
+            "hpPerLevel": 2,
+            "usesPerDay": 1,
+            "targets": "self or another"
+          }
+        },
+        {
+          "id": "p5",
+          "name": "Cure disease",
+          "level": 1,
+          "text": "Cures diseases of all sorts (not cursed afflictions such as lycanthropy), once per week for each five levels of experience: once per week at levels 1-5, twice at 6-10, and so on.",
+          "mechanics": {
+            "usesPerWeek": "ceil(level / 5)",
+            "excludes": [
+              "lycanthropy"
+            ]
+          }
+        },
+        {
+          "id": "p6",
+          "name": "Aura of protection",
+          "level": 1,
+          "text": "Surrounded by a 10-foot-radius aura of protection. Within it, all summoned and specifically evil creatures suffer a -1 penalty to their attack rolls regardless of whom they attack. Affected creatures can spot the aura's source easily, even if the paladin is disguised.",
+          "mechanics": {
+            "radiusFeet": 10,
+            "attackPenaltyToSummonedAndEvil": -1
+          }
+        },
+        {
+          "id": "p7",
+          "name": "Holy sword",
+          "level": null,
+          "text": "A paladin using a holy sword projects a circle of power 10 feet in diameter while it is unsheathed and held. This dispels hostile magic of a level up to the paladin's experience level. The DM explains the sword's other powers if one is acquired.",
+          "mechanics": {
+            "circleDiameterFeet": 10,
+            "dispelsUpToLevel": "paladin level"
+          },
+          "conditional": "only with a holy sword"
+        },
+        {
+          "id": "p8",
+          "name": "Turn undead and fiends",
+          "level": 3,
+          "text": "From 3rd level turns undead and fiends as a cleric two levels lower (at 3rd level, as a 1st-level cleric).",
+          "mechanics": {
+            "asClericLevelsLower": 2
+          },
+          "crossRef": "rules-skills.json turnUndead.paladin"
+        },
+        {
+          "id": "p9",
+          "name": "War horse",
+          "level": 4,
+          "text": "May call for a war horse at 4th level or any time after. The steed need not be a horse and is decided by the DM. The paladin does not simply summon it: he must find it in a memorable way, usually by a quest.",
+          "mechanics": {
+            "availableFromLevel": 4
+          },
+          "dmDecides": true
+        },
+        {
+          "id": "p10",
+          "name": "Priest spells",
+          "level": 9,
+          "text": "Can cast priest spells from 9th level, only from the combat, divination, healing and protective spheres, under the priest's spell rules. Spell progression and casting level are on Table 17. No extra spells for high Wisdom. Cannot cast from clerical or druidical scrolls, and cannot use priest items unless they are allowed to the warrior group.",
+          "mechanics": {
+            "startsAtLevel": 9,
+            "spheres": [
+              "combat",
+              "divination",
+              "healing",
+              "protection"
+            ],
+            "wisdomBonusSpells": false
+          },
+          "crossRef": "rules-core.json spellProgression.paladin"
+        }
+      ],
+      "limits": {
+        "magicalItems": {
+          "total": 10,
+          "armour": 1,
+          "shield": 1,
+          "weapons": 4,
+          "other": 4,
+          "note": "Arrows and bolts are not counted toward the weapon limit.",
+          "sheetCrossCheck": "The Paladin sheet has numbered Magical Items 1-10, matching the limit of 10."
+        }
+      },
+      "conduct": {
+        "wealth": {
+          "text": "A paladin never retains wealth. He may keep only enough to support himself modestly, pay his henchmen, men-at-arms and servitors a reasonable rate, and build or maintain a small castle or keep (funds may be set aside for this). All excess must be donated to the church or another worthy cause, and can never be given to another player character or an NPC controlled by a player.",
+          "appHint": "Treasure block: warn when a paladin's treasure exceeds what he can keep, and do not allow transfers to other player characters."
+        },
+        "tithe": {
+          "percent": 10,
+          "text": "Must tithe 10% of all income (coins, jewels, magical items, wages, rewards or taxes), paid immediately, to a charitable religious institution of lawful good alignment that he serves.",
+          "appHint": "Offer a 'tithe due' calculator on income entries."
+        },
+        "followers": "A paladin does not attract followers at 9th level or on building a castle, but may hire soldiers and specialists, who must be lawful good in comportment.",
+        "henchmen": "Employs only lawful good henchmen (or those who act that way when alignment is unknown). Cooperates with others of different alignment only while they behave, and will not abide those who commit evil or unrighteous acts. Non-evil thieves sincerely trying to reform can be tolerated. Stealth in a good cause is acceptable only as a last resort."
+      }
+    },
+    "ranger": {
+      "speciesEnemy": {
+        "toHitBonus": 4,
+        "reactionAdjustment": -4,
+        "text": "Species Enemy (+4 to hit / -4 reaction adjustment)."
+      },
+      "prefilledProficiency": "tracking",
+      "skillNotes": [
+        "Hide in Shadows and Move Silently are halved if attempted in non-natural surroundings (e.g. crypt, city streets).",
+        "These skills are not possible in armour heavier than studded leather.",
+        "Wearing studded leather or lighter armour, a ranger can attack with two weapons with no penalty."
+      ],
+      "armourLimitForSkills": {
+        "rule": "Hide in Shadows and Move Silently are not possible in armour heavier than studded leather; two-weapon fighting without penalty needs studded leather or lighter.",
+        "studdedLeatherAc": 7,
+        "byArmourClass": "armour with AC lower than 7 is heavier than studded leather; ring mail (AC 7) also counts as heavier by owner ruling",
+        "allowedArmourIds": [
+          "leather",
+          "padded",
+          "studdedLeather"
+        ],
+        "needsRuling": {},
+        "source": "Table 46 AC values (comparison by AC, as used for the bard); owner to confirm that AC is the right test for rangers.",
+        "excludedArmourIds": [
+          "bandedMail",
+          "brigandine",
+          "bronzePlateMail",
+          "chainMail",
+          "fieldPlate",
+          "fullPlate",
+          "hide",
+          "plateMail",
+          "ringMail",
+          "scaleMail",
+          "splintMail"
+        ],
+        "ruling": {
+          "status": "confirmed-by-owner",
+          "text": "Ring mail counts as heavier than studded leather.",
+          "why": "Ring mail has the same AC as studded leather (7) but weighs more (30 lb against 25 lb), so a tie on AC is broken by treating ring mail as the heavier armour."
+        },
+        "appliesTo": [
+          "Hide in Shadows",
+          "Move Silently",
+          "two-weapon fighting without penalty"
+        ]
+      }
+    },
+    "bard": {
+      "skills": [
+        "pickPockets",
+        "detectNoise",
+        "climbWalls",
+        "readLanguages"
+      ],
+      "abilities": [
+        {
+          "id": "b1",
+          "text": "Influence Reactions (PHB p59)."
+        },
+        {
+          "id": "b2",
+          "text": "Inspire Friends (PHB p60)."
+        },
+        {
+          "id": "b3",
+          "text": "5% chance per level to identify the general purpose and function of any magical item."
+        }
+      ]
+    },
+    "thief": {
+      "skills": [
+        "pickPockets",
+        "openLocks",
+        "findRemoveTraps",
+        "moveSilently",
+        "hideInShadows",
+        "detectNoise",
+        "climbWalls",
+        "readLanguages"
+      ],
+      "backstab": true,
+      "scrollUse": {
+        "level": 10,
+        "scrollTypes": [
+          "magical",
+          "priest"
+        ],
+        "misreadChancePct": 25,
+        "effectOnMisread": "The scroll is read incorrectly and the spell's effect is reversed or goes wrong, almost always to the detriment of the thief and party. Exact effect decided by the DM.",
+        "source": "2e PHB (thief 'Use Scrolls'), confirmed by owner",
+        "sheetWording": "Can read Priest scrolls at 10th Level - 25% chance failure",
+        "sheetWordingStatus": "incomplete: should say magical and priest scrolls"
+      }
+    },
+    "cleric": {
+      "turnUndead": true
+    }
+  },
+  "classRecipes": {
+    "description": "Which blocks each class shows on a sheet. A multi-class character gets the union of its classes' blocks, one XP column and one HP-per-level row per class. Derived from the 20 provided sheets; they match this union rule.",
+    "coreBlocks": [
+      "header",
+      "abilities",
+      "savingThrows",
+      "armourClass",
+      "movement",
+      "hitPoints",
+      "weaponCombat",
+      "ammunitionRange",
+      "magicalItems",
+      "languages",
+      "nonWeaponProficiencies",
+      "racialAbilities",
+      "characterDescription",
+      "equipment",
+      "treasure",
+      "characterHistory",
+      "experience",
+      "hpPerLevel",
+      "tallyRows"
+    ],
+    "classBlocks": {
+      "fighter": {
+        "blocks": [],
+        "weaponRows": 8,
+        "specializedWeapons": true,
+        "pointBlankRange": true
+      },
+      "paladin": {
+        "blocks": [
+          "turnUndeadPaladin",
+          "paladinAbilities"
+        ],
+        "weaponRows": 8,
+        "alignmentPrefill": "Lawful Good",
+        "bonusSpells": false
+      },
+      "ranger": {
+        "blocks": [
+          "rangerSkills",
+          "speciesEnemy",
+          "rangerNotes"
+        ],
+        "weaponRows": 8,
+        "prefilledProficiency": "tracking",
+        "bonusSpells": false
+      },
+      "wizard": {
+        "blocks": [
+          "intBonusSpells"
+        ],
+        "weaponRows": 4,
+        "bonusSpells": "int"
+      },
+      "cleric": {
+        "blocks": [
+          "turnUndead",
+          "wisBonusSpells"
+        ],
+        "weaponRows": 4,
+        "bonusSpells": "wis"
+      },
+      "druid": {
+        "blocks": [
+          "druidPowers",
+          "wisBonusSpells"
+        ],
+        "weaponRows": 4,
+        "alignmentPrefill": "Neutral",
+        "bonusSpells": "wis"
+      },
+      "thief": {
+        "blocks": [
+          "thiefSkills"
+        ],
+        "weaponRows": 4
+      },
+      "bard": {
+        "blocks": [
+          "bardSkills"
+        ],
+        "weaponRows": 4,
+        "bonusSpells": false,
+        "legacySheetNote": "Old Bard sheet printed an INT Bonus Spells row; removed (INT bonus spells are Wizard only)."
+      },
+      "monk": {
+        "blocks": [
+          "monkAbilities",
+          "monkSkills",
+          "monkTable"
+        ],
+        "weaponRows": 4,
+        "overrides": [
+          "noStrHitDmg",
+          "noAdjustedAcLines"
+        ]
+      }
+    },
+    "notes": [
+      "Only the single-class Fighter sheet shows 'Specialized Weapons' and the point-blank (PB +2) range band; multi-class sheets with a fighter component omit both. Weapon specialisation is single-class Fighter only (confirmed by owner).",
+      "Paladin and Ranger sheets show no bonus-spell rows by design: they never gain bonus spells from WIS or INT (confirmed by owner).",
+      "Cleric/Ranger and Druid/Ranger sheets show the Ranger skills block next to the cleric/druid blocks; Cleric multi-classes add Turn Undead; Druid multi-classes add Granted Powers.",
+      "WIS bonus spells row appears on any sheet with a cleric or druid component; INT bonus spells row only where a wizard is a component (not the bard)."
+    ],
+    "legacySheetsProvided": [
+      "Fighter",
+      "Bard",
+      "Cleric",
+      "Cleric/Mage",
+      "Cleric/Ranger",
+      "Cleric/Thief",
+      "Druid",
+      "Druid/Mage",
+      "Druid/Ranger",
+      "Fighter/Mage",
+      "Fighter/Mage/Thief",
+      "Fighter/Thief",
+      "Fighter/Cleric/Mage",
+      "Fighter/Druid/Mage",
+      "Monk",
+      "Paladin",
+      "Ranger",
+      "Thief",
+      "Thief/Mage",
+      "Wizard"
+    ],
+    "multiClassAlignmentOverrides": [
+      {
+        "classes": [
+          "druid",
+          "ranger"
+        ],
+        "alignment": "Neutral Good",
+        "note": "Confirmed by owner. The old Druid/Ranger sheet prefilled 'Neutral'; the new PDF should prefill Neutral Good."
+      }
+    ]
+  },
+  "labels": {
+    "note": "Corrected wording to use in the app and new PDFs, replacing sheet typos.",
+    "corrections": {
+      "Read Langauges": "Read Languages",
+      "Theif": "Thief",
+      "Unatural Ageing": "Unnatural Ageing",
+      "Encumberance": "Encumbrance",
+      "addiitonal": "additional",
+      "succesful": "successful",
+      "summouned": "summoned",
+      "leans a language": "learns a language",
+      "Total (Ibs)": "Total (lbs)",
+      "Hear Noise (Monk)": "Detect Noise (unify; keep 'Hear Noise' only if intended)",
+      "Find Traps (Monk)": "Find/Remove Traps (unify; keep 'Find Traps' only if intended)",
+      "Can read Priest scrolls at 10th Level - 25% chance failure": "Can use magical and priest scrolls at 10th level - 25% chance of misreading"
+    }
+  },
+  "bonusSpells": {
+    "status": "confirmed-by-owner",
+    "wis": {
+      "table": "same bonus-spell table as INT (core WIS bonus spells, enter from PHB)",
+      "classes": [
+        "cleric",
+        "druid"
+      ]
+    },
+    "int": {
+      "source": "house",
+      "table": "uses the WIS bonus-spell table, looked up with the INT score",
+      "classes": [
+        "wizard"
+      ],
+      "excludes": [
+        "bard"
+      ],
+      "note": "Wizard only (confirmed by owner). The Bard sheet's INT bonus-spell row is not part of the rule and should not appear on the new Bard PDF."
+    },
+    "never": [
+      "paladin",
+      "ranger"
+    ],
+    "note": "Paladins and Rangers never gain bonus spells from WIS or INT, so their sheets have no bonus-spell rows. A multi-class character gets a bonus-spell row for each casting class that qualifies."
+  },
+  "hitPointRules": {
+    "conBonusAllLevels": {
+      "status": "confirmed-by-owner",
+      "overrides": "The core rule that no class gains Constitution hit point bonuses after name level (9th for warriors, clerics and druids, 10th for mages).",
+      "meaning": "Each class keeps using the CON hit point adjustment its normal rules give it: the +2 per die cap for non-warriors, and the warrior-only parenthetical bonus for fighters, paladins and rangers.",
+      "afterNameLevel": {
+        "status": "confirmed-by-owner",
+        "rule": "After name level a character gains a flat number of hit points per level (3 for warriors, 2 for druids). The CON bonus is added to that gain once per level.",
+        "example": "A 12th-level fighter with CON 17 (+3 for warriors) gains 3 + 3 = 6 hit points per level."
+      },
+      "coreRuleReference": "rules-core.json classes: hitPointsAfterNameLevel.conBonusApplies is the core value (false)."
+    }
+  }
+}

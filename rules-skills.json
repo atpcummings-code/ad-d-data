@@ -1,0 +1,2146 @@
+{
+  "meta": {
+    "file": "rules-skills",
+    "schemaVersion": "0.1.0",
+    "ruleset": "AD&D 2nd Edition (Player's Handbook / Dungeon Master's Guide). NOT 5th edition.",
+    "provenance": "turnUndead and the skill/proficiency lists were extracted from the Tradestands character record sheets (v6.0; Monk v6.3). nonWeapon proficiencies come from PHB Table 37 and class access from PHB Table 38, proficiency slots from PHB Table 34, and specialist attacks per round from PHB Table 35 (images supplied by owner). Numeric thief/ranger skill values and proficiency slot progression still need entering from the PHB. Ranger skill percentages come from PHB Table 18 (image supplied by owner). Bard base skill scores come from PHB Table 33 (image supplied by owner). Thief skill tables come from PHB Tables 26-30 (images supplied by owner).",
+    "sectionStatus": {
+      "turnUndead": "from-sheets",
+      "thiefSkills": "thief and bard skills defined (Tables 26-30, 33 and PHB bard text); skill floor/cap, situational modifiers still need source",
+      "rangerSkills": "from-PHB-table-18",
+      "proficiencies": "nonWeapon from Tables 37-38; slots from Table 34; crossover cost confirmed (+1 slot); specialist attacks from Table 35; multi-class slot rule, specialisation bonuses and related-weapon penalty still need source"
+    },
+    "openIssues": [
+      "Monk 'Hear Noise' vs Thief/Bard 'Detect Noise', and Monk 'Find Traps' vs Thief 'Find/Remove Traps': unify ids below, keep sheet labels if you want them.",
+      "Thief skills: skill floor and any overall cap not supplied yet."
+    ]
+  },
+  "turnUndead": {
+    "status": "from-sheets",
+    "classes": [
+      "cleric",
+      "paladin"
+    ],
+    "clericLevelColumns": [
+      {
+        "label": "1",
+        "from": 1,
+        "to": 1
+      },
+      {
+        "label": "2",
+        "from": 2,
+        "to": 2
+      },
+      {
+        "label": "3",
+        "from": 3,
+        "to": 3
+      },
+      {
+        "label": "4",
+        "from": 4,
+        "to": 4
+      },
+      {
+        "label": "5",
+        "from": 5,
+        "to": 5
+      },
+      {
+        "label": "6",
+        "from": 6,
+        "to": 6
+      },
+      {
+        "label": "7",
+        "from": 7,
+        "to": 7
+      },
+      {
+        "label": "8",
+        "from": 8,
+        "to": 8
+      },
+      {
+        "label": "9",
+        "from": 9,
+        "to": 9
+      },
+      {
+        "label": "10-11",
+        "from": 10,
+        "to": 11
+      },
+      {
+        "label": "12-13",
+        "from": 12,
+        "to": 13
+      },
+      {
+        "label": "14+",
+        "from": 14,
+        "to": null
+      }
+    ],
+    "paladin": {
+      "effectiveClericLevel": "paladinLevel - 2",
+      "minimumPaladinLevel": 3,
+      "note": "Derived from the Paladin sheet: its columns (3,4,...,16+) line up with the cleric columns (1,2,...,14+)."
+    },
+    "legend": {
+      "number": "Roll this number or higher on d20 to turn.",
+      "T": "Automatically turned.",
+      "D": "Automatically destroyed.",
+      "D*": "Automatically destroyed, plus an additional 2d4 creatures of this type are turned.",
+      "null": "Cannot be turned (printed as '-')."
+    },
+    "notes": [
+      "2d6 creatures are turned per successful attempt.",
+      "*An additional 2d4 creatures of this type are turned.",
+      "**Special undead include unique undead, free-willed undead of the Negative Material Plane, certain Greater and Lesser Powers, and those undead that dwell in the Outer Planes."
+    ],
+    "rows": [
+      {
+        "id": "skeleton",
+        "label": "Skeleton or 1HD",
+        "values": [
+          10,
+          7,
+          4,
+          "T",
+          "T",
+          "D",
+          "D",
+          "D*",
+          "D*",
+          "D*",
+          "D*",
+          "D*"
+        ]
+      },
+      {
+        "id": "zombie",
+        "label": "Zombie",
+        "values": [
+          13,
+          10,
+          7,
+          4,
+          "T",
+          "T",
+          "D",
+          "D",
+          "D*",
+          "D*",
+          "D*",
+          "D*"
+        ]
+      },
+      {
+        "id": "ghoul",
+        "label": "Ghoul or 2HD",
+        "values": [
+          16,
+          13,
+          10,
+          7,
+          4,
+          "T",
+          "T",
+          "D",
+          "D",
+          "D*",
+          "D*",
+          "D*"
+        ]
+      },
+      {
+        "id": "shadow",
+        "label": "Shadow or 3-4HD",
+        "values": [
+          19,
+          16,
+          13,
+          10,
+          7,
+          4,
+          "T",
+          "T",
+          "D",
+          "D",
+          "D*",
+          "D*"
+        ]
+      },
+      {
+        "id": "wight",
+        "label": "Wight or 5HD",
+        "values": [
+          20,
+          19,
+          16,
+          13,
+          10,
+          7,
+          4,
+          "T",
+          "T",
+          "D",
+          "D",
+          "D*"
+        ]
+      },
+      {
+        "id": "ghast",
+        "label": "Ghast",
+        "values": [
+          null,
+          20,
+          19,
+          16,
+          13,
+          10,
+          7,
+          4,
+          "T",
+          "T",
+          "D",
+          "D"
+        ]
+      },
+      {
+        "id": "wraith",
+        "label": "Wraith or 6HD",
+        "values": [
+          null,
+          null,
+          20,
+          19,
+          16,
+          13,
+          10,
+          7,
+          4,
+          "T",
+          "T",
+          "D"
+        ]
+      },
+      {
+        "id": "mummy",
+        "label": "Mummy or 7HD",
+        "values": [
+          null,
+          null,
+          null,
+          20,
+          19,
+          16,
+          13,
+          10,
+          7,
+          4,
+          "T",
+          "T"
+        ]
+      },
+      {
+        "id": "spectre",
+        "label": "Spectre or 8HD",
+        "values": [
+          null,
+          null,
+          null,
+          null,
+          20,
+          19,
+          16,
+          13,
+          10,
+          7,
+          4,
+          "T"
+        ]
+      },
+      {
+        "id": "vampire",
+        "label": "Vampire or 9HD",
+        "values": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          20,
+          19,
+          16,
+          13,
+          10,
+          7,
+          4
+        ]
+      },
+      {
+        "id": "ghost",
+        "label": "Ghost or 10HD",
+        "values": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          20,
+          19,
+          16,
+          13,
+          10,
+          7
+        ]
+      },
+      {
+        "id": "lich",
+        "label": "Lich or 11+HD",
+        "values": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          20,
+          19,
+          16,
+          13,
+          10
+        ]
+      },
+      {
+        "id": "special",
+        "label": "Special**",
+        "values": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          20,
+          19,
+          16,
+          13
+        ]
+      }
+    ]
+  },
+  "thiefSkills": {
+    "status": "partial",
+    "skills": [
+      {
+        "id": "pickPockets",
+        "label": "Pick Pockets",
+        "usedBy": [
+          "thief",
+          "bard"
+        ]
+      },
+      {
+        "id": "openLocks",
+        "label": "Open Locks",
+        "usedBy": [
+          "thief"
+        ]
+      },
+      {
+        "id": "findRemoveTraps",
+        "label": "Find/Remove Traps",
+        "usedBy": [
+          "thief"
+        ],
+        "monkLabel": "Find Traps",
+        "monkUses": "findRemoveTraps"
+      },
+      {
+        "id": "moveSilently",
+        "label": "Move Silently",
+        "usedBy": [
+          "thief",
+          "monk"
+        ]
+      },
+      {
+        "id": "hideInShadows",
+        "label": "Hide in Shadows",
+        "usedBy": [
+          "thief",
+          "monk"
+        ]
+      },
+      {
+        "id": "detectNoise",
+        "label": "Detect Noise",
+        "usedBy": [
+          "thief",
+          "bard"
+        ],
+        "monkLabel": "Hear Noise",
+        "monkUses": "detectNoise"
+      },
+      {
+        "id": "climbWalls",
+        "label": "Climb Walls",
+        "usedBy": [
+          "thief",
+          "bard",
+          "monk"
+        ]
+      },
+      {
+        "id": "readLanguages",
+        "label": "Read Languages",
+        "usedBy": [
+          "thief",
+          "bard"
+        ]
+      }
+    ],
+    "backstabMultiplier": {
+      "status": "from-PHB-table-30",
+      "source": "PHB Table 30: Backstab Damage Multipliers (image supplied by owner)",
+      "usedBy": [
+        "thief"
+      ],
+      "byThiefLevel": [
+        {
+          "levels": {
+            "from": 1,
+            "to": 4
+          },
+          "label": "1-4",
+          "multiplier": 2
+        },
+        {
+          "levels": {
+            "from": 5,
+            "to": 8
+          },
+          "label": "5-8",
+          "multiplier": 3
+        },
+        {
+          "levels": {
+            "from": 9,
+            "to": 12
+          },
+          "label": "9-12",
+          "multiplier": 4
+        },
+        {
+          "levels": {
+            "from": 13,
+            "to": null
+          },
+          "label": "13+",
+          "multiplier": 5
+        }
+      ]
+    },
+    "bardBaseScores": {
+      "status": "from-PHB-table-33",
+      "source": "PHB Table 33: Bard Abilities (image supplied by owner)",
+      "scoresPct": {
+        "climbWalls": 50,
+        "detectNoise": 20,
+        "pickPockets": 10,
+        "readLanguages": 5
+      },
+      "note": "Table 33 gives base percentages only. Any per-level increase and racial or DEX adjustments are not on this table; add them once supplied.",
+      "stillNeeded": [
+        "Whether a per-skill limit applies to the bard's discretionary points (the text supplied states none).",
+        "The situational modifiers used for thief/bard skills (not supplied)."
+      ],
+      "adjustments": {
+        "status": "confirmed-by-owner",
+        "source": "PHB bard text supplied by owner",
+        "race": "As given for the thief (racialAdjustmentsPct).",
+        "dexterity": "As given for the thief (dexAdjustmentsPct). Only Pick Pockets is affected among the bard's four skills.",
+        "armour": "As for the thief (armourAdjustmentsPct), plus the extra -5% for a bard in non-elven chain mail.",
+        "situation": "Bard abilities are subject to modifiers for situation as for the thief. The situational modifier list was not supplied.",
+        "order": "Start from the Table 33 base percentage, apply race and Dexterity adjustments, then the player distributes the discretionary points. Armour and situation modifiers are applied when the skill is used."
+      }
+    },
+    "bardSkillIds": [
+      "pickPockets",
+      "detectNoise",
+      "climbWalls",
+      "readLanguages"
+    ],
+    "crossCheck": "The four skills match the Bard Skills block on your Bard sheet (Pick Pockets, Detect Noise, Climb Walls, Read Languages).",
+    "source": "PHB Tables 26-30 (images supplied by owner)",
+    "baseScoresPct": {
+      "source": "PHB Table 26: Thieving Skill Base Scores",
+      "pickPockets": 15,
+      "openLocks": 10,
+      "findRemoveTraps": 5,
+      "moveSilently": 10,
+      "hideInShadows": 5,
+      "detectNoise": 15,
+      "climbWalls": 60,
+      "readLanguages": 0
+    },
+    "racialAdjustmentsPct": {
+      "source": "PHB Table 27: Thieving Skill Racial Adjustments",
+      "note": "A dash on the table is stored as 0. Humans have no column on the table, so they are stored as all 0 (assumed).",
+      "races": {
+        "human": {
+          "pickPockets": 0,
+          "openLocks": 0,
+          "findRemoveTraps": 0,
+          "moveSilently": 0,
+          "hideInShadows": 0,
+          "detectNoise": 0,
+          "climbWalls": 0,
+          "readLanguages": 0
+        },
+        "dwarf": {
+          "pickPockets": 0,
+          "openLocks": 10,
+          "findRemoveTraps": 15,
+          "moveSilently": 0,
+          "hideInShadows": 0,
+          "detectNoise": 0,
+          "climbWalls": -10,
+          "readLanguages": -5
+        },
+        "elf": {
+          "pickPockets": 5,
+          "openLocks": -5,
+          "findRemoveTraps": 0,
+          "moveSilently": 5,
+          "hideInShadows": 10,
+          "detectNoise": 5,
+          "climbWalls": 0,
+          "readLanguages": 0
+        },
+        "gnome": {
+          "pickPockets": 0,
+          "openLocks": 5,
+          "findRemoveTraps": 10,
+          "moveSilently": 5,
+          "hideInShadows": 5,
+          "detectNoise": 10,
+          "climbWalls": -15,
+          "readLanguages": 0
+        },
+        "halfElf": {
+          "pickPockets": 10,
+          "openLocks": 0,
+          "findRemoveTraps": 0,
+          "moveSilently": 0,
+          "hideInShadows": 5,
+          "detectNoise": 0,
+          "climbWalls": 0,
+          "readLanguages": 0
+        },
+        "halfling": {
+          "pickPockets": 5,
+          "openLocks": 5,
+          "findRemoveTraps": 5,
+          "moveSilently": 10,
+          "hideInShadows": 15,
+          "detectNoise": 5,
+          "climbWalls": -15,
+          "readLanguages": -5
+        }
+      }
+    },
+    "dexAdjustmentsPct": {
+      "source": "PHB Table 28: Thieving Skill Dexterity Adjustments",
+      "appliesToSkills": [
+        "pickPockets",
+        "openLocks",
+        "findRemoveTraps",
+        "moveSilently",
+        "hideInShadows"
+      ],
+      "note": "Only these five skills are adjusted by Dexterity. The table's '13-15' row is stored as three rows (13, 14, 15). DEX below 9 or above 19 is not on the table (needs source).",
+      "byDexterity": {
+        "9": {
+          "pickPockets": -15,
+          "openLocks": -10,
+          "findRemoveTraps": -10,
+          "moveSilently": -20,
+          "hideInShadows": -10,
+          "detectNoise": 0,
+          "climbWalls": 0,
+          "readLanguages": 0
+        },
+        "10": {
+          "pickPockets": -10,
+          "openLocks": -5,
+          "findRemoveTraps": -10,
+          "moveSilently": -15,
+          "hideInShadows": -5,
+          "detectNoise": 0,
+          "climbWalls": 0,
+          "readLanguages": 0
+        },
+        "11": {
+          "pickPockets": -5,
+          "openLocks": 0,
+          "findRemoveTraps": -5,
+          "moveSilently": -10,
+          "hideInShadows": 0,
+          "detectNoise": 0,
+          "climbWalls": 0,
+          "readLanguages": 0
+        },
+        "12": {
+          "pickPockets": 0,
+          "openLocks": 0,
+          "findRemoveTraps": 0,
+          "moveSilently": -5,
+          "hideInShadows": 0,
+          "detectNoise": 0,
+          "climbWalls": 0,
+          "readLanguages": 0
+        },
+        "13": {
+          "pickPockets": 0,
+          "openLocks": 0,
+          "findRemoveTraps": 0,
+          "moveSilently": 0,
+          "hideInShadows": 0,
+          "detectNoise": 0,
+          "climbWalls": 0,
+          "readLanguages": 0
+        },
+        "14": {
+          "pickPockets": 0,
+          "openLocks": 0,
+          "findRemoveTraps": 0,
+          "moveSilently": 0,
+          "hideInShadows": 0,
+          "detectNoise": 0,
+          "climbWalls": 0,
+          "readLanguages": 0
+        },
+        "15": {
+          "pickPockets": 0,
+          "openLocks": 0,
+          "findRemoveTraps": 0,
+          "moveSilently": 0,
+          "hideInShadows": 0,
+          "detectNoise": 0,
+          "climbWalls": 0,
+          "readLanguages": 0
+        },
+        "16": {
+          "pickPockets": 0,
+          "openLocks": 5,
+          "findRemoveTraps": 0,
+          "moveSilently": 0,
+          "hideInShadows": 0,
+          "detectNoise": 0,
+          "climbWalls": 0,
+          "readLanguages": 0
+        },
+        "17": {
+          "pickPockets": 5,
+          "openLocks": 10,
+          "findRemoveTraps": 0,
+          "moveSilently": 5,
+          "hideInShadows": 5,
+          "detectNoise": 0,
+          "climbWalls": 0,
+          "readLanguages": 0
+        },
+        "18": {
+          "pickPockets": 10,
+          "openLocks": 15,
+          "findRemoveTraps": 5,
+          "moveSilently": 10,
+          "hideInShadows": 10,
+          "detectNoise": 0,
+          "climbWalls": 0,
+          "readLanguages": 0
+        },
+        "19": {
+          "pickPockets": 15,
+          "openLocks": 20,
+          "findRemoveTraps": 10,
+          "moveSilently": 15,
+          "hideInShadows": 15,
+          "detectNoise": 0,
+          "climbWalls": 0,
+          "readLanguages": 0
+        }
+      }
+    },
+    "armourAdjustmentsPct": {
+      "source": "PHB Table 29: Thieving Skill Armor Adjustments",
+      "note": "Elven chain column is marked with an asterisk on the table.",
+      "bardNonElvenChainExtraPct": -5,
+      "bardNonElvenChainNote": "Bards (only) in non-elven chain mail suffer an additional -5% penalty.",
+      "byArmour": {
+        "none": {
+          "pickPockets": 5,
+          "openLocks": 0,
+          "findRemoveTraps": 0,
+          "moveSilently": 10,
+          "hideInShadows": 5,
+          "detectNoise": 0,
+          "climbWalls": 10,
+          "readLanguages": 0
+        },
+        "elvenChain": {
+          "pickPockets": -20,
+          "openLocks": -5,
+          "findRemoveTraps": -5,
+          "moveSilently": -10,
+          "hideInShadows": -10,
+          "detectNoise": -5,
+          "climbWalls": -20,
+          "readLanguages": 0
+        },
+        "paddedOrStuddedLeather": {
+          "pickPockets": -30,
+          "openLocks": -10,
+          "findRemoveTraps": -10,
+          "moveSilently": -20,
+          "hideInShadows": -20,
+          "detectNoise": -10,
+          "climbWalls": -30,
+          "readLanguages": 0
+        }
+      },
+      "armourColumnByArmourId": {
+        "padded": "paddedOrStuddedLeather",
+        "studdedLeather": "paddedOrStuddedLeather",
+        "elvenChain": "elvenChain",
+        "leather": null,
+        "noArmour": "none"
+      },
+      "leatherNote": "Thief text: abilities are penalised in any allowed armour other than leather, and Table 29 has no leather column. Leather is therefore stored as no adjustment (null). The 'No Armor' column applies only when wearing no armour. Confirm.",
+      "bardArmourColumnByArmourId": {
+        "leather": null,
+        "padded": "paddedOrStuddedLeather",
+        "studdedLeather": "paddedOrStuddedLeather",
+        "chainMail": "elvenChain",
+        "elvenChain": "elvenChain"
+      },
+      "bardChainMailNote": "Table 29's footnote says bards in non-elven chain mail suffer an extra -5%. Chain mail is therefore mapped to the elven chain column plus bardNonElvenChainExtraPct. Assumed from the footnote. Confirm."
+    },
+    "appliesToBard": {
+      "status": "confirmed-by-owner",
+      "note": "Race, Dexterity and armour adjustments for the thief apply to the bard's four skills (Pick Pockets, Detect Noise, Climb Walls, Read Languages), as stated in the PHB bard text supplied. Dexterity only changes Pick Pockets among these four."
+    },
+    "engineHint": "finalSkill% = base + racial + dexterity + armour + discretionary points assigned across levels. The floor and any cap are not on the tables supplied.",
+    "stillNeeded": [
+      "Skill floor and any overall cap on a skill's percentage (the tables do not say, and totals can go negative before points are spent).",
+      "DEX adjustments below 9 and above 19, if needed.",
+      "The situational modifiers for thief/bard skills (not supplied).",
+      "Whether the bard has any per-skill limit on discretionary points (none stated in the supplied text)."
+    ],
+    "discretionaryPoints": {
+      "status": "confirmed-by-owner",
+      "usedBy": [
+        "thief"
+      ],
+      "assignableSkills": [
+        "pickPockets",
+        "openLocks",
+        "findRemoveTraps",
+        "moveSilently",
+        "hideInShadows",
+        "detectNoise",
+        "climbWalls",
+        "readLanguages"
+      ],
+      "level1": {
+        "points": 60,
+        "maxPerSkill": 30
+      },
+      "eachLevelAfter": {
+        "points": 30,
+        "maxPerSkill": 15
+      },
+      "totalPointsAtLevel": "60 + 30 x (thiefLevel - 1)",
+      "perSkillLimitMeaning": "The 'maxPerSkill' figure limits how many points can be put into any single skill in that level's allocation (30 at level 1, 15 at each later level). It is not an overall cap on a skill's percentage.",
+      "dataModelHint": "Store points assigned per skill per level (pointsByLevel[level][skillId]) so the app can enforce each level's limits and show points remaining.",
+      "assumptions": [
+        "For a multi-class thief, points are awarded per thief level (confirm).",
+        "Bard discretionary points are separate: see bardDiscretionaryPoints."
+      ]
+    },
+    "bardDiscretionaryPoints": {
+      "status": "confirmed-by-owner",
+      "source": "PHB bard text supplied by owner",
+      "usedBy": [
+        "bard"
+      ],
+      "assignableSkills": [
+        "pickPockets",
+        "detectNoise",
+        "climbWalls",
+        "readLanguages"
+      ],
+      "level1": {
+        "points": 20,
+        "maxPerSkill": null
+      },
+      "eachLevelAfter": {
+        "points": 15,
+        "maxPerSkill": null
+      },
+      "totalPointsAtLevel": "20 + 15 x (bardLevel - 1)",
+      "maxPerSkillNote": "The text supplied gives no per-skill limit for the bard (unlike the thief's 30 / 15). null means none stated.",
+      "timing": "The 20 points are distributed after the race and Dexterity adjustments are applied.",
+      "dataModelHint": "Same structure as the thief: pointsByLevel[level][skillId]."
+    }
+  },
+  "rangerSkills": {
+    "status": "from-PHB-table-18",
+    "skills": [
+      {
+        "id": "hideInShadows",
+        "label": "Hide in Shadows"
+      },
+      {
+        "id": "moveSilently",
+        "label": "Move Silently"
+      }
+    ],
+    "source": "PHB Table 18: Ranger Abilities (image supplied by owner)",
+    "percentByLevel": {
+      "1": {
+        "hideInShadows": 10,
+        "moveSilently": 15
+      },
+      "2": {
+        "hideInShadows": 15,
+        "moveSilently": 21
+      },
+      "3": {
+        "hideInShadows": 20,
+        "moveSilently": 27
+      },
+      "4": {
+        "hideInShadows": 25,
+        "moveSilently": 33
+      },
+      "5": {
+        "hideInShadows": 31,
+        "moveSilently": 40
+      },
+      "6": {
+        "hideInShadows": 37,
+        "moveSilently": 47
+      },
+      "7": {
+        "hideInShadows": 43,
+        "moveSilently": 55
+      },
+      "8": {
+        "hideInShadows": 49,
+        "moveSilently": 62
+      },
+      "9": {
+        "hideInShadows": 56,
+        "moveSilently": 70
+      },
+      "10": {
+        "hideInShadows": 63,
+        "moveSilently": 78
+      },
+      "11": {
+        "hideInShadows": 70,
+        "moveSilently": 86
+      },
+      "12": {
+        "hideInShadows": 77,
+        "moveSilently": 94
+      },
+      "13": {
+        "hideInShadows": 85,
+        "moveSilently": 99
+      },
+      "14": {
+        "hideInShadows": 93,
+        "moveSilently": 99
+      },
+      "15": {
+        "hideInShadows": 99,
+        "moveSilently": 99
+      },
+      "16": {
+        "hideInShadows": 99,
+        "moveSilently": 99
+      }
+    },
+    "maxAttainableMarkers": {
+      "marker": "Maximum attainable",
+      "printedOn": {
+        "moveSilently": "99%* at ranger level 13",
+        "hideInShadows": "99%* at ranger level 15"
+      },
+      "meaning": "99% is the cap for these skills."
+    },
+    "levelsAbove16": {
+      "status": "assumed",
+      "rule": "Table 18 stops at level 16. For levels 17-20 use the level 16 values (both skills at 99%, the maximum attainable)."
+    },
+    "notOnThisTable": "Racial or ability-score adjustments, and the armour/surroundings penalties (those are in house.json classAbilities.ranger.skillNotes)."
+  },
+  "proficiencies": {
+    "status": "partial",
+    "slots": {
+      "status": "from-PHB-table-34",
+      "source": "PHB Table 34: Proficiency Slots (image supplied by owner)",
+      "groups": {
+        "warrior": {
+          "weapon": {
+            "initial": 4,
+            "levelsPerExtraSlot": 3,
+            "nonProficientPenalty": -2
+          },
+          "nonWeapon": {
+            "initial": 3,
+            "levelsPerExtraSlot": 3
+          }
+        },
+        "wizard": {
+          "weapon": {
+            "initial": 1,
+            "levelsPerExtraSlot": 6,
+            "nonProficientPenalty": -5
+          },
+          "nonWeapon": {
+            "initial": 4,
+            "levelsPerExtraSlot": 3
+          }
+        },
+        "priest": {
+          "weapon": {
+            "initial": 2,
+            "levelsPerExtraSlot": 4,
+            "nonProficientPenalty": -3
+          },
+          "nonWeapon": {
+            "initial": 4,
+            "levelsPerExtraSlot": 3
+          }
+        },
+        "rogue": {
+          "weapon": {
+            "initial": 2,
+            "levelsPerExtraSlot": 4,
+            "nonProficientPenalty": -3
+          },
+          "nonWeapon": {
+            "initial": 3,
+            "levelsPerExtraSlot": 4
+          }
+        }
+      },
+      "classToSlotGroup": "Use classGroups in rules-core.json: fighter/paladin/ranger -> warrior, cleric/druid -> priest, wizard -> wizard, thief/bard -> rogue. Monk: undefined (house class).",
+      "levelsPerExtraSlotMeaning": {
+        "status": "interpretation-needs-confirming",
+        "assumed": "A character gains one extra slot each time his level reaches a multiple of the table's '#Levels' figure (so a Warrior gains a weapon slot at levels 3, 6, 9...). Confirm from the PHB text.",
+        "formula": "slots(level) = initial + floor(level / levelsPerExtraSlot)"
+      },
+      "multiClass": {
+        "status": "needs-source",
+        "note": "Table 34 does not say how a multi-class character combines slots across groups. Enter the PHB rule here."
+      },
+      "derivedPreview": {
+        "note": "Computed from the assumed formula, index 0 = level 1. For eyeballing only; the engine should compute from 'groups'.",
+        "byGroup": {
+          "warrior": {
+            "weapon": [
+              4,
+              4,
+              5,
+              5,
+              5,
+              6,
+              6,
+              6,
+              7,
+              7,
+              7,
+              8,
+              8,
+              8,
+              9,
+              9,
+              9,
+              10,
+              10,
+              10
+            ],
+            "nonWeapon": [
+              3,
+              3,
+              4,
+              4,
+              4,
+              5,
+              5,
+              5,
+              6,
+              6,
+              6,
+              7,
+              7,
+              7,
+              8,
+              8,
+              8,
+              9,
+              9,
+              9
+            ]
+          },
+          "wizard": {
+            "weapon": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              2,
+              2,
+              2,
+              2,
+              2,
+              2,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              4,
+              4,
+              4
+            ],
+            "nonWeapon": [
+              4,
+              4,
+              5,
+              5,
+              5,
+              6,
+              6,
+              6,
+              7,
+              7,
+              7,
+              8,
+              8,
+              8,
+              9,
+              9,
+              9,
+              10,
+              10,
+              10
+            ]
+          },
+          "priest": {
+            "weapon": [
+              2,
+              2,
+              2,
+              3,
+              3,
+              3,
+              3,
+              4,
+              4,
+              4,
+              4,
+              5,
+              5,
+              5,
+              5,
+              6,
+              6,
+              6,
+              6,
+              7
+            ],
+            "nonWeapon": [
+              4,
+              4,
+              5,
+              5,
+              5,
+              6,
+              6,
+              6,
+              7,
+              7,
+              7,
+              8,
+              8,
+              8,
+              9,
+              9,
+              9,
+              10,
+              10,
+              10
+            ]
+          },
+          "rogue": {
+            "weapon": [
+              2,
+              2,
+              2,
+              3,
+              3,
+              3,
+              3,
+              4,
+              4,
+              4,
+              4,
+              5,
+              5,
+              5,
+              5,
+              6,
+              6,
+              6,
+              6,
+              7
+            ],
+            "nonWeapon": [
+              3,
+              3,
+              3,
+              4,
+              4,
+              4,
+              4,
+              5,
+              5,
+              5,
+              5,
+              6,
+              6,
+              6,
+              6,
+              7,
+              7,
+              7,
+              7,
+              8
+            ]
+          }
+        }
+      }
+    },
+    "weapon": {
+      "status": "partial",
+      "nonProficientPenaltyByGroup": {
+        "warrior": -2,
+        "wizard": -5,
+        "priest": -3,
+        "rogue": -3
+      },
+      "expects": "Related-weapon penalty and any group-specific weapon restrictions. Weapon slots are in proficiencies.slots; non-proficient penalties are in nonProficientPenaltyByGroup; specialisation attacks are in specialization.attacksPerRound.",
+      "specialization": {
+        "status": "partial",
+        "eligibleClasses": [
+          "fighter"
+        ],
+        "singleClassOnly": true,
+        "note": "Confirmed by owner: specialist attacks per round are for the single-class Fighter only.",
+        "attacksPerRound": {
+          "source": "PHB Table 35: Specialist Attacks Per Round (image supplied by owner)",
+          "meaning": "attacks / rounds, e.g. 3/2 = three attacks every two rounds",
+          "levelBands": [
+            {
+              "label": "1-6",
+              "from": 1,
+              "to": 6
+            },
+            {
+              "label": "7-12",
+              "from": 7,
+              "to": 12
+            },
+            {
+              "label": "13+",
+              "from": 13,
+              "to": null
+            }
+          ],
+          "categories": [
+            {
+              "id": "meleeWeapon",
+              "label": "Melee Weapon"
+            },
+            {
+              "id": "lightCrossbow",
+              "label": "Light X-bow"
+            },
+            {
+              "id": "heavyCrossbow",
+              "label": "Heavy X-bow"
+            },
+            {
+              "id": "thrownDagger",
+              "label": "Thrown Dagger"
+            },
+            {
+              "id": "thrownDart",
+              "label": "Thrown Dart"
+            },
+            {
+              "id": "otherNonBowMissiles",
+              "label": "Other (Non-bow) Missiles"
+            }
+          ],
+          "rows": [
+            {
+              "levels": {
+                "label": "1-6",
+                "from": 1,
+                "to": 6
+              },
+              "meleeWeapon": {
+                "text": "3/2",
+                "attacks": 3,
+                "perRounds": 2
+              },
+              "lightCrossbow": {
+                "text": "1/1",
+                "attacks": 1,
+                "perRounds": 1
+              },
+              "heavyCrossbow": {
+                "text": "1/2",
+                "attacks": 1,
+                "perRounds": 2
+              },
+              "thrownDagger": {
+                "text": "3/1",
+                "attacks": 3,
+                "perRounds": 1
+              },
+              "thrownDart": {
+                "text": "4/1",
+                "attacks": 4,
+                "perRounds": 1
+              },
+              "otherNonBowMissiles": {
+                "text": "3/2",
+                "attacks": 3,
+                "perRounds": 2
+              }
+            },
+            {
+              "levels": {
+                "label": "7-12",
+                "from": 7,
+                "to": 12
+              },
+              "meleeWeapon": {
+                "text": "2/1",
+                "attacks": 2,
+                "perRounds": 1
+              },
+              "lightCrossbow": {
+                "text": "3/2",
+                "attacks": 3,
+                "perRounds": 2
+              },
+              "heavyCrossbow": {
+                "text": "1/1",
+                "attacks": 1,
+                "perRounds": 1
+              },
+              "thrownDagger": {
+                "text": "4/1",
+                "attacks": 4,
+                "perRounds": 1
+              },
+              "thrownDart": {
+                "text": "5/1",
+                "attacks": 5,
+                "perRounds": 1
+              },
+              "otherNonBowMissiles": {
+                "text": "2/1",
+                "attacks": 2,
+                "perRounds": 1
+              }
+            },
+            {
+              "levels": {
+                "label": "13+",
+                "from": 13,
+                "to": null
+              },
+              "meleeWeapon": {
+                "text": "5/2",
+                "attacks": 5,
+                "perRounds": 2
+              },
+              "lightCrossbow": {
+                "text": "2/1",
+                "attacks": 2,
+                "perRounds": 1
+              },
+              "heavyCrossbow": {
+                "text": "3/2",
+                "attacks": 3,
+                "perRounds": 2
+              },
+              "thrownDagger": {
+                "text": "5/1",
+                "attacks": 5,
+                "perRounds": 1
+              },
+              "thrownDart": {
+                "text": "6/1",
+                "attacks": 6,
+                "perRounds": 1
+              },
+              "otherNonBowMissiles": {
+                "text": "5/2",
+                "attacks": 5,
+                "perRounds": 2
+              }
+            }
+          ]
+        },
+        "stillNeeded": "To-hit and damage bonuses for specialisation, slot cost to specialise, and how double specialisation (if used) works."
+      }
+    },
+    "nonWeapon": {
+      "status": "from-PHB-table-37",
+      "source": "PHB Table 37: Nonweapon Proficiency Groups (image supplied by owner)",
+      "groups": [
+        "general",
+        "priest",
+        "rogue",
+        "warrior",
+        "wizard"
+      ],
+      "fields": {
+        "slots": "# of Slots Required",
+        "ability": "Relevant Ability (null = NA)",
+        "modifier": "Check Modifier (null = NA)",
+        "groups": "Groups whose table lists this proficiency"
+      },
+      "d20Target": "ability score + modifier (computed by the engine). Proficiencies with noAbilityCheck have no check.",
+      "crossGroupCost": {
+        "status": "confirmed-by-owner",
+        "extraSlots": 1,
+        "rule": "A proficiency from a group other than the class's own group costs one extra slot.",
+        "ownGroup": "The class group from rules-core classGroups. For every class this matches the first group printed on Table 38.",
+        "assumptions": [
+          "General proficiencies never cost the extra slot, for any class (to be confirmed).",
+          "A proficiency listed in several groups costs the normal slots if ANY of its groups is the class's own group (or General), otherwise one extra slot.",
+          "For multi-class characters, the rule is applied per class and the multi-class slot rule is still to be confirmed."
+        ],
+        "engineRule": "cost = slots + (0 if (proficiency.groups intersects [ownGroup, 'general']) else 1)"
+      },
+      "list": [
+        {
+          "id": "agriculture",
+          "name": "Agriculture",
+          "slots": 1,
+          "ability": "int",
+          "modifier": 0,
+          "groups": [
+            "general"
+          ]
+        },
+        {
+          "id": "ancientHistory",
+          "name": "Ancient History",
+          "slots": 1,
+          "ability": "int",
+          "modifier": -1,
+          "groups": [
+            "priest",
+            "rogue",
+            "wizard"
+          ]
+        },
+        {
+          "id": "animalHandling",
+          "name": "Animal Handling",
+          "slots": 1,
+          "ability": "wis",
+          "modifier": -1,
+          "groups": [
+            "general"
+          ]
+        },
+        {
+          "id": "animalLore",
+          "name": "Animal Lore",
+          "slots": 1,
+          "ability": "int",
+          "modifier": 0,
+          "groups": [
+            "warrior"
+          ]
+        },
+        {
+          "id": "animalTraining",
+          "name": "Animal Training",
+          "slots": 1,
+          "ability": "wis",
+          "modifier": 0,
+          "groups": [
+            "general"
+          ]
+        },
+        {
+          "id": "appraising",
+          "name": "Appraising",
+          "slots": 1,
+          "ability": "int",
+          "modifier": 0,
+          "groups": [
+            "rogue"
+          ]
+        },
+        {
+          "id": "armorer",
+          "name": "Armorer",
+          "slots": 2,
+          "ability": "int",
+          "modifier": -2,
+          "groups": [
+            "warrior"
+          ]
+        },
+        {
+          "id": "artisticAbility",
+          "name": "Artistic Ability",
+          "slots": 1,
+          "ability": "wis",
+          "modifier": 0,
+          "groups": [
+            "general"
+          ]
+        },
+        {
+          "id": "astrology",
+          "name": "Astrology",
+          "slots": 2,
+          "ability": "int",
+          "modifier": 0,
+          "groups": [
+            "priest",
+            "wizard"
+          ]
+        },
+        {
+          "id": "blacksmithing",
+          "name": "Blacksmithing",
+          "slots": 1,
+          "ability": "str",
+          "modifier": 0,
+          "groups": [
+            "general"
+          ]
+        },
+        {
+          "id": "blindFighting",
+          "name": "Blind-fighting",
+          "slots": 2,
+          "ability": null,
+          "modifier": null,
+          "groups": [
+            "rogue",
+            "warrior"
+          ],
+          "noAbilityCheck": true
+        },
+        {
+          "id": "bowyerFletcher",
+          "name": "Bowyer/Fletcher",
+          "slots": 1,
+          "ability": "dex",
+          "modifier": -1,
+          "groups": [
+            "warrior"
+          ]
+        },
+        {
+          "id": "brewing",
+          "name": "Brewing",
+          "slots": 1,
+          "ability": "int",
+          "modifier": 0,
+          "groups": [
+            "general"
+          ]
+        },
+        {
+          "id": "carpentry",
+          "name": "Carpentry",
+          "slots": 1,
+          "ability": "str",
+          "modifier": 0,
+          "groups": [
+            "general"
+          ]
+        },
+        {
+          "id": "charioteering",
+          "name": "Charioteering",
+          "slots": 1,
+          "ability": "dex",
+          "modifier": 2,
+          "groups": [
+            "warrior"
+          ]
+        },
+        {
+          "id": "cobbling",
+          "name": "Cobbling",
+          "slots": 1,
+          "ability": "dex",
+          "modifier": 0,
+          "groups": [
+            "general"
+          ]
+        },
+        {
+          "id": "cooking",
+          "name": "Cooking",
+          "slots": 1,
+          "ability": "int",
+          "modifier": 0,
+          "groups": [
+            "general"
+          ]
+        },
+        {
+          "id": "dancing",
+          "name": "Dancing",
+          "slots": 1,
+          "ability": "dex",
+          "modifier": 0,
+          "groups": [
+            "general"
+          ]
+        },
+        {
+          "id": "directionSense",
+          "name": "Direction Sense",
+          "slots": 1,
+          "ability": "wis",
+          "modifier": 1,
+          "groups": [
+            "general"
+          ]
+        },
+        {
+          "id": "disguise",
+          "name": "Disguise",
+          "slots": 1,
+          "ability": "cha",
+          "modifier": -1,
+          "groups": [
+            "rogue"
+          ]
+        },
+        {
+          "id": "endurance",
+          "name": "Endurance",
+          "slots": 2,
+          "ability": "con",
+          "modifier": 0,
+          "groups": [
+            "warrior"
+          ]
+        },
+        {
+          "id": "engineering",
+          "name": "Engineering",
+          "slots": 2,
+          "ability": "int",
+          "modifier": -3,
+          "groups": [
+            "priest",
+            "wizard"
+          ]
+        },
+        {
+          "id": "etiquette",
+          "name": "Etiquette",
+          "slots": 1,
+          "ability": "cha",
+          "modifier": 0,
+          "groups": [
+            "general"
+          ]
+        },
+        {
+          "id": "fireBuilding",
+          "name": "Fire-building",
+          "slots": 1,
+          "ability": "wis",
+          "modifier": -1,
+          "groups": [
+            "general"
+          ]
+        },
+        {
+          "id": "fishing",
+          "name": "Fishing",
+          "slots": 1,
+          "ability": "wis",
+          "modifier": -1,
+          "groups": [
+            "general"
+          ]
+        },
+        {
+          "id": "forgery",
+          "name": "Forgery",
+          "slots": 1,
+          "ability": "dex",
+          "modifier": -1,
+          "groups": [
+            "rogue"
+          ]
+        },
+        {
+          "id": "gaming",
+          "name": "Gaming",
+          "slots": 1,
+          "ability": "cha",
+          "modifier": 0,
+          "groups": [
+            "rogue",
+            "warrior"
+          ]
+        },
+        {
+          "id": "gemCutting",
+          "name": "Gem Cutting",
+          "slots": 2,
+          "ability": "dex",
+          "modifier": -2,
+          "groups": [
+            "rogue",
+            "wizard"
+          ]
+        },
+        {
+          "id": "healing",
+          "name": "Healing",
+          "slots": 2,
+          "ability": "wis",
+          "modifier": -2,
+          "groups": [
+            "priest"
+          ]
+        },
+        {
+          "id": "heraldry",
+          "name": "Heraldry",
+          "slots": 1,
+          "ability": "int",
+          "modifier": 0,
+          "groups": [
+            "general"
+          ]
+        },
+        {
+          "id": "herbalism",
+          "name": "Herbalism",
+          "slots": 2,
+          "ability": "int",
+          "modifier": -2,
+          "groups": [
+            "priest",
+            "wizard"
+          ]
+        },
+        {
+          "id": "hunting",
+          "name": "Hunting",
+          "slots": 1,
+          "ability": "wis",
+          "modifier": -1,
+          "groups": [
+            "warrior"
+          ]
+        },
+        {
+          "id": "juggling",
+          "name": "Juggling",
+          "slots": 1,
+          "ability": "dex",
+          "modifier": -1,
+          "groups": [
+            "rogue"
+          ]
+        },
+        {
+          "id": "jumping",
+          "name": "Jumping",
+          "slots": 1,
+          "ability": "str",
+          "modifier": 0,
+          "groups": [
+            "rogue"
+          ]
+        },
+        {
+          "id": "languagesAncient",
+          "name": "Languages, Ancient",
+          "slots": 1,
+          "ability": "int",
+          "modifier": 0,
+          "groups": [
+            "priest",
+            "wizard"
+          ]
+        },
+        {
+          "id": "languagesModern",
+          "name": "Languages, Modern",
+          "slots": 1,
+          "ability": "int",
+          "modifier": 0,
+          "groups": [
+            "general"
+          ]
+        },
+        {
+          "id": "leatherworking",
+          "name": "Leatherworking",
+          "slots": 1,
+          "ability": "int",
+          "modifier": 0,
+          "groups": [
+            "general"
+          ]
+        },
+        {
+          "id": "localHistory",
+          "name": "Local History",
+          "slots": 1,
+          "ability": "cha",
+          "modifier": 0,
+          "groups": [
+            "priest",
+            "rogue"
+          ]
+        },
+        {
+          "id": "mining",
+          "name": "Mining",
+          "slots": 2,
+          "ability": "wis",
+          "modifier": -3,
+          "groups": [
+            "general"
+          ]
+        },
+        {
+          "id": "mountaineering",
+          "name": "Mountaineering",
+          "slots": 1,
+          "ability": null,
+          "modifier": null,
+          "groups": [
+            "warrior"
+          ],
+          "noAbilityCheck": true
+        },
+        {
+          "id": "musicalInstrument",
+          "name": "Musical Instrument",
+          "slots": 1,
+          "ability": "dex",
+          "modifier": -1,
+          "groups": [
+            "priest",
+            "rogue"
+          ]
+        },
+        {
+          "id": "navigation",
+          "name": "Navigation",
+          "slots": 1,
+          "ability": "int",
+          "modifier": -2,
+          "groups": [
+            "priest",
+            "warrior",
+            "wizard"
+          ]
+        },
+        {
+          "id": "pottery",
+          "name": "Pottery",
+          "slots": 1,
+          "ability": "dex",
+          "modifier": -2,
+          "groups": [
+            "general"
+          ]
+        },
+        {
+          "id": "readingLips",
+          "name": "Reading Lips",
+          "slots": 2,
+          "ability": "int",
+          "modifier": -2,
+          "groups": [
+            "rogue"
+          ]
+        },
+        {
+          "id": "readingWriting",
+          "name": "Reading/Writing",
+          "slots": 1,
+          "ability": "int",
+          "modifier": 1,
+          "groups": [
+            "priest",
+            "wizard"
+          ]
+        },
+        {
+          "id": "religion",
+          "name": "Religion",
+          "slots": 1,
+          "ability": "wis",
+          "modifier": 0,
+          "groups": [
+            "priest",
+            "wizard"
+          ]
+        },
+        {
+          "id": "ridingAirborne",
+          "name": "Riding, Airborne",
+          "slots": 2,
+          "ability": "wis",
+          "modifier": -2,
+          "groups": [
+            "general"
+          ]
+        },
+        {
+          "id": "ridingLandBased",
+          "name": "Riding, Land-based",
+          "slots": 1,
+          "ability": "wis",
+          "modifier": 3,
+          "groups": [
+            "general"
+          ]
+        },
+        {
+          "id": "ropeUse",
+          "name": "Rope Use",
+          "slots": 1,
+          "ability": "dex",
+          "modifier": 0,
+          "groups": [
+            "general"
+          ]
+        },
+        {
+          "id": "running",
+          "name": "Running",
+          "slots": 1,
+          "ability": "con",
+          "modifier": -6,
+          "groups": [
+            "warrior"
+          ]
+        },
+        {
+          "id": "seamanship",
+          "name": "Seamanship",
+          "slots": 1,
+          "ability": "dex",
+          "modifier": 1,
+          "groups": [
+            "general"
+          ]
+        },
+        {
+          "id": "seamstressTailor",
+          "name": "Seamstress/Tailor",
+          "slots": 1,
+          "ability": "dex",
+          "modifier": -1,
+          "groups": [
+            "general"
+          ]
+        },
+        {
+          "id": "setSnares",
+          "name": "Set Snares",
+          "slots": 1,
+          "ability": "dex",
+          "modifier": -1,
+          "groups": [
+            "rogue",
+            "warrior"
+          ]
+        },
+        {
+          "id": "singing",
+          "name": "Singing",
+          "slots": 1,
+          "ability": "cha",
+          "modifier": 0,
+          "groups": [
+            "general"
+          ]
+        },
+        {
+          "id": "spellcraft",
+          "name": "Spellcraft",
+          "slots": 1,
+          "ability": "int",
+          "modifier": -2,
+          "groups": [
+            "priest",
+            "wizard"
+          ]
+        },
+        {
+          "id": "stonemasonry",
+          "name": "Stonemasonry",
+          "slots": 1,
+          "ability": "str",
+          "modifier": -2,
+          "groups": [
+            "general"
+          ]
+        },
+        {
+          "id": "survival",
+          "name": "Survival",
+          "slots": 2,
+          "ability": "int",
+          "modifier": 0,
+          "groups": [
+            "warrior"
+          ]
+        },
+        {
+          "id": "swimming",
+          "name": "Swimming",
+          "slots": 1,
+          "ability": "str",
+          "modifier": 0,
+          "groups": [
+            "general"
+          ]
+        },
+        {
+          "id": "tightropeWalking",
+          "name": "Tightrope Walking",
+          "slots": 1,
+          "ability": "dex",
+          "modifier": 0,
+          "groups": [
+            "rogue"
+          ]
+        },
+        {
+          "id": "tracking",
+          "name": "Tracking",
+          "slots": 2,
+          "ability": "wis",
+          "modifier": 0,
+          "groups": [
+            "warrior"
+          ]
+        },
+        {
+          "id": "tumbling",
+          "name": "Tumbling",
+          "slots": 1,
+          "ability": "dex",
+          "modifier": 0,
+          "groups": [
+            "rogue"
+          ]
+        },
+        {
+          "id": "ventriloquism",
+          "name": "Ventriloquism",
+          "slots": 1,
+          "ability": "int",
+          "modifier": -2,
+          "groups": [
+            "rogue"
+          ]
+        },
+        {
+          "id": "weaponsmithing",
+          "name": "Weaponsmithing",
+          "slots": 3,
+          "ability": "int",
+          "modifier": -3,
+          "groups": [
+            "warrior"
+          ]
+        },
+        {
+          "id": "weatherSense",
+          "name": "Weather Sense",
+          "slots": 1,
+          "ability": "wis",
+          "modifier": -1,
+          "groups": [
+            "general"
+          ]
+        },
+        {
+          "id": "weaving",
+          "name": "Weaving",
+          "slots": 1,
+          "ability": "int",
+          "modifier": -1,
+          "groups": [
+            "general"
+          ]
+        }
+      ],
+      "crossChecks": [
+        "Ranger sheet prefill Tracking: WIS, modifier 0 matches Table 37 (warrior group, 2 slots). The sheet's '+1/3lvl' is an extra per-level bonus.",
+        "Monk sheet prefills Endurance CON (0), Running CON (-6) and Religion WIS (0) match Table 37 exactly. The Monk's access to these (warrior and priest/wizard entries) is a house choice."
+      ],
+      "prefilledOnSheets": [
+        {
+          "id": "tracking",
+          "grantedTo": [
+            "ranger"
+          ],
+          "bonusNote": "+1 per 3 levels"
+        },
+        {
+          "id": "endurance",
+          "grantedTo": [
+            "monk"
+          ],
+          "source": "house"
+        },
+        {
+          "id": "running",
+          "grantedTo": [
+            "monk"
+          ],
+          "source": "house"
+        },
+        {
+          "id": "religion",
+          "grantedTo": [
+            "monk"
+          ],
+          "source": "house"
+        }
+      ],
+      "classGroupAccess": {
+        "status": "from-PHB-table-38",
+        "source": "PHB Table 38: Nonweapon Proficiency Group Crossovers (image supplied by owner)",
+        "note": "Groups are listed in the order printed on the table. A class may take any proficiency whose 'groups' list overlaps its groups. A multi-class character's access is the union of its classes' groups. The table prints 'Mage'; stored here under class id 'wizard'.",
+        "classes": {
+          "fighter": {
+            "groups": [
+              "warrior",
+              "general"
+            ],
+            "ownGroup": "warrior"
+          },
+          "paladin": {
+            "groups": [
+              "warrior",
+              "priest",
+              "general"
+            ],
+            "ownGroup": "warrior"
+          },
+          "ranger": {
+            "groups": [
+              "warrior",
+              "wizard",
+              "general"
+            ],
+            "ownGroup": "warrior"
+          },
+          "cleric": {
+            "groups": [
+              "priest",
+              "general"
+            ],
+            "ownGroup": "priest"
+          },
+          "druid": {
+            "groups": [
+              "priest",
+              "warrior",
+              "general"
+            ],
+            "ownGroup": "priest"
+          },
+          "wizard": {
+            "groups": [
+              "wizard",
+              "general"
+            ],
+            "ownGroup": "wizard"
+          },
+          "thief": {
+            "groups": [
+              "rogue",
+              "general"
+            ],
+            "ownGroup": "rogue"
+          },
+          "bard": {
+            "groups": [
+              "rogue",
+              "warrior",
+              "wizard",
+              "general"
+            ],
+            "ownGroup": "rogue"
+          }
+        },
+        "notYetCovered": {
+          "illusionist": {
+            "groups": [
+              "wizard",
+              "general"
+            ],
+            "note": "Listed on Table 38 as a specialist wizard. Not a class id yet; add when specialist wizards are defined."
+          },
+          "monk": {
+            "groups": null,
+            "note": "100% house class, not on Table 38. Owner to say which groups it uses."
+          }
+        }
+      }
+    }
+  }
+}

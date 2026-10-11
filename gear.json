@@ -1,0 +1,5180 @@
+{
+  "meta": {
+    "file": "gear",
+    "schemaVersion": "0.1.0",
+    "ruleset": "AD&D 2nd Edition (Player's Handbook / Dungeon Master's Guide). NOT 5th edition.",
+    "provenance": "currency comes from PHB Table 42 and startingFunds from PHB Table 43, and equipment from PHB Table 44 (images supplied by owner). armour cost and weight come from the PHB armour table (image supplied by owner); weapons and missile ranges come from the PHB weapons table and Table 45 (images supplied by owner). Armour Class values come from PHB Table 46 (image supplied by owner).",
+    "sectionStatus": {
+      "currency": "from-PHB-table-42",
+      "weapons": "from-PHB-weapons-table-and-table-45",
+      "armour": "cost, weight and Armour Class done (Table 46); movement and shield details still needed",
+      "equipment": "from-PHB-table-44 (weights only for tack and miscellaneous items)",
+      "startingFunds": "from-PHB-table-43"
+    },
+    "openIssues": [
+      "Coin weight (for encumbrance) is not on Table 42. Enter the PHB figure under currency.coinWeight.",
+      "Monk house rule: monks retain no more than 25 gp per level (see house.json monk.prefill.coinLimitPerLevelGp).",
+      "Starting funds: multi-class dice rule and the Monk's group are undefined. Override is gp-only unless you want coin mixes.",
+      "Equipment weights: clothing, food/lodging, provisioning, transport, animals and services have no weights on Table 44. Add weights if you want them in encumbrance.",
+      "Armour: movement effects, shield details and the 'Armor *' footnote were not supplied.",
+      "Weapons: Table 45 lists 'Hammer' but the weapons table lists 'Warhammer'; left unlinked. Weapon proficiency groups / related weapons are not on the tables supplied.",
+      "Thief text names a lasso (weapon) and elven chain (armour); neither is in the weapons or armour tables supplied. Add them if you have their stats."
+    ]
+  },
+  "currency": {
+    "status": "from-PHB-table-42",
+    "source": "PHB Table 42: Standard Exchange Rates (image supplied by owner)",
+    "baseCoin": "cp",
+    "coins": [
+      {
+        "id": "cp",
+        "label": "Copper Piece",
+        "valueInCp": 1
+      },
+      {
+        "id": "sp",
+        "label": "Silver Piece",
+        "valueInCp": 10
+      },
+      {
+        "id": "ep",
+        "label": "Electrum Piece",
+        "valueInCp": 50
+      },
+      {
+        "id": "gp",
+        "label": "Gold Piece",
+        "valueInCp": 100
+      },
+      {
+        "id": "pp",
+        "label": "Platinum Piece",
+        "valueInCp": 500
+      }
+    ],
+    "sheetDisplayOrder": [
+      "pp",
+      "gp",
+      "ep",
+      "sp",
+      "cp"
+    ],
+    "sheetRatesLine": "1PP = 5GP = 10EP = 50SP = 500CP",
+    "exchangeMatrix": {
+      "meaning": "matrix[row][column] = how many of the column coin one row coin is worth. E.g. matrix.gp.sp = 10 (1 gp = 10 sp); matrix.sp.gp = 1/10.",
+      "matrix": {
+        "cp": {
+          "cp": {
+            "text": "1",
+            "value": 1.0
+          },
+          "sp": {
+            "text": "1/10",
+            "value": 0.1
+          },
+          "ep": {
+            "text": "1/50",
+            "value": 0.02
+          },
+          "gp": {
+            "text": "1/100",
+            "value": 0.01
+          },
+          "pp": {
+            "text": "1/500",
+            "value": 0.002
+          }
+        },
+        "sp": {
+          "cp": {
+            "text": "10",
+            "value": 10.0
+          },
+          "sp": {
+            "text": "1",
+            "value": 1.0
+          },
+          "ep": {
+            "text": "1/5",
+            "value": 0.2
+          },
+          "gp": {
+            "text": "1/10",
+            "value": 0.1
+          },
+          "pp": {
+            "text": "1/50",
+            "value": 0.02
+          }
+        },
+        "ep": {
+          "cp": {
+            "text": "50",
+            "value": 50.0
+          },
+          "sp": {
+            "text": "5",
+            "value": 5.0
+          },
+          "ep": {
+            "text": "1",
+            "value": 1.0
+          },
+          "gp": {
+            "text": "1/2",
+            "value": 0.5
+          },
+          "pp": {
+            "text": "1/10",
+            "value": 0.1
+          }
+        },
+        "gp": {
+          "cp": {
+            "text": "100",
+            "value": 100.0
+          },
+          "sp": {
+            "text": "10",
+            "value": 10.0
+          },
+          "ep": {
+            "text": "2",
+            "value": 2.0
+          },
+          "gp": {
+            "text": "1",
+            "value": 1.0
+          },
+          "pp": {
+            "text": "1/5",
+            "value": 0.2
+          }
+        },
+        "pp": {
+          "cp": {
+            "text": "500",
+            "value": 500.0
+          },
+          "sp": {
+            "text": "50",
+            "value": 50.0
+          },
+          "ep": {
+            "text": "10",
+            "value": 10.0
+          },
+          "gp": {
+            "text": "5",
+            "value": 5.0
+          },
+          "pp": {
+            "text": "1",
+            "value": 1.0
+          }
+        }
+      }
+    },
+    "coinWeight": {
+      "status": "needs-source",
+      "expects": "Weight per coin (or coins per pound), used for encumbrance."
+    },
+    "crossCheck": "The Rates line printed on every Tradestands sheet (1PP = 5GP = 10EP = 50SP = 500CP) matches Table 42 exactly."
+  },
+  "weapons": {
+    "status": "from-PHB-weapons-table-and-table-45",
+    "source": "PHB weapons table (two images) and PHB Table 45: Missile Weapon Ranges (image supplied by owner)",
+    "sizeKey": {
+      "S": "Small",
+      "M": "Medium",
+      "L": "Large"
+    },
+    "typeKey": {
+      "P": "Piercing weapon",
+      "B": "Bludgeoning weapon",
+      "S": "Slashing weapon",
+      "note": "Confirmed by owner. Combined types such as P/S mean the weapon can make either kind of attack. The type matters for the optional Weapon Type vs. Armor rule (PHB chapter 9)."
+    },
+    "footnotes": {
+      "1": "Inflicts double damage against charging creatures of Large or greater size.",
+      "2": "Can dismount a rider on a successful hit.",
+      "3": "Available only if allowed by the DM. One charge costs 5 sp.",
+      "4": "Inflicts double damage when used from the back of a charging mount.",
+      "5": "Inflicts double damage when firmly set to receive a charge.",
+      "6": "Type column: Bludgeoning (B), Piercing (P), Slashing (S). Affects effectiveness against different armour types (optional rule)."
+    },
+    "weightMarkers": {
+      "*": "Weighs little individually. Ten of these weigh one pound. Stored as weightLbs 0.1."
+    },
+    "fields": {
+      "kind": "weapon (melee or thrown), launcher (bows, crossbows, sling, blowgun, arquebus) or ammunition",
+      "parent": "Heading the item is listed under on the table (Bow, Crossbow, Lance, Polearm, Sling, Sword, Blowgun)",
+      "cost": "null where the table prints a dash. 'unit' is set where the price covers several (arrows: per 12 / per 6).",
+      "speedFactor": "null for ammunition and for the Bastard sword (see its modes)",
+      "damageSM / damageL": "Small-Medium and Large damage as printed (e.g. '1d8', '1d6+1', '1d3-1'); null where the table prints a dash"
+    },
+    "items": [
+      {
+        "id": "arquebus",
+        "name": "Arquebus",
+        "kind": "launcher",
+        "cost": {
+          "amount": 500,
+          "coin": "gp",
+          "costInCp": 50000
+        },
+        "weightLbs": 10,
+        "size": "M",
+        "type": [
+          "P"
+        ],
+        "speedFactor": 15,
+        "damageSM": "1d10",
+        "damageL": "1d10",
+        "footnotes": [
+          3
+        ],
+        "flags": [
+          "availableOnlyIfDmAllows"
+        ],
+        "note": "Available only if the DM allows. One charge costs 5 sp.",
+        "chargeCost": {
+          "amount": 5,
+          "coin": "sp",
+          "costInCp": 50
+        }
+      },
+      {
+        "id": "battleAxe",
+        "name": "Battle axe",
+        "kind": "weapon",
+        "cost": {
+          "amount": 5,
+          "coin": "gp",
+          "costInCp": 500
+        },
+        "weightLbs": 7,
+        "size": "M",
+        "type": [
+          "S"
+        ],
+        "speedFactor": 7,
+        "damageSM": "1d8",
+        "damageL": "1d8"
+      },
+      {
+        "id": "blowgun",
+        "name": "Blowgun",
+        "kind": "launcher",
+        "cost": {
+          "amount": 5,
+          "coin": "gp",
+          "costInCp": 500
+        },
+        "weightLbs": 2,
+        "size": "L",
+        "type": null,
+        "speedFactor": 5,
+        "damageSM": null,
+        "damageL": null
+      },
+      {
+        "id": "barbedDart",
+        "name": "Barbed Dart",
+        "parent": "Blowgun",
+        "kind": "ammunition",
+        "cost": {
+          "amount": 1,
+          "coin": "sp",
+          "costInCp": 10
+        },
+        "weightLbs": 0.1,
+        "weightMarker": "*",
+        "size": "S",
+        "type": [
+          "P"
+        ],
+        "speedFactor": null,
+        "damageSM": "1d3",
+        "damageL": "1d2"
+      },
+      {
+        "id": "needle",
+        "name": "Needle",
+        "parent": "Blowgun",
+        "kind": "ammunition",
+        "cost": {
+          "amount": 2,
+          "coin": "cp",
+          "costInCp": 2
+        },
+        "weightLbs": 0.1,
+        "weightMarker": "*",
+        "size": "S",
+        "type": [
+          "P"
+        ],
+        "speedFactor": null,
+        "damageSM": "1",
+        "damageL": "1"
+      },
+      {
+        "id": "shortBow",
+        "name": "Short bow",
+        "parent": "Bow",
+        "kind": "launcher",
+        "cost": {
+          "amount": 30,
+          "coin": "gp",
+          "costInCp": 3000
+        },
+        "weightLbs": 2,
+        "size": "M",
+        "type": null,
+        "speedFactor": 7,
+        "damageSM": null,
+        "damageL": null
+      },
+      {
+        "id": "longBow",
+        "name": "Long bow",
+        "parent": "Bow",
+        "kind": "launcher",
+        "cost": {
+          "amount": 75,
+          "coin": "gp",
+          "costInCp": 7500
+        },
+        "weightLbs": 3,
+        "size": "L",
+        "type": null,
+        "speedFactor": 8,
+        "damageSM": null,
+        "damageL": null
+      },
+      {
+        "id": "compositeShortBow",
+        "name": "Composite short bow",
+        "parent": "Bow",
+        "kind": "launcher",
+        "cost": {
+          "amount": 75,
+          "coin": "gp",
+          "costInCp": 7500
+        },
+        "weightLbs": 2,
+        "size": "M",
+        "type": null,
+        "speedFactor": 6,
+        "damageSM": null,
+        "damageL": null
+      },
+      {
+        "id": "compositeLongBow",
+        "name": "Composite long bow",
+        "parent": "Bow",
+        "kind": "launcher",
+        "cost": {
+          "amount": 100,
+          "coin": "gp",
+          "costInCp": 10000
+        },
+        "weightLbs": 3,
+        "size": "L",
+        "type": null,
+        "speedFactor": 7,
+        "damageSM": null,
+        "damageL": null
+      },
+      {
+        "id": "flightArrow",
+        "name": "Flight arrow",
+        "parent": "Bow",
+        "kind": "ammunition",
+        "cost": {
+          "amount": 3,
+          "coin": "sp",
+          "costInCp": 30,
+          "unit": "per 12"
+        },
+        "weightLbs": 0.1,
+        "weightMarker": "*",
+        "size": "S",
+        "type": [
+          "P"
+        ],
+        "speedFactor": null,
+        "damageSM": "1d6",
+        "damageL": "1d6"
+      },
+      {
+        "id": "sheafArrow",
+        "name": "Sheaf arrow",
+        "parent": "Bow",
+        "kind": "ammunition",
+        "cost": {
+          "amount": 3,
+          "coin": "sp",
+          "costInCp": 30,
+          "unit": "per 6"
+        },
+        "weightLbs": 0.1,
+        "weightMarker": "*",
+        "size": "S",
+        "type": [
+          "P"
+        ],
+        "speedFactor": null,
+        "damageSM": "1d8",
+        "damageL": "1d8"
+      },
+      {
+        "id": "club",
+        "name": "Club",
+        "kind": "weapon",
+        "cost": null,
+        "weightLbs": 3,
+        "size": "M",
+        "type": [
+          "B"
+        ],
+        "speedFactor": 4,
+        "damageSM": "1d6",
+        "damageL": "1d3"
+      },
+      {
+        "id": "handCrossbow",
+        "name": "Hand crossbow",
+        "parent": "Crossbow",
+        "kind": "launcher",
+        "cost": {
+          "amount": 300,
+          "coin": "gp",
+          "costInCp": 30000
+        },
+        "weightLbs": 3,
+        "size": "S",
+        "type": null,
+        "speedFactor": 5,
+        "damageSM": null,
+        "damageL": null
+      },
+      {
+        "id": "lightCrossbow",
+        "name": "Light crossbow",
+        "parent": "Crossbow",
+        "kind": "launcher",
+        "cost": {
+          "amount": 35,
+          "coin": "gp",
+          "costInCp": 3500
+        },
+        "weightLbs": 7,
+        "size": "M",
+        "type": null,
+        "speedFactor": 7,
+        "damageSM": null,
+        "damageL": null
+      },
+      {
+        "id": "heavyCrossbow",
+        "name": "Heavy crossbow",
+        "parent": "Crossbow",
+        "kind": "launcher",
+        "cost": {
+          "amount": 50,
+          "coin": "gp",
+          "costInCp": 5000
+        },
+        "weightLbs": 14,
+        "size": "M",
+        "type": null,
+        "speedFactor": 10,
+        "damageSM": null,
+        "damageL": null
+      },
+      {
+        "id": "handQuarrel",
+        "name": "Hand quarrel",
+        "parent": "Crossbow",
+        "kind": "ammunition",
+        "cost": {
+          "amount": 1,
+          "coin": "gp",
+          "costInCp": 100
+        },
+        "weightLbs": 0.1,
+        "weightMarker": "*",
+        "size": "S",
+        "type": [
+          "P"
+        ],
+        "speedFactor": null,
+        "damageSM": "1d3",
+        "damageL": "1d2"
+      },
+      {
+        "id": "lightQuarrel",
+        "name": "Light quarrel",
+        "parent": "Crossbow",
+        "kind": "ammunition",
+        "cost": {
+          "amount": 1,
+          "coin": "sp",
+          "costInCp": 10
+        },
+        "weightLbs": 0.1,
+        "weightMarker": "*",
+        "size": "S",
+        "type": [
+          "P"
+        ],
+        "speedFactor": null,
+        "damageSM": "1d4",
+        "damageL": "1d4"
+      },
+      {
+        "id": "heavyQuarrel",
+        "name": "Heavy quarrel",
+        "parent": "Crossbow",
+        "kind": "ammunition",
+        "cost": {
+          "amount": 2,
+          "coin": "sp",
+          "costInCp": 20
+        },
+        "weightLbs": 0.1,
+        "weightMarker": "*",
+        "size": "S",
+        "type": [
+          "P"
+        ],
+        "speedFactor": null,
+        "damageSM": "1d4+1",
+        "damageL": "1d6+1"
+      },
+      {
+        "id": "daggerOrDirk",
+        "name": "Dagger or dirk",
+        "kind": "weapon",
+        "cost": {
+          "amount": 2,
+          "coin": "gp",
+          "costInCp": 200
+        },
+        "weightLbs": 1,
+        "size": "S",
+        "type": [
+          "P"
+        ],
+        "speedFactor": 2,
+        "damageSM": "1d4",
+        "damageL": "1d3"
+      },
+      {
+        "id": "dart",
+        "name": "Dart",
+        "kind": "weapon",
+        "cost": {
+          "amount": 5,
+          "coin": "sp",
+          "costInCp": 50
+        },
+        "weightLbs": 0.5,
+        "size": "S",
+        "type": [
+          "P"
+        ],
+        "speedFactor": 2,
+        "damageSM": "1d3",
+        "damageL": "1d2"
+      },
+      {
+        "id": "footmansFlail",
+        "name": "Footman's flail",
+        "kind": "weapon",
+        "cost": {
+          "amount": 15,
+          "coin": "gp",
+          "costInCp": 1500
+        },
+        "weightLbs": 15,
+        "size": "M",
+        "type": [
+          "B"
+        ],
+        "speedFactor": 7,
+        "damageSM": "1d6+1",
+        "damageL": "2d4"
+      },
+      {
+        "id": "footmansMace",
+        "name": "Footman's mace",
+        "kind": "weapon",
+        "cost": {
+          "amount": 8,
+          "coin": "gp",
+          "costInCp": 800
+        },
+        "weightLbs": 10,
+        "size": "M",
+        "type": [
+          "B"
+        ],
+        "speedFactor": 7,
+        "damageSM": "1d6+1",
+        "damageL": "1d6"
+      },
+      {
+        "id": "footmansPick",
+        "name": "Footman's pick",
+        "kind": "weapon",
+        "cost": {
+          "amount": 8,
+          "coin": "gp",
+          "costInCp": 800
+        },
+        "weightLbs": 6,
+        "size": "M",
+        "type": [
+          "P"
+        ],
+        "speedFactor": 7,
+        "damageSM": "1d6+1",
+        "damageL": "2d4"
+      },
+      {
+        "id": "handOrThrowingAxe",
+        "name": "Hand or throwing axe",
+        "kind": "weapon",
+        "cost": {
+          "amount": 1,
+          "coin": "gp",
+          "costInCp": 100
+        },
+        "weightLbs": 5,
+        "size": "M",
+        "type": [
+          "S"
+        ],
+        "speedFactor": 4,
+        "damageSM": "1d6",
+        "damageL": "1d4"
+      },
+      {
+        "id": "harpoon",
+        "name": "Harpoon",
+        "kind": "weapon",
+        "cost": {
+          "amount": 20,
+          "coin": "gp",
+          "costInCp": 2000
+        },
+        "weightLbs": 6,
+        "size": "L",
+        "type": [
+          "P"
+        ],
+        "speedFactor": 7,
+        "damageSM": "2d4",
+        "damageL": "2d6"
+      },
+      {
+        "id": "horsemansFlail",
+        "name": "Horseman's flail",
+        "kind": "weapon",
+        "cost": {
+          "amount": 8,
+          "coin": "gp",
+          "costInCp": 800
+        },
+        "weightLbs": 5,
+        "size": "M",
+        "type": [
+          "B"
+        ],
+        "speedFactor": 6,
+        "damageSM": "1d4+1",
+        "damageL": "1d4+1"
+      },
+      {
+        "id": "horsemansMace",
+        "name": "Horseman's mace",
+        "kind": "weapon",
+        "cost": {
+          "amount": 5,
+          "coin": "gp",
+          "costInCp": 500
+        },
+        "weightLbs": 6,
+        "size": "M",
+        "type": [
+          "B"
+        ],
+        "speedFactor": 6,
+        "damageSM": "1d6",
+        "damageL": "1d4"
+      },
+      {
+        "id": "horsemansPick",
+        "name": "Horseman's pick",
+        "kind": "weapon",
+        "cost": {
+          "amount": 7,
+          "coin": "gp",
+          "costInCp": 700
+        },
+        "weightLbs": 4,
+        "size": "M",
+        "type": [
+          "P"
+        ],
+        "speedFactor": 5,
+        "damageSM": "1d4+1",
+        "damageL": "1d4"
+      },
+      {
+        "id": "javelin",
+        "name": "Javelin",
+        "kind": "weapon",
+        "cost": {
+          "amount": 5,
+          "coin": "sp",
+          "costInCp": 50
+        },
+        "weightLbs": 2,
+        "size": "M",
+        "type": [
+          "P"
+        ],
+        "speedFactor": 4,
+        "damageSM": "1d6",
+        "damageL": "1d6"
+      },
+      {
+        "id": "knife",
+        "name": "Knife",
+        "kind": "weapon",
+        "cost": {
+          "amount": 5,
+          "coin": "sp",
+          "costInCp": 50
+        },
+        "weightLbs": 0.5,
+        "size": "S",
+        "type": [
+          "P",
+          "S"
+        ],
+        "speedFactor": 2,
+        "damageSM": "1d3",
+        "damageL": "1d2"
+      },
+      {
+        "id": "heavyHorseLance",
+        "name": "Heavy horse lance",
+        "parent": "Lance",
+        "kind": "weapon",
+        "cost": {
+          "amount": 15,
+          "coin": "gp",
+          "costInCp": 1500
+        },
+        "weightLbs": 15,
+        "size": "L",
+        "type": [
+          "P"
+        ],
+        "speedFactor": 8,
+        "damageSM": "1d8+1",
+        "damageL": "3d6",
+        "footnotes": [
+          4
+        ],
+        "flags": [
+          "doubleDamageFromChargingMount"
+        ]
+      },
+      {
+        "id": "lightHorseLance",
+        "name": "Light horse lance",
+        "parent": "Lance",
+        "kind": "weapon",
+        "cost": {
+          "amount": 6,
+          "coin": "gp",
+          "costInCp": 600
+        },
+        "weightLbs": 5,
+        "size": "L",
+        "type": [
+          "P"
+        ],
+        "speedFactor": 6,
+        "damageSM": "1d6",
+        "damageL": "1d8",
+        "footnotes": [
+          4
+        ],
+        "flags": [
+          "doubleDamageFromChargingMount"
+        ]
+      },
+      {
+        "id": "joustingLance",
+        "name": "Jousting lance",
+        "parent": "Lance",
+        "kind": "weapon",
+        "cost": {
+          "amount": 20,
+          "coin": "gp",
+          "costInCp": 2000
+        },
+        "weightLbs": 20,
+        "size": "L",
+        "type": [
+          "P"
+        ],
+        "speedFactor": 10,
+        "damageSM": "1d3-1",
+        "damageL": "1d2-1",
+        "footnotes": [
+          4
+        ],
+        "flags": [
+          "doubleDamageFromChargingMount"
+        ]
+      },
+      {
+        "id": "mediumHorseLance",
+        "name": "Medium horse lance",
+        "parent": "Lance",
+        "kind": "weapon",
+        "cost": {
+          "amount": 10,
+          "coin": "gp",
+          "costInCp": 1000
+        },
+        "weightLbs": 10,
+        "size": "L",
+        "type": [
+          "P"
+        ],
+        "speedFactor": 7,
+        "damageSM": "1d6+1",
+        "damageL": "2d6",
+        "footnotes": [
+          4
+        ],
+        "flags": [
+          "doubleDamageFromChargingMount"
+        ]
+      },
+      {
+        "id": "mancatcher",
+        "name": "Mancatcher",
+        "kind": "weapon",
+        "cost": {
+          "amount": 30,
+          "coin": "gp",
+          "costInCp": 3000
+        },
+        "weightLbs": 8,
+        "size": "L",
+        "type": null,
+        "speedFactor": 7,
+        "damageSM": null,
+        "damageL": null,
+        "footnotes": [
+          2
+        ],
+        "flags": [
+          "canDismountRiderOnHit"
+        ]
+      },
+      {
+        "id": "morningStar",
+        "name": "Morning star",
+        "kind": "weapon",
+        "cost": {
+          "amount": 10,
+          "coin": "gp",
+          "costInCp": 1000
+        },
+        "weightLbs": 12,
+        "size": "M",
+        "type": [
+          "P",
+          "B"
+        ],
+        "speedFactor": 7,
+        "damageSM": "2d4",
+        "damageL": "1d6+1"
+      },
+      {
+        "id": "awlPike",
+        "name": "Awl pike",
+        "parent": "Polearm",
+        "kind": "weapon",
+        "cost": {
+          "amount": 5,
+          "coin": "gp",
+          "costInCp": 500
+        },
+        "weightLbs": 12,
+        "size": "L",
+        "type": [
+          "P"
+        ],
+        "speedFactor": 13,
+        "damageSM": "1d6",
+        "damageL": "1d12",
+        "footnotes": [
+          5
+        ],
+        "flags": [
+          "doubleDamageWhenSetVsCharge"
+        ]
+      },
+      {
+        "id": "bardiche",
+        "name": "Bardiche",
+        "parent": "Polearm",
+        "kind": "weapon",
+        "cost": {
+          "amount": 7,
+          "coin": "gp",
+          "costInCp": 700
+        },
+        "weightLbs": 12,
+        "size": "L",
+        "type": [
+          "S"
+        ],
+        "speedFactor": 9,
+        "damageSM": "2d4",
+        "damageL": "2d6"
+      },
+      {
+        "id": "becDeCorbin",
+        "name": "Bec de corbin",
+        "parent": "Polearm",
+        "kind": "weapon",
+        "cost": {
+          "amount": 8,
+          "coin": "gp",
+          "costInCp": 800
+        },
+        "weightLbs": 10,
+        "size": "L",
+        "type": [
+          "P",
+          "B"
+        ],
+        "speedFactor": 9,
+        "damageSM": "1d8",
+        "damageL": "1d6"
+      },
+      {
+        "id": "billGuisarme",
+        "name": "Bill-guisarme",
+        "parent": "Polearm",
+        "kind": "weapon",
+        "cost": {
+          "amount": 7,
+          "coin": "gp",
+          "costInCp": 700
+        },
+        "weightLbs": 15,
+        "size": "L",
+        "type": [
+          "P",
+          "S"
+        ],
+        "speedFactor": 10,
+        "damageSM": "2d4",
+        "damageL": "1d10"
+      },
+      {
+        "id": "fauchard",
+        "name": "Fauchard",
+        "parent": "Polearm",
+        "kind": "weapon",
+        "cost": {
+          "amount": 5,
+          "coin": "gp",
+          "costInCp": 500
+        },
+        "weightLbs": 7,
+        "size": "L",
+        "type": [
+          "P",
+          "S"
+        ],
+        "speedFactor": 8,
+        "damageSM": "1d6",
+        "damageL": "1d8"
+      },
+      {
+        "id": "fauchardFork",
+        "name": "Fauchard-fork",
+        "parent": "Polearm",
+        "kind": "weapon",
+        "cost": {
+          "amount": 8,
+          "coin": "gp",
+          "costInCp": 800
+        },
+        "weightLbs": 9,
+        "size": "L",
+        "type": [
+          "P",
+          "S"
+        ],
+        "speedFactor": 8,
+        "damageSM": "1d8",
+        "damageL": "1d10"
+      },
+      {
+        "id": "glaive",
+        "name": "Glaive",
+        "parent": "Polearm",
+        "kind": "weapon",
+        "cost": {
+          "amount": 6,
+          "coin": "gp",
+          "costInCp": 600
+        },
+        "weightLbs": 8,
+        "size": "L",
+        "type": [
+          "S"
+        ],
+        "speedFactor": 8,
+        "damageSM": "1d6",
+        "damageL": "1d10",
+        "footnotes": [
+          1
+        ],
+        "flags": [
+          "doubleDamageVsChargingLargeOrGreater"
+        ]
+      },
+      {
+        "id": "glaiveGuisarme",
+        "name": "Glaive-guisarme",
+        "parent": "Polearm",
+        "kind": "weapon",
+        "cost": {
+          "amount": 10,
+          "coin": "gp",
+          "costInCp": 1000
+        },
+        "weightLbs": 10,
+        "size": "L",
+        "type": [
+          "P",
+          "S"
+        ],
+        "speedFactor": 9,
+        "damageSM": "2d4",
+        "damageL": "2d6",
+        "footnotes": [
+          1
+        ],
+        "flags": [
+          "doubleDamageVsChargingLargeOrGreater"
+        ]
+      },
+      {
+        "id": "guisarme",
+        "name": "Guisarme",
+        "parent": "Polearm",
+        "kind": "weapon",
+        "cost": {
+          "amount": 5,
+          "coin": "gp",
+          "costInCp": 500
+        },
+        "weightLbs": 8,
+        "size": "L",
+        "type": [
+          "S"
+        ],
+        "speedFactor": 8,
+        "damageSM": "2d4",
+        "damageL": "1d8"
+      },
+      {
+        "id": "guisarmeVoulge",
+        "name": "Guisarme-voulge",
+        "parent": "Polearm",
+        "kind": "weapon",
+        "cost": {
+          "amount": 8,
+          "coin": "gp",
+          "costInCp": 800
+        },
+        "weightLbs": 15,
+        "size": "L",
+        "type": [
+          "P",
+          "S"
+        ],
+        "speedFactor": 10,
+        "damageSM": "2d4",
+        "damageL": "2d4"
+      },
+      {
+        "id": "halberd",
+        "name": "Halberd",
+        "parent": "Polearm",
+        "kind": "weapon",
+        "cost": {
+          "amount": 10,
+          "coin": "gp",
+          "costInCp": 1000
+        },
+        "weightLbs": 15,
+        "size": "L",
+        "type": [
+          "P",
+          "S"
+        ],
+        "speedFactor": 9,
+        "damageSM": "1d10",
+        "damageL": "2d6"
+      },
+      {
+        "id": "hookFauchard",
+        "name": "Hook fauchard",
+        "parent": "Polearm",
+        "kind": "weapon",
+        "cost": {
+          "amount": 10,
+          "coin": "gp",
+          "costInCp": 1000
+        },
+        "weightLbs": 8,
+        "size": "L",
+        "type": [
+          "P",
+          "S"
+        ],
+        "speedFactor": 9,
+        "damageSM": "1d4",
+        "damageL": "1d4"
+      },
+      {
+        "id": "lucernHammer",
+        "name": "Lucern hammer",
+        "parent": "Polearm",
+        "kind": "weapon",
+        "cost": {
+          "amount": 7,
+          "coin": "gp",
+          "costInCp": 700
+        },
+        "weightLbs": 15,
+        "size": "L",
+        "type": [
+          "P",
+          "B"
+        ],
+        "speedFactor": 9,
+        "damageSM": "2d4",
+        "damageL": "1d6",
+        "footnotes": [
+          5
+        ],
+        "flags": [
+          "doubleDamageWhenSetVsCharge"
+        ]
+      },
+      {
+        "id": "militaryFork",
+        "name": "Military fork",
+        "parent": "Polearm",
+        "kind": "weapon",
+        "cost": {
+          "amount": 5,
+          "coin": "gp",
+          "costInCp": 500
+        },
+        "weightLbs": 7,
+        "size": "L",
+        "type": [
+          "P"
+        ],
+        "speedFactor": 7,
+        "damageSM": "1d8",
+        "damageL": "2d4",
+        "footnotes": [
+          1
+        ],
+        "flags": [
+          "doubleDamageVsChargingLargeOrGreater"
+        ]
+      },
+      {
+        "id": "partisan",
+        "name": "Partisan",
+        "parent": "Polearm",
+        "kind": "weapon",
+        "cost": {
+          "amount": 10,
+          "coin": "gp",
+          "costInCp": 1000
+        },
+        "weightLbs": 8,
+        "size": "L",
+        "type": [
+          "P"
+        ],
+        "speedFactor": 9,
+        "damageSM": "1d6",
+        "damageL": "1d6+1",
+        "footnotes": [
+          5
+        ],
+        "flags": [
+          "doubleDamageWhenSetVsCharge"
+        ]
+      },
+      {
+        "id": "ranseur",
+        "name": "Ranseur",
+        "parent": "Polearm",
+        "kind": "weapon",
+        "cost": {
+          "amount": 6,
+          "coin": "gp",
+          "costInCp": 600
+        },
+        "weightLbs": 7,
+        "size": "L",
+        "type": [
+          "P"
+        ],
+        "speedFactor": 8,
+        "damageSM": "2d4",
+        "damageL": "2d4",
+        "footnotes": [
+          5
+        ],
+        "flags": [
+          "doubleDamageWhenSetVsCharge"
+        ]
+      },
+      {
+        "id": "spetum",
+        "name": "Spetum",
+        "parent": "Polearm",
+        "kind": "weapon",
+        "cost": {
+          "amount": 5,
+          "coin": "gp",
+          "costInCp": 500
+        },
+        "weightLbs": 7,
+        "size": "L",
+        "type": [
+          "P"
+        ],
+        "speedFactor": 8,
+        "damageSM": "1d6+1",
+        "damageL": "2d6",
+        "footnotes": [
+          5
+        ],
+        "flags": [
+          "doubleDamageWhenSetVsCharge"
+        ]
+      },
+      {
+        "id": "voulge",
+        "name": "Voulge",
+        "parent": "Polearm",
+        "kind": "weapon",
+        "cost": {
+          "amount": 5,
+          "coin": "gp",
+          "costInCp": 500
+        },
+        "weightLbs": 12,
+        "size": "L",
+        "type": [
+          "S"
+        ],
+        "speedFactor": 10,
+        "damageSM": "2d4",
+        "damageL": "2d4"
+      },
+      {
+        "id": "quarterstaff",
+        "name": "Quarterstaff",
+        "kind": "weapon",
+        "cost": null,
+        "weightLbs": 4,
+        "size": "L",
+        "type": [
+          "B"
+        ],
+        "speedFactor": 4,
+        "damageSM": "1d6",
+        "damageL": "1d6"
+      },
+      {
+        "id": "scourge",
+        "name": "Scourge",
+        "kind": "weapon",
+        "cost": {
+          "amount": 1,
+          "coin": "gp",
+          "costInCp": 100
+        },
+        "weightLbs": 2,
+        "size": "S",
+        "type": null,
+        "speedFactor": 5,
+        "damageSM": "1d4",
+        "damageL": "1d2"
+      },
+      {
+        "id": "sickle",
+        "name": "Sickle",
+        "kind": "weapon",
+        "cost": {
+          "amount": 6,
+          "coin": "sp",
+          "costInCp": 60
+        },
+        "weightLbs": 3,
+        "size": "S",
+        "type": [
+          "S"
+        ],
+        "speedFactor": 4,
+        "damageSM": "1d4+1",
+        "damageL": "1d4"
+      },
+      {
+        "id": "sling",
+        "name": "Sling",
+        "parent": "Sling",
+        "kind": "launcher",
+        "cost": {
+          "amount": 5,
+          "coin": "cp",
+          "costInCp": 5
+        },
+        "weightLbs": 0.1,
+        "weightMarker": "*",
+        "size": "S",
+        "type": null,
+        "speedFactor": 6,
+        "damageSM": null,
+        "damageL": null
+      },
+      {
+        "id": "slingBullet",
+        "name": "Sling bullet",
+        "parent": "Sling",
+        "kind": "ammunition",
+        "cost": {
+          "amount": 1,
+          "coin": "cp",
+          "costInCp": 1
+        },
+        "weightLbs": 0.1,
+        "weightMarker": "*",
+        "size": "S",
+        "type": [
+          "B"
+        ],
+        "speedFactor": null,
+        "damageSM": "1d4+1",
+        "damageL": "1d6+1"
+      },
+      {
+        "id": "slingStone",
+        "name": "Sling stone",
+        "parent": "Sling",
+        "kind": "ammunition",
+        "cost": null,
+        "weightLbs": 0.1,
+        "weightMarker": "*",
+        "size": "S",
+        "type": [
+          "B"
+        ],
+        "speedFactor": null,
+        "damageSM": "1d4",
+        "damageL": "1d4"
+      },
+      {
+        "id": "spear",
+        "name": "Spear",
+        "kind": "weapon",
+        "cost": {
+          "amount": 8,
+          "coin": "sp",
+          "costInCp": 80
+        },
+        "weightLbs": 5,
+        "size": "M",
+        "type": [
+          "P"
+        ],
+        "speedFactor": 6,
+        "damageSM": "1d6",
+        "damageL": "1d8"
+      },
+      {
+        "id": "staffSling",
+        "name": "Staff sling",
+        "kind": "launcher",
+        "cost": {
+          "amount": 2,
+          "coin": "sp",
+          "costInCp": 20
+        },
+        "weightLbs": 2,
+        "size": "M",
+        "type": null,
+        "speedFactor": 11,
+        "damageSM": null,
+        "damageL": null
+      },
+      {
+        "id": "bastardSword",
+        "name": "Bastard sword",
+        "parent": "Sword",
+        "kind": "weapon",
+        "cost": {
+          "amount": 25,
+          "coin": "gp",
+          "costInCp": 2500
+        },
+        "weightLbs": 10,
+        "size": "M",
+        "type": [
+          "S"
+        ],
+        "speedFactor": null,
+        "damageSM": null,
+        "damageL": null,
+        "modes": [
+          {
+            "id": "oneHanded",
+            "label": "One-handed",
+            "speedFactor": 6,
+            "damageSM": "1d8",
+            "damageL": "1d12"
+          },
+          {
+            "id": "twoHanded",
+            "label": "Two-handed",
+            "speedFactor": 8,
+            "damageSM": "2d4",
+            "damageL": "2d8"
+          }
+        ]
+      },
+      {
+        "id": "broadSword",
+        "name": "Broad sword",
+        "parent": "Sword",
+        "kind": "weapon",
+        "cost": {
+          "amount": 10,
+          "coin": "gp",
+          "costInCp": 1000
+        },
+        "weightLbs": 4,
+        "size": "M",
+        "type": [
+          "S"
+        ],
+        "speedFactor": 5,
+        "damageSM": "2d4",
+        "damageL": "1d6+1"
+      },
+      {
+        "id": "khopesh",
+        "name": "Khopesh",
+        "parent": "Sword",
+        "kind": "weapon",
+        "cost": {
+          "amount": 10,
+          "coin": "gp",
+          "costInCp": 1000
+        },
+        "weightLbs": 7,
+        "size": "M",
+        "type": [
+          "S"
+        ],
+        "speedFactor": 9,
+        "damageSM": "2d4",
+        "damageL": "1d6"
+      },
+      {
+        "id": "longSword",
+        "name": "Long sword",
+        "parent": "Sword",
+        "kind": "weapon",
+        "cost": {
+          "amount": 15,
+          "coin": "gp",
+          "costInCp": 1500
+        },
+        "weightLbs": 4,
+        "size": "M",
+        "type": [
+          "S"
+        ],
+        "speedFactor": 5,
+        "damageSM": "1d8",
+        "damageL": "1d12"
+      },
+      {
+        "id": "scimitar",
+        "name": "Scimitar",
+        "parent": "Sword",
+        "kind": "weapon",
+        "cost": {
+          "amount": 15,
+          "coin": "gp",
+          "costInCp": 1500
+        },
+        "weightLbs": 4,
+        "size": "M",
+        "type": [
+          "S"
+        ],
+        "speedFactor": 5,
+        "damageSM": "1d8",
+        "damageL": "1d8"
+      },
+      {
+        "id": "shortSword",
+        "name": "Short sword",
+        "parent": "Sword",
+        "kind": "weapon",
+        "cost": {
+          "amount": 10,
+          "coin": "gp",
+          "costInCp": 1000
+        },
+        "weightLbs": 3,
+        "size": "S",
+        "type": [
+          "P"
+        ],
+        "speedFactor": 3,
+        "damageSM": "1d6",
+        "damageL": "1d8"
+      },
+      {
+        "id": "twoHandedSword",
+        "name": "Two-handed sword",
+        "parent": "Sword",
+        "kind": "weapon",
+        "cost": {
+          "amount": 50,
+          "coin": "gp",
+          "costInCp": 5000
+        },
+        "weightLbs": 15,
+        "size": "L",
+        "type": [
+          "S"
+        ],
+        "speedFactor": 10,
+        "damageSM": "1d10",
+        "damageL": "3d6"
+      },
+      {
+        "id": "trident",
+        "name": "Trident",
+        "kind": "weapon",
+        "cost": {
+          "amount": 15,
+          "coin": "gp",
+          "costInCp": 1500
+        },
+        "weightLbs": 5,
+        "size": "L",
+        "type": [
+          "P"
+        ],
+        "speedFactor": 7,
+        "damageSM": "1d6+1",
+        "damageL": "3d4"
+      },
+      {
+        "id": "warhammer",
+        "name": "Warhammer",
+        "kind": "weapon",
+        "cost": {
+          "amount": 2,
+          "coin": "gp",
+          "costInCp": 200
+        },
+        "weightLbs": 6,
+        "size": "M",
+        "type": [
+          "B"
+        ],
+        "speedFactor": 4,
+        "damageSM": "1d4+1",
+        "damageL": "1d4"
+      },
+      {
+        "id": "whip",
+        "name": "Whip",
+        "kind": "weapon",
+        "cost": {
+          "amount": 1,
+          "coin": "sp",
+          "costInCp": 10
+        },
+        "weightLbs": 2,
+        "size": "M",
+        "type": null,
+        "speedFactor": 8,
+        "damageSM": "1d2",
+        "damageL": "1"
+      }
+    ],
+    "missileRanges": {
+      "source": "PHB Table 45: Missile Weapon Ranges",
+      "rangeModifiers": {
+        "short": 0,
+        "medium": -2,
+        "long": -5
+      },
+      "rules": [
+        "ROF is the rate of fire: how many shots the weapon can make in a round. It is independent of the character's melee attacks.",
+        "Each range band includes distances equal to or less than the figure given, so a heavy crossbow fired at a target 136 yards away uses the medium range modifier.",
+        "Attack roll modifiers for range are -2 at medium range and -5 at long range.",
+        "Arquebuses (if allowed) double all range modifiers."
+      ],
+      "arquebusDoublesRangeModifiers": true,
+      "unit": "yards",
+      "rows": [
+        {
+          "id": "arquebus",
+          "label": "Arquebus",
+          "weaponId": "arquebus",
+          "ammunitionId": null,
+          "rof": {
+            "text": "1/3",
+            "shots": 1,
+            "rounds": 3
+          },
+          "rangeYards": {
+            "short": 50,
+            "medium": 150,
+            "long": 210
+          }
+        },
+        {
+          "id": "blowgun",
+          "label": "Blowgun",
+          "weaponId": "blowgun",
+          "ammunitionId": null,
+          "rof": {
+            "text": "2/1",
+            "shots": 2,
+            "rounds": 1
+          },
+          "rangeYards": {
+            "short": 10,
+            "medium": 20,
+            "long": 30
+          }
+        },
+        {
+          "id": "compLongBowFlight",
+          "label": "Comp. long bow, flight arrow",
+          "weaponId": "compositeLongBow",
+          "ammunitionId": "flightArrow",
+          "rof": {
+            "text": "2/1",
+            "shots": 2,
+            "rounds": 1
+          },
+          "rangeYards": {
+            "short": 60,
+            "medium": 120,
+            "long": 210
+          }
+        },
+        {
+          "id": "compLongBowSheaf",
+          "label": "Comp. long bow, sheaf arrow",
+          "weaponId": "compositeLongBow",
+          "ammunitionId": "sheafArrow",
+          "rof": {
+            "text": "2/1",
+            "shots": 2,
+            "rounds": 1
+          },
+          "rangeYards": {
+            "short": 40,
+            "medium": 80,
+            "long": 170
+          }
+        },
+        {
+          "id": "compShortBow",
+          "label": "Comp. short bow",
+          "weaponId": "compositeShortBow",
+          "ammunitionId": null,
+          "rof": {
+            "text": "2/1",
+            "shots": 2,
+            "rounds": 1
+          },
+          "rangeYards": {
+            "short": 50,
+            "medium": 100,
+            "long": 180
+          }
+        },
+        {
+          "id": "longbowFlight",
+          "label": "Longbow, flight arrow",
+          "weaponId": "longBow",
+          "ammunitionId": "flightArrow",
+          "rof": {
+            "text": "2/1",
+            "shots": 2,
+            "rounds": 1
+          },
+          "rangeYards": {
+            "short": 70,
+            "medium": 140,
+            "long": 210
+          }
+        },
+        {
+          "id": "longbowSheaf",
+          "label": "Longbow, sheaf arrow",
+          "weaponId": "longBow",
+          "ammunitionId": "sheafArrow",
+          "rof": {
+            "text": "2/1",
+            "shots": 2,
+            "rounds": 1
+          },
+          "rangeYards": {
+            "short": 50,
+            "medium": 100,
+            "long": 170
+          }
+        },
+        {
+          "id": "shortBow",
+          "label": "Short bow",
+          "weaponId": "shortBow",
+          "ammunitionId": null,
+          "rof": {
+            "text": "2/1",
+            "shots": 2,
+            "rounds": 1
+          },
+          "rangeYards": {
+            "short": 50,
+            "medium": 100,
+            "long": 150
+          }
+        },
+        {
+          "id": "club",
+          "label": "Club",
+          "weaponId": "club",
+          "ammunitionId": null,
+          "rof": {
+            "text": "1",
+            "shots": 1,
+            "rounds": 1
+          },
+          "rangeYards": {
+            "short": 10,
+            "medium": 20,
+            "long": 30
+          }
+        },
+        {
+          "id": "handCrossbow",
+          "label": "Hand crossbow",
+          "weaponId": "handCrossbow",
+          "ammunitionId": null,
+          "rof": {
+            "text": "1",
+            "shots": 1,
+            "rounds": 1
+          },
+          "rangeYards": {
+            "short": 20,
+            "medium": 40,
+            "long": 60
+          }
+        },
+        {
+          "id": "heavyCrossbow",
+          "label": "Heavy crossbow",
+          "weaponId": "heavyCrossbow",
+          "ammunitionId": null,
+          "rof": {
+            "text": "1/2",
+            "shots": 1,
+            "rounds": 2
+          },
+          "rangeYards": {
+            "short": 80,
+            "medium": 160,
+            "long": 240
+          }
+        },
+        {
+          "id": "lightCrossbow",
+          "label": "Light crossbow",
+          "weaponId": "lightCrossbow",
+          "ammunitionId": null,
+          "rof": {
+            "text": "1",
+            "shots": 1,
+            "rounds": 1
+          },
+          "rangeYards": {
+            "short": 60,
+            "medium": 120,
+            "long": 180
+          }
+        },
+        {
+          "id": "dagger",
+          "label": "Dagger",
+          "weaponId": "daggerOrDirk",
+          "ammunitionId": null,
+          "rof": {
+            "text": "2/1",
+            "shots": 2,
+            "rounds": 1
+          },
+          "rangeYards": {
+            "short": 10,
+            "medium": 20,
+            "long": 30
+          }
+        },
+        {
+          "id": "dart",
+          "label": "Dart",
+          "weaponId": "dart",
+          "ammunitionId": null,
+          "rof": {
+            "text": "3/1",
+            "shots": 3,
+            "rounds": 1
+          },
+          "rangeYards": {
+            "short": 10,
+            "medium": 20,
+            "long": 40
+          }
+        },
+        {
+          "id": "hammer",
+          "label": "Hammer",
+          "weaponId": null,
+          "ammunitionId": null,
+          "rof": {
+            "text": "1",
+            "shots": 1,
+            "rounds": 1
+          },
+          "rangeYards": {
+            "short": 10,
+            "medium": 20,
+            "long": 30
+          },
+          "note": "Printed as 'Hammer' on Table 45; the weapons table lists 'Warhammer'. Not linked automatically: confirm."
+        },
+        {
+          "id": "handAxe",
+          "label": "Hand axe",
+          "weaponId": "handOrThrowingAxe",
+          "ammunitionId": null,
+          "rof": {
+            "text": "1",
+            "shots": 1,
+            "rounds": 1
+          },
+          "rangeYards": {
+            "short": 10,
+            "medium": 20,
+            "long": 30
+          }
+        },
+        {
+          "id": "harpoon",
+          "label": "Harpoon",
+          "weaponId": "harpoon",
+          "ammunitionId": null,
+          "rof": {
+            "text": "1",
+            "shots": 1,
+            "rounds": 1
+          },
+          "rangeYards": {
+            "short": 10,
+            "medium": 20,
+            "long": 30
+          }
+        },
+        {
+          "id": "javelin",
+          "label": "Javelin",
+          "weaponId": "javelin",
+          "ammunitionId": null,
+          "rof": {
+            "text": "1",
+            "shots": 1,
+            "rounds": 1
+          },
+          "rangeYards": {
+            "short": 20,
+            "medium": 40,
+            "long": 60
+          }
+        },
+        {
+          "id": "knife",
+          "label": "Knife",
+          "weaponId": "knife",
+          "ammunitionId": null,
+          "rof": {
+            "text": "2/1",
+            "shots": 2,
+            "rounds": 1
+          },
+          "rangeYards": {
+            "short": 10,
+            "medium": 20,
+            "long": 30
+          }
+        },
+        {
+          "id": "slingBullet",
+          "label": "Sling bullet",
+          "weaponId": "sling",
+          "ammunitionId": "slingBullet",
+          "rof": {
+            "text": "1",
+            "shots": 1,
+            "rounds": 1
+          },
+          "rangeYards": {
+            "short": 50,
+            "medium": 100,
+            "long": 200
+          }
+        },
+        {
+          "id": "slingStone",
+          "label": "Sling stone",
+          "weaponId": "sling",
+          "ammunitionId": "slingStone",
+          "rof": {
+            "text": "1",
+            "shots": 1,
+            "rounds": 1
+          },
+          "rangeYards": {
+            "short": 40,
+            "medium": 80,
+            "long": 160
+          }
+        },
+        {
+          "id": "spear",
+          "label": "Spear",
+          "weaponId": "spear",
+          "ammunitionId": null,
+          "rof": {
+            "text": "1",
+            "shots": 1,
+            "rounds": 1
+          },
+          "rangeYards": {
+            "short": 10,
+            "medium": 20,
+            "long": 30
+          }
+        },
+        {
+          "id": "staffSlingBullet",
+          "label": "Staff sling bullet",
+          "weaponId": "staffSling",
+          "ammunitionId": "slingBullet",
+          "rof": {
+            "text": "2/1",
+            "shots": 2,
+            "rounds": 1
+          },
+          "rangeYards": {
+            "short": null,
+            "medium": {
+              "min": 30,
+              "max": 60
+            },
+            "long": 90
+          }
+        },
+        {
+          "id": "staffSlingStone",
+          "label": "Staff sling stone",
+          "weaponId": "staffSling",
+          "ammunitionId": "slingStone",
+          "rof": {
+            "text": "2/1",
+            "shots": 2,
+            "rounds": 1
+          },
+          "rangeYards": {
+            "short": null,
+            "medium": {
+              "min": 30,
+              "max": 60
+            },
+            "long": 90
+          }
+        }
+      ]
+    },
+    "stillNeeded": [
+      "Weapon proficiency groups and related-weapon lists (not on these tables).",
+      "Rate of melee attacks and any class-specific weapon restrictions (house.json / classes in rules-core.json).",
+      "Rules for the optional Weapon Type vs. Armor table, if you want it in the app."
+    ],
+    "proofreadingNote": "Transcribed from images by Claude. Please spot-check against your book."
+  },
+  "armour": {
+    "status": "cost, weight and Armour Class (Table 46); movement effects and shield details still needed",
+    "source": "PHB armour table, cost and weight columns (image supplied by owner)",
+    "typeNotes": {
+      "body": "Worn body armour.",
+      "helmet": "Helmets are listed under a 'Helmet' heading with two types.",
+      "shield": "Shields are listed under a 'Shield' heading with four types."
+    },
+    "fields": {
+      "cost": "{amount, coin, costInCp} or a range {min, max, coin, ...} (Full plate)",
+      "weightLbs": "pounds",
+      "armourClass": "null until entered from the PHB (not on this table)",
+      "movementEffect": "null until entered from the PHB (not on this table)"
+    },
+    "stillNeeded": [
+      "Individual shield AC benefits (the 'Shields' section) and what a shield does against missiles.",
+      "Any movement or other restrictions the PHB lists.",
+      "The footnote for the asterisk on the table heading ('Armor *'): not visible in the image supplied.",
+      "Brigandine + shield: not listed on Table 46."
+    ],
+    "items": [
+      {
+        "id": "bandedMail",
+        "name": "Banded mail",
+        "type": "body",
+        "cost": {
+          "amount": 200,
+          "coin": "gp",
+          "costInCp": 20000
+        },
+        "weightLbs": 35,
+        "armourClass": 4,
+        "movementEffect": null,
+        "armourClassWithShield": 3
+      },
+      {
+        "id": "brigandine",
+        "name": "Brigandine",
+        "type": "body",
+        "cost": {
+          "amount": 120,
+          "coin": "gp",
+          "costInCp": 12000
+        },
+        "weightLbs": 35,
+        "armourClass": 6,
+        "movementEffect": null,
+        "armourClassWithShield": null,
+        "armourClassWithShieldNote": "Not listed on Table 46. By the pattern of the other armours it would be 5 (one better). Confirm."
+      },
+      {
+        "id": "bronzePlateMail",
+        "name": "Bronze plate mail",
+        "type": "body",
+        "cost": {
+          "amount": 400,
+          "coin": "gp",
+          "costInCp": 40000
+        },
+        "weightLbs": 45,
+        "armourClass": 4,
+        "movementEffect": null,
+        "armourClassWithShield": 3
+      },
+      {
+        "id": "chainMail",
+        "name": "Chain mail",
+        "type": "body",
+        "cost": {
+          "amount": 75,
+          "coin": "gp",
+          "costInCp": 7500
+        },
+        "weightLbs": 40,
+        "armourClass": 5,
+        "movementEffect": null,
+        "armourClassWithShield": 4
+      },
+      {
+        "id": "fieldPlate",
+        "name": "Field plate",
+        "type": "body",
+        "cost": {
+          "amount": 2000,
+          "coin": "gp",
+          "costInCp": 200000
+        },
+        "weightLbs": 60,
+        "armourClass": 2,
+        "movementEffect": null,
+        "armourClassWithShield": 1
+      },
+      {
+        "id": "fullPlate",
+        "name": "Full plate",
+        "type": "body",
+        "cost": {
+          "min": 4000,
+          "max": 10000,
+          "coin": "gp",
+          "costInCpMin": 400000,
+          "costInCpMax": 1000000
+        },
+        "weightLbs": 70,
+        "armourClass": 1,
+        "movementEffect": null,
+        "armourClassWithShield": 0
+      },
+      {
+        "id": "helmetGreatHelm",
+        "name": "Helmet, Great helm",
+        "type": "helmet",
+        "parent": "Helmet",
+        "cost": {
+          "amount": 30,
+          "coin": "gp",
+          "costInCp": 3000
+        },
+        "weightLbs": 10,
+        "armourClass": null,
+        "movementEffect": null
+      },
+      {
+        "id": "helmetBasinet",
+        "name": "Helmet, Basinet",
+        "type": "helmet",
+        "parent": "Helmet",
+        "cost": {
+          "amount": 8,
+          "coin": "gp",
+          "costInCp": 800
+        },
+        "weightLbs": 5,
+        "armourClass": null,
+        "movementEffect": null
+      },
+      {
+        "id": "hide",
+        "name": "Hide",
+        "type": "body",
+        "cost": {
+          "amount": 15,
+          "coin": "gp",
+          "costInCp": 1500
+        },
+        "weightLbs": 30,
+        "armourClass": 6,
+        "movementEffect": null,
+        "armourClassWithShield": 5
+      },
+      {
+        "id": "leather",
+        "name": "Leather",
+        "type": "body",
+        "cost": {
+          "amount": 5,
+          "coin": "gp",
+          "costInCp": 500
+        },
+        "weightLbs": 15,
+        "armourClass": 8,
+        "movementEffect": null,
+        "armourClassWithShield": 7
+      },
+      {
+        "id": "padded",
+        "name": "Padded",
+        "type": "body",
+        "cost": {
+          "amount": 4,
+          "coin": "gp",
+          "costInCp": 400
+        },
+        "weightLbs": 10,
+        "armourClass": 8,
+        "movementEffect": null,
+        "armourClassWithShield": 7
+      },
+      {
+        "id": "plateMail",
+        "name": "Plate mail",
+        "type": "body",
+        "cost": {
+          "amount": 600,
+          "coin": "gp",
+          "costInCp": 60000
+        },
+        "weightLbs": 50,
+        "armourClass": 3,
+        "movementEffect": null,
+        "armourClassWithShield": 2
+      },
+      {
+        "id": "ringMail",
+        "name": "Ring mail",
+        "type": "body",
+        "cost": {
+          "amount": 100,
+          "coin": "gp",
+          "costInCp": 10000
+        },
+        "weightLbs": 30,
+        "armourClass": 7,
+        "movementEffect": null,
+        "armourClassWithShield": 6
+      },
+      {
+        "id": "scaleMail",
+        "name": "Scale mail",
+        "type": "body",
+        "cost": {
+          "amount": 120,
+          "coin": "gp",
+          "costInCp": 12000
+        },
+        "weightLbs": 40,
+        "armourClass": 6,
+        "movementEffect": null,
+        "armourClassWithShield": 5
+      },
+      {
+        "id": "shieldBody",
+        "name": "Shield, Body",
+        "type": "shield",
+        "parent": "Shield",
+        "cost": {
+          "amount": 10,
+          "coin": "gp",
+          "costInCp": 1000
+        },
+        "weightLbs": 15,
+        "armourClass": null,
+        "movementEffect": null
+      },
+      {
+        "id": "shieldBuckler",
+        "name": "Shield, Buckler",
+        "type": "shield",
+        "parent": "Shield",
+        "cost": {
+          "amount": 1,
+          "coin": "gp",
+          "costInCp": 100
+        },
+        "weightLbs": 3,
+        "armourClass": null,
+        "movementEffect": null
+      },
+      {
+        "id": "shieldMedium",
+        "name": "Shield, Medium",
+        "type": "shield",
+        "parent": "Shield",
+        "cost": {
+          "amount": 7,
+          "coin": "gp",
+          "costInCp": 700
+        },
+        "weightLbs": 10,
+        "armourClass": null,
+        "movementEffect": null
+      },
+      {
+        "id": "shieldSmall",
+        "name": "Shield, Small",
+        "type": "shield",
+        "parent": "Shield",
+        "cost": {
+          "amount": 3,
+          "coin": "gp",
+          "costInCp": 300
+        },
+        "weightLbs": 5,
+        "armourClass": null,
+        "movementEffect": null
+      },
+      {
+        "id": "splintMail",
+        "name": "Splint mail",
+        "type": "body",
+        "cost": {
+          "amount": 80,
+          "coin": "gp",
+          "costInCp": 8000
+        },
+        "weightLbs": 40,
+        "armourClass": 4,
+        "movementEffect": null,
+        "armourClassWithShield": 3
+      },
+      {
+        "id": "studdedLeather",
+        "name": "Studded leather",
+        "type": "body",
+        "cost": {
+          "amount": 20,
+          "coin": "gp",
+          "costInCp": 2000
+        },
+        "weightLbs": 25,
+        "armourClass": 7,
+        "movementEffect": null,
+        "armourClassWithShield": 6
+      }
+    ],
+    "proofreadingNote": "Transcribed from an image by Claude. Please spot-check against your book.",
+    "armourClassTable": {
+      "source": "PHB Table 46: Armor Class Ratings (image supplied by owner)",
+      "unarmoured": 10,
+      "shieldOnly": 9,
+      "shieldImprovement": 1,
+      "shieldImprovementNote": "Wearing a shield improves AC by 1 in this table. The table says to see the 'Shields' section for the defensive benefits of the various shield types; that section has not been supplied, so individual shield AC values are still null.",
+      "rows": [
+        {
+          "ac": 10,
+          "description": "None"
+        },
+        {
+          "ac": 9,
+          "description": "Shield only"
+        },
+        {
+          "ac": 8,
+          "description": "Leather or padded armour"
+        },
+        {
+          "ac": 7,
+          "description": "Leather or padded armour + shield, studded leather, or ring mail armour"
+        },
+        {
+          "ac": 6,
+          "description": "Studded leather or ring mail + shield, brigandine, scale mail, or hide armour"
+        },
+        {
+          "ac": 5,
+          "description": "Scale mail or hide + shield, chain mail"
+        },
+        {
+          "ac": 4,
+          "description": "Chain mail + shield, splint mail, banded mail, bronze plate mail"
+        },
+        {
+          "ac": 3,
+          "description": "Splint mail, banded mail, or bronze plate mail + shield, plate mail"
+        },
+        {
+          "ac": 2,
+          "description": "Plate mail + shield, field plate"
+        },
+        {
+          "ac": 1,
+          "description": "Field plate armour + shield, full plate"
+        },
+        {
+          "ac": 0,
+          "description": "Full plate armour + shield"
+        }
+      ]
+    }
+  },
+  "equipment": {
+    "status": "from-PHB-table-44",
+    "source": "PHB Table 44: Equipment (two images supplied by owner)",
+    "categories": [
+      {
+        "id": "clothing",
+        "label": "Clothing"
+      },
+      {
+        "id": "dailyFoodAndLodging",
+        "label": "Daily Food and Lodging"
+      },
+      {
+        "id": "householdProvisioning",
+        "label": "Household Provisioning"
+      },
+      {
+        "id": "transport",
+        "label": "Transport"
+      },
+      {
+        "id": "animals",
+        "label": "Animals"
+      },
+      {
+        "id": "services",
+        "label": "Services"
+      },
+      {
+        "id": "tackAndHarness",
+        "label": "Tack and Harness"
+      },
+      {
+        "id": "miscellaneous",
+        "label": "Miscellaneous Equipment"
+      }
+    ],
+    "categoryNotes": {
+      "transport": "Movement rates for this equipment are given in the DMG."
+    },
+    "weightMarkers": {
+      "*": "Weighs little individually. Ten of these items weigh one pound. Stored as weightLbs 0.1.",
+      "**": "No appreciable weight; not counted for encumbrance unless hundreds are carried. Stored as weightLbs 0."
+    },
+    "weightNotes": [
+      "Only Tack and Harness and Miscellaneous Equipment list weights on Table 44. Clothing, food and lodging, provisioning, transport, animals and services have weightLbs null (no weight printed).",
+      "Items with a range (musical instrument) use costMin/Max style fields: see cost.min/max and weightLbsMin/Max."
+    ],
+    "costFields": "cost is {amount, coin, costInCp} or, for ranges, {min, max, coin, costInCpMin, costInCpMax}. Coin ids match currency.coins in this file. 'unit' says what the price covers (e.g. per lb., per week); items without a unit are priced each.",
+    "items": [
+      {
+        "id": "belt",
+        "name": "Belt",
+        "category": "clothing",
+        "cost": {
+          "amount": 3,
+          "coin": "sp",
+          "costInCp": 30
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "bootsRiding",
+        "name": "Boots, Riding",
+        "category": "clothing",
+        "parent": "Boots",
+        "cost": {
+          "amount": 3,
+          "coin": "gp",
+          "costInCp": 300
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "bootsSoft",
+        "name": "Boots, Soft",
+        "category": "clothing",
+        "parent": "Boots",
+        "cost": {
+          "amount": 1,
+          "coin": "gp",
+          "costInCp": 100
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "breeches",
+        "name": "Breeches",
+        "category": "clothing",
+        "cost": {
+          "amount": 2,
+          "coin": "sp",
+          "costInCp": 20
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "capHat",
+        "name": "Cap, hat",
+        "category": "clothing",
+        "cost": {
+          "amount": 1,
+          "coin": "sp",
+          "costInCp": 10
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "cloakGoodCloth",
+        "name": "Cloak, Good cloth",
+        "category": "clothing",
+        "parent": "Cloak",
+        "cost": {
+          "amount": 8,
+          "coin": "sp",
+          "costInCp": 80
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "cloakFineFur",
+        "name": "Cloak, Fine fur",
+        "category": "clothing",
+        "parent": "Cloak",
+        "cost": {
+          "amount": 50,
+          "coin": "gp",
+          "costInCp": 5000
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "girdle",
+        "name": "Girdle",
+        "category": "clothing",
+        "cost": {
+          "amount": 3,
+          "coin": "gp",
+          "costInCp": 300
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "gloves",
+        "name": "Gloves",
+        "category": "clothing",
+        "cost": {
+          "amount": 1,
+          "coin": "sp",
+          "costInCp": 10
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "gownCommon",
+        "name": "Gown, common",
+        "category": "clothing",
+        "cost": {
+          "amount": 12,
+          "coin": "sp",
+          "costInCp": 120
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "hose",
+        "name": "Hose",
+        "category": "clothing",
+        "cost": {
+          "amount": 2,
+          "coin": "sp",
+          "costInCp": 20
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "knifeSheath",
+        "name": "Knife sheath",
+        "category": "clothing",
+        "cost": {
+          "amount": 3,
+          "coin": "cp",
+          "costInCp": 3
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "mittens",
+        "name": "Mittens",
+        "category": "clothing",
+        "cost": {
+          "amount": 3,
+          "coin": "sp",
+          "costInCp": 30
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "pin",
+        "name": "Pin",
+        "category": "clothing",
+        "cost": {
+          "amount": 6,
+          "coin": "gp",
+          "costInCp": 600
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "plainBrooch",
+        "name": "Plain brooch",
+        "category": "clothing",
+        "cost": {
+          "amount": 10,
+          "coin": "gp",
+          "costInCp": 1000
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "robeCommon",
+        "name": "Robe, Common",
+        "category": "clothing",
+        "parent": "Robe",
+        "cost": {
+          "amount": 9,
+          "coin": "sp",
+          "costInCp": 90
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "robeEmbroidered",
+        "name": "Robe, Embroidered",
+        "category": "clothing",
+        "parent": "Robe",
+        "cost": {
+          "amount": 20,
+          "coin": "gp",
+          "costInCp": 2000
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "sandals",
+        "name": "Sandals",
+        "category": "clothing",
+        "cost": {
+          "amount": 5,
+          "coin": "cp",
+          "costInCp": 5
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "sash",
+        "name": "Sash",
+        "category": "clothing",
+        "cost": {
+          "amount": 2,
+          "coin": "sp",
+          "costInCp": 20
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "shoes",
+        "name": "Shoes",
+        "category": "clothing",
+        "cost": {
+          "amount": 1,
+          "coin": "gp",
+          "costInCp": 100
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "silkJacket",
+        "name": "Silk jacket",
+        "category": "clothing",
+        "cost": {
+          "amount": 80,
+          "coin": "gp",
+          "costInCp": 8000
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "surcoat",
+        "name": "Surcoat",
+        "category": "clothing",
+        "cost": {
+          "amount": 6,
+          "coin": "sp",
+          "costInCp": 60
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "swordScabbardHangerBaldric",
+        "name": "Sword scabbard, hanger, baldric",
+        "category": "clothing",
+        "cost": {
+          "amount": 4,
+          "coin": "gp",
+          "costInCp": 400
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "tabard",
+        "name": "Tabard",
+        "category": "clothing",
+        "cost": {
+          "amount": 6,
+          "coin": "sp",
+          "costInCp": 60
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "togaCoarse",
+        "name": "Toga, coarse",
+        "category": "clothing",
+        "cost": {
+          "amount": 8,
+          "coin": "cp",
+          "costInCp": 8
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "tunic",
+        "name": "Tunic",
+        "category": "clothing",
+        "cost": {
+          "amount": 8,
+          "coin": "sp",
+          "costInCp": 80
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "vest",
+        "name": "Vest",
+        "category": "clothing",
+        "cost": {
+          "amount": 6,
+          "coin": "sp",
+          "costInCp": 60
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "alePerGallon",
+        "name": "Ale",
+        "category": "dailyFoodAndLodging",
+        "unit": "per gallon",
+        "cost": {
+          "amount": 2,
+          "coin": "sp",
+          "costInCp": 20
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "banquetPerPerson",
+        "name": "Banquet",
+        "category": "dailyFoodAndLodging",
+        "unit": "per person",
+        "cost": {
+          "amount": 10,
+          "coin": "gp",
+          "costInCp": 1000
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "bread",
+        "name": "Bread",
+        "category": "dailyFoodAndLodging",
+        "cost": {
+          "amount": 5,
+          "coin": "cp",
+          "costInCp": 5
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "cheese",
+        "name": "Cheese",
+        "category": "dailyFoodAndLodging",
+        "cost": {
+          "amount": 4,
+          "coin": "sp",
+          "costInCp": 40
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "cityRoomsCommonPerMonth",
+        "name": "City rooms, Common",
+        "category": "dailyFoodAndLodging",
+        "parent": "City rooms",
+        "unit": "per month",
+        "cost": {
+          "amount": 20,
+          "coin": "gp",
+          "costInCp": 2000
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "cityRoomsPoorPerMonth",
+        "name": "City rooms, Poor",
+        "category": "dailyFoodAndLodging",
+        "parent": "City rooms",
+        "unit": "per month",
+        "cost": {
+          "amount": 6,
+          "coin": "sp",
+          "costInCp": 60
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "commonWinePerPitcher",
+        "name": "Common wine",
+        "category": "dailyFoodAndLodging",
+        "unit": "per pitcher",
+        "cost": {
+          "amount": 2,
+          "coin": "sp",
+          "costInCp": 20
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "eggOrFreshVegetables",
+        "name": "Egg or fresh vegetables",
+        "category": "dailyFoodAndLodging",
+        "cost": {
+          "amount": 1,
+          "coin": "cp",
+          "costInCp": 1
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "grainAndStablingForHorsePerDay",
+        "name": "Grain and stabling for horse",
+        "category": "dailyFoodAndLodging",
+        "unit": "per day",
+        "cost": {
+          "amount": 5,
+          "coin": "sp",
+          "costInCp": 50
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "honey",
+        "name": "Honey",
+        "category": "dailyFoodAndLodging",
+        "cost": {
+          "amount": 5,
+          "coin": "sp",
+          "costInCp": 50
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "innLodgingCommonPerDay",
+        "name": "Inn lodging, Common",
+        "category": "dailyFoodAndLodging",
+        "parent": "Inn lodging",
+        "unit": "per day",
+        "cost": {
+          "amount": 5,
+          "coin": "sp",
+          "costInCp": 50
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "innLodgingCommonPerWeek",
+        "name": "Inn lodging, Common",
+        "category": "dailyFoodAndLodging",
+        "parent": "Inn lodging",
+        "unit": "per week",
+        "cost": {
+          "amount": 3,
+          "coin": "gp",
+          "costInCp": 300
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "innLodgingPoorPerDay",
+        "name": "Inn lodging, Poor",
+        "category": "dailyFoodAndLodging",
+        "parent": "Inn lodging",
+        "unit": "per day",
+        "cost": {
+          "amount": 5,
+          "coin": "cp",
+          "costInCp": 5
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "innLodgingPoorPerWeek",
+        "name": "Inn lodging, Poor",
+        "category": "dailyFoodAndLodging",
+        "parent": "Inn lodging",
+        "unit": "per week",
+        "cost": {
+          "amount": 2,
+          "coin": "sp",
+          "costInCp": 20
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "meatForOneMeal",
+        "name": "Meat for one meal",
+        "category": "dailyFoodAndLodging",
+        "cost": {
+          "amount": 1,
+          "coin": "sp",
+          "costInCp": 10
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "mealsGoodPerDay",
+        "name": "Meals, Good",
+        "category": "dailyFoodAndLodging",
+        "parent": "Meals",
+        "unit": "per day",
+        "cost": {
+          "amount": 5,
+          "coin": "sp",
+          "costInCp": 50
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "mealsCommonPerDay",
+        "name": "Meals, Common",
+        "category": "dailyFoodAndLodging",
+        "parent": "Meals",
+        "unit": "per day",
+        "cost": {
+          "amount": 3,
+          "coin": "sp",
+          "costInCp": 30
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "mealsPoorPerDay",
+        "name": "Meals, Poor",
+        "category": "dailyFoodAndLodging",
+        "parent": "Meals",
+        "unit": "per day",
+        "cost": {
+          "amount": 1,
+          "coin": "sp",
+          "costInCp": 10
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "separateLatrineForRoomsPerMonth",
+        "name": "Separate latrine for rooms",
+        "category": "dailyFoodAndLodging",
+        "unit": "per month",
+        "cost": {
+          "amount": 2,
+          "coin": "gp",
+          "costInCp": 200
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "smallBeerPerGallon",
+        "name": "Small beer",
+        "category": "dailyFoodAndLodging",
+        "unit": "per gallon",
+        "cost": {
+          "amount": 5,
+          "coin": "cp",
+          "costInCp": 5
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "soup",
+        "name": "Soup",
+        "category": "dailyFoodAndLodging",
+        "cost": {
+          "amount": 5,
+          "coin": "cp",
+          "costInCp": 5
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "barrelOfPickledFish",
+        "name": "Barrel of pickled fish",
+        "category": "householdProvisioning",
+        "cost": {
+          "amount": 3,
+          "coin": "gp",
+          "costInCp": 300
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "butterPerLb",
+        "name": "Butter",
+        "category": "householdProvisioning",
+        "unit": "per lb.",
+        "cost": {
+          "amount": 2,
+          "coin": "sp",
+          "costInCp": 20
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "coarseSugarPerLb",
+        "name": "Coarse sugar",
+        "category": "householdProvisioning",
+        "unit": "per lb.",
+        "cost": {
+          "amount": 1,
+          "coin": "gp",
+          "costInCp": 100
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "dryRationsPerWeek",
+        "name": "Dry rations",
+        "category": "householdProvisioning",
+        "unit": "per week",
+        "cost": {
+          "amount": 10,
+          "coin": "gp",
+          "costInCp": 1000
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "eggsPer100",
+        "name": "Eggs",
+        "category": "householdProvisioning",
+        "unit": "per 100",
+        "cost": {
+          "amount": 8,
+          "coin": "sp",
+          "costInCp": 80
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "eggsPerTwoDozen",
+        "name": "Eggs",
+        "category": "householdProvisioning",
+        "unit": "per two dozen",
+        "cost": {
+          "amount": 2,
+          "coin": "sp",
+          "costInCp": 20
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "figsPerLb",
+        "name": "Figs",
+        "category": "householdProvisioning",
+        "unit": "per lb.",
+        "cost": {
+          "amount": 3,
+          "coin": "sp",
+          "costInCp": 30
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "firewoodPerDay",
+        "name": "Firewood",
+        "category": "householdProvisioning",
+        "unit": "per day",
+        "cost": {
+          "amount": 1,
+          "coin": "cp",
+          "costInCp": 1
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "herbsPerLb",
+        "name": "Herbs",
+        "category": "householdProvisioning",
+        "unit": "per lb.",
+        "cost": {
+          "amount": 5,
+          "coin": "cp",
+          "costInCp": 5
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "nutsPerLb",
+        "name": "Nuts",
+        "category": "householdProvisioning",
+        "unit": "per lb.",
+        "cost": {
+          "amount": 1,
+          "coin": "gp",
+          "costInCp": 100
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "raisinsPerLb",
+        "name": "Raisins",
+        "category": "householdProvisioning",
+        "unit": "per lb.",
+        "cost": {
+          "amount": 2,
+          "coin": "sp",
+          "costInCp": 20
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "rationsStandardPerWeek",
+        "name": "Rations, standard",
+        "category": "householdProvisioning",
+        "unit": "per week",
+        "cost": {
+          "amount": 3,
+          "coin": "gp",
+          "costInCp": 300
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "rationsIronPerWeek",
+        "name": "Rations, iron",
+        "category": "householdProvisioning",
+        "unit": "per week",
+        "cost": {
+          "amount": 5,
+          "coin": "gp",
+          "costInCp": 500
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "ricePerLb",
+        "name": "Rice",
+        "category": "householdProvisioning",
+        "unit": "per lb.",
+        "cost": {
+          "amount": 2,
+          "coin": "sp",
+          "costInCp": 20
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "saltPerLb",
+        "name": "Salt",
+        "category": "householdProvisioning",
+        "unit": "per lb.",
+        "cost": {
+          "amount": 1,
+          "coin": "sp",
+          "costInCp": 10
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "saltedHerringPer100",
+        "name": "Salted herring",
+        "category": "householdProvisioning",
+        "unit": "per 100",
+        "cost": {
+          "amount": 1,
+          "coin": "gp",
+          "costInCp": 100
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "spiceExoticSaffronClovePerLb",
+        "name": "Spice, Exotic (saffron, clove)",
+        "category": "householdProvisioning",
+        "parent": "Spice",
+        "unit": "per lb.",
+        "cost": {
+          "amount": 15,
+          "coin": "gp",
+          "costInCp": 1500
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "spiceRarePepperGingerPerLb",
+        "name": "Spice, Rare (pepper, ginger)",
+        "category": "householdProvisioning",
+        "parent": "Spice",
+        "unit": "per lb.",
+        "cost": {
+          "amount": 2,
+          "coin": "gp",
+          "costInCp": 200
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "spiceUncommonCinnamonPerLb",
+        "name": "Spice, Uncommon (cinnamon)",
+        "category": "householdProvisioning",
+        "parent": "Spice",
+        "unit": "per lb.",
+        "cost": {
+          "amount": 1,
+          "coin": "gp",
+          "costInCp": 100
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "tunOfCider250Gal",
+        "name": "Tun of cider",
+        "category": "householdProvisioning",
+        "unit": "250 gal.",
+        "cost": {
+          "amount": 8,
+          "coin": "gp",
+          "costInCp": 800
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "tunOfGoodWine250Gal",
+        "name": "Tun of good wine",
+        "category": "householdProvisioning",
+        "unit": "250 gal.",
+        "cost": {
+          "amount": 20,
+          "coin": "gp",
+          "costInCp": 2000
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "barge",
+        "name": "Barge",
+        "category": "transport",
+        "cost": {
+          "amount": 500,
+          "coin": "gp",
+          "costInCp": 50000
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "canoeSmall",
+        "name": "Canoe, Small",
+        "category": "transport",
+        "parent": "Canoe",
+        "cost": {
+          "amount": 30,
+          "coin": "gp",
+          "costInCp": 3000
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "canoeWar",
+        "name": "Canoe, War",
+        "category": "transport",
+        "parent": "Canoe",
+        "cost": {
+          "amount": 50,
+          "coin": "gp",
+          "costInCp": 5000
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "caravel",
+        "name": "Caravel",
+        "category": "transport",
+        "cost": {
+          "amount": 10000,
+          "coin": "gp",
+          "costInCp": 1000000
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "carriageCommon",
+        "name": "Carriage, Common",
+        "category": "transport",
+        "parent": "Carriage",
+        "cost": {
+          "amount": 150,
+          "coin": "gp",
+          "costInCp": 15000
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "carriageCoachOrnamented",
+        "name": "Carriage, Coach, ornamented",
+        "category": "transport",
+        "parent": "Carriage",
+        "cost": {
+          "amount": 7000,
+          "coin": "gp",
+          "costInCp": 700000
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "chariotRiding",
+        "name": "Chariot, Riding",
+        "category": "transport",
+        "parent": "Chariot",
+        "cost": {
+          "amount": 200,
+          "coin": "gp",
+          "costInCp": 20000
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "chariotWar",
+        "name": "Chariot, War",
+        "category": "transport",
+        "parent": "Chariot",
+        "cost": {
+          "amount": 500,
+          "coin": "gp",
+          "costInCp": 50000
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "coaster",
+        "name": "Coaster",
+        "category": "transport",
+        "cost": {
+          "amount": 5000,
+          "coin": "gp",
+          "costInCp": 500000
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "cog",
+        "name": "Cog",
+        "category": "transport",
+        "cost": {
+          "amount": 10000,
+          "coin": "gp",
+          "costInCp": 1000000
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "curragh",
+        "name": "Curragh",
+        "category": "transport",
+        "cost": {
+          "amount": 500,
+          "coin": "gp",
+          "costInCp": 50000
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "drakkar",
+        "name": "Drakkar",
+        "category": "transport",
+        "cost": {
+          "amount": 25000,
+          "coin": "gp",
+          "costInCp": 2500000
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "dromond",
+        "name": "Dromond",
+        "category": "transport",
+        "cost": {
+          "amount": 15000,
+          "coin": "gp",
+          "costInCp": 1500000
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "galleon",
+        "name": "Galleon",
+        "category": "transport",
+        "cost": {
+          "amount": 50000,
+          "coin": "gp",
+          "costInCp": 5000000
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "greatGalley",
+        "name": "Great galley",
+        "category": "transport",
+        "cost": {
+          "amount": 30000,
+          "coin": "gp",
+          "costInCp": 3000000
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "knarr",
+        "name": "Knarr",
+        "category": "transport",
+        "cost": {
+          "amount": 3000,
+          "coin": "gp",
+          "costInCp": 300000
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "longship",
+        "name": "Longship",
+        "category": "transport",
+        "cost": {
+          "amount": 10000,
+          "coin": "gp",
+          "costInCp": 1000000
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "oarCommon",
+        "name": "Oar, Common",
+        "category": "transport",
+        "parent": "Oar",
+        "cost": {
+          "amount": 2,
+          "coin": "gp",
+          "costInCp": 200
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "oarGalley",
+        "name": "Oar, Galley",
+        "category": "transport",
+        "parent": "Oar",
+        "cost": {
+          "amount": 10,
+          "coin": "gp",
+          "costInCp": 1000
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "raftOrSmallKeelboat",
+        "name": "Raft or small keelboat",
+        "category": "transport",
+        "cost": {
+          "amount": 100,
+          "coin": "gp",
+          "costInCp": 10000
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "sail",
+        "name": "Sail",
+        "category": "transport",
+        "cost": {
+          "amount": 20,
+          "coin": "gp",
+          "costInCp": 2000
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "sedanChair",
+        "name": "Sedan chair",
+        "category": "transport",
+        "cost": {
+          "amount": 100,
+          "coin": "gp",
+          "costInCp": 10000
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "wagonOrCartWheel",
+        "name": "Wagon or cart wheel",
+        "category": "transport",
+        "cost": {
+          "amount": 5,
+          "coin": "gp",
+          "costInCp": 500
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "boar",
+        "name": "Boar",
+        "category": "animals",
+        "cost": {
+          "amount": 10,
+          "coin": "gp",
+          "costInCp": 1000
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "bull",
+        "name": "Bull",
+        "category": "animals",
+        "cost": {
+          "amount": 20,
+          "coin": "gp",
+          "costInCp": 2000
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "calf",
+        "name": "Calf",
+        "category": "animals",
+        "cost": {
+          "amount": 5,
+          "coin": "gp",
+          "costInCp": 500
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "camel",
+        "name": "Camel",
+        "category": "animals",
+        "cost": {
+          "amount": 50,
+          "coin": "gp",
+          "costInCp": 5000
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "capon",
+        "name": "Capon",
+        "category": "animals",
+        "cost": {
+          "amount": 3,
+          "coin": "cp",
+          "costInCp": 3
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "cat",
+        "name": "Cat",
+        "category": "animals",
+        "cost": {
+          "amount": 1,
+          "coin": "sp",
+          "costInCp": 10
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "chicken",
+        "name": "Chicken",
+        "category": "animals",
+        "cost": {
+          "amount": 2,
+          "coin": "cp",
+          "costInCp": 2
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "cow",
+        "name": "Cow",
+        "category": "animals",
+        "cost": {
+          "amount": 10,
+          "coin": "gp",
+          "costInCp": 1000
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "dogGuard",
+        "name": "Dog, Guard",
+        "category": "animals",
+        "parent": "Dog",
+        "cost": {
+          "amount": 25,
+          "coin": "gp",
+          "costInCp": 2500
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "dogHunting",
+        "name": "Dog, Hunting",
+        "category": "animals",
+        "parent": "Dog",
+        "cost": {
+          "amount": 17,
+          "coin": "gp",
+          "costInCp": 1700
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "dogWar",
+        "name": "Dog, War",
+        "category": "animals",
+        "parent": "Dog",
+        "cost": {
+          "amount": 20,
+          "coin": "gp",
+          "costInCp": 2000
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "donkeyMuleOrAss",
+        "name": "Donkey, mule, or ass",
+        "category": "animals",
+        "cost": {
+          "amount": 8,
+          "coin": "gp",
+          "costInCp": 800
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "elephantLabor",
+        "name": "Elephant, Labor",
+        "category": "animals",
+        "parent": "Elephant",
+        "cost": {
+          "amount": 200,
+          "coin": "gp",
+          "costInCp": 20000
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "elephantWar",
+        "name": "Elephant, War",
+        "category": "animals",
+        "parent": "Elephant",
+        "cost": {
+          "amount": 500,
+          "coin": "gp",
+          "costInCp": 50000
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "falconTrained",
+        "name": "Falcon (trained)",
+        "category": "animals",
+        "cost": {
+          "amount": 1000,
+          "coin": "gp",
+          "costInCp": 100000
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "goat",
+        "name": "Goat",
+        "category": "animals",
+        "cost": {
+          "amount": 1,
+          "coin": "gp",
+          "costInCp": 100
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "goose",
+        "name": "Goose",
+        "category": "animals",
+        "cost": {
+          "amount": 5,
+          "coin": "cp",
+          "costInCp": 5
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "guineaHen",
+        "name": "Guinea hen",
+        "category": "animals",
+        "cost": {
+          "amount": 2,
+          "coin": "cp",
+          "costInCp": 2
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "horseDraft",
+        "name": "Horse, Draft",
+        "category": "animals",
+        "parent": "Horse",
+        "cost": {
+          "amount": 200,
+          "coin": "gp",
+          "costInCp": 20000
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "horseHeavyWar",
+        "name": "Horse, Heavy war",
+        "category": "animals",
+        "parent": "Horse",
+        "cost": {
+          "amount": 400,
+          "coin": "gp",
+          "costInCp": 40000
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "horseLightWar",
+        "name": "Horse, Light war",
+        "category": "animals",
+        "parent": "Horse",
+        "cost": {
+          "amount": 150,
+          "coin": "gp",
+          "costInCp": 15000
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "horseMediumWar",
+        "name": "Horse, Medium war",
+        "category": "animals",
+        "parent": "Horse",
+        "cost": {
+          "amount": 225,
+          "coin": "gp",
+          "costInCp": 22500
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "horseRiding",
+        "name": "Horse, Riding",
+        "category": "animals",
+        "parent": "Horse",
+        "cost": {
+          "amount": 75,
+          "coin": "gp",
+          "costInCp": 7500
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "huntingCatJaguarEtc",
+        "name": "Hunting cat (jaguar, etc.)",
+        "category": "animals",
+        "cost": {
+          "amount": 5000,
+          "coin": "gp",
+          "costInCp": 500000
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "ox",
+        "name": "Ox",
+        "category": "animals",
+        "cost": {
+          "amount": 15,
+          "coin": "gp",
+          "costInCp": 1500
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "partridge",
+        "name": "Partridge",
+        "category": "animals",
+        "cost": {
+          "amount": 5,
+          "coin": "cp",
+          "costInCp": 5
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "peacock",
+        "name": "Peacock",
+        "category": "animals",
+        "cost": {
+          "amount": 5,
+          "coin": "sp",
+          "costInCp": 50
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "pig",
+        "name": "Pig",
+        "category": "animals",
+        "cost": {
+          "amount": 3,
+          "coin": "gp",
+          "costInCp": 300
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "pigeon",
+        "name": "Pigeon",
+        "category": "animals",
+        "cost": {
+          "amount": 1,
+          "coin": "cp",
+          "costInCp": 1
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "pigeonHoming",
+        "name": "Pigeon, homing",
+        "category": "animals",
+        "cost": {
+          "amount": 100,
+          "coin": "gp",
+          "costInCp": 10000
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "pony",
+        "name": "Pony",
+        "category": "animals",
+        "cost": {
+          "amount": 30,
+          "coin": "gp",
+          "costInCp": 3000
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "ram",
+        "name": "Ram",
+        "category": "animals",
+        "cost": {
+          "amount": 4,
+          "coin": "gp",
+          "costInCp": 400
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "sheep",
+        "name": "Sheep",
+        "category": "animals",
+        "cost": {
+          "amount": 2,
+          "coin": "gp",
+          "costInCp": 200
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "songbird",
+        "name": "Songbird",
+        "category": "animals",
+        "cost": {
+          "amount": 10,
+          "coin": "sp",
+          "costInCp": 100
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "swan",
+        "name": "Swan",
+        "category": "animals",
+        "cost": {
+          "amount": 5,
+          "coin": "sp",
+          "costInCp": 50
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "bath",
+        "name": "Bath",
+        "category": "services",
+        "cost": {
+          "amount": 3,
+          "coin": "cp",
+          "costInCp": 3
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "clerkPerLetter",
+        "name": "Clerk",
+        "category": "services",
+        "unit": "per letter",
+        "cost": {
+          "amount": 2,
+          "coin": "sp",
+          "costInCp": 20
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "doctorLeechOrBleeding",
+        "name": "Doctor, leech, or bleeding",
+        "category": "services",
+        "cost": {
+          "amount": 3,
+          "coin": "gp",
+          "costInCp": 300
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "guideInCityPerDay",
+        "name": "Guide, in city",
+        "category": "services",
+        "unit": "per day",
+        "cost": {
+          "amount": 2,
+          "coin": "sp",
+          "costInCp": 20
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "lanternOrTorchbearerPerNight",
+        "name": "Lantern or torchbearer",
+        "category": "services",
+        "unit": "per night",
+        "cost": {
+          "amount": 1,
+          "coin": "sp",
+          "costInCp": 10
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "laundryByLoad",
+        "name": "Laundry",
+        "category": "services",
+        "unit": "by load",
+        "cost": {
+          "amount": 1,
+          "coin": "cp",
+          "costInCp": 1
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "messengerInCityPerMessage",
+        "name": "Messenger, in city",
+        "category": "services",
+        "unit": "per message",
+        "cost": {
+          "amount": 1,
+          "coin": "sp",
+          "costInCp": 10
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "minstrelPerPerformance",
+        "name": "Minstrel",
+        "category": "services",
+        "unit": "per performance",
+        "cost": {
+          "amount": 3,
+          "coin": "gp",
+          "costInCp": 300
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "mournerPerFuneral",
+        "name": "Mourner",
+        "category": "services",
+        "unit": "per funeral",
+        "cost": {
+          "amount": 2,
+          "coin": "sp",
+          "costInCp": 20
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "teamsterWWagonPerMile",
+        "name": "Teamster w/wagon",
+        "category": "services",
+        "unit": "per mile",
+        "cost": {
+          "amount": 1,
+          "coin": "sp",
+          "costInCp": 10
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "bardingChain",
+        "name": "Barding, Chain",
+        "category": "tackAndHarness",
+        "parent": "Barding",
+        "cost": {
+          "amount": 500,
+          "coin": "gp",
+          "costInCp": 50000
+        },
+        "weightLbs": 70
+      },
+      {
+        "id": "bardingFullPlate",
+        "name": "Barding, Full plate",
+        "category": "tackAndHarness",
+        "parent": "Barding",
+        "cost": {
+          "amount": 2000,
+          "coin": "gp",
+          "costInCp": 200000
+        },
+        "weightLbs": 85
+      },
+      {
+        "id": "bardingFullScale",
+        "name": "Barding, Full scale",
+        "category": "tackAndHarness",
+        "parent": "Barding",
+        "cost": {
+          "amount": 1000,
+          "coin": "gp",
+          "costInCp": 100000
+        },
+        "weightLbs": 75
+      },
+      {
+        "id": "bardingHalfBrigandine",
+        "name": "Barding, Half brigandine",
+        "category": "tackAndHarness",
+        "parent": "Barding",
+        "cost": {
+          "amount": 500,
+          "coin": "gp",
+          "costInCp": 50000
+        },
+        "weightLbs": 45
+      },
+      {
+        "id": "bardingHalfPadded",
+        "name": "Barding, Half padded",
+        "category": "tackAndHarness",
+        "parent": "Barding",
+        "cost": {
+          "amount": 100,
+          "coin": "gp",
+          "costInCp": 10000
+        },
+        "weightLbs": 25
+      },
+      {
+        "id": "bardingHalfScale",
+        "name": "Barding, Half scale",
+        "category": "tackAndHarness",
+        "parent": "Barding",
+        "cost": {
+          "amount": 500,
+          "coin": "gp",
+          "costInCp": 50000
+        },
+        "weightLbs": 50
+      },
+      {
+        "id": "bardingLeatherOrPadded",
+        "name": "Barding, Leather or padded",
+        "category": "tackAndHarness",
+        "parent": "Barding",
+        "cost": {
+          "amount": 150,
+          "coin": "gp",
+          "costInCp": 15000
+        },
+        "weightLbs": 60
+      },
+      {
+        "id": "bitAndBridle",
+        "name": "Bit and bridle",
+        "category": "tackAndHarness",
+        "cost": {
+          "amount": 15,
+          "coin": "sp",
+          "costInCp": 150
+        },
+        "weightLbs": 3
+      },
+      {
+        "id": "cartHarness",
+        "name": "Cart harness",
+        "category": "tackAndHarness",
+        "cost": {
+          "amount": 2,
+          "coin": "gp",
+          "costInCp": 200
+        },
+        "weightLbs": 10
+      },
+      {
+        "id": "halter",
+        "name": "Halter",
+        "category": "tackAndHarness",
+        "cost": {
+          "amount": 5,
+          "coin": "cp",
+          "costInCp": 5
+        },
+        "weightLbs": 0.1,
+        "weightMarker": "*"
+      },
+      {
+        "id": "horseshoesShoeing",
+        "name": "Horseshoes & shoeing",
+        "category": "tackAndHarness",
+        "cost": {
+          "amount": 1,
+          "coin": "gp",
+          "costInCp": 100
+        },
+        "weightLbs": 10
+      },
+      {
+        "id": "saddlePack",
+        "name": "Saddle, Pack",
+        "category": "tackAndHarness",
+        "parent": "Saddle",
+        "cost": {
+          "amount": 5,
+          "coin": "gp",
+          "costInCp": 500
+        },
+        "weightLbs": 15
+      },
+      {
+        "id": "saddleRiding",
+        "name": "Saddle, Riding",
+        "category": "tackAndHarness",
+        "parent": "Saddle",
+        "cost": {
+          "amount": 10,
+          "coin": "gp",
+          "costInCp": 1000
+        },
+        "weightLbs": 35
+      },
+      {
+        "id": "saddleBagsLarge",
+        "name": "Saddle bags, Large",
+        "category": "tackAndHarness",
+        "parent": "Saddle bags",
+        "cost": {
+          "amount": 4,
+          "coin": "gp",
+          "costInCp": 400
+        },
+        "weightLbs": 8
+      },
+      {
+        "id": "saddleBagsSmall",
+        "name": "Saddle bags, Small",
+        "category": "tackAndHarness",
+        "parent": "Saddle bags",
+        "cost": {
+          "amount": 3,
+          "coin": "gp",
+          "costInCp": 300
+        },
+        "weightLbs": 5
+      },
+      {
+        "id": "saddleBlanket",
+        "name": "Saddle blanket",
+        "category": "tackAndHarness",
+        "cost": {
+          "amount": 3,
+          "coin": "sp",
+          "costInCp": 30
+        },
+        "weightLbs": 4
+      },
+      {
+        "id": "yokeHorse",
+        "name": "Yoke, Horse",
+        "category": "tackAndHarness",
+        "parent": "Yoke",
+        "cost": {
+          "amount": 5,
+          "coin": "gp",
+          "costInCp": 500
+        },
+        "weightLbs": 15
+      },
+      {
+        "id": "yokeOx",
+        "name": "Yoke, Ox",
+        "category": "tackAndHarness",
+        "parent": "Yoke",
+        "cost": {
+          "amount": 3,
+          "coin": "gp",
+          "costInCp": 300
+        },
+        "weightLbs": 20
+      },
+      {
+        "id": "backpack",
+        "name": "Backpack",
+        "category": "miscellaneous",
+        "cost": {
+          "amount": 2,
+          "coin": "gp",
+          "costInCp": 200
+        },
+        "weightLbs": 2
+      },
+      {
+        "id": "barrelSmall",
+        "name": "Barrel, small",
+        "category": "miscellaneous",
+        "cost": {
+          "amount": 2,
+          "coin": "gp",
+          "costInCp": 200
+        },
+        "weightLbs": 30
+      },
+      {
+        "id": "basketLarge",
+        "name": "Basket, Large",
+        "category": "miscellaneous",
+        "parent": "Basket",
+        "cost": {
+          "amount": 3,
+          "coin": "sp",
+          "costInCp": 30
+        },
+        "weightLbs": 1
+      },
+      {
+        "id": "basketSmall",
+        "name": "Basket, Small",
+        "category": "miscellaneous",
+        "parent": "Basket",
+        "cost": {
+          "amount": 5,
+          "coin": "cp",
+          "costInCp": 5
+        },
+        "weightLbs": 0.1,
+        "weightMarker": "*"
+      },
+      {
+        "id": "bell",
+        "name": "Bell",
+        "category": "miscellaneous",
+        "cost": {
+          "amount": 1,
+          "coin": "gp",
+          "costInCp": 100
+        },
+        "weightLbs": null
+      },
+      {
+        "id": "beltPouchLarge",
+        "name": "Belt pouch, Large",
+        "category": "miscellaneous",
+        "parent": "Belt pouch",
+        "cost": {
+          "amount": 1,
+          "coin": "gp",
+          "costInCp": 100
+        },
+        "weightLbs": 1
+      },
+      {
+        "id": "beltPouchSmall",
+        "name": "Belt pouch, Small",
+        "category": "miscellaneous",
+        "parent": "Belt pouch",
+        "cost": {
+          "amount": 7,
+          "coin": "sp",
+          "costInCp": 70
+        },
+        "weightLbs": 0.5
+      },
+      {
+        "id": "blockAndTackle",
+        "name": "Block and tackle",
+        "category": "miscellaneous",
+        "cost": {
+          "amount": 5,
+          "coin": "gp",
+          "costInCp": 500
+        },
+        "weightLbs": 5
+      },
+      {
+        "id": "boltCase",
+        "name": "Bolt case",
+        "category": "miscellaneous",
+        "cost": {
+          "amount": 1,
+          "coin": "gp",
+          "costInCp": 100
+        },
+        "weightLbs": 1
+      },
+      {
+        "id": "bucket",
+        "name": "Bucket",
+        "category": "miscellaneous",
+        "cost": {
+          "amount": 5,
+          "coin": "sp",
+          "costInCp": 50
+        },
+        "weightLbs": 3
+      },
+      {
+        "id": "chainHeavyPerFt",
+        "name": "Chain, Heavy",
+        "category": "miscellaneous",
+        "parent": "Chain",
+        "unit": "per ft.",
+        "cost": {
+          "amount": 4,
+          "coin": "gp",
+          "costInCp": 400
+        },
+        "weightLbs": 3
+      },
+      {
+        "id": "chainLightPerFt",
+        "name": "Chain, Light",
+        "category": "miscellaneous",
+        "parent": "Chain",
+        "unit": "per ft.",
+        "cost": {
+          "amount": 3,
+          "coin": "gp",
+          "costInCp": 300
+        },
+        "weightLbs": 1
+      },
+      {
+        "id": "chestLarge",
+        "name": "Chest, Large",
+        "category": "miscellaneous",
+        "parent": "Chest",
+        "cost": {
+          "amount": 2,
+          "coin": "gp",
+          "costInCp": 200
+        },
+        "weightLbs": 25
+      },
+      {
+        "id": "chestSmall",
+        "name": "Chest, Small",
+        "category": "miscellaneous",
+        "parent": "Chest",
+        "cost": {
+          "amount": 1,
+          "coin": "gp",
+          "costInCp": 100
+        },
+        "weightLbs": 10
+      },
+      {
+        "id": "clothCommonPer10SqYds",
+        "name": "Cloth, Common",
+        "category": "miscellaneous",
+        "parent": "Cloth",
+        "unit": "per 10 sq. yds.",
+        "cost": {
+          "amount": 7,
+          "coin": "gp",
+          "costInCp": 700
+        },
+        "weightLbs": 10
+      },
+      {
+        "id": "clothFinePer10SqYds",
+        "name": "Cloth, Fine",
+        "category": "miscellaneous",
+        "parent": "Cloth",
+        "unit": "per 10 sq. yds.",
+        "cost": {
+          "amount": 50,
+          "coin": "gp",
+          "costInCp": 5000
+        },
+        "weightLbs": 10
+      },
+      {
+        "id": "clothRichPer10SqYds",
+        "name": "Cloth, Rich",
+        "category": "miscellaneous",
+        "parent": "Cloth",
+        "unit": "per 10 sq. yds.",
+        "cost": {
+          "amount": 100,
+          "coin": "gp",
+          "costInCp": 10000
+        },
+        "weightLbs": 10
+      },
+      {
+        "id": "candle",
+        "name": "Candle",
+        "category": "miscellaneous",
+        "cost": {
+          "amount": 1,
+          "coin": "cp",
+          "costInCp": 1
+        },
+        "weightLbs": 0.1,
+        "weightMarker": "*"
+      },
+      {
+        "id": "canvasPerSqYard",
+        "name": "Canvas",
+        "category": "miscellaneous",
+        "unit": "per sq. yard",
+        "cost": {
+          "amount": 4,
+          "coin": "sp",
+          "costInCp": 40
+        },
+        "weightLbs": 1
+      },
+      {
+        "id": "chalk",
+        "name": "Chalk",
+        "category": "miscellaneous",
+        "cost": {
+          "amount": 1,
+          "coin": "cp",
+          "costInCp": 1
+        },
+        "weightLbs": 0.1,
+        "weightMarker": "*"
+      },
+      {
+        "id": "crampons",
+        "name": "Crampons",
+        "category": "miscellaneous",
+        "cost": {
+          "amount": 4,
+          "coin": "gp",
+          "costInCp": 400
+        },
+        "weightLbs": 2
+      },
+      {
+        "id": "fishhook",
+        "name": "Fishhook",
+        "category": "miscellaneous",
+        "cost": {
+          "amount": 1,
+          "coin": "sp",
+          "costInCp": 10
+        },
+        "weightLbs": 0,
+        "weightMarker": "**"
+      },
+      {
+        "id": "fishingNet10FtSq",
+        "name": "Fishing net, 10 ft. sq.",
+        "category": "miscellaneous",
+        "cost": {
+          "amount": 4,
+          "coin": "gp",
+          "costInCp": 400
+        },
+        "weightLbs": 5
+      },
+      {
+        "id": "flintAndSteel",
+        "name": "Flint and steel",
+        "category": "miscellaneous",
+        "cost": {
+          "amount": 5,
+          "coin": "sp",
+          "costInCp": 50
+        },
+        "weightLbs": 0.1,
+        "weightMarker": "*"
+      },
+      {
+        "id": "glassBottle",
+        "name": "Glass bottle",
+        "category": "miscellaneous",
+        "cost": {
+          "amount": 10,
+          "coin": "gp",
+          "costInCp": 1000
+        },
+        "weightLbs": 0.1,
+        "weightMarker": "*"
+      },
+      {
+        "id": "grapplingHook",
+        "name": "Grappling hook",
+        "category": "miscellaneous",
+        "cost": {
+          "amount": 8,
+          "coin": "sp",
+          "costInCp": 80
+        },
+        "weightLbs": 4
+      },
+      {
+        "id": "holyItemSymbolWaterEtc",
+        "name": "Holy item (symbol, water, etc.)",
+        "category": "miscellaneous",
+        "cost": {
+          "amount": 25,
+          "coin": "gp",
+          "costInCp": 2500
+        },
+        "weightLbs": 0.1,
+        "weightMarker": "*"
+      },
+      {
+        "id": "hourglass",
+        "name": "Hourglass",
+        "category": "miscellaneous",
+        "cost": {
+          "amount": 25,
+          "coin": "gp",
+          "costInCp": 2500
+        },
+        "weightLbs": 1
+      },
+      {
+        "id": "ironPot",
+        "name": "Iron pot",
+        "category": "miscellaneous",
+        "cost": {
+          "amount": 5,
+          "coin": "sp",
+          "costInCp": 50
+        },
+        "weightLbs": 2
+      },
+      {
+        "id": "ladder10Ft",
+        "name": "Ladder, 10 ft.",
+        "category": "miscellaneous",
+        "cost": {
+          "amount": 5,
+          "coin": "cp",
+          "costInCp": 5
+        },
+        "weightLbs": 20
+      },
+      {
+        "id": "lanternBeacon",
+        "name": "Lantern, Beacon",
+        "category": "miscellaneous",
+        "parent": "Lantern",
+        "cost": {
+          "amount": 150,
+          "coin": "gp",
+          "costInCp": 15000
+        },
+        "weightLbs": 50
+      },
+      {
+        "id": "lanternBullseye",
+        "name": "Lantern, Bullseye",
+        "category": "miscellaneous",
+        "parent": "Lantern",
+        "cost": {
+          "amount": 12,
+          "coin": "gp",
+          "costInCp": 1200
+        },
+        "weightLbs": 3
+      },
+      {
+        "id": "lanternHooded",
+        "name": "Lantern, Hooded",
+        "category": "miscellaneous",
+        "parent": "Lantern",
+        "cost": {
+          "amount": 7,
+          "coin": "gp",
+          "costInCp": 700
+        },
+        "weightLbs": 2
+      },
+      {
+        "id": "lockGood",
+        "name": "Lock, Good",
+        "category": "miscellaneous",
+        "parent": "Lock",
+        "cost": {
+          "amount": 100,
+          "coin": "gp",
+          "costInCp": 10000
+        },
+        "weightLbs": 1
+      },
+      {
+        "id": "lockPoor",
+        "name": "Lock, Poor",
+        "category": "miscellaneous",
+        "parent": "Lock",
+        "cost": {
+          "amount": 20,
+          "coin": "gp",
+          "costInCp": 2000
+        },
+        "weightLbs": 1
+      },
+      {
+        "id": "magnifyingGlass",
+        "name": "Magnifying glass",
+        "category": "miscellaneous",
+        "cost": {
+          "amount": 100,
+          "coin": "gp",
+          "costInCp": 10000
+        },
+        "weightLbs": 0.1,
+        "weightMarker": "*"
+      },
+      {
+        "id": "mapOrScrollCase",
+        "name": "Map or scroll case",
+        "category": "miscellaneous",
+        "cost": {
+          "amount": 8,
+          "coin": "sp",
+          "costInCp": 80
+        },
+        "weightLbs": 0.5
+      },
+      {
+        "id": "merchantSScale",
+        "name": "Merchant's scale",
+        "category": "miscellaneous",
+        "cost": {
+          "amount": 2,
+          "coin": "gp",
+          "costInCp": 200
+        },
+        "weightLbs": 1
+      },
+      {
+        "id": "mirrorSmallMetal",
+        "name": "Mirror, small metal",
+        "category": "miscellaneous",
+        "cost": {
+          "amount": 10,
+          "coin": "gp",
+          "costInCp": 1000
+        },
+        "weightLbs": 0.1,
+        "weightMarker": "*"
+      },
+      {
+        "id": "musicalInstrument",
+        "name": "Musical instrument",
+        "category": "miscellaneous",
+        "cost": {
+          "min": 5,
+          "max": 100,
+          "coin": "gp",
+          "costInCpMin": 500,
+          "costInCpMax": 10000
+        },
+        "weightLbsMin": 0.5,
+        "weightLbsMax": 3
+      },
+      {
+        "id": "oilGreekFirePerFlask",
+        "name": "Oil, Greek fire",
+        "category": "miscellaneous",
+        "parent": "Oil",
+        "unit": "per flask",
+        "cost": {
+          "amount": 10,
+          "coin": "gp",
+          "costInCp": 1000
+        },
+        "weightLbs": 2
+      },
+      {
+        "id": "oilLampPerFlask",
+        "name": "Oil, Lamp",
+        "category": "miscellaneous",
+        "parent": "Oil",
+        "unit": "per flask",
+        "cost": {
+          "amount": 6,
+          "coin": "cp",
+          "costInCp": 6
+        },
+        "weightLbs": 1
+      },
+      {
+        "id": "paperPerSheet",
+        "name": "Paper",
+        "category": "miscellaneous",
+        "unit": "per sheet",
+        "cost": {
+          "amount": 2,
+          "coin": "gp",
+          "costInCp": 200
+        },
+        "weightLbs": 0,
+        "weightMarker": "**"
+      },
+      {
+        "id": "papyrusPerSheet",
+        "name": "Papyrus",
+        "category": "miscellaneous",
+        "unit": "per sheet",
+        "cost": {
+          "amount": 8,
+          "coin": "sp",
+          "costInCp": 80
+        },
+        "weightLbs": 0,
+        "weightMarker": "**"
+      },
+      {
+        "id": "parchmentPerSheet",
+        "name": "Parchment",
+        "category": "miscellaneous",
+        "unit": "per sheet",
+        "cost": {
+          "amount": 1,
+          "coin": "gp",
+          "costInCp": 100
+        },
+        "weightLbs": 0,
+        "weightMarker": "**"
+      },
+      {
+        "id": "perfumePerVial",
+        "name": "Perfume",
+        "category": "miscellaneous",
+        "unit": "per vial",
+        "cost": {
+          "amount": 5,
+          "coin": "gp",
+          "costInCp": 500
+        },
+        "weightLbs": 0.1,
+        "weightMarker": "*"
+      },
+      {
+        "id": "piton",
+        "name": "Piton",
+        "category": "miscellaneous",
+        "cost": {
+          "amount": 3,
+          "coin": "cp",
+          "costInCp": 3
+        },
+        "weightLbs": 0.5
+      },
+      {
+        "id": "quiver",
+        "name": "Quiver",
+        "category": "miscellaneous",
+        "cost": {
+          "amount": 8,
+          "coin": "sp",
+          "costInCp": 80
+        },
+        "weightLbs": 1
+      },
+      {
+        "id": "ropeHempPer50Ft",
+        "name": "Rope, Hemp",
+        "category": "miscellaneous",
+        "parent": "Rope",
+        "unit": "per 50 ft.",
+        "cost": {
+          "amount": 1,
+          "coin": "gp",
+          "costInCp": 100
+        },
+        "weightLbs": 20
+      },
+      {
+        "id": "ropeSilkPer50Ft",
+        "name": "Rope, Silk",
+        "category": "miscellaneous",
+        "parent": "Rope",
+        "unit": "per 50 ft.",
+        "cost": {
+          "amount": 10,
+          "coin": "gp",
+          "costInCp": 1000
+        },
+        "weightLbs": 8
+      },
+      {
+        "id": "sackLarge",
+        "name": "Sack, Large",
+        "category": "miscellaneous",
+        "parent": "Sack",
+        "cost": {
+          "amount": 2,
+          "coin": "sp",
+          "costInCp": 20
+        },
+        "weightLbs": 0.5
+      },
+      {
+        "id": "sackSmall",
+        "name": "Sack, Small",
+        "category": "miscellaneous",
+        "parent": "Sack",
+        "cost": {
+          "amount": 5,
+          "coin": "cp",
+          "costInCp": 5
+        },
+        "weightLbs": 0.1,
+        "weightMarker": "*"
+      },
+      {
+        "id": "sealingCandleWaxPerLb",
+        "name": "Sealing/candle wax",
+        "category": "miscellaneous",
+        "unit": "per lb.",
+        "cost": {
+          "amount": 1,
+          "coin": "gp",
+          "costInCp": 100
+        },
+        "weightLbs": 1
+      },
+      {
+        "id": "sewingNeedle",
+        "name": "Sewing needle",
+        "category": "miscellaneous",
+        "cost": {
+          "amount": 5,
+          "coin": "sp",
+          "costInCp": 50
+        },
+        "weightLbs": 0,
+        "weightMarker": "**"
+      },
+      {
+        "id": "signalWhistle",
+        "name": "Signal whistle",
+        "category": "miscellaneous",
+        "cost": {
+          "amount": 8,
+          "coin": "sp",
+          "costInCp": 80
+        },
+        "weightLbs": 0.1,
+        "weightMarker": "*"
+      },
+      {
+        "id": "signetRingOrPersonalSeal",
+        "name": "Signet ring or personal seal",
+        "category": "miscellaneous",
+        "cost": {
+          "amount": 5,
+          "coin": "gp",
+          "costInCp": 500
+        },
+        "weightLbs": 0.1,
+        "weightMarker": "*"
+      },
+      {
+        "id": "soapPerLb",
+        "name": "Soap",
+        "category": "miscellaneous",
+        "unit": "per lb.",
+        "cost": {
+          "amount": 5,
+          "coin": "sp",
+          "costInCp": 50
+        },
+        "weightLbs": 1
+      },
+      {
+        "id": "spyglass",
+        "name": "Spyglass",
+        "category": "miscellaneous",
+        "cost": {
+          "amount": 1000,
+          "coin": "gp",
+          "costInCp": 100000
+        },
+        "weightLbs": 1
+      },
+      {
+        "id": "tentLarge",
+        "name": "Tent, Large",
+        "category": "miscellaneous",
+        "parent": "Tent",
+        "cost": {
+          "amount": 25,
+          "coin": "gp",
+          "costInCp": 2500
+        },
+        "weightLbs": 20
+      },
+      {
+        "id": "tentPavilion",
+        "name": "Tent, Pavilion",
+        "category": "miscellaneous",
+        "parent": "Tent",
+        "cost": {
+          "amount": 100,
+          "coin": "gp",
+          "costInCp": 10000
+        },
+        "weightLbs": 50
+      },
+      {
+        "id": "tentSmall",
+        "name": "Tent, Small",
+        "category": "miscellaneous",
+        "parent": "Tent",
+        "cost": {
+          "amount": 5,
+          "coin": "gp",
+          "costInCp": 500
+        },
+        "weightLbs": 10
+      },
+      {
+        "id": "thievesPicks",
+        "name": "Thieves' picks",
+        "category": "miscellaneous",
+        "cost": {
+          "amount": 30,
+          "coin": "gp",
+          "costInCp": 3000
+        },
+        "weightLbs": 1
+      },
+      {
+        "id": "torch",
+        "name": "Torch",
+        "category": "miscellaneous",
+        "cost": {
+          "amount": 1,
+          "coin": "cp",
+          "costInCp": 1
+        },
+        "weightLbs": 1
+      },
+      {
+        "id": "waterClock",
+        "name": "Water clock",
+        "category": "miscellaneous",
+        "cost": {
+          "amount": 1000,
+          "coin": "gp",
+          "costInCp": 100000
+        },
+        "weightLbs": 200
+      },
+      {
+        "id": "whetstone",
+        "name": "Whetstone",
+        "category": "miscellaneous",
+        "cost": {
+          "amount": 2,
+          "coin": "cp",
+          "costInCp": 2
+        },
+        "weightLbs": 1
+      },
+      {
+        "id": "wineskin",
+        "name": "Wineskin",
+        "category": "miscellaneous",
+        "cost": {
+          "amount": 8,
+          "coin": "sp",
+          "costInCp": 80
+        },
+        "weightLbs": 1
+      },
+      {
+        "id": "winterBlanket",
+        "name": "Winter blanket",
+        "category": "miscellaneous",
+        "cost": {
+          "amount": 5,
+          "coin": "sp",
+          "costInCp": 50
+        },
+        "weightLbs": 3
+      },
+      {
+        "id": "writingInkPerVial",
+        "name": "Writing ink",
+        "category": "miscellaneous",
+        "unit": "per vial",
+        "cost": {
+          "amount": 8,
+          "coin": "gp",
+          "costInCp": 800
+        },
+        "weightLbs": 0.1,
+        "weightMarker": "*"
+      }
+    ],
+    "proofreadingNote": "Transcribed from images by Claude. Please spot-check prices and weights against your book before relying on them."
+  },
+  "startingFunds": {
+    "status": "from-PHB-table-43",
+    "source": "PHB Table 43: Initial Character Funds (image supplied by owner)",
+    "unit": "gp",
+    "byGroup": {
+      "warrior": {
+        "dice": {
+          "count": 5,
+          "sides": 4,
+          "bonus": 0
+        },
+        "multiplier": 10,
+        "unit": "gp",
+        "text": "5d4 x 10 gp",
+        "rolledRangeGp": {
+          "min": 50,
+          "max": 200
+        }
+      },
+      "wizard": {
+        "dice": {
+          "count": 1,
+          "sides": 4,
+          "bonus": 1
+        },
+        "multiplier": 10,
+        "unit": "gp",
+        "text": "(1d4+1) x 10 gp",
+        "rolledRangeGp": {
+          "min": 20,
+          "max": 50
+        }
+      },
+      "rogue": {
+        "dice": {
+          "count": 2,
+          "sides": 6,
+          "bonus": 0
+        },
+        "multiplier": 10,
+        "unit": "gp",
+        "text": "2d6 x 10 gp",
+        "rolledRangeGp": {
+          "min": 20,
+          "max": 120
+        }
+      },
+      "priest": {
+        "dice": {
+          "count": 3,
+          "sides": 6,
+          "bonus": 0
+        },
+        "multiplier": 10,
+        "unit": "gp",
+        "text": "3d6 x 10 gp",
+        "rolledRangeGp": {
+          "min": 30,
+          "max": 180
+        },
+        "note": "Priest restriction applies (see priestRestriction)."
+      }
+    },
+    "classToGroup": "Use classGroups in rules-core.json (fighter/paladin/ranger = warrior, cleric/druid = priest, wizard = wizard, thief/bard = rogue).",
+    "priestRestriction": {
+      "appliesTo": [
+        "priest"
+      ],
+      "rule": "Priests may spend their initial funds only on equipment and goods. Once all purchases are made, the priest returns all but two or three of his remaining gold pieces to his superiors, because his equipment is supplied by his organisation. Priests cannot lend any of their initial funds to other characters.",
+      "engineHint": "After the purchase step, show a prompt to remove all but 2-3 gp for priest characters."
+    },
+    "override": {
+      "status": "requested-by-owner",
+      "allowed": true,
+      "behaviour": "The user can type in their own starting funds instead of rolling, e.g. to follow a DM's ruling or a house rule. Stored as 'startingFundsOverrideGp'; the rolled value is kept so the user can switch back.",
+      "suggestions": [
+        "Accept any whole number of gp from 0 upward.",
+        "Show a soft note (not a block) when the amount is outside the group's rolled range.",
+        "Offer a 'roll for me' button next to the override field."
+      ],
+      "toConfirm": "Whether to also let the user set the amount as a mix of coins (PP/GP/EP/SP/CP), or gp only."
+    },
+    "multiClass": {
+      "status": "needs-source",
+      "note": "Table 43 does not say which group's dice a multi-class character uses. Enter the PHB rule."
+    },
+    "monk": {
+      "status": "undefined",
+      "note": "100% house class, not on Table 43. Owner to say which group's dice it uses. Monks keep no more than 25 gp per level (house.json)."
+    }
+  }
+}
