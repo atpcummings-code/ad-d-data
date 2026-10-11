@@ -93,8 +93,7 @@
     "thief": {
       "name": "Thief",
       "sheetNames": [
-        "Thief",
-        "Theif"
+        "Thief"
       ]
     },
     "bard": {
