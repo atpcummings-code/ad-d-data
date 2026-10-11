@@ -12,9 +12,8 @@
       "startingFunds": "from-PHB-table-43"
     },
     "openIssues": [
-      "Coin weight (for encumbrance) is not on Table 42. Enter the PHB figure under currency.coinWeight.",
       "Monk house rule: monks retain no more than 25 gp per level (see house.json monk.prefill.coinLimitPerLevelGp).",
-      "Starting funds: multi-class dice rule and the Monk's group are undefined. Override is gp-only unless you want coin mixes.",
+      "Starting funds: set by the owner (dice in startingFunds.byGroup, multi-class averaged). Multi-class rounding of fractional gp is assumed up, to confirm. Override is gp-only unless you want coin mixes.",
       "Equipment weights: clothing, food/lodging, provisioning, transport, animals and services have no weights on Table 44. Add weights if you want them in encumbrance.",
       "Armour: movement effects, shield details and the 'Armor *' footnote were not supplied.",
       "Weapons: Table 45 lists 'Hammer' but the weapons table lists 'Warhammer'; left unlinked. Weapon proficiency groups / related weapons are not on the tables supplied.",
@@ -176,8 +175,20 @@
       }
     },
     "coinWeight": {
-      "status": "needs-source",
-      "expects": "Weight per coin (or coins per pound), used for encumbrance."
+      "status": "confirmed-by-owner",
+      "coinsPerLb": 50,
+      "weightPerCoinLb": 0.02,
+      "appliesTo": [
+        "cp",
+        "sp",
+        "ep",
+        "gp",
+        "pp"
+      ],
+      "rule": "All coin types weigh the same: 50 coins = 1 lb.",
+      "formula": "coinWeightLb = totalCoins / 50",
+      "example": "100 gp + 40 sp + 10 pp = 150 coins = 3 lb.",
+      "encumbrance": "Counts toward carried weight (Table 47/48)."
     },
     "crossCheck": "The Rates line printed on every Tradestands sheet (1PP = 5GP = 10EP = 50SP = 500CP) matches Table 42 exactly."
   },
