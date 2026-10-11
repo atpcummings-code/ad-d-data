@@ -930,16 +930,18 @@
       "coreRuleReference": "rules-core.json classes: hitPointsAfterNameLevel.conBonusApplies is the core value (false)."
     },
     "multiClass": {
-      "status": "confirmed-by-owner (rounding to confirm)",
+      "status": "confirmed-by-owner",
       "dualClassing": "ignored",
       "xpSplit": "equal between the classes (confirmed)",
       "maxHitPointsPerClassLevel": {
         "rule": "Divide each class's hit die by the number of classes to get the maximum hit points for each level gained in that class.",
-        "formula": "maxHpPerClassLevel = hitDieSides / numberOfClasses",
+        "formula": "ceil(hitDieSides / numberOfClasses)",
         "userEntry": "The user enters the hit points gained; the app does not roll. The app only checks that the number entered does not exceed the maximum.",
         "rounding": {
-          "status": "to confirm",
-          "note": "The division can leave a fraction (e.g. d10 / 3 = 3.33, d4 / 3 = 1.33). The maximum is stored unrounded; the rule for whole numbers has not been given."
+          "status": "confirmed-by-owner",
+          "rule": "round UP to the next whole number (ceiling)",
+          "formula": "maxHpPerClassLevel = ceil(hitDieSides / numberOfClasses)",
+          "note": "Owner example: 3.33 rounds to 4, so a Fighter in a three-class combination has a maximum of 4 per level; a d4 Mage in three classes has 2."
         }
       },
       "conBonus": {
@@ -953,236 +955,271 @@
         "houseRuleLink": "The CON bonus applies at all levels (house.json hitPointRules.conBonusAllLevels)."
       },
       "afterNameLevel": {
-        "status": "to confirm",
-        "note": "Not covered: how the flat gain after name level (1 to 3 hp, depending on the class) is shared in a multi-class character. Presumably divided by the number of classes like the dice."
+        "status": "confirmed-by-owner",
+        "rule": "The flat hit point gain after name level is NOT divided between classes. A class past its own name level gains its full flat amount (3 warrior, 2 cleric/druid/thief/bard, 1 mage) for each level gained in that class.",
+        "conBonus": "The CON bonus still follows the multi-class sharing rule (class bonus / number of classes).",
+        "note": "Applied per class: each class uses its own name level."
       },
       "examplesByCombination": {
         "fighter+thief": {
           "fighter": {
             "dieSides": 10,
             "numberOfClasses": 2,
-            "maxHpPerClassLevel": "5",
-            "asDecimal": 5.0
+            "maxHpPerClassLevel": 5,
+            "asDecimal": 5.0,
+            "maxHpPerClassLevelUnrounded": "5"
           },
           "thief": {
             "dieSides": 6,
             "numberOfClasses": 2,
-            "maxHpPerClassLevel": "3",
-            "asDecimal": 3.0
+            "maxHpPerClassLevel": 3,
+            "asDecimal": 3.0,
+            "maxHpPerClassLevelUnrounded": "3"
           }
         },
         "cleric+fighter": {
           "cleric": {
             "dieSides": 8,
             "numberOfClasses": 2,
-            "maxHpPerClassLevel": "4",
-            "asDecimal": 4.0
+            "maxHpPerClassLevel": 4,
+            "asDecimal": 4.0,
+            "maxHpPerClassLevelUnrounded": "4"
           },
           "fighter": {
             "dieSides": 10,
             "numberOfClasses": 2,
-            "maxHpPerClassLevel": "5",
-            "asDecimal": 5.0
+            "maxHpPerClassLevel": 5,
+            "asDecimal": 5.0,
+            "maxHpPerClassLevelUnrounded": "5"
           }
         },
         "fighter+illusionist": {
           "fighter": {
             "dieSides": 10,
             "numberOfClasses": 2,
-            "maxHpPerClassLevel": "5",
-            "asDecimal": 5.0
+            "maxHpPerClassLevel": 5,
+            "asDecimal": 5.0,
+            "maxHpPerClassLevelUnrounded": "5"
           },
           "illusionist": {
             "dieSides": 4,
             "numberOfClasses": 2,
-            "maxHpPerClassLevel": "2",
-            "asDecimal": 2.0
+            "maxHpPerClassLevel": 2,
+            "asDecimal": 2.0,
+            "maxHpPerClassLevelUnrounded": "2"
           }
         },
         "illusionist+thief": {
           "illusionist": {
             "dieSides": 4,
             "numberOfClasses": 2,
-            "maxHpPerClassLevel": "2",
-            "asDecimal": 2.0
+            "maxHpPerClassLevel": 2,
+            "asDecimal": 2.0,
+            "maxHpPerClassLevelUnrounded": "2"
           },
           "thief": {
             "dieSides": 6,
             "numberOfClasses": 2,
-            "maxHpPerClassLevel": "3",
-            "asDecimal": 3.0
+            "maxHpPerClassLevel": 3,
+            "asDecimal": 3.0,
+            "maxHpPerClassLevelUnrounded": "3"
           }
         },
         "cleric+thief": {
           "cleric": {
             "dieSides": 8,
             "numberOfClasses": 2,
-            "maxHpPerClassLevel": "4",
-            "asDecimal": 4.0
+            "maxHpPerClassLevel": 4,
+            "asDecimal": 4.0,
+            "maxHpPerClassLevelUnrounded": "4"
           },
           "thief": {
             "dieSides": 6,
             "numberOfClasses": 2,
-            "maxHpPerClassLevel": "3",
-            "asDecimal": 3.0
+            "maxHpPerClassLevel": 3,
+            "asDecimal": 3.0,
+            "maxHpPerClassLevelUnrounded": "3"
           }
         },
         "fighter+wizard": {
           "fighter": {
             "dieSides": 10,
             "numberOfClasses": 2,
-            "maxHpPerClassLevel": "5",
-            "asDecimal": 5.0
+            "maxHpPerClassLevel": 5,
+            "asDecimal": 5.0,
+            "maxHpPerClassLevelUnrounded": "5"
           },
           "wizard": {
             "dieSides": 4,
             "numberOfClasses": 2,
-            "maxHpPerClassLevel": "2",
-            "asDecimal": 2.0
+            "maxHpPerClassLevel": 2,
+            "asDecimal": 2.0,
+            "maxHpPerClassLevelUnrounded": "2"
           }
         },
         "thief+wizard": {
           "thief": {
             "dieSides": 6,
             "numberOfClasses": 2,
-            "maxHpPerClassLevel": "3",
-            "asDecimal": 3.0
+            "maxHpPerClassLevel": 3,
+            "asDecimal": 3.0,
+            "maxHpPerClassLevelUnrounded": "3"
           },
           "wizard": {
             "dieSides": 4,
             "numberOfClasses": 2,
-            "maxHpPerClassLevel": "2",
-            "asDecimal": 2.0
+            "maxHpPerClassLevel": 2,
+            "asDecimal": 2.0,
+            "maxHpPerClassLevelUnrounded": "2"
           }
         },
         "fighter+thief+wizard": {
           "fighter": {
             "dieSides": 10,
             "numberOfClasses": 3,
-            "maxHpPerClassLevel": "10/3",
-            "asDecimal": 3.33
+            "maxHpPerClassLevel": 4,
+            "asDecimal": 3.33,
+            "maxHpPerClassLevelUnrounded": "10/3"
           },
           "thief": {
             "dieSides": 6,
             "numberOfClasses": 3,
-            "maxHpPerClassLevel": "2",
-            "asDecimal": 2.0
+            "maxHpPerClassLevel": 2,
+            "asDecimal": 2.0,
+            "maxHpPerClassLevelUnrounded": "2"
           },
           "wizard": {
             "dieSides": 4,
             "numberOfClasses": 3,
-            "maxHpPerClassLevel": "4/3",
-            "asDecimal": 1.33
+            "maxHpPerClassLevel": 2,
+            "asDecimal": 1.33,
+            "maxHpPerClassLevelUnrounded": "4/3"
           }
         },
         "druid+fighter": {
           "druid": {
             "dieSides": 8,
             "numberOfClasses": 2,
-            "maxHpPerClassLevel": "4",
-            "asDecimal": 4.0
+            "maxHpPerClassLevel": 4,
+            "asDecimal": 4.0,
+            "maxHpPerClassLevelUnrounded": "4"
           },
           "fighter": {
             "dieSides": 10,
             "numberOfClasses": 2,
-            "maxHpPerClassLevel": "5",
-            "asDecimal": 5.0
+            "maxHpPerClassLevel": 5,
+            "asDecimal": 5.0,
+            "maxHpPerClassLevelUnrounded": "5"
           }
         },
         "cleric+ranger": {
           "cleric": {
             "dieSides": 8,
             "numberOfClasses": 2,
-            "maxHpPerClassLevel": "4",
-            "asDecimal": 4.0
+            "maxHpPerClassLevel": 4,
+            "asDecimal": 4.0,
+            "maxHpPerClassLevelUnrounded": "4"
           },
           "ranger": {
             "dieSides": 10,
             "numberOfClasses": 2,
-            "maxHpPerClassLevel": "5",
-            "asDecimal": 5.0
+            "maxHpPerClassLevel": 5,
+            "asDecimal": 5.0,
+            "maxHpPerClassLevelUnrounded": "5"
           }
         },
         "druid+ranger": {
           "druid": {
             "dieSides": 8,
             "numberOfClasses": 2,
-            "maxHpPerClassLevel": "4",
-            "asDecimal": 4.0
+            "maxHpPerClassLevel": 4,
+            "asDecimal": 4.0,
+            "maxHpPerClassLevelUnrounded": "4"
           },
           "ranger": {
             "dieSides": 10,
             "numberOfClasses": 2,
-            "maxHpPerClassLevel": "5",
-            "asDecimal": 5.0
+            "maxHpPerClassLevel": 5,
+            "asDecimal": 5.0,
+            "maxHpPerClassLevelUnrounded": "5"
           }
         },
         "cleric+wizard": {
           "cleric": {
             "dieSides": 8,
             "numberOfClasses": 2,
-            "maxHpPerClassLevel": "4",
-            "asDecimal": 4.0
+            "maxHpPerClassLevel": 4,
+            "asDecimal": 4.0,
+            "maxHpPerClassLevelUnrounded": "4"
           },
           "wizard": {
             "dieSides": 4,
             "numberOfClasses": 2,
-            "maxHpPerClassLevel": "2",
-            "asDecimal": 2.0
+            "maxHpPerClassLevel": 2,
+            "asDecimal": 2.0,
+            "maxHpPerClassLevelUnrounded": "2"
           }
         },
         "druid+wizard": {
           "druid": {
             "dieSides": 8,
             "numberOfClasses": 2,
-            "maxHpPerClassLevel": "4",
-            "asDecimal": 4.0
+            "maxHpPerClassLevel": 4,
+            "asDecimal": 4.0,
+            "maxHpPerClassLevelUnrounded": "4"
           },
           "wizard": {
             "dieSides": 4,
             "numberOfClasses": 2,
-            "maxHpPerClassLevel": "2",
-            "asDecimal": 2.0
+            "maxHpPerClassLevel": 2,
+            "asDecimal": 2.0,
+            "maxHpPerClassLevelUnrounded": "2"
           }
         },
         "cleric+fighter+wizard": {
           "cleric": {
             "dieSides": 8,
             "numberOfClasses": 3,
-            "maxHpPerClassLevel": "8/3",
-            "asDecimal": 2.67
+            "maxHpPerClassLevel": 3,
+            "asDecimal": 2.67,
+            "maxHpPerClassLevelUnrounded": "8/3"
           },
           "fighter": {
             "dieSides": 10,
             "numberOfClasses": 3,
-            "maxHpPerClassLevel": "10/3",
-            "asDecimal": 3.33
+            "maxHpPerClassLevel": 4,
+            "asDecimal": 3.33,
+            "maxHpPerClassLevelUnrounded": "10/3"
           },
           "wizard": {
             "dieSides": 4,
             "numberOfClasses": 3,
-            "maxHpPerClassLevel": "4/3",
-            "asDecimal": 1.33
+            "maxHpPerClassLevel": 2,
+            "asDecimal": 1.33,
+            "maxHpPerClassLevelUnrounded": "4/3"
           }
         },
         "druid+fighter+wizard": {
           "druid": {
             "dieSides": 8,
             "numberOfClasses": 3,
-            "maxHpPerClassLevel": "8/3",
-            "asDecimal": 2.67
+            "maxHpPerClassLevel": 3,
+            "asDecimal": 2.67,
+            "maxHpPerClassLevelUnrounded": "8/3"
           },
           "fighter": {
             "dieSides": 10,
             "numberOfClasses": 3,
-            "maxHpPerClassLevel": "10/3",
-            "asDecimal": 3.33
+            "maxHpPerClassLevel": 4,
+            "asDecimal": 3.33,
+            "maxHpPerClassLevelUnrounded": "10/3"
           },
           "wizard": {
             "dieSides": 4,
             "numberOfClasses": 3,
-            "maxHpPerClassLevel": "4/3",
-            "asDecimal": 1.33
+            "maxHpPerClassLevel": 2,
+            "asDecimal": 1.33,
+            "maxHpPerClassLevelUnrounded": "4/3"
           }
         }
       }

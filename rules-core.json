@@ -2312,7 +2312,6 @@
     ],
     "stillNeeded": [
       "Ability score minimums and maximums and racial ability modifiers for each race.",
-      "Which single classes each race may take.",
       "Racial saving throw bonuses and racial abilities (e.g. infravision).",
       "Half-orc: everything except its base move and its multi-class combinations."
     ],
@@ -2812,12 +2811,122 @@
       "combinedMinimumsRule": "For each ability, the highest minimum among the classes in the combination (computed in 'combinations').",
       "alignmentRule": "Allowed alignments are the overlap of the classes' allowed alignments (computed), except where an override exists (Druid/Ranger = Neutral Good).",
       "stillNeeded": [
-        "Which single classes each race may take (only multi-class lists were supplied).",
         "Rounding of the divided hit dice (see house.json hitPointRules.multiClass).",
         "Proficiency slot rule for multi-class characters, and how thief and bard skills work when combined with other classes.",
         "Armour and spellcasting limits in combination (e.g. a mage in a combination cannot cast in armour)."
       ],
       "dualClassing": "ignored (confirmed by owner)"
+    },
+    "classAccess": {
+      "status": "confirmed-by-owner",
+      "source": "owner list",
+      "noLevelLimits": true,
+      "note": "Single-class access by race. Mage/Wizard list applies to the generic wizard and to all specialist schools other than Illusionist (confirmed by owner). Monk not listed (house class, see house.json).",
+      "byClass": {
+        "fighter": [
+          "human",
+          "dwarf",
+          "elf",
+          "gnome",
+          "halfElf",
+          "halfling",
+          "halfOrc"
+        ],
+        "paladin": [
+          "human"
+        ],
+        "ranger": [
+          "human",
+          "elf",
+          "halfElf"
+        ],
+        "wizard": [
+          "human",
+          "elf",
+          "halfElf"
+        ],
+        "illusionist": [
+          "human",
+          "gnome"
+        ],
+        "cleric": [
+          "human",
+          "dwarf",
+          "elf",
+          "gnome",
+          "halfElf",
+          "halfling",
+          "halfOrc"
+        ],
+        "druid": [
+          "human",
+          "halfElf"
+        ],
+        "thief": [
+          "human",
+          "dwarf",
+          "elf",
+          "gnome",
+          "halfElf",
+          "halfling",
+          "halfOrc"
+        ],
+        "bard": [
+          "human",
+          "halfElf"
+        ]
+      },
+      "byRace": {
+        "human": [
+          "fighter",
+          "paladin",
+          "ranger",
+          "wizard",
+          "illusionist",
+          "cleric",
+          "druid",
+          "thief",
+          "bard"
+        ],
+        "dwarf": [
+          "fighter",
+          "cleric",
+          "thief"
+        ],
+        "elf": [
+          "fighter",
+          "ranger",
+          "wizard",
+          "cleric",
+          "thief"
+        ],
+        "gnome": [
+          "fighter",
+          "illusionist",
+          "cleric",
+          "thief"
+        ],
+        "halfElf": [
+          "fighter",
+          "ranger",
+          "wizard",
+          "cleric",
+          "druid",
+          "thief",
+          "bard"
+        ],
+        "halfling": [
+          "fighter",
+          "cleric",
+          "thief"
+        ],
+        "halfOrc": [
+          "fighter",
+          "cleric",
+          "thief"
+        ]
+      },
+      "specialistSchoolsOtherThanIllusionist": "same as wizard (confirmed by owner)"
     }
   },
   "classes": {
