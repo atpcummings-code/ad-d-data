@@ -49,6 +49,11 @@
       "id": "conBonusAllLevels",
       "description": "No class loses its Constitution hit point bonus after name level. ALL classes receive the relevant CON bonus at ALL levels.",
       "status": "confirmed"
+    },
+    {
+      "id": "noLevelLimits",
+      "description": "Ignore all level limits by race and class: treat every level limit as unlimited.",
+      "status": "confirmed"
     }
   ],
   "monk": {
@@ -923,6 +928,278 @@
         "example": "A 12th-level fighter with CON 17 (+3 for warriors) gains 3 + 3 = 6 hit points per level."
       },
       "coreRuleReference": "rules-core.json classes: hitPointsAfterNameLevel.conBonusApplies is the core value (false)."
+    },
+    "multiClass": {
+      "status": "confirmed-by-owner (rounding to confirm)",
+      "dualClassing": "ignored",
+      "xpSplit": "equal between the classes (confirmed)",
+      "maxHitPointsPerClassLevel": {
+        "rule": "Divide each class's hit die by the number of classes to get the maximum hit points for each level gained in that class.",
+        "formula": "maxHpPerClassLevel = hitDieSides / numberOfClasses",
+        "userEntry": "The user enters the hit points gained; the app does not roll. The app only checks that the number entered does not exceed the maximum.",
+        "rounding": {
+          "status": "to confirm",
+          "note": "The division can leave a fraction (e.g. d10 / 3 = 3.33, d4 / 3 = 1.33). The maximum is stored unrounded; the rule for whole numbers has not been given."
+        }
+      },
+      "conBonus": {
+        "perClassLevel": "Each class's own CON hit point bonus (non-warriors capped at +2; the warrior-only parenthetical bonus for fighters, paladins and rangers), divided by the number of classes.",
+        "sharing": "Where possible the bonus is divided equally between the classes. Otherwise it is the user's option where they add it.",
+        "appCheck": "Simply check that the total bonus entered does not exceed the maximum: the sum over the class levels gained of (that class's CON bonus / number of classes).",
+        "example": {
+          "text": "A Cleric/Mage with CON 16 has +2 bonus hit points per level. At Cleric 5 / Mage 5, going to 5/6 gives the Mage level 1 point of the bonus. When the player reaches Cleric 6 he gets the other point.",
+          "bonusPerClassLevel": 1
+        },
+        "houseRuleLink": "The CON bonus applies at all levels (house.json hitPointRules.conBonusAllLevels)."
+      },
+      "afterNameLevel": {
+        "status": "to confirm",
+        "note": "Not covered: how the flat gain after name level (1 to 3 hp, depending on the class) is shared in a multi-class character. Presumably divided by the number of classes like the dice."
+      },
+      "examplesByCombination": {
+        "fighter+thief": {
+          "fighter": {
+            "dieSides": 10,
+            "numberOfClasses": 2,
+            "maxHpPerClassLevel": "5",
+            "asDecimal": 5.0
+          },
+          "thief": {
+            "dieSides": 6,
+            "numberOfClasses": 2,
+            "maxHpPerClassLevel": "3",
+            "asDecimal": 3.0
+          }
+        },
+        "cleric+fighter": {
+          "cleric": {
+            "dieSides": 8,
+            "numberOfClasses": 2,
+            "maxHpPerClassLevel": "4",
+            "asDecimal": 4.0
+          },
+          "fighter": {
+            "dieSides": 10,
+            "numberOfClasses": 2,
+            "maxHpPerClassLevel": "5",
+            "asDecimal": 5.0
+          }
+        },
+        "fighter+illusionist": {
+          "fighter": {
+            "dieSides": 10,
+            "numberOfClasses": 2,
+            "maxHpPerClassLevel": "5",
+            "asDecimal": 5.0
+          },
+          "illusionist": {
+            "dieSides": 4,
+            "numberOfClasses": 2,
+            "maxHpPerClassLevel": "2",
+            "asDecimal": 2.0
+          }
+        },
+        "illusionist+thief": {
+          "illusionist": {
+            "dieSides": 4,
+            "numberOfClasses": 2,
+            "maxHpPerClassLevel": "2",
+            "asDecimal": 2.0
+          },
+          "thief": {
+            "dieSides": 6,
+            "numberOfClasses": 2,
+            "maxHpPerClassLevel": "3",
+            "asDecimal": 3.0
+          }
+        },
+        "cleric+thief": {
+          "cleric": {
+            "dieSides": 8,
+            "numberOfClasses": 2,
+            "maxHpPerClassLevel": "4",
+            "asDecimal": 4.0
+          },
+          "thief": {
+            "dieSides": 6,
+            "numberOfClasses": 2,
+            "maxHpPerClassLevel": "3",
+            "asDecimal": 3.0
+          }
+        },
+        "fighter+wizard": {
+          "fighter": {
+            "dieSides": 10,
+            "numberOfClasses": 2,
+            "maxHpPerClassLevel": "5",
+            "asDecimal": 5.0
+          },
+          "wizard": {
+            "dieSides": 4,
+            "numberOfClasses": 2,
+            "maxHpPerClassLevel": "2",
+            "asDecimal": 2.0
+          }
+        },
+        "thief+wizard": {
+          "thief": {
+            "dieSides": 6,
+            "numberOfClasses": 2,
+            "maxHpPerClassLevel": "3",
+            "asDecimal": 3.0
+          },
+          "wizard": {
+            "dieSides": 4,
+            "numberOfClasses": 2,
+            "maxHpPerClassLevel": "2",
+            "asDecimal": 2.0
+          }
+        },
+        "fighter+thief+wizard": {
+          "fighter": {
+            "dieSides": 10,
+            "numberOfClasses": 3,
+            "maxHpPerClassLevel": "10/3",
+            "asDecimal": 3.33
+          },
+          "thief": {
+            "dieSides": 6,
+            "numberOfClasses": 3,
+            "maxHpPerClassLevel": "2",
+            "asDecimal": 2.0
+          },
+          "wizard": {
+            "dieSides": 4,
+            "numberOfClasses": 3,
+            "maxHpPerClassLevel": "4/3",
+            "asDecimal": 1.33
+          }
+        },
+        "druid+fighter": {
+          "druid": {
+            "dieSides": 8,
+            "numberOfClasses": 2,
+            "maxHpPerClassLevel": "4",
+            "asDecimal": 4.0
+          },
+          "fighter": {
+            "dieSides": 10,
+            "numberOfClasses": 2,
+            "maxHpPerClassLevel": "5",
+            "asDecimal": 5.0
+          }
+        },
+        "cleric+ranger": {
+          "cleric": {
+            "dieSides": 8,
+            "numberOfClasses": 2,
+            "maxHpPerClassLevel": "4",
+            "asDecimal": 4.0
+          },
+          "ranger": {
+            "dieSides": 10,
+            "numberOfClasses": 2,
+            "maxHpPerClassLevel": "5",
+            "asDecimal": 5.0
+          }
+        },
+        "druid+ranger": {
+          "druid": {
+            "dieSides": 8,
+            "numberOfClasses": 2,
+            "maxHpPerClassLevel": "4",
+            "asDecimal": 4.0
+          },
+          "ranger": {
+            "dieSides": 10,
+            "numberOfClasses": 2,
+            "maxHpPerClassLevel": "5",
+            "asDecimal": 5.0
+          }
+        },
+        "cleric+wizard": {
+          "cleric": {
+            "dieSides": 8,
+            "numberOfClasses": 2,
+            "maxHpPerClassLevel": "4",
+            "asDecimal": 4.0
+          },
+          "wizard": {
+            "dieSides": 4,
+            "numberOfClasses": 2,
+            "maxHpPerClassLevel": "2",
+            "asDecimal": 2.0
+          }
+        },
+        "druid+wizard": {
+          "druid": {
+            "dieSides": 8,
+            "numberOfClasses": 2,
+            "maxHpPerClassLevel": "4",
+            "asDecimal": 4.0
+          },
+          "wizard": {
+            "dieSides": 4,
+            "numberOfClasses": 2,
+            "maxHpPerClassLevel": "2",
+            "asDecimal": 2.0
+          }
+        },
+        "cleric+fighter+wizard": {
+          "cleric": {
+            "dieSides": 8,
+            "numberOfClasses": 3,
+            "maxHpPerClassLevel": "8/3",
+            "asDecimal": 2.67
+          },
+          "fighter": {
+            "dieSides": 10,
+            "numberOfClasses": 3,
+            "maxHpPerClassLevel": "10/3",
+            "asDecimal": 3.33
+          },
+          "wizard": {
+            "dieSides": 4,
+            "numberOfClasses": 3,
+            "maxHpPerClassLevel": "4/3",
+            "asDecimal": 1.33
+          }
+        },
+        "druid+fighter+wizard": {
+          "druid": {
+            "dieSides": 8,
+            "numberOfClasses": 3,
+            "maxHpPerClassLevel": "8/3",
+            "asDecimal": 2.67
+          },
+          "fighter": {
+            "dieSides": 10,
+            "numberOfClasses": 3,
+            "maxHpPerClassLevel": "10/3",
+            "asDecimal": 3.33
+          },
+          "wizard": {
+            "dieSides": 4,
+            "numberOfClasses": 3,
+            "maxHpPerClassLevel": "4/3",
+            "asDecimal": 1.33
+          }
+        }
+      }
     }
+  },
+  "levelLimits": {
+    "status": "confirmed-by-owner",
+    "rule": "No level limits by race or by class. Any race may advance in any class it can take without a level cap.",
+    "overrides": "The core racial level limits (non-human races have maximum levels in each class).",
+    "scope": "Level limits by race and by class, including every multi-class combination (confirmed). Which classes each race may take is separate and not yet supplied.",
+    "dataLimit": "The XP tables stop at level 20 (Monk at 19) and the Turn Undead, saving throw and THAC0 tables run to 20 or beyond. That is a limit of the data supplied, not a game rule; the app's top level will follow the data unless you extend the tables."
+  },
+  "multiClass": {
+    "status": "confirmed-by-owner",
+    "noLevelLimits": true,
+    "abilityMinimums": "A character must meet the minimum abilities of each individual class in the combination.",
+    "combinationsByRace": "rules-core.json races.multiClass",
+    "dualClassing": "ignored (confirmed by owner)"
   }
 }

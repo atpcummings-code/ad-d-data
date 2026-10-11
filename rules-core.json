@@ -3,12 +3,12 @@
     "file": "rules-core",
     "schemaVersion": "0.1.0",
     "ruleset": "AD&D 2nd Edition (Player's Handbook / Dungeon Master's Guide). NOT 5th edition.",
-    "provenance": "xpTables, classGroups, saveCategories and abilityScores.fields were extracted from the Tradestands character record sheets (v6.0; Monk v6.3). Sections with status 'needs-source' are empty skeletons: enter them from your PHB/DMG and run the validator. spellProgression comes from PHB Tables 21 and 24 (images supplied by owner). specialistWizards comes from PHB Table 22 (image supplied by owner). Paladin spell progression comes from PHB Table 17 (image supplied by owner). Ranger spell progression comes from PHB Table 18 (image supplied by owner). Bard spell progression comes from PHB Table 32 (image supplied by owner). Race height, weight, age and aging come from PHB Tables 10-12 (images supplied by owner). Strength table comes from PHB Table 1 (image supplied by owner). Dexterity table comes from PHB Table 2 (image supplied by owner). Intelligence, Wisdom and Charisma tables come from PHB Tables 4-6 (images supplied by owner). Constitution table comes from PHB Table 3 (image supplied by owner). Alignments and class requirements were supplied by the owner. Ranger ability minimums, prime requisites, alignment and XP bonus come from PHB text supplied by the owner. Paladin requirements come from PHB text supplied by the owner. Class ability minimums come from PHB Table 13 (image supplied by owner). Warrior hit dice, melee attacks (Table 15) and Fighter requirements come from PHB text and a table supplied by the owner. Mage requirements come from PHB text supplied by the owner. Illusionist requirements come from PHB text supplied by the owner. Cleric requirements come from PHB text supplied by the owner. Druid requirements come from PHB text supplied by the owner. Thief requirements come from PHB text supplied by the owner. Bard requirements come from PHB text supplied by the owner. THAC0 comes from PHB Table 53 (image supplied by owner). Saving throws come from PHB Table 60 (image supplied by owner). Base movement by race was supplied by the owner. Encumbrance and modified movement come from PHB Tables 47 and 48 (images supplied by owner).",
+    "provenance": "xpTables, classGroups, saveCategories and abilityScores.fields were extracted from the Tradestands character record sheets (v6.0; Monk v6.3). Sections with status 'needs-source' are empty skeletons: enter them from your PHB/DMG and run the validator. spellProgression comes from PHB Tables 21 and 24 (images supplied by owner). specialistWizards comes from PHB Table 22 (image supplied by owner). Paladin spell progression comes from PHB Table 17 (image supplied by owner). Ranger spell progression comes from PHB Table 18 (image supplied by owner). Bard spell progression comes from PHB Table 32 (image supplied by owner). Race height, weight, age and aging come from PHB Tables 10-12 (images supplied by owner). Strength table comes from PHB Table 1 (image supplied by owner). Dexterity table comes from PHB Table 2 (image supplied by owner). Intelligence, Wisdom and Charisma tables come from PHB Tables 4-6 (images supplied by owner). Constitution table comes from PHB Table 3 (image supplied by owner). Alignments and class requirements were supplied by the owner. Ranger ability minimums, prime requisites, alignment and XP bonus come from PHB text supplied by the owner. Paladin requirements come from PHB text supplied by the owner. Class ability minimums come from PHB Table 13 (image supplied by owner). Warrior hit dice, melee attacks (Table 15) and Fighter requirements come from PHB text and a table supplied by the owner. Mage requirements come from PHB text supplied by the owner. Illusionist requirements come from PHB text supplied by the owner. Cleric requirements come from PHB text supplied by the owner. Druid requirements come from PHB text supplied by the owner. Thief requirements come from PHB text supplied by the owner. Bard requirements come from PHB text supplied by the owner. THAC0 comes from PHB Table 53 (image supplied by owner). Saving throws come from PHB Table 60 (image supplied by owner). Base movement by race was supplied by the owner. Encumbrance and modified movement come from PHB Tables 47 and 48 (images supplied by owner). Multi-class combinations by race were supplied by the owner.",
     "sectionStatus": {
       "classGroups": "draft",
       "saveCategories": "from-sheets",
       "abilityScores": "all six ability tables done (Tables 1-6); wizard/priest-specific columns kept",
-      "races": "partial: height, weight, age and aging (Tables 10-12) done; ability limits, class restrictions, saves and abilities still needed",
+      "races": "height/weight/age (Tables 10-12), multi-class combinations and level limits entered; ability limits, single-class access, racial saves and abilities still needed",
       "classes": "all standard classes and the Illusionist entered with hit dice; monk and a few restrictions still needed",
       "xpTables": "from-sheets",
       "thac0": "from-PHB-table-53",
@@ -24,7 +24,8 @@
       "Specialist wizards: confirm they share the Wizard XP, THAC0, saves and proficiency groups (only the Illusionist is on Table 38). Thief/bard kits and other PHB variants are not covered.",
       "Alignment rule for the Monk (house class) not supplied.",
       "Half-orc: named for base movement but missing from the race tables supplied so far.",
-      "Table 48 rows for STR 2 and 3 were read from a sparse part of the image and need proofreading."
+      "Table 48 rows for STR 2 and 3 were read from a sparse part of the image and need proofreading.",
+      "Race level limits: ignored by house rule (unlimited)."
     ]
   },
   "classGroups": {
@@ -93,7 +94,8 @@
     "thief": {
       "name": "Thief",
       "sheetNames": [
-        "Thief"
+        "Thief",
+        "Theif"
       ]
     },
     "bard": {
@@ -1942,7 +1944,7 @@
     }
   },
   "races": {
-    "status": "partial",
+    "status": "partial: height/weight/age, multi-class combinations and level limits entered; ability limits, class access, saving throw bonuses and racial abilities still needed",
     "expects": "human, dwarf, elf, gnome, halfElf, halfling. Per race: abilityMin/abilityMax per ability, abilityModifiers, allowedClasses with level limits, allowedMultiClasses, racialSaveBonuses, infravision, ageTable, heightWeightTable, racialAbilities (text).",
     "physicalTraits": {
       "source": "PHB Table 10: Average Height and Weight, Table 11: Age, Table 12: Aging Effects (images supplied by owner)",
@@ -2310,10 +2312,513 @@
     ],
     "stillNeeded": [
       "Ability score minimums and maximums and racial ability modifiers for each race.",
-      "Allowed classes with level limits, and multi-class combinations.",
+      "Which single classes each race may take.",
       "Racial saving throw bonuses and racial abilities (e.g. infravision).",
-      "Half-orc: everything (only its base move is known)."
-    ]
+      "Half-orc: everything except its base move and its multi-class combinations."
+    ],
+    "levelLimits": {
+      "coreRule": "Not entered: core level limits by race and class are ignored.",
+      "houseRule": "Unlimited for every race and class (house.json levelLimits, houseRules.noLevelLimits).",
+      "status": "confirmed-by-owner"
+    },
+    "multiClass": {
+      "status": "from-owner",
+      "source": "Owner list of multi-class combinations by race (text)",
+      "rules": [
+        "Multi-class combinations are limited to the lists below for each race.",
+        "A character must meet the minimum ability scores of EVERY class in the combination (owner).",
+        "No level limits apply to any multi-class combination (owner; see house.json levelLimits)."
+      ],
+      "classIdNote": "'wizard' is the Mage. 'illusionist' is the specialist wizard (specialistWizards).",
+      "byRace": {
+        "human": [],
+        "dwarf": [
+          [
+            "fighter",
+            "thief"
+          ],
+          [
+            "fighter",
+            "cleric"
+          ]
+        ],
+        "gnome": [
+          [
+            "fighter",
+            "illusionist"
+          ],
+          [
+            "illusionist",
+            "thief"
+          ],
+          [
+            "fighter",
+            "thief"
+          ]
+        ],
+        "halfling": [
+          [
+            "fighter",
+            "thief"
+          ]
+        ],
+        "halfOrc": [
+          [
+            "fighter",
+            "thief"
+          ],
+          [
+            "fighter",
+            "cleric"
+          ],
+          [
+            "cleric",
+            "thief"
+          ]
+        ],
+        "elf": [
+          [
+            "fighter",
+            "wizard"
+          ],
+          [
+            "fighter",
+            "thief"
+          ],
+          [
+            "wizard",
+            "thief"
+          ],
+          [
+            "fighter",
+            "wizard",
+            "thief"
+          ]
+        ],
+        "halfElf": [
+          [
+            "fighter",
+            "thief"
+          ],
+          [
+            "fighter",
+            "cleric"
+          ],
+          [
+            "fighter",
+            "druid"
+          ],
+          [
+            "fighter",
+            "wizard"
+          ],
+          [
+            "cleric",
+            "ranger"
+          ],
+          [
+            "druid",
+            "ranger"
+          ],
+          [
+            "cleric",
+            "wizard"
+          ],
+          [
+            "druid",
+            "wizard"
+          ],
+          [
+            "thief",
+            "wizard"
+          ],
+          [
+            "fighter",
+            "wizard",
+            "cleric"
+          ],
+          [
+            "fighter",
+            "wizard",
+            "druid"
+          ],
+          [
+            "fighter",
+            "wizard",
+            "thief"
+          ]
+        ]
+      },
+      "humans": "No multi-class combinations listed for humans. Dual-classing is ignored (owner).",
+      "combinations": {
+        "fighter+thief": {
+          "classes": [
+            "fighter",
+            "thief"
+          ],
+          "combinedMinimums": {
+            "str": 9,
+            "dex": 9
+          },
+          "allowedAlignments": [
+            "lawfulNeutral",
+            "lawfulEvil",
+            "neutralGood",
+            "neutral",
+            "neutralEvil",
+            "chaoticGood",
+            "chaoticNeutral",
+            "chaoticEvil"
+          ],
+          "alignmentOverride": null,
+          "races": [
+            "dwarf",
+            "gnome",
+            "halfling",
+            "halfOrc",
+            "elf",
+            "halfElf"
+          ]
+        },
+        "cleric+fighter": {
+          "classes": [
+            "cleric",
+            "fighter"
+          ],
+          "combinedMinimums": {
+            "str": 9,
+            "wis": 9
+          },
+          "allowedAlignments": [
+            "lawfulGood",
+            "lawfulNeutral",
+            "lawfulEvil",
+            "neutralGood",
+            "neutral",
+            "neutralEvil",
+            "chaoticGood",
+            "chaoticNeutral",
+            "chaoticEvil"
+          ],
+          "alignmentOverride": null,
+          "races": [
+            "dwarf",
+            "halfOrc",
+            "halfElf"
+          ]
+        },
+        "fighter+illusionist": {
+          "classes": [
+            "fighter",
+            "illusionist"
+          ],
+          "combinedMinimums": {
+            "str": 9,
+            "int": 9,
+            "dex": 16
+          },
+          "allowedAlignments": [
+            "lawfulGood",
+            "lawfulNeutral",
+            "lawfulEvil",
+            "neutralGood",
+            "neutral",
+            "neutralEvil",
+            "chaoticGood",
+            "chaoticNeutral",
+            "chaoticEvil"
+          ],
+          "alignmentOverride": null,
+          "races": [
+            "gnome"
+          ]
+        },
+        "illusionist+thief": {
+          "classes": [
+            "illusionist",
+            "thief"
+          ],
+          "combinedMinimums": {
+            "int": 9,
+            "dex": 16
+          },
+          "allowedAlignments": [
+            "lawfulNeutral",
+            "lawfulEvil",
+            "neutralGood",
+            "neutral",
+            "neutralEvil",
+            "chaoticGood",
+            "chaoticNeutral",
+            "chaoticEvil"
+          ],
+          "alignmentOverride": null,
+          "races": [
+            "gnome"
+          ]
+        },
+        "cleric+thief": {
+          "classes": [
+            "cleric",
+            "thief"
+          ],
+          "combinedMinimums": {
+            "wis": 9,
+            "dex": 9
+          },
+          "allowedAlignments": [
+            "lawfulNeutral",
+            "lawfulEvil",
+            "neutralGood",
+            "neutral",
+            "neutralEvil",
+            "chaoticGood",
+            "chaoticNeutral",
+            "chaoticEvil"
+          ],
+          "alignmentOverride": null,
+          "races": [
+            "halfOrc"
+          ]
+        },
+        "fighter+wizard": {
+          "classes": [
+            "fighter",
+            "wizard"
+          ],
+          "combinedMinimums": {
+            "str": 9,
+            "int": 9
+          },
+          "allowedAlignments": [
+            "lawfulGood",
+            "lawfulNeutral",
+            "lawfulEvil",
+            "neutralGood",
+            "neutral",
+            "neutralEvil",
+            "chaoticGood",
+            "chaoticNeutral",
+            "chaoticEvil"
+          ],
+          "alignmentOverride": null,
+          "races": [
+            "elf",
+            "halfElf"
+          ]
+        },
+        "thief+wizard": {
+          "classes": [
+            "thief",
+            "wizard"
+          ],
+          "combinedMinimums": {
+            "int": 9,
+            "dex": 9
+          },
+          "allowedAlignments": [
+            "lawfulNeutral",
+            "lawfulEvil",
+            "neutralGood",
+            "neutral",
+            "neutralEvil",
+            "chaoticGood",
+            "chaoticNeutral",
+            "chaoticEvil"
+          ],
+          "alignmentOverride": null,
+          "races": [
+            "elf",
+            "halfElf"
+          ]
+        },
+        "fighter+thief+wizard": {
+          "classes": [
+            "fighter",
+            "thief",
+            "wizard"
+          ],
+          "combinedMinimums": {
+            "str": 9,
+            "int": 9,
+            "dex": 9
+          },
+          "allowedAlignments": [
+            "lawfulNeutral",
+            "lawfulEvil",
+            "neutralGood",
+            "neutral",
+            "neutralEvil",
+            "chaoticGood",
+            "chaoticNeutral",
+            "chaoticEvil"
+          ],
+          "alignmentOverride": null,
+          "races": [
+            "elf",
+            "halfElf"
+          ]
+        },
+        "druid+fighter": {
+          "classes": [
+            "druid",
+            "fighter"
+          ],
+          "combinedMinimums": {
+            "str": 9,
+            "wis": 12,
+            "cha": 15
+          },
+          "allowedAlignments": [
+            "neutral"
+          ],
+          "alignmentOverride": null,
+          "races": [
+            "halfElf"
+          ]
+        },
+        "cleric+ranger": {
+          "classes": [
+            "cleric",
+            "ranger"
+          ],
+          "combinedMinimums": {
+            "wis": 14,
+            "str": 13,
+            "dex": 13,
+            "con": 14
+          },
+          "allowedAlignments": [
+            "lawfulGood",
+            "neutralGood",
+            "chaoticGood"
+          ],
+          "alignmentOverride": null,
+          "races": [
+            "halfElf"
+          ]
+        },
+        "druid+ranger": {
+          "classes": [
+            "druid",
+            "ranger"
+          ],
+          "combinedMinimums": {
+            "wis": 14,
+            "cha": 15,
+            "str": 13,
+            "dex": 13,
+            "con": 14
+          },
+          "allowedAlignments": [
+            "neutralGood"
+          ],
+          "alignmentOverride": "alignments.multiClassOverrides",
+          "races": [
+            "halfElf"
+          ]
+        },
+        "cleric+wizard": {
+          "classes": [
+            "cleric",
+            "wizard"
+          ],
+          "combinedMinimums": {
+            "wis": 9,
+            "int": 9
+          },
+          "allowedAlignments": [
+            "lawfulGood",
+            "lawfulNeutral",
+            "lawfulEvil",
+            "neutralGood",
+            "neutral",
+            "neutralEvil",
+            "chaoticGood",
+            "chaoticNeutral",
+            "chaoticEvil"
+          ],
+          "alignmentOverride": null,
+          "races": [
+            "halfElf"
+          ]
+        },
+        "druid+wizard": {
+          "classes": [
+            "druid",
+            "wizard"
+          ],
+          "combinedMinimums": {
+            "wis": 12,
+            "cha": 15,
+            "int": 9
+          },
+          "allowedAlignments": [
+            "neutral"
+          ],
+          "alignmentOverride": null,
+          "races": [
+            "halfElf"
+          ]
+        },
+        "cleric+fighter+wizard": {
+          "classes": [
+            "cleric",
+            "fighter",
+            "wizard"
+          ],
+          "combinedMinimums": {
+            "str": 9,
+            "int": 9,
+            "wis": 9
+          },
+          "allowedAlignments": [
+            "lawfulGood",
+            "lawfulNeutral",
+            "lawfulEvil",
+            "neutralGood",
+            "neutral",
+            "neutralEvil",
+            "chaoticGood",
+            "chaoticNeutral",
+            "chaoticEvil"
+          ],
+          "alignmentOverride": null,
+          "races": [
+            "halfElf"
+          ]
+        },
+        "druid+fighter+wizard": {
+          "classes": [
+            "druid",
+            "fighter",
+            "wizard"
+          ],
+          "combinedMinimums": {
+            "str": 9,
+            "int": 9,
+            "wis": 12,
+            "cha": 15
+          },
+          "allowedAlignments": [
+            "neutral"
+          ],
+          "alignmentOverride": null,
+          "races": [
+            "halfElf"
+          ]
+        }
+      },
+      "combinedMinimumsRule": "For each ability, the highest minimum among the classes in the combination (computed in 'combinations').",
+      "alignmentRule": "Allowed alignments are the overlap of the classes' allowed alignments (computed), except where an override exists (Druid/Ranger = Neutral Good).",
+      "stillNeeded": [
+        "Which single classes each race may take (only multi-class lists were supplied).",
+        "Rounding of the divided hit dice (see house.json hitPointRules.multiClass).",
+        "Proficiency slot rule for multi-class characters, and how thief and bard skills work when combined with other classes.",
+        "Armour and spellcasting limits in combination (e.g. a mage in a combination cannot cast in armour)."
+      ],
+      "dualClassing": "ignored (confirmed by owner)"
+    }
   },
   "classes": {
     "status": "partial: ability minimums for all classes (Table 13); Fighter, Paladin, Ranger, Mage, Illusionist, Cleric and Druid requirements entered; thief and bard still needed",
@@ -3075,7 +3580,8 @@
     "convention": "xp[0] is level 1 (always 0). xp[n-1] is the XP needed to reach level n. Values are cumulative. Exception: classes with an 'xpReset' block (druid) only have xp[] up to the reset level; levels above it use thresholdsFromReset, counted from the reset XP total.",
     "multiClass": {
       "split": "equal",
-      "note": "Sheets show one XP column per class. In the app, total XP is divided equally among a character's classes; each class is looked up in its own column."
+      "note": "Sheets show one XP column per class. In the app, total XP is divided equally among a character's classes; each class is looked up in its own column.",
+      "status": "confirmed-by-owner"
     },
     "classes": {
       "fighter": {
@@ -3417,9 +3923,9 @@
       "supportingHint": "The Monk sheet's non-proficient penalty of -3 is the priest group's penalty on Table 34."
     },
     "multiClass": {
-      "status": "assumed",
+      "status": "confirmed-by-owner",
       "rule": "A multi-class character uses the best (lowest) THAC0 of his classes at their levels.",
-      "note": "Standard PHB multi-class rule; not shown on the table. Confirm."
+      "note": "Confirmed by owner: best (lowest) THAC0 of the classes."
     },
     "engineHint": "THAC0 for the sheet's 'Natural THAC0' field. The weapon combat grid's to-hit numbers for AC 10 down to 0 are THAC0 minus AC, adjusted by STR, proficiency, specialisation and magical bonuses."
   },
@@ -3855,8 +4361,9 @@
       "note": "The Monk (house class) has no saving throw group yet. Owner has said it uses the Cleric (priest) THAC0; confirm whether it also saves as a priest."
     },
     "multiClass": {
-      "status": "assumed",
-      "rule": "A multi-class character takes the best (lowest) number in each category across his classes at their levels. Standard PHB rule; not on the table. Confirm."
+      "status": "confirmed-by-owner",
+      "rule": "A multi-class character takes the best (lowest) number in each category across his classes at their levels. Standard PHB rule; not on the table. Confirm.",
+      "note": "Confirmed by owner: best (lowest) number in each category across the classes."
     },
     "modifiersElsewhere": [
       "Paladin: +2 to all saves (house.json classAbilities.paladin).",
