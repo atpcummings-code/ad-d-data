@@ -225,7 +225,8 @@
       "damageSM / damageL": "Small-Medium and Large damage as printed (e.g. '1d8', '1d6+1', '1d3-1'); null where the table prints a dash",
       "source": "Where the weapon comes from (e.g. PHB, DMGR3, Dra #189, OA), recorded as printed in the owner's weapons spreadsheet for reference only. Weapons not on the spreadsheet keep PHB (from the PHB table). Null where the spreadsheet cell is blank.",
       "armourAdjustments": "Weapon vs target Armour Class adjustment, keys '10' to '0' (spreadsheet columns 10-0). Melee/hand-held values are on the weapon (or on each mode); thrown/missile values are on the missileRanges row. Number to hit for a target AC = THAC0 - AC - adjustment (see house.json houseRules weaponVsArmourClassToHit). AC below 0 has no column.",
-      "missileRanges.rows": "Each row is a weapon (plus ammunition where relevant) as on the spreadsheet: rof, rangeYards (spreadsheet ranges are in units of 10 yards, checked against PHB Table 45), damageSM/damageL for that combination, armourAdjustments, pointBlank, strengthBonusApplies, additionalSpecialisationSlots, racialAttackBonus {elf, halfling} (1 = +1 to attack rolls)."
+      "missileRanges.rows": "Each row is a weapon (plus ammunition where relevant) as on the spreadsheet: rof, rangeYards (spreadsheet ranges are in units of 10 yards, checked against PHB Table 45), damageSM/damageL for that combination, armourAdjustments, pointBlank, strengthBonusApplies, additionalSpecialisationSlots, racialAttackBonus {elf, halfling} (1 = +1 to attack rolls).",
+      "usage": "Where the weapon appears in the app: 'melee' (hand-held list), 'missile' (missile/thrown list), or both for weapons that can be used either way (dagger, hand axe, javelin, spear, club, knife, harpoon, melee warhammer is melee only). Melee armour adjustments are on the weapon; missile ones are on its missileRanges row."
     },
     "items": [
       {
@@ -257,7 +258,10 @@
           "coin": "sp",
           "costInCp": 50
         },
-        "source": "PHB"
+        "source": "PHB",
+        "usage": [
+          "missile"
+        ]
       },
       {
         "id": "battleAxe",
@@ -289,7 +293,10 @@
           "2": -3,
           "1": -4,
           "0": -5
-        }
+        },
+        "usage": [
+          "melee"
+        ]
       },
       {
         "id": "blowgun",
@@ -306,7 +313,10 @@
         "speedFactor": 5,
         "damageSM": null,
         "damageL": null,
-        "source": "PHB"
+        "source": "PHB",
+        "usage": [
+          "missile"
+        ]
       },
       {
         "id": "barbedDart",
@@ -327,7 +337,10 @@
         "speedFactor": null,
         "damageSM": "1d3",
         "damageL": "1d2",
-        "source": "PHB"
+        "source": "PHB",
+        "usage": [
+          "missile"
+        ]
       },
       {
         "id": "needle",
@@ -348,7 +361,10 @@
         "speedFactor": null,
         "damageSM": "1",
         "damageL": "1",
-        "source": "PHB"
+        "source": "PHB",
+        "usage": [
+          "missile"
+        ]
       },
       {
         "id": "shortBow",
@@ -366,7 +382,10 @@
         "speedFactor": 7,
         "damageSM": null,
         "damageL": null,
-        "source": "PHB"
+        "source": "PHB",
+        "usage": [
+          "missile"
+        ]
       },
       {
         "id": "longBow",
@@ -384,7 +403,10 @@
         "speedFactor": 8,
         "damageSM": null,
         "damageL": null,
-        "source": "PHB"
+        "source": "PHB",
+        "usage": [
+          "missile"
+        ]
       },
       {
         "id": "compositeShortBow",
@@ -402,7 +424,10 @@
         "speedFactor": 6,
         "damageSM": null,
         "damageL": null,
-        "source": "PHB"
+        "source": "PHB",
+        "usage": [
+          "missile"
+        ]
       },
       {
         "id": "compositeLongBow",
@@ -420,7 +445,10 @@
         "speedFactor": 7,
         "damageSM": null,
         "damageL": null,
-        "source": "PHB"
+        "source": "PHB",
+        "usage": [
+          "missile"
+        ]
       },
       {
         "id": "flightArrow",
@@ -442,7 +470,10 @@
         "speedFactor": null,
         "damageSM": "1d6",
         "damageL": "1d6",
-        "source": "PHB"
+        "source": "PHB",
+        "usage": [
+          "missile"
+        ]
       },
       {
         "id": "sheafArrow",
@@ -464,7 +495,10 @@
         "speedFactor": null,
         "damageSM": "1d8",
         "damageL": "1d8",
-        "source": "PHB"
+        "source": "PHB",
+        "usage": [
+          "missile"
+        ]
       },
       {
         "id": "club",
@@ -492,7 +526,11 @@
           "2": -5,
           "1": -6,
           "0": -7
-        }
+        },
+        "usage": [
+          "melee",
+          "missile"
+        ]
       },
       {
         "id": "handCrossbow",
@@ -510,7 +548,10 @@
         "speedFactor": 5,
         "damageSM": null,
         "damageL": null,
-        "source": "PHB"
+        "source": "PHB",
+        "usage": [
+          "missile"
+        ]
       },
       {
         "id": "lightCrossbow",
@@ -528,7 +569,10 @@
         "speedFactor": 7,
         "damageSM": null,
         "damageL": null,
-        "source": "PHB"
+        "source": "PHB",
+        "usage": [
+          "missile"
+        ]
       },
       {
         "id": "heavyCrossbow",
@@ -546,7 +590,10 @@
         "speedFactor": 10,
         "damageSM": null,
         "damageL": null,
-        "source": "PHB"
+        "source": "PHB",
+        "usage": [
+          "missile"
+        ]
       },
       {
         "id": "handQuarrel",
@@ -567,7 +614,10 @@
         "speedFactor": null,
         "damageSM": "1d3",
         "damageL": "1d2",
-        "source": "PHB"
+        "source": "PHB",
+        "usage": [
+          "missile"
+        ]
       },
       {
         "id": "lightQuarrel",
@@ -588,7 +638,10 @@
         "speedFactor": null,
         "damageSM": "1d4",
         "damageL": "1d4",
-        "source": "PHB"
+        "source": "PHB",
+        "usage": [
+          "missile"
+        ]
       },
       {
         "id": "heavyQuarrel",
@@ -609,7 +662,10 @@
         "speedFactor": null,
         "damageSM": "1d4+1",
         "damageL": "1d6+1",
-        "source": "PHB"
+        "source": "PHB",
+        "usage": [
+          "missile"
+        ]
       },
       {
         "id": "daggerOrDirk",
@@ -641,7 +697,11 @@
           "2": -3,
           "1": -4,
           "0": -4
-        }
+        },
+        "usage": [
+          "melee",
+          "missile"
+        ]
       },
       {
         "id": "dart",
@@ -660,7 +720,10 @@
         "speedFactor": 2,
         "damageSM": "1d3",
         "damageL": "1d2",
-        "source": "PHB"
+        "source": "PHB",
+        "usage": [
+          "missile"
+        ]
       },
       {
         "id": "footmansFlail",
@@ -692,7 +755,10 @@
           "2": 2,
           "1": 3,
           "0": 3
-        }
+        },
+        "usage": [
+          "melee"
+        ]
       },
       {
         "id": "footmansMace",
@@ -724,7 +790,10 @@
           "2": 1,
           "1": 2,
           "0": 2
-        }
+        },
+        "usage": [
+          "melee"
+        ]
       },
       {
         "id": "footmansPick",
@@ -756,7 +825,10 @@
           "2": 2,
           "1": 3,
           "0": 3
-        }
+        },
+        "usage": [
+          "melee"
+        ]
       },
       {
         "id": "handOrThrowingAxe",
@@ -788,7 +860,11 @@
           "2": -3,
           "1": -4,
           "0": -5
-        }
+        },
+        "usage": [
+          "melee",
+          "missile"
+        ]
       },
       {
         "id": "harpoon",
@@ -820,7 +896,11 @@
           "2": -2,
           "1": -2,
           "0": -3
-        }
+        },
+        "usage": [
+          "melee",
+          "missile"
+        ]
       },
       {
         "id": "horsemansFlail",
@@ -852,7 +932,10 @@
           "2": 0,
           "1": 0,
           "0": 0
-        }
+        },
+        "usage": [
+          "melee"
+        ]
       },
       {
         "id": "horsemansMace",
@@ -884,7 +967,10 @@
           "2": 1,
           "1": 2,
           "0": 2
-        }
+        },
+        "usage": [
+          "melee"
+        ]
       },
       {
         "id": "horsemansPick",
@@ -916,7 +1002,10 @@
           "2": 1,
           "1": 2,
           "0": 2
-        }
+        },
+        "usage": [
+          "melee"
+        ]
       },
       {
         "id": "javelin",
@@ -948,7 +1037,11 @@
           "2": 0,
           "1": 0,
           "0": 0
-        }
+        },
+        "usage": [
+          "melee",
+          "missile"
+        ]
       },
       {
         "id": "knife",
@@ -981,7 +1074,11 @@
           "2": -5,
           "1": -5,
           "0": -6
-        }
+        },
+        "usage": [
+          "melee",
+          "missile"
+        ]
       },
       {
         "id": "heavyHorseLance",
@@ -1020,7 +1117,10 @@
           "2": 3,
           "1": 4,
           "0": 4
-        }
+        },
+        "usage": [
+          "melee"
+        ]
       },
       {
         "id": "lightHorseLance",
@@ -1059,7 +1159,10 @@
           "2": -2,
           "1": -3,
           "0": -3
-        }
+        },
+        "usage": [
+          "melee"
+        ]
       },
       {
         "id": "joustingLance",
@@ -1085,7 +1188,10 @@
         "flags": [
           "doubleDamageFromChargingMount"
         ],
-        "source": "PHB"
+        "source": "PHB",
+        "usage": [
+          "melee"
+        ]
       },
       {
         "id": "mediumHorseLance",
@@ -1124,7 +1230,10 @@
           "2": 0,
           "1": 0,
           "0": -1
-        }
+        },
+        "usage": [
+          "melee"
+        ]
       },
       {
         "id": "mancatcher",
@@ -1160,7 +1269,10 @@
           "2": 0,
           "1": 0,
           "0": 0
-        }
+        },
+        "usage": [
+          "melee"
+        ]
       },
       {
         "id": "morningStar",
@@ -1192,7 +1304,10 @@
           "2": 0,
           "1": 0,
           "0": 0
-        }
+        },
+        "usage": [
+          "melee"
+        ]
       },
       {
         "id": "awlPike",
@@ -1231,7 +1346,10 @@
           "2": -1,
           "1": -1,
           "0": -1
-        }
+        },
+        "usage": [
+          "melee"
+        ]
       },
       {
         "id": "bardiche",
@@ -1264,7 +1382,10 @@
           "2": -2,
           "1": -2,
           "0": -3
-        }
+        },
+        "usage": [
+          "melee"
+        ]
       },
       {
         "id": "becDeCorbin",
@@ -1298,7 +1419,10 @@
           "2": 2,
           "1": 2,
           "0": 2
-        }
+        },
+        "usage": [
+          "melee"
+        ]
       },
       {
         "id": "billGuisarme",
@@ -1332,7 +1456,10 @@
           "2": 0,
           "1": 0,
           "0": 0
-        }
+        },
+        "usage": [
+          "melee"
+        ]
       },
       {
         "id": "fauchard",
@@ -1366,7 +1493,10 @@
           "2": -2,
           "1": -3,
           "0": -3
-        }
+        },
+        "usage": [
+          "melee"
+        ]
       },
       {
         "id": "fauchardFork",
@@ -1400,7 +1530,10 @@
           "2": -1,
           "1": -2,
           "0": -2
-        }
+        },
+        "usage": [
+          "melee"
+        ]
       },
       {
         "id": "glaive",
@@ -1439,7 +1572,10 @@
           "2": -1,
           "1": -2,
           "0": -2
-        }
+        },
+        "usage": [
+          "melee"
+        ]
       },
       {
         "id": "glaiveGuisarme",
@@ -1479,7 +1615,10 @@
           "2": -1,
           "1": -2,
           "0": -2
-        }
+        },
+        "usage": [
+          "melee"
+        ]
       },
       {
         "id": "guisarme",
@@ -1512,7 +1651,10 @@
           "2": -2,
           "1": -3,
           "0": -3
-        }
+        },
+        "usage": [
+          "melee"
+        ]
       },
       {
         "id": "guisarmeVoulge",
@@ -1546,7 +1688,10 @@
           "2": -1,
           "1": -2,
           "0": -2
-        }
+        },
+        "usage": [
+          "melee"
+        ]
       },
       {
         "id": "halberd",
@@ -1580,7 +1725,10 @@
           "2": 1,
           "1": 1,
           "0": 0
-        }
+        },
+        "usage": [
+          "melee"
+        ]
       },
       {
         "id": "hookFauchard",
@@ -1614,7 +1762,10 @@
           "2": -2,
           "1": -3,
           "0": -3
-        }
+        },
+        "usage": [
+          "melee"
+        ]
       },
       {
         "id": "lucernHammer",
@@ -1654,7 +1805,10 @@
           "2": 1,
           "1": 1,
           "0": 0
-        }
+        },
+        "usage": [
+          "melee"
+        ]
       },
       {
         "id": "militaryFork",
@@ -1693,7 +1847,10 @@
           "2": -2,
           "1": -3,
           "0": -3
-        }
+        },
+        "usage": [
+          "melee"
+        ]
       },
       {
         "id": "partisan",
@@ -1732,7 +1889,10 @@
           "2": 0,
           "1": 0,
           "0": 0
-        }
+        },
+        "usage": [
+          "melee"
+        ]
       },
       {
         "id": "ranseur",
@@ -1771,7 +1931,10 @@
           "2": -2,
           "1": -3,
           "0": -3
-        }
+        },
+        "usage": [
+          "melee"
+        ]
       },
       {
         "id": "spetum",
@@ -1810,7 +1973,10 @@
           "2": -2,
           "1": -2,
           "0": -2
-        }
+        },
+        "usage": [
+          "melee"
+        ]
       },
       {
         "id": "voulge",
@@ -1843,7 +2009,10 @@
           "2": -1,
           "1": -2,
           "0": -2
-        }
+        },
+        "usage": [
+          "melee"
+        ]
       },
       {
         "id": "quarterstaff",
@@ -1871,7 +2040,10 @@
           "2": -7,
           "1": -8,
           "0": -9
-        }
+        },
+        "usage": [
+          "melee"
+        ]
       },
       {
         "id": "scourge",
@@ -1888,7 +2060,10 @@
         "speedFactor": 5,
         "damageSM": "1d4",
         "damageL": "1d2",
-        "source": "PHB"
+        "source": "PHB",
+        "usage": [
+          "melee"
+        ]
       },
       {
         "id": "sickle",
@@ -1920,7 +2095,10 @@
           "2": -4,
           "1": -4,
           "0": -5
-        }
+        },
+        "usage": [
+          "melee"
+        ]
       },
       {
         "id": "sling",
@@ -1939,7 +2117,10 @@
         "speedFactor": 6,
         "damageSM": null,
         "damageL": null,
-        "source": "PHB"
+        "source": "PHB",
+        "usage": [
+          "missile"
+        ]
       },
       {
         "id": "slingBullet",
@@ -1960,7 +2141,10 @@
         "speedFactor": null,
         "damageSM": "1d4+1",
         "damageL": "1d4",
-        "source": "PHB"
+        "source": "PHB",
+        "usage": [
+          "missile"
+        ]
       },
       {
         "id": "slingStone",
@@ -1977,7 +2161,10 @@
         "speedFactor": null,
         "damageSM": "1d4",
         "damageL": "1d4",
-        "source": "PHB"
+        "source": "PHB",
+        "usage": [
+          "missile"
+        ]
       },
       {
         "id": "spear",
@@ -2009,7 +2196,11 @@
           "2": -2,
           "1": -2,
           "0": -2
-        }
+        },
+        "usage": [
+          "melee",
+          "missile"
+        ]
       },
       {
         "id": "staffSling",
@@ -2039,7 +2230,11 @@
           "2": 0,
           "1": 0,
           "0": 0
-        }
+        },
+        "usage": [
+          "melee",
+          "missile"
+        ]
       },
       {
         "id": "bastardSword",
@@ -2101,7 +2296,10 @@
             }
           }
         ],
-        "source": "PHB"
+        "source": "PHB",
+        "usage": [
+          "melee"
+        ]
       },
       {
         "id": "broadSword",
@@ -2134,7 +2332,10 @@
           "2": -3,
           "1": -4,
           "0": -5
-        }
+        },
+        "usage": [
+          "melee"
+        ]
       },
       {
         "id": "khopesh",
@@ -2167,7 +2368,10 @@
           "2": -5,
           "1": -6,
           "0": -7
-        }
+        },
+        "usage": [
+          "melee"
+        ]
       },
       {
         "id": "longSword",
@@ -2200,7 +2404,10 @@
           "2": -2,
           "1": -3,
           "0": -4
-        }
+        },
+        "usage": [
+          "melee"
+        ]
       },
       {
         "id": "scimitar",
@@ -2233,7 +2440,10 @@
           "2": -3,
           "1": -3,
           "0": -4
-        }
+        },
+        "usage": [
+          "melee"
+        ]
       },
       {
         "id": "shortSword",
@@ -2266,7 +2476,10 @@
           "2": -3,
           "1": -4,
           "0": -5
-        }
+        },
+        "usage": [
+          "melee"
+        ]
       },
       {
         "id": "twoHandedSword",
@@ -2299,7 +2512,10 @@
           "2": 2,
           "1": 2,
           "0": 2
-        }
+        },
+        "usage": [
+          "melee"
+        ]
       },
       {
         "id": "trident",
@@ -2331,7 +2547,10 @@
           "2": -3,
           "1": -3,
           "0": -4
-        }
+        },
+        "usage": [
+          "melee"
+        ]
       },
       {
         "id": "warhammer",
@@ -2363,7 +2582,33 @@
           "2": 0,
           "1": 0,
           "0": 0
-        }
+        },
+        "usage": [
+          "melee"
+        ]
+      },
+      {
+        "id": "warhammerThrown",
+        "name": "Warhammer (Thrown)",
+        "kind": "weapon",
+        "cost": {
+          "amount": 2,
+          "coin": "gp",
+          "costInCp": 200
+        },
+        "weightLbs": 6,
+        "size": "M",
+        "type": [
+          "B"
+        ],
+        "speedFactor": 4,
+        "damageSM": "1d4+1",
+        "damageL": "1d4",
+        "source": "PHB",
+        "note": "Hand-thrown warhammer (PHB Table 45 'Hammer'); stats from the Missile Weapons tab 'Warhammer' row. A separate missile weapon from the melee Warhammer.",
+        "usage": [
+          "missile"
+        ]
       },
       {
         "id": "whip",
@@ -2393,7 +2638,10 @@
           "2": -10,
           "1": -12,
           "0": -14
-        }
+        },
+        "usage": [
+          "melee"
+        ]
       },
       {
         "id": "beardedAxe",
@@ -2425,7 +2673,10 @@
           "2": -3,
           "1": -4,
           "0": -5
-        }
+        },
+        "usage": [
+          "melee"
+        ]
       },
       {
         "id": "boStick",
@@ -2457,7 +2708,10 @@
           "2": -9,
           "1": -11,
           "0": -13
-        }
+        },
+        "usage": [
+          "melee"
+        ]
       },
       {
         "id": "spikedBuckler",
@@ -2489,7 +2743,10 @@
           "2": -5,
           "1": -6,
           "0": -7
-        }
+        },
+        "usage": [
+          "melee"
+        ]
       },
       {
         "id": "chain",
@@ -2521,7 +2778,10 @@
           "2": -7,
           "1": -8,
           "0": -8
-        }
+        },
+        "usage": [
+          "melee"
+        ]
       },
       {
         "id": "dwarvenWarClub",
@@ -2553,7 +2813,10 @@
           "2": 1,
           "1": 2,
           "0": 2
-        }
+        },
+        "usage": [
+          "melee"
+        ]
       },
       {
         "id": "greatClub",
@@ -2585,7 +2848,10 @@
           "2": 1,
           "1": 2,
           "0": 2
-        }
+        },
+        "usage": [
+          "melee"
+        ]
       },
       {
         "id": "dwarvenBattleAxeTwoHanded",
@@ -2617,7 +2883,10 @@
           "2": -1,
           "1": -1,
           "0": -2
-        }
+        },
+        "usage": [
+          "melee"
+        ]
       },
       {
         "id": "joStick",
@@ -2649,7 +2918,10 @@
           "2": -8,
           "1": -9,
           "0": -10
-        }
+        },
+        "usage": [
+          "melee"
+        ]
       },
       {
         "id": "lasso",
@@ -2680,7 +2952,10 @@
           "1": 0,
           "0": 0
         },
-        "note": "Thief/Ranger-type entangling weapon. Resolves the earlier open issue (lasso not in the PHB weapons table)."
+        "note": "Thief/Ranger-type entangling weapon. Resolves the earlier open issue (lasso not in the PHB weapons table).",
+        "usage": [
+          "melee"
+        ]
       },
       {
         "id": "greatMace",
@@ -2712,7 +2987,10 @@
           "2": 2,
           "1": 3,
           "0": 3
-        }
+        },
+        "usage": [
+          "melee"
+        ]
       },
       {
         "id": "doubleBallMorningStar",
@@ -2744,7 +3022,10 @@
           "2": 0,
           "1": 0,
           "0": -1
-        }
+        },
+        "usage": [
+          "melee"
+        ]
       },
       {
         "id": "naginata",
@@ -2777,7 +3058,10 @@
           "2": -1,
           "1": -2,
           "0": -2
-        }
+        },
+        "usage": [
+          "melee"
+        ]
       },
       {
         "id": "sap",
@@ -2809,7 +3093,10 @@
           "2": -12,
           "1": -13,
           "0": -14
-        }
+        },
+        "usage": [
+          "melee"
+        ]
       },
       {
         "id": "dwarvenClaymore",
@@ -2840,7 +3127,10 @@
           "2": 0,
           "1": 0,
           "0": -1
-        }
+        },
+        "usage": [
+          "melee"
+        ]
       },
       {
         "id": "falchion",
@@ -2873,7 +3163,10 @@
           "2": -2,
           "1": -2,
           "0": -3
-        }
+        },
+        "usage": [
+          "melee"
+        ]
       },
       {
         "id": "katana",
@@ -2907,7 +3200,10 @@
           "2": -3,
           "1": -4,
           "0": -5
-        }
+        },
+        "usage": [
+          "melee"
+        ]
       },
       {
         "id": "sabre",
@@ -2940,7 +3236,10 @@
           "2": -3,
           "1": -3,
           "0": -4
-        }
+        },
+        "usage": [
+          "melee"
+        ]
       },
       {
         "id": "warhammerTwoHanded",
@@ -2972,7 +3271,10 @@
           "2": 1,
           "1": 1,
           "0": 1
-        }
+        },
+        "usage": [
+          "melee"
+        ]
       },
       {
         "id": "claymore",
@@ -3036,6 +3338,9 @@
             "source": null,
             "sourceNote": "Source cell is blank for the two-handed row in the spreadsheet; the one-handed row says DMGR3."
           }
+        ],
+        "usage": [
+          "melee"
         ]
       },
       {
@@ -3055,7 +3360,10 @@
         "speedFactor": 2,
         "damageSM": "1d4",
         "damageL": "1d3",
-        "source": "Dra #189"
+        "source": "Dra #189",
+        "usage": [
+          "missile"
+        ]
       },
       {
         "id": "crossbowDisk",
@@ -3074,7 +3382,10 @@
         "damageL": null,
         "source": "Dra #169",
         "parent": "Crossbow",
-        "note": "Ammunition not named in the spreadsheet; damage is on the Table 45 row."
+        "note": "Ammunition not named in the spreadsheet; damage is on the Table 45 row.",
+        "usage": [
+          "missile"
+        ]
       },
       {
         "id": "crossbowDoubled",
@@ -3093,7 +3404,10 @@
         "damageL": null,
         "source": "Dra #169",
         "parent": "Crossbow",
-        "note": "Ammunition not named in the spreadsheet; damage is on the Table 45 row."
+        "note": "Ammunition not named in the spreadsheet; damage is on the Table 45 row.",
+        "usage": [
+          "missile"
+        ]
       },
       {
         "id": "shurikenSpike",
@@ -3112,7 +3426,10 @@
         "speedFactor": 2,
         "damageSM": "1d4",
         "damageL": "1d3",
-        "source": "OA"
+        "source": "OA",
+        "usage": [
+          "missile"
+        ]
       },
       {
         "id": "shurikenStarSmall",
@@ -3128,7 +3445,10 @@
         "damageSM": "1d4",
         "damageL": "1d4",
         "source": "OA",
-        "costNote": "Cost cell blank in the spreadsheet."
+        "costNote": "Cost cell blank in the spreadsheet.",
+        "usage": [
+          "missile"
+        ]
       },
       {
         "id": "shurikenStarLarge",
@@ -3144,7 +3464,10 @@
         "damageSM": "1d6",
         "damageL": "1d4",
         "source": "OA",
-        "costNote": "Cost cell blank in the spreadsheet."
+        "costNote": "Cost cell blank in the spreadsheet.",
+        "usage": [
+          "missile"
+        ]
       },
       {
         "id": "throwingOrb",
@@ -3163,7 +3486,10 @@
         "speedFactor": 2,
         "damageSM": "1d4",
         "damageL": "1d3",
-        "source": "PHB"
+        "source": "PHB",
+        "usage": [
+          "missile"
+        ]
       }
     ],
     "missileRanges": {
@@ -3813,21 +4139,8 @@
         {
           "id": "warhammerThrown",
           "label": "Warhammer (Thrown)",
-          "name": "Warhammer (Thrown)",
-          "kind": "weapon",
-          "weaponId": null,
+          "weaponId": "warhammerThrown",
           "ammunitionId": null,
-          "cost": {
-            "amount": 2,
-            "coin": "gp",
-            "costInCp": 200
-          },
-          "weightLbs": 6,
-          "size": "M",
-          "type": [
-            "B"
-          ],
-          "speedFactor": 4,
           "rof": {
             "text": "1",
             "shots": 1,
@@ -3838,7 +4151,7 @@
             "medium": 20,
             "long": 30
           },
-          "note": "Thrown warhammer (PHB Table 45 'Hammer'). Lives only in the missile weapons section and uses the Missile Weapons tab 'Warhammer' row of the spreadsheet. Not linked to the melee warhammer item.",
+          "note": "Table 45 'Hammer' = Warhammer (Thrown). Not linked to the melee warhammer.",
           "source": "PHB",
           "damageSM": "1d4+1",
           "damageL": "1d4",
@@ -4642,7 +4955,7 @@
       "Spreadsheet missile rows for bows, blowgun and slings combine a launcher with its ammunition. Launcher weight, size and cost were only changed where the row clearly applies to the launcher.",
       "Claymore two-handed row has a blank Source cell; Dwarven claymore cost is printed '**' with no value.",
       "Javelin range on the spreadsheet (30/60/90 yards) differs from PHB Table 45 (20/40/60); Table 45 kept in rangeYards, spreadsheet values in rangeSheetUnitsOf10Yards. Decision needed.",
-      "Warhammer (Thrown) is a missile weapons entry only (missileRanges.rows id warhammerThrown, with its own cost, weight, size, type, speed factor and damage), not an item in the melee list."
+      "Warhammer (Thrown) is an item with usage ['missile'] only (and a missileRanges row), so it is not in the melee list. Every item now has a usage field."
     ]
   },
   "armour": {
