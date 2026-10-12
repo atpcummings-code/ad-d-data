@@ -8110,6 +8110,19 @@
         },
         "weightLbs": 0.6,
         "source": "owner-supplied"
+      },
+      {
+        "id": "potionBandolierLeatherPadded",
+        "name": "Potion bandolier, Leather padded",
+        "category": "miscellaneous",
+        "cost": {
+          "amount": 5,
+          "coin": "gp",
+          "costInCp": 500
+        },
+        "weightLbs": 2,
+        "source": "owner-added",
+        "note": "Not in the PHB equipment table; cost and weight supplied by the owner."
       }
     ],
     "proofreadingNote": "Transcribed from images by Claude. Please spot-check prices and weights against your book before relying on them."
