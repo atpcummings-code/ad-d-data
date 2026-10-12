@@ -13,7 +13,8 @@
       "weightLbs": "Weight in pounds. Potions/oils and wands 0.1, rods 3.5, staves 5 (owner-set). Weapons take the weight of the named weapon in gear.json; null where the weapon type is not determinate or has no gear.json equivalent (never guessed). Where several gear.json items could apply (e.g. Arrow, Bolt) a value is given only if they all agree.",
       "speedFactor": "Weapons only. speedFactorBase = speed factor of the named weapon in gear.json; plus = the magical plus; speedFactor = speedFactorBase minus plus (owner rule, e.g. long sword 5 becomes 4 at +1). Minimum 0 (owner rule): a result below 0 is stored as 0. Table 108 entries have no plus yet, so only speedFactorBase is given and speedFactor is null until the plus is known. Ammunition has no speed factor. gearRef names the gear.json weapon(s) used; mappingAssumption flags a judgement.",
       "armourWeight": "Magical armour weighs the same as its mundane counterpart in gear.json (owner rule), referenced by gearRef. Empty where the base armour type is not fixed or has no gear.json equivalent.",
-      "extraItems": "Items added by the owner that are not on the printed table (no die roll, roll null). source 'owner-added'. valueGp = gold piece value (new field; not printed on the tables). hasDescription false until description text is supplied."
+      "extraItems": "Items added by the owner that are not on the printed table (no die roll, roll null). source 'owner-added'. valueGp = gold piece value (new field; not printed on the tables). hasDescription false until description text is supplied.",
+      "variants": "Items whose version is fixed once by a random roll are stored as one entry per possible version. Each variant row keeps the parent's table roll, has id = parent id + variant key, variantOf = parent id and variant = {die, roll [from,to] on the item's own die, label}. Variant xp, weightLbs, plus and speedFactor are filled where the item text gives them. The generic entry is removed. nameMarker footnotes about 'type determined by die roll' no longer apply to variant rows. Items not expanded are listed in variantsNotExpanded."
     },
     "typos": {
       "Gauntets of Fumbling": "corrected to Gauntlets of Fumbling",
@@ -25,7 +26,10 @@
       "index": "magic-items.json (this file): tables, XP, restrictions, support tables",
       "descriptions": "magic-item-descriptions.json: description text keyed by item id, general rule sections (generalRuleTitles[].key is the index into generalRules)"
     },
-    "removedByOwner": "Tables 88, 90, 105, 106, 109, 111-119 and their related information were removed at the owner's request (category roll, scrolls, armour type and adjustment, attack roll adjustment, potion compatibility, spell failure, intelligent weapon tables, and the related general rules text)."
+    "removedByOwner": "Tables 88, 90, 105, 106, 109, 111-119 and their related information were removed at the owner's request (category roll, scrolls, armour type and adjustment, attack roll adjustment, potion compatibility, spell failure, intelligent weapon tables, and the related general rules text).",
+    "variantsNotExpanded": {
+      "perUseOrContents": "Not expanded (outside the fixed-at-creation scope): Wand of Wonder, Iron Flask, Robe of Useful Items, Bag of Tricks, Beaker of Plentiful Potions, Necklace of Prayer Beads, Boots of Varied Tracks, Book of Infinite Spells, Crystal Ball, Figurines of Wondrous Power, Quaal's Feather Token, ring secondary-power tables (Clumsiness, Contrariness, Weakness), Spell Storing, Staff of Power."
+    }
   },
   "tables": {
     "89": {
@@ -46,13 +50,147 @@
                 1,
                 1
               ],
-              "nameMarker": "*",
-              "name": "Animal Control",
+              "name": "Animal Control (Mammal/Marsupial)",
               "xp": 250,
               "xpPrinted": "250",
-              "id": "potions.animalControl",
+              "id": "potions.animalControlMammal",
               "hasDescription": true,
-              "weightLbs": 0.1
+              "weightLbs": 0.1,
+              "variantOf": "potions.animalControl",
+              "variant": {
+                "die": "d20",
+                "roll": [
+                  1,
+                  4
+                ],
+                "label": "Mammal/Marsupial"
+              }
+            },
+            {
+              "roll": [
+                1,
+                1
+              ],
+              "name": "Animal Control (Avian)",
+              "xp": 250,
+              "xpPrinted": "250",
+              "id": "potions.animalControlAvian",
+              "hasDescription": true,
+              "weightLbs": 0.1,
+              "variantOf": "potions.animalControl",
+              "variant": {
+                "die": "d20",
+                "roll": [
+                  5,
+                  8
+                ],
+                "label": "Avian"
+              }
+            },
+            {
+              "roll": [
+                1,
+                1
+              ],
+              "name": "Animal Control (Reptile/Amphibian)",
+              "xp": 250,
+              "xpPrinted": "250",
+              "id": "potions.animalControlReptile",
+              "hasDescription": true,
+              "weightLbs": 0.1,
+              "variantOf": "potions.animalControl",
+              "variant": {
+                "die": "d20",
+                "roll": [
+                  9,
+                  12
+                ],
+                "label": "Reptile/Amphibian"
+              }
+            },
+            {
+              "roll": [
+                1,
+                1
+              ],
+              "name": "Animal Control (Fish)",
+              "xp": 250,
+              "xpPrinted": "250",
+              "id": "potions.animalControlFish",
+              "hasDescription": true,
+              "weightLbs": 0.1,
+              "variantOf": "potions.animalControl",
+              "variant": {
+                "die": "d20",
+                "roll": [
+                  13,
+                  15
+                ],
+                "label": "Fish"
+              }
+            },
+            {
+              "roll": [
+                1,
+                1
+              ],
+              "name": "Animal Control (Mammal/Marsupial/Avian)",
+              "xp": 250,
+              "xpPrinted": "250",
+              "id": "potions.animalControlMammalAvian",
+              "hasDescription": true,
+              "weightLbs": 0.1,
+              "variantOf": "potions.animalControl",
+              "variant": {
+                "die": "d20",
+                "roll": [
+                  16,
+                  17
+                ],
+                "label": "Mammal/Marsupial/Avian"
+              }
+            },
+            {
+              "roll": [
+                1,
+                1
+              ],
+              "name": "Animal Control (Reptile/Amphibian/Fish)",
+              "xp": 250,
+              "xpPrinted": "250",
+              "id": "potions.animalControlReptileFish",
+              "hasDescription": true,
+              "weightLbs": 0.1,
+              "variantOf": "potions.animalControl",
+              "variant": {
+                "die": "d20",
+                "roll": [
+                  18,
+                  19
+                ],
+                "label": "Reptile/Amphibian/Fish"
+              }
+            },
+            {
+              "roll": [
+                1,
+                1
+              ],
+              "name": "Animal Control (All)",
+              "xp": 250,
+              "xpPrinted": "250",
+              "id": "potions.animalControlAll",
+              "hasDescription": true,
+              "weightLbs": 0.1,
+              "variantOf": "potions.animalControl",
+              "variant": {
+                "die": "d20",
+                "roll": [
+                  20,
+                  20
+                ],
+                "label": "All"
+              }
             },
             {
               "roll": [
@@ -120,13 +258,252 @@
                 8,
                 8
               ],
-              "nameMarker": "*",
-              "name": "Dragon Control",
+              "name": "Dragon Control (White)",
               "xp": 700,
               "xpPrinted": "700",
-              "id": "potions.dragonControl",
+              "id": "potions.dragonControlWhite",
               "hasDescription": true,
-              "weightLbs": 0.1
+              "weightLbs": 0.1,
+              "variantOf": "potions.dragonControl",
+              "variant": {
+                "die": "d20",
+                "roll": [
+                  1,
+                  2
+                ],
+                "label": "White"
+              }
+            },
+            {
+              "roll": [
+                8,
+                8
+              ],
+              "name": "Dragon Control (Black)",
+              "xp": 700,
+              "xpPrinted": "700",
+              "id": "potions.dragonControlBlack",
+              "hasDescription": true,
+              "weightLbs": 0.1,
+              "variantOf": "potions.dragonControl",
+              "variant": {
+                "die": "d20",
+                "roll": [
+                  3,
+                  4
+                ],
+                "label": "Black"
+              }
+            },
+            {
+              "roll": [
+                8,
+                8
+              ],
+              "name": "Dragon Control (Green)",
+              "xp": 700,
+              "xpPrinted": "700",
+              "id": "potions.dragonControlGreen",
+              "hasDescription": true,
+              "weightLbs": 0.1,
+              "variantOf": "potions.dragonControl",
+              "variant": {
+                "die": "d20",
+                "roll": [
+                  5,
+                  7
+                ],
+                "label": "Green"
+              }
+            },
+            {
+              "roll": [
+                8,
+                8
+              ],
+              "name": "Dragon Control (Blue)",
+              "xp": 700,
+              "xpPrinted": "700",
+              "id": "potions.dragonControlBlue",
+              "hasDescription": true,
+              "weightLbs": 0.1,
+              "variantOf": "potions.dragonControl",
+              "variant": {
+                "die": "d20",
+                "roll": [
+                  8,
+                  9
+                ],
+                "label": "Blue"
+              }
+            },
+            {
+              "roll": [
+                8,
+                8
+              ],
+              "name": "Dragon Control (Red)",
+              "xp": 700,
+              "xpPrinted": "700",
+              "id": "potions.dragonControlRed",
+              "hasDescription": true,
+              "weightLbs": 0.1,
+              "variantOf": "potions.dragonControl",
+              "variant": {
+                "die": "d20",
+                "roll": [
+                  10,
+                  10
+                ],
+                "label": "Red"
+              }
+            },
+            {
+              "roll": [
+                8,
+                8
+              ],
+              "name": "Dragon Control (Brass)",
+              "xp": 700,
+              "xpPrinted": "700",
+              "id": "potions.dragonControlBrass",
+              "hasDescription": true,
+              "weightLbs": 0.1,
+              "variantOf": "potions.dragonControl",
+              "variant": {
+                "die": "d20",
+                "roll": [
+                  11,
+                  12
+                ],
+                "label": "Brass"
+              }
+            },
+            {
+              "roll": [
+                8,
+                8
+              ],
+              "name": "Dragon Control (Copper)",
+              "xp": 700,
+              "xpPrinted": "700",
+              "id": "potions.dragonControlCopper",
+              "hasDescription": true,
+              "weightLbs": 0.1,
+              "variantOf": "potions.dragonControl",
+              "variant": {
+                "die": "d20",
+                "roll": [
+                  13,
+                  14
+                ],
+                "label": "Copper"
+              }
+            },
+            {
+              "roll": [
+                8,
+                8
+              ],
+              "name": "Dragon Control (Bronze)",
+              "xp": 700,
+              "xpPrinted": "700",
+              "id": "potions.dragonControlBronze",
+              "hasDescription": true,
+              "weightLbs": 0.1,
+              "variantOf": "potions.dragonControl",
+              "variant": {
+                "die": "d20",
+                "roll": [
+                  15,
+                  15
+                ],
+                "label": "Bronze"
+              }
+            },
+            {
+              "roll": [
+                8,
+                8
+              ],
+              "name": "Dragon Control (Silver)",
+              "xp": 700,
+              "xpPrinted": "700",
+              "id": "potions.dragonControlSilver",
+              "hasDescription": true,
+              "weightLbs": 0.1,
+              "variantOf": "potions.dragonControl",
+              "variant": {
+                "die": "d20",
+                "roll": [
+                  16,
+                  16
+                ],
+                "label": "Silver"
+              }
+            },
+            {
+              "roll": [
+                8,
+                8
+              ],
+              "name": "Dragon Control (Gold)",
+              "xp": 700,
+              "xpPrinted": "700",
+              "id": "potions.dragonControlGold",
+              "hasDescription": true,
+              "weightLbs": 0.1,
+              "variantOf": "potions.dragonControl",
+              "variant": {
+                "die": "d20",
+                "roll": [
+                  17,
+                  17
+                ],
+                "label": "Gold"
+              }
+            },
+            {
+              "roll": [
+                8,
+                8
+              ],
+              "name": "Dragon Control (Evil)",
+              "xp": 700,
+              "xpPrinted": "700",
+              "id": "potions.dragonControlEvil",
+              "hasDescription": true,
+              "weightLbs": 0.1,
+              "variantOf": "potions.dragonControl",
+              "variant": {
+                "die": "d20",
+                "roll": [
+                  18,
+                  19
+                ],
+                "label": "Evil"
+              }
+            },
+            {
+              "roll": [
+                8,
+                8
+              ],
+              "name": "Dragon Control (Good)",
+              "xp": 700,
+              "xpPrinted": "700",
+              "id": "potions.dragonControlGood",
+              "hasDescription": true,
+              "weightLbs": 0.1,
+              "variantOf": "potions.dragonControl",
+              "variant": {
+                "die": "d20",
+                "roll": [
+                  20,
+                  20
+                ],
+                "label": "Good"
+              }
             },
             {
               "roll": [
@@ -261,13 +638,126 @@
                 1,
                 1
               ],
-              "nameMarker": "*",
-              "name": "Giant Control",
+              "name": "Giant Control (Hill Giant)",
               "xp": 600,
               "xpPrinted": "600",
-              "id": "potions.giantControl",
+              "id": "potions.giantControlHill",
               "hasDescription": true,
-              "weightLbs": 0.1
+              "weightLbs": 0.1,
+              "variantOf": "potions.giantControl",
+              "variant": {
+                "die": "d20",
+                "roll": [
+                  1,
+                  5
+                ],
+                "label": "Hill Giant"
+              }
+            },
+            {
+              "roll": [
+                1,
+                1
+              ],
+              "name": "Giant Control (Stone Giant)",
+              "xp": 600,
+              "xpPrinted": "600",
+              "id": "potions.giantControlStone",
+              "hasDescription": true,
+              "weightLbs": 0.1,
+              "variantOf": "potions.giantControl",
+              "variant": {
+                "die": "d20",
+                "roll": [
+                  6,
+                  9
+                ],
+                "label": "Stone Giant"
+              }
+            },
+            {
+              "roll": [
+                1,
+                1
+              ],
+              "name": "Giant Control (Frost Giant)",
+              "xp": 600,
+              "xpPrinted": "600",
+              "id": "potions.giantControlFrost",
+              "hasDescription": true,
+              "weightLbs": 0.1,
+              "variantOf": "potions.giantControl",
+              "variant": {
+                "die": "d20",
+                "roll": [
+                  10,
+                  13
+                ],
+                "label": "Frost Giant"
+              }
+            },
+            {
+              "roll": [
+                1,
+                1
+              ],
+              "name": "Giant Control (Fire Giant)",
+              "xp": 600,
+              "xpPrinted": "600",
+              "id": "potions.giantControlFire",
+              "hasDescription": true,
+              "weightLbs": 0.1,
+              "variantOf": "potions.giantControl",
+              "variant": {
+                "die": "d20",
+                "roll": [
+                  14,
+                  17
+                ],
+                "label": "Fire Giant"
+              }
+            },
+            {
+              "roll": [
+                1,
+                1
+              ],
+              "name": "Giant Control (Cloud Giant)",
+              "xp": 600,
+              "xpPrinted": "600",
+              "id": "potions.giantControlCloud",
+              "hasDescription": true,
+              "weightLbs": 0.1,
+              "variantOf": "potions.giantControl",
+              "variant": {
+                "die": "d20",
+                "roll": [
+                  18,
+                  19
+                ],
+                "label": "Cloud Giant"
+              }
+            },
+            {
+              "roll": [
+                1,
+                1
+              ],
+              "name": "Giant Control (Storm Giant)",
+              "xp": 600,
+              "xpPrinted": "600",
+              "id": "potions.giantControlStorm",
+              "hasDescription": true,
+              "weightLbs": 0.1,
+              "variantOf": "potions.giantControl",
+              "variant": {
+                "die": "d20",
+                "roll": [
+                  20,
+                  20
+                ],
+                "label": "Storm Giant"
+              }
             },
             {
               "roll": [
@@ -329,13 +819,168 @@
                 7,
                 7
               ],
-              "nameMarker": "*",
-              "name": "Human Control",
+              "name": "Human Control (Dwarves)",
               "xp": 500,
               "xpPrinted": "500",
-              "id": "potions.humanControl",
+              "id": "potions.humanControlDwarves",
               "hasDescription": true,
-              "weightLbs": 0.1
+              "weightLbs": 0.1,
+              "variantOf": "potions.humanControl",
+              "variant": {
+                "die": "d20",
+                "roll": [
+                  1,
+                  2
+                ],
+                "label": "Dwarves"
+              }
+            },
+            {
+              "roll": [
+                7,
+                7
+              ],
+              "name": "Human Control (Elves/Half-Elves)",
+              "xp": 500,
+              "xpPrinted": "500",
+              "id": "potions.humanControlElves",
+              "hasDescription": true,
+              "weightLbs": 0.1,
+              "variantOf": "potions.humanControl",
+              "variant": {
+                "die": "d20",
+                "roll": [
+                  3,
+                  4
+                ],
+                "label": "Elves/Half-Elves"
+              }
+            },
+            {
+              "roll": [
+                7,
+                7
+              ],
+              "name": "Human Control (Gnomes)",
+              "xp": 500,
+              "xpPrinted": "500",
+              "id": "potions.humanControlGnomes",
+              "hasDescription": true,
+              "weightLbs": 0.1,
+              "variantOf": "potions.humanControl",
+              "variant": {
+                "die": "d20",
+                "roll": [
+                  5,
+                  6
+                ],
+                "label": "Gnomes"
+              }
+            },
+            {
+              "roll": [
+                7,
+                7
+              ],
+              "name": "Human Control (Halflings)",
+              "xp": 500,
+              "xpPrinted": "500",
+              "id": "potions.humanControlHalflings",
+              "hasDescription": true,
+              "weightLbs": 0.1,
+              "variantOf": "potions.humanControl",
+              "variant": {
+                "die": "d20",
+                "roll": [
+                  7,
+                  8
+                ],
+                "label": "Halflings"
+              }
+            },
+            {
+              "roll": [
+                7,
+                7
+              ],
+              "name": "Human Control (Half-Orcs)",
+              "xp": 500,
+              "xpPrinted": "500",
+              "id": "potions.humanControlHalfOrcs",
+              "hasDescription": true,
+              "weightLbs": 0.1,
+              "variantOf": "potions.humanControl",
+              "variant": {
+                "die": "d20",
+                "roll": [
+                  9,
+                  10
+                ],
+                "label": "Half-Orcs"
+              }
+            },
+            {
+              "roll": [
+                7,
+                7
+              ],
+              "name": "Human Control (Humans)",
+              "xp": 500,
+              "xpPrinted": "500",
+              "id": "potions.humanControlHumans",
+              "hasDescription": true,
+              "weightLbs": 0.1,
+              "variantOf": "potions.humanControl",
+              "variant": {
+                "die": "d20",
+                "roll": [
+                  11,
+                  16
+                ],
+                "label": "Humans"
+              }
+            },
+            {
+              "roll": [
+                7,
+                7
+              ],
+              "name": "Human Control (Humanoids)",
+              "xp": 500,
+              "xpPrinted": "500",
+              "id": "potions.humanControlHumanoids",
+              "hasDescription": true,
+              "weightLbs": 0.1,
+              "variantOf": "potions.humanControl",
+              "variant": {
+                "die": "d20",
+                "roll": [
+                  17,
+                  19
+                ],
+                "label": "Humanoids"
+              }
+            },
+            {
+              "roll": [
+                7,
+                7
+              ],
+              "name": "Human Control (Elves, Half-Elves, and Humans)",
+              "xp": 500,
+              "xpPrinted": "500",
+              "id": "potions.humanControlElvesHumans",
+              "hasDescription": true,
+              "weightLbs": 0.1,
+              "variantOf": "potions.humanControl",
+              "variant": {
+                "die": "d20",
+                "roll": [
+                  20,
+                  20
+                ],
+                "label": "Elves, Half-Elves, and Humans"
+              }
             },
             {
               "roll": [
@@ -417,13 +1062,84 @@
                 14,
                 14
               ],
-              "nameMarker": "*",
-              "name": "Oil of Elemental Invulnerability",
+              "name": "Oil of Elemental Invulnerability (Air)",
               "xp": 500,
               "xpPrinted": "500",
-              "id": "potions.oilOfElementalInvulnerability",
+              "id": "potions.oilOfElementalInvulnerabilityAir",
               "hasDescription": true,
-              "weightLbs": 0.1
+              "weightLbs": 0.1,
+              "variantOf": "potions.oilOfElementalInvulnerability",
+              "variant": {
+                "die": "d4",
+                "roll": [
+                  1,
+                  1
+                ],
+                "label": "Air"
+              }
+            },
+            {
+              "roll": [
+                14,
+                14
+              ],
+              "name": "Oil of Elemental Invulnerability (Earth)",
+              "xp": 500,
+              "xpPrinted": "500",
+              "id": "potions.oilOfElementalInvulnerabilityEarth",
+              "hasDescription": true,
+              "weightLbs": 0.1,
+              "variantOf": "potions.oilOfElementalInvulnerability",
+              "variant": {
+                "die": "d4",
+                "roll": [
+                  2,
+                  2
+                ],
+                "label": "Earth"
+              }
+            },
+            {
+              "roll": [
+                14,
+                14
+              ],
+              "name": "Oil of Elemental Invulnerability (Fire)",
+              "xp": 500,
+              "xpPrinted": "500",
+              "id": "potions.oilOfElementalInvulnerabilityFire",
+              "hasDescription": true,
+              "weightLbs": 0.1,
+              "variantOf": "potions.oilOfElementalInvulnerability",
+              "variant": {
+                "die": "d4",
+                "roll": [
+                  3,
+                  3
+                ],
+                "label": "Fire"
+              }
+            },
+            {
+              "roll": [
+                14,
+                14
+              ],
+              "name": "Oil of Elemental Invulnerability (Water)",
+              "xp": 500,
+              "xpPrinted": "500",
+              "id": "potions.oilOfElementalInvulnerabilityWater",
+              "hasDescription": true,
+              "weightLbs": 0.1,
+              "variantOf": "potions.oilOfElementalInvulnerability",
+              "variant": {
+                "die": "d4",
+                "roll": [
+                  4,
+                  4
+                ],
+                "label": "Water"
+              }
             },
             {
               "roll": [
@@ -671,13 +1387,210 @@
                 16,
                 16
               ],
-              "nameMarker": "*",
-              "name": "Undead Control",
+              "name": "Undead Control (Ghasts)",
               "xp": 700,
               "xpPrinted": "700",
-              "id": "potions.undeadControl",
+              "id": "potions.undeadControlGhasts",
               "hasDescription": true,
-              "weightLbs": 0.1
+              "weightLbs": 0.1,
+              "variantOf": "potions.undeadControl",
+              "variant": {
+                "die": "d10",
+                "roll": [
+                  1,
+                  1
+                ],
+                "label": "Ghasts"
+              }
+            },
+            {
+              "roll": [
+                16,
+                16
+              ],
+              "name": "Undead Control (Ghosts)",
+              "xp": 700,
+              "xpPrinted": "700",
+              "id": "potions.undeadControlGhosts",
+              "hasDescription": true,
+              "weightLbs": 0.1,
+              "variantOf": "potions.undeadControl",
+              "variant": {
+                "die": "d10",
+                "roll": [
+                  2,
+                  2
+                ],
+                "label": "Ghosts"
+              }
+            },
+            {
+              "roll": [
+                16,
+                16
+              ],
+              "name": "Undead Control (Ghouls)",
+              "xp": 700,
+              "xpPrinted": "700",
+              "id": "potions.undeadControlGhouls",
+              "hasDescription": true,
+              "weightLbs": 0.1,
+              "variantOf": "potions.undeadControl",
+              "variant": {
+                "die": "d10",
+                "roll": [
+                  3,
+                  3
+                ],
+                "label": "Ghouls"
+              }
+            },
+            {
+              "roll": [
+                16,
+                16
+              ],
+              "name": "Undead Control (Shadows)",
+              "xp": 700,
+              "xpPrinted": "700",
+              "id": "potions.undeadControlShadows",
+              "hasDescription": true,
+              "weightLbs": 0.1,
+              "variantOf": "potions.undeadControl",
+              "variant": {
+                "die": "d10",
+                "roll": [
+                  4,
+                  4
+                ],
+                "label": "Shadows"
+              }
+            },
+            {
+              "roll": [
+                16,
+                16
+              ],
+              "name": "Undead Control (Skeletons)",
+              "xp": 700,
+              "xpPrinted": "700",
+              "id": "potions.undeadControlSkeletons",
+              "hasDescription": true,
+              "weightLbs": 0.1,
+              "variantOf": "potions.undeadControl",
+              "variant": {
+                "die": "d10",
+                "roll": [
+                  5,
+                  5
+                ],
+                "label": "Skeletons"
+              }
+            },
+            {
+              "roll": [
+                16,
+                16
+              ],
+              "name": "Undead Control (Spectres)",
+              "xp": 700,
+              "xpPrinted": "700",
+              "id": "potions.undeadControlSpectres",
+              "hasDescription": true,
+              "weightLbs": 0.1,
+              "variantOf": "potions.undeadControl",
+              "variant": {
+                "die": "d10",
+                "roll": [
+                  6,
+                  6
+                ],
+                "label": "Spectres"
+              }
+            },
+            {
+              "roll": [
+                16,
+                16
+              ],
+              "name": "Undead Control (Wights)",
+              "xp": 700,
+              "xpPrinted": "700",
+              "id": "potions.undeadControlWights",
+              "hasDescription": true,
+              "weightLbs": 0.1,
+              "variantOf": "potions.undeadControl",
+              "variant": {
+                "die": "d10",
+                "roll": [
+                  7,
+                  7
+                ],
+                "label": "Wights"
+              }
+            },
+            {
+              "roll": [
+                16,
+                16
+              ],
+              "name": "Undead Control (Wraiths)",
+              "xp": 700,
+              "xpPrinted": "700",
+              "id": "potions.undeadControlWraiths",
+              "hasDescription": true,
+              "weightLbs": 0.1,
+              "variantOf": "potions.undeadControl",
+              "variant": {
+                "die": "d10",
+                "roll": [
+                  8,
+                  8
+                ],
+                "label": "Wraiths"
+              }
+            },
+            {
+              "roll": [
+                16,
+                16
+              ],
+              "name": "Undead Control (Vampires)",
+              "xp": 700,
+              "xpPrinted": "700",
+              "id": "potions.undeadControlVampires",
+              "hasDescription": true,
+              "weightLbs": 0.1,
+              "variantOf": "potions.undeadControl",
+              "variant": {
+                "die": "d10",
+                "roll": [
+                  9,
+                  9
+                ],
+                "label": "Vampires"
+              }
+            },
+            {
+              "roll": [
+                16,
+                16
+              ],
+              "name": "Undead Control (Zombies)",
+              "xp": 700,
+              "xpPrinted": "700",
+              "id": "potions.undeadControlZombies",
+              "hasDescription": true,
+              "weightLbs": 0.1,
+              "variantOf": "potions.undeadControl",
+              "variant": {
+                "die": "d10",
+                "roll": [
+                  10,
+                  10
+                ],
+                "label": "Zombies"
+              }
             },
             {
               "roll": [
@@ -929,12 +1842,142 @@
                 19,
                 19
               ],
-              "name": "Protection",
+              "name": "Protection +1",
               "xp": 1000,
-              "xpPrinted": "1,000**",
-              "xpMarker": "**",
-              "id": "rings.protection",
-              "hasDescription": true
+              "xpPrinted": "1,000",
+              "id": "rings.protectionPlus1",
+              "hasDescription": true,
+              "variantOf": "rings.protection",
+              "variant": {
+                "die": "d100",
+                "roll": [
+                  1,
+                  70
+                ],
+                "label": "+1"
+              }
+            },
+            {
+              "roll": [
+                19,
+                19
+              ],
+              "name": "Protection +2",
+              "xp": 2000,
+              "xpPrinted": "2,000",
+              "id": "rings.protectionPlus2",
+              "hasDescription": true,
+              "variantOf": "rings.protection",
+              "variant": {
+                "die": "d100",
+                "roll": [
+                  71,
+                  82
+                ],
+                "label": "+2"
+              }
+            },
+            {
+              "roll": [
+                19,
+                19
+              ],
+              "name": "Protection +2, 5-foot radius",
+              "xp": 2000,
+              "xpPrinted": "2,000",
+              "id": "rings.protectionPlus2Radius",
+              "hasDescription": true,
+              "variantOf": "rings.protection",
+              "variant": {
+                "die": "d100",
+                "roll": [
+                  83,
+                  83
+                ],
+                "label": "+2, 5-foot radius"
+              }
+            },
+            {
+              "roll": [
+                19,
+                19
+              ],
+              "name": "Protection +3",
+              "xp": 3000,
+              "xpPrinted": "3,000",
+              "id": "rings.protectionPlus3",
+              "hasDescription": true,
+              "variantOf": "rings.protection",
+              "variant": {
+                "die": "d100",
+                "roll": [
+                  84,
+                  90
+                ],
+                "label": "+3"
+              }
+            },
+            {
+              "roll": [
+                19,
+                19
+              ],
+              "name": "Protection +3, 5-foot radius",
+              "xp": 3000,
+              "xpPrinted": "3,000",
+              "id": "rings.protectionPlus3Radius",
+              "hasDescription": true,
+              "variantOf": "rings.protection",
+              "variant": {
+                "die": "d100",
+                "roll": [
+                  91,
+                  91
+                ],
+                "label": "+3, 5-foot radius"
+              }
+            },
+            {
+              "roll": [
+                19,
+                19
+              ],
+              "name": "Protection +4 AC, +2 saving throws",
+              "xp": null,
+              "xpPrinted": "1,000 per +1",
+              "id": "rings.protectionPlus4Ac2Save",
+              "hasDescription": true,
+              "variantOf": "rings.protection",
+              "variant": {
+                "die": "d100",
+                "roll": [
+                  92,
+                  97
+                ],
+                "label": "+4 AC, +2 saving throws"
+              },
+              "xpNote": "Table prints 1,000 per +1 of protection; the split AC/saving-throw bonuses are not valued, so left empty."
+            },
+            {
+              "roll": [
+                19,
+                19
+              ],
+              "name": "Protection +6 AC, +1 saving throws",
+              "xp": null,
+              "xpPrinted": "1,000 per +1",
+              "id": "rings.protectionPlus6Ac1Save",
+              "hasDescription": true,
+              "variantOf": "rings.protection",
+              "variant": {
+                "die": "d100",
+                "roll": [
+                  98,
+                  100
+                ],
+                "label": "+6 AC, +1 saving throws"
+              },
+              "xpNote": "Table prints 1,000 per +1 of protection; the split AC/saving-throw bonuses are not valued, so left empty."
             },
             {
               "roll": [
@@ -960,12 +2003,142 @@
                 1,
                 2
               ],
-              "name": "Protection",
+              "name": "Protection +1",
               "xp": 1000,
-              "xpPrinted": "1,000**",
-              "xpMarker": "**",
-              "id": "rings.protection2",
-              "duplicateOf": "rings.protection"
+              "xpPrinted": "1,000",
+              "id": "rings.protection2Plus1",
+              "duplicateOf": "rings.protectionPlus1",
+              "variantOf": "rings.protection",
+              "variant": {
+                "die": "d100",
+                "roll": [
+                  1,
+                  70
+                ],
+                "label": "+1"
+              }
+            },
+            {
+              "roll": [
+                1,
+                2
+              ],
+              "name": "Protection +2",
+              "xp": 2000,
+              "xpPrinted": "2,000",
+              "id": "rings.protection2Plus2",
+              "duplicateOf": "rings.protectionPlus2",
+              "variantOf": "rings.protection",
+              "variant": {
+                "die": "d100",
+                "roll": [
+                  71,
+                  82
+                ],
+                "label": "+2"
+              }
+            },
+            {
+              "roll": [
+                1,
+                2
+              ],
+              "name": "Protection +2, 5-foot radius",
+              "xp": 2000,
+              "xpPrinted": "2,000",
+              "id": "rings.protection2Plus2Radius",
+              "duplicateOf": "rings.protectionPlus2Radius",
+              "variantOf": "rings.protection",
+              "variant": {
+                "die": "d100",
+                "roll": [
+                  83,
+                  83
+                ],
+                "label": "+2, 5-foot radius"
+              }
+            },
+            {
+              "roll": [
+                1,
+                2
+              ],
+              "name": "Protection +3",
+              "xp": 3000,
+              "xpPrinted": "3,000",
+              "id": "rings.protection2Plus3",
+              "duplicateOf": "rings.protectionPlus3",
+              "variantOf": "rings.protection",
+              "variant": {
+                "die": "d100",
+                "roll": [
+                  84,
+                  90
+                ],
+                "label": "+3"
+              }
+            },
+            {
+              "roll": [
+                1,
+                2
+              ],
+              "name": "Protection +3, 5-foot radius",
+              "xp": 3000,
+              "xpPrinted": "3,000",
+              "id": "rings.protection2Plus3Radius",
+              "duplicateOf": "rings.protectionPlus3Radius",
+              "variantOf": "rings.protection",
+              "variant": {
+                "die": "d100",
+                "roll": [
+                  91,
+                  91
+                ],
+                "label": "+3, 5-foot radius"
+              }
+            },
+            {
+              "roll": [
+                1,
+                2
+              ],
+              "name": "Protection +4 AC, +2 saving throws",
+              "xp": null,
+              "xpPrinted": "1,000 per +1",
+              "id": "rings.protection2Plus4Ac2Save",
+              "duplicateOf": "rings.protectionPlus4Ac2Save",
+              "variantOf": "rings.protection",
+              "variant": {
+                "die": "d100",
+                "roll": [
+                  92,
+                  97
+                ],
+                "label": "+4 AC, +2 saving throws"
+              },
+              "xpNote": "Table prints 1,000 per +1 of protection; the split AC/saving-throw bonuses are not valued, so left empty."
+            },
+            {
+              "roll": [
+                1,
+                2
+              ],
+              "name": "Protection +6 AC, +1 saving throws",
+              "xp": null,
+              "xpPrinted": "1,000 per +1",
+              "id": "rings.protection2Plus6Ac1Save",
+              "duplicateOf": "rings.protectionPlus6Ac1Save",
+              "variantOf": "rings.protection",
+              "variant": {
+                "die": "d100",
+                "roll": [
+                  98,
+                  100
+                ],
+                "label": "+6 AC, +1 saving throws"
+              },
+              "xpNote": "Table prints 1,000 per +1 of protection; the split AC/saving-throw bonuses are not valued, so left empty."
             },
             {
               "roll": [
@@ -985,11 +2158,40 @@
                 4,
                 4
               ],
-              "name": "Regeneration",
+              "name": "Regeneration (Standard)",
               "xp": 5000,
               "xpPrinted": "5,000",
-              "id": "rings.regeneration",
-              "hasDescription": true
+              "id": "rings.regenerationStandard",
+              "hasDescription": true,
+              "variantOf": "rings.regeneration",
+              "variant": {
+                "die": "d100",
+                "roll": [
+                  1,
+                  90
+                ],
+                "label": "Standard"
+              }
+            },
+            {
+              "roll": [
+                4,
+                4
+              ],
+              "name": "Regeneration (Vampiric)",
+              "xp": 5000,
+              "xpPrinted": "5,000",
+              "id": "rings.regenerationVampiric",
+              "hasDescription": true,
+              "variantOf": "rings.regeneration",
+              "variant": {
+                "die": "d100",
+                "roll": [
+                  91,
+                  100
+                ],
+                "label": "Vampiric"
+              }
             },
             {
               "roll": [
@@ -1062,12 +2264,100 @@
                 11,
                 11
               ],
-              "nameMarker": "*",
-              "name": "Telekinesis",
+              "name": "Telekinesis (25 lbs.)",
               "xp": 2000,
               "xpPrinted": "2,000",
-              "id": "rings.telekinesis",
-              "hasDescription": true
+              "id": "rings.telekinesisLbs25",
+              "hasDescription": true,
+              "variantOf": "rings.telekinesis",
+              "variant": {
+                "die": "d100",
+                "roll": [
+                  1,
+                  25
+                ],
+                "label": "25 lbs."
+              }
+            },
+            {
+              "roll": [
+                11,
+                11
+              ],
+              "name": "Telekinesis (50 lbs.)",
+              "xp": 2000,
+              "xpPrinted": "2,000",
+              "id": "rings.telekinesisLbs50",
+              "hasDescription": true,
+              "variantOf": "rings.telekinesis",
+              "variant": {
+                "die": "d100",
+                "roll": [
+                  26,
+                  50
+                ],
+                "label": "50 lbs."
+              }
+            },
+            {
+              "roll": [
+                11,
+                11
+              ],
+              "name": "Telekinesis (100 lbs.)",
+              "xp": 2000,
+              "xpPrinted": "2,000",
+              "id": "rings.telekinesisLbs100",
+              "hasDescription": true,
+              "variantOf": "rings.telekinesis",
+              "variant": {
+                "die": "d100",
+                "roll": [
+                  51,
+                  89
+                ],
+                "label": "100 lbs."
+              }
+            },
+            {
+              "roll": [
+                11,
+                11
+              ],
+              "name": "Telekinesis (200 lbs.)",
+              "xp": 2000,
+              "xpPrinted": "2,000",
+              "id": "rings.telekinesisLbs200",
+              "hasDescription": true,
+              "variantOf": "rings.telekinesis",
+              "variant": {
+                "die": "d100",
+                "roll": [
+                  90,
+                  99
+                ],
+                "label": "200 lbs."
+              }
+            },
+            {
+              "roll": [
+                11,
+                11
+              ],
+              "name": "Telekinesis (400 lbs.)",
+              "xp": 2000,
+              "xpPrinted": "2,000",
+              "id": "rings.telekinesisLbs400",
+              "hasDescription": true,
+              "variantOf": "rings.telekinesis",
+              "variant": {
+                "die": "d100",
+                "roll": [
+                  100,
+                  100
+                ],
+                "label": "400 lbs."
+              }
             },
             {
               "roll": [
@@ -1499,13 +2789,132 @@
                 11,
                 12
               ],
-              "name": "Spear",
+              "name": "Spear +1",
               "xp": 1000,
-              "xpPrinted": "1,000*",
-              "xpMarker": "*",
-              "id": "staves.spear",
+              "xpPrinted": "1,000",
+              "id": "staves.spearPlus1",
               "hasDescription": true,
-              "weightLbs": 5
+              "weightLbs": 5,
+              "variantOf": "staves.spear",
+              "variant": {
+                "die": "d20",
+                "roll": [
+                  1,
+                  6
+                ],
+                "label": "+1"
+              },
+              "plus": 1
+            },
+            {
+              "roll": [
+                11,
+                12
+              ],
+              "name": "Spear +2",
+              "xp": 1500,
+              "xpPrinted": "1,500",
+              "id": "staves.spearPlus2",
+              "hasDescription": true,
+              "weightLbs": 5,
+              "variantOf": "staves.spear",
+              "variant": {
+                "die": "d20",
+                "roll": [
+                  7,
+                  10
+                ],
+                "label": "+2"
+              },
+              "plus": 2
+            },
+            {
+              "roll": [
+                11,
+                12
+              ],
+              "name": "Spear +3",
+              "xp": 2000,
+              "xpPrinted": "2,000",
+              "id": "staves.spearPlus3",
+              "hasDescription": true,
+              "weightLbs": 5,
+              "variantOf": "staves.spear",
+              "variant": {
+                "die": "d20",
+                "roll": [
+                  11,
+                  13
+                ],
+                "label": "+3"
+              },
+              "plus": 3
+            },
+            {
+              "roll": [
+                11,
+                12
+              ],
+              "name": "Spear +4",
+              "xp": 2500,
+              "xpPrinted": "2,500",
+              "id": "staves.spearPlus4",
+              "hasDescription": true,
+              "weightLbs": 5,
+              "variantOf": "staves.spear",
+              "variant": {
+                "die": "d20",
+                "roll": [
+                  14,
+                  16
+                ],
+                "label": "+4"
+              },
+              "plus": 4
+            },
+            {
+              "roll": [
+                11,
+                12
+              ],
+              "name": "Spear +5",
+              "xp": 3000,
+              "xpPrinted": "3,000",
+              "id": "staves.spearPlus5",
+              "hasDescription": true,
+              "weightLbs": 5,
+              "variantOf": "staves.spear",
+              "variant": {
+                "die": "d20",
+                "roll": [
+                  17,
+                  19
+                ],
+                "label": "+5"
+              },
+              "plus": 5
+            },
+            {
+              "roll": [
+                11,
+                12
+              ],
+              "name": "Spear +3*",
+              "xp": 3500,
+              "xpPrinted": "3,500",
+              "id": "staves.spearPlus3Ranseur",
+              "hasDescription": true,
+              "weightLbs": 5,
+              "variantOf": "staves.spear",
+              "variant": {
+                "die": "d20",
+                "roll": [
+                  20,
+                  20
+                ],
+                "label": "+3*"
+              },
+              "plus": 3
             },
             {
               "roll": [
@@ -2008,14 +3417,111 @@
                 12
               ],
               "classRestriction": [
-                "priest",
-                "wizard"
+                "priest"
               ],
-              "name": "Manual of Golems",
+              "name": "Manual of Golems (Clay)",
               "xp": 3000,
               "xpPrinted": "3,000",
-              "id": "books.manualOfGolems",
-              "hasDescription": true
+              "id": "books.manualOfGolemsClay",
+              "hasDescription": true,
+              "variantOf": "books.manualOfGolems",
+              "variant": {
+                "die": "d20",
+                "roll": [
+                  1,
+                  5
+                ],
+                "label": "Clay"
+              },
+              "golem": {
+                "type": "Clay",
+                "time": "1 month",
+                "costGp": 65000
+              }
+            },
+            {
+              "roll": [
+                12,
+                12
+              ],
+              "classRestriction": [
+                "wizard"
+              ],
+              "name": "Manual of Golems (Flesh)",
+              "xp": 3000,
+              "xpPrinted": "3,000",
+              "id": "books.manualOfGolemsFlesh",
+              "hasDescription": true,
+              "variantOf": "books.manualOfGolems",
+              "variant": {
+                "die": "d20",
+                "roll": [
+                  6,
+                  17
+                ],
+                "label": "Flesh"
+              },
+              "golem": {
+                "type": "Flesh",
+                "time": "2 months",
+                "costGp": 50000
+              }
+            },
+            {
+              "roll": [
+                12,
+                12
+              ],
+              "classRestriction": [
+                "wizard"
+              ],
+              "name": "Manual of Golems (Iron)",
+              "xp": 3000,
+              "xpPrinted": "3,000",
+              "id": "books.manualOfGolemsIron",
+              "hasDescription": true,
+              "variantOf": "books.manualOfGolems",
+              "variant": {
+                "die": "d20",
+                "roll": [
+                  18,
+                  18
+                ],
+                "label": "Iron"
+              },
+              "golem": {
+                "type": "Iron",
+                "time": "4 months",
+                "costGp": 100000
+              }
+            },
+            {
+              "roll": [
+                12,
+                12
+              ],
+              "classRestriction": [
+                "wizard"
+              ],
+              "name": "Manual of Golems (Stone)",
+              "xp": 3000,
+              "xpPrinted": "3,000",
+              "id": "books.manualOfGolemsStone",
+              "hasDescription": true,
+              "variantOf": "books.manualOfGolems",
+              "variant": {
+                "die": "d20",
+                "roll": [
+                  19,
+                  20
+                ],
+                "label": "Stone"
+              },
+              "golem": {
+                "type": "Stone",
+                "time": "3 months",
+                "costGp": 80000
+              }
             },
             {
               "roll": [
@@ -2177,12 +3683,100 @@
                 5,
                 5
               ],
-              "name": "Amulet Versus Undead",
-              "xp": 200,
-              "xpPrinted": "200*",
-              "xpMarker": "*",
-              "id": "jewels.amuletVersusUndead",
-              "hasDescription": true
+              "name": "Amulet Versus Undead (5th level)",
+              "xp": 1000,
+              "xpPrinted": "1,000",
+              "id": "jewels.amuletVersusUndeadLevel5",
+              "hasDescription": true,
+              "variantOf": "jewels.amuletVersusUndead",
+              "variant": {
+                "die": "d100",
+                "roll": [
+                  1,
+                  30
+                ],
+                "label": "5th level"
+              }
+            },
+            {
+              "roll": [
+                5,
+                5
+              ],
+              "name": "Amulet Versus Undead (6th level)",
+              "xp": 1200,
+              "xpPrinted": "1,200",
+              "id": "jewels.amuletVersusUndeadLevel6",
+              "hasDescription": true,
+              "variantOf": "jewels.amuletVersusUndead",
+              "variant": {
+                "die": "d100",
+                "roll": [
+                  31,
+                  55
+                ],
+                "label": "6th level"
+              }
+            },
+            {
+              "roll": [
+                5,
+                5
+              ],
+              "name": "Amulet Versus Undead (7th level)",
+              "xp": 1400,
+              "xpPrinted": "1,400",
+              "id": "jewels.amuletVersusUndeadLevel7",
+              "hasDescription": true,
+              "variantOf": "jewels.amuletVersusUndead",
+              "variant": {
+                "die": "d100",
+                "roll": [
+                  56,
+                  75
+                ],
+                "label": "7th level"
+              }
+            },
+            {
+              "roll": [
+                5,
+                5
+              ],
+              "name": "Amulet Versus Undead (8th level)",
+              "xp": 1600,
+              "xpPrinted": "1,600",
+              "id": "jewels.amuletVersusUndeadLevel8",
+              "hasDescription": true,
+              "variantOf": "jewels.amuletVersusUndead",
+              "variant": {
+                "die": "d100",
+                "roll": [
+                  76,
+                  90
+                ],
+                "label": "8th level"
+              }
+            },
+            {
+              "roll": [
+                5,
+                5
+              ],
+              "name": "Amulet Versus Undead (9th level)",
+              "xp": 1800,
+              "xpPrinted": "1,800",
+              "id": "jewels.amuletVersusUndeadLevel9",
+              "hasDescription": true,
+              "variantOf": "jewels.amuletVersusUndead",
+              "variant": {
+                "die": "d100",
+                "roll": [
+                  91,
+                  100
+                ],
+                "label": "9th level"
+              }
             },
             {
               "roll": [
@@ -2267,11 +3861,80 @@
                 13,
                 13
               ],
-              "name": "Medallion of ESP",
+              "name": "Medallion of ESP (30' range)",
               "xp": 2000,
               "xpPrinted": "2,000",
-              "id": "jewels.medallionOfEsp",
-              "hasDescription": true
+              "id": "jewels.medallionOfEspRange30",
+              "hasDescription": true,
+              "variantOf": "jewels.medallionOfEsp",
+              "variant": {
+                "die": "d20",
+                "roll": [
+                  1,
+                  15
+                ],
+                "label": "30' range"
+              }
+            },
+            {
+              "roll": [
+                13,
+                13
+              ],
+              "name": "Medallion of ESP (30' range, empathy)",
+              "xp": 2000,
+              "xpPrinted": "2,000",
+              "id": "jewels.medallionOfEspRange30Empathy",
+              "hasDescription": true,
+              "variantOf": "jewels.medallionOfEsp",
+              "variant": {
+                "die": "d20",
+                "roll": [
+                  16,
+                  18
+                ],
+                "label": "30' range, empathy"
+              }
+            },
+            {
+              "roll": [
+                13,
+                13
+              ],
+              "name": "Medallion of ESP (60' range)",
+              "xp": 2000,
+              "xpPrinted": "2,000",
+              "id": "jewels.medallionOfEspRange60",
+              "hasDescription": true,
+              "variantOf": "jewels.medallionOfEsp",
+              "variant": {
+                "die": "d20",
+                "roll": [
+                  19,
+                  19
+                ],
+                "label": "60' range"
+              }
+            },
+            {
+              "roll": [
+                13,
+                13
+              ],
+              "name": "Medallion of ESP (90' range)",
+              "xp": 2000,
+              "xpPrinted": "2,000",
+              "id": "jewels.medallionOfEspRange90",
+              "hasDescription": true,
+              "variantOf": "jewels.medallionOfEsp",
+              "variant": {
+                "die": "d20",
+                "roll": [
+                  20,
+                  20
+                ],
+                "label": "90' range"
+              }
             },
             {
               "roll": [
@@ -2300,12 +3963,193 @@
                 16,
                 17
               ],
-              "name": "Necklace of Missiles",
-              "xp": 100,
-              "xpPrinted": "100**",
-              "xpMarker": "**",
-              "id": "jewels.necklaceOfMissiles",
-              "hasDescription": true
+              "name": "Necklace of Missiles (3 missiles, 11 dice)",
+              "xp": 1100,
+              "xpPrinted": "1,100",
+              "id": "jewels.necklaceOfMissilesR1_4",
+              "hasDescription": true,
+              "variantOf": "jewels.necklaceOfMissiles",
+              "variant": {
+                "die": "d20",
+                "roll": [
+                  1,
+                  4
+                ],
+                "label": "3 missiles, 11 dice"
+              },
+              "missiles": {
+                "5": 1,
+                "3": 2
+              },
+              "totalMissiles": 3,
+              "totalFireballDice": 11
+            },
+            {
+              "roll": [
+                16,
+                17
+              ],
+              "name": "Necklace of Missiles (5 missiles, 18 dice)",
+              "xp": 1800,
+              "xpPrinted": "1,800",
+              "id": "jewels.necklaceOfMissilesR5_8",
+              "hasDescription": true,
+              "variantOf": "jewels.necklaceOfMissiles",
+              "variant": {
+                "die": "d20",
+                "roll": [
+                  5,
+                  8
+                ],
+                "label": "5 missiles, 18 dice"
+              },
+              "missiles": {
+                "6": 1,
+                "4": 2,
+                "2": 2
+              },
+              "totalMissiles": 5,
+              "totalFireballDice": 18
+            },
+            {
+              "roll": [
+                16,
+                17
+              ],
+              "name": "Necklace of Missiles (7 missiles, 29 dice)",
+              "xp": 2900,
+              "xpPrinted": "2,900",
+              "id": "jewels.necklaceOfMissilesR9_12",
+              "hasDescription": true,
+              "variantOf": "jewels.necklaceOfMissiles",
+              "variant": {
+                "die": "d20",
+                "roll": [
+                  9,
+                  12
+                ],
+                "label": "7 missiles, 29 dice"
+              },
+              "missiles": {
+                "7": 1,
+                "5": 2,
+                "3": 4
+              },
+              "totalMissiles": 7,
+              "totalFireballDice": 29
+            },
+            {
+              "roll": [
+                16,
+                17
+              ],
+              "name": "Necklace of Missiles (9 missiles, 36 dice)",
+              "xp": 3600,
+              "xpPrinted": "3,600",
+              "id": "jewels.necklaceOfMissilesR13_16",
+              "hasDescription": true,
+              "variantOf": "jewels.necklaceOfMissiles",
+              "variant": {
+                "die": "d20",
+                "roll": [
+                  13,
+                  16
+                ],
+                "label": "9 missiles, 36 dice"
+              },
+              "missiles": {
+                "8": 1,
+                "6": 2,
+                "4": 2,
+                "2": 4
+              },
+              "totalMissiles": 9,
+              "totalFireballDice": 36
+            },
+            {
+              "roll": [
+                16,
+                17
+              ],
+              "name": "Necklace of Missiles (7 missiles, 39 dice)",
+              "xp": 3900,
+              "xpPrinted": "3,900",
+              "id": "jewels.necklaceOfMissilesR17_18",
+              "hasDescription": true,
+              "variantOf": "jewels.necklaceOfMissiles",
+              "variant": {
+                "die": "d20",
+                "roll": [
+                  17,
+                  18
+                ],
+                "label": "7 missiles, 39 dice"
+              },
+              "missiles": {
+                "9": 1,
+                "7": 2,
+                "5": 2,
+                "3": 2
+              },
+              "totalMissiles": 7,
+              "totalFireballDice": 39
+            },
+            {
+              "roll": [
+                16,
+                17
+              ],
+              "name": "Necklace of Missiles (9 missiles, 54 dice)",
+              "xp": 5400,
+              "xpPrinted": "5,400",
+              "id": "jewels.necklaceOfMissilesR19_19",
+              "hasDescription": true,
+              "variantOf": "jewels.necklaceOfMissiles",
+              "variant": {
+                "die": "d20",
+                "roll": [
+                  19,
+                  19
+                ],
+                "label": "9 missiles, 54 dice"
+              },
+              "missiles": {
+                "10": 1,
+                "8": 2,
+                "6": 2,
+                "4": 4
+              },
+              "totalMissiles": 9,
+              "totalFireballDice": 54
+            },
+            {
+              "roll": [
+                16,
+                17
+              ],
+              "name": "Necklace of Missiles (9 missiles, 59 dice)",
+              "xp": 5900,
+              "xpPrinted": "5,900",
+              "id": "jewels.necklaceOfMissilesR20_20",
+              "hasDescription": true,
+              "variantOf": "jewels.necklaceOfMissiles",
+              "variant": {
+                "die": "d20",
+                "roll": [
+                  20,
+                  20
+                ],
+                "label": "9 missiles, 59 dice"
+              },
+              "missiles": {
+                "11": 1,
+                "9": 2,
+                "7": 2,
+                "5": 2,
+                "3": 2
+              },
+              "totalMissiles": 9,
+              "totalFireballDice": 59
             },
             {
               "roll": [
@@ -2360,12 +4204,228 @@
               "classRestriction": [
                 "wizard"
               ],
-              "name": "Pearl of Power",
+              "name": "Pearl of Power (first-level spell)",
               "xp": 200,
-              "xpPrinted": "200*",
-              "xpMarker": "*",
-              "id": "jewels.pearlOfPower",
-              "hasDescription": true
+              "xpPrinted": "200",
+              "id": "jewels.pearlOfPowerLevel1",
+              "hasDescription": true,
+              "variantOf": "jewels.pearlOfPower",
+              "variant": {
+                "die": "d100",
+                "roll": [
+                  1,
+                  25
+                ],
+                "label": "first-level spell"
+              }
+            },
+            {
+              "roll": [
+                1,
+                1
+              ],
+              "classRestriction": [
+                "wizard"
+              ],
+              "name": "Pearl of Power (second-level spell)",
+              "xp": 400,
+              "xpPrinted": "400",
+              "id": "jewels.pearlOfPowerLevel2",
+              "hasDescription": true,
+              "variantOf": "jewels.pearlOfPower",
+              "variant": {
+                "die": "d100",
+                "roll": [
+                  26,
+                  45
+                ],
+                "label": "second-level spell"
+              }
+            },
+            {
+              "roll": [
+                1,
+                1
+              ],
+              "classRestriction": [
+                "wizard"
+              ],
+              "name": "Pearl of Power (third-level spell)",
+              "xp": 600,
+              "xpPrinted": "600",
+              "id": "jewels.pearlOfPowerLevel3",
+              "hasDescription": true,
+              "variantOf": "jewels.pearlOfPower",
+              "variant": {
+                "die": "d100",
+                "roll": [
+                  46,
+                  60
+                ],
+                "label": "third-level spell"
+              }
+            },
+            {
+              "roll": [
+                1,
+                1
+              ],
+              "classRestriction": [
+                "wizard"
+              ],
+              "name": "Pearl of Power (fourth-level spell)",
+              "xp": 800,
+              "xpPrinted": "800",
+              "id": "jewels.pearlOfPowerLevel4",
+              "hasDescription": true,
+              "variantOf": "jewels.pearlOfPower",
+              "variant": {
+                "die": "d100",
+                "roll": [
+                  61,
+                  75
+                ],
+                "label": "fourth-level spell"
+              }
+            },
+            {
+              "roll": [
+                1,
+                1
+              ],
+              "classRestriction": [
+                "wizard"
+              ],
+              "name": "Pearl of Power (fifth-level spell)",
+              "xp": 1000,
+              "xpPrinted": "1,000",
+              "id": "jewels.pearlOfPowerLevel5",
+              "hasDescription": true,
+              "variantOf": "jewels.pearlOfPower",
+              "variant": {
+                "die": "d100",
+                "roll": [
+                  76,
+                  85
+                ],
+                "label": "fifth-level spell"
+              }
+            },
+            {
+              "roll": [
+                1,
+                1
+              ],
+              "classRestriction": [
+                "wizard"
+              ],
+              "name": "Pearl of Power (sixth-level spell)",
+              "xp": 1200,
+              "xpPrinted": "1,200",
+              "id": "jewels.pearlOfPowerLevel6",
+              "hasDescription": true,
+              "variantOf": "jewels.pearlOfPower",
+              "variant": {
+                "die": "d100",
+                "roll": [
+                  86,
+                  92
+                ],
+                "label": "sixth-level spell"
+              }
+            },
+            {
+              "roll": [
+                1,
+                1
+              ],
+              "classRestriction": [
+                "wizard"
+              ],
+              "name": "Pearl of Power (seventh-level spell)",
+              "xp": 1400,
+              "xpPrinted": "1,400",
+              "id": "jewels.pearlOfPowerLevel7",
+              "hasDescription": true,
+              "variantOf": "jewels.pearlOfPower",
+              "variant": {
+                "die": "d100",
+                "roll": [
+                  93,
+                  96
+                ],
+                "label": "seventh-level spell"
+              }
+            },
+            {
+              "roll": [
+                1,
+                1
+              ],
+              "classRestriction": [
+                "wizard"
+              ],
+              "name": "Pearl of Power (eighth-level spell)",
+              "xp": 1600,
+              "xpPrinted": "1,600",
+              "id": "jewels.pearlOfPowerLevel8",
+              "hasDescription": true,
+              "variantOf": "jewels.pearlOfPower",
+              "variant": {
+                "die": "d100",
+                "roll": [
+                  97,
+                  98
+                ],
+                "label": "eighth-level spell"
+              }
+            },
+            {
+              "roll": [
+                1,
+                1
+              ],
+              "classRestriction": [
+                "wizard"
+              ],
+              "name": "Pearl of Power (ninth-level spell)",
+              "xp": 1800,
+              "xpPrinted": "1,800",
+              "id": "jewels.pearlOfPowerLevel9",
+              "hasDescription": true,
+              "variantOf": "jewels.pearlOfPower",
+              "variant": {
+                "die": "d100",
+                "roll": [
+                  99,
+                  99
+                ],
+                "label": "ninth-level spell"
+              }
+            },
+            {
+              "roll": [
+                1,
+                1
+              ],
+              "classRestriction": [
+                "wizard"
+              ],
+              "name": "Pearl of Power (two spells)",
+              "xp": null,
+              "xpPrinted": "200 per level",
+              "id": "jewels.pearlOfPowerTwoSpells",
+              "hasDescription": true,
+              "variantOf": "jewels.pearlOfPower",
+              "variant": {
+                "die": "d100",
+                "roll": [
+                  100,
+                  100
+                ],
+                "label": "two spells"
+              },
+              "xpNote": "Table prints 200 per level; this pearl recalls two spells of 1st to 6th level (use 1d6), so the level count is not fixed. Left empty."
             },
             {
               "roll": [
@@ -2419,11 +4479,80 @@
                 6,
                 6
               ],
-              "name": "Periapt of Proof Against Poison",
+              "name": "Periapt of Proof Against Poison +1",
               "xp": 1500,
               "xpPrinted": "1,500",
-              "id": "jewels.periaptOfProofAgainstPoison",
-              "hasDescription": true
+              "id": "jewels.periaptOfProofAgainstPoisonPlus1",
+              "hasDescription": true,
+              "variantOf": "jewels.periaptOfProofAgainstPoison",
+              "variant": {
+                "die": "d20",
+                "roll": [
+                  1,
+                  8
+                ],
+                "label": "+1"
+              }
+            },
+            {
+              "roll": [
+                6,
+                6
+              ],
+              "name": "Periapt of Proof Against Poison +2",
+              "xp": 1500,
+              "xpPrinted": "1,500",
+              "id": "jewels.periaptOfProofAgainstPoisonPlus2",
+              "hasDescription": true,
+              "variantOf": "jewels.periaptOfProofAgainstPoison",
+              "variant": {
+                "die": "d20",
+                "roll": [
+                  9,
+                  14
+                ],
+                "label": "+2"
+              }
+            },
+            {
+              "roll": [
+                6,
+                6
+              ],
+              "name": "Periapt of Proof Against Poison +3",
+              "xp": 1500,
+              "xpPrinted": "1,500",
+              "id": "jewels.periaptOfProofAgainstPoisonPlus3",
+              "hasDescription": true,
+              "variantOf": "jewels.periaptOfProofAgainstPoison",
+              "variant": {
+                "die": "d20",
+                "roll": [
+                  15,
+                  18
+                ],
+                "label": "+3"
+              }
+            },
+            {
+              "roll": [
+                6,
+                6
+              ],
+              "name": "Periapt of Proof Against Poison +4",
+              "xp": 1500,
+              "xpPrinted": "1,500",
+              "id": "jewels.periaptOfProofAgainstPoisonPlus4",
+              "hasDescription": true,
+              "variantOf": "jewels.periaptOfProofAgainstPoison",
+              "variant": {
+                "die": "d20",
+                "roll": [
+                  19,
+                  20
+                ],
+                "label": "+4"
+              }
             },
             {
               "roll": [
@@ -2527,13 +4656,120 @@
                 15,
                 15
               ],
-              "name": "Scarab Versus Golems",
-              "xp": null,
-              "xpPrinted": "****",
-              "xpMarker": "****",
-              "xpSeeDescription": true,
-              "id": "jewels.scarabVersusGolems",
-              "hasDescription": true
+              "name": "Scarab Versus Golems (Flesh)",
+              "xp": 400,
+              "xpPrinted": "400",
+              "id": "jewels.scarabVersusGolemsFlesh",
+              "hasDescription": true,
+              "variantOf": "jewels.scarabVersusGolems",
+              "variant": {
+                "die": "d100",
+                "roll": [
+                  1,
+                  30
+                ],
+                "label": "Flesh"
+              }
+            },
+            {
+              "roll": [
+                15,
+                15
+              ],
+              "name": "Scarab Versus Golems (Clay)",
+              "xp": 500,
+              "xpPrinted": "500",
+              "id": "jewels.scarabVersusGolemsClay",
+              "hasDescription": true,
+              "variantOf": "jewels.scarabVersusGolems",
+              "variant": {
+                "die": "d100",
+                "roll": [
+                  31,
+                  55
+                ],
+                "label": "Clay"
+              }
+            },
+            {
+              "roll": [
+                15,
+                15
+              ],
+              "name": "Scarab Versus Golems (Stone)",
+              "xp": 600,
+              "xpPrinted": "600",
+              "id": "jewels.scarabVersusGolemsStone",
+              "hasDescription": true,
+              "variantOf": "jewels.scarabVersusGolems",
+              "variant": {
+                "die": "d100",
+                "roll": [
+                  56,
+                  75
+                ],
+                "label": "Stone"
+              }
+            },
+            {
+              "roll": [
+                15,
+                15
+              ],
+              "name": "Scarab Versus Golems (Iron)",
+              "xp": 800,
+              "xpPrinted": "800",
+              "id": "jewels.scarabVersusGolemsIron",
+              "hasDescription": true,
+              "variantOf": "jewels.scarabVersusGolems",
+              "variant": {
+                "die": "d100",
+                "roll": [
+                  76,
+                  85
+                ],
+                "label": "Iron"
+              }
+            },
+            {
+              "roll": [
+                15,
+                15
+              ],
+              "name": "Scarab Versus Golems (Flesh, Clay, Wood)",
+              "xp": 900,
+              "xpPrinted": "900",
+              "id": "jewels.scarabVersusGolemsFleshClayWood",
+              "hasDescription": true,
+              "variantOf": "jewels.scarabVersusGolems",
+              "variant": {
+                "die": "d100",
+                "roll": [
+                  86,
+                  95
+                ],
+                "label": "Flesh, Clay, Wood"
+              }
+            },
+            {
+              "roll": [
+                15,
+                15
+              ],
+              "name": "Scarab Versus Golems (Any golem)",
+              "xp": 1250,
+              "xpPrinted": "1,250",
+              "id": "jewels.scarabVersusGolemsAny",
+              "hasDescription": true,
+              "variantOf": "jewels.scarabVersusGolems",
+              "variant": {
+                "die": "d100",
+                "roll": [
+                  96,
+                  100
+                ],
+                "label": "Any golem"
+              }
             },
             {
               "roll": [
@@ -2691,12 +4927,100 @@
                 6,
                 8
               ],
-              "name": "Cloak of Protection",
+              "name": "Cloak of Protection +1",
               "xp": 1000,
-              "xpPrinted": "1,000*",
-              "xpMarker": "*",
-              "id": "cloaks.cloakOfProtection",
-              "hasDescription": true
+              "xpPrinted": "1,000",
+              "id": "cloaks.cloakOfProtectionPlus1",
+              "hasDescription": true,
+              "variantOf": "cloaks.cloakOfProtection",
+              "variant": {
+                "die": "d100",
+                "roll": [
+                  1,
+                  35
+                ],
+                "label": "+1"
+              }
+            },
+            {
+              "roll": [
+                6,
+                8
+              ],
+              "name": "Cloak of Protection +2",
+              "xp": 2000,
+              "xpPrinted": "2,000",
+              "id": "cloaks.cloakOfProtectionPlus2",
+              "hasDescription": true,
+              "variantOf": "cloaks.cloakOfProtection",
+              "variant": {
+                "die": "d100",
+                "roll": [
+                  36,
+                  65
+                ],
+                "label": "+2"
+              }
+            },
+            {
+              "roll": [
+                6,
+                8
+              ],
+              "name": "Cloak of Protection +3",
+              "xp": 3000,
+              "xpPrinted": "3,000",
+              "id": "cloaks.cloakOfProtectionPlus3",
+              "hasDescription": true,
+              "variantOf": "cloaks.cloakOfProtection",
+              "variant": {
+                "die": "d100",
+                "roll": [
+                  66,
+                  85
+                ],
+                "label": "+3"
+              }
+            },
+            {
+              "roll": [
+                6,
+                8
+              ],
+              "name": "Cloak of Protection +4",
+              "xp": 4000,
+              "xpPrinted": "4,000",
+              "id": "cloaks.cloakOfProtectionPlus4",
+              "hasDescription": true,
+              "variantOf": "cloaks.cloakOfProtection",
+              "variant": {
+                "die": "d100",
+                "roll": [
+                  86,
+                  95
+                ],
+                "label": "+4"
+              }
+            },
+            {
+              "roll": [
+                6,
+                8
+              ],
+              "name": "Cloak of Protection +5",
+              "xp": 5000,
+              "xpPrinted": "5,000",
+              "id": "cloaks.cloakOfProtectionPlus5",
+              "hasDescription": true,
+              "variantOf": "cloaks.cloakOfProtection",
+              "variant": {
+                "die": "d100",
+                "roll": [
+                  96,
+                  100
+                ],
+                "label": "+5"
+              }
             },
             {
               "roll": [
@@ -2939,11 +5263,80 @@
                 8,
                 8
               ],
-              "name": "Boots, Winged",
+              "name": "Boots, Winged (Class A)",
               "xp": 2000,
               "xpPrinted": "2,000",
-              "id": "boots.bootsWinged",
-              "hasDescription": true
+              "id": "boots.bootsWingedClassA",
+              "hasDescription": true,
+              "variantOf": "boots.bootsWinged",
+              "variant": {
+                "die": "d4",
+                "roll": [
+                  1,
+                  1
+                ],
+                "label": "Class A"
+              }
+            },
+            {
+              "roll": [
+                8,
+                8
+              ],
+              "name": "Boots, Winged (Class B)",
+              "xp": 2000,
+              "xpPrinted": "2,000",
+              "id": "boots.bootsWingedClassB",
+              "hasDescription": true,
+              "variantOf": "boots.bootsWinged",
+              "variant": {
+                "die": "d4",
+                "roll": [
+                  2,
+                  2
+                ],
+                "label": "Class B"
+              }
+            },
+            {
+              "roll": [
+                8,
+                8
+              ],
+              "name": "Boots, Winged (Class C)",
+              "xp": 2000,
+              "xpPrinted": "2,000",
+              "id": "boots.bootsWingedClassC",
+              "hasDescription": true,
+              "variantOf": "boots.bootsWinged",
+              "variant": {
+                "die": "d4",
+                "roll": [
+                  3,
+                  3
+                ],
+                "label": "Class C"
+              }
+            },
+            {
+              "roll": [
+                8,
+                8
+              ],
+              "name": "Boots, Winged (Class D)",
+              "xp": 2000,
+              "xpPrinted": "2,000",
+              "id": "boots.bootsWingedClassD",
+              "hasDescription": true,
+              "variantOf": "boots.bootsWinged",
+              "variant": {
+                "die": "d4",
+                "roll": [
+                  4,
+                  4
+                ],
+                "label": "Class D"
+              }
             },
             {
               "roll": [
@@ -2975,12 +5368,140 @@
                 11,
                 12
               ],
-              "name": "Bracers of Defense",
-              "xp": 500,
-              "xpPrinted": "500*",
-              "xpMarker": "*",
-              "id": "boots.bracersOfDefense",
-              "hasDescription": true
+              "name": "Bracers of Defense (AC 8)",
+              "xp": 1000,
+              "xpPrinted": "1,000",
+              "id": "boots.bracersOfDefenseAc8",
+              "hasDescription": true,
+              "variantOf": "boots.bracersOfDefense",
+              "variant": {
+                "die": "d100",
+                "roll": [
+                  1,
+                  5
+                ],
+                "label": "AC 8"
+              }
+            },
+            {
+              "roll": [
+                11,
+                12
+              ],
+              "name": "Bracers of Defense (AC 7)",
+              "xp": 1500,
+              "xpPrinted": "1,500",
+              "id": "boots.bracersOfDefenseAc7",
+              "hasDescription": true,
+              "variantOf": "boots.bracersOfDefense",
+              "variant": {
+                "die": "d100",
+                "roll": [
+                  6,
+                  15
+                ],
+                "label": "AC 7"
+              }
+            },
+            {
+              "roll": [
+                11,
+                12
+              ],
+              "name": "Bracers of Defense (AC 6)",
+              "xp": 2000,
+              "xpPrinted": "2,000",
+              "id": "boots.bracersOfDefenseAc6",
+              "hasDescription": true,
+              "variantOf": "boots.bracersOfDefense",
+              "variant": {
+                "die": "d100",
+                "roll": [
+                  16,
+                  35
+                ],
+                "label": "AC 6"
+              }
+            },
+            {
+              "roll": [
+                11,
+                12
+              ],
+              "name": "Bracers of Defense (AC 5)",
+              "xp": 2500,
+              "xpPrinted": "2,500",
+              "id": "boots.bracersOfDefenseAc5",
+              "hasDescription": true,
+              "variantOf": "boots.bracersOfDefense",
+              "variant": {
+                "die": "d100",
+                "roll": [
+                  36,
+                  50
+                ],
+                "label": "AC 5"
+              }
+            },
+            {
+              "roll": [
+                11,
+                12
+              ],
+              "name": "Bracers of Defense (AC 4)",
+              "xp": 3000,
+              "xpPrinted": "3,000",
+              "id": "boots.bracersOfDefenseAc4",
+              "hasDescription": true,
+              "variantOf": "boots.bracersOfDefense",
+              "variant": {
+                "die": "d100",
+                "roll": [
+                  51,
+                  70
+                ],
+                "label": "AC 4"
+              }
+            },
+            {
+              "roll": [
+                11,
+                12
+              ],
+              "name": "Bracers of Defense (AC 3)",
+              "xp": 3500,
+              "xpPrinted": "3,500",
+              "id": "boots.bracersOfDefenseAc3",
+              "hasDescription": true,
+              "variantOf": "boots.bracersOfDefense",
+              "variant": {
+                "die": "d100",
+                "roll": [
+                  71,
+                  85
+                ],
+                "label": "AC 3"
+              }
+            },
+            {
+              "roll": [
+                11,
+                12
+              ],
+              "name": "Bracers of Defense (AC 2)",
+              "xp": 4000,
+              "xpPrinted": "4,000",
+              "id": "boots.bracersOfDefenseAc2",
+              "hasDescription": true,
+              "variantOf": "boots.bracersOfDefense",
+              "variant": {
+                "die": "d100",
+                "roll": [
+                  86,
+                  100
+                ],
+                "label": "AC 2"
+              }
             },
             {
               "roll": [
@@ -3129,11 +5650,229 @@
                 "rogue",
                 "warrior"
               ],
-              "name": "Girdle of Giant Strength",
+              "name": "Girdle of Giant Strength (Hill Giant)",
               "xp": 2000,
               "xpPrinted": "2,000",
-              "id": "girdles.girdleOfGiantStrength",
-              "hasDescription": true
+              "id": "girdles.girdleOfGiantStrengthHill",
+              "hasDescription": true,
+              "variantOf": "girdles.girdleOfGiantStrength",
+              "variant": {
+                "die": "d100",
+                "roll": [
+                  1,
+                  30
+                ],
+                "label": "Hill Giant"
+              },
+              "giantStrength": {
+                "giantEquivalent": "Hill",
+                "strengthRating": 19,
+                "toHitBonus": 3,
+                "damageBonus": 7,
+                "openDoors": "16(8)",
+                "rockHurling": {
+                  "weightAllowance": 485,
+                  "rangeYd": 8,
+                  "baseDamage": "1d6",
+                  "rockWeightAvg": 140
+                },
+                "bendBarsLiftGatesPct": 50
+              }
+            },
+            {
+              "roll": [
+                5,
+                6
+              ],
+              "classRestriction": [
+                "priest",
+                "rogue",
+                "warrior"
+              ],
+              "name": "Girdle of Giant Strength (Stone Giant)",
+              "xp": 2000,
+              "xpPrinted": "2,000",
+              "id": "girdles.girdleOfGiantStrengthStone",
+              "hasDescription": true,
+              "variantOf": "girdles.girdleOfGiantStrength",
+              "variant": {
+                "die": "d100",
+                "roll": [
+                  31,
+                  50
+                ],
+                "label": "Stone Giant"
+              },
+              "giantStrength": {
+                "giantEquivalent": "Stone",
+                "strengthRating": 20,
+                "toHitBonus": 3,
+                "damageBonus": 8,
+                "openDoors": "17(10)",
+                "rockHurling": {
+                  "weightAllowance": 535,
+                  "rangeYd": 16,
+                  "baseDamage": "1d12",
+                  "rockWeightAvg": 198
+                },
+                "bendBarsLiftGatesPct": 60
+              }
+            },
+            {
+              "roll": [
+                5,
+                6
+              ],
+              "classRestriction": [
+                "priest",
+                "rogue",
+                "warrior"
+              ],
+              "name": "Girdle of Giant Strength (Frost Giant)",
+              "xp": 2000,
+              "xpPrinted": "2,000",
+              "id": "girdles.girdleOfGiantStrengthFrost",
+              "hasDescription": true,
+              "variantOf": "girdles.girdleOfGiantStrength",
+              "variant": {
+                "die": "d100",
+                "roll": [
+                  51,
+                  70
+                ],
+                "label": "Frost Giant"
+              },
+              "giantStrength": {
+                "giantEquivalent": "Frost",
+                "strengthRating": 21,
+                "toHitBonus": 4,
+                "damageBonus": 9,
+                "openDoors": "17(12)",
+                "rockHurling": {
+                  "weightAllowance": 635,
+                  "rangeYd": 10,
+                  "baseDamage": "1d8",
+                  "rockWeightAvg": 156
+                },
+                "bendBarsLiftGatesPct": 70
+              }
+            },
+            {
+              "roll": [
+                5,
+                6
+              ],
+              "classRestriction": [
+                "priest",
+                "rogue",
+                "warrior"
+              ],
+              "name": "Girdle of Giant Strength (Fire Giant)",
+              "xp": 2000,
+              "xpPrinted": "2,000",
+              "id": "girdles.girdleOfGiantStrengthFire",
+              "hasDescription": true,
+              "variantOf": "girdles.girdleOfGiantStrength",
+              "variant": {
+                "die": "d100",
+                "roll": [
+                  71,
+                  85
+                ],
+                "label": "Fire Giant"
+              },
+              "giantStrength": {
+                "giantEquivalent": "Fire",
+                "strengthRating": 22,
+                "toHitBonus": 4,
+                "damageBonus": 10,
+                "openDoors": "18(14)",
+                "rockHurling": {
+                  "weightAllowance": 785,
+                  "rangeYd": 12,
+                  "baseDamage": "1d8",
+                  "rockWeightAvg": 170
+                },
+                "bendBarsLiftGatesPct": 80
+              }
+            },
+            {
+              "roll": [
+                5,
+                6
+              ],
+              "classRestriction": [
+                "priest",
+                "rogue",
+                "warrior"
+              ],
+              "name": "Girdle of Giant Strength (Cloud Giant)",
+              "xp": 2000,
+              "xpPrinted": "2,000",
+              "id": "girdles.girdleOfGiantStrengthCloud",
+              "hasDescription": true,
+              "variantOf": "girdles.girdleOfGiantStrength",
+              "variant": {
+                "die": "d100",
+                "roll": [
+                  86,
+                  95
+                ],
+                "label": "Cloud Giant"
+              },
+              "giantStrength": {
+                "giantEquivalent": "Cloud",
+                "strengthRating": 23,
+                "toHitBonus": 5,
+                "damageBonus": 11,
+                "openDoors": "18(16)",
+                "rockHurling": {
+                  "weightAllowance": 935,
+                  "rangeYd": 14,
+                  "baseDamage": "1d10",
+                  "rockWeightAvg": 184
+                },
+                "bendBarsLiftGatesPct": 90
+              }
+            },
+            {
+              "roll": [
+                5,
+                6
+              ],
+              "classRestriction": [
+                "priest",
+                "rogue",
+                "warrior"
+              ],
+              "name": "Girdle of Giant Strength (Storm Giant)",
+              "xp": 2000,
+              "xpPrinted": "2,000",
+              "id": "girdles.girdleOfGiantStrengthStorm",
+              "hasDescription": true,
+              "variantOf": "girdles.girdleOfGiantStrength",
+              "variant": {
+                "die": "d100",
+                "roll": [
+                  96,
+                  100
+                ],
+                "label": "Storm Giant"
+              },
+              "giantStrength": {
+                "giantEquivalent": "Storm",
+                "strengthRating": 24,
+                "toHitBonus": 6,
+                "damageBonus": 12,
+                "openDoors": "19(17)",
+                "rockHurling": {
+                  "weightAllowance": 1235,
+                  "rangeYd": 16,
+                  "baseDamage": "1d12",
+                  "rockWeightAvg": 212
+                },
+                "bendBarsLiftGatesPct": 95
+              }
             },
             {
               "roll": [
@@ -3297,11 +6036,92 @@
                 4,
                 7
               ],
-              "name": "Bag of Holding",
+              "name": "Bag of Holding (250 lbs., 30 cu. ft.)",
               "xp": 5000,
               "xpPrinted": "5,000",
-              "id": "bags.bagOfHolding",
-              "hasDescription": true
+              "id": "bags.bagOfHoldingLimit250",
+              "hasDescription": true,
+              "variantOf": "bags.bagOfHolding",
+              "variant": {
+                "die": "d100",
+                "roll": [
+                  1,
+                  30
+                ],
+                "label": "250 lbs., 30 cu. ft."
+              },
+              "weightLbs": 15,
+              "weightLimitLbs": 250,
+              "volumeLimitCuFt": 30
+            },
+            {
+              "roll": [
+                4,
+                7
+              ],
+              "name": "Bag of Holding (500 lbs., 70 cu. ft.)",
+              "xp": 5000,
+              "xpPrinted": "5,000",
+              "id": "bags.bagOfHoldingLimit500",
+              "hasDescription": true,
+              "variantOf": "bags.bagOfHolding",
+              "variant": {
+                "die": "d100",
+                "roll": [
+                  31,
+                  70
+                ],
+                "label": "500 lbs., 70 cu. ft."
+              },
+              "weightLbs": 15,
+              "weightLimitLbs": 500,
+              "volumeLimitCuFt": 70
+            },
+            {
+              "roll": [
+                4,
+                7
+              ],
+              "name": "Bag of Holding (1,000 lbs., 150 cu. ft.)",
+              "xp": 5000,
+              "xpPrinted": "5,000",
+              "id": "bags.bagOfHoldingLimit1000",
+              "hasDescription": true,
+              "variantOf": "bags.bagOfHolding",
+              "variant": {
+                "die": "d100",
+                "roll": [
+                  71,
+                  90
+                ],
+                "label": "1,000 lbs., 150 cu. ft."
+              },
+              "weightLbs": 35,
+              "weightLimitLbs": 1000,
+              "volumeLimitCuFt": 150
+            },
+            {
+              "roll": [
+                4,
+                7
+              ],
+              "name": "Bag of Holding (1,500 lbs., 250 cu. ft.)",
+              "xp": 5000,
+              "xpPrinted": "5,000",
+              "id": "bags.bagOfHoldingLimit1500",
+              "hasDescription": true,
+              "variantOf": "bags.bagOfHolding",
+              "variant": {
+                "die": "d100",
+                "roll": [
+                  91,
+                  100
+                ],
+                "label": "1,500 lbs., 250 cu. ft."
+              },
+              "weightLbs": 60,
+              "weightLimitLbs": 1500,
+              "volumeLimitCuFt": 250
             },
             {
               "roll": [
@@ -3341,13 +6161,66 @@
                 11,
                 11
               ],
-              "name": "Bucknard's Everfull Purse",
+              "name": "Bucknard's Everfull Purse (SP, EP, GP)",
               "xp": null,
               "xpPrinted": "*",
               "xpMarker": "*",
               "xpSeeDescription": true,
-              "id": "bags.bucknardsEverfullPurse",
-              "hasDescription": true
+              "id": "bags.bucknardsEverfullPurseSilverElectrumGold",
+              "hasDescription": true,
+              "variantOf": "bags.bucknardsEverfullPurse",
+              "variant": {
+                "die": "d100",
+                "roll": [
+                  1,
+                  50
+                ],
+                "label": "SP, EP, GP"
+              }
+            },
+            {
+              "roll": [
+                11,
+                11
+              ],
+              "name": "Bucknard's Everfull Purse (CP, EP, PP)",
+              "xp": null,
+              "xpPrinted": "*",
+              "xpMarker": "*",
+              "xpSeeDescription": true,
+              "id": "bags.bucknardsEverfullPurseCopperElectrumPlatinum",
+              "hasDescription": true,
+              "variantOf": "bags.bucknardsEverfullPurse",
+              "variant": {
+                "die": "d100",
+                "roll": [
+                  51,
+                  90
+                ],
+                "label": "CP, EP, PP"
+              }
+            },
+            {
+              "roll": [
+                11,
+                11
+              ],
+              "name": "Bucknard's Everfull Purse (CP, EP, gems)",
+              "xp": null,
+              "xpPrinted": "*",
+              "xpMarker": "*",
+              "xpSeeDescription": true,
+              "id": "bags.bucknardsEverfullPurseCopperElectrumGems",
+              "hasDescription": true,
+              "variantOf": "bags.bucknardsEverfullPurse",
+              "variant": {
+                "die": "d100",
+                "roll": [
+                  91,
+                  100
+                ],
+                "label": "CP, EP, gems"
+              }
             },
             {
               "roll": [
@@ -3768,11 +6641,100 @@
                 5,
                 5
               ],
-              "name": "Carpet of Flying",
+              "name": "Carpet of Flying (3' x 5', 1 person)",
               "xp": 7500,
               "xpPrinted": "7,500",
-              "id": "household.carpetOfFlying",
-              "hasDescription": true
+              "id": "household.carpetOfFlyingP1",
+              "hasDescription": true,
+              "variantOf": "household.carpetOfFlying",
+              "variant": {
+                "die": "d100",
+                "roll": [
+                  1,
+                  20
+                ],
+                "label": "3' x 5', 1 person"
+              },
+              "carpet": {
+                "size": "3' x 5'",
+                "capacity": "1 person",
+                "speed": 42
+              }
+            },
+            {
+              "roll": [
+                5,
+                5
+              ],
+              "name": "Carpet of Flying (4' x 6', 2 people)",
+              "xp": 7500,
+              "xpPrinted": "7,500",
+              "id": "household.carpetOfFlyingP2",
+              "hasDescription": true,
+              "variantOf": "household.carpetOfFlying",
+              "variant": {
+                "die": "d100",
+                "roll": [
+                  21,
+                  55
+                ],
+                "label": "4' x 6', 2 people"
+              },
+              "carpet": {
+                "size": "4' x 6'",
+                "capacity": "2 people",
+                "speed": 36
+              }
+            },
+            {
+              "roll": [
+                5,
+                5
+              ],
+              "name": "Carpet of Flying (5' x 7', 3 people)",
+              "xp": 7500,
+              "xpPrinted": "7,500",
+              "id": "household.carpetOfFlyingP3",
+              "hasDescription": true,
+              "variantOf": "household.carpetOfFlying",
+              "variant": {
+                "die": "d100",
+                "roll": [
+                  56,
+                  80
+                ],
+                "label": "5' x 7', 3 people"
+              },
+              "carpet": {
+                "size": "5' x 7'",
+                "capacity": "3 people",
+                "speed": 30
+              }
+            },
+            {
+              "roll": [
+                5,
+                5
+              ],
+              "name": "Carpet of Flying (6' x 9', 4 people)",
+              "xp": 7500,
+              "xpPrinted": "7,500",
+              "id": "household.carpetOfFlyingP4",
+              "hasDescription": true,
+              "variantOf": "household.carpetOfFlying",
+              "variant": {
+                "die": "d100",
+                "roll": [
+                  81,
+                  100
+                ],
+                "label": "6' x 9', 4 people"
+              },
+              "carpet": {
+                "size": "6' x 9'",
+                "capacity": "4 people",
+                "speed": 24
+              }
             },
             {
               "roll": [
@@ -4113,12 +7075,113 @@
                 14,
                 14
               ],
-              "name": "Horn of Valhalla",
+              "name": "Horn of Valhalla (Silver)",
               "xp": 1000,
               "xpPrinted": "1,000*",
               "xpMarker": "*",
-              "id": "instruments.hornOfValhalla",
-              "hasDescription": true
+              "id": "instruments.hornOfValhallaSilver",
+              "hasDescription": true,
+              "variantOf": "instruments.hornOfValhalla",
+              "variant": {
+                "die": "d20",
+                "roll": [
+                  1,
+                  8
+                ],
+                "label": "Silver"
+              },
+              "usableByClasses": "any"
+            },
+            {
+              "roll": [
+                14,
+                14
+              ],
+              "name": "Horn of Valhalla (Brass)",
+              "xp": 1000,
+              "xpPrinted": "1,000*",
+              "xpMarker": "*",
+              "id": "instruments.hornOfValhallaBrass",
+              "hasDescription": true,
+              "variantOf": "instruments.hornOfValhalla",
+              "variant": {
+                "die": "d20",
+                "roll": [
+                  9,
+                  15
+                ],
+                "label": "Brass"
+              },
+              "classRestriction": [
+                "priest",
+                "wizard",
+                "rogue"
+              ],
+              "usableByClasses": [
+                "priest",
+                "wizard",
+                "rogue"
+              ]
+            },
+            {
+              "roll": [
+                14,
+                14
+              ],
+              "name": "Horn of Valhalla (Bronze)",
+              "xp": 1000,
+              "xpPrinted": "1,000*",
+              "xpMarker": "*",
+              "id": "instruments.hornOfValhallaBronze",
+              "hasDescription": true,
+              "variantOf": "instruments.hornOfValhalla",
+              "variant": {
+                "die": "d20",
+                "roll": [
+                  16,
+                  18
+                ],
+                "label": "Bronze"
+              },
+              "classRestriction": [
+                "priest",
+                "warrior"
+              ],
+              "usableByClasses": [
+                "priest",
+                "fighter",
+                "paladin",
+                "ranger"
+              ]
+            },
+            {
+              "roll": [
+                14,
+                14
+              ],
+              "name": "Horn of Valhalla (Iron)",
+              "xp": 1000,
+              "xpPrinted": "1,000*",
+              "xpMarker": "*",
+              "id": "instruments.hornOfValhallaIron",
+              "hasDescription": true,
+              "variantOf": "instruments.hornOfValhalla",
+              "variant": {
+                "die": "d20",
+                "roll": [
+                  19,
+                  20
+                ],
+                "label": "Iron"
+              },
+              "classRestriction": [
+                "warrior"
+              ],
+              "usableByClasses": [
+                "fighter",
+                "paladin",
+                "ranger"
+              ]
             },
             {
               "roll": [
@@ -4665,14 +7728,115 @@
             9,
             10
           ],
-          "name": "Elven Chain Mail",
+          "name": "Elven Chain Mail (gnome/halfling)",
           "xp": 1000,
           "xpAdditional": true,
-          "id": "specialArmor.elvenChainMail",
+          "id": "specialArmor.elvenChainMailGnomeHalfling",
           "hasDescription": true,
           "gearRef": "chainMail",
           "weightLbs": 40,
-          "weightNote": "chain mail weight used per owner rule; the description calls it fine and light, so check if a lighter figure is wanted"
+          "weightNote": "chain mail weight used per owner rule; the description calls it fine and light, so check if a lighter figure is wanted",
+          "variantOf": "specialArmor.elvenChainMail",
+          "variant": {
+            "die": "d100",
+            "roll": [
+              1,
+              10
+            ],
+            "label": "gnome/halfling"
+          }
+        },
+        {
+          "roll": [
+            9,
+            10
+          ],
+          "name": "Elven Chain Mail (dwarf/halfling)",
+          "xp": 1000,
+          "xpAdditional": true,
+          "id": "specialArmor.elvenChainMailDwarfHalfling",
+          "hasDescription": true,
+          "gearRef": "chainMail",
+          "weightLbs": 40,
+          "weightNote": "chain mail weight used per owner rule; the description calls it fine and light, so check if a lighter figure is wanted",
+          "variantOf": "specialArmor.elvenChainMail",
+          "variant": {
+            "die": "d100",
+            "roll": [
+              11,
+              15
+            ],
+            "label": "dwarf/halfling"
+          }
+        },
+        {
+          "roll": [
+            9,
+            10
+          ],
+          "name": "Elven Chain Mail (elf/half-elf)",
+          "xp": 1000,
+          "xpAdditional": true,
+          "id": "specialArmor.elvenChainMailElf",
+          "hasDescription": true,
+          "gearRef": "chainMail",
+          "weightLbs": 40,
+          "weightNote": "chain mail weight used per owner rule; the description calls it fine and light, so check if a lighter figure is wanted",
+          "variantOf": "specialArmor.elvenChainMail",
+          "variant": {
+            "die": "d100",
+            "roll": [
+              16,
+              80
+            ],
+            "label": "elf/half-elf"
+          }
+        },
+        {
+          "roll": [
+            9,
+            10
+          ],
+          "name": "Elven Chain Mail (man-sized, normal)",
+          "xp": 1000,
+          "xpAdditional": true,
+          "id": "specialArmor.elvenChainMailManNormal",
+          "hasDescription": true,
+          "gearRef": "chainMail",
+          "weightLbs": 40,
+          "weightNote": "chain mail weight used per owner rule; the description calls it fine and light, so check if a lighter figure is wanted",
+          "variantOf": "specialArmor.elvenChainMail",
+          "variant": {
+            "die": "d100",
+            "roll": [
+              81,
+              95
+            ],
+            "label": "man-sized, normal"
+          }
+        },
+        {
+          "roll": [
+            9,
+            10
+          ],
+          "name": "Elven Chain Mail (man-sized, large)",
+          "xp": 1000,
+          "xpAdditional": true,
+          "id": "specialArmor.elvenChainMailManLarge",
+          "hasDescription": true,
+          "gearRef": "chainMail",
+          "weightLbs": 40,
+          "weightNote": "chain mail weight used per owner rule; the description calls it fine and light, so check if a lighter figure is wanted",
+          "variantOf": "specialArmor.elvenChainMail",
+          "variant": {
+            "die": "d100",
+            "roll": [
+              96,
+              100
+            ],
+            "label": "man-sized, large"
+          }
         },
         {
           "roll": [
@@ -5177,18 +8341,125 @@
                 4,
                 4
               ],
-              "name": "Axe of Hurling",
-              "xp": null,
-              "xpPrinted": "*",
-              "xpMarker": "*",
-              "xpSeeDescription": true,
-              "id": "specialWeapons.axeOfHurling",
+              "name": "Axe of Hurling +1",
+              "xp": 1500,
+              "xpPrinted": "1,500",
+              "id": "specialWeapons.axeOfHurlingPlus1",
               "hasDescription": true,
               "gearRef": "handOrThrowingAxe",
               "weightLbs": 5,
               "speedFactorBase": 4,
-              "plus": 0,
-              "speedFactor": 4
+              "plus": 1,
+              "speedFactor": 3,
+              "variantOf": "specialWeapons.axeOfHurling",
+              "variant": {
+                "die": "d20",
+                "roll": [
+                  1,
+                  5
+                ],
+                "label": "+1"
+              }
+            },
+            {
+              "roll": [
+                4,
+                4
+              ],
+              "name": "Axe of Hurling +2",
+              "xp": 3000,
+              "xpPrinted": "3,000",
+              "id": "specialWeapons.axeOfHurlingPlus2",
+              "hasDescription": true,
+              "gearRef": "handOrThrowingAxe",
+              "weightLbs": 5,
+              "speedFactorBase": 4,
+              "plus": 2,
+              "speedFactor": 2,
+              "variantOf": "specialWeapons.axeOfHurling",
+              "variant": {
+                "die": "d20",
+                "roll": [
+                  6,
+                  10
+                ],
+                "label": "+2"
+              }
+            },
+            {
+              "roll": [
+                4,
+                4
+              ],
+              "name": "Axe of Hurling +3",
+              "xp": 4500,
+              "xpPrinted": "4,500",
+              "id": "specialWeapons.axeOfHurlingPlus3",
+              "hasDescription": true,
+              "gearRef": "handOrThrowingAxe",
+              "weightLbs": 5,
+              "speedFactorBase": 4,
+              "plus": 3,
+              "speedFactor": 1,
+              "variantOf": "specialWeapons.axeOfHurling",
+              "variant": {
+                "die": "d20",
+                "roll": [
+                  11,
+                  15
+                ],
+                "label": "+3"
+              }
+            },
+            {
+              "roll": [
+                4,
+                4
+              ],
+              "name": "Axe of Hurling +4",
+              "xp": 6000,
+              "xpPrinted": "6,000",
+              "id": "specialWeapons.axeOfHurlingPlus4",
+              "hasDescription": true,
+              "gearRef": "handOrThrowingAxe",
+              "weightLbs": 5,
+              "speedFactorBase": 4,
+              "plus": 4,
+              "speedFactor": 0,
+              "variantOf": "specialWeapons.axeOfHurling",
+              "variant": {
+                "die": "d20",
+                "roll": [
+                  16,
+                  19
+                ],
+                "label": "+4"
+              }
+            },
+            {
+              "roll": [
+                4,
+                4
+              ],
+              "name": "Axe of Hurling +5",
+              "xp": 7500,
+              "xpPrinted": "7,500",
+              "id": "specialWeapons.axeOfHurlingPlus5",
+              "hasDescription": true,
+              "gearRef": "handOrThrowingAxe",
+              "weightLbs": 5,
+              "speedFactorBase": 4,
+              "plus": 5,
+              "speedFactor": 0,
+              "variantOf": "specialWeapons.axeOfHurling",
+              "variant": {
+                "die": "d20",
+                "roll": [
+                  20,
+                  20
+                ],
+                "label": "+5"
+              }
             },
             {
               "roll": [
@@ -5305,19 +8576,100 @@
                 15,
                 15
               ],
-              "name": "Dagger of Throwing",
-              "xp": null,
-              "xpPrinted": "*",
-              "xpMarker": "*",
-              "xpSeeDescription": true,
-              "id": "specialWeapons.daggerOfThrowing",
+              "name": "Dagger of Throwing +1",
+              "xp": 250,
+              "xpPrinted": "250",
+              "id": "specialWeapons.daggerOfThrowingPlus1",
               "hasDescription": true,
               "gearRef": "daggerOrDirk",
               "weightLbs": 1,
               "speedFactorBase": 2,
-              "plus": null,
-              "speedFactor": null,
-              "speedFactorNote": "plus is rolled on a sub-table in the description, so the speed factor is base minus the rolled plus"
+              "plus": 1,
+              "speedFactor": 1,
+              "variantOf": "specialWeapons.daggerOfThrowing",
+              "variant": {
+                "die": "d100",
+                "roll": [
+                  1,
+                  35
+                ],
+                "label": "+1"
+              }
+            },
+            {
+              "roll": [
+                15,
+                15
+              ],
+              "name": "Dagger of Throwing +2",
+              "xp": 350,
+              "xpPrinted": "350",
+              "id": "specialWeapons.daggerOfThrowingPlus2",
+              "hasDescription": true,
+              "gearRef": "daggerOrDirk",
+              "weightLbs": 1,
+              "speedFactorBase": 2,
+              "plus": 2,
+              "speedFactor": 0,
+              "variantOf": "specialWeapons.daggerOfThrowing",
+              "variant": {
+                "die": "d100",
+                "roll": [
+                  36,
+                  65
+                ],
+                "label": "+2"
+              }
+            },
+            {
+              "roll": [
+                15,
+                15
+              ],
+              "name": "Dagger of Throwing +3",
+              "xp": 450,
+              "xpPrinted": "450",
+              "id": "specialWeapons.daggerOfThrowingPlus3",
+              "hasDescription": true,
+              "gearRef": "daggerOrDirk",
+              "weightLbs": 1,
+              "speedFactorBase": 2,
+              "plus": 3,
+              "speedFactor": 0,
+              "variantOf": "specialWeapons.daggerOfThrowing",
+              "variant": {
+                "die": "d100",
+                "roll": [
+                  66,
+                  90
+                ],
+                "label": "+3"
+              }
+            },
+            {
+              "roll": [
+                15,
+                15
+              ],
+              "name": "Dagger of Throwing +4",
+              "xp": 550,
+              "xpPrinted": "550",
+              "id": "specialWeapons.daggerOfThrowingPlus4",
+              "hasDescription": true,
+              "gearRef": "daggerOrDirk",
+              "weightLbs": 1,
+              "speedFactorBase": 2,
+              "plus": 4,
+              "speedFactor": 0,
+              "variantOf": "specialWeapons.daggerOfThrowing",
+              "variant": {
+                "die": "d100",
+                "roll": [
+                  91,
+                  100
+                ],
+                "label": "+4"
+              }
             },
             {
               "roll": [
@@ -5459,17 +8811,104 @@
                 4,
                 5
               ],
-              "name": "Knife, Buckle",
-              "xp": 150,
-              "xpPrinted": "150",
-              "id": "specialWeapons.knifeBuckle",
+              "name": "Knife, Buckle +1",
+              "xp": 100,
+              "xpPrinted": "100",
+              "id": "specialWeapons.knifeBucklePlus1",
               "hasDescription": true,
               "weightLbs": null,
               "speedFactorBase": null,
-              "plus": null,
+              "plus": 1,
               "speedFactor": null,
-              "speedFactorNote": "plus is rolled on a sub-table in the description, so the speed factor is base minus the rolled plus",
-              "weightNote": "buckle knife is not a gear.json item; left empty"
+              "speedFactorNote": "buckle knife is not a gear.json item; speed factor left empty",
+              "weightNote": "buckle knife is not a gear.json item; left empty",
+              "variantOf": "specialWeapons.knifeBuckle",
+              "variant": {
+                "die": "d10",
+                "roll": [
+                  1,
+                  4
+                ],
+                "label": "+1"
+              }
+            },
+            {
+              "roll": [
+                4,
+                5
+              ],
+              "name": "Knife, Buckle +2",
+              "xp": 200,
+              "xpPrinted": "200",
+              "id": "specialWeapons.knifeBucklePlus2",
+              "hasDescription": true,
+              "weightLbs": null,
+              "speedFactorBase": null,
+              "plus": 2,
+              "speedFactor": null,
+              "speedFactorNote": "buckle knife is not a gear.json item; speed factor left empty",
+              "weightNote": "buckle knife is not a gear.json item; left empty",
+              "variantOf": "specialWeapons.knifeBuckle",
+              "variant": {
+                "die": "d10",
+                "roll": [
+                  5,
+                  7
+                ],
+                "label": "+2"
+              }
+            },
+            {
+              "roll": [
+                4,
+                5
+              ],
+              "name": "Knife, Buckle +3",
+              "xp": 300,
+              "xpPrinted": "300",
+              "id": "specialWeapons.knifeBucklePlus3",
+              "hasDescription": true,
+              "weightLbs": null,
+              "speedFactorBase": null,
+              "plus": 3,
+              "speedFactor": null,
+              "speedFactorNote": "buckle knife is not a gear.json item; speed factor left empty",
+              "weightNote": "buckle knife is not a gear.json item; left empty",
+              "variantOf": "specialWeapons.knifeBuckle",
+              "variant": {
+                "die": "d10",
+                "roll": [
+                  8,
+                  9
+                ],
+                "label": "+3"
+              }
+            },
+            {
+              "roll": [
+                4,
+                5
+              ],
+              "name": "Knife, Buckle +4",
+              "xp": 400,
+              "xpPrinted": "400",
+              "id": "specialWeapons.knifeBucklePlus4",
+              "hasDescription": true,
+              "weightLbs": null,
+              "speedFactorBase": null,
+              "plus": 4,
+              "speedFactor": null,
+              "speedFactorNote": "buckle knife is not a gear.json item; speed factor left empty",
+              "weightNote": "buckle knife is not a gear.json item; left empty",
+              "variantOf": "specialWeapons.knifeBuckle",
+              "variant": {
+                "die": "d10",
+                "roll": [
+                  10,
+                  10
+                ],
+                "label": "+4"
+              }
             },
             {
               "roll": [
@@ -5524,36 +8963,252 @@
                 10,
                 11
               ],
-              "name": "Quarterstaff, Magical",
-              "xp": 500,
-              "xpPrinted": "500",
-              "id": "specialWeapons.quarterstaffMagical",
+              "name": "Quarterstaff, Magical +1",
+              "xp": 250,
+              "xpPrinted": "250",
+              "id": "specialWeapons.quarterstaffMagicalPlus1",
               "hasDescription": true,
               "gearRef": "quarterstaff",
               "weightLbs": 4,
               "speedFactorBase": 4,
-              "plus": null,
-              "speedFactor": null,
-              "speedFactorNote": "plus is rolled on a sub-table in the description, so the speed factor is base minus the rolled plus"
+              "plus": 1,
+              "speedFactor": 3,
+              "variantOf": "specialWeapons.quarterstaffMagical",
+              "variant": {
+                "die": "d20",
+                "roll": [
+                  1,
+                  5
+                ],
+                "label": "+1"
+              }
+            },
+            {
+              "roll": [
+                10,
+                11
+              ],
+              "name": "Quarterstaff, Magical +2",
+              "xp": 500,
+              "xpPrinted": "500",
+              "id": "specialWeapons.quarterstaffMagicalPlus2",
+              "hasDescription": true,
+              "gearRef": "quarterstaff",
+              "weightLbs": 4,
+              "speedFactorBase": 4,
+              "plus": 2,
+              "speedFactor": 2,
+              "variantOf": "specialWeapons.quarterstaffMagical",
+              "variant": {
+                "die": "d20",
+                "roll": [
+                  6,
+                  9
+                ],
+                "label": "+2"
+              }
+            },
+            {
+              "roll": [
+                10,
+                11
+              ],
+              "name": "Quarterstaff, Magical +3",
+              "xp": 750,
+              "xpPrinted": "750",
+              "id": "specialWeapons.quarterstaffMagicalPlus3",
+              "hasDescription": true,
+              "gearRef": "quarterstaff",
+              "weightLbs": 4,
+              "speedFactorBase": 4,
+              "plus": 3,
+              "speedFactor": 1,
+              "variantOf": "specialWeapons.quarterstaffMagical",
+              "variant": {
+                "die": "d20",
+                "roll": [
+                  10,
+                  13
+                ],
+                "label": "+3"
+              }
+            },
+            {
+              "roll": [
+                10,
+                11
+              ],
+              "name": "Quarterstaff, Magical +4",
+              "xp": 1000,
+              "xpPrinted": "1,000",
+              "id": "specialWeapons.quarterstaffMagicalPlus4",
+              "hasDescription": true,
+              "gearRef": "quarterstaff",
+              "weightLbs": 4,
+              "speedFactorBase": 4,
+              "plus": 4,
+              "speedFactor": 0,
+              "variantOf": "specialWeapons.quarterstaffMagical",
+              "variant": {
+                "die": "d20",
+                "roll": [
+                  14,
+                  17
+                ],
+                "label": "+4"
+              }
+            },
+            {
+              "roll": [
+                10,
+                11
+              ],
+              "name": "Quarterstaff, Magical +5",
+              "xp": 1250,
+              "xpPrinted": "1,250",
+              "id": "specialWeapons.quarterstaffMagicalPlus5",
+              "hasDescription": true,
+              "gearRef": "quarterstaff",
+              "weightLbs": 4,
+              "speedFactorBase": 4,
+              "plus": 5,
+              "speedFactor": 0,
+              "variantOf": "specialWeapons.quarterstaffMagical",
+              "variant": {
+                "die": "d20",
+                "roll": [
+                  18,
+                  20
+                ],
+                "label": "+5"
+              }
             },
             {
               "roll": [
                 12,
                 12
               ],
-              "name": "Scimitar of Speed",
-              "xp": null,
-              "xpPrinted": "*",
-              "xpMarker": "*",
-              "xpSeeDescription": true,
-              "id": "specialWeapons.scimitarOfSpeed",
+              "name": "Scimitar of Speed +2",
+              "xp": 3000,
+              "xpPrinted": "3,000",
+              "id": "specialWeapons.scimitarOfSpeedPlus2",
               "hasDescription": true,
               "gearRef": "scimitar",
               "weightLbs": 4,
               "speedFactorBase": 5,
-              "plus": null,
-              "speedFactor": null,
-              "speedFactorNote": "plus not fixed by the description (variable or DM option), so no speed factor given"
+              "plus": 2,
+              "speedFactor": 3,
+              "variantOf": "specialWeapons.scimitarOfSpeed",
+              "variant": {
+                "die": "d100",
+                "roll": null,
+                "label": "+2"
+              },
+              "variantChancePercent": 75
+            },
+            {
+              "roll": [
+                12,
+                12
+              ],
+              "name": "Scimitar of Speed +1",
+              "xp": 2500,
+              "xpPrinted": "2,500",
+              "id": "specialWeapons.scimitarOfSpeedPlus1",
+              "hasDescription": true,
+              "gearRef": "scimitar",
+              "weightLbs": 4,
+              "speedFactorBase": 5,
+              "plus": 1,
+              "speedFactor": 4,
+              "variantOf": "specialWeapons.scimitarOfSpeed",
+              "variant": {
+                "die": "d100",
+                "roll": [
+                  1,
+                  50
+                ],
+                "label": "+1"
+              },
+              "variantNote": "One scimitar in four is not +2; for those, roll d100 on this table."
+            },
+            {
+              "roll": [
+                12,
+                12
+              ],
+              "name": "Scimitar of Speed +3",
+              "xp": 3500,
+              "xpPrinted": "3,500",
+              "id": "specialWeapons.scimitarOfSpeedPlus3",
+              "hasDescription": true,
+              "gearRef": "scimitar",
+              "weightLbs": 4,
+              "speedFactorBase": 5,
+              "plus": 3,
+              "speedFactor": 2,
+              "variantOf": "specialWeapons.scimitarOfSpeed",
+              "variant": {
+                "die": "d100",
+                "roll": [
+                  51,
+                  75
+                ],
+                "label": "+3"
+              },
+              "variantNote": "One scimitar in four is not +2; for those, roll d100 on this table."
+            },
+            {
+              "roll": [
+                12,
+                12
+              ],
+              "name": "Scimitar of Speed +4",
+              "xp": 4000,
+              "xpPrinted": "4,000",
+              "id": "specialWeapons.scimitarOfSpeedPlus4",
+              "hasDescription": true,
+              "gearRef": "scimitar",
+              "weightLbs": 4,
+              "speedFactorBase": 5,
+              "plus": 4,
+              "speedFactor": 1,
+              "variantOf": "specialWeapons.scimitarOfSpeed",
+              "variant": {
+                "die": "d100",
+                "roll": [
+                  76,
+                  90
+                ],
+                "label": "+4"
+              },
+              "variantNote": "One scimitar in four is not +2; for those, roll d100 on this table."
+            },
+            {
+              "roll": [
+                12,
+                12
+              ],
+              "name": "Scimitar of Speed +5",
+              "xp": 4500,
+              "xpPrinted": "4,500",
+              "id": "specialWeapons.scimitarOfSpeedPlus5",
+              "hasDescription": true,
+              "gearRef": "scimitar",
+              "weightLbs": 4,
+              "speedFactorBase": 5,
+              "plus": 5,
+              "speedFactor": 0,
+              "variantOf": "specialWeapons.scimitarOfSpeed",
+              "variant": {
+                "die": "d100",
+                "roll": [
+                  91,
+                  100
+                ],
+                "label": "+5"
+              },
+              "variantNote": "One scimitar in four is not +2; for those, roll d100 on this table."
             },
             {
               "roll": [
