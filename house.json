@@ -57,9 +57,16 @@
     }
   ],
   "monk": {
-    "source": "house",
+    "source": "house (Monk_v1.docx, owner document)",
     "maxLevel": 19,
-    "alignment": null,
+    "alignment": {
+      "allowed": [
+        "lawfulGood",
+        "lawfulNeutral",
+        "lawfulEvil"
+      ],
+      "note": "Any lawful."
+    },
     "prefill": {
       "nonProficientRelatedPenalty": "-3/-2",
       "weapon": {
@@ -89,13 +96,193 @@
       "detectNoise"
     ],
     "abilities": {
-      "stunAndFatalBlow": "With Open Hand a Monk may stun a humanoid opponent if the to-hit roll is exceeded by 5 or more, or a natural 20 is rolled (unless a 20 is required to hit). An opponent can only be affected once. Opponents are stunned for the remainder of that round and 1d4 additional rounds. Stunned victims suffer a loss of dexterity bonuses, -4 on AC, to hit and all saves, and are unable to cast spells.",
-      "dodgingMissiles": "Daggers, axes, arrows and crossbow bolts can be dodged or knocked aside; machine-launched missiles and thrown boulders can be dodged but not knocked aside. Saving throw vs Petrification (DEX bonus applies), -1 for each magical plus of the missile. One missile per level per round can be dodged. -1 Move per missile avoided, and the Monk cannot attack or activate any other special abilities. Magic Missiles or similar spells cannot be dodged.",
+      "stunAndFatalBlow": {
+        "summary": "With Open Hand a Monk may stun a humanoid opponent if the to-hit roll is exceeded by 5 or more, or a natural 20 is rolled (unless a 20 is required to hit). An opponent can only be affected once. Opponents are stunned for the remainder of that round and 1d4 additional rounds. Stunned victims suffer a loss of dexterity bonuses, -4 on AC, to hit and all saves, and are unable to cast spells.",
+        "stun": {
+          "trigger": "To-hit roll exceeded by 5 or more, or natural 20 (unless a 20 is needed to hit)",
+          "oncePerOpponentPerDay": true,
+          "maxHeightFt": "7 at level 1, +1 per level (levelTable.stunHeightFt)",
+          "affects": "living humanoids and humanoid-shaped creatures (dwarves, elves, ogres, trolls, giants etc)",
+          "noEffectOn": "dragons, slimes, elementals, golems, creatures with three or more legs, undead etc",
+          "duration": "rest of the round plus 1d4 rounds",
+          "penalties": "lose dexterity bonuses, -4 AC, -4 to hit, no spells, -4 on all saves"
+        },
+        "fatalBlow": {
+          "requires": "Stunned opponent and Monk level 5+",
+          "chancePct": "1% per level from level 5 (levelTable.fatalBlowPct)"
+        }
+      },
+      "dodgingMissiles": {
+        "summary": "Daggers, axes, arrows and crossbow bolts can be dodged or knocked aside; machine-launched missiles and thrown boulders can be dodged but not knocked aside. Saving throw vs Petrification (DEX bonus applies), -1 for each magical plus of the missile. One missile per level per round can be dodged. -1 Move per missile avoided, and the Monk cannot attack or activate any other special abilities. Magic Missiles or similar spells cannot be dodged.",
+        "perLevelPerRound": 1,
+        "saveVs": "petrification (only DEX affects it)",
+        "penaltyPerMagicalPlus": -1,
+        "moveCostPerMissile": 1,
+        "cannotDodge": "Magic Missile or similar spells (Melf's acid arrow, minute meteors etc)"
+      },
       "magicalAlignmentChange": "Immune from level 9.",
       "prohibitions": "Cannot use flaming oil or poisons. Cannot turn or command undead.",
-      "qigong": "The Monk's body counts as magical weapons for deciding which creatures may be hit (see the Qi column). This bonus does not apply to hit or damage rolls.",
+      "qigong": {
+        "summary": "The Monk's body counts as magical weapons for deciding which creatures may be hit (see the Qi column). This bonus does not apply to hit or damage rolls.",
+        "example": "13th level: body counts as a +3 magical weapon for deciding which creatures can be hit. Natural ability unaffected by magic or planes. Does not add to to-hit or damage."
+      },
       "areaEffects": "Against magical damaging spells or breath weapons where saving throws are allowed, the Monk sustains no damage if the save succeeds and only 50% of the total damage if it fails.",
-      "noPrimeRequisiteXpBonus": true
+      "noPrimeRequisiteXpBonus": true,
+      "mindOverBody": {
+        "level": 1,
+        "summary": "Suppress the need for food, water, rest or sleep for up to 2 consecutive days per level (10th level: 20 days). Also heals himself 2 hp per level once per day.",
+        "selfHealHpPerLevel": 2,
+        "perDay": 1,
+        "recovery": "Up to 48 hrs: no meditation needed, recharges after 48 hrs of normal rest. Over 48 hrs: meditation period equal to the total suppression time, with penalties (first 50%: 50% easier to surprise, -4 initiative, -4 to hit, half damage, -2 saves, half movement, no activated abilities; 51-75%: 25% easier to surprise, -2 initiative, -2 to hit, normal damage, -1 saves, 2/3 movement, activated abilities need a WIS check at -2; 76-90%: -1 initiative, -1 to hit, activated abilities need a WIS check; last 10%: normal). Activating abilities or fighting during meditation adds 1 day per day so spent."
+      },
+      "mindMask": {
+        "level": 2,
+        "summary": "ESP has only a 30% chance of success at 2nd level, dropping 2% per level thereafter. Permanent unless the Monk wills otherwise.",
+        "startPct": 30,
+        "dropPerLevelPct": 2
+      },
+      "bodyControl": {
+        "level": 3,
+        "summary": "Adapt to a hostile environment (water, acid, heat, cold, an elemental plane): breathe and move normally and take no damage simply from being there. Not a defence against attacks. Initiative modifier +3, lasts 1 hr/level, once per day.",
+        "durationPerLevel": "1 hour",
+        "initiativeMod": 3,
+        "perDay": 1
+      },
+      "immunities4": {
+        "level": 4,
+        "summary": "Immune to all natural diseases (including those from magical items or spells; not lycanthropy or vampirism). Unaffected by Haste and Slow."
+      },
+      "towerOfIronWill": {
+        "level": 5,
+        "summary": "Resistant to charms, suggestions, hypnotism and mental attacks: 30% at 5th level, +5% per level thereafter. Permanent unless the Monk wills otherwise.",
+        "startPct": 30,
+        "perLevelPct": 5
+      },
+      "bodyEquilibrium": {
+        "level": 6,
+        "summary": "Adjust weight to the surface (walk on water, quicksand); Feather Fall effect when falling. Once per day, 1 round/level, can change from round to round.",
+        "perDay": 1,
+        "durationPerLevel": "1 round"
+      },
+      "empathy": {
+        "level": 7,
+        "summary": "Senses basic needs, drives and emotions of unshielded minds seen within range, in the facing direction, range 10 ft per level. Three times a day, 1 round/level.",
+        "rangeFtPerLevel": 10,
+        "perDay": 3,
+        "durationPerLevel": "1 round"
+      },
+      "youthfulness": {
+        "level": 8,
+        "summary": "Ageing (natural and magical) slows to one third."
+      },
+      "molecularManipulation": {
+        "level": 9,
+        "summary": "Weakens a non-magical object not held by a creature (rope, leather straps, wooden boards, heavy chain, 1-inch iron bars) so it is easily broken by external force. Touch or sight within 20 ft, once per day.",
+        "rangeFt": 20,
+        "perDay": 1
+      },
+      "immunities10": {
+        "level": 10,
+        "summary": "Immune to paralysation and all poisons (including magical), and unaffected by Geas and Quest."
+      },
+      "psychicImpression": {
+        "level": 11,
+        "summary": "Once per day reads psychic impressions on an object. d20 against WIS modified by object type; the margin of success sets the knowledge gained (table below).",
+        "perDay": 1,
+        "wisAdjustmentByObject": {
+          "mundane": 0,
+          "miscMagic": -1,
+          "plus1Plus2": -2,
+          "tomesRodsStaffsWands": -3,
+          "plus3OrBetterSpecialPurpose": -4,
+          "artefact": -5
+        },
+        "artefactNote": "Only one reading of a given artefact per level.",
+        "knowledgeByMarginPassed": {
+          "1": "Last owner race, sex and age",
+          "2": "Last owner name and alignment",
+          "3": "Last owner general location (city or region)",
+          "4": "How last owner gained and lost item",
+          "5": "All previous owners race, sex and ages",
+          "6": "All previous owners names and alignments",
+          "7": "All previous owners current locations to town, city, region",
+          "8": "Complete history of how each owner gained and lost item",
+          "9": "Full details of who, where, when and how the item was created",
+          "10": "All details of any mundane item, and one detail of a magical item",
+          "11": "An additional detail/function of a magical item",
+          "12": "All details of miscellaneous magical items (command words, charges etc)",
+          "13": "All details of magical items +1/+2 and equivalent",
+          "14": "All details of miscellaneous special purpose magical items",
+          "15": "All details of miscellaneous magical items +3 or greater and equivalent",
+          "16+": "Everything there is to know about the item read including artefacts"
+        }
+      },
+      "quiveringPalm": {
+        "level": 12,
+        "summary": "Once per week; the Monk must touch the victim within 1 round/level of generating it or it is lost for the week. Victim must have no more than 150% of the Monk's total hit points. The command to die must be given within 1 day per level, any time from the next round (initiative roll needed), at any range or plane. No effect on undead, creatures without a life force, other-plane creatures, or those he cannot touch. Masters of the Wind (12th) and above are immune. If the Monk dies first the vibrations fade.",
+        "perWeek": 1,
+        "hpLimitPct": 150,
+        "touchWindowRoundsPerLevel": 1,
+        "commandWindowDaysPerLevel": 1
+      },
+      "dimensionWalk": {
+        "level": 13,
+        "summary": "Moves through the dimensions: 7 leagues (21 miles) per turn walked, up to 1 turn per level in 24 hours. No normal encounters. Time may alter: d% 01-20 +10%, 21-75 0%, 76-90 -25%, 91-100 -50%.",
+        "leaguesPerTurn": 7,
+        "milesPerTurn": 21,
+        "timeAlterationTable": [
+          {
+            "range": "01-20",
+            "change": "+10%"
+          },
+          {
+            "range": "21-75",
+            "change": "0%"
+          },
+          {
+            "range": "76-90",
+            "change": "-25%"
+          },
+          {
+            "range": "91-100",
+            "change": "-50%"
+          }
+        ]
+      },
+      "trueSeeing": {
+        "level": 14,
+        "summary": "As the 5th level priest spell True Seeing; once per day, 1 round/level. Initiative modifier 8; lost if damaged or disrupted.",
+        "initiativeMod": 8,
+        "perDay": 1
+      },
+      "mindBlank": {
+        "level": 15,
+        "summary": "As the 8th level wizard spell Mind Blank; protects against devices and spells that detect, influence or read emotions or thoughts (augury, charm, ESP, scrying, wish-related methods etc). Initiative modifier 1; once per day, lasts 1 day. Permanent once gained unless willed off (off for 24 hours).",
+        "initiativeMod": 1,
+        "perDay": 1
+      },
+      "planeShift": {
+        "level": 16,
+        "summary": "As the 5th level priest spell Plane Shift, affecting only the Monk. Initiative modifier 8; lost if damaged or disrupted.",
+        "initiativeMod": 8
+      },
+      "wordOfRecall": {
+        "level": 17,
+        "summary": "As the 6th level priest spell Word of Recall to his monastery; affects only the Monk and his immediate belongings. Initiative modifier 1.",
+        "initiativeMod": 1
+      },
+      "astralSpell": {
+        "level": 18,
+        "summary": "As the 7th level priest spell Astral Spell, only the Monk and his belongings. Initiative modifier 1 turn; once per day.",
+        "initiativeMod": "1 turn",
+        "perDay": 1
+      },
+      "timeStop": {
+        "level": 19,
+        "summary": "As the 9th level wizard spell Time Stop; initiative modifier 9; once per day.",
+        "initiativeMod": 9,
+        "perDay": 1
+      }
     },
     "levelTable": {
       "columns": [
@@ -382,13 +569,160 @@
       ],
       "notes": "Qi is the magical-weapon equivalence for deciding which creatures can be hit (shown as +N). dmgRange is as printed on the sheet. Note: level 5 qi printed '+1', level 19 printed 'Any'."
     },
-    "coverage": "100% house rules (confirmed by owner)",
-    "undefinedForEngine": [
-      "savingThrowTable: sheet gives no save values or class group for the Monk",
-      "proficiencySlots: weapon and non-weapon slot progression not on the sheet"
-    ],
+    "coverage": "100% house rules (confirmed by owner; full class text supplied in Monk_v1.docx)",
+    "undefinedForEngine": [],
     "thac0Group": "priest",
-    "thac0Note": "Owner: the Monk uses the Cleric (priest) THAC0 (rules-core.json thac0). The THAC0 column in levelTable below is the sheet's own and conflicts with it: confirm whether it applies only to Open Hand attacks or is replaced."
+    "thac0Note": "Resolved (Monk_v1.docx): weapons use the priest THAC0 table; Open Hand uses the THAC0 column in this level table.",
+    "requirements": {
+      "abilityMinimums": {
+        "str": 15,
+        "wis": 15,
+        "dex": 15,
+        "con": 15
+      },
+      "races": [
+        "human"
+      ],
+      "alignments": "any lawful"
+    },
+    "title": [
+      "Novice",
+      "Initiate of Rudiments",
+      "Initiate of Elements",
+      "Brother",
+      "Monk",
+      "Disciple",
+      "Disciple of Secrets",
+      "Disciple of Mysteries",
+      "Master",
+      "Master of Shadows",
+      "Master of Fire",
+      "Master of the Wind",
+      "Master of Dragons",
+      "Master of Time",
+      "Master of Souls",
+      "Master of Dreams",
+      "Master of Destiny",
+      "Superior Master",
+      "Grand Master of Flowers"
+    ],
+    "hitDice": {
+      "status": "confirmed-by-owner",
+      "die": "d6",
+      "columnLabel": "Hit Die D6 (D6)",
+      "byLevel": {
+        "1": "2d6",
+        "2": "3d6",
+        "3": "4d6",
+        "4": "5d6",
+        "5": "6d6",
+        "6": "7d6",
+        "7": "8d6",
+        "8": "9d6",
+        "9": "10d6",
+        "10": "11d6",
+        "11": "12d6"
+      },
+      "rule": "Levels 1-11: the Monk has (level + 1) d6 hit dice in total (2d6 at level 1, one more d6 each level, 12d6 at level 11). From level 12 he gains a flat amount of hit points per level instead of dice.",
+      "flatGainPerLevel": {
+        "12-18": 2,
+        "19": 16
+      },
+      "conBonus": "The CON bonus is added to the flat gain each level (house rule: CON bonus at all levels). Example: 12th level, CON +2: 2 + 2 = 4 hp. 19th level: 16 + CON bonus.",
+      "maxLevel": 19,
+      "nameLevel": 11,
+      "note": "The sheet's \"12+2 ... 12+14, 12+30\" column shows the running total; the real rule is +2 hp per level from 12th and +16 at 19th (owner clarification)."
+    },
+    "saves": {
+      "group": "priest",
+      "dexAidsSaves": true,
+      "note": "Priest tables for all saving throws."
+    },
+    "combat": {
+      "weaponThac0": "priest table (rules-core thac0)",
+      "openHandThac0": "levelTable.thac0 column",
+      "openHandUnaffectedByArmour": true,
+      "proficientWeaponDamage": "+1 hp per two levels attained when proficient (e.g. 10th level with a dagger: 1d4 + 5).",
+      "noStrengthBonus": "No STR bonus to hit or damage.",
+      "noDexAcAdjustment": true,
+      "noCriticalHits": "Open Hand never makes critical hits (a 20 is just a hit); the Stun/Fatal Blow replaces critical hits.",
+      "cannotUse": [
+        "armour",
+        "shields",
+        "flaming oil",
+        "poisons",
+        "undead turning"
+      ],
+      "noSpells": true
+    },
+    "proficiencies": {
+      "slots": "priest table (weapon and non-weapon)",
+      "nonWeaponGroups": [
+        "general",
+        "priest",
+        "warrior",
+        "rogue"
+      ],
+      "excluded": [
+        "wizard"
+      ],
+      "bonus": [
+        "endurance",
+        "running",
+        "religion (of chosen god)"
+      ]
+    },
+    "allowedWeapons": {
+      "names": [
+        "Alkyls",
+        "Atlatl",
+        "Hand axe",
+        "Club",
+        "Hand crossbow",
+        "Dagger",
+        "Javelin",
+        "Polearms",
+        "Spear",
+        "Staff",
+        "Throwing stars",
+        "Wakizashi swords",
+        "Scimitars",
+        "Whips"
+      ],
+      "note": "Within the Forgotten Realms certain gods may allow other weapons. Mapping to weapon ids is in rules-core classes.byClass.monk.weaponRestrictions.",
+      "status": "names only for now (owner: list at present); alkyls, atlatl, throwing stars and wakizashi have no weapon data",
+      "mappingConfirmed": "Polearms = all polearms in the weapons table except the mancatcher; staff = quarterstaff (confirmed by owner)"
+    },
+    "rogueSkills": {
+      "status": "supplied-by-owner",
+      "base": {
+        "moveSilently": 30,
+        "findRemoveTraps": 15,
+        "climbWalls": 65,
+        "hideInShadows": 20,
+        "detectNoise": 10
+      },
+      "pointsPerLevel": 20,
+      "maxPointsPerAbilityPerLevel": 10,
+      "maxScore": 95,
+      "adjustments": "Not adjusted for race, Dexterity or armour.",
+      "note": "Applies from level 1 (base score at 1st level, then 20 points to add at each level)."
+    },
+    "wealthAndMagic": {
+      "retainGpPerLevel": 25,
+      "maxMagicalItems": 5,
+      "potionsExempt": true
+    },
+    "ageing": "Ages at one third the normal rate (Youthfulness, level 8; the docx also says 1 year of game time = 3 years real time for challenges).",
+    "orders": {
+      "greyhawk": {
+        "Lawful Good": "Order of Tranquillity",
+        "Lawful Neutral": "Regime of Shadows",
+        "Lawful Evil": "The Scarlet Brotherhood"
+      },
+      "forgottenRealms": "Monastic orders of various gods, each with its own hierarchy and patron god; several monks of the same level may exist in an area.",
+      "masterRanks": "Level 9+ (Masters/Mistresses) are strictly limited in number. To take a rank a monk must have the XP for the level and defeat the holder in unarmed combat (to the death or non-fatal depending on alignment). The loser (if he survives) drops one level to the challenger's level (XP midway between old and new level). A losing challenger loses half the XP needed for his current level and cannot challenge again until it is regained and at least 1 year has passed (3 years real time). Advancement without combat is possible when the post is vacant or the holder is an instructor."
+    }
   },
   "classAbilities": {
     "druid": {

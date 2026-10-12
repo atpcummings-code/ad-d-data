@@ -5223,13 +5223,13 @@
       "toConfirm": "Whether to also let the user set the amount as a mix of coins (PP/GP/EP/SP/CP), or gp only."
     },
     "multiClass": {
-      "status": "confirmed-by-owner (rounding to confirm)",
+      "status": "confirmed-by-owner",
       "rule": "Roll the dice for each class (using that class's group dice, 10 gp x roll), add the results, and divide by the number of classes (the average of the rolls).",
-      "formula": "startingFundsGp = sum(10 x roll[class]) / numberOfClasses",
+      "formula": "startingFundsGp = ceil(sum(10 x roll[class]) / numberOfClasses)",
       "classToGroup": "fighter/paladin/ranger = warrior; cleric/druid = priest; wizard/illusionist = wizard; thief/bard = rogue; monk = monk",
       "rounding": {
-        "status": "to confirm",
-        "assumption": "round up to a whole gp, matching the hit die rule"
+        "status": "confirmed-by-owner",
+        "rule": "Round up to a whole gp (ceiling)."
       },
       "example": "Fighter/Thief: 8d4 rolls 20 (200 gp) and 4d6 rolls 14 (140 gp): (200 + 140) / 2 = 170 gp.",
       "override": "The manual override still applies."

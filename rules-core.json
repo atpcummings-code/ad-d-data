@@ -48,9 +48,12 @@
     "unassigned": [
       "monk"
     ],
-    "note": "Group membership drives THAC0, saving throws and non-weapon proficiency slots. Monk is a 100% house class with no PHB group; its THAC0 comes from its own level table, and its saves and slots are still to be defined.",
+    "note": "Group membership drives THAC0, saving throws and non-weapon proficiency slots. Monk is a 100% house class with no PHB group; for weapons it uses the priest THAC0, priest saves and priest proficiency slots; Open Hand uses its own THAC0 column in house.json.",
     "monkOverrides": {
-      "thac0": "priest"
+      "thac0": "priest (weapons; Open Hand uses the Monk special abilities table)",
+      "savingThrows": "priest",
+      "proficiencySlots": "priest",
+      "status": "confirmed by owner (Monk_v1.docx)"
     }
   },
   "classIds": {
@@ -2821,7 +2824,7 @@
       "status": "confirmed-by-owner",
       "source": "owner list",
       "noLevelLimits": true,
-      "note": "Single-class access by race. Mage/Wizard list applies to the generic wizard and to all specialist schools other than Illusionist (confirmed by owner). Monk not listed (house class, see house.json).",
+      "note": "Single-class access by race. Mage/Wizard list applies to the generic wizard and to all specialist schools other than Illusionist (confirmed by owner). Monk: human only (Monk_v1.docx).",
       "byClass": {
         "fighter": [
           "human",
@@ -2874,6 +2877,9 @@
         "bard": [
           "human",
           "halfElf"
+        ],
+        "monk": [
+          "human"
         ]
       },
       "byRace": {
@@ -2886,7 +2892,8 @@
           "cleric",
           "druid",
           "thief",
-          "bard"
+          "bard",
+          "monk"
         ],
         "dwarf": [
           "fighter",
@@ -3591,10 +3598,124 @@
         "abilityMinimumsNote": "Table 13 prints 'Var' for every ability for specialists. The actual minimum depends on the specialty: see specialistWizards.specialists[].minimumAbility (Table 22). The table says the Specialist row includes the illusionist.",
         "optionalClass": true,
         "minimumsSource": "PHB Table 13: Class Ability Minimums (image supplied by owner)"
+      },
+      "monk": {
+        "source": "Monk_v1.docx (owner document)",
+        "houseClass": true,
+        "optionalClass": true,
+        "classGroup": null,
+        "groupOverrides": {
+          "thac0": "priest (weapons)",
+          "savingThrows": "priest",
+          "proficiencySlots": "priest",
+          "nonWeaponProficiencyGroups": [
+            "general",
+            "priest",
+            "warrior",
+            "rogue"
+          ]
+        },
+        "abilityMinimums": {
+          "str": 15,
+          "wis": 15,
+          "dex": 15,
+          "con": 15
+        },
+        "primeRequisites": [],
+        "xpBonus": {
+          "percent": 0,
+          "rule": "Monks never gain experience point bonuses for high prime requisites."
+        },
+        "allowedRaces": "human only",
+        "allowedRacesList": [
+          "human"
+        ],
+        "allowedAlignments": [
+          "lawfulGood",
+          "lawfulNeutral",
+          "lawfulEvil"
+        ],
+        "alignmentNote": "Any lawful. Lawfulness is intrinsic: deliberately changing it strips the Monk of all abilities and he withers and dies. A forced change (e.g. Helm of Alignment change) can be undone only by a rigorous quest set by the Order. From level 9 monks are immune to magical alignment change.",
+        "weaponRestrictions": {
+          "rule": "Alkyls, atlatl, hand axe, club, hand crossbow, dagger, javelin, polearms, spear, staff, throwing stars, wakizashi swords, scimitars and whips. (In the Forgotten Realms certain gods may allow other weapons.)",
+          "allowedWeaponIds": [
+            "club",
+            "handCrossbow",
+            "daggerOrDirk",
+            "javelin",
+            "spear",
+            "quarterstaff",
+            "handOrThrowingAxe",
+            "scimitar",
+            "whip",
+            "awlPike",
+            "bardiche",
+            "becDeCorbin",
+            "billGuisarme",
+            "fauchard",
+            "fauchardFork",
+            "glaive",
+            "glaiveGuisarme",
+            "guisarme",
+            "guisarmeVoulge",
+            "halberd",
+            "hookFauchard",
+            "lucernHammer",
+            "militaryFork",
+            "partisan",
+            "ranseur",
+            "spetum",
+            "voulge"
+          ],
+          "mapping": {
+            "handAxe": "handOrThrowingAxe",
+            "dagger": "daggerOrDirk",
+            "staff": "quarterstaff (confirmed)",
+            "polearms": "all polearm entries in the weapons table except the mancatcher (confirmed)"
+          },
+          "notInWeaponsTable": [
+            "alkyls",
+            "atlatl",
+            "throwingStars",
+            "wakizashi"
+          ],
+          "notInWeaponsTableNote": "Alkyls, atlatl, throwing stars and wakizashi are not in the PHB weapons table supplied; they need cost/weight/damage data (house items) if they are to be selectable."
+        },
+        "armourRestrictions": {
+          "rule": "No armour, no shields, and no protective devices that improve AC. The Monk chooses not to use them to remain self-aware; this also applies to Open Hand attack and damage form.",
+          "allowedArmourIds": [],
+          "shields": "none"
+        },
+        "hitDie": {
+          "sides": 6,
+          "diceByLevel": "level + 1 d6 for levels 1-11",
+          "nameLevel": 11,
+          "hitPointsAfterNameLevel": {
+            "perLevel": 2,
+            "level19": 16,
+            "conBonusApplies": true,
+            "source": "Owner (Monk_v1.docx and clarification)"
+          },
+          "detail": "house.json monk.hitDice"
+        },
+        "noMultiClass": "The Monk is human only and appears in no multi-class combination.",
+        "noSpells": "A Monk does not cast spells; he has psionic-like abilities.",
+        "magicItems": {
+          "maxMagicalItems": 5,
+          "potionsExempt": true,
+          "note": "Will only want items that help him or others on his quests, or that protect those his Order deems. Can use all magic items except forbidden weapons and class/race items not specifically for a monk."
+        },
+        "wealth": {
+          "retainGpPerLevel": 25,
+          "note": "Donates wealth to the monastic order and retains no more than 25 gp per level."
+        },
+        "stillNeeded": [
+          "Weapon data for alkyls, atlatl, throwing stars and wakizashi (names only for now, owner decision)."
+        ],
+        "proficiencyNote": "Bonus non-weapon proficiencies: Endurance, Running, Religion (of chosen god). Weapon and non-weapon slots use the priest table. Can choose from General, Priest, Warrior and Rogue lists, not Wizard."
       }
     },
     "stillNeededPerClass": [
-      "Monk: ability minimums, requirements, hit dice and its saving throw table (house class).",
       "Armour: shield details (the 'Shields' section) and movement effects.",
       "Cleric: the ruling on mixed-type and missile weapons for the bludgeoning-only rule."
     ],
@@ -3612,7 +3733,7 @@
     "abilityMinimumsTable": {
       "source": "PHB Table 13: Class Ability Minimums (image supplied by owner)",
       "note": "A dash on the table means no minimum. Stored per class in classes.byClass[class].abilityMinimums.",
-      "monk": "Not on Table 13 (house class). Minimums still to be supplied."
+      "monk": "Not on Table 13 (house class). STR 15, WIS 15, DEX 15, CON 15 (Monk_v1.docx); see classes.byClass.monk."
     },
     "groups": {
       "warrior": {
@@ -4027,9 +4148,10 @@
     "monk": {
       "thac0Group": "priest",
       "status": "confirmed-by-owner",
-      "text": "The Monk uses the Cleric (priest) THAC0.",
-      "conflict": "The Monk's own level table (house.json monk.levelTable) lists a different THAC0 column: 20 at level 1 down to 0 at level 19. Confirm which applies, e.g. whether that column is only for Open Hand attacks.",
-      "supportingHint": "The Monk sheet's non-proficient penalty of -3 is the priest group's penalty on Table 34."
+      "text": "With weapons the Monk uses the Cleric (priest) THAC0. For Open Hand combat he uses the THAC0 listed in the Monk special abilities table (house.json monk.levelTable).",
+      "conflict": null,
+      "supportingHint": "The Monk sheet's non-proficient penalty of -3 is the priest group's penalty on Table 34.",
+      "resolved": "confirmed by Monk_v1.docx"
     },
     "multiClass": {
       "status": "confirmed-by-owner",
@@ -4466,8 +4588,9 @@
     "levelZero": "Only the warrior group has a level 0 row (for zero-level characters).",
     "classToGroup": "Use classGroups: fighter/paladin/ranger = warrior, cleric/druid = priest, thief/bard = rogue, wizard (and specialists) = wizard. The Bard fights and saves as a rogue (class text).",
     "monk": {
-      "group": "undefined",
-      "note": "The Monk (house class) has no saving throw group yet. Owner has said it uses the Cleric (priest) THAC0; confirm whether it also saves as a priest."
+      "group": "priest",
+      "status": "confirmed-by-owner",
+      "note": "Monks use the Priest tables for all saving throws. DEX aids in saving throws (no AC adjustment). Against magical spells or breath weapons where a save is allowed: no damage on a success, 50% damage on a failure."
     },
     "multiClass": {
       "status": "confirmed-by-owner",
@@ -6580,7 +6703,7 @@
     }
   },
   "alignments": {
-    "status": "complete for all standard classes; Monk not supplied",
+    "status": "complete for all classes including the Monk",
     "source": "Supplied by owner (text)",
     "list": [
       {
@@ -6724,6 +6847,14 @@
           "chaoticEvil"
         ],
         "note": "Any alignment (confirmed by owner)."
+      },
+      "monk": {
+        "allowed": [
+          "lawfulGood",
+          "lawfulNeutral",
+          "lawfulEvil"
+        ],
+        "note": "Any lawful (Monk_v1.docx)."
       }
     },
     "multiClassOverrides": [
@@ -6740,6 +6871,6 @@
       }
     ],
     "prefillRule": "When a class or class combination allows exactly one alignment, set it automatically and lock the field. Otherwise let the user choose any of the nine.",
-    "notYetCovered": "Only the Monk (house class) has no alignment rule yet. Every other class is covered."
+    "notYetCovered": null
   }
 }

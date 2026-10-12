@@ -947,7 +947,7 @@
           }
         }
       },
-      "classToSlotGroup": "Use classGroups in rules-core.json: fighter/paladin/ranger -> warrior, cleric/druid -> priest, wizard -> wizard, thief/bard -> rogue. Monk: undefined (house class).",
+      "classToSlotGroup": "Use classGroups in rules-core.json: fighter/paladin/ranger -> warrior, cleric/druid -> priest, wizard -> wizard, thief/bard -> rogue. Monk: priest (Monk_v1.docx).",
       "levelsPerExtraSlotMeaning": {
         "status": "interpretation-needs-confirming",
         "assumed": "A character gains one extra slot each time his level reaches a multiple of the table's '#Levels' figure (so a Warrior gains a weapon slot at levels 3, 6, 9...). Confirm from the PHB text.",
@@ -2125,6 +2125,21 @@
               "general"
             ],
             "ownGroup": "rogue"
+          },
+          "monk": {
+            "groups": [
+              "priest",
+              "warrior",
+              "rogue",
+              "general"
+            ],
+            "ownGroup": "priest",
+            "note": "Monk_v1.docx: may choose from General, Priest, Warrior and Rogue; not Wizard.",
+            "bonusProficiencies": [
+              "endurance",
+              "running",
+              "religion"
+            ]
           }
         },
         "notYetCovered": {
@@ -2134,10 +2149,6 @@
               "general"
             ],
             "note": "Listed on Table 38 as a specialist wizard. Not a class id yet; add when specialist wizards are defined."
-          },
-          "monk": {
-            "groups": null,
-            "note": "100% house class, not on Table 38. Owner to say which groups it uses."
           }
         }
       }
