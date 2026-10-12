@@ -5336,12 +5336,12 @@
               "xpPrinted": "1,500",
               "id": "specialWeapons.hammer3DwarvenThrower",
               "hasDescription": true,
-              "gearRef": "warhammer",
+              "gearRef": "hammer",
               "weightLbs": 6,
               "speedFactorBase": 4,
               "plus": 3,
               "speedFactor": 1,
-              "mappingAssumption": "'hammer' read as warhammer (the only hammer weapon in gear.json; same mapping as the Monk list)"
+              "mappingAssumption": "'hammer' read as the thrown hammer (gear.json id hammer), since the Dwarven Thrower is hurled"
             },
             {
               "roll": [
