@@ -1667,6 +1667,17 @@
           "weightLbs": 0.1,
           "hasDescription": false,
           "source": "owner-added"
+        },
+        {
+          "name": "Protection from Poisonous Gases",
+          "id": "potions.protectionFromPoisonousGases",
+          "roll": null,
+          "xp": null,
+          "xpPrinted": null,
+          "valueGp": 1000,
+          "weightLbs": 0.1,
+          "hasDescription": false,
+          "source": "owner-added"
         }
       ]
     },
