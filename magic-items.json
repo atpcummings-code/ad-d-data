@@ -4913,7 +4913,7 @@
               "name": "Knife",
               "id": "weaponType.knife",
               "gearRef": "knife",
-              "weightLbs": 0.5,
+              "weightLbs": 2,
               "speedFactorBase": 2,
               "speedFactor": null
             },

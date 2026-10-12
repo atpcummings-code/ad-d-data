@@ -2936,19 +2936,19 @@
       "specialistSchoolsOtherThanIllusionist": "same as wizard (confirmed by owner)"
     },
     "weaponAttackBonuses": {
-      "status": "confirmed-by-owner (PHB text)",
-      "source": "PHB racial bonuses when using weapons (text supplied by owner)",
+      "status": "confirmed-by-owner (PHB text) and weapon list from the owner's weapons spreadsheet",
+      "source": "PHB racial weapon bonuses (text supplied by owner); which missile weapons qualify is taken from the 'Elf Racial Adj' and 'Halfling Racial Adjustment' columns of the weapons spreadsheet, stored on gear.json weapons.missileRanges.rows[].racialAttackBonus",
       "bonusApplies": "attack rolls only (not damage)",
       "byRace": {
         "elf": [
           {
             "bonus": 1,
-            "applies": "bows of any sort other than a crossbow",
+            "applies": "bows of any sort other than a crossbow (rows flagged elf in gear.json missileRanges)",
             "weaponIds": [
-              "shortBow",
-              "longBow",
+              "compositeLongBow",
               "compositeShortBow",
-              "compositeLongBow"
+              "longBow",
+              "shortBow"
             ]
           },
           {
@@ -2957,36 +2957,36 @@
             "weaponIds": [
               "shortSword",
               "longSword"
-            ]
+            ],
+            "note": "From the PHB text; the spreadsheet's hand-held tab has no racial column."
           }
         ],
         "halfling": [
           {
             "bonus": 1,
-            "applies": "thrown weapons",
+            "applies": "thrown weapons and slings (rows flagged halfling in gear.json missileRanges)",
             "weaponIds": [
               "club",
               "daggerOrDirk",
               "dart",
+              "warhammer",
               "handOrThrowingAxe",
-              "harpoon",
               "javelin",
               "knife",
-              "spear"
-            ],
-            "mappingAssumption": "Thrown weapons taken as every non-launcher weapon that has a thrown range on PHB Table 45 (gear.json missileRanges)."
-          },
-          {
-            "bonus": 1,
-            "applies": "slings",
-            "weaponIds": [
-              "sling"
-            ],
-            "mappingAssumption": "Staff sling is not included (it is a separate weapon); confirm."
+              "sling",
+              "spear",
+              "staffSling",
+              "chakram",
+              "shurikenSpike",
+              "shurikenStarSmall",
+              "shurikenStarLarge",
+              "throwingOrb"
+            ]
           }
         ]
       },
-      "note": "Elf bow bonus excludes blowgun, arquebus and all crossbows. Applies to half-elves only if the owner says so (the text names elves and halflings only)."
+      "note": "Half-elves do not get these bonuses (the text names elves and halflings only). Harpoon and blowgun are not flagged for halflings on the spreadsheet.",
+      "resolved": "Staff sling counts as a sling for halflings (flagged Yes on the spreadsheet). Thrown weapons are the ones flagged Yes, replacing the earlier Table 45 assumption."
     }
   },
   "classes": {
@@ -4212,7 +4212,7 @@
       "rule": "A multi-class character uses the best (lowest) THAC0 of his classes at their levels.",
       "note": "Confirmed by owner: best (lowest) THAC0 of the classes."
     },
-    "engineHint": "THAC0 for the sheet's 'Natural THAC0' field. The weapon combat grid's to-hit numbers for AC 10 down to 0 are THAC0 minus AC, adjusted by STR, proficiency, specialisation and magical bonuses."
+    "engineHint": "THAC0 for the sheet's 'Natural THAC0' field. The weapon combat grid's to-hit numbers for AC 10 down to 0 are NOT simply THAC0 minus AC: each AC is calculated separately with the weapon's armour adjustment for that AC (see house.json houseRules weaponVsArmourClassToHit), then STR, magical plus, specialisation and racial bonuses."
   },
   "savingThrows": {
     "status": "from-PHB-table-60",

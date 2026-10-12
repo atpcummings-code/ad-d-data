@@ -3,7 +3,7 @@
     "file": "gear",
     "schemaVersion": "0.1.0",
     "ruleset": "AD&D 2nd Edition (Player's Handbook / Dungeon Master's Guide). NOT 5th edition.",
-    "provenance": "currency comes from PHB Table 42 and startingFunds from PHB Table 43, and equipment from PHB Table 44 (images supplied by owner). armour cost and weight come from the PHB armour table (image supplied by owner); weapons and missile ranges come from the PHB weapons table and Table 45 (images supplied by owner). Armour Class values come from PHB Table 46 (image supplied by owner).",
+    "provenance": "currency comes from PHB Table 42 and startingFunds from PHB Table 43, and equipment from PHB Table 44 (images supplied by owner). armour cost and weight come from the PHB armour table (image supplied by owner); weapons and missile ranges come from the PHB weapons table and Table 45 (images supplied by owner). Armour Class values come from PHB Table 46 (image supplied by owner). Weapons were then merged with the owner's weapons spreadsheet (hand-held and missile tabs).",
     "sectionStatus": {
       "currency": "from-PHB-table-42",
       "weapons": "from-PHB-weapons-table-and-table-45",
@@ -16,8 +16,8 @@
       "Starting funds: set by the owner (dice in startingFunds.byGroup, multi-class averaged). Multi-class rounding of fractional gp is assumed up, to confirm. Override is gp-only unless you want coin mixes.",
       "Equipment weights: clothing, food/lodging, provisioning, transport, animals and services have no weights on Table 44. Add weights if you want them in encumbrance.",
       "Armour: movement effects, shield details and the 'Armor *' footnote were not supplied.",
-      "Weapons: Table 45 lists 'Hammer' but the weapons table lists 'Warhammer'; left unlinked. Weapon proficiency groups / related weapons are not on the tables supplied.",
-      "Thief text names a lasso (weapon) and elven chain (armour); neither is in the weapons or armour tables supplied. Add them if you have their stats."
+      "Weapons: Table 45 'Hammer' is now linked to the warhammer (spreadsheet row). Weapon proficiency groups / related weapons for the newly added weapons are not defined yet.",
+      "Armour: elven chain (named in the thief text) is still not in the armour table. The lasso is now in weapons (from the spreadsheet)."
     ]
   },
   "currency": {
@@ -193,8 +193,8 @@
     "crossCheck": "The Rates line printed on every Tradestands sheet (1PP = 5GP = 10EP = 50SP = 500CP) matches Table 42 exactly."
   },
   "weapons": {
-    "status": "from-PHB-weapons-table-and-table-45",
-    "source": "PHB weapons table (two images) and PHB Table 45: Missile Weapon Ranges (image supplied by owner)",
+    "status": "from-PHB-plus-owner-weapons-spreadsheet",
+    "source": "PHB weapons table and PHB Table 45 (images supplied by owner), then updated from the owner's weapons spreadsheet (tabs 'Hand Held Weapons' and 'Missile Weapons'), which also adds non-PHB weapons and the Source, armour adjustment, racial and point-blank columns.",
     "sizeKey": {
       "S": "Small",
       "M": "Medium",
@@ -222,7 +222,10 @@
       "parent": "Heading the item is listed under on the table (Bow, Crossbow, Lance, Polearm, Sling, Sword, Blowgun)",
       "cost": "null where the table prints a dash. 'unit' is set where the price covers several (arrows: per 12 / per 6).",
       "speedFactor": "null for ammunition and for the Bastard sword (see its modes)",
-      "damageSM / damageL": "Small-Medium and Large damage as printed (e.g. '1d8', '1d6+1', '1d3-1'); null where the table prints a dash"
+      "damageSM / damageL": "Small-Medium and Large damage as printed (e.g. '1d8', '1d6+1', '1d3-1'); null where the table prints a dash",
+      "source": "Where the weapon comes from (e.g. PHB, DMGR3, Dra #189, OA), recorded as printed in the owner's weapons spreadsheet for reference only. Weapons not on the spreadsheet keep PHB (from the PHB table). Null where the spreadsheet cell is blank.",
+      "armourAdjustments": "Weapon vs target Armour Class adjustment, keys '10' to '0' (spreadsheet columns 10-0). Melee/hand-held values are on the weapon (or on each mode); thrown/missile values are on the missileRanges row. Number to hit for a target AC = THAC0 - AC - adjustment (see house.json houseRules weaponVsArmourClassToHit). AC below 0 has no column.",
+      "missileRanges.rows": "Each row is a weapon (plus ammunition where relevant) as on the spreadsheet: rof, rangeYards (spreadsheet ranges are in units of 10 yards, checked against PHB Table 45), damageSM/damageL for that combination, armourAdjustments, pointBlank, strengthBonusApplies, additionalSpecialisationSlots, racialAttackBonus {elf, halfling} (1 = +1 to attack rolls)."
     },
     "items": [
       {
@@ -253,7 +256,8 @@
           "amount": 5,
           "coin": "sp",
           "costInCp": 50
-        }
+        },
+        "source": "PHB"
       },
       {
         "id": "battleAxe",
@@ -271,7 +275,21 @@
         ],
         "speedFactor": 7,
         "damageSM": "1d8",
-        "damageL": "1d8"
+        "damageL": "1d8",
+        "source": "PHB",
+        "armourAdjustments": {
+          "10": 2,
+          "9": 1,
+          "8": 1,
+          "7": 0,
+          "6": 0,
+          "5": -1,
+          "4": -1,
+          "3": -2,
+          "2": -3,
+          "1": -4,
+          "0": -5
+        }
       },
       {
         "id": "blowgun",
@@ -287,7 +305,8 @@
         "type": null,
         "speedFactor": 5,
         "damageSM": null,
-        "damageL": null
+        "damageL": null,
+        "source": "PHB"
       },
       {
         "id": "barbedDart",
@@ -307,7 +326,8 @@
         ],
         "speedFactor": null,
         "damageSM": "1d3",
-        "damageL": "1d2"
+        "damageL": "1d2",
+        "source": "PHB"
       },
       {
         "id": "needle",
@@ -327,7 +347,8 @@
         ],
         "speedFactor": null,
         "damageSM": "1",
-        "damageL": "1"
+        "damageL": "1",
+        "source": "PHB"
       },
       {
         "id": "shortBow",
@@ -344,7 +365,8 @@
         "type": null,
         "speedFactor": 7,
         "damageSM": null,
-        "damageL": null
+        "damageL": null,
+        "source": "PHB"
       },
       {
         "id": "longBow",
@@ -361,7 +383,8 @@
         "type": null,
         "speedFactor": 8,
         "damageSM": null,
-        "damageL": null
+        "damageL": null,
+        "source": "PHB"
       },
       {
         "id": "compositeShortBow",
@@ -378,7 +401,8 @@
         "type": null,
         "speedFactor": 6,
         "damageSM": null,
-        "damageL": null
+        "damageL": null,
+        "source": "PHB"
       },
       {
         "id": "compositeLongBow",
@@ -395,7 +419,8 @@
         "type": null,
         "speedFactor": 7,
         "damageSM": null,
-        "damageL": null
+        "damageL": null,
+        "source": "PHB"
       },
       {
         "id": "flightArrow",
@@ -416,7 +441,8 @@
         ],
         "speedFactor": null,
         "damageSM": "1d6",
-        "damageL": "1d6"
+        "damageL": "1d6",
+        "source": "PHB"
       },
       {
         "id": "sheafArrow",
@@ -437,7 +463,8 @@
         ],
         "speedFactor": null,
         "damageSM": "1d8",
-        "damageL": "1d8"
+        "damageL": "1d8",
+        "source": "PHB"
       },
       {
         "id": "club",
@@ -451,7 +478,21 @@
         ],
         "speedFactor": 4,
         "damageSM": "1d6",
-        "damageL": "1d3"
+        "damageL": "1d3",
+        "source": "PHB",
+        "armourAdjustments": {
+          "10": 1,
+          "9": 0,
+          "8": 0,
+          "7": -1,
+          "6": -1,
+          "5": -2,
+          "4": -3,
+          "3": -4,
+          "2": -5,
+          "1": -6,
+          "0": -7
+        }
       },
       {
         "id": "handCrossbow",
@@ -468,7 +509,8 @@
         "type": null,
         "speedFactor": 5,
         "damageSM": null,
-        "damageL": null
+        "damageL": null,
+        "source": "PHB"
       },
       {
         "id": "lightCrossbow",
@@ -485,7 +527,8 @@
         "type": null,
         "speedFactor": 7,
         "damageSM": null,
-        "damageL": null
+        "damageL": null,
+        "source": "PHB"
       },
       {
         "id": "heavyCrossbow",
@@ -502,7 +545,8 @@
         "type": null,
         "speedFactor": 10,
         "damageSM": null,
-        "damageL": null
+        "damageL": null,
+        "source": "PHB"
       },
       {
         "id": "handQuarrel",
@@ -522,7 +566,8 @@
         ],
         "speedFactor": null,
         "damageSM": "1d3",
-        "damageL": "1d2"
+        "damageL": "1d2",
+        "source": "PHB"
       },
       {
         "id": "lightQuarrel",
@@ -542,7 +587,8 @@
         ],
         "speedFactor": null,
         "damageSM": "1d4",
-        "damageL": "1d4"
+        "damageL": "1d4",
+        "source": "PHB"
       },
       {
         "id": "heavyQuarrel",
@@ -562,7 +608,8 @@
         ],
         "speedFactor": null,
         "damageSM": "1d4+1",
-        "damageL": "1d6+1"
+        "damageL": "1d6+1",
+        "source": "PHB"
       },
       {
         "id": "daggerOrDirk",
@@ -580,7 +627,21 @@
         ],
         "speedFactor": 2,
         "damageSM": "1d4",
-        "damageL": "1d3"
+        "damageL": "1d3",
+        "source": "PHB",
+        "armourAdjustments": {
+          "10": 3,
+          "9": 1,
+          "8": 1,
+          "7": 0,
+          "6": 0,
+          "5": -2,
+          "4": -2,
+          "3": -3,
+          "2": -3,
+          "1": -4,
+          "0": -4
+        }
       },
       {
         "id": "dart",
@@ -598,7 +659,8 @@
         ],
         "speedFactor": 2,
         "damageSM": "1d3",
-        "damageL": "1d2"
+        "damageL": "1d2",
+        "source": "PHB"
       },
       {
         "id": "footmansFlail",
@@ -616,7 +678,21 @@
         ],
         "speedFactor": 7,
         "damageSM": "1d6+1",
-        "damageL": "2d4"
+        "damageL": "2d4",
+        "source": "PHB",
+        "armourAdjustments": {
+          "10": -1,
+          "9": 1,
+          "8": 1,
+          "7": 1,
+          "6": 1,
+          "5": 2,
+          "4": 1,
+          "3": 2,
+          "2": 2,
+          "1": 3,
+          "0": 3
+        }
       },
       {
         "id": "footmansMace",
@@ -634,7 +710,21 @@
         ],
         "speedFactor": 7,
         "damageSM": "1d6+1",
-        "damageL": "1d6"
+        "damageL": "1d6",
+        "source": "PHB",
+        "armourAdjustments": {
+          "10": 1,
+          "9": 1,
+          "8": 0,
+          "7": 0,
+          "6": 0,
+          "5": 0,
+          "4": 0,
+          "3": 1,
+          "2": 1,
+          "1": 2,
+          "0": 2
+        }
       },
       {
         "id": "footmansPick",
@@ -652,7 +742,21 @@
         ],
         "speedFactor": 7,
         "damageSM": "1d6+1",
-        "damageL": "2d4"
+        "damageL": "2d4",
+        "source": "PHB",
+        "armourAdjustments": {
+          "10": -2,
+          "9": -1,
+          "8": -1,
+          "7": -1,
+          "6": 0,
+          "5": 1,
+          "4": 1,
+          "3": 2,
+          "2": 2,
+          "1": 3,
+          "0": 3
+        }
       },
       {
         "id": "handOrThrowingAxe",
@@ -670,7 +774,21 @@
         ],
         "speedFactor": 4,
         "damageSM": "1d6",
-        "damageL": "1d4"
+        "damageL": "1d4",
+        "source": "PHB",
+        "armourAdjustments": {
+          "10": 2,
+          "9": 1,
+          "8": 1,
+          "7": 0,
+          "6": 0,
+          "5": -1,
+          "4": -1,
+          "3": -2,
+          "2": -3,
+          "1": -4,
+          "0": -5
+        }
       },
       {
         "id": "harpoon",
@@ -688,7 +806,21 @@
         ],
         "speedFactor": 7,
         "damageSM": "2d4",
-        "damageL": "2d6"
+        "damageL": "2d6",
+        "source": "PHB",
+        "armourAdjustments": {
+          "10": 0,
+          "9": 0,
+          "8": 0,
+          "7": 0,
+          "6": 0,
+          "5": -1,
+          "4": -1,
+          "3": -1,
+          "2": -2,
+          "1": -2,
+          "0": -3
+        }
       },
       {
         "id": "horsemansFlail",
@@ -706,7 +838,21 @@
         ],
         "speedFactor": 6,
         "damageSM": "1d4+1",
-        "damageL": "1d4+1"
+        "damageL": "1d4+1",
+        "source": "PHB",
+        "armourAdjustments": {
+          "10": 0,
+          "9": 1,
+          "8": 1,
+          "7": 1,
+          "6": 0,
+          "5": 0,
+          "4": 0,
+          "3": 0,
+          "2": 0,
+          "1": 0,
+          "0": 0
+        }
       },
       {
         "id": "horsemansMace",
@@ -724,7 +870,21 @@
         ],
         "speedFactor": 6,
         "damageSM": "1d6",
-        "damageL": "1d4"
+        "damageL": "1d4",
+        "source": "PHB",
+        "armourAdjustments": {
+          "10": 0,
+          "9": 0,
+          "8": 0,
+          "7": 0,
+          "6": 0,
+          "5": 0,
+          "4": 0,
+          "3": 1,
+          "2": 1,
+          "1": 2,
+          "0": 2
+        }
       },
       {
         "id": "horsemansPick",
@@ -742,7 +902,21 @@
         ],
         "speedFactor": 5,
         "damageSM": "1d4+1",
-        "damageL": "1d4"
+        "damageL": "1d4",
+        "source": "PHB",
+        "armourAdjustments": {
+          "10": -1,
+          "9": -1,
+          "8": -1,
+          "7": 0,
+          "6": 0,
+          "5": 1,
+          "4": 1,
+          "3": 1,
+          "2": 1,
+          "1": 2,
+          "0": 2
+        }
       },
       {
         "id": "javelin",
@@ -760,7 +934,21 @@
         ],
         "speedFactor": 4,
         "damageSM": "1d6",
-        "damageL": "1d6"
+        "damageL": "1d6",
+        "source": "PHB",
+        "armourAdjustments": {
+          "10": 0,
+          "9": 0,
+          "8": 0,
+          "7": 0,
+          "6": 0,
+          "5": 0,
+          "4": 0,
+          "3": 0,
+          "2": 0,
+          "1": 0,
+          "0": 0
+        }
       },
       {
         "id": "knife",
@@ -771,7 +959,7 @@
           "coin": "sp",
           "costInCp": 50
         },
-        "weightLbs": 0.5,
+        "weightLbs": 2,
         "size": "S",
         "type": [
           "P",
@@ -779,7 +967,21 @@
         ],
         "speedFactor": 2,
         "damageSM": "1d3",
-        "damageL": "1d2"
+        "damageL": "1d2",
+        "source": "PHB",
+        "armourAdjustments": {
+          "10": 3,
+          "9": 1,
+          "8": 1,
+          "7": 0,
+          "6": -1,
+          "5": -2,
+          "4": -3,
+          "3": -4,
+          "2": -5,
+          "1": -5,
+          "0": -6
+        }
       },
       {
         "id": "heavyHorseLance",
@@ -804,7 +1006,21 @@
         ],
         "flags": [
           "doubleDamageFromChargingMount"
-        ]
+        ],
+        "source": "PHB",
+        "armourAdjustments": {
+          "10": 0,
+          "9": 0,
+          "8": 1,
+          "7": 1,
+          "6": 2,
+          "5": 2,
+          "4": 2,
+          "3": 3,
+          "2": 3,
+          "1": 4,
+          "0": 4
+        }
       },
       {
         "id": "lightHorseLance",
@@ -829,7 +1045,21 @@
         ],
         "flags": [
           "doubleDamageFromChargingMount"
-        ]
+        ],
+        "source": "PHB",
+        "armourAdjustments": {
+          "10": 0,
+          "9": 0,
+          "8": 0,
+          "7": 0,
+          "6": 0,
+          "5": 0,
+          "4": -1,
+          "3": -2,
+          "2": -2,
+          "1": -3,
+          "0": -3
+        }
       },
       {
         "id": "joustingLance",
@@ -854,7 +1084,8 @@
         ],
         "flags": [
           "doubleDamageFromChargingMount"
-        ]
+        ],
+        "source": "PHB"
       },
       {
         "id": "mediumHorseLance",
@@ -879,7 +1110,21 @@
         ],
         "flags": [
           "doubleDamageFromChargingMount"
-        ]
+        ],
+        "source": "PHB",
+        "armourAdjustments": {
+          "10": 0,
+          "9": 0,
+          "8": 0,
+          "7": 1,
+          "6": 1,
+          "5": 1,
+          "4": 1,
+          "3": 0,
+          "2": 0,
+          "1": 0,
+          "0": -1
+        }
       },
       {
         "id": "mancatcher",
@@ -901,7 +1146,21 @@
         ],
         "flags": [
           "canDismountRiderOnHit"
-        ]
+        ],
+        "source": "PHB",
+        "armourAdjustments": {
+          "10": -3,
+          "9": -2,
+          "8": -1,
+          "7": 0,
+          "6": 0,
+          "5": 0,
+          "4": 0,
+          "3": 0,
+          "2": 0,
+          "1": 0,
+          "0": 0
+        }
       },
       {
         "id": "morningStar",
@@ -915,12 +1174,25 @@
         "weightLbs": 12,
         "size": "M",
         "type": [
-          "P",
           "B"
         ],
         "speedFactor": 7,
         "damageSM": "2d4",
-        "damageL": "1d6+1"
+        "damageL": "1d6+1",
+        "source": "PHB",
+        "armourAdjustments": {
+          "10": 3,
+          "9": 2,
+          "8": 1,
+          "7": 1,
+          "6": 1,
+          "5": 1,
+          "4": 1,
+          "3": 1,
+          "2": 0,
+          "1": 0,
+          "0": 0
+        }
       },
       {
         "id": "awlPike",
@@ -945,7 +1217,21 @@
         ],
         "flags": [
           "doubleDamageWhenSetVsCharge"
-        ]
+        ],
+        "source": "PHB",
+        "armourAdjustments": {
+          "10": -2,
+          "9": -1,
+          "8": 0,
+          "7": 0,
+          "6": 0,
+          "5": 0,
+          "4": 0,
+          "3": 0,
+          "2": -1,
+          "1": -1,
+          "0": -1
+        }
       },
       {
         "id": "bardiche",
@@ -964,7 +1250,21 @@
         ],
         "speedFactor": 9,
         "damageSM": "2d4",
-        "damageL": "2d6"
+        "damageL": "2d6",
+        "source": "PHB",
+        "armourAdjustments": {
+          "10": 3,
+          "9": 2,
+          "8": 2,
+          "7": 1,
+          "6": 1,
+          "5": 0,
+          "4": 0,
+          "3": -1,
+          "2": -2,
+          "1": -2,
+          "0": -3
+        }
       },
       {
         "id": "becDeCorbin",
@@ -984,7 +1284,21 @@
         ],
         "speedFactor": 9,
         "damageSM": "1d8",
-        "damageL": "1d6"
+        "damageL": "1d6",
+        "source": "PHB",
+        "armourAdjustments": {
+          "10": -1,
+          "9": 0,
+          "8": 0,
+          "7": 0,
+          "6": 0,
+          "5": 0,
+          "4": 2,
+          "3": 2,
+          "2": 2,
+          "1": 2,
+          "0": 2
+        }
       },
       {
         "id": "billGuisarme",
@@ -1004,7 +1318,21 @@
         ],
         "speedFactor": 10,
         "damageSM": "2d4",
-        "damageL": "1d10"
+        "damageL": "1d10",
+        "source": "PHB",
+        "armourAdjustments": {
+          "10": 0,
+          "9": 0,
+          "8": 1,
+          "7": 0,
+          "6": 0,
+          "5": 0,
+          "4": 0,
+          "3": 0,
+          "2": 0,
+          "1": 0,
+          "0": 0
+        }
       },
       {
         "id": "fauchard",
@@ -1024,7 +1352,21 @@
         ],
         "speedFactor": 8,
         "damageSM": "1d6",
-        "damageL": "1d8"
+        "damageL": "1d8",
+        "source": "PHB",
+        "armourAdjustments": {
+          "10": -1,
+          "9": -1,
+          "8": 0,
+          "7": 0,
+          "6": 0,
+          "5": -1,
+          "4": -1,
+          "3": -2,
+          "2": -2,
+          "1": -3,
+          "0": -3
+        }
       },
       {
         "id": "fauchardFork",
@@ -1044,7 +1386,21 @@
         ],
         "speedFactor": 8,
         "damageSM": "1d8",
-        "damageL": "1d10"
+        "damageL": "1d10",
+        "source": "PHB",
+        "armourAdjustments": {
+          "10": 1,
+          "9": 0,
+          "8": 1,
+          "7": 0,
+          "6": 0,
+          "5": 0,
+          "4": -1,
+          "3": -1,
+          "2": -1,
+          "1": -2,
+          "0": -2
+        }
       },
       {
         "id": "glaive",
@@ -1069,7 +1425,21 @@
         ],
         "flags": [
           "doubleDamageVsChargingLargeOrGreater"
-        ]
+        ],
+        "source": "PHB",
+        "armourAdjustments": {
+          "10": 0,
+          "9": 0,
+          "8": 0,
+          "7": 0,
+          "6": 0,
+          "5": 0,
+          "4": 0,
+          "3": -1,
+          "2": -1,
+          "1": -2,
+          "0": -2
+        }
       },
       {
         "id": "glaiveGuisarme",
@@ -1095,7 +1465,21 @@
         ],
         "flags": [
           "doubleDamageVsChargingLargeOrGreater"
-        ]
+        ],
+        "source": "PHB",
+        "armourAdjustments": {
+          "10": 0,
+          "9": 0,
+          "8": 0,
+          "7": 0,
+          "6": 0,
+          "5": 0,
+          "4": 0,
+          "3": -1,
+          "2": -1,
+          "1": -2,
+          "0": -2
+        }
       },
       {
         "id": "guisarme",
@@ -1114,7 +1498,21 @@
         ],
         "speedFactor": 8,
         "damageSM": "2d4",
-        "damageL": "1d8"
+        "damageL": "1d8",
+        "source": "PHB",
+        "armourAdjustments": {
+          "10": -1,
+          "9": -1,
+          "8": 0,
+          "7": 0,
+          "6": 0,
+          "5": -1,
+          "4": -1,
+          "3": -2,
+          "2": -2,
+          "1": -3,
+          "0": -3
+        }
       },
       {
         "id": "guisarmeVoulge",
@@ -1134,7 +1532,21 @@
         ],
         "speedFactor": 10,
         "damageSM": "2d4",
-        "damageL": "2d4"
+        "damageL": "2d4",
+        "source": "PHB",
+        "armourAdjustments": {
+          "10": 0,
+          "9": 0,
+          "8": 0,
+          "7": 1,
+          "6": 1,
+          "5": 1,
+          "4": 0,
+          "3": -1,
+          "2": -1,
+          "1": -2,
+          "0": -2
+        }
       },
       {
         "id": "halberd",
@@ -1154,7 +1566,21 @@
         ],
         "speedFactor": 9,
         "damageSM": "1d10",
-        "damageL": "2d6"
+        "damageL": "2d6",
+        "source": "PHB",
+        "armourAdjustments": {
+          "10": 0,
+          "9": 1,
+          "8": 1,
+          "7": 2,
+          "6": 2,
+          "5": 2,
+          "4": 1,
+          "3": 1,
+          "2": 1,
+          "1": 1,
+          "0": 0
+        }
       },
       {
         "id": "hookFauchard",
@@ -1174,7 +1600,21 @@
         ],
         "speedFactor": 9,
         "damageSM": "1d4",
-        "damageL": "1d4"
+        "damageL": "1d4",
+        "source": "PHB",
+        "armourAdjustments": {
+          "10": -1,
+          "9": 0,
+          "8": 0,
+          "7": 0,
+          "6": 0,
+          "5": -1,
+          "4": -1,
+          "3": -2,
+          "2": -2,
+          "1": -3,
+          "0": -3
+        }
       },
       {
         "id": "lucernHammer",
@@ -1200,7 +1640,21 @@
         ],
         "flags": [
           "doubleDamageWhenSetVsCharge"
-        ]
+        ],
+        "source": "PHB",
+        "armourAdjustments": {
+          "10": 0,
+          "9": 0,
+          "8": 1,
+          "7": 1,
+          "6": 2,
+          "5": 2,
+          "4": 2,
+          "3": 1,
+          "2": 1,
+          "1": 1,
+          "0": 0
+        }
       },
       {
         "id": "militaryFork",
@@ -1225,7 +1679,21 @@
         ],
         "flags": [
           "doubleDamageVsChargingLargeOrGreater"
-        ]
+        ],
+        "source": "PHB",
+        "armourAdjustments": {
+          "10": 1,
+          "9": 0,
+          "8": 1,
+          "7": 1,
+          "6": 0,
+          "5": 0,
+          "4": -1,
+          "3": -2,
+          "2": -2,
+          "1": -3,
+          "0": -3
+        }
       },
       {
         "id": "partisan",
@@ -1250,7 +1718,21 @@
         ],
         "flags": [
           "doubleDamageWhenSetVsCharge"
-        ]
+        ],
+        "source": "PHB",
+        "armourAdjustments": {
+          "10": 0,
+          "9": 0,
+          "8": 0,
+          "7": 0,
+          "6": 0,
+          "5": 0,
+          "4": 0,
+          "3": 0,
+          "2": 0,
+          "1": 0,
+          "0": 0
+        }
       },
       {
         "id": "ranseur",
@@ -1275,7 +1757,21 @@
         ],
         "flags": [
           "doubleDamageWhenSetVsCharge"
-        ]
+        ],
+        "source": "PHB",
+        "armourAdjustments": {
+          "10": 1,
+          "9": 0,
+          "8": 0,
+          "7": 0,
+          "6": 0,
+          "5": 0,
+          "4": -1,
+          "3": -1,
+          "2": -2,
+          "1": -3,
+          "0": -3
+        }
       },
       {
         "id": "spetum",
@@ -1300,7 +1796,21 @@
         ],
         "flags": [
           "doubleDamageWhenSetVsCharge"
-        ]
+        ],
+        "source": "PHB",
+        "armourAdjustments": {
+          "10": 2,
+          "9": 1,
+          "8": 0,
+          "7": 0,
+          "6": 0,
+          "5": 0,
+          "4": 0,
+          "3": -1,
+          "2": -2,
+          "1": -2,
+          "0": -2
+        }
       },
       {
         "id": "voulge",
@@ -1319,7 +1829,21 @@
         ],
         "speedFactor": 10,
         "damageSM": "2d4",
-        "damageL": "2d4"
+        "damageL": "2d4",
+        "source": "PHB",
+        "armourAdjustments": {
+          "10": 0,
+          "9": 0,
+          "8": 0,
+          "7": 1,
+          "6": 1,
+          "5": 1,
+          "4": 0,
+          "3": -1,
+          "2": -1,
+          "1": -2,
+          "0": -2
+        }
       },
       {
         "id": "quarterstaff",
@@ -1333,7 +1857,21 @@
         ],
         "speedFactor": 4,
         "damageSM": "1d6",
-        "damageL": "1d6"
+        "damageL": "1d6",
+        "source": "PHB",
+        "armourAdjustments": {
+          "10": 1,
+          "9": 1,
+          "8": 1,
+          "7": 0,
+          "6": 0,
+          "5": -1,
+          "4": -3,
+          "3": -5,
+          "2": -7,
+          "1": -8,
+          "0": -9
+        }
       },
       {
         "id": "scourge",
@@ -1349,7 +1887,8 @@
         "type": null,
         "speedFactor": 5,
         "damageSM": "1d4",
-        "damageL": "1d2"
+        "damageL": "1d2",
+        "source": "PHB"
       },
       {
         "id": "sickle",
@@ -1367,7 +1906,21 @@
         ],
         "speedFactor": 4,
         "damageSM": "1d4+1",
-        "damageL": "1d4"
+        "damageL": "1d4",
+        "source": "PHB",
+        "armourAdjustments": {
+          "10": 2,
+          "9": 1,
+          "8": 1,
+          "7": 0,
+          "6": 0,
+          "5": -1,
+          "4": -2,
+          "3": -3,
+          "2": -4,
+          "1": -4,
+          "0": -5
+        }
       },
       {
         "id": "sling",
@@ -1385,7 +1938,8 @@
         "type": null,
         "speedFactor": 6,
         "damageSM": null,
-        "damageL": null
+        "damageL": null,
+        "source": "PHB"
       },
       {
         "id": "slingBullet",
@@ -1405,7 +1959,8 @@
         ],
         "speedFactor": null,
         "damageSM": "1d4+1",
-        "damageL": "1d6+1"
+        "damageL": "1d4",
+        "source": "PHB"
       },
       {
         "id": "slingStone",
@@ -1421,7 +1976,8 @@
         ],
         "speedFactor": null,
         "damageSM": "1d4",
-        "damageL": "1d4"
+        "damageL": "1d4",
+        "source": "PHB"
       },
       {
         "id": "spear",
@@ -1439,7 +1995,21 @@
         ],
         "speedFactor": 6,
         "damageSM": "1d6",
-        "damageL": "1d8"
+        "damageL": "1d8",
+        "source": "PHB",
+        "armourAdjustments": {
+          "10": 0,
+          "9": 0,
+          "8": 0,
+          "7": 0,
+          "6": 0,
+          "5": -1,
+          "4": -1,
+          "3": -1,
+          "2": -2,
+          "1": -2,
+          "0": -2
+        }
       },
       {
         "id": "staffSling",
@@ -1455,7 +2025,21 @@
         "type": null,
         "speedFactor": 11,
         "damageSM": null,
-        "damageL": null
+        "damageL": null,
+        "source": "DMGR3",
+        "armourAdjustments": {
+          "10": 0,
+          "9": 0,
+          "8": 0,
+          "7": 0,
+          "6": 0,
+          "5": 0,
+          "4": 0,
+          "3": 0,
+          "2": 0,
+          "1": 0,
+          "0": 0
+        }
       },
       {
         "id": "bastardSword",
@@ -1481,16 +2065,43 @@
             "label": "One-handed",
             "speedFactor": 6,
             "damageSM": "1d8",
-            "damageL": "1d12"
+            "damageL": "1d12",
+            "armourAdjustments": {
+              "10": 2,
+              "9": 1,
+              "8": 0,
+              "7": 0,
+              "6": 0,
+              "5": 0,
+              "4": 0,
+              "3": -1,
+              "2": -2,
+              "1": -3,
+              "0": -4
+            }
           },
           {
             "id": "twoHanded",
             "label": "Two-handed",
             "speedFactor": 8,
             "damageSM": "2d4",
-            "damageL": "2d8"
+            "damageL": "2d8",
+            "armourAdjustments": {
+              "10": 0,
+              "9": 1,
+              "8": 1,
+              "7": 1,
+              "6": 1,
+              "5": 1,
+              "4": 1,
+              "3": 0,
+              "2": 0,
+              "1": 0,
+              "0": 0
+            }
           }
-        ]
+        ],
+        "source": "PHB"
       },
       {
         "id": "broadSword",
@@ -1509,7 +2120,21 @@
         ],
         "speedFactor": 5,
         "damageSM": "2d4",
-        "damageL": "1d6+1"
+        "damageL": "1d6+1",
+        "source": "PHB",
+        "armourAdjustments": {
+          "10": 2,
+          "9": 1,
+          "8": 1,
+          "7": 1,
+          "6": 0,
+          "5": 0,
+          "4": -1,
+          "3": -2,
+          "2": -3,
+          "1": -4,
+          "0": -5
+        }
       },
       {
         "id": "khopesh",
@@ -1528,7 +2153,21 @@
         ],
         "speedFactor": 9,
         "damageSM": "2d4",
-        "damageL": "1d6"
+        "damageL": "1d6",
+        "source": "PHB",
+        "armourAdjustments": {
+          "10": 2,
+          "9": 1,
+          "8": 1,
+          "7": 0,
+          "6": 0,
+          "5": -1,
+          "4": -2,
+          "3": -4,
+          "2": -5,
+          "1": -6,
+          "0": -7
+        }
       },
       {
         "id": "longSword",
@@ -1547,7 +2186,21 @@
         ],
         "speedFactor": 5,
         "damageSM": "1d8",
-        "damageL": "1d12"
+        "damageL": "1d12",
+        "source": "PHB",
+        "armourAdjustments": {
+          "10": 2,
+          "9": 1,
+          "8": 0,
+          "7": 0,
+          "6": 0,
+          "5": 0,
+          "4": 0,
+          "3": -1,
+          "2": -2,
+          "1": -3,
+          "0": -4
+        }
       },
       {
         "id": "scimitar",
@@ -1566,7 +2219,21 @@
         ],
         "speedFactor": 5,
         "damageSM": "1d8",
-        "damageL": "1d8"
+        "damageL": "1d8",
+        "source": "PHB",
+        "armourAdjustments": {
+          "10": 2,
+          "9": 1,
+          "8": 1,
+          "7": 0,
+          "6": 0,
+          "5": -1,
+          "4": -2,
+          "3": -2,
+          "2": -3,
+          "1": -3,
+          "0": -4
+        }
       },
       {
         "id": "shortSword",
@@ -1585,7 +2252,21 @@
         ],
         "speedFactor": 3,
         "damageSM": "1d6",
-        "damageL": "1d8"
+        "damageL": "1d8",
+        "source": "PHB",
+        "armourAdjustments": {
+          "10": 2,
+          "9": 0,
+          "8": 1,
+          "7": 0,
+          "6": 0,
+          "5": 0,
+          "4": -1,
+          "3": -2,
+          "2": -3,
+          "1": -4,
+          "0": -5
+        }
       },
       {
         "id": "twoHandedSword",
@@ -1604,7 +2285,21 @@
         ],
         "speedFactor": 10,
         "damageSM": "1d10",
-        "damageL": "3d6"
+        "damageL": "3d6",
+        "source": "PHB",
+        "armourAdjustments": {
+          "10": 0,
+          "9": 1,
+          "8": 3,
+          "7": 3,
+          "6": 3,
+          "5": 2,
+          "4": 2,
+          "3": 2,
+          "2": 2,
+          "1": 2,
+          "0": 2
+        }
       },
       {
         "id": "trident",
@@ -1622,7 +2317,21 @@
         ],
         "speedFactor": 7,
         "damageSM": "1d6+1",
-        "damageL": "3d4"
+        "damageL": "3d4",
+        "source": "PHB",
+        "armourAdjustments": {
+          "10": 1,
+          "9": 0,
+          "8": 1,
+          "7": 0,
+          "6": 0,
+          "5": -1,
+          "4": -1,
+          "3": -2,
+          "2": -3,
+          "1": -3,
+          "0": -4
+        }
       },
       {
         "id": "warhammer",
@@ -1640,7 +2349,21 @@
         ],
         "speedFactor": 4,
         "damageSM": "1d4+1",
-        "damageL": "1d4"
+        "damageL": "1d4",
+        "source": "PHB",
+        "armourAdjustments": {
+          "10": 0,
+          "9": 0,
+          "8": 0,
+          "7": 0,
+          "6": 0,
+          "5": 1,
+          "4": 0,
+          "3": 1,
+          "2": 0,
+          "1": 0,
+          "0": 0
+        }
       },
       {
         "id": "whip",
@@ -1656,7 +2379,791 @@
         "type": null,
         "speedFactor": 8,
         "damageSM": "1d2",
-        "damageL": "1"
+        "damageL": "1",
+        "source": "PHB",
+        "armourAdjustments": {
+          "10": 3,
+          "9": 0,
+          "8": 1,
+          "7": -1,
+          "6": -2,
+          "5": -4,
+          "4": -6,
+          "3": -8,
+          "2": -10,
+          "1": -12,
+          "0": -14
+        }
+      },
+      {
+        "id": "beardedAxe",
+        "name": "Bearded axe",
+        "kind": "weapon",
+        "cost": {
+          "amount": 11,
+          "coin": "gp",
+          "costInCp": 1100
+        },
+        "weightLbs": 10,
+        "size": "M",
+        "type": [
+          "S"
+        ],
+        "speedFactor": 8,
+        "damageSM": "1d10",
+        "damageL": "2d6",
+        "source": "Andy C",
+        "armourAdjustments": {
+          "10": 3,
+          "9": 1,
+          "8": 0,
+          "7": 0,
+          "6": -1,
+          "5": -1,
+          "4": -2,
+          "3": -2,
+          "2": -3,
+          "1": -4,
+          "0": -5
+        }
+      },
+      {
+        "id": "boStick",
+        "name": "Bo stick",
+        "kind": "weapon",
+        "cost": {
+          "amount": 2,
+          "coin": "cp",
+          "costInCp": 2
+        },
+        "weightLbs": 4,
+        "size": "L",
+        "type": [
+          "B"
+        ],
+        "speedFactor": 4,
+        "damageSM": "1d6",
+        "damageL": "1d4",
+        "source": "PHB",
+        "armourAdjustments": {
+          "10": 3,
+          "9": 0,
+          "8": 1,
+          "7": 0,
+          "6": -1,
+          "5": -3,
+          "4": -5,
+          "3": -7,
+          "2": -9,
+          "1": -11,
+          "0": -13
+        }
+      },
+      {
+        "id": "spikedBuckler",
+        "name": "Spiked buckler",
+        "kind": "weapon",
+        "cost": {
+          "amount": 3,
+          "coin": "gp",
+          "costInCp": 300
+        },
+        "weightLbs": 3,
+        "size": "M",
+        "type": [
+          "P"
+        ],
+        "speedFactor": 4,
+        "damageSM": "1d3",
+        "damageL": "1d2",
+        "source": "Dra #189",
+        "armourAdjustments": {
+          "10": 2,
+          "9": 0,
+          "8": 0,
+          "7": 0,
+          "6": -1,
+          "5": -2,
+          "4": -3,
+          "3": -4,
+          "2": -5,
+          "1": -6,
+          "0": -7
+        }
+      },
+      {
+        "id": "chain",
+        "name": "Chain",
+        "kind": "weapon",
+        "cost": {
+          "amount": 5,
+          "coin": "sp",
+          "costInCp": 50
+        },
+        "weightLbs": 3,
+        "size": "L",
+        "type": [
+          "B"
+        ],
+        "speedFactor": 5,
+        "damageSM": "1d4+1",
+        "damageL": "1d4",
+        "source": "PHBR1",
+        "armourAdjustments": {
+          "10": 0,
+          "9": 1,
+          "8": 0,
+          "7": 0,
+          "6": -2,
+          "5": -5,
+          "4": -5,
+          "3": -7,
+          "2": -7,
+          "1": -8,
+          "0": -8
+        }
+      },
+      {
+        "id": "dwarvenWarClub",
+        "name": "Dwarven war club",
+        "kind": "weapon",
+        "cost": {
+          "amount": 10,
+          "coin": "gp",
+          "costInCp": 1000
+        },
+        "weightLbs": 12,
+        "size": "M",
+        "type": [
+          "B"
+        ],
+        "speedFactor": 6,
+        "damageSM": "2d4",
+        "damageL": "1d6+1",
+        "source": "Dra #169",
+        "armourAdjustments": {
+          "10": 0,
+          "9": 2,
+          "8": 0,
+          "7": 1,
+          "6": 0,
+          "5": 0,
+          "4": 0,
+          "3": 1,
+          "2": 1,
+          "1": 2,
+          "0": 2
+        }
+      },
+      {
+        "id": "greatClub",
+        "name": "Great club",
+        "kind": "weapon",
+        "cost": {
+          "amount": 8,
+          "coin": "gp",
+          "costInCp": 800
+        },
+        "weightLbs": 12,
+        "size": "M",
+        "type": [
+          "B"
+        ],
+        "speedFactor": 7,
+        "damageSM": "2d4",
+        "damageL": "1d6+1",
+        "source": "PHBR10",
+        "armourAdjustments": {
+          "10": 0,
+          "9": 2,
+          "8": 0,
+          "7": 1,
+          "6": 0,
+          "5": 0,
+          "4": 0,
+          "3": 1,
+          "2": 1,
+          "1": 2,
+          "0": 2
+        }
+      },
+      {
+        "id": "dwarvenBattleAxeTwoHanded",
+        "name": "Dwarven battle axe, two-handed",
+        "kind": "weapon",
+        "cost": {
+          "amount": 10,
+          "coin": "gp",
+          "costInCp": 1000
+        },
+        "weightLbs": 10,
+        "size": "M",
+        "type": [
+          "S"
+        ],
+        "speedFactor": 9,
+        "damageSM": "1d10",
+        "damageL": "2d8",
+        "source": "PHBR6 & Taff",
+        "armourAdjustments": {
+          "10": 0,
+          "9": 1,
+          "8": 1,
+          "7": 2,
+          "6": 1,
+          "5": 1,
+          "4": 1,
+          "3": 0,
+          "2": -1,
+          "1": -1,
+          "0": -2
+        }
+      },
+      {
+        "id": "joStick",
+        "name": "Jo stick",
+        "kind": "weapon",
+        "cost": {
+          "amount": 5,
+          "coin": "cp",
+          "costInCp": 5
+        },
+        "weightLbs": 1,
+        "size": "M",
+        "type": [
+          "B"
+        ],
+        "speedFactor": 2,
+        "damageSM": "1d6",
+        "damageL": "1d4",
+        "source": "PHB",
+        "armourAdjustments": {
+          "10": 2,
+          "9": 0,
+          "8": 1,
+          "7": 0,
+          "6": -1,
+          "5": -2,
+          "4": -4,
+          "3": -6,
+          "2": -8,
+          "1": -9,
+          "0": -10
+        }
+      },
+      {
+        "id": "lasso",
+        "name": "Lasso",
+        "kind": "weapon",
+        "cost": {
+          "amount": 5,
+          "coin": "sp",
+          "costInCp": 50
+        },
+        "weightLbs": 3,
+        "size": "L",
+        "type": null,
+        "speedFactor": 10,
+        "damageSM": null,
+        "damageL": null,
+        "source": "PHBR1",
+        "armourAdjustments": {
+          "10": 0,
+          "9": 0,
+          "8": 0,
+          "7": 0,
+          "6": 0,
+          "5": 0,
+          "4": 0,
+          "3": 0,
+          "2": 0,
+          "1": 0,
+          "0": 0
+        },
+        "note": "Thief/Ranger-type entangling weapon. Resolves the earlier open issue (lasso not in the PHB weapons table)."
+      },
+      {
+        "id": "greatMace",
+        "name": "Great mace",
+        "kind": "weapon",
+        "cost": {
+          "amount": 20,
+          "coin": "gp",
+          "costInCp": 2000
+        },
+        "weightLbs": 20,
+        "size": "M",
+        "type": [
+          "B"
+        ],
+        "speedFactor": 10,
+        "damageSM": "1d8+1",
+        "damageL": "2d4",
+        "source": "Dra #169",
+        "armourAdjustments": {
+          "10": -1,
+          "9": 0,
+          "8": -1,
+          "7": 0,
+          "6": 0,
+          "5": 1,
+          "4": 1,
+          "3": 2,
+          "2": 2,
+          "1": 3,
+          "0": 3
+        }
+      },
+      {
+        "id": "doubleBallMorningStar",
+        "name": "Double-ball morning star",
+        "kind": "weapon",
+        "cost": {
+          "amount": 35,
+          "coin": "gp",
+          "costInCp": 3500
+        },
+        "weightLbs": 16,
+        "size": "M",
+        "type": [
+          "B"
+        ],
+        "speedFactor": 8,
+        "damageSM": "1d4+1x2",
+        "damageL": "1d4x2",
+        "source": "Dra #169",
+        "armourAdjustments": {
+          "10": 2,
+          "9": 1,
+          "8": 1,
+          "7": 1,
+          "6": 1,
+          "5": 1,
+          "4": 1,
+          "3": 0,
+          "2": 0,
+          "1": 0,
+          "0": -1
+        }
+      },
+      {
+        "id": "naginata",
+        "name": "Naginata",
+        "parent": "Polearm",
+        "kind": "weapon",
+        "cost": {
+          "amount": 8,
+          "coin": "gp",
+          "costInCp": 800
+        },
+        "weightLbs": 10,
+        "size": "L",
+        "type": [
+          "P"
+        ],
+        "speedFactor": 7,
+        "damageSM": "1d8",
+        "damageL": "1d10",
+        "source": "PHBR1",
+        "armourAdjustments": {
+          "10": 0,
+          "9": 0,
+          "8": 0,
+          "7": 0,
+          "6": 0,
+          "5": 0,
+          "4": 0,
+          "3": -1,
+          "2": -1,
+          "1": -2,
+          "0": -2
+        }
+      },
+      {
+        "id": "sap",
+        "name": "Sap",
+        "kind": "weapon",
+        "cost": {
+          "amount": 1,
+          "coin": "gp",
+          "costInCp": 100
+        },
+        "weightLbs": 0.1,
+        "size": "S",
+        "type": [
+          "B"
+        ],
+        "speedFactor": 2,
+        "damageSM": "1d2",
+        "damageL": "1d2",
+        "source": "PHB",
+        "armourAdjustments": {
+          "10": 0,
+          "9": -2,
+          "8": -3,
+          "7": -4,
+          "6": -5,
+          "5": -6,
+          "4": -8,
+          "3": -10,
+          "2": -12,
+          "1": -13,
+          "0": -14
+        }
+      },
+      {
+        "id": "dwarvenClaymore",
+        "name": "Dwarven claymore",
+        "parent": "Sword",
+        "kind": "weapon",
+        "cost": null,
+        "weightLbs": 11,
+        "size": "M",
+        "type": [
+          "S"
+        ],
+        "speedFactor": 7,
+        "damageSM": "2d4",
+        "damageL": "2d6",
+        "source": "Dra #169",
+        "costMarker": "**",
+        "costNote": "Cost printed as '**' in the spreadsheet (no value given)",
+        "armourAdjustments": {
+          "10": 0,
+          "9": 1,
+          "8": 1,
+          "7": 2,
+          "6": 2,
+          "5": 2,
+          "4": 1,
+          "3": 1,
+          "2": 0,
+          "1": 0,
+          "0": -1
+        }
+      },
+      {
+        "id": "falchion",
+        "name": "Falchion",
+        "parent": "Sword",
+        "kind": "weapon",
+        "cost": {
+          "amount": 17,
+          "coin": "gp",
+          "costInCp": 1700
+        },
+        "weightLbs": 8,
+        "size": "M",
+        "type": [
+          "S"
+        ],
+        "speedFactor": 5,
+        "damageSM": "1d6+1",
+        "damageL": "2d4",
+        "source": "DMGR3",
+        "armourAdjustments": {
+          "10": 0,
+          "9": 0,
+          "8": 1,
+          "7": 1,
+          "6": 1,
+          "5": 1,
+          "4": 0,
+          "3": -1,
+          "2": -2,
+          "1": -2,
+          "0": -3
+        }
+      },
+      {
+        "id": "katana",
+        "name": "Katana",
+        "parent": "Sword",
+        "kind": "weapon",
+        "cost": {
+          "amount": 100,
+          "coin": "gp",
+          "costInCp": 10000
+        },
+        "weightLbs": 6,
+        "size": "M",
+        "type": [
+          "S",
+          "P"
+        ],
+        "speedFactor": 4,
+        "damageSM": "1d10",
+        "damageL": "1d12",
+        "source": "PHBR2",
+        "armourAdjustments": {
+          "10": 3,
+          "9": 2,
+          "8": -1,
+          "7": 0,
+          "6": 0,
+          "5": 0,
+          "4": -1,
+          "3": -2,
+          "2": -3,
+          "1": -4,
+          "0": -5
+        }
+      },
+      {
+        "id": "sabre",
+        "name": "Sabre",
+        "parent": "Sword",
+        "kind": "weapon",
+        "cost": {
+          "amount": 17,
+          "coin": "gp",
+          "costInCp": 1700
+        },
+        "weightLbs": 5,
+        "size": "M",
+        "type": [
+          "S"
+        ],
+        "speedFactor": 4,
+        "damageSM": "1d6+1",
+        "damageL": "1d8+1",
+        "source": "PHBR1",
+        "armourAdjustments": {
+          "10": 2,
+          "9": 1,
+          "8": 1,
+          "7": 0,
+          "6": 0,
+          "5": -1,
+          "4": -2,
+          "3": -2,
+          "2": -3,
+          "1": -3,
+          "0": -4
+        }
+      },
+      {
+        "id": "warhammerTwoHanded",
+        "name": "Warhammer, two-handed",
+        "kind": "weapon",
+        "cost": {
+          "amount": 45,
+          "coin": "gp",
+          "costInCp": 4500
+        },
+        "weightLbs": 12,
+        "size": "L",
+        "type": [
+          "B"
+        ],
+        "speedFactor": 8,
+        "damageSM": "1d10",
+        "damageL": "1d10",
+        "source": "Phil/Andy",
+        "armourAdjustments": {
+          "10": 0,
+          "9": 1,
+          "8": 2,
+          "7": 2,
+          "6": 2,
+          "5": 1,
+          "4": 1,
+          "3": 1,
+          "2": 1,
+          "1": 1,
+          "0": 1
+        }
+      },
+      {
+        "id": "claymore",
+        "name": "Claymore",
+        "parent": "Sword",
+        "kind": "weapon",
+        "cost": {
+          "amount": 25,
+          "coin": "gp",
+          "costInCp": 2500
+        },
+        "weightLbs": 10,
+        "size": "M",
+        "type": [
+          "S"
+        ],
+        "speedFactor": null,
+        "damageSM": null,
+        "damageL": null,
+        "source": "DMGR3",
+        "modes": [
+          {
+            "id": "oneHanded",
+            "label": "One-handed",
+            "speedFactor": 6,
+            "damageSM": "1d8",
+            "damageL": "1d12",
+            "armourAdjustments": {
+              "10": 2,
+              "9": 1,
+              "8": 0,
+              "7": 0,
+              "6": 0,
+              "5": 0,
+              "4": 0,
+              "3": -1,
+              "2": -2,
+              "1": -3,
+              "0": -4
+            }
+          },
+          {
+            "id": "twoHanded",
+            "label": "Two-handed",
+            "speedFactor": 8,
+            "damageSM": "2d4",
+            "damageL": "2d8",
+            "armourAdjustments": {
+              "10": 0,
+              "9": 1,
+              "8": 1,
+              "7": 1,
+              "6": 1,
+              "5": 1,
+              "4": 1,
+              "3": 0,
+              "2": 0,
+              "1": 0,
+              "0": 0
+            },
+            "source": null,
+            "sourceNote": "Source cell is blank for the two-handed row in the spreadsheet; the one-handed row says DMGR3."
+          }
+        ]
+      },
+      {
+        "id": "chakram",
+        "name": "Chakram",
+        "kind": "weapon",
+        "cost": {
+          "amount": 1,
+          "coin": "gp",
+          "costInCp": 100
+        },
+        "weightLbs": 0.2,
+        "size": "S",
+        "type": [
+          "S"
+        ],
+        "speedFactor": 2,
+        "damageSM": "1d4",
+        "damageL": "1d3",
+        "source": "Dra #189"
+      },
+      {
+        "id": "crossbowDisk",
+        "name": "Disk crossbow",
+        "kind": "launcher",
+        "cost": {
+          "amount": 175,
+          "coin": "gp",
+          "costInCp": 17500
+        },
+        "weightLbs": 10,
+        "size": "M",
+        "type": null,
+        "speedFactor": 10,
+        "damageSM": null,
+        "damageL": null,
+        "source": "Dra #169",
+        "parent": "Crossbow",
+        "note": "Ammunition not named in the spreadsheet; damage is on the Table 45 row."
+      },
+      {
+        "id": "crossbowDoubled",
+        "name": "Doubled crossbow (light x2)",
+        "kind": "launcher",
+        "cost": {
+          "amount": 60,
+          "coin": "gp",
+          "costInCp": 6000
+        },
+        "weightLbs": 8,
+        "size": "M",
+        "type": null,
+        "speedFactor": 8,
+        "damageSM": null,
+        "damageL": null,
+        "source": "Dra #169",
+        "parent": "Crossbow",
+        "note": "Ammunition not named in the spreadsheet; damage is on the Table 45 row."
+      },
+      {
+        "id": "shurikenSpike",
+        "name": "Shuriken, spike",
+        "kind": "weapon",
+        "cost": {
+          "amount": 3,
+          "coin": "sp",
+          "costInCp": 30
+        },
+        "weightLbs": 0.1,
+        "size": "S",
+        "type": [
+          "P"
+        ],
+        "speedFactor": 2,
+        "damageSM": "1d4",
+        "damageL": "1d3",
+        "source": "OA"
+      },
+      {
+        "id": "shurikenStarSmall",
+        "name": "Shuriken, star (small)",
+        "kind": "weapon",
+        "cost": null,
+        "weightLbs": 0.1,
+        "size": "S",
+        "type": [
+          "P"
+        ],
+        "speedFactor": 2,
+        "damageSM": "1d4",
+        "damageL": "1d4",
+        "source": "OA",
+        "costNote": "Cost cell blank in the spreadsheet."
+      },
+      {
+        "id": "shurikenStarLarge",
+        "name": "Shuriken, star (large)",
+        "kind": "weapon",
+        "cost": null,
+        "weightLbs": 0.2,
+        "size": "S",
+        "type": [
+          "P"
+        ],
+        "speedFactor": 2,
+        "damageSM": "1d6",
+        "damageL": "1d4",
+        "source": "OA",
+        "costNote": "Cost cell blank in the spreadsheet."
+      },
+      {
+        "id": "throwingOrb",
+        "name": "Throwing orb",
+        "kind": "weapon",
+        "cost": {
+          "amount": 25,
+          "coin": "sp",
+          "costInCp": 250
+        },
+        "weightLbs": 1,
+        "size": "S",
+        "type": [
+          "B"
+        ],
+        "speedFactor": 2,
+        "damageSM": "1d4",
+        "damageL": "1d3",
+        "source": "PHB"
       }
     ],
     "missileRanges": {
@@ -1689,7 +3196,8 @@
             "short": 50,
             "medium": 150,
             "long": 210
-          }
+          },
+          "source": "PHB"
         },
         {
           "id": "blowgun",
@@ -1705,7 +3213,38 @@
             "short": 10,
             "medium": 20,
             "long": 30
-          }
+          },
+          "source": "PHB",
+          "damageSM": "1",
+          "damageL": "1",
+          "armourAdjustments": {
+            "10": 2,
+            "9": 1,
+            "8": -1,
+            "7": -1,
+            "6": -2,
+            "5": -4,
+            "4": -6,
+            "3": -8,
+            "2": -10,
+            "1": -12,
+            "0": -14
+          },
+          "pointBlank": {
+            "allowed": false,
+            "rangeFt": null
+          },
+          "strengthBonusApplies": false,
+          "additionalSpecialisationSlots": 1,
+          "racialAttackBonus": {
+            "elf": 0,
+            "halfling": 0
+          },
+          "rangeSheetUnitsOf10Yards": [
+            1,
+            2,
+            3
+          ]
         },
         {
           "id": "compLongBowFlight",
@@ -1721,7 +3260,38 @@
             "short": 60,
             "medium": 120,
             "long": 210
-          }
+          },
+          "source": "PHB",
+          "damageSM": "1d6",
+          "damageL": "1d6",
+          "armourAdjustments": {
+            "10": 3,
+            "9": 3,
+            "8": 2,
+            "7": 2,
+            "6": 1,
+            "5": 0,
+            "4": 0,
+            "3": -1,
+            "2": -2,
+            "1": -3,
+            "0": -4
+          },
+          "pointBlank": {
+            "allowed": true,
+            "rangeFt": "6-30ft"
+          },
+          "strengthBonusApplies": true,
+          "additionalSpecialisationSlots": 2,
+          "racialAttackBonus": {
+            "elf": 1,
+            "halfling": 0
+          },
+          "rangeSheetUnitsOf10Yards": [
+            6,
+            12,
+            21
+          ]
         },
         {
           "id": "compLongBowSheaf",
@@ -1737,7 +3307,38 @@
             "short": 40,
             "medium": 80,
             "long": 170
-          }
+          },
+          "source": "PHB",
+          "damageSM": "1d8",
+          "damageL": "1d8",
+          "armourAdjustments": {
+            "10": 3,
+            "9": 3,
+            "8": 2,
+            "7": 2,
+            "6": 1,
+            "5": 0,
+            "4": 0,
+            "3": -1,
+            "2": -2,
+            "1": -3,
+            "0": -4
+          },
+          "pointBlank": {
+            "allowed": true,
+            "rangeFt": "6-30ft"
+          },
+          "strengthBonusApplies": true,
+          "additionalSpecialisationSlots": 2,
+          "racialAttackBonus": {
+            "elf": 1,
+            "halfling": 0
+          },
+          "rangeSheetUnitsOf10Yards": [
+            4,
+            8,
+            17
+          ]
         },
         {
           "id": "compShortBow",
@@ -1753,7 +3354,38 @@
             "short": 50,
             "medium": 100,
             "long": 180
-          }
+          },
+          "source": "PHB",
+          "damageSM": "1d6",
+          "damageL": "1d6",
+          "armourAdjustments": {
+            "10": 3,
+            "9": 2,
+            "8": 2,
+            "7": 2,
+            "6": 1,
+            "5": 0,
+            "4": -1,
+            "3": -3,
+            "2": -3,
+            "1": -4,
+            "0": -4
+          },
+          "pointBlank": {
+            "allowed": true,
+            "rangeFt": "6-30ft"
+          },
+          "strengthBonusApplies": true,
+          "additionalSpecialisationSlots": 2,
+          "racialAttackBonus": {
+            "elf": 1,
+            "halfling": 0
+          },
+          "rangeSheetUnitsOf10Yards": [
+            5,
+            10,
+            18
+          ]
         },
         {
           "id": "longbowFlight",
@@ -1769,7 +3401,38 @@
             "short": 70,
             "medium": 140,
             "long": 210
-          }
+          },
+          "source": "PHB",
+          "damageSM": "1d6",
+          "damageL": "1d6",
+          "armourAdjustments": {
+            "10": 3,
+            "9": 3,
+            "8": 3,
+            "7": 3,
+            "6": 2,
+            "5": 1,
+            "4": 0,
+            "3": 0,
+            "2": -1,
+            "1": -1,
+            "0": -2
+          },
+          "pointBlank": {
+            "allowed": true,
+            "rangeFt": "6-30ft"
+          },
+          "strengthBonusApplies": true,
+          "additionalSpecialisationSlots": 2,
+          "racialAttackBonus": {
+            "elf": 1,
+            "halfling": 0
+          },
+          "rangeSheetUnitsOf10Yards": [
+            7,
+            14,
+            21
+          ]
         },
         {
           "id": "longbowSheaf",
@@ -1785,7 +3448,38 @@
             "short": 50,
             "medium": 100,
             "long": 170
-          }
+          },
+          "source": "PHB",
+          "damageSM": "1d8",
+          "damageL": "1d8",
+          "armourAdjustments": {
+            "10": 3,
+            "9": 3,
+            "8": 3,
+            "7": 3,
+            "6": 2,
+            "5": 1,
+            "4": 0,
+            "3": 0,
+            "2": -1,
+            "1": -1,
+            "0": -2
+          },
+          "pointBlank": {
+            "allowed": true,
+            "rangeFt": "6-30ft"
+          },
+          "strengthBonusApplies": true,
+          "additionalSpecialisationSlots": 2,
+          "racialAttackBonus": {
+            "elf": 1,
+            "halfling": 0
+          },
+          "rangeSheetUnitsOf10Yards": [
+            5,
+            10,
+            17
+          ]
         },
         {
           "id": "shortBow",
@@ -1801,7 +3495,38 @@
             "short": 50,
             "medium": 100,
             "long": 150
-          }
+          },
+          "source": "PHB",
+          "damageSM": "1d6",
+          "damageL": "1d6",
+          "armourAdjustments": {
+            "10": 2,
+            "9": 2,
+            "8": 2,
+            "7": 1,
+            "6": 0,
+            "5": 0,
+            "4": -1,
+            "3": -4,
+            "2": -5,
+            "1": -6,
+            "0": -7
+          },
+          "pointBlank": {
+            "allowed": true,
+            "rangeFt": "6-30ft"
+          },
+          "strengthBonusApplies": true,
+          "additionalSpecialisationSlots": 2,
+          "racialAttackBonus": {
+            "elf": 1,
+            "halfling": 0
+          },
+          "rangeSheetUnitsOf10Yards": [
+            5,
+            10,
+            15
+          ]
         },
         {
           "id": "club",
@@ -1817,7 +3542,38 @@
             "short": 10,
             "medium": 20,
             "long": 30
-          }
+          },
+          "source": "PHB",
+          "damageSM": "1d6",
+          "damageL": "1d3",
+          "armourAdjustments": {
+            "10": 0,
+            "9": 0,
+            "8": -1,
+            "7": -1,
+            "6": -1,
+            "5": -2,
+            "4": -3,
+            "3": -5,
+            "2": -7,
+            "1": -8,
+            "0": -9
+          },
+          "pointBlank": {
+            "allowed": false,
+            "rangeFt": null
+          },
+          "strengthBonusApplies": true,
+          "additionalSpecialisationSlots": 1,
+          "racialAttackBonus": {
+            "elf": 0,
+            "halfling": 1
+          },
+          "rangeSheetUnitsOf10Yards": [
+            1,
+            2,
+            3
+          ]
         },
         {
           "id": "handCrossbow",
@@ -1833,7 +3589,38 @@
             "short": 20,
             "medium": 40,
             "long": 60
-          }
+          },
+          "source": "PHB",
+          "damageSM": "1d3",
+          "damageL": "1d2",
+          "armourAdjustments": {
+            "10": 3,
+            "9": 2,
+            "8": 2,
+            "7": 1,
+            "6": 0,
+            "5": 0,
+            "4": 0,
+            "3": -1,
+            "2": -2,
+            "1": -4,
+            "0": -6
+          },
+          "pointBlank": {
+            "allowed": true,
+            "rangeFt": "6-60ft"
+          },
+          "strengthBonusApplies": false,
+          "additionalSpecialisationSlots": 1,
+          "racialAttackBonus": {
+            "elf": 0,
+            "halfling": 0
+          },
+          "rangeSheetUnitsOf10Yards": [
+            2,
+            4,
+            6
+          ]
         },
         {
           "id": "heavyCrossbow",
@@ -1849,7 +3636,38 @@
             "short": 80,
             "medium": 160,
             "long": 240
-          }
+          },
+          "source": "PHB",
+          "damageSM": "1d4+1",
+          "damageL": "1d6+1",
+          "armourAdjustments": {
+            "10": 4,
+            "9": 4,
+            "8": 4,
+            "7": 3,
+            "6": 3,
+            "5": 2,
+            "4": 1,
+            "3": 0,
+            "2": -1,
+            "1": -1,
+            "0": -2
+          },
+          "pointBlank": {
+            "allowed": true,
+            "rangeFt": "6-60ft"
+          },
+          "strengthBonusApplies": false,
+          "additionalSpecialisationSlots": 1,
+          "racialAttackBonus": {
+            "elf": 0,
+            "halfling": 0
+          },
+          "rangeSheetUnitsOf10Yards": [
+            8,
+            16,
+            24
+          ]
         },
         {
           "id": "lightCrossbow",
@@ -1865,7 +3683,38 @@
             "short": 60,
             "medium": 120,
             "long": 180
-          }
+          },
+          "source": "PHB",
+          "damageSM": "1d4",
+          "damageL": "1d4",
+          "armourAdjustments": {
+            "10": 3,
+            "9": 3,
+            "8": 3,
+            "7": 2,
+            "6": 1,
+            "5": 0,
+            "4": 0,
+            "3": -1,
+            "2": -2,
+            "1": -2,
+            "0": -3
+          },
+          "pointBlank": {
+            "allowed": true,
+            "rangeFt": "6-60ft"
+          },
+          "strengthBonusApplies": false,
+          "additionalSpecialisationSlots": 1,
+          "racialAttackBonus": {
+            "elf": 0,
+            "halfling": 0
+          },
+          "rangeSheetUnitsOf10Yards": [
+            6,
+            12,
+            18
+          ]
         },
         {
           "id": "dagger",
@@ -1881,7 +3730,38 @@
             "short": 10,
             "medium": 20,
             "long": 30
-          }
+          },
+          "source": "PHB",
+          "damageSM": "1d4",
+          "damageL": "1d3",
+          "armourAdjustments": {
+            "10": 1,
+            "9": 0,
+            "8": 0,
+            "7": -1,
+            "6": -1,
+            "5": -2,
+            "4": -3,
+            "3": -4,
+            "2": -5,
+            "1": -6,
+            "0": -7
+          },
+          "pointBlank": {
+            "allowed": false,
+            "rangeFt": null
+          },
+          "strengthBonusApplies": true,
+          "additionalSpecialisationSlots": 1,
+          "racialAttackBonus": {
+            "elf": 0,
+            "halfling": 1
+          },
+          "rangeSheetUnitsOf10Yards": [
+            1,
+            2,
+            3
+          ]
         },
         {
           "id": "dart",
@@ -1897,12 +3777,43 @@
             "short": 10,
             "medium": 20,
             "long": 40
-          }
+          },
+          "source": "PHB",
+          "damageSM": "1d3",
+          "damageL": "1d2",
+          "armourAdjustments": {
+            "10": 1,
+            "9": 0,
+            "8": 1,
+            "7": 0,
+            "6": -1,
+            "5": -2,
+            "4": -3,
+            "3": -4,
+            "2": -5,
+            "1": -6,
+            "0": -7
+          },
+          "pointBlank": {
+            "allowed": false,
+            "rangeFt": null
+          },
+          "strengthBonusApplies": true,
+          "additionalSpecialisationSlots": 1,
+          "racialAttackBonus": {
+            "elf": 0,
+            "halfling": 1
+          },
+          "rangeSheetUnitsOf10Yards": [
+            1,
+            2,
+            4
+          ]
         },
         {
           "id": "hammer",
-          "label": "Hammer",
-          "weaponId": null,
+          "label": "Warhammer",
+          "weaponId": "warhammer",
           "ammunitionId": null,
           "rof": {
             "text": "1",
@@ -1914,7 +3825,38 @@
             "medium": 20,
             "long": 30
           },
-          "note": "Printed as 'Hammer' on Table 45; the weapons table lists 'Warhammer'. Not linked automatically: confirm."
+          "note": "Table 45 prints 'Hammer'; the spreadsheet row is Warhammer, so this row is now linked to the warhammer.",
+          "source": "PHB",
+          "damageSM": "1d4+1",
+          "damageL": "1d4",
+          "armourAdjustments": {
+            "10": 1,
+            "9": 0,
+            "8": 0,
+            "7": 0,
+            "6": 0,
+            "5": 0,
+            "4": 0,
+            "3": -1,
+            "2": -2,
+            "1": -3,
+            "0": -4
+          },
+          "pointBlank": {
+            "allowed": false,
+            "rangeFt": null
+          },
+          "strengthBonusApplies": true,
+          "additionalSpecialisationSlots": 1,
+          "racialAttackBonus": {
+            "elf": 0,
+            "halfling": 1
+          },
+          "rangeSheetUnitsOf10Yards": [
+            1,
+            2,
+            3
+          ]
         },
         {
           "id": "handAxe",
@@ -1930,7 +3872,38 @@
             "short": 10,
             "medium": 20,
             "long": 30
-          }
+          },
+          "source": "PHB",
+          "damageSM": "1d6",
+          "damageL": "1d4",
+          "armourAdjustments": {
+            "10": 1,
+            "9": 0,
+            "8": 0,
+            "7": 0,
+            "6": -1,
+            "5": -1,
+            "4": -2,
+            "3": -3,
+            "2": -4,
+            "1": -5,
+            "0": -6
+          },
+          "pointBlank": {
+            "allowed": false,
+            "rangeFt": null
+          },
+          "strengthBonusApplies": true,
+          "additionalSpecialisationSlots": 1,
+          "racialAttackBonus": {
+            "elf": 0,
+            "halfling": 1
+          },
+          "rangeSheetUnitsOf10Yards": [
+            1,
+            2,
+            3
+          ]
         },
         {
           "id": "harpoon",
@@ -1946,7 +3919,38 @@
             "short": 10,
             "medium": 20,
             "long": 30
-          }
+          },
+          "source": "PHB",
+          "damageSM": "2d4",
+          "damageL": "2d6",
+          "armourAdjustments": {
+            "10": 1,
+            "9": 0,
+            "8": 0,
+            "7": 0,
+            "6": 0,
+            "5": -1,
+            "4": -2,
+            "3": -3,
+            "2": -4,
+            "1": -5,
+            "0": -6
+          },
+          "pointBlank": {
+            "allowed": false,
+            "rangeFt": null
+          },
+          "strengthBonusApplies": false,
+          "additionalSpecialisationSlots": 1,
+          "racialAttackBonus": {
+            "elf": 0,
+            "halfling": 0
+          },
+          "rangeSheetUnitsOf10Yards": [
+            1,
+            2,
+            3
+          ]
         },
         {
           "id": "javelin",
@@ -1962,7 +3966,38 @@
             "short": 20,
             "medium": 40,
             "long": 60
-          }
+          },
+          "source": "PHB",
+          "damageSM": "1d6",
+          "damageL": "1d6",
+          "armourAdjustments": {
+            "10": 2,
+            "9": 1,
+            "8": 1,
+            "7": 0,
+            "6": 0,
+            "5": -1,
+            "4": -2,
+            "3": -3,
+            "2": -4,
+            "1": -5,
+            "0": -6
+          },
+          "pointBlank": {
+            "allowed": false,
+            "rangeFt": null
+          },
+          "strengthBonusApplies": true,
+          "additionalSpecialisationSlots": 1,
+          "racialAttackBonus": {
+            "elf": 0,
+            "halfling": 1
+          },
+          "rangeSheetUnitsOf10Yards": [
+            3,
+            6,
+            9
+          ]
         },
         {
           "id": "knife",
@@ -1978,7 +4013,38 @@
             "short": 10,
             "medium": 20,
             "long": 30
-          }
+          },
+          "source": "PHB",
+          "damageSM": "1d3",
+          "damageL": "1d2",
+          "armourAdjustments": {
+            "10": 1,
+            "9": 0,
+            "8": 0,
+            "7": -1,
+            "6": -2,
+            "5": -3,
+            "4": -4,
+            "3": -5,
+            "2": -6,
+            "1": -7,
+            "0": -8
+          },
+          "pointBlank": {
+            "allowed": false,
+            "rangeFt": null
+          },
+          "strengthBonusApplies": true,
+          "additionalSpecialisationSlots": 1,
+          "racialAttackBonus": {
+            "elf": 0,
+            "halfling": 1
+          },
+          "rangeSheetUnitsOf10Yards": [
+            1,
+            2,
+            3
+          ]
         },
         {
           "id": "slingBullet",
@@ -1994,7 +4060,38 @@
             "short": 50,
             "medium": 100,
             "long": 200
-          }
+          },
+          "source": "PHB",
+          "damageSM": "1d4+1",
+          "damageL": "1d4",
+          "armourAdjustments": {
+            "10": 3,
+            "9": 1,
+            "8": 2,
+            "7": 0,
+            "6": 0,
+            "5": 0,
+            "4": -1,
+            "3": -2,
+            "2": -2,
+            "1": -3,
+            "0": -3
+          },
+          "pointBlank": {
+            "allowed": false,
+            "rangeFt": null
+          },
+          "strengthBonusApplies": true,
+          "additionalSpecialisationSlots": 1,
+          "racialAttackBonus": {
+            "elf": 0,
+            "halfling": 1
+          },
+          "rangeSheetUnitsOf10Yards": [
+            5,
+            10,
+            20
+          ]
         },
         {
           "id": "slingStone",
@@ -2010,7 +4107,38 @@
             "short": 40,
             "medium": 80,
             "long": 160
-          }
+          },
+          "source": "PHB",
+          "damageSM": "1d4",
+          "damageL": "1d4",
+          "armourAdjustments": {
+            "10": 3,
+            "9": 1,
+            "8": 2,
+            "7": 0,
+            "6": 0,
+            "5": -1,
+            "4": -2,
+            "3": -4,
+            "2": -5,
+            "1": -6,
+            "0": -7
+          },
+          "pointBlank": {
+            "allowed": false,
+            "rangeFt": null
+          },
+          "strengthBonusApplies": true,
+          "additionalSpecialisationSlots": 1,
+          "racialAttackBonus": {
+            "elf": 0,
+            "halfling": 1
+          },
+          "rangeSheetUnitsOf10Yards": [
+            4,
+            8,
+            16
+          ]
         },
         {
           "id": "spear",
@@ -2026,7 +4154,38 @@
             "short": 10,
             "medium": 20,
             "long": 30
-          }
+          },
+          "source": "PHB",
+          "damageSM": "1d6",
+          "damageL": "1d8",
+          "armourAdjustments": {
+            "10": 0,
+            "9": 0,
+            "8": 0,
+            "7": 0,
+            "6": -1,
+            "5": -2,
+            "4": -2,
+            "3": -3,
+            "2": -3,
+            "1": -4,
+            "0": -4
+          },
+          "pointBlank": {
+            "allowed": false,
+            "rangeFt": null
+          },
+          "strengthBonusApplies": true,
+          "additionalSpecialisationSlots": 1,
+          "racialAttackBonus": {
+            "elf": 0,
+            "halfling": 1
+          },
+          "rangeSheetUnitsOf10Yards": [
+            1,
+            2,
+            3
+          ]
         },
         {
           "id": "staffSlingBullet",
@@ -2034,9 +4193,9 @@
           "weaponId": "staffSling",
           "ammunitionId": "slingBullet",
           "rof": {
-            "text": "2/1",
-            "shots": 2,
-            "rounds": 1
+            "text": "1/2",
+            "shots": 1,
+            "rounds": 2
           },
           "rangeYards": {
             "short": null,
@@ -2045,7 +4204,38 @@
               "max": 60
             },
             "long": 90
-          }
+          },
+          "source": "DMGR3",
+          "damageSM": "2d4",
+          "damageL": "2d4+1",
+          "armourAdjustments": {
+            "10": 0,
+            "9": 0,
+            "8": 0,
+            "7": 0,
+            "6": 0,
+            "5": 0,
+            "4": -1,
+            "3": -2,
+            "2": -3,
+            "1": -4,
+            "0": -5
+          },
+          "pointBlank": {
+            "allowed": false,
+            "rangeFt": null
+          },
+          "strengthBonusApplies": true,
+          "additionalSpecialisationSlots": 1,
+          "racialAttackBonus": {
+            "elf": 0,
+            "halfling": 1
+          },
+          "rangeSheetUnitsOf10Yards": [
+            0,
+            "3-6",
+            9
+          ]
         },
         {
           "id": "staffSlingStone",
@@ -2053,9 +4243,9 @@
           "weaponId": "staffSling",
           "ammunitionId": "slingStone",
           "rof": {
-            "text": "2/1",
-            "shots": 2,
-            "rounds": 1
+            "text": "1/2",
+            "shots": 1,
+            "rounds": 2
           },
           "rangeYards": {
             "short": null,
@@ -2064,7 +4254,367 @@
               "max": 60
             },
             "long": 90
-          }
+          },
+          "source": "DMGR4",
+          "damageSM": "1d8",
+          "damageL": "2d4",
+          "armourAdjustments": {
+            "10": 0,
+            "9": 0,
+            "8": 0,
+            "7": 0,
+            "6": 0,
+            "5": -1,
+            "4": -2,
+            "3": -3,
+            "2": -4,
+            "1": -5,
+            "0": -6
+          },
+          "pointBlank": {
+            "allowed": false,
+            "rangeFt": null
+          },
+          "strengthBonusApplies": true,
+          "additionalSpecialisationSlots": 1,
+          "racialAttackBonus": {
+            "elf": 0,
+            "halfling": 1
+          },
+          "rangeSheetUnitsOf10Yards": [
+            0,
+            "3-6",
+            9
+          ]
+        },
+        {
+          "id": "chakram",
+          "label": "Chakram",
+          "weaponId": "chakram",
+          "ammunitionId": null,
+          "rof": {
+            "text": "3/1",
+            "shots": 3,
+            "rounds": 1
+          },
+          "rangeYards": {
+            "short": 20,
+            "medium": 40,
+            "long": 60
+          },
+          "source": "Dra #189",
+          "damageSM": "1d4",
+          "damageL": "1d3",
+          "armourAdjustments": {
+            "10": 1,
+            "9": 2,
+            "8": 1,
+            "7": 2,
+            "6": -1,
+            "5": -2,
+            "4": -3,
+            "3": -4,
+            "2": -5,
+            "1": -6,
+            "0": -7
+          },
+          "pointBlank": {
+            "allowed": false,
+            "rangeFt": null
+          },
+          "strengthBonusApplies": true,
+          "additionalSpecialisationSlots": 1,
+          "racialAttackBonus": {
+            "elf": 0,
+            "halfling": 1
+          },
+          "rangeSheetUnitsOf10Yards": [
+            2,
+            4,
+            6
+          ]
+        },
+        {
+          "id": "crossbowDisk",
+          "label": "Disk crossbow",
+          "weaponId": "crossbowDisk",
+          "ammunitionId": null,
+          "rof": {
+            "text": "1",
+            "shots": 1,
+            "rounds": 1
+          },
+          "rangeYards": {
+            "short": 40,
+            "medium": 100,
+            "long": 140
+          },
+          "source": "Dra #169",
+          "damageSM": "1d6+1",
+          "damageL": "1d6",
+          "armourAdjustments": {
+            "10": 4,
+            "9": 4,
+            "8": 3,
+            "7": 2,
+            "6": 0,
+            "5": 0,
+            "4": -2,
+            "3": -2,
+            "2": -3,
+            "1": -4,
+            "0": -5
+          },
+          "pointBlank": {
+            "allowed": true,
+            "rangeFt": "6-60ft"
+          },
+          "strengthBonusApplies": false,
+          "additionalSpecialisationSlots": 1,
+          "racialAttackBonus": {
+            "elf": 0,
+            "halfling": 0
+          },
+          "rangeSheetUnitsOf10Yards": [
+            4,
+            10,
+            14
+          ]
+        },
+        {
+          "id": "crossbowDoubled",
+          "label": "Doubled crossbow (light x2)",
+          "weaponId": "crossbowDoubled",
+          "ammunitionId": null,
+          "rof": {
+            "text": "1",
+            "shots": 1,
+            "rounds": 1
+          },
+          "rangeYards": {
+            "short": 60,
+            "medium": 110,
+            "long": 170
+          },
+          "source": "Dra #169",
+          "damageSM": "1d4 x2",
+          "damageL": "1d4 x2",
+          "armourAdjustments": {
+            "10": 3,
+            "9": 3,
+            "8": 2,
+            "7": 1,
+            "6": 0,
+            "5": 0,
+            "4": 0,
+            "3": -1,
+            "2": -2,
+            "1": -2,
+            "0": -3
+          },
+          "pointBlank": {
+            "allowed": true,
+            "rangeFt": "6-60ft"
+          },
+          "strengthBonusApplies": false,
+          "additionalSpecialisationSlots": 1,
+          "racialAttackBonus": {
+            "elf": 0,
+            "halfling": 0
+          },
+          "rangeSheetUnitsOf10Yards": [
+            6,
+            11,
+            17
+          ]
+        },
+        {
+          "id": "shurikenSpike",
+          "label": "Shuriken, spike",
+          "weaponId": "shurikenSpike",
+          "ammunitionId": null,
+          "rof": {
+            "text": "2/1",
+            "shots": 2,
+            "rounds": 1
+          },
+          "rangeYards": {
+            "short": 10,
+            "medium": null,
+            "long": null
+          },
+          "source": "OA",
+          "damageSM": "1d4",
+          "damageL": "1d3",
+          "armourAdjustments": {
+            "10": 1,
+            "9": 2,
+            "8": 1,
+            "7": 2,
+            "6": -1,
+            "5": -2,
+            "4": -3,
+            "3": -4,
+            "2": -5,
+            "1": -6,
+            "0": -7
+          },
+          "pointBlank": {
+            "allowed": false,
+            "rangeFt": null
+          },
+          "strengthBonusApplies": true,
+          "additionalSpecialisationSlots": 1,
+          "racialAttackBonus": {
+            "elf": 0,
+            "halfling": 1
+          },
+          "rangeSheetUnitsOf10Yards": [
+            1,
+            "-",
+            "-"
+          ]
+        },
+        {
+          "id": "shurikenStarSmall",
+          "label": "Shuriken, star (small)",
+          "weaponId": "shurikenStarSmall",
+          "ammunitionId": null,
+          "rof": {
+            "text": "3/1",
+            "shots": 3,
+            "rounds": 1
+          },
+          "rangeYards": {
+            "short": 5,
+            "medium": 10,
+            "long": 20
+          },
+          "source": "OA",
+          "damageSM": "1d4",
+          "damageL": "1d4",
+          "armourAdjustments": {
+            "10": 1,
+            "9": 2,
+            "8": 1,
+            "7": 2,
+            "6": -1,
+            "5": -2,
+            "4": -3,
+            "3": -4,
+            "2": -5,
+            "1": -6,
+            "0": -7
+          },
+          "pointBlank": {
+            "allowed": false,
+            "rangeFt": null
+          },
+          "strengthBonusApplies": true,
+          "additionalSpecialisationSlots": 1,
+          "racialAttackBonus": {
+            "elf": 0,
+            "halfling": 1
+          },
+          "rangeSheetUnitsOf10Yards": [
+            0.5,
+            1,
+            2
+          ]
+        },
+        {
+          "id": "shurikenStarLarge",
+          "label": "Shuriken, star (large)",
+          "weaponId": "shurikenStarLarge",
+          "ammunitionId": null,
+          "rof": {
+            "text": "4/1",
+            "shots": 4,
+            "rounds": 1
+          },
+          "rangeYards": {
+            "short": 5,
+            "medium": 10,
+            "long": 20
+          },
+          "source": "OA",
+          "damageSM": "1d6",
+          "damageL": "1d4",
+          "armourAdjustments": {
+            "10": 1,
+            "9": 2,
+            "8": 1,
+            "7": 2,
+            "6": -1,
+            "5": -2,
+            "4": -3,
+            "3": -4,
+            "2": -5,
+            "1": -6,
+            "0": -7
+          },
+          "pointBlank": {
+            "allowed": false,
+            "rangeFt": null
+          },
+          "strengthBonusApplies": true,
+          "additionalSpecialisationSlots": 1,
+          "racialAttackBonus": {
+            "elf": 0,
+            "halfling": 1
+          },
+          "rangeSheetUnitsOf10Yards": [
+            0.5,
+            1,
+            2
+          ]
+        },
+        {
+          "id": "throwingOrb",
+          "label": "Throwing orb",
+          "weaponId": "throwingOrb",
+          "ammunitionId": null,
+          "rof": {
+            "text": "2/1",
+            "shots": 2,
+            "rounds": 1
+          },
+          "rangeYards": {
+            "short": 10,
+            "medium": 20,
+            "long": 30
+          },
+          "source": "PHB",
+          "damageSM": "1d4",
+          "damageL": "1d3",
+          "armourAdjustments": {
+            "10": 1,
+            "9": 0,
+            "8": 0,
+            "7": -1,
+            "6": -1,
+            "5": -2,
+            "4": -3,
+            "3": -4,
+            "2": -5,
+            "1": -6,
+            "0": -7
+          },
+          "pointBlank": {
+            "allowed": false,
+            "rangeFt": null
+          },
+          "strengthBonusApplies": true,
+          "additionalSpecialisationSlots": 1,
+          "racialAttackBonus": {
+            "elf": 0,
+            "halfling": 1
+          },
+          "rangeSheetUnitsOf10Yards": [
+            1,
+            2,
+            3
+          ]
         }
       ]
     },
@@ -2073,7 +4623,13 @@
       "Rate of melee attacks and any class-specific weapon restrictions (house.json / classes in rules-core.json).",
       "Rules for the optional Weapon Type vs. Armor table, if you want it in the app."
     ],
-    "proofreadingNote": "Transcribed from images by Claude. Please spot-check against your book."
+    "proofreadingNote": "Transcribed from images by Claude. Please spot-check against your book.",
+    "spreadsheetNotes": [
+      "Where the spreadsheet differs from the PHB data for a PHB-source weapon in size, weight, speed factor, damage or type, the spreadsheet value was applied (see weapons-phb-differences.md).",
+      "Spreadsheet missile rows for bows, blowgun and slings combine a launcher with its ammunition. Launcher weight, size and cost were only changed where the row clearly applies to the launcher.",
+      "Claymore two-handed row has a blank Source cell; Dwarven claymore cost is printed '**' with no value.",
+      "Javelin range on the spreadsheet (30/60/90 yards) differs from PHB Table 45 (20/40/60); Table 45 kept in rangeYards, spreadsheet values in rangeSheetUnitsOf10Yards. Decision needed."
+    ]
   },
   "armour": {
     "status": "cost, weight and Armour Class (Table 46); movement effects and shield details still needed",

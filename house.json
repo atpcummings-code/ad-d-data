@@ -54,6 +54,22 @@
       "id": "noLevelLimits",
       "description": "Ignore all level limits by race and class: treat every level limit as unlimited.",
       "status": "confirmed"
+    },
+    {
+      "id": "weaponVsArmourClassToHit",
+      "status": "confirmed",
+      "description": "To-hit numbers are calculated separately for each target AC from 10 to 0, using the character's BASE THAC0 for level and the weapon's armour adjustment for that AC (gear.json armourAdjustments, taken from the owner's weapons spreadsheet).",
+      "formula": "numberNeededToHit(AC) = baseTHAC0 - AC - armourAdjustment[AC] - strengthHitBonus - magicalPlus - specialisationBonus - racialBonus + nonProficiencyPenalty",
+      "signConvention": "The adjustment is subtracted. A negative table value therefore raises the number needed (harder to hit, e.g. -5 for a battle axe vs AC0); a positive value lowers it (easier, e.g. +2 vs AC10).",
+      "oldMethod": "Previously: THAC0 - STR bonus + weapon pluses + specialisation = final THAC0, then reduced by 1 for AC1, 2 for AC2 and so on.",
+      "example": "THAC0 20, battle axe, no bonuses: vs AC10 adjustment +2 gives 20 - 10 - 2 = 8; vs AC0 adjustment -5 gives 20 - 0 + 5 = 25.",
+      "racialBonus": "See rules-core.json races.weaponAttackBonuses (elves: bows, short and long swords; halflings: thrown weapons and slings).",
+      "appliesTo": "melee weapon armourAdjustments on the weapon (or its mode); missile and thrown weapons use armourAdjustments on the gear.json missileRanges row.",
+      "openQuestions": [
+        "The spreadsheet has no column for AC below 0. How should AC -1 and lower be handled (e.g. reuse the AC0 adjustment)?",
+        "Should the DEX missile attack adjustment (PHB Table 2) also be subtracted for missile weapons, as in the standard rules? Assumed yes, 'as normal'.",
+        "Whether the non-proficiency penalty is added after the table adjustment (assumed)."
+      ]
     }
   ],
   "monk": {
