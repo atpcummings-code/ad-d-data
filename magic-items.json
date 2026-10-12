@@ -12,7 +12,8 @@
       "description": "Items with hasDescription: true have their text in magic-item-descriptions.json under items[id]. An item with duplicateOf shares the description of that id. Tables printed inside a description may be flattened into the text.",
       "weightLbs": "Weight in pounds. Potions/oils and wands 0.1, rods 3.5, staves 5 (owner-set). Weapons take the weight of the named weapon in gear.json; null where the weapon type is not determinate or has no gear.json equivalent (never guessed). Where several gear.json items could apply (e.g. Arrow, Bolt) a value is given only if they all agree.",
       "speedFactor": "Weapons only. speedFactorBase = speed factor of the named weapon in gear.json; plus = the magical plus; speedFactor = speedFactorBase minus plus (owner rule, e.g. long sword 5 becomes 4 at +1). Minimum 0 (owner rule): a result below 0 is stored as 0. Table 108 entries have no plus yet, so only speedFactorBase is given and speedFactor is null until the plus is known. Ammunition has no speed factor. gearRef names the gear.json weapon(s) used; mappingAssumption flags a judgement.",
-      "armourWeight": "Magical armour weighs the same as its mundane counterpart in gear.json (owner rule), referenced by gearRef. Empty where the base armour type is not fixed or has no gear.json equivalent."
+      "armourWeight": "Magical armour weighs the same as its mundane counterpart in gear.json (owner rule), referenced by gearRef. Empty where the base armour type is not fixed or has no gear.json equivalent.",
+      "extraItems": "Items added by the owner that are not on the printed table (no die roll, roll null). source 'owner-added'. valueGp = gold piece value (new field; not printed on the tables). hasDescription false until description text is supplied."
     },
     "typos": {
       "Gauntets of Fumbling": "corrected to Gauntlets of Fumbling",
@@ -2605,7 +2606,31 @@
         "**": "Per die of damage",
         "***": "Per special bead",
         "****": "See item description"
-      }
+      },
+      "extraItems": [
+        {
+          "name": "Continual Light Gem",
+          "id": "jewels.continualLightGem",
+          "roll": null,
+          "xp": 300,
+          "xpPrinted": "300",
+          "valueGp": 300,
+          "weightLbs": 0.1,
+          "hasDescription": false,
+          "source": "owner-added"
+        },
+        {
+          "name": "Continual Darkness Gem",
+          "id": "jewels.continualDarknessGem",
+          "roll": null,
+          "xp": 300,
+          "xpPrinted": "300",
+          "valueGp": 300,
+          "weightLbs": 0.1,
+          "hasDescription": false,
+          "source": "owner-added"
+        }
+      ]
     },
     "97": {
       "table": 97,
