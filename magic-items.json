@@ -1699,7 +1699,7 @@
                 1,
                 1
               ],
-              "name": "Animal Friendship",
+              "name": "Ring of Animal Friendship",
               "xp": 1000,
               "xpPrinted": "1,000",
               "id": "rings.animalFriendship",
@@ -1710,7 +1710,7 @@
                 2,
                 2
               ],
-              "name": "Blinking",
+              "name": "Ring of Blinking",
               "xp": 1000,
               "xpPrinted": "1,000",
               "id": "rings.blinking",
@@ -1721,7 +1721,7 @@
                 3,
                 3
               ],
-              "name": "Chameleon Power",
+              "name": "Ring of Chameleon Power",
               "xp": 1000,
               "xpPrinted": "1,000",
               "id": "rings.chameleonPower",
@@ -1732,7 +1732,7 @@
                 4,
                 4
               ],
-              "name": "Clumsiness",
+              "name": "Ring of Clumsiness",
               "xp": null,
               "xpPrinted": "—",
               "id": "rings.clumsiness",
@@ -1743,7 +1743,7 @@
                 5,
                 5
               ],
-              "name": "Contrariness",
+              "name": "Ring of Contrariness",
               "xp": null,
               "xpPrinted": "—",
               "id": "rings.contrariness",
@@ -1754,7 +1754,7 @@
                 6,
                 7
               ],
-              "name": "Delusion",
+              "name": "Ring of Delusion",
               "xp": null,
               "xpPrinted": "—",
               "id": "rings.delusion",
@@ -1766,7 +1766,7 @@
                 8
               ],
               "nameMarker": "*",
-              "name": "Djinni Summoning",
+              "name": "Ring of Djinni Summoning",
               "xp": 3000,
               "xpPrinted": "3,000",
               "id": "rings.djinniSummoning",
@@ -1777,7 +1777,7 @@
                 9,
                 9
               ],
-              "name": "Elemental Command",
+              "name": "Ring of Elemental Command",
               "xp": 5000,
               "xpPrinted": "5,000",
               "id": "rings.elementalCommand",
@@ -1788,7 +1788,7 @@
                 10,
                 10
               ],
-              "name": "Feather Falling",
+              "name": "Ring of Feather Falling",
               "xp": 1000,
               "xpPrinted": "1,000",
               "id": "rings.featherFalling",
@@ -1799,7 +1799,7 @@
                 11,
                 11
               ],
-              "name": "Fire Resistance",
+              "name": "Ring of Fire Resistance",
               "xp": 1000,
               "xpPrinted": "1,000",
               "id": "rings.fireResistance",
@@ -1810,7 +1810,7 @@
                 12,
                 12
               ],
-              "name": "Free Action",
+              "name": "Ring of Free Action",
               "xp": 1000,
               "xpPrinted": "1,000",
               "id": "rings.freeAction",
@@ -1821,7 +1821,7 @@
                 13,
                 13
               ],
-              "name": "Human Influence",
+              "name": "Ring of Human Influence",
               "xp": 2000,
               "xpPrinted": "2,000",
               "id": "rings.humanInfluence",
@@ -1832,7 +1832,7 @@
                 14,
                 14
               ],
-              "name": "Invisibility",
+              "name": "Ring of Invisibility",
               "xp": 1500,
               "xpPrinted": "1,500",
               "id": "rings.invisibility",
@@ -1843,7 +1843,7 @@
                 15,
                 16
               ],
-              "name": "Jumping",
+              "name": "Ring of Jumping",
               "xp": 1000,
               "xpPrinted": "1,000",
               "id": "rings.jumping",
@@ -1855,7 +1855,7 @@
                 17
               ],
               "nameMarker": "*",
-              "name": "Mammal Control",
+              "name": "Ring of Mammal Control",
               "xp": 1000,
               "xpPrinted": "1,000",
               "id": "rings.mammalControl",
@@ -1866,7 +1866,7 @@
                 18,
                 18
               ],
-              "name": "Mind Shielding",
+              "name": "Ring of Mind Shielding",
               "xp": 500,
               "xpPrinted": "500",
               "id": "rings.mindShielding",
@@ -1877,7 +1877,7 @@
                 19,
                 19
               ],
-              "name": "Protection +1",
+              "name": "Ring of Protection +1",
               "xp": 1000,
               "xpPrinted": "1,000",
               "id": "rings.protectionPlus1",
@@ -1897,7 +1897,7 @@
                 19,
                 19
               ],
-              "name": "Protection +2",
+              "name": "Ring of Protection +2",
               "xp": 2000,
               "xpPrinted": "2,000",
               "id": "rings.protectionPlus2",
@@ -1917,7 +1917,7 @@
                 19,
                 19
               ],
-              "name": "Protection +2, 5-foot radius",
+              "name": "Ring of Protection +2, 5-foot radius",
               "xp": 2000,
               "xpPrinted": "2,000",
               "id": "rings.protectionPlus2Radius",
@@ -1937,7 +1937,7 @@
                 19,
                 19
               ],
-              "name": "Protection +3",
+              "name": "Ring of Protection +3",
               "xp": 3000,
               "xpPrinted": "3,000",
               "id": "rings.protectionPlus3",
@@ -1957,7 +1957,7 @@
                 19,
                 19
               ],
-              "name": "Protection +3, 5-foot radius",
+              "name": "Ring of Protection +3, 5-foot radius",
               "xp": 3000,
               "xpPrinted": "3,000",
               "id": "rings.protectionPlus3Radius",
@@ -1977,7 +1977,7 @@
                 19,
                 19
               ],
-              "name": "Protection +4 AC, +2 saving throws",
+              "name": "Ring of Protection +4 AC, +2 saving throws",
               "xp": null,
               "xpPrinted": "1,000 per +1",
               "id": "rings.protectionPlus4Ac2Save",
@@ -1998,7 +1998,7 @@
                 19,
                 19
               ],
-              "name": "Protection +6 AC, +1 saving throws",
+              "name": "Ring of Protection +6 AC, +1 saving throws",
               "xp": null,
               "xpPrinted": "1,000 per +1",
               "id": "rings.protectionPlus6Ac1Save",
@@ -2038,7 +2038,7 @@
                 1,
                 2
               ],
-              "name": "Protection +1",
+              "name": "Ring of Protection +1",
               "xp": 1000,
               "xpPrinted": "1,000",
               "id": "rings.protection2Plus1",
@@ -2058,7 +2058,7 @@
                 1,
                 2
               ],
-              "name": "Protection +2",
+              "name": "Ring of Protection +2",
               "xp": 2000,
               "xpPrinted": "2,000",
               "id": "rings.protection2Plus2",
@@ -2078,7 +2078,7 @@
                 1,
                 2
               ],
-              "name": "Protection +2, 5-foot radius",
+              "name": "Ring of Protection +2, 5-foot radius",
               "xp": 2000,
               "xpPrinted": "2,000",
               "id": "rings.protection2Plus2Radius",
@@ -2098,7 +2098,7 @@
                 1,
                 2
               ],
-              "name": "Protection +3",
+              "name": "Ring of Protection +3",
               "xp": 3000,
               "xpPrinted": "3,000",
               "id": "rings.protection2Plus3",
@@ -2118,7 +2118,7 @@
                 1,
                 2
               ],
-              "name": "Protection +3, 5-foot radius",
+              "name": "Ring of Protection +3, 5-foot radius",
               "xp": 3000,
               "xpPrinted": "3,000",
               "id": "rings.protection2Plus3Radius",
@@ -2138,7 +2138,7 @@
                 1,
                 2
               ],
-              "name": "Protection +4 AC, +2 saving throws",
+              "name": "Ring of Protection +4 AC, +2 saving throws",
               "xp": null,
               "xpPrinted": "1,000 per +1",
               "id": "rings.protection2Plus4Ac2Save",
@@ -2159,7 +2159,7 @@
                 1,
                 2
               ],
-              "name": "Protection +6 AC, +1 saving throws",
+              "name": "Ring of Protection +6 AC, +1 saving throws",
               "xp": null,
               "xpPrinted": "1,000 per +1",
               "id": "rings.protection2Plus6Ac1Save",
@@ -2193,7 +2193,7 @@
                 4,
                 4
               ],
-              "name": "Regeneration (Standard)",
+              "name": "Ring of Regeneration (Standard)",
               "xp": 5000,
               "xpPrinted": "5,000",
               "id": "rings.regenerationStandard",
@@ -2213,7 +2213,7 @@
                 4,
                 4
               ],
-              "name": "Regeneration (Vampiric)",
+              "name": "Ring of Regeneration (Vampiric)",
               "xp": 5000,
               "xpPrinted": "5,000",
               "id": "rings.regenerationVampiric",
@@ -2233,7 +2233,7 @@
                 5,
                 5
               ],
-              "name": "Shocking Grasp",
+              "name": "Ring of Shocking Grasp",
               "xp": 1000,
               "xpPrinted": "1,000",
               "id": "rings.shockingGrasp",
@@ -2244,7 +2244,7 @@
                 6,
                 6
               ],
-              "name": "Shooting Stars",
+              "name": "Ring of Shooting Stars",
               "xp": 3000,
               "xpPrinted": "3,000",
               "id": "rings.shootingStars",
@@ -2255,7 +2255,7 @@
                 7,
                 7
               ],
-              "name": "Spell Storing",
+              "name": "Ring of Spell Storing",
               "xp": 2500,
               "xpPrinted": "2,500",
               "id": "rings.spellStoring",
@@ -2266,7 +2266,7 @@
                 8,
                 8
               ],
-              "name": "Spell Turning",
+              "name": "Ring of Spell Turning",
               "xp": 2000,
               "xpPrinted": "2,000",
               "id": "rings.spellTurning",
@@ -2277,7 +2277,7 @@
                 9,
                 9
               ],
-              "name": "Sustenance",
+              "name": "Ring of Sustenance",
               "xp": 500,
               "xpPrinted": "500",
               "id": "rings.sustenance",
@@ -2288,7 +2288,7 @@
                 10,
                 10
               ],
-              "name": "Swimming",
+              "name": "Ring of Swimming",
               "xp": 1000,
               "xpPrinted": "1,000",
               "id": "rings.swimming",
@@ -2299,7 +2299,7 @@
                 11,
                 11
               ],
-              "name": "Telekinesis (25 lbs.)",
+              "name": "Ring of Telekinesis (25 lbs.)",
               "xp": 2000,
               "xpPrinted": "2,000",
               "id": "rings.telekinesisLbs25",
@@ -2319,7 +2319,7 @@
                 11,
                 11
               ],
-              "name": "Telekinesis (50 lbs.)",
+              "name": "Ring of Telekinesis (50 lbs.)",
               "xp": 2000,
               "xpPrinted": "2,000",
               "id": "rings.telekinesisLbs50",
@@ -2339,7 +2339,7 @@
                 11,
                 11
               ],
-              "name": "Telekinesis (100 lbs.)",
+              "name": "Ring of Telekinesis (100 lbs.)",
               "xp": 2000,
               "xpPrinted": "2,000",
               "id": "rings.telekinesisLbs100",
@@ -2359,7 +2359,7 @@
                 11,
                 11
               ],
-              "name": "Telekinesis (200 lbs.)",
+              "name": "Ring of Telekinesis (200 lbs.)",
               "xp": 2000,
               "xpPrinted": "2,000",
               "id": "rings.telekinesisLbs200",
@@ -2379,7 +2379,7 @@
                 11,
                 11
               ],
-              "name": "Telekinesis (400 lbs.)",
+              "name": "Ring of Telekinesis (400 lbs.)",
               "xp": 2000,
               "xpPrinted": "2,000",
               "id": "rings.telekinesisLbs400",
@@ -2399,7 +2399,7 @@
                 12,
                 12
               ],
-              "name": "Truth",
+              "name": "Ring of Truth",
               "xp": 1000,
               "xpPrinted": "1,000",
               "id": "rings.truth",
@@ -2410,7 +2410,7 @@
                 13,
                 13
               ],
-              "name": "Warmth",
+              "name": "Ring of Warmth",
               "xp": 1000,
               "xpPrinted": "1,000",
               "id": "rings.warmth",
@@ -2421,7 +2421,7 @@
                 14,
                 14
               ],
-              "name": "Water Walking",
+              "name": "Ring of Water Walking",
               "xp": 1000,
               "xpPrinted": "1,000",
               "id": "rings.waterWalking",
@@ -2432,7 +2432,7 @@
                 15,
                 15
               ],
-              "name": "Weakness",
+              "name": "Ring of Weakness",
               "xp": null,
               "xpPrinted": "—",
               "id": "rings.weakness",
@@ -2444,7 +2444,7 @@
                 16
               ],
               "nameMarker": "*",
-              "name": "Wishes, Multiple",
+              "name": "Ring of Wishes, Multiple",
               "xp": 5000,
               "xpPrinted": "5,000",
               "id": "rings.wishesMultiple",
@@ -2456,7 +2456,7 @@
                 17
               ],
               "nameMarker": "*",
-              "name": "Wishes, Three",
+              "name": "Ring of Wishes, Three",
               "xp": 3000,
               "xpPrinted": "3,000",
               "id": "rings.wishesThree",
@@ -2471,7 +2471,7 @@
                 "wizard"
               ],
               "nameMarker": "*",
-              "name": "Wizardry",
+              "name": "Ring of Wizardry",
               "xp": 4000,
               "xpPrinted": "4,000",
               "id": "rings.wizardry",
@@ -2482,7 +2482,7 @@
                 19,
                 19
               ],
-              "name": "X-Ray Vision",
+              "name": "Ring of X-Ray Vision",
               "xp": 4000,
               "xpPrinted": "4,000",
               "id": "rings.xRayVision",
