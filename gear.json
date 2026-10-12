@@ -7175,7 +7175,22 @@
           "coin": "gp",
           "costInCp": 200
         },
-        "weightLbs": 2
+        "weightLbs": 2,
+        "type": "EquipmentContainer",
+        "capacity": {
+          "weightLimitLbs": 50,
+          "volume": {
+            "dimensionsIn": [
+              36,
+              24,
+              12
+            ],
+            "printed": "3' x 2' x 1'",
+            "volumeCuIn": 10368
+          },
+          "count": null,
+          "restriction": null
+        }
       },
       {
         "id": "barrelSmall",
@@ -7235,7 +7250,22 @@
           "coin": "gp",
           "costInCp": 100
         },
-        "weightLbs": 1
+        "weightLbs": 1,
+        "type": "EquipmentContainer",
+        "capacity": {
+          "weightLimitLbs": 8,
+          "volume": {
+            "dimensionsIn": [
+              6,
+              8,
+              2
+            ],
+            "printed": "6\" x 8\" x 2\"",
+            "volumeCuIn": 96
+          },
+          "count": null,
+          "restriction": null
+        }
       },
       {
         "id": "beltPouchSmall",
@@ -7247,7 +7277,22 @@
           "coin": "sp",
           "costInCp": 70
         },
-        "weightLbs": 0.5
+        "weightLbs": 0.5,
+        "type": "EquipmentContainer",
+        "capacity": {
+          "weightLimitLbs": 5,
+          "volume": {
+            "dimensionsIn": [
+              4,
+              6,
+              2
+            ],
+            "printed": "4\" x 6\" x 2\"",
+            "volumeCuIn": 48
+          },
+          "count": null,
+          "restriction": null
+        }
       },
       {
         "id": "blockAndTackle",
@@ -7269,7 +7314,17 @@
           "coin": "gp",
           "costInCp": 100
         },
-        "weightLbs": 1
+        "weightLbs": 1,
+        "type": "EquipmentContainer",
+        "capacity": {
+          "weightLimitLbs": null,
+          "volume": null,
+          "count": {
+            "max": 20,
+            "of": "bolts"
+          },
+          "restriction": "ammunition only"
+        }
       },
       {
         "id": "bucket",
@@ -7739,7 +7794,17 @@
           "coin": "sp",
           "costInCp": 80
         },
-        "weightLbs": 1
+        "weightLbs": 1,
+        "type": "EquipmentContainer",
+        "capacity": {
+          "weightLimitLbs": null,
+          "volume": null,
+          "count": {
+            "max": 20,
+            "of": "arrows"
+          },
+          "restriction": "ammunition only"
+        }
       },
       {
         "id": "ropeHempPer50Ft",
@@ -7777,7 +7842,22 @@
           "coin": "sp",
           "costInCp": 20
         },
-        "weightLbs": 0.5
+        "weightLbs": 0.5,
+        "type": "EquipmentContainer",
+        "capacity": {
+          "weightLimitLbs": 30,
+          "volume": {
+            "dimensionsIn": [
+              24,
+              24,
+              12
+            ],
+            "printed": "2' x 2' x 1'",
+            "volumeCuIn": 6912
+          },
+          "count": null,
+          "restriction": null
+        }
       },
       {
         "id": "sackSmall",
@@ -7790,7 +7870,22 @@
           "costInCp": 5
         },
         "weightLbs": 0.1,
-        "weightMarker": "*"
+        "weightMarker": "*",
+        "type": "EquipmentContainer",
+        "capacity": {
+          "weightLimitLbs": 15,
+          "volume": {
+            "dimensionsIn": [
+              12,
+              12,
+              8
+            ],
+            "printed": "1' x 1' x 8\"",
+            "volumeCuIn": 1152
+          },
+          "count": null,
+          "restriction": null
+        }
       },
       {
         "id": "sealingCandleWaxPerLb",
@@ -8036,7 +8131,17 @@
           "costInCp": 50
         },
         "weightLbs": 0.5,
-        "source": "owner-supplied"
+        "source": "owner-supplied",
+        "type": "EquipmentContainer",
+        "capacity": {
+          "weightLimitLbs": null,
+          "volume": null,
+          "count": {
+            "max": 6,
+            "of": "potions"
+          },
+          "restriction": null
+        }
       },
       {
         "id": "smallHammer",
@@ -8085,7 +8190,17 @@
           "costInCp": 80
         },
         "weightLbs": 0.4,
-        "source": "owner-supplied"
+        "source": "owner-supplied",
+        "type": "EquipmentContainer",
+        "capacity": {
+          "weightLimitLbs": null,
+          "volume": null,
+          "count": {
+            "max": 5,
+            "of": "scrolls"
+          },
+          "restriction": null
+        }
       },
       {
         "id": "mapOrScrollCaseBone",
@@ -8097,7 +8212,17 @@
           "costInCp": 100
         },
         "weightLbs": 0.5,
-        "source": "owner-supplied"
+        "source": "owner-supplied",
+        "type": "EquipmentContainer",
+        "capacity": {
+          "weightLimitLbs": null,
+          "volume": null,
+          "count": {
+            "max": 5,
+            "of": "scrolls"
+          },
+          "restriction": null
+        }
       },
       {
         "id": "mapOrScrollCaseMetal",
@@ -8109,7 +8234,17 @@
           "costInCp": 200
         },
         "weightLbs": 0.6,
-        "source": "owner-supplied"
+        "source": "owner-supplied",
+        "type": "EquipmentContainer",
+        "capacity": {
+          "weightLimitLbs": null,
+          "volume": null,
+          "count": {
+            "max": 5,
+            "of": "scrolls"
+          },
+          "restriction": null
+        }
       },
       {
         "id": "potionBandolierLeatherPadded",
@@ -8122,10 +8257,27 @@
         },
         "weightLbs": 2,
         "source": "owner-added",
-        "note": "Not in the PHB equipment table; cost and weight supplied by the owner."
+        "note": "Not in the PHB equipment table; cost and weight supplied by the owner.",
+        "type": "EquipmentContainer",
+        "capacity": {
+          "weightLimitLbs": 1,
+          "volume": {
+            "dimensionsIn": [
+              4,
+              2,
+              2
+            ],
+            "printed": "4\" x 2\" x 2\"",
+            "volumeCuIn": 16
+          },
+          "count": null,
+          "restriction": null
+        }
       }
     ],
-    "proofreadingNote": "Transcribed from images by Claude. Please spot-check prices and weights against your book before relying on them."
+    "proofreadingNote": "Transcribed from images by Claude. Please spot-check prices and weights against your book before relying on them.",
+    "containerNote": "Items with type EquipmentContainer can hold other equipment. capacity is empty until the owner supplies limits.",
+    "capacityNote": "capacity: weightLimitLbs, volume (dimensionsIn in inches, printed as supplied, volumeCuIn = product), count {max, of}, restriction. null = not supplied. Supplied by the owner."
   },
   "startingFunds": {
     "status": "owner house rules: 10 gp x the dice roll (this is the only ruleset; PHB Table 43 kept as phbOriginal for reference)",
