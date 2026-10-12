@@ -7700,7 +7700,21 @@
       ],
       "footnotes": {
         "*": "Per Hit Die of the figurine."
-      }
+      },
+      "extraItems": [
+        {
+          "name": "Goodberries",
+          "id": "weird.goodberries",
+          "roll": null,
+          "xp": null,
+          "xpPrinted": null,
+          "valueGp": null,
+          "weightLbs": 0.02,
+          "weightNote": "50 berries to the lb, so 0.02 lb each",
+          "hasDescription": false,
+          "source": "owner-added"
+        }
+      ]
     },
     "107": {
       "table": 107,
