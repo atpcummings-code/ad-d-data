@@ -1324,7 +1324,33 @@
             }
           ]
         },
-        "stillNeeded": "To-hit and damage bonuses for specialisation, slot cost to specialise, and how double specialisation (if used) works."
+        "stillNeeded": "To-hit and damage bonuses for specialisation, slot cost for thrown/other missile weapons (text pasted stopped before it), and how double specialisation (if used) works.",
+        "slotCost": {
+          "source": "PHB 'Cost of Weapon Specialization' text (supplied by owner; pasted text ended part-way through the Rath example)",
+          "rule": "Specialising uses extra weapon proficiency slots on the chosen weapon. The first slot makes the character proficient; each further slot is spent on specialisation.",
+          "byWeaponType": {
+            "meleeWeapon": {
+              "proficiencySlots": 1,
+              "specialisationSlots": 1,
+              "totalSlots": 2
+            },
+            "crossbow": {
+              "proficiencySlots": 1,
+              "specialisationSlots": 1,
+              "totalSlots": 2
+            },
+            "bowNotCrossbow": {
+              "proficiencySlots": 1,
+              "specialisationSlots": 2,
+              "totalSlots": 3
+            }
+          },
+          "example": "Rath the dwarf specialising in the warhammer spends two of his four starting slots on it, leaving two to become proficient with other weapons.",
+          "assumptions": [
+            "Thrown and other missile weapons (not stated in the pasted text) are not yet assigned a cost.",
+            "Where weapon specialisation applies by class is governed by eligibleClasses (single-class Fighter)."
+          ]
+        }
       },
       "relatedWeaponRule": {
         "status": "confirmed-by-owner (PHB text)",
