@@ -2934,6 +2934,59 @@
         ]
       },
       "specialistSchoolsOtherThanIllusionist": "same as wizard (confirmed by owner)"
+    },
+    "weaponAttackBonuses": {
+      "status": "confirmed-by-owner (PHB text)",
+      "source": "PHB racial bonuses when using weapons (text supplied by owner)",
+      "bonusApplies": "attack rolls only (not damage)",
+      "byRace": {
+        "elf": [
+          {
+            "bonus": 1,
+            "applies": "bows of any sort other than a crossbow",
+            "weaponIds": [
+              "shortBow",
+              "longBow",
+              "compositeShortBow",
+              "compositeLongBow"
+            ]
+          },
+          {
+            "bonus": 1,
+            "applies": "short sword and long sword",
+            "weaponIds": [
+              "shortSword",
+              "longSword"
+            ]
+          }
+        ],
+        "halfling": [
+          {
+            "bonus": 1,
+            "applies": "thrown weapons",
+            "weaponIds": [
+              "club",
+              "daggerOrDirk",
+              "dart",
+              "handOrThrowingAxe",
+              "harpoon",
+              "javelin",
+              "knife",
+              "spear"
+            ],
+            "mappingAssumption": "Thrown weapons taken as every non-launcher weapon that has a thrown range on PHB Table 45 (gear.json missileRanges)."
+          },
+          {
+            "bonus": 1,
+            "applies": "slings",
+            "weaponIds": [
+              "sling"
+            ],
+            "mappingAssumption": "Staff sling is not included (it is a separate weapon); confirm."
+          }
+        ]
+      },
+      "note": "Elf bow bonus excludes blowgun, arquebus and all crossbows. Applies to half-elves only if the owner says so (the text names elves and halflings only)."
     }
   },
   "classes": {
