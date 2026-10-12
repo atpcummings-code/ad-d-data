@@ -7222,7 +7222,8 @@
           "coin": "gp",
           "costInCp": 100
         },
-        "weightLbs": null
+        "weightLbs": 0.1,
+        "weightSource": "owner-supplied"
       },
       {
         "id": "beltPouchLarge",
@@ -7976,6 +7977,139 @@
         },
         "weightLbs": 0.1,
         "weightMarker": "*"
+      },
+      {
+        "id": "ironRationsPerDay",
+        "name": "Rations, iron (1 day)",
+        "category": "miscellaneous",
+        "cost": {
+          "amount": 5,
+          "coin": "sp",
+          "costInCp": 50
+        },
+        "weightLbs": 2,
+        "source": "owner-supplied"
+      },
+      {
+        "id": "messTins",
+        "name": "Mess tins",
+        "category": "miscellaneous",
+        "cost": {
+          "amount": 5,
+          "coin": "sp",
+          "costInCp": 50
+        },
+        "weightLbs": 1,
+        "source": "owner-supplied"
+      },
+      {
+        "id": "waterskinSmall",
+        "name": "Waterskin, Small",
+        "category": "miscellaneous",
+        "cost": {
+          "amount": 1,
+          "coin": "cp",
+          "costInCp": 1
+        },
+        "weightLbs": 2,
+        "source": "owner-supplied"
+      },
+      {
+        "id": "waterskin",
+        "name": "Waterskin",
+        "category": "miscellaneous",
+        "cost": {
+          "amount": 2,
+          "coin": "cp",
+          "costInCp": 2
+        },
+        "weightLbs": 5,
+        "source": "owner-supplied"
+      },
+      {
+        "id": "smallIronBox",
+        "name": "Iron box, Small",
+        "category": "miscellaneous",
+        "cost": {
+          "amount": 5,
+          "coin": "sp",
+          "costInCp": 50
+        },
+        "weightLbs": 0.5,
+        "source": "owner-supplied"
+      },
+      {
+        "id": "smallHammer",
+        "name": "Hammer, Small",
+        "category": "miscellaneous",
+        "cost": {
+          "amount": 1,
+          "coin": "sp",
+          "costInCp": 10
+        },
+        "weightLbs": 2,
+        "source": "owner-supplied"
+      },
+      {
+        "id": "ironSpike",
+        "name": "Iron spike",
+        "category": "miscellaneous",
+        "cost": {
+          "amount": 1,
+          "coin": "sp",
+          "costInCp": 10
+        },
+        "weightLbs": 0.5,
+        "source": "owner-supplied"
+      },
+      {
+        "id": "soapHalfLb",
+        "name": "Soap (0.5 lb.)",
+        "category": "miscellaneous",
+        "cost": {
+          "amount": 25,
+          "coin": "cp",
+          "costInCp": 25
+        },
+        "weightLbs": 0.5,
+        "source": "owner-supplied",
+        "note": "Half of the per-lb. soap price and weight (owner instruction); used in the backpacks."
+      },
+      {
+        "id": "mapOrScrollCaseLeather",
+        "name": "Map or scroll case (leather)",
+        "category": "miscellaneous",
+        "cost": {
+          "amount": 8,
+          "coin": "sp",
+          "costInCp": 80
+        },
+        "weightLbs": 0.4,
+        "source": "owner-supplied"
+      },
+      {
+        "id": "mapOrScrollCaseBone",
+        "name": "Map or scroll case (bone)",
+        "category": "miscellaneous",
+        "cost": {
+          "amount": 1,
+          "coin": "gp",
+          "costInCp": 100
+        },
+        "weightLbs": 0.5,
+        "source": "owner-supplied"
+      },
+      {
+        "id": "mapOrScrollCaseMetal",
+        "name": "Map or scroll case (metal)",
+        "category": "miscellaneous",
+        "cost": {
+          "amount": 2,
+          "coin": "gp",
+          "costInCp": 200
+        },
+        "weightLbs": 0.6,
+        "source": "owner-supplied"
       }
     ],
     "proofreadingNote": "Transcribed from images by Claude. Please spot-check prices and weights against your book before relying on them."
@@ -8117,5 +8251,1315 @@
       "example": "Fighter/Thief: 8d4 rolls 20 (200 gp) and 4d6 rolls 14 (140 gp): (200 + 140) / 2 = 170 gp.",
       "override": "The manual override still applies."
     }
+  },
+  "equipmentContainers": {
+    "resolvedGaps": "Iron rations (1 day), mess tins, waterskins, small iron box, small hammer, iron spike and bell weight were supplied by the owner and added to equipment.items (source owner-supplied).",
+    "status": "from-spreadsheet-backpacks.xlsx",
+    "source": "Owner spreadsheet backpacks.xlsx (columns: Minimum, Standard, Recommended, Got Money)",
+    "notes": [
+      "Each pack is type EquipmentContainer (defined in the Emergent app). containerGearRef points at the empty Backpack in equipment.items; contents are the sheet lines with quantity above 0 (zero-quantity lines in the sheet are omitted).",
+      "Weights and costs are copied from equipment.items (per unit) and never guessed. Where gear.json has no figure the line has null weight/cost and a gap note.",
+      "Holy Water comes from magic-items.json (table 89 extraItems, potions.holyWater).",
+      "Line totals = qty x per-unit figure."
+    ],
+    "gaps": {
+      "itemsMissingWeightOrCost": {}
+    },
+    "items": [
+      {
+        "id": "backpackMinimum",
+        "name": "Backpack - Minimum",
+        "type": "EquipmentContainer",
+        "containerGearRef": "backpack",
+        "containerWeightLbs": 2,
+        "containerCost": {
+          "amount": 2,
+          "coin": "gp",
+          "costInCp": 200
+        },
+        "contents": [
+          {
+            "id": "ironRations1Day",
+            "name": "Iron Rations (1 day)",
+            "qty": 3,
+            "gearRef": "ironRationsPerDay",
+            "weightLbs": 2,
+            "cost": {
+              "amount": 5,
+              "coin": "sp",
+              "costInCp": 50
+            }
+          },
+          {
+            "id": "tinderboxFlintAndSteel",
+            "name": "Tinderbox, Flint and steel",
+            "qty": 1,
+            "gearRef": "flintAndSteel",
+            "weightLbs": 0.1,
+            "cost": {
+              "amount": 5,
+              "coin": "sp",
+              "costInCp": 50
+            },
+            "note": "Mapped to 'Flint and steel'; the tinderbox itself has no price or weight in gear.json."
+          },
+          {
+            "id": "messTins",
+            "name": "Mess tins",
+            "qty": 1,
+            "gearRef": "messTins",
+            "weightLbs": 1,
+            "cost": {
+              "amount": 5,
+              "coin": "sp",
+              "costInCp": 50
+            }
+          },
+          {
+            "id": "smallWaterskin",
+            "name": "Small Waterskin",
+            "qty": 1,
+            "gearRef": "waterskinSmall",
+            "weightLbs": 2,
+            "cost": {
+              "amount": 1,
+              "coin": "cp",
+              "costInCp": 1
+            }
+          },
+          {
+            "id": "winterBlanket",
+            "name": "Winter blanket",
+            "qty": 1,
+            "gearRef": "winterBlanket",
+            "weightLbs": 3,
+            "cost": {
+              "amount": 5,
+              "coin": "sp",
+              "costInCp": 50
+            }
+          },
+          {
+            "id": "torch",
+            "name": "Torch",
+            "qty": 1,
+            "gearRef": "torch",
+            "weightLbs": 1,
+            "cost": {
+              "amount": 1,
+              "coin": "cp",
+              "costInCp": 1
+            }
+          },
+          {
+            "id": "oilFlask",
+            "name": "Oil flask",
+            "qty": 1,
+            "gearRef": "oilLampPerFlask",
+            "weightLbs": 1,
+            "cost": {
+              "amount": 6,
+              "coin": "cp",
+              "costInCp": 6
+            },
+            "note": "Mapped to 'Oil, Lamp (per flask)'; confirm this is the intended oil flask."
+          },
+          {
+            "id": "sewingNeedleThread",
+            "name": "Sewing needle & thread",
+            "qty": 1,
+            "gearRef": "sewingNeedle",
+            "weightLbs": 0,
+            "cost": {
+              "amount": 5,
+              "coin": "sp",
+              "costInCp": 50
+            },
+            "note": "Mapped to 'Sewing needle'; thread has no separate price or weight."
+          },
+          {
+            "id": "fishhookLine",
+            "name": "Fishhook & line",
+            "qty": 1,
+            "gearRef": "fishhook",
+            "weightLbs": 0,
+            "cost": {
+              "amount": 1,
+              "coin": "sp",
+              "costInCp": 10
+            },
+            "note": "Mapped to 'Fishhook'; line has no separate price or weight."
+          },
+          {
+            "id": "smallIronBox",
+            "name": "Small Iron Box",
+            "qty": 1,
+            "gearRef": "smallIronBox",
+            "weightLbs": 0.5,
+            "cost": {
+              "amount": 5,
+              "coin": "sp",
+              "costInCp": 50
+            }
+          },
+          {
+            "id": "candle",
+            "name": "Candle",
+            "qty": 1,
+            "gearRef": "candle",
+            "weightLbs": 0.1,
+            "cost": {
+              "amount": 1,
+              "coin": "cp",
+              "costInCp": 1
+            }
+          },
+          {
+            "id": "chalk",
+            "name": "Chalk",
+            "qty": 1,
+            "gearRef": "chalk",
+            "weightLbs": 0.1,
+            "cost": {
+              "amount": 1,
+              "coin": "cp",
+              "costInCp": 1
+            }
+          },
+          {
+            "id": "largeSack",
+            "name": "Large Sack",
+            "qty": 1,
+            "gearRef": "sackLarge",
+            "weightLbs": 0.5,
+            "cost": {
+              "amount": 2,
+              "coin": "sp",
+              "costInCp": 20
+            }
+          },
+          {
+            "id": "smallSack",
+            "name": "Small Sack",
+            "qty": 1,
+            "gearRef": "sackSmall",
+            "weightLbs": 0.1,
+            "cost": {
+              "amount": 5,
+              "coin": "cp",
+              "costInCp": 5
+            }
+          },
+          {
+            "id": "whetstone",
+            "name": "Whetstone",
+            "qty": 1,
+            "gearRef": "whetstone",
+            "weightLbs": 1,
+            "cost": {
+              "amount": 2,
+              "coin": "cp",
+              "costInCp": 2
+            }
+          },
+          {
+            "id": "soap",
+            "name": "Soap",
+            "qty": 1,
+            "gearRef": "soapHalfLb",
+            "weightLbs": 0.5,
+            "cost": {
+              "amount": 25,
+              "coin": "cp",
+              "costInCp": 25
+            },
+            "note": "Uses the 0.5 lb. soap unit (half the per-lb. price and weight)."
+          }
+        ],
+        "totals": {
+          "weightLbsKnown": 18.9,
+          "costInCpKnown": 672,
+          "complete": true,
+          "linesMissingWeightOrCost": [],
+          "note": "Totals include the backpack itself and only the lines that have a figure; lines in linesMissingWeightOrCost are not counted."
+        }
+      },
+      {
+        "id": "backpackStandard",
+        "name": "Backpack - Standard",
+        "type": "EquipmentContainer",
+        "containerGearRef": "backpack",
+        "containerWeightLbs": 2,
+        "containerCost": {
+          "amount": 2,
+          "coin": "gp",
+          "costInCp": 200
+        },
+        "contents": [
+          {
+            "id": "ironRations1Day",
+            "name": "Iron Rations (1 day)",
+            "qty": 7,
+            "gearRef": "ironRationsPerDay",
+            "weightLbs": 2,
+            "cost": {
+              "amount": 5,
+              "coin": "sp",
+              "costInCp": 50
+            }
+          },
+          {
+            "id": "tinderboxFlintAndSteel",
+            "name": "Tinderbox, Flint and steel",
+            "qty": 1,
+            "gearRef": "flintAndSteel",
+            "weightLbs": 0.1,
+            "cost": {
+              "amount": 5,
+              "coin": "sp",
+              "costInCp": 50
+            },
+            "note": "Mapped to 'Flint and steel'; the tinderbox itself has no price or weight in gear.json."
+          },
+          {
+            "id": "messTins",
+            "name": "Mess tins",
+            "qty": 1,
+            "gearRef": "messTins",
+            "weightLbs": 1,
+            "cost": {
+              "amount": 5,
+              "coin": "sp",
+              "costInCp": 50
+            }
+          },
+          {
+            "id": "waterskin",
+            "name": "Waterskin",
+            "qty": 1,
+            "gearRef": "waterskin",
+            "weightLbs": 5,
+            "cost": {
+              "amount": 2,
+              "coin": "cp",
+              "costInCp": 2
+            }
+          },
+          {
+            "id": "winterBlanket",
+            "name": "Winter blanket",
+            "qty": 1,
+            "gearRef": "winterBlanket",
+            "weightLbs": 3,
+            "cost": {
+              "amount": 5,
+              "coin": "sp",
+              "costInCp": 50
+            }
+          },
+          {
+            "id": "torch",
+            "name": "Torch",
+            "qty": 5,
+            "gearRef": "torch",
+            "weightLbs": 1,
+            "cost": {
+              "amount": 1,
+              "coin": "cp",
+              "costInCp": 1
+            }
+          },
+          {
+            "id": "oilFlask",
+            "name": "Oil flask",
+            "qty": 3,
+            "gearRef": "oilLampPerFlask",
+            "weightLbs": 1,
+            "cost": {
+              "amount": 6,
+              "coin": "cp",
+              "costInCp": 6
+            },
+            "note": "Mapped to 'Oil, Lamp (per flask)'; confirm this is the intended oil flask."
+          },
+          {
+            "id": "holyWater",
+            "name": "Holy Water",
+            "qty": 2,
+            "gearRef": "potions.holyWater",
+            "refFile": "magic-items.json",
+            "weightLbs": 0.1,
+            "cost": {
+              "amount": 25,
+              "coin": "gp",
+              "costInCp": 2500
+            }
+          },
+          {
+            "id": "50FtHempRope",
+            "name": "50ft Hemp Rope",
+            "qty": 1,
+            "gearRef": "ropeHempPer50Ft",
+            "weightLbs": 20,
+            "cost": {
+              "amount": 1,
+              "coin": "gp",
+              "costInCp": 100
+            }
+          },
+          {
+            "id": "grapplingHook",
+            "name": "Grappling hook",
+            "qty": 1,
+            "gearRef": "grapplingHook",
+            "weightLbs": 4,
+            "cost": {
+              "amount": 8,
+              "coin": "sp",
+              "costInCp": 80
+            }
+          },
+          {
+            "id": "smallHammer",
+            "name": "Small Hammer",
+            "qty": 1,
+            "gearRef": "smallHammer",
+            "weightLbs": 2,
+            "cost": {
+              "amount": 1,
+              "coin": "sp",
+              "costInCp": 10
+            }
+          },
+          {
+            "id": "ironSpike",
+            "name": "Iron Spike",
+            "qty": 5,
+            "gearRef": "ironSpike",
+            "weightLbs": 0.5,
+            "cost": {
+              "amount": 1,
+              "coin": "sp",
+              "costInCp": 10
+            }
+          },
+          {
+            "id": "mapOrScrollCaseLeather",
+            "name": "Map or scroll case (leather)",
+            "qty": 1,
+            "gearRef": "mapOrScrollCaseLeather",
+            "weightLbs": 0.4,
+            "cost": {
+              "amount": 8,
+              "coin": "sp",
+              "costInCp": 80
+            }
+          },
+          {
+            "id": "sewingNeedleThread",
+            "name": "Sewing needle & thread",
+            "qty": 1,
+            "gearRef": "sewingNeedle",
+            "weightLbs": 0,
+            "cost": {
+              "amount": 5,
+              "coin": "sp",
+              "costInCp": 50
+            },
+            "note": "Mapped to 'Sewing needle'; thread has no separate price or weight."
+          },
+          {
+            "id": "fishhookLine",
+            "name": "Fishhook & line",
+            "qty": 1,
+            "gearRef": "fishhook",
+            "weightLbs": 0,
+            "cost": {
+              "amount": 1,
+              "coin": "sp",
+              "costInCp": 10
+            },
+            "note": "Mapped to 'Fishhook'; line has no separate price or weight."
+          },
+          {
+            "id": "smallIronBox",
+            "name": "Small Iron Box",
+            "qty": 1,
+            "gearRef": "smallIronBox",
+            "weightLbs": 0.5,
+            "cost": {
+              "amount": 5,
+              "coin": "sp",
+              "costInCp": 50
+            }
+          },
+          {
+            "id": "candle",
+            "name": "Candle",
+            "qty": 1,
+            "gearRef": "candle",
+            "weightLbs": 0.1,
+            "cost": {
+              "amount": 1,
+              "coin": "cp",
+              "costInCp": 1
+            }
+          },
+          {
+            "id": "chalk",
+            "name": "Chalk",
+            "qty": 1,
+            "gearRef": "chalk",
+            "weightLbs": 0.1,
+            "cost": {
+              "amount": 1,
+              "coin": "cp",
+              "costInCp": 1
+            }
+          },
+          {
+            "id": "parchmentPerSheet",
+            "name": "Parchment (per sheet)",
+            "qty": 2,
+            "gearRef": "parchmentPerSheet",
+            "weightLbs": 0,
+            "cost": {
+              "amount": 1,
+              "coin": "gp",
+              "costInCp": 100
+            }
+          },
+          {
+            "id": "writingInkPerVial",
+            "name": "Writing ink (per vial)",
+            "qty": 1,
+            "gearRef": "writingInkPerVial",
+            "weightLbs": 0.1,
+            "cost": {
+              "amount": 8,
+              "coin": "gp",
+              "costInCp": 800
+            }
+          },
+          {
+            "id": "mirrorSmallMetal",
+            "name": "Mirror, small metal",
+            "qty": 1,
+            "gearRef": "mirrorSmallMetal",
+            "weightLbs": 0.1,
+            "cost": {
+              "amount": 10,
+              "coin": "gp",
+              "costInCp": 1000
+            }
+          },
+          {
+            "id": "largeSack",
+            "name": "Large Sack",
+            "qty": 2,
+            "gearRef": "sackLarge",
+            "weightLbs": 0.5,
+            "cost": {
+              "amount": 2,
+              "coin": "sp",
+              "costInCp": 20
+            }
+          },
+          {
+            "id": "smallSack",
+            "name": "Small Sack",
+            "qty": 4,
+            "gearRef": "sackSmall",
+            "weightLbs": 0.1,
+            "cost": {
+              "amount": 5,
+              "coin": "cp",
+              "costInCp": 5
+            }
+          },
+          {
+            "id": "whetstone",
+            "name": "Whetstone",
+            "qty": 1,
+            "gearRef": "whetstone",
+            "weightLbs": 1,
+            "cost": {
+              "amount": 2,
+              "coin": "cp",
+              "costInCp": 2
+            }
+          },
+          {
+            "id": "soap",
+            "name": "Soap",
+            "qty": 1,
+            "gearRef": "soapHalfLb",
+            "weightLbs": 0.5,
+            "cost": {
+              "amount": 25,
+              "coin": "cp",
+              "costInCp": 25
+            },
+            "note": "Uses the 0.5 lb. soap unit (half the per-lb. price and weight)."
+          },
+          {
+            "id": "wineskin",
+            "name": "Wineskin",
+            "qty": 1,
+            "gearRef": "wineskin",
+            "weightLbs": 1,
+            "cost": {
+              "amount": 8,
+              "coin": "sp",
+              "costInCp": 80
+            }
+          },
+          {
+            "id": "hoodedLantern",
+            "name": "Hooded Lantern",
+            "qty": 1,
+            "gearRef": "lanternHooded",
+            "weightLbs": 2,
+            "cost": {
+              "amount": 7,
+              "coin": "gp",
+              "costInCp": 700
+            }
+          },
+          {
+            "id": "smallTent",
+            "name": "Small Tent",
+            "qty": 1,
+            "gearRef": "tentSmall",
+            "weightLbs": 10,
+            "cost": {
+              "amount": 5,
+              "coin": "gp",
+              "costInCp": 500
+            }
+          }
+        ],
+        "totals": {
+          "weightLbsKnown": 79.0,
+          "costInCpKnown": 9524,
+          "complete": true,
+          "linesMissingWeightOrCost": [],
+          "note": "Totals include the backpack itself and only the lines that have a figure; lines in linesMissingWeightOrCost are not counted."
+        }
+      },
+      {
+        "id": "backpackRecommended",
+        "name": "Backpack - Recommended",
+        "type": "EquipmentContainer",
+        "containerGearRef": "backpack",
+        "containerWeightLbs": 2,
+        "containerCost": {
+          "amount": 2,
+          "coin": "gp",
+          "costInCp": 200
+        },
+        "contents": [
+          {
+            "id": "ironRations1Day",
+            "name": "Iron Rations (1 day)",
+            "qty": 3,
+            "gearRef": "ironRationsPerDay",
+            "weightLbs": 2,
+            "cost": {
+              "amount": 5,
+              "coin": "sp",
+              "costInCp": 50
+            }
+          },
+          {
+            "id": "tinderboxFlintAndSteel",
+            "name": "Tinderbox, Flint and steel",
+            "qty": 1,
+            "gearRef": "flintAndSteel",
+            "weightLbs": 0.1,
+            "cost": {
+              "amount": 5,
+              "coin": "sp",
+              "costInCp": 50
+            },
+            "note": "Mapped to 'Flint and steel'; the tinderbox itself has no price or weight in gear.json."
+          },
+          {
+            "id": "messTins",
+            "name": "Mess tins",
+            "qty": 1,
+            "gearRef": "messTins",
+            "weightLbs": 1,
+            "cost": {
+              "amount": 5,
+              "coin": "sp",
+              "costInCp": 50
+            }
+          },
+          {
+            "id": "waterskin",
+            "name": "Waterskin",
+            "qty": 1,
+            "gearRef": "waterskin",
+            "weightLbs": 5,
+            "cost": {
+              "amount": 2,
+              "coin": "cp",
+              "costInCp": 2
+            }
+          },
+          {
+            "id": "winterBlanket",
+            "name": "Winter blanket",
+            "qty": 1,
+            "gearRef": "winterBlanket",
+            "weightLbs": 3,
+            "cost": {
+              "amount": 5,
+              "coin": "sp",
+              "costInCp": 50
+            }
+          },
+          {
+            "id": "torch",
+            "name": "Torch",
+            "qty": 3,
+            "gearRef": "torch",
+            "weightLbs": 1,
+            "cost": {
+              "amount": 1,
+              "coin": "cp",
+              "costInCp": 1
+            }
+          },
+          {
+            "id": "oilFlask",
+            "name": "Oil flask",
+            "qty": 2,
+            "gearRef": "oilLampPerFlask",
+            "weightLbs": 1,
+            "cost": {
+              "amount": 6,
+              "coin": "cp",
+              "costInCp": 6
+            },
+            "note": "Mapped to 'Oil, Lamp (per flask)'; confirm this is the intended oil flask."
+          },
+          {
+            "id": "50FtHempRope",
+            "name": "50ft Hemp Rope",
+            "qty": 1,
+            "gearRef": "ropeHempPer50Ft",
+            "weightLbs": 20,
+            "cost": {
+              "amount": 1,
+              "coin": "gp",
+              "costInCp": 100
+            }
+          },
+          {
+            "id": "grapplingHook",
+            "name": "Grappling hook",
+            "qty": 1,
+            "gearRef": "grapplingHook",
+            "weightLbs": 4,
+            "cost": {
+              "amount": 8,
+              "coin": "sp",
+              "costInCp": 80
+            }
+          },
+          {
+            "id": "smallHammer",
+            "name": "Small Hammer",
+            "qty": 1,
+            "gearRef": "smallHammer",
+            "weightLbs": 2,
+            "cost": {
+              "amount": 1,
+              "coin": "sp",
+              "costInCp": 10
+            }
+          },
+          {
+            "id": "ironSpike",
+            "name": "Iron Spike",
+            "qty": 3,
+            "gearRef": "ironSpike",
+            "weightLbs": 0.5,
+            "cost": {
+              "amount": 1,
+              "coin": "sp",
+              "costInCp": 10
+            }
+          },
+          {
+            "id": "sewingNeedleThread",
+            "name": "Sewing needle & thread",
+            "qty": 1,
+            "gearRef": "sewingNeedle",
+            "weightLbs": 0,
+            "cost": {
+              "amount": 5,
+              "coin": "sp",
+              "costInCp": 50
+            },
+            "note": "Mapped to 'Sewing needle'; thread has no separate price or weight."
+          },
+          {
+            "id": "fishhookLine",
+            "name": "Fishhook & line",
+            "qty": 1,
+            "gearRef": "fishhook",
+            "weightLbs": 0,
+            "cost": {
+              "amount": 1,
+              "coin": "sp",
+              "costInCp": 10
+            },
+            "note": "Mapped to 'Fishhook'; line has no separate price or weight."
+          },
+          {
+            "id": "smallIronBox",
+            "name": "Small Iron Box",
+            "qty": 1,
+            "gearRef": "smallIronBox",
+            "weightLbs": 0.5,
+            "cost": {
+              "amount": 5,
+              "coin": "sp",
+              "costInCp": 50
+            }
+          },
+          {
+            "id": "candle",
+            "name": "Candle",
+            "qty": 1,
+            "gearRef": "candle",
+            "weightLbs": 0.1,
+            "cost": {
+              "amount": 1,
+              "coin": "cp",
+              "costInCp": 1
+            }
+          },
+          {
+            "id": "chalk",
+            "name": "Chalk",
+            "qty": 1,
+            "gearRef": "chalk",
+            "weightLbs": 0.1,
+            "cost": {
+              "amount": 1,
+              "coin": "cp",
+              "costInCp": 1
+            }
+          },
+          {
+            "id": "parchmentPerSheet",
+            "name": "Parchment (per sheet)",
+            "qty": 2,
+            "gearRef": "parchmentPerSheet",
+            "weightLbs": 0,
+            "cost": {
+              "amount": 1,
+              "coin": "gp",
+              "costInCp": 100
+            }
+          },
+          {
+            "id": "writingInkPerVial",
+            "name": "Writing ink (per vial)",
+            "qty": 1,
+            "gearRef": "writingInkPerVial",
+            "weightLbs": 0.1,
+            "cost": {
+              "amount": 8,
+              "coin": "gp",
+              "costInCp": 800
+            }
+          },
+          {
+            "id": "mirrorSmallMetal",
+            "name": "Mirror, small metal",
+            "qty": 1,
+            "gearRef": "mirrorSmallMetal",
+            "weightLbs": 0.1,
+            "cost": {
+              "amount": 10,
+              "coin": "gp",
+              "costInCp": 1000
+            }
+          },
+          {
+            "id": "largeSack",
+            "name": "Large Sack",
+            "qty": 1,
+            "gearRef": "sackLarge",
+            "weightLbs": 0.5,
+            "cost": {
+              "amount": 2,
+              "coin": "sp",
+              "costInCp": 20
+            }
+          },
+          {
+            "id": "smallSack",
+            "name": "Small Sack",
+            "qty": 2,
+            "gearRef": "sackSmall",
+            "weightLbs": 0.1,
+            "cost": {
+              "amount": 5,
+              "coin": "cp",
+              "costInCp": 5
+            }
+          },
+          {
+            "id": "whetstone",
+            "name": "Whetstone",
+            "qty": 1,
+            "gearRef": "whetstone",
+            "weightLbs": 1,
+            "cost": {
+              "amount": 2,
+              "coin": "cp",
+              "costInCp": 2
+            }
+          },
+          {
+            "id": "soap",
+            "name": "Soap",
+            "qty": 1,
+            "gearRef": "soapHalfLb",
+            "weightLbs": 0.5,
+            "cost": {
+              "amount": 25,
+              "coin": "cp",
+              "costInCp": 25
+            },
+            "note": "Uses the 0.5 lb. soap unit (half the per-lb. price and weight)."
+          }
+        ],
+        "totals": {
+          "weightLbsKnown": 52.7,
+          "costInCpKnown": 2906,
+          "complete": true,
+          "linesMissingWeightOrCost": [],
+          "note": "Totals include the backpack itself and only the lines that have a figure; lines in linesMissingWeightOrCost are not counted."
+        }
+      },
+      {
+        "id": "backpackGotMoney",
+        "name": "Backpack - Got Money",
+        "type": "EquipmentContainer",
+        "containerGearRef": "backpack",
+        "containerWeightLbs": 2,
+        "containerCost": {
+          "amount": 2,
+          "coin": "gp",
+          "costInCp": 200
+        },
+        "contents": [
+          {
+            "id": "ironRations1Day",
+            "name": "Iron Rations (1 day)",
+            "qty": 7,
+            "gearRef": "ironRationsPerDay",
+            "weightLbs": 2,
+            "cost": {
+              "amount": 5,
+              "coin": "sp",
+              "costInCp": 50
+            }
+          },
+          {
+            "id": "tinderboxFlintAndSteel",
+            "name": "Tinderbox, Flint and steel",
+            "qty": 1,
+            "gearRef": "flintAndSteel",
+            "weightLbs": 0.1,
+            "cost": {
+              "amount": 5,
+              "coin": "sp",
+              "costInCp": 50
+            },
+            "note": "Mapped to 'Flint and steel'; the tinderbox itself has no price or weight in gear.json."
+          },
+          {
+            "id": "messTins",
+            "name": "Mess tins",
+            "qty": 1,
+            "gearRef": "messTins",
+            "weightLbs": 1,
+            "cost": {
+              "amount": 5,
+              "coin": "sp",
+              "costInCp": 50
+            }
+          },
+          {
+            "id": "waterskin",
+            "name": "Waterskin",
+            "qty": 1,
+            "gearRef": "waterskin",
+            "weightLbs": 5,
+            "cost": {
+              "amount": 2,
+              "coin": "cp",
+              "costInCp": 2
+            }
+          },
+          {
+            "id": "winterBlanket",
+            "name": "Winter blanket",
+            "qty": 1,
+            "gearRef": "winterBlanket",
+            "weightLbs": 3,
+            "cost": {
+              "amount": 5,
+              "coin": "sp",
+              "costInCp": 50
+            }
+          },
+          {
+            "id": "torch",
+            "name": "Torch",
+            "qty": 5,
+            "gearRef": "torch",
+            "weightLbs": 1,
+            "cost": {
+              "amount": 1,
+              "coin": "cp",
+              "costInCp": 1
+            }
+          },
+          {
+            "id": "oilFlask",
+            "name": "Oil flask",
+            "qty": 3,
+            "gearRef": "oilLampPerFlask",
+            "weightLbs": 1,
+            "cost": {
+              "amount": 6,
+              "coin": "cp",
+              "costInCp": 6
+            },
+            "note": "Mapped to 'Oil, Lamp (per flask)'; confirm this is the intended oil flask."
+          },
+          {
+            "id": "holyWater",
+            "name": "Holy Water",
+            "qty": 2,
+            "gearRef": "potions.holyWater",
+            "refFile": "magic-items.json",
+            "weightLbs": 0.1,
+            "cost": {
+              "amount": 25,
+              "coin": "gp",
+              "costInCp": 2500
+            }
+          },
+          {
+            "id": "grapplingHook",
+            "name": "Grappling hook",
+            "qty": 1,
+            "gearRef": "grapplingHook",
+            "weightLbs": 4,
+            "cost": {
+              "amount": 8,
+              "coin": "sp",
+              "costInCp": 80
+            }
+          },
+          {
+            "id": "smallHammer",
+            "name": "Small Hammer",
+            "qty": 1,
+            "gearRef": "smallHammer",
+            "weightLbs": 2,
+            "cost": {
+              "amount": 1,
+              "coin": "sp",
+              "costInCp": 10
+            }
+          },
+          {
+            "id": "ironSpike",
+            "name": "Iron Spike",
+            "qty": 5,
+            "gearRef": "ironSpike",
+            "weightLbs": 0.5,
+            "cost": {
+              "amount": 1,
+              "coin": "sp",
+              "costInCp": 10
+            }
+          },
+          {
+            "id": "mapOrScrollCaseLeather",
+            "name": "Map or scroll case (leather)",
+            "qty": 1,
+            "gearRef": "mapOrScrollCaseLeather",
+            "weightLbs": 0.4,
+            "cost": {
+              "amount": 8,
+              "coin": "sp",
+              "costInCp": 80
+            }
+          },
+          {
+            "id": "sewingNeedleThread",
+            "name": "Sewing needle & thread",
+            "qty": 1,
+            "gearRef": "sewingNeedle",
+            "weightLbs": 0,
+            "cost": {
+              "amount": 5,
+              "coin": "sp",
+              "costInCp": 50
+            },
+            "note": "Mapped to 'Sewing needle'; thread has no separate price or weight."
+          },
+          {
+            "id": "fishhookLine",
+            "name": "Fishhook & line",
+            "qty": 1,
+            "gearRef": "fishhook",
+            "weightLbs": 0,
+            "cost": {
+              "amount": 1,
+              "coin": "sp",
+              "costInCp": 10
+            },
+            "note": "Mapped to 'Fishhook'; line has no separate price or weight."
+          },
+          {
+            "id": "smallIronBox",
+            "name": "Small Iron Box",
+            "qty": 1,
+            "gearRef": "smallIronBox",
+            "weightLbs": 0.5,
+            "cost": {
+              "amount": 5,
+              "coin": "sp",
+              "costInCp": 50
+            }
+          },
+          {
+            "id": "50FtSilkRope",
+            "name": "50ft Silk Rope",
+            "qty": 1,
+            "gearRef": "ropeSilkPer50Ft",
+            "weightLbs": 8,
+            "cost": {
+              "amount": 10,
+              "coin": "gp",
+              "costInCp": 1000
+            }
+          },
+          {
+            "id": "candle",
+            "name": "Candle",
+            "qty": 1,
+            "gearRef": "candle",
+            "weightLbs": 0.1,
+            "cost": {
+              "amount": 1,
+              "coin": "cp",
+              "costInCp": 1
+            }
+          },
+          {
+            "id": "chalk",
+            "name": "Chalk",
+            "qty": 1,
+            "gearRef": "chalk",
+            "weightLbs": 0.1,
+            "cost": {
+              "amount": 1,
+              "coin": "cp",
+              "costInCp": 1
+            }
+          },
+          {
+            "id": "parchmentPerSheet",
+            "name": "Parchment (per sheet)",
+            "qty": 2,
+            "gearRef": "parchmentPerSheet",
+            "weightLbs": 0,
+            "cost": {
+              "amount": 1,
+              "coin": "gp",
+              "costInCp": 100
+            }
+          },
+          {
+            "id": "writingInkPerVial",
+            "name": "Writing ink (per vial)",
+            "qty": 1,
+            "gearRef": "writingInkPerVial",
+            "weightLbs": 0.1,
+            "cost": {
+              "amount": 8,
+              "coin": "gp",
+              "costInCp": 800
+            }
+          },
+          {
+            "id": "mirrorSmallMetal",
+            "name": "Mirror, small metal",
+            "qty": 1,
+            "gearRef": "mirrorSmallMetal",
+            "weightLbs": 0.1,
+            "cost": {
+              "amount": 10,
+              "coin": "gp",
+              "costInCp": 1000
+            }
+          },
+          {
+            "id": "largeSack",
+            "name": "Large Sack",
+            "qty": 2,
+            "gearRef": "sackLarge",
+            "weightLbs": 0.5,
+            "cost": {
+              "amount": 2,
+              "coin": "sp",
+              "costInCp": 20
+            }
+          },
+          {
+            "id": "smallSack",
+            "name": "Small Sack",
+            "qty": 4,
+            "gearRef": "sackSmall",
+            "weightLbs": 0.1,
+            "cost": {
+              "amount": 5,
+              "coin": "cp",
+              "costInCp": 5
+            }
+          },
+          {
+            "id": "whetstone",
+            "name": "Whetstone",
+            "qty": 1,
+            "gearRef": "whetstone",
+            "weightLbs": 1,
+            "cost": {
+              "amount": 2,
+              "coin": "cp",
+              "costInCp": 2
+            }
+          },
+          {
+            "id": "signalWhistle",
+            "name": "Signal whistle",
+            "qty": 1,
+            "gearRef": "signalWhistle",
+            "weightLbs": 0.1,
+            "cost": {
+              "amount": 8,
+              "coin": "sp",
+              "costInCp": 80
+            }
+          },
+          {
+            "id": "soap",
+            "name": "Soap",
+            "qty": 1,
+            "gearRef": "soapHalfLb",
+            "weightLbs": 0.5,
+            "cost": {
+              "amount": 25,
+              "coin": "cp",
+              "costInCp": 25
+            },
+            "note": "Uses the 0.5 lb. soap unit (half the per-lb. price and weight)."
+          },
+          {
+            "id": "wineskin",
+            "name": "Wineskin",
+            "qty": 1,
+            "gearRef": "wineskin",
+            "weightLbs": 1,
+            "cost": {
+              "amount": 8,
+              "coin": "sp",
+              "costInCp": 80
+            }
+          },
+          {
+            "id": "glassBottle",
+            "name": "Glass bottle",
+            "qty": 1,
+            "gearRef": "glassBottle",
+            "weightLbs": 0.1,
+            "cost": {
+              "amount": 10,
+              "coin": "gp",
+              "costInCp": 1000
+            }
+          },
+          {
+            "id": "hoodedLantern",
+            "name": "Hooded Lantern",
+            "qty": 1,
+            "gearRef": "lanternHooded",
+            "weightLbs": 2,
+            "cost": {
+              "amount": 7,
+              "coin": "gp",
+              "costInCp": 700
+            }
+          },
+          {
+            "id": "magnifyingGlass",
+            "name": "Magnifying glass",
+            "qty": 1,
+            "gearRef": "magnifyingGlass",
+            "weightLbs": 0.1,
+            "cost": {
+              "amount": 100,
+              "coin": "gp",
+              "costInCp": 10000
+            }
+          },
+          {
+            "id": "merchantSScale",
+            "name": "Merchant's scale",
+            "qty": 1,
+            "gearRef": "merchantSScale",
+            "weightLbs": 1,
+            "cost": {
+              "amount": 2,
+              "coin": "gp",
+              "costInCp": 200
+            }
+          },
+          {
+            "id": "smallTent",
+            "name": "Small Tent",
+            "qty": 1,
+            "gearRef": "tentSmall",
+            "weightLbs": 10,
+            "cost": {
+              "amount": 5,
+              "coin": "gp",
+              "costInCp": 500
+            }
+          }
+        ],
+        "totals": {
+          "weightLbsKnown": 68.3,
+          "costInCpKnown": 21704,
+          "complete": true,
+          "linesMissingWeightOrCost": [],
+          "note": "Totals include the backpack itself and only the lines that have a figure; lines in linesMissingWeightOrCost are not counted."
+        }
+      }
+    ]
   }
 }
