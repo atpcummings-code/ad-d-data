@@ -5336,12 +5336,12 @@
               "xpPrinted": "1,500",
               "id": "specialWeapons.hammer3DwarvenThrower",
               "hasDescription": true,
-              "gearRef": "hammer",
+              "gearRef": "warhammerThrown",
               "weightLbs": 6,
               "speedFactorBase": 4,
               "plus": 3,
               "speedFactor": 1,
-              "mappingAssumption": "'hammer' read as the thrown hammer (gear.json id hammer), since the Dwarven Thrower is hurled"
+              "mappingAssumption": "'hammer' read as Warhammer (Thrown) (gear.json missileRanges row warhammerThrown), since the Dwarven Thrower is hurled"
             },
             {
               "roll": [

@@ -2969,7 +2969,7 @@
               "club",
               "daggerOrDirk",
               "dart",
-              "hammer",
+              "warhammerThrown",
               "handOrThrowingAxe",
               "javelin",
               "knife",
@@ -2981,7 +2981,8 @@
               "shurikenStarSmall",
               "shurikenStarLarge",
               "throwingOrb"
-            ]
+            ],
+            "note": "warhammerThrown is a gear.json missileRanges row id (missile-only weapon)."
           }
         ]
       },

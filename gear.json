@@ -16,7 +16,7 @@
       "Starting funds: set by the owner (dice in startingFunds.byGroup, multi-class averaged). Multi-class rounding of fractional gp is assumed up, to confirm. Override is gp-only unless you want coin mixes.",
       "Equipment weights: clothing, food/lodging, provisioning, transport, animals and services have no weights on Table 44. Add weights if you want them in encumbrance.",
       "Armour: movement effects, shield details and the 'Armor *' footnote were not supplied.",
-      "Weapons: Table 45 'Hammer' is now its own thrown weapon (id hammer). Weapon proficiency groups / related weapons for newly added weapons are not defined yet.",
+      "Weapons: Table 45 'Hammer' is the missile entry Warhammer (Thrown) (id warhammerThrown). Weapon proficiency groups / related weapons for newly added weapons are not defined yet.",
       "Armour: elven chain (named in the thief text) is still not in the armour table. The lasso is now in weapons (from the spreadsheet)."
     ]
   },
@@ -2366,26 +2366,6 @@
         }
       },
       {
-        "id": "hammer",
-        "name": "Hammer (thrown)",
-        "kind": "weapon",
-        "cost": {
-          "amount": 2,
-          "coin": "gp",
-          "costInCp": 200
-        },
-        "weightLbs": 6,
-        "size": "M",
-        "type": [
-          "B"
-        ],
-        "speedFactor": 4,
-        "damageSM": "1d4+1",
-        "damageL": "1d4",
-        "source": "PHB",
-        "note": "Hand-thrown hammer: the 'Warhammer' row on the Missile Weapons tab of the weapons spreadsheet (PHB Table 45 'Hammer'). Separate from the melee warhammer, which uses the Hand Held tab values."
-      },
-      {
         "id": "whip",
         "name": "Whip",
         "kind": "weapon",
@@ -3831,10 +3811,23 @@
           ]
         },
         {
-          "id": "hammer",
-          "label": "Hammer (thrown)",
-          "weaponId": "hammer",
+          "id": "warhammerThrown",
+          "label": "Warhammer (Thrown)",
+          "name": "Warhammer (Thrown)",
+          "kind": "weapon",
+          "weaponId": null,
           "ammunitionId": null,
+          "cost": {
+            "amount": 2,
+            "coin": "gp",
+            "costInCp": 200
+          },
+          "weightLbs": 6,
+          "size": "M",
+          "type": [
+            "B"
+          ],
+          "speedFactor": 4,
           "rof": {
             "text": "1",
             "shots": 1,
@@ -3845,7 +3838,7 @@
             "medium": 20,
             "long": 30
           },
-          "note": "Table 45 'Hammer' = the spreadsheet's Warhammer row on the Missile tab. Linked to the thrown hammer item, not the melee warhammer.",
+          "note": "Thrown warhammer (PHB Table 45 'Hammer'). Lives only in the missile weapons section and uses the Missile Weapons tab 'Warhammer' row of the spreadsheet. Not linked to the melee warhammer item.",
           "source": "PHB",
           "damageSM": "1d4+1",
           "damageL": "1d4",
@@ -4649,7 +4642,7 @@
       "Spreadsheet missile rows for bows, blowgun and slings combine a launcher with its ammunition. Launcher weight, size and cost were only changed where the row clearly applies to the launcher.",
       "Claymore two-handed row has a blank Source cell; Dwarven claymore cost is printed '**' with no value.",
       "Javelin range on the spreadsheet (30/60/90 yards) differs from PHB Table 45 (20/40/60); Table 45 kept in rangeYards, spreadsheet values in rangeSheetUnitsOf10Yards. Decision needed.",
-      "The thrown hammer is its own item (id hammer) using the Missile tab 'Warhammer' row; the melee warhammer uses the Hand Held tab row. Hand axe, dagger, javelin, knife, spear, club and harpoon are still single items with a melee set and a thrown set of adjustments."
+      "Warhammer (Thrown) is a missile weapons entry only (missileRanges.rows id warhammerThrown, with its own cost, weight, size, type, speed factor and damage), not an item in the melee list."
     ]
   },
   "armour": {
