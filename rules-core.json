@@ -3696,7 +3696,8 @@
             "conBonusApplies": true,
             "source": "Owner (Monk_v1.docx and clarification)"
           },
-          "detail": "house.json monk.hitDice"
+          "detail": "house.json monk.hitDice",
+          "nameLevelStatus": "confirmed-by-owner"
         },
         "noMultiClass": "The Monk is human only and appears in no multi-class combination.",
         "noSpells": "A Monk does not cast spells; he has psionic-like abilities.",

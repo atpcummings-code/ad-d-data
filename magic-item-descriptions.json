@@ -260,91 +260,6 @@
    "page": 13,
    "text": "It is 75% likely that a water breathing potion will contain two doses, 25% probable that there will be four in the container. The potion allows the character drinking it to breathe normally in liquids that contain suspended oxygen. This ability lasts for one full hour per dose of potion quaffed, with an additional 1d10 rounds (minutes) variable. Thus, a character who has consumed a water breathing potion could enter the depths of a river, lake, or even the ocean and not drown while the magical effects of the potion persisted."
   },
-  "scrolls.map": {
-   "heading": "Maps",
-   "page": null,
-   "text": "While not magical, maps are special enough to require careful preparation and use by the DM, hence they are included in the listings of magical items. Maps should rarely be given out randomly— the DM must have a suitable map prepared in advance. There is no table to govern the nature of maps. All hint at or imply the existence of great treasures to be found while giving only a vague idea of the risks to be overcome. Some may be genuine, others fake. Because of the wide range of possibilities, the DM should use treasure maps as the springboard for new and exciting adventures."
-  },
-  "scrolls.protectionAcid": {
-   "heading": "Protection from Acid",
-   "page": 15,
-   "text": "(Reading time—6) The reader is protected from all forms of acid, to a maximum damage of 20 Hit Dice or a maximum duration of 1d4+8 turns, whichever occurs first."
-  },
-  "scrolls.protectionCold": {
-   "heading": "Protection from Cold",
-   "page": 15,
-   "text": "(Reading time—3) Protection extends outward from the reader to a 30-foot diameter sphere. All within the area are protected from the effects of nonmagical cold to a temperature of absolute zero (–460 degrees). Against magical cold, the scroll confers a +6 bonus to saving throws and one-quarter damage (oneeighth if the saving throw is made). The duration of the scroll is 1d4+4 turns."
-  },
-  "scrolls.protectionDragonBreath": {
-   "heading": "Protection from Dragon Breath",
-   "page": 15,
-   "text": "(Reading Time—variable) Only the individual reading the scroll is protected. Protection extends to all forms of dragon breath and lasts 2d4+4 rounds."
-  },
-  "scrolls.protectionElectricity": {
-   "heading": "Protection from Electricity",
-   "page": 15,
-   "text": "(Reading time—5) Protection is provided in a 20-foot diameter sphere centered on the reader. Those protected are immune to all electrical attacks and associated effects. The protection lasts 3d4 rounds."
-  },
-  "scrolls.protectionElementals": {
-   "heading": "Protection from Elementals",
-   "page": 15,
-   "text": "(Reading time—6) There are 5 varieties of this scroll. Roll percentile dice and consult the following table: D100 Roll Type of Scroll 01–15 P rotection from Air Elementals (including aerial servants, djinn, invisible stalkers, and wind walkers) 16–30 Protection from Earth Elementals (including xorn) 31–45 Protection from Fire Elementals (including efreeti and salamanders) 46–60 P rotection from Water Elementals (including tritons and water weirds) 61–100 Protection from all Elementals The magic protects the reader and all within 10 feet of him from the type of elemental noted, as well as elemental creatures of the same plane(s). The protection affects a maximum of 24 Hit Dice of elemental creatures if the scroll is of a specific elemental type, 16 Hit Dice if it is against all sorts of elementals. The protection lasts for 5d8 rounds. Attack out of the circle is possible, as is attack into it by any elemental creature with more Hit Dice than are protected against or by several elemental creatures—those in excess of the protected number of Hit Dice are able to enter and attack."
-  },
-  "scrolls.protectionFire": {
-   "heading": "Protection from Fire",
-   "page": 15,
-   "text": "(Reading time—8) Protection extends to a 30-foot diameter sphere centered on the reader. All in this area are able to withstand flame and heat of the hottest type, even of magical and elemental nature. The protection lasts 1d4+4 turns."
-  },
-  "scrolls.protectionGas": {
-   "heading": "Protection from Gas",
-   "page": 15,
-   "text": "(Reading time—3) This scroll generates a 10-foot diameter sphere of protection centered on the reader. All within the area are immune to the effects of any gas—poison gas, gaseous breath weapons, spells that generate gas (such as stinking cloud and cloudkill ), and all similar forms of noxious, toxic vapors. The protection lasts for 1d4+4 rounds."
-  },
-  "scrolls.protectionLycanthropes": {
-   "heading": "Protection from Lycanthropes",
-   "page": 15,
-   "text": "(Reading time—4) There are seven common types of this scroll. The DM can select one from the table below or make a percentile roll to determine it randomly: D100 Roll Scroll Type 01–05 Protection from Werebears 06–10 Protection from Wereboars 11–20 Protection from Wererats 21–25 Protection from Weretigers 26–40 Protection from Werewolves 41–98 Protection from all Lycanthropes 99–100 Protection from Shape-Changers The magical circle from the reading of the scroll extends in a 10-foot radius and moves with the reader. Each scroll protects against 49 Hit Dice of lycanthropes, rounding all hit point pluses down unless they exceed +2. The protection is otherwise similar to that against elementals, above. The protection from shape-changers spell protects against monsters (except gods and godlike creatures) able to change their form to that of man: dopplegangers, certain dragons, druids, jackalweres, and lycanthropes, for example. The magic lasts for 5d6 rounds."
-  },
-  "scrolls.protectionMagic": {
-   "heading": "Protection from Magic",
-   "page": 15,
-   "text": "(Reading time—8) This scroll invokes a very powerful, invisible globe of antimagic in a 5-foot radius from the reader. No form of magic can pass into or out of it, but physical things are not restricted by the globe. As with other protections, the globe of antimagic moves with its invoker. The protection lasts for 5d6 rounds."
-  },
-  "scrolls.protectionPetrification": {
-   "heading": "Protection from Petrification",
-   "page": 15,
-   "text": "(Reading time—5) A 10-foot radius circle of protection extends from, and moves with, the reader of this scroll. Everyone within its confines is absolutely immune to all attack forms, magical or otherwise, that turn flesh to stone. The protection lasts for 5d4 rounds."
-  },
-  "scrolls.protectionPlants": {
-   "heading": "Protection from Plants",
-   "page": 16,
-   "text": "(Reading time—1 round). A protective sphere 10 feet in diameter is centered on the reader. All forms of vegetable life (including fungi, slimes, molds, and the like) are unable to penetrate the sphere. If it is moved toward plant life that is capable of movement, the plant will be pushed away. If the plant is immobile (a well-rooted shrub, bush, or tree, for instance), the sphere cannot be moved through or past it unless the reader has enough strength and mass to uproot the plant under normal conditions. The protection lasts for 1d4+4 turns."
-  },
-  "scrolls.protectionPoison": {
-   "heading": "Protection from Poison",
-   "page": 16,
-   "text": "(Reading time—3) The protection afforded by this scroll extends only to the reader. No form of poison—ingested, contacted, breathed, etc.—will affect the protected individual, and any poison in the reader’s system is permanently neutralized. The protection otherwise lasts 1d10+2 rounds."
-  },
-  "scrolls.protectionPossession": {
-   "heading": "Protection from Possession",
-   "page": 16,
-   "text": "(Reading time—1 round) This scroll generates a magical circle of 10-foot radius that extends from, and moves with, the reader. All creatures within its confines are protected from possession by magical spell attacks such as magic jar or attack forms aimed at possession or mental control. Even the dead are protected if they are within the magic circle. The protection lasts for 10d6 rounds in 90% of these scrolls; 10% have power that lasts 10d6 turns, but the spell effect is stationary."
-  },
-  "scrolls.protectionUndead": {
-   "heading": "Protection from Undead",
-   "page": 16,
-   "text": "(Reading time—4) When this scroll is read, a 5-foot radius circle of protection extends from, and moves with, the reader. It protects everyone within it from all physical attacks made by undead (ghasts, ghosts, ghouls, shadows, skeletons, spectres, wights, wraiths, vampires, zombies, etc.) but not magical spells or other attack forms. If a creature leaves the protected area, it is subject to physical attack. The protection restrains up to 35 Hit Dice/ levels of undead; excess Hit Dice/levels can pass through the circle. It remains in effect for 10d8 rounds. Some protection scrolls of this nature protect only against certain types of undead (one or more) rather than all undead, at the DM’s option. (See “Potions, Undead Control” for a die roll table.)"
-  },
-  "scrolls.protectionWater": {
-   "heading": "Protection from Water",
-   "page": 16,
-   "text": "(Reading time—6) This protection extends in a 10-foot diameter sphere centered on the reader. All forms of water—liquid, solid, and vapor, ice, hail, snow, sleet, steam, and so forth—are unable to penetrate the sphere of protection. If those protected come upon a form of water, the substance simply will not touch them; thus, they will not slip on ice, sink into a body of water, etc. The protection lasts for 1d4+4 turns."
-  },
-  "scrolls.cursed": {
-   "heading": "Cursed Scrolls",
-   "page": null,
-   "text": "Some scrolls bear powerful curses , placed intentionally or as a result of flawed scroll-making. Cursed scrolls take effect the instant they are first read. A cursed scroll can have any effect the DM desires, although a few should be outright deadly. Suggested curses include the following: • Bad luck (–1 on attacks and saving throws). • The character's beard grows 1 inch per minute. • The character is teleported away from the rest of the party. • Random monster appears and attacks. • The character is polymorphed into a mouse. • The character shrinks to half his normal size. • The character is stricken with weakness, halving his Strength score. • The character falls into a deep sleep from which he can't be roused. • The character develops an uncontrollable appetite. • The character must always talk in rhyme (preventing spellcasting). • The character is stricken with cowardice and must make a morale check every time a monster is encountered. • The character's alignment is changed. • The character suffers 2–6 points of damage. • The character suffers amnesia. • The character feels compelled to give away all his belongings. • The character must save vs. paralyzation or petrification. In general, the effects of a curse can be negated or reversed by a remove curse . Some cases (such as petrification ) may require the use of other spells. Overcoming a curse should be difficult for the player characters, but not impossible."
-  },
   "rings.animalFriendship": {
    "heading": "Ring of Animal Friendship",
    "page": 16,
@@ -2078,64 +1993,9 @@
    "text": "As a general rule, potion containers should bear no identifying marks, so player characters must sample from each container to determine the nature of the liquid inside. However, even a small taste should suffice to identify a potion in some way. Introduce different sorts of potions, both helpful and harmful, to cause difficulties in identification. In addition, the same type of potion, when created in different labs, might smell, taste, and look differently."
   },
   {
-   "title": "Combining Potions",
-   "page": 9,
-   "text": "The magical mixtures and compounds that make up potions are not always compatible. The compatibility of potions is tested whenever two potions are actually intermingled, or a potion is consumed by a creature while another such liquid, already consumed, is in effect. Permanent potions have an effective duration of one turn for mixing purposes. If you drink another potion within one turn of drinking one with Permanent duration, check on Table 111. The exact effects of combining potions can’t be calculated, because of differences in formulae, fabrication methods, and component quality employed by various mages. Therefore, it is suggested that Table 111 be used, with the following exceptions: 1. A delusion potion will mix with anything. 2. A treasure finding potion will always yield a lethal poison. Secretly roll 1d100 for potion compatibility, giving no clues until necessary. The effects of combining specific potions can be pre-set as a plot device, at your option."
-  },
-  {
    "title": "Potion Duration",
    "page": 9,
    "text": "Unless otherwise stated, the effects of a potion last for four complete turns plus 1d4 additional turns (4+1d4)."
-  },
-  {
-   "title": "Scrolls",
-   "page": 13,
-   "text": "Scrolls are generally found in cylinders—tubes of ivory, jade, leather, metal, or wood. Some tubes are inscribed with magic runes or writing PCs must read in order to open the container. This is up to the DM. Taking this approach encourages players to select and use read magic or comprehend language spells. It also makes it possible to protect powerful scrolls with traps ( symbols , explosive runes ) and curses . Each scroll is written in its own magical cypher. To understand what type of scroll has been found, the ability to read magic must be available. Once a scroll is read to determine its contents, a read magic spell is not needed at a subsequent time to invoke its magic. Even a scroll map will appear unreadable until the proper spell ( comprehend languages ) is used. Reading a scroll to find its contents does not invoke its magic unless it is a specially triggered curse . A cursed scroll can appear to be a scroll of any sort. It radiates no evil or special aura beyond being magical. A protection scroll can be read by any class of character even without a read magic spell. If a scroll isn’t immediately read to determine its contents, there is a 5% to 30% chance it will fade. The DM sets the percentage or rolls 1d6 to determine it for each scroll. When a spell scroll is examined, the following table can be used to find its nature: D100 Roll Scroll Type 01–70 Wizard 71–00 Priest Other classes in the priest group can, at the DM’s discretion, have unique scrolls as well. Only the indicated class of character can use the scroll, except thieves and bards, who can use any scroll, as explained in the Player’s Handbook."
-  },
-  {
-   "title": "Spell Level of Scroll Spells",
-   "page": 14,
-   "text": "All scroll spells are written to make use as quick and easy as possible for the writer. The level of the spell and its characteristics (range, duration, area of effect, etc.) are typically one level higher than that required to cast the spell, but never below 6th level of experience. Thus, a 6th-level wizard spell is written at 13th level of ability, a 7th-level spell at 15th level, etc. The DM can make scroll spells more powerful by increasing the level at which they are written. This will, however, affect the chance of spell failure."
-  },
-  {
-   "title": "Magical Spell Failure",
-   "page": 14,
-   "text": "If any spell-user acquires a scroll inscribed with a spell of a level too high for him to cast, he can still try to use the spell—the chance of failure, or other bad effect, is 5% per level difference between the character’s present level and the level at which the spell could be used. For example, a 1st-level mage finds a scroll with a wish spell inscribed upon it. The chance of failure is 85%, as wish is a 9th-level spell attained at 18th level: 18–1 = 17; 17x5% = 85%. A percentile die roll of 85 or less indicates failure of some sort, and Table 112 is consulted. In this case, the spell is 30% likely to fail without effect, while the chance for a reverse or harmful effect is 70%."
-  },
-  {
-   "title": "Use of Scroll Spells",
-   "page": 14,
-   "text": "When a scroll is copied into a spellbook or read to release its magic, the writing completely and permanently disappears from the scroll. The magic content of the spell is bound up in the writing, and use releases and erases it. Thus, reading a spell from a scroll of seven spells makes the item a scroll of six spells. No matter what a player may try, each spell on a scroll is only usable once. Exceptions should be made very rarely and only when you have a very special magical item in mind—perhaps a scroll that can be read once per week. This would be potent magic indeed."
-  },
-  {
-   "title": "Casting Scroll Effects",
-   "page": 14,
-   "text": "The initiative modifier of a scroll is its reading time. For scroll spells, this is equal to the casting time of the spell. For protection scrolls, the reading time is given in the explanation of the scroll effects. The only requirements for using a scroll are sufficient light to read by and the actual verbalization of the writings. If the reading of a scroll is interrupted, the scroll effect is lost and that spell fades away and is lost. Spell components are unnecessary for the scroll reader, and no adverse effects associated with casting the spell are suffered—these requirements or penalties have been fulfilled or suffered by the creator of the scroll."
-  },
-  {
-   "title": "Protection Scroll Effects",
-   "page": 14,
-   "text": "If a player character has more than one protection scroll, the effects are cumulative, but not the duration. Scrolls that protect against creatures do not create an actual, physical globe. If the user forces the creature into a place from which further retreat is impossible—a corner, for example—and then continues forward until the creature would be within the radius of the circle, the creature is not harmed, and the protection is considered voluntarily broken and disappears. There is no way in which a protection scroll can be used as an offensive weapon."
-  },
-  {
-   "title": "Who Can Use Scroll Spells?",
-   "page": 14,
-   "text": "Ability to use scroll spells does not permit a priest to use a wizard spell, or a wizard to use a priest spell. Likewise, it does not extend the ability of spell use to non-spell-using characters except with respect to protection scrolls. Anyone can use a protection scroll. Paladins and rangers cannot use priest scrolls. Those characters able to read and employ scroll spells can do so regardless of other restrictions. Once the spell is known, it is not necessary to use a read magic spell in order to invoke its powers. Scrolls can be read even by mages who are unable to employ the spell copied because of an inability to learn it or because it is too high level (although, in the latter case, there is a chance of spell failure)."
-  },
-  {
-   "title": "Spell Level Range",
-   "page": 14,
-   "text": "The level range shown in Table 90 gives the parameters for random determination of spell level for scrolls if you choose not to set this yourself. With spell level determined, find the particular spell by consulting the appropriate Spell Tables in the Player’s Handbook ."
-  },
-  {
-   "title": "Cursed Scrolls",
-   "page": 14,
-   "text": "Some scrolls bear powerful curses , placed intentionally or as a result of flawed scroll-making. Cursed scrolls take effect the instant they are first read. A cursed scroll can have any effect the DM desires, although a few should be outright deadly. Suggested curses include the following: • Bad luck (–1 on attacks and saving throws). • The character's beard grows 1 inch per minute. • The character is teleported away from the rest of the party. • Random monster appears and attacks. • The character is polymorphed into a mouse. • The character shrinks to half his normal size. • The character is stricken with weakness, halving his Strength score. • The character falls into a deep sleep from which he can't be roused. • The character develops an uncontrollable appetite. • The character must always talk in rhyme (preventing spellcasting). • The character is stricken with cowardice and must make a morale check every time a monster is encountered. • The character's alignment is changed. • The character suffers 2–6 points of damage. • The character suffers amnesia. • The character feels compelled to give away all his belongings. • The character must save vs. paralyzation or petrification. In general, the effects of a curse can be negated or reversed by a remove curse . Some cases (such as petrification ) may require the use of other spells. Overcoming a curse should be difficult for the player characters, but not impossible."
-  },
-  {
-   "title": "Maps",
-   "page": 15,
-   "text": "While not magical, maps are special enough to require careful preparation and use by the DM, hence they are included in the listings of magical items. Maps should rarely be given out randomly— the DM must have a suitable map prepared in advance. There is no table to govern the nature of maps. All hint at or imply the existence of great treasures to be found while giving only a vague idea of the risks to be overcome. Some may be genuine, others fake. Because of the wide range of possibilities, the DM should use treasure maps as the springboard for new and exciting adventures."
   },
   {
    "title": "Rings",
@@ -2191,39 +2051,6 @@
    "title": "Weapons",
    "page": 59,
    "text": "and damage rolls. Any weapon that is not totally self-explanatory is detailed in one of the special paragraphs below. Most weapons are of the specific type listed. However, 70% of swords are long swords, 20% are scimitars or broad swords, 5% are short (small) swords, 4% are bastard swords, and 1% are twohanded swords, unless the description of a specific item indicates otherwise. Magical polearms can be of any type desired. Magical lances are always heavy lances. Other unusual weapons may have special restrictions given in the description of the item. Spears can be used as hand or missile weapons. As missile weapons, they can be broken by any creature with 18/00 or greater Strength or by one that is massive (cave bear, hippo, or rhino, for example). Intelligent creatures will be 70% likely to use the hurled spear against the hurler if struck by the weapon, 25% likely to break it (the spear must save versus crushing blow). Unintelligent creatures will be 25% likely to break it (save as above). Hand axes (not battle-axes) can be thrown up to 30 yards and still gain any magical attack roll bonus, but no damage bonus."
-  },
-  {
-   "title": "Intelligent Weapons",
-   "page": 65,
-   "text": "Tables 113 through 119 should be used to determine the properties of an intelligent weapon: the number of powers, unusual properties, alignment, and special purpose of the item (if any). Such weapons are useful to give higher-level fighters some additional tactical options and limited-use special abilities. The DM is encouraged to design unusual magical weapons along special themes and for specific campaign purposes, using the tables as guidelines and for inspiration. Just because a power is rolled doesn’t mean it must be given out. If the DM feels a combination is too bizarre or powerful, he can simply change or ignore it. The first step in creating an intelligent weapon is to determine its general capabilities. These are found by rolling 1d100 on Table 113. Then, move onto Tables 114–118 until all the capabilities of the weapon",
-   "textMayContainFlattenedTable": true
-  },
-  {
-   "title": "Intelligent Weapons",
-   "page": 65,
-   "text": "1 primary ability 2 primary abilities 2 primary abiliites 3 primary abilities Alignment 3 primary abilities† * 3 primary abilities†† plus 1 Any weapon with intelextraordinary power ligence has an alignment. Note that holy avenger d feel urges when its ability functions. swords have alignment or more other tongues as indicated on restrictions. All cursed weapons are absolutely anguage use as any speaking weapon. neutral. type. Any character whose alignment does not correspond to that of the weapon, except as noted by the asterisk above, will sustain points of damage equal to the number of ego points (see Table 119) of the weapon. This damage is suffered every time (or for every round) the character touches any portion of the weapon unless the weapon is in the grasp or possession of a character whose alignment is compatible with the weapon.",
-   "textMayContainFlattenedTable": true
-  },
-  {
-   "title": "Weapon Abilities",
-   "page": 65,
-   "text": "Using the number of capabilities determined by Table 113, the weapon’s specific abilities are determined by rolling on the appropriate tables below. If the same ability is rolled twice or more, range of the power is double, triple, etc. All abilities function only when the weapon is held, drawn, and the possessor is concentrating on the desired result. A weapon can perform only one function at a time, and thus can fight or detect but"
-  },
-  {
-   "title": "Weapon Alignment",
-   "page": 65,
-   "text": "D100 Roll Alignment of Weapon 01–05 Chaotic good 06–15 Chaotic neutral* 16–20 Chaotic evil 21–25 Neutral evil* 26–30 Lawful evil 31–55 Lawful good 56–60 Lawful neutral* 61–80 Neutral (absolute) 81–100 Neutral good* * T he item can also be used by any character whose alignment corresponds to the non-neutral alignment portion of the weapon’s alignment (i.e., chaotic, evil, good, or lawful). Thus any chaotic character can use a weapon with chaotic neutral alignment. one thing at a time. Other abilities can be created by the DM. If the same power is rolled twice, the uses/day are doubled, etc. Powers function only when the weapon is drawn and held and the possessor is concentrating upon the desired effect. Most powers require that the character stop and concentrate for a full round.",
-   "textMayContainFlattenedTable": true
-  },
-  {
-   "title": "Weapon Ego",
-   "page": 66,
-   "text": "Only after all aspects of a weapon have been determined and recorded can the ego rating of a weapon be found. Ego, along with intelligence, will be a factor with regard to the dominance of weapon over character, as detailed on Table 119."
-  },
-  {
-   "title": "Weapons versus Characters",
-   "page": 66,
-   "text": "When a weapon possesses unusual characteristics, it has a personality, which is rated by combining its intelligence and ego scores. The weapon will, of course, be absolutely true to its alignment, and if the character who possesses the weapon is not, personality conflict—weapon versus character—will result. Similarly, any weapon with an ego of 19 or higher will always consider itself superior to any character, and a personality conflict will result if the possessor does not always agree with the weapon. The personality score of a character is: Intelligence + Charisma + Experience Level Note that the personality score is reduced by one for every group of hit points of damage taken equal to the character’s average number of points per level. Divide the character’s total hit points by his level (round up). For example: A fighter of 7th level has 53 hit points: 53 divided by 7 equals 7.6. Thus for every eight points of damage he suffers, his personality score will be lowered by one. Whenever personality conflict occurs, the weapon will resist the character’s desires and demand concessions such as: 1. Removal of associates, henchmen, hirelings, or creatures of alignment or personality distasteful to the weapon. 2. The character divesting himself of all other magical weapons. 3. Obedience from the character so the weapon can lead the expedition for its own purposes 4. Immediate seeking out and slaying of creatures hateful to the weapon 5. Encrustation of pommel, hilt, scabbard, baldric, or belt with gems and a special container made of precious substances for its safekeeping. 6. Magical protections and devices to protect it from molestation when not in use 7. That the character pay it handsomely for all abilities and powers the weapon is called upon to exercise in behalf of its possessor 8. That the character carry it with him on all occasions 9. That the character relinquish the weapon in favor of a more suitable person due to alignment differences or conduct Any time the personality score of a weapon exceeds the personality score of the character who possesses it, the weapon will dominate its possessor, and it can force any or all of the above demands or actually cause any of the following actions: 1. Force its possessor into combat 2. Refuse to strike opponents 3. Strike at its wielder or his associates 4. Force its possessor to surrender to an opponent 5. Cause itself to drop from the character’s grasp"
   }
  ],
  "unlinkedDescriptions": [
@@ -2251,11 +2078,6 @@
    "title": "Ropes",
    "page": 31,
    "text": "Any magical rope which is broken or severed immediately loses its special properties. Note that though the miscellaneous magical items are broken into categories on the tables for the purpose of random selection, all items are alphabetized together in the following descriptions."
-  },
-  {
-   "title": "Intelligent Weapons",
-   "page": 59,
-   "text": "One of the rare and more significant properties of a magical weapon is the chance that it is intelligent. The feature is most common among swords, but there are occasional instances of other weapons possessing intelligence. The chance of intelligence varies according to the type of weapon. Swords have a 25% chance of some form of intelligence. Other melee weapons (axes, spears, polearms, etc.) have a 5% chance of intelligence, provided they do not already possess special powers. Missile weapons (including bows, crossbows, arrows, and bolts) never possess intelligence. Single-use items and those items that do not have a bonus to hit (such as a magical net) never possess intelligence. If you determine that a weapon is intelligent, it will have one or more special powers. It may also have a special purpose or limitations on its use. This information is found under “Intelligent Weapons.”"
   },
   {
    "title": "Unknown Qualities",

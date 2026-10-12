@@ -42,8 +42,8 @@
     },
     {
       "id": "nonProficientPenalty",
-      "description": "Sheets print 'Non Proficient/Related Penalty' as two values (e.g. -3/-2 on the Monk). PHB Table 34 gives the non-proficient weapon penalty per group (Warrior -2, Wizard -5, Priest -3, Rogue -3); the second ('related') value is not on that table.",
-      "status": "unconfirmed"
+      "description": "Sheets print 'Non Proficient/Related Penalty' as two values (e.g. -3/-2 on the Monk). Non-proficient values come from PHB Table 34 (Warrior -2, Wizard -5, Priest -3, Rogue -3). Related-weapon penalty is half the normal amount rounded up (warrior -1, wizard -3, priest -2, rogue -2); see rules-skills.json proficiencies.weapon.relatedWeaponRule.",
+      "status": "confirmed"
     },
     {
       "id": "conBonusAllLevels",
@@ -631,7 +631,8 @@
       "conBonus": "The CON bonus is added to the flat gain each level (house rule: CON bonus at all levels). Example: 12th level, CON +2: 2 + 2 = 4 hp. 19th level: 16 + CON bonus.",
       "maxLevel": 19,
       "nameLevel": 11,
-      "note": "The sheet's \"12+2 ... 12+14, 12+30\" column shows the running total; the real rule is +2 hp per level from 12th and +16 at 19th (owner clarification)."
+      "note": "The sheet's \"12+2 ... 12+14, 12+30\" column shows the running total; the real rule is +2 hp per level from 12th and +16 at 19th (owner clarification).",
+      "nameLevelStatus": "confirmed-by-owner"
     },
     "saves": {
       "group": "priest",

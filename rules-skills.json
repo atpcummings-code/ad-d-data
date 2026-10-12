@@ -1145,17 +1145,18 @@
             ]
           }
         }
-      }
+      },
+      "confirmedAgainstImage": "Table 34 re-supplied by owner; initial, levels-per-extra-slot and penalty values match."
     },
     "weapon": {
-      "status": "partial",
+      "status": "non-proficient and related penalties complete; weapon restrictions per class are in rules-core",
       "nonProficientPenaltyByGroup": {
         "warrior": -2,
         "wizard": -5,
         "priest": -3,
         "rogue": -3
       },
-      "expects": "Related-weapon penalty and any group-specific weapon restrictions. Weapon slots are in proficiencies.slots; non-proficient penalties are in nonProficientPenaltyByGroup; specialisation attacks are in specialization.attacksPerRound.",
+      "expects": "Specific weapon proficiency lists and group-specific restrictions are not on the tables supplied. Slots: proficiencies.slots; penalties: nonProficientPenaltyByGroup and relatedWeaponRule; specialisation: specialization.attacksPerRound.",
       "specialization": {
         "status": "partial",
         "eligibleClasses": [
@@ -1324,7 +1325,134 @@
           ]
         },
         "stillNeeded": "To-hit and damage bonuses for specialisation, slot cost to specialise, and how double specialisation (if used) works."
-      }
+      },
+      "relatedWeaponRule": {
+        "status": "confirmed-by-owner (PHB text)",
+        "rule": "When a character uses a weapon similar to one he is proficient with, his attack penalty is one-half the normal non-proficient amount, rounded up.",
+        "formula": "relatedPenalty = -ceil(abs(nonProficientPenalty) / 2)",
+        "byGroup": {
+          "warrior": -1,
+          "wizard": -3,
+          "priest": -2,
+          "rogue": -2
+        },
+        "examples": "Warrior -1 instead of -2; wizard -3 instead of -5; priest -2 instead of -3; rogue -2 instead of -3.",
+        "monk": "The Monk uses the priest group: -3 non-proficient, -2 related.",
+        "dmDecision": "The PHB leaves the exact related weapons to the DM; these are its \"likely categories\"."
+      },
+      "relatedWeaponGroups": {
+        "status": "from-PHB-text (likely categories)",
+        "groups": [
+          {
+            "id": "axes",
+            "label": "Hand axe, battle axe",
+            "weaponIds": [
+              "handOrThrowingAxe",
+              "battleAxe"
+            ]
+          },
+          {
+            "id": "bows",
+            "label": "Short bow, long bow, composite bow",
+            "weaponIds": [
+              "shortBow",
+              "longBow",
+              "compositeShortBow",
+              "compositeLongBow"
+            ]
+          },
+          {
+            "id": "crossbows",
+            "label": "Heavy and light crossbows",
+            "weaponIds": [
+              "lightCrossbow",
+              "heavyCrossbow"
+            ]
+          },
+          {
+            "id": "knives",
+            "label": "Dagger, knife",
+            "weaponIds": [
+              "daggerOrDirk",
+              "knife"
+            ]
+          },
+          {
+            "id": "polearms",
+            "label": "Glaive, halberd, bardiche, voulge, guisarme, glaive-guisarme, guisarme-voulge",
+            "weaponIds": [
+              "glaive",
+              "halberd",
+              "bardiche",
+              "voulge",
+              "guisarme",
+              "glaiveGuisarme",
+              "guisarmeVoulge"
+            ]
+          },
+          {
+            "id": "spears",
+            "label": "Harpoon, spear, trident, javelin",
+            "weaponIds": [
+              "harpoon",
+              "spear",
+              "trident",
+              "javelin"
+            ]
+          },
+          {
+            "id": "maces",
+            "label": "Footman's mace, horseman's mace, morning star, flail, hammer, club",
+            "weaponIds": [
+              "footmansMace",
+              "horsemansMace",
+              "morningStar",
+              "footmansFlail",
+              "horsemansFlail",
+              "warhammer",
+              "club"
+            ]
+          },
+          {
+            "id": "forks",
+            "label": "Military fork, ranseur, spetum, partisan",
+            "weaponIds": [
+              "militaryFork",
+              "ranseur",
+              "spetum",
+              "partisan"
+            ]
+          },
+          {
+            "id": "swords",
+            "label": "Scimitar, bastard sword, long sword, broad sword",
+            "weaponIds": [
+              "scimitar",
+              "bastardSword",
+              "longSword",
+              "broadSword"
+            ]
+          },
+          {
+            "id": "slings",
+            "label": "Sling, staff sling",
+            "weaponIds": [
+              "sling",
+              "staffSling"
+            ]
+          }
+        ],
+        "mappingAssumptions": [
+          "\"hammer\" = warhammer",
+          "\"flail\" = footman's flail and horseman's flail",
+          "\"composite bow\" = composite short bow and composite long bow",
+          "\"harpoon\" assumed the table's Harpoon",
+          "Hand crossbow is not in the crossbow group (PHB lists heavy and light only)",
+          "Each weapon appears in at most one group, so a weapon is related only to the others in its own group"
+        ],
+        "engineHint": "If the weapon used is not proficient but another weapon in the same group is, apply the related penalty instead of the full penalty."
+      },
+      "nonProficientPenaltyByGroupStatus": "confirmed (Table 34 image supplied by owner)"
     },
     "nonWeapon": {
       "status": "from-PHB-table-37",
