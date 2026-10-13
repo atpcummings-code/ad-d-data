@@ -7331,5 +7331,62 @@
     ],
     "prefillRule": "When a class or class combination allows exactly one alignment, set it automatically and lock the field. Otherwise let the user choose any of the nine.",
     "notYetCovered": null
+  },
+  "armourClass": {
+    "status": "confirmed-by-owner definitions, for the PDF export and sheet",
+    "source": "owner-supplied definitions",
+    "signConvention": "Lower AC is better. dexDefenseAdj is the 'defenseAdj' value from abilityScores dex table (negative improves AC, positive worsens it). shieldBenefit = the AC improvement the character's shield gives = 1 for the shield + its magical plus, as a positive number.",
+    "calculatedAc": "The character's full AC as shown on the sheet: armour, shield, magical pluses, Dexterity defense adjustment and other modifiers.",
+    "definitions": {
+      "natural": {
+        "label": "Natural AC",
+        "text": "Always based on an unarmoured PC: 10, adjusted only by the Dexterity defense adjustment (no armour, shield or magic).",
+        "formula": "10 + dexDefenseAdj"
+      },
+      "surprised": {
+        "label": "Surprised AC",
+        "text": "The character's calculated AC minus the Dexterity defense adjustment.",
+        "formula": "calculatedAc - dexDefenseAdj"
+      },
+      "shieldless": {
+        "label": "Shieldless AC",
+        "text": "The character's calculated AC minus their shield and any magical pluses it confers.",
+        "formula": "calculatedAc + shieldBenefit"
+      },
+      "rear": {
+        "label": "Rear AC",
+        "text": "The character's calculated AC minus their shield and any magical pluses it confers, minus the Dexterity defense adjustment.",
+        "formula": "calculatedAc + shieldBenefit - dexDefenseAdj"
+      }
+    },
+    "example": {
+      "character": "Plate mail (AC 3), Shield +2, DEX 18 (defense adjustment -4)",
+      "calculatedAc": "3 (plate mail) - 4 (DEX) - 3 (shield +2) = -4",
+      "natural": "10 - 4 (DEX) = 6",
+      "shieldless": "3 - 4 (DEX) = -1",
+      "rear": "3 (plate mail only)",
+      "surprised": "3 - 3 (shield +2) = 0",
+      "values": {
+        "calculatedAc": -4,
+        "dexDefenseAdj": -4,
+        "shieldBenefit": 3,
+        "natural": 6,
+        "surprised": 0,
+        "shieldless": -1,
+        "rear": 3
+      },
+      "source": "owner-supplied worked example; matches the formulas"
+    },
+    "notes": [
+      "'Minus the shield' means the shield's AC benefit is removed, so AC number goes UP (worse) by shieldBenefit.",
+      "Shield base improvement is 1 for the shield (owner confirmed); shield-type-specific benefits are not applied.",
+      "Rear = armour only (calculated AC with shield and DEX both removed). Surprised = armour and shield, no DEX. Shieldless = armour and DEX, no shield."
+    ],
+    "shieldBenefit": {
+      "formula": "1 + shieldMagicPlus",
+      "baseShieldImprovement": 1,
+      "example": "A +2 shield gives a total modifier of -3 to AC: -1 for the shield and -2 for the magic bonus, so shieldBenefit = 3.",
+      "status": "confirmed-by-owner"
+    }
   }
 }
