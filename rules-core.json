@@ -35,7 +35,8 @@
       "ranger"
     ],
     "wizard": [
-      "wizard"
+      "wizard",
+      "illusionist"
     ],
     "priest": [
       "cleric",
@@ -54,7 +55,8 @@
       "savingThrows": "priest",
       "proficiencySlots": "priest",
       "status": "confirmed by owner (Monk_v1.docx)"
-    }
+    },
+    "illusionistNote": "Illusionist is a specialist wizard (see specialistWizards); it shares the wizard group."
   },
   "classIds": {
     "fighter": {
@@ -7000,6 +7002,13 @@
         "oppositionSchools": [
           "alteration",
           "illusion"
+        ],
+        "abilityMinimums": {
+          "int": 9,
+          "wis": 15
+        },
+        "primeRequisites": [
+          "int"
         ]
       },
       {
@@ -7017,6 +7026,13 @@
         "oppositionSchools": [
           "greaterDivination",
           "invocationEvocation"
+        ],
+        "abilityMinimums": {
+          "int": 9,
+          "con": 15
+        },
+        "primeRequisites": [
+          "int"
         ]
       },
       {
@@ -7034,6 +7050,13 @@
         },
         "oppositionSchools": [
           "conjurationSummoning"
+        ],
+        "abilityMinimums": {
+          "int": 9,
+          "wis": 16
+        },
+        "primeRequisites": [
+          "int"
         ]
       },
       {
@@ -7052,6 +7075,13 @@
         "oppositionSchools": [
           "invocationEvocation",
           "necromancy"
+        ],
+        "abilityMinimums": {
+          "int": 9,
+          "cha": 16
+        },
+        "primeRequisites": [
+          "int"
         ]
       },
       {
@@ -7086,7 +7116,34 @@
           "rule": "An illusionist with an Intelligence of 16 or more gains a 10% bonus to the experience points he earns.",
           "appliesWhen": "every prime requisite is 16 or more"
         },
-        "source": "Table 22 plus PHB illusionist text (supplied by owner)"
+        "source": "Table 22 plus PHB illusionist text (supplied by owner, complete)",
+        "savingThrowModifiers": {
+          "ownSavesVsIllusions": 1,
+          "othersSaveVsHisIllusions": -1,
+          "appliesOnlyIf": "the spell allows a saving throw",
+          "note": "Specific case of specialistBenefits.savingThrows"
+        },
+        "extraSpellPerLevel": {
+          "extraSlotsPerSpellLevel": 1,
+          "restrictedTo": "illusion",
+          "example": "As a 1st-level caster he can memorize two spells, at least one of which must be an illusion spell."
+        },
+        "spellResearch": {
+          "illusion": "easier (new illusion spells are easier to devise)",
+          "otherSchools": "harder and more time consuming",
+          "status": "descriptive only, no numbers given"
+        },
+        "cannotLearnSchools": [
+          "necromancy",
+          "invocationEvocation",
+          "abjuration"
+        ],
+        "cannotLearnNote": "Cannot learn or even transcribe spells from the opposition schools (those diametrically opposite illusion on the school diagram).",
+        "learnSpellChanceExample": {
+          "text": "Joinville, INT 15 (Table 4 chance 65%): improved invisibility (illusion) 65+15 = 80%; continual light (alteration) 65-15 = 50%; fireball (evocation, opposition school) cannot be learned.",
+          "status": "now explained by the +15% / -15% specialist rule (specialistBenefits.learningSpells)"
+        },
+        "classMapping": "Specialist wizard: uses the Wizard XP, THAC0, saves, spell progression and proficiency groups (confirmed assumption)."
       },
       {
         "id": "invoker",
@@ -7102,6 +7159,13 @@
         "oppositionSchools": [
           "enchantmentCharm",
           "conjurationSummoning"
+        ],
+        "abilityMinimums": {
+          "int": 9,
+          "con": 16
+        },
+        "primeRequisites": [
+          "int"
         ]
       },
       {
@@ -7118,6 +7182,13 @@
         "oppositionSchools": [
           "illusion",
           "enchantmentCharm"
+        ],
+        "abilityMinimums": {
+          "int": 9,
+          "wis": 16
+        },
+        "primeRequisites": [
+          "int"
         ]
       },
       {
@@ -7135,6 +7206,13 @@
         "oppositionSchools": [
           "abjuration",
           "necromancy"
+        ],
+        "abilityMinimums": {
+          "int": 9,
+          "dex": 15
+        },
+        "primeRequisites": [
+          "int"
         ]
       }
     ],
@@ -7148,17 +7226,41 @@
     },
     "assumptions": [
       "Specialists use the Wizard tables (XP, THAC0, saves, spell progression, proficiency slots) unless you say otherwise.",
-      "Only the Illusionist appears on Table 38 (proficiency groups: Wizard, General). The other specialists are assumed to use the same groups.",
-      "Table 13 prints 'Var' for specialists and Table 22 gives the specialty's minimum score. The usual Wizard INT 9 also applies (confirmed for the illusionist, assumed for the others)."
+      "Only the Illusionist appears on Table 38 (proficiency groups: Wizard, General). The other specialists are assumed to use the same groups."
     ],
     "baseRequirement": {
       "int": 9,
-      "status": "confirmed for the illusionist; assumed for the other specialists",
-      "note": "The illusionist text lists INT 9 as well as the specialty minimum (DEX 16), so the Wizard's INT 9 applies on top of the Table 22 score. Assumed to be the same for the other specialists: confirm."
+      "status": "confirmed-by-owner for all specialists",
+      "note": "Every specialist needs INT 9 in addition to the minimum ability score listed on Table 22 (confirmed by owner)."
     },
     "primeRequisite": {
       "ability": "int",
-      "status": "confirmed for the illusionist; assumed INT for the other specialists (as for the generalist mage)"
+      "status": "confirmed-by-owner: INT for all specialists"
+    },
+    "specialistBenefits": {
+      "status": "confirmed-by-owner (PHB text supplied)",
+      "appliesTo": "all specialist wizards (illusionist is the worked example)",
+      "extraSpellPerLevel": {
+        "extraSlotsPerSpellLevel": 1,
+        "restrictedToSpecialistSchool": true,
+        "example": "A 1st-level illusionist could have two spells: one any spell he knows, the other limited to illusion."
+      },
+      "savingThrows": {
+        "ownSavesVsSchoolSpellsCastByOtherWizards": 1,
+        "othersSaveVsSpecialistCastingOwnSchool": -1,
+        "cumulative": true,
+        "note": "Both modifiers can apply at once; e.g. an enchanter casting an enchantment spell at another enchanter: they cancel out. Applies only if the spell allows a saving throw."
+      },
+      "learningSpells": {
+        "ownSchoolBonusPct": 15,
+        "otherSchoolsPenaltyPct": -15,
+        "appliedTo": "the percentile roll made when trying to learn a new spell (Table 4 chance)",
+        "note": "Bonus/penalty adjusts the chance figure from Table 4 (INT 15: 65% base gives 80% own school, 50% other school, matching the Joinville example). Opposition schools cannot be learned at all."
+      },
+      "freeSpellAtNewSpellLevel": {
+        "rule": "Whenever a specialist reaches a new spell level he automatically gains one spell of his school for his spell books; chosen by the DM or the player; no learning roll needed.",
+        "status": "descriptive: choice of spell is a DM/player decision, not engine-computed"
+      }
     }
   },
   "alignments": {
