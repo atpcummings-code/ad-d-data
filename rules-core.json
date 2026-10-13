@@ -2329,7 +2329,10 @@
       "rules": [
         "Multi-class combinations are limited to the lists below for each race.",
         "A character must meet the minimum ability scores of EVERY class in the combination (owner).",
-        "No level limits apply to any multi-class combination (owner; see house.json levelLimits)."
+        "No level limits apply to any multi-class combination (owner; see house.json levelLimits).",
+        "The Bard appears in no multi-class combination, ever (owner). A thief/bard combination does not exist.",
+        "Armour and spellcasting limits for multi-class characters (e.g. a mage in armour) are handled outside the app; the app does not enforce them (owner).",
+        "Thief skill points in any multi-class combination that includes a thief are awarded per thief level only (confirmed by owner)."
       ],
       "classIdNote": "'wizard' is the Mage. 'illusionist' is the specialist wizard (specialistWizards).",
       "byRace": {
@@ -2813,11 +2816,7 @@
       },
       "combinedMinimumsRule": "For each ability, the highest minimum among the classes in the combination (computed in 'combinations').",
       "alignmentRule": "Allowed alignments are the overlap of the classes' allowed alignments (computed), except where an override exists (Druid/Ranger = Neutral Good).",
-      "stillNeeded": [
-        "Rounding of the divided hit dice (see house.json hitPointRules.multiClass).",
-        "Proficiency slot rule for multi-class characters, and how thief and bard skills work when combined with other classes.",
-        "Armour and spellcasting limits in combination (e.g. a mage in a combination cannot cast in armour)."
-      ],
+      "stillNeeded": [],
       "dualClassing": "ignored (confirmed by owner)"
     },
     "classAccess": {
@@ -3645,7 +3644,8 @@
           "conBonusNote": "Core rule: no CON bonus after name level. Your house rule (house.json hitPointRules.conBonusAllLevels) adds the CON bonus at every level, so above 10th level this class gains 2 hp plus his CON bonus per level.",
           "houseOverride": "house.json hitPointRules.conBonusAllLevels",
           "source": "Owner statement"
-        }
+        },
+        "noMultiClass": "The Bard appears in no multi-class combination (confirmed by owner)."
       },
       "specialistWizards": {
         "abilityMinimums": "variable",
