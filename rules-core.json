@@ -1947,8 +1947,8 @@
     }
   },
   "races": {
-    "status": "partial: height/weight/age, multi-class combinations and level limits entered; ability limits, class access, saving throw bonuses and racial abilities still needed",
-    "expects": "human, dwarf, elf, gnome, halfElf, halfling. Per race: abilityMin/abilityMax per ability, abilityModifiers, allowedClasses with level limits, allowedMultiClasses, racialSaveBonuses, infravision, ageTable, heightWeightTable, racialAbilities (text).",
+    "status": "partial: height/weight/age, multi-class combinations, level limits, class access, weapon bonuses, ability adjustments, racial saves and racial abilities entered; ability min/max ignored by owner; half-orc detail still needed",
+    "expects": "human, dwarf, elf, gnome, halfElf, halfling. Per race: abilityModifiers, allowedClasses with level limits, allowedMultiClasses, racialSaveBonuses, infravision, ageTable, heightWeightTable, racialAbilities (text).",
     "physicalTraits": {
       "source": "PHB Table 10: Average Height and Weight, Table 11: Age, Table 12: Aging Effects (images supplied by owner)",
       "sexKey": {
@@ -2296,13 +2296,48 @@
             "oldAge": 60,
             "venerable": 90
           }
+        },
+        "halfOrc": {
+          "height": {
+            "unit": "inches",
+            "base": {
+              "male": 66,
+              "female": 62
+            },
+            "modifier": {
+              "text": "1d4",
+              "count": 1,
+              "sides": 4
+            },
+            "note": "Owner decision: one modifier for both sexes (the supplied table showed male 1d4, female 1d3)."
+          },
+          "weight": {
+            "unit": "pounds",
+            "base": {
+              "male": 150,
+              "female": 120
+            },
+            "modifier": {
+              "text": "2d8",
+              "count": 2,
+              "sides": 8
+            },
+            "note": "Owner decision: one modifier for both sexes, 2d8 (the supplied table showed male 2d8, female 3d6)."
+          },
+          "age": "not supplied",
+          "source": "owner-supplied table (Half-Orc height and weight)"
         }
       }
     },
     "halfOrc": {
-      "status": "named-in-movement-only",
+      "status": "ability adjustments, languages, infravision, height and weight entered; age/aging tables, saves and other traits still not supplied",
       "note": "The half-orc was listed with base move 12. It is not in the height/weight/age/aging tables (Tables 10-12) or the thief racial adjustments supplied so far. Its ability limits, class access, level limits and physical tables still need to be supplied if the app should offer it.",
-      "optionalRace": "to confirm whether the app should include it, and whether it is a core or house race"
+      "optionalRace": "to confirm whether the app should include it, and whether it is a core or house race",
+      "abilityAdjustments": {
+        "str": 1,
+        "con": 1,
+        "cha": -2
+      }
     },
     "raceIdsSeen": [
       "human",
@@ -2314,9 +2349,7 @@
       "halfOrc"
     ],
     "stillNeeded": [
-      "Ability score minimums and maximums and racial ability modifiers for each race.",
-      "Racial saving throw bonuses and racial abilities (e.g. infravision).",
-      "Half-orc: everything except its base move and its multi-class combinations."
+      "Half-orc: age table (starting and maximum age, aging thresholds) and any saving throw or other racial traits (not supplied)."
     ],
     "levelLimits": {
       "coreRule": "Not entered: core level limits by race and class are ignored.",
@@ -2987,6 +3020,377 @@
       },
       "note": "Half-elves do not get these bonuses (the text names elves and halflings only). Harpoon and blowgun are not flagged for halflings on the spreadsheet.",
       "resolved": "Staff sling counts as a sling for halflings (flagged Yes on the spreadsheet). Thrown weapons are the ones flagged Yes, replacing the earlier Table 45 assumption."
+    },
+    "racialTraits": {
+      "source": "PHB Chapter 2 race text and Table 9 (races.docx supplied by owner). Ability min/max deliberately not entered (owner: ignore). Only what the text states is stored; nothing inferred.",
+      "table9ConstitutionSaveBonus": {
+        "label": "Table 9: Constitution Saving Throw Bonuses",
+        "rows": [
+          {
+            "conMin": 4,
+            "conMax": 6,
+            "bonus": 1
+          },
+          {
+            "conMin": 7,
+            "conMax": 10,
+            "bonus": 2
+          },
+          {
+            "conMin": 11,
+            "conMax": 13,
+            "bonus": 3
+          },
+          {
+            "conMin": 14,
+            "conMax": 17,
+            "bonus": 4
+          },
+          {
+            "conMin": 18,
+            "conMax": 19,
+            "bonus": 5
+          }
+        ],
+        "note": "Text: +1 for every 3.5 points of Constitution. Applies to dwarves, gnomes and halflings against the categories listed per race."
+      },
+      "abilityAdjustments": {
+        "human": {},
+        "dwarf": {
+          "con": 1,
+          "cha": -1
+        },
+        "elf": {
+          "dex": 1,
+          "con": -1
+        },
+        "gnome": {
+          "int": 1,
+          "wis": -1
+        },
+        "halfElf": {},
+        "halfling": {
+          "str": -1,
+          "dex": 1
+        },
+        "note": "Applied to initial scores. Half-elf and human: none stated.",
+        "halfOrc": {
+          "str": 1,
+          "con": 1,
+          "cha": -2
+        },
+        "halfOrcSource": "owner-supplied image of the racial ability adjustment table (Half-Orc: Strength +1; Constitution +1; Charisma -2). Elf and halfling lines in the image match the values already entered."
+      },
+      "byRace": {
+        "human": {
+          "classes": "any class, any level (house rule: no level limits anywhere)",
+          "specialAbilities": [],
+          "note": "A human PC can have whatever racial characteristics the DM allows."
+        },
+        "dwarf": {
+          "languages": [
+            "common",
+            "dwarf",
+            "gnome",
+            "goblin",
+            "kobold",
+            "orc"
+          ],
+          "languagesNote": "plus any others the DM allows; number limited by Intelligence (Table 4) or NWP slots",
+          "infravisionFeet": 60,
+          "saveBonuses": {
+            "table": "table9ConstitutionSaveBonus",
+            "appliesTo": [
+              "wands",
+              "staves",
+              "rods",
+              "spells",
+              "poison"
+            ]
+          },
+          "magicItemMalfunction": {
+            "chancePct": 20,
+            "perUse": true,
+            "continuousDevices": "checked first time used in an encounter; if passed, works until turned off",
+            "effect": "malfunction affects the current use only; a cursed item that malfunctions is recognised as cursed",
+            "appliesToAllMagicItemsNotSuitedToClass": true,
+            "exceptions": [
+              "Not applied to priest items used by a dwarven cleric",
+              "weapons",
+              "shields",
+              "armor",
+              "gauntlets",
+              "girdles"
+            ]
+          },
+          "magicItemMalfunctionAppliesTo": "rods, staves, wands, rings, amulets, potions, horns, jewels and all other magical items except weapons, shields, armor, gauntlets and girdles",
+          "nonmagical": "never uses wizard spells (priest spells allowed)",
+          "meleeAttackBonus": {
+            "bonus": 1,
+            "vs": [
+              "orcs",
+              "half-orcs",
+              "goblins",
+              "hobgoblins"
+            ]
+          },
+          "defensiveVsLargeMonsters": {
+            "attackPenaltyForAttacker": -4,
+            "attackers": [
+              "ogres",
+              "trolls",
+              "ogre magi",
+              "giants",
+              "titans"
+            ]
+          },
+          "miningAbilities": {
+            "rangeFeet": 10,
+            "note": "Underground only; must deliberately try; approximate depth can be determined at any time.",
+            "detect": [
+              {
+                "what": "grade or slope in passage",
+                "chance": "1-5 on 1d6"
+              },
+              {
+                "what": "new tunnel/passage construction",
+                "chance": "1-5 on 1d6"
+              },
+              {
+                "what": "sliding/shifting walls or rooms",
+                "chance": "1-4 on 1d6"
+              },
+              {
+                "what": "stonework traps, pits and deadfalls",
+                "chance": "1-3 on 1d6"
+              },
+              {
+                "what": "approximate depth underground",
+                "chance": "1-3 on 1d6"
+              }
+            ]
+          },
+          "mounts": "ill-suited to riding horses or other large mounts (ponies fine) - descriptive only"
+        },
+        "elf": {
+          "pcSubrace": "high elf (other types only with DM permission; no extra powers)",
+          "languages": [
+            "common",
+            "elf",
+            "gnome",
+            "halfling",
+            "goblin",
+            "hobgoblin",
+            "orc",
+            "gnoll"
+          ],
+          "languagesNote": "plus any others the DM allows; limited by Intelligence or NWP slots",
+          "infravisionFeet": 60,
+          "resistances": [
+            {
+              "vs": "sleep and all charm-related spells",
+              "pct": 90,
+              "note": "in addition to the normal saving throw"
+            }
+          ],
+          "weaponAttackBonuses": "see races.weaponAttackBonuses (+1 bows other than crossbows; +1 short and long sword)",
+          "surpriseBonus": {
+            "opponentSurprisePenalty": -4,
+            "reducedWhenDoorOrScreenMustBeOpened": -2,
+            "conditions": "elf not in metal armor AND (alone, OR party only elves/halflings also not in metal armor, OR 90 ft or more from party)"
+          },
+          "secretDoors": {
+            "passingWithin10ft": "1 on 1d6",
+            "concealedDoorSearch": "1-3 on 1d6",
+            "secretDoorSearch": "1-2 on 1d6",
+            "note": "Concealed = hidden by screens/curtains; secret = built to be hard to notice."
+          }
+        },
+        "gnome": {
+          "languages": [
+            "common",
+            "dwarf",
+            "gnome",
+            "halfling",
+            "goblin",
+            "kobold",
+            "burrowing mammals (simple speech: moles, badgers, weasels, shrews, ground squirrels etc.)"
+          ],
+          "languagesNote": "plus any others the DM allows; limited by Intelligence or NWP slots",
+          "infravisionFeet": 60,
+          "saveBonuses": {
+            "table": "table9ConstitutionSaveBonus",
+            "appliesTo": [
+              "wands",
+              "staves",
+              "rods",
+              "spells"
+            ],
+            "poison": "not stated in the gnome text"
+          },
+          "magicItemMalfunction": {
+            "chancePct": 20,
+            "perUse": true,
+            "continuousDevices": "checked first time used in an encounter; if passed, works until turned off",
+            "effect": "malfunction affects the current use only; a cursed item that malfunctions is recognised as cursed",
+            "appliesToAllMagicItemsNotSuitedToClass": true,
+            "exceptions": [
+              "weapons",
+              "armor",
+              "shields",
+              "illusionist items",
+              "(thief) items that duplicate thieving abilities"
+            ]
+          },
+          "meleeAttackBonus": {
+            "bonus": 1,
+            "vs": [
+              "kobolds",
+              "goblins"
+            ]
+          },
+          "defensiveVsLargeMonsters": {
+            "attackPenaltyForAttacker": -4,
+            "attackers": [
+              "gnolls",
+              "bugbears",
+              "ogres",
+              "trolls",
+              "ogre magi",
+              "giants",
+              "titans"
+            ]
+          },
+          "miningAbilities": {
+            "rangeFeet": 10,
+            "note": "Must stop and concentrate for one round. Approximate depth or direction underground can be determined at any time.",
+            "detect": [
+              {
+                "what": "grade or slope in passage",
+                "chance": "1-5 on 1d6"
+              },
+              {
+                "what": "unsafe walls, ceiling and floors",
+                "chance": "1-7 on 1d10"
+              },
+              {
+                "what": "approximate depth underground",
+                "chance": "1-4 on 1d6"
+              },
+              {
+                "what": "approximate direction underground",
+                "chance": "1-3 on 1d6"
+              }
+            ]
+          }
+        },
+        "halfElf": {
+          "languages": [
+            "common",
+            "elf",
+            "gnome",
+            "halfling",
+            "goblin",
+            "hobgoblin",
+            "orc",
+            "gnoll"
+          ],
+          "languagesNote": "plus any others the DM allows; limited by Intelligence or NWP slots; no language of their own",
+          "infravisionFeet": 60,
+          "resistances": [
+            {
+              "vs": "sleep and all charm-related spells",
+              "pct": 30
+            }
+          ],
+          "secretDoors": {
+            "passingWithin10ft": "1 on 1d6",
+            "concealedDoorSearch": "1-3 on 1d6",
+            "secretDoorSearch": "1-2 on 1d6",
+            "note": "Concealed = hidden by screens/curtains; secret = built to be hard to notice."
+          },
+          "note": "Does not get the elf racial weapon bonuses or the elf surprise bonus (not stated in text)."
+        },
+        "halfling": {
+          "types": [
+            "Hairfeet (most common)",
+            "Tallfellow",
+            "Stout"
+          ],
+          "typesNote": "any of the three is acceptable for PCs; the text gives no mechanical difference except the Stout abilities below",
+          "languages": [
+            "common",
+            "halfling",
+            "dwarf",
+            "elf",
+            "gnome",
+            "goblin",
+            "orc"
+          ],
+          "languagesNote": "plus any others the DM allows; limited by Intelligence or NWP slots",
+          "saveBonuses": {
+            "table": "table9ConstitutionSaveBonus",
+            "appliesTo": [
+              "wands",
+              "staves",
+              "rods",
+              "spells",
+              "poison"
+            ],
+            "note": "poison bonus is identical to the magic bonus (+1 to +5 by Constitution)"
+          },
+          "weaponAttackBonuses": "see races.weaponAttackBonuses (+1 thrown weapons and slings)",
+          "surpriseBonus": {
+            "opponentSurprisePenalty": -4,
+            "reducedWhenDoorOrScreenMustBeOpened": -2,
+            "conditions": "halfling not in metal armor AND (alone, OR party only halflings/elves, OR 90 ft or more from party)",
+            "note": "Text says 'halflings or elves' for party composition; elf text says 'elves or halflings' - same rule."
+          },
+          "infravision": {
+            "normal": {
+              "chancePct": 15,
+              "feet": 60,
+              "lineage": "pure Stout"
+            },
+            "limited": {
+              "chancePct": 25,
+              "feet": 30,
+              "lineage": "mixed Stout/Tallfellow or Stout/Hairfeet",
+              "appliesIf": "normal infravision roll failed"
+            },
+            "note": "Rolled once at creation. Printed chances kept as written."
+          },
+          "stoutAbilities": {
+            "appliesTo": "pure or partial Stout (any Stoutish blood)",
+            "onlyWhenConcentrating": true,
+            "slopeUpOrDown": {
+              "accuracyPct": 75,
+              "roll": "1-3 on 1d4"
+            },
+            "direction": {
+              "roll": "1-3 on 1d6"
+            }
+          }
+        },
+        "halfOrc": {
+          "source": "AD&D 1e Players Handbook half-orc text (image supplied by owner)",
+          "languages": [
+            "common",
+            "alignment language",
+            "orcish"
+          ],
+          "additionalLanguagesMax": 2,
+          "infravisionFeet": 60,
+          "infravisionNote": "detects varying degrees of heat radiation in the dark",
+          "classesPrinted": "cleric, fighter, thief; multi: cleric/fighter, cleric/thief, fighter/thief",
+          "notApplied": [
+            "Printed level limits (cleric 4, fighter 10, thief 8): house rule, no level limits.",
+            "Multi-class armour restriction: handled outside the app (owner)."
+          ],
+          "multiClassXp": "all earned experience divided equally between the classes (already covered by the multi-class rules)",
+          "note": "Printed multi-class combinations match the owner's list (F/C, F/T, C/T). Text assumes PCs are within the superior 10% of half-orcs."
+        }
+      }
     }
   },
   "classes": {
