@@ -773,7 +773,7 @@
       "perSkillLimitMeaning": "The 'maxPerSkill' figure limits how many points can be put into any single skill in that level's allocation (30 at level 1, 15 at each later level). It is not an overall cap on a skill's percentage.",
       "dataModelHint": "Store points assigned per skill per level (pointsByLevel[level][skillId]) so the app can enforce each level's limits and show points remaining.",
       "assumptions": [
-        "For a multi-class thief, points are awarded per thief level (confirm).",
+        "For a multi-class thief, points are awarded per thief level, e.g. Fighter 5 / Thief 4 has 60 + 30 x 3 = 150 points, the same as a single-class level 4 thief. Applies to every multi-class combination that includes a thief (confirmed by owner).",
         "Bard discretionary points are separate: see bardDiscretionaryPoints."
       ]
     },
@@ -954,8 +954,39 @@
         "formula": "slots(level) = initial + floor(level / levelsPerExtraSlot)"
       },
       "multiClass": {
-        "status": "needs-source",
-        "note": "Table 34 does not say how a multi-class character combines slots across groups. Enter the PHB rule here."
+        "status": "confirmed-by-owner (non-weapon proficiencies only)",
+        "slotsFromOneClassOnly": "A multi-class character gains non-weapon proficiency slots from ONE class only, never combined across classes.",
+        "precedence": [
+          "warrior",
+          "priest",
+          "wizard",
+          "rogue"
+        ],
+        "precedenceNote": "Owner wording: Warriors, Cleric, Wizard, then Rogue. Stored by class group (warrior = fighter/paladin/ranger, priest = cleric/druid, wizard = wizard/illusionist, rogue = thief/bard). The class group highest in this list among the character's classes supplies the slots.",
+        "freeGroups": "The character can take proficiencies from every group that any of his classes has access to at the normal slot cost: General plus the own group of each of his classes. Any other group costs +1 slot (crossGroupCost).",
+        "example": "Fighter/Thief: slots come from the Fighter (warrior group). Normal cost for General, Warrior and Rogue proficiencies; every other group costs +1 slot.",
+        "engineRule": "slotClass = the character's class whose group is first in 'precedence'; slots = that class's slots at that class's level (confirmed). cost = slots + (0 if proficiency.groups intersects ['general'] + groupOf(each class) else 1).",
+        "openQuestions": [],
+        "slotLevel": "Slots are counted at the level of the class that supplies them (confirmed by owner), e.g. Fighter 5 / Thief 4 uses fighter level 5.",
+        "weaponSlots": {
+          "status": "confirmed-by-owner",
+          "rule": "Weapon proficiency slots follow the same rules as non-weapon slots: they come from ONE class only, never combined, counted at that class's level. Only the precedence differs.",
+          "precedence": [
+            "warrior",
+            "rogue",
+            "priest",
+            "wizard"
+          ],
+          "precedenceNote": "Owner wording: Warrior, Rogue, Priest, Wizard. By class group (warrior = fighter/paladin/ranger, rogue = thief/bard, priest = cleric/druid, wizard = wizard/illusionist). The class group highest in this list supplies the weapon slots.",
+          "example": "Fighter/Thief: weapon slots come from the Fighter, at fighter level.",
+          "engineRule": "weaponSlotClass = the character's class whose group is first in precedence; slots = that class's weapon slots at that class's level.",
+          "openQuestions": [],
+          "nonProficientPenalty": {
+            "status": "confirmed-by-owner",
+            "rule": "A multi-class character uses the most favourable (smallest) non-proficient weapon penalty among his classes, which follows the same order: Warrior (-2), Rogue (-3), Priest (-3), Wizard (-5).",
+            "example": "Fighter/Wizard uses the warrior penalty of -2; Thief/Wizard uses the rogue penalty of -3."
+          }
+        }
       },
       "derivedPreview": {
         "note": "Computed from the assumed formula, index 0 = level 1. For eyeballing only; the engine should compute from 'groups'.",
@@ -1506,7 +1537,7 @@
         "assumptions": [
           "General proficiencies never cost the extra slot, for any class (to be confirmed).",
           "A proficiency listed in several groups costs the normal slots if ANY of its groups is the class's own group (or General), otherwise one extra slot.",
-          "For multi-class characters, the rule is applied per class and the multi-class slot rule is still to be confirmed."
+          "For multi-class characters a proficiency costs the normal slots if it belongs to General or to the own group of ANY of the character's classes; otherwise +1 slot (confirmed by owner, see multiClass)."
         ],
         "engineRule": "cost = slots + (0 if (proficiency.groups intersects [ownGroup, 'general']) else 1)"
       },
