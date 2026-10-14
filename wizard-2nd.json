@@ -1,0 +1,1539 @@
+{
+  "meta": {
+    "source": "owner's master_list_of_spells - PHB-FRA-TOM-GHA-UA.xlsx, tab '2nd'",
+    "level": 2,
+    "class": "wizard",
+    "count": 83,
+    "bookKey": {
+      "PHB": "2nd Edition Players Handbook",
+      "FRA": "2nd Edition Forgotten Realms Adventures",
+      "TOM": "2nd Edition Tome of Magic",
+      "GHA": "1st/2nd Edition Greyhawk Adventures",
+      "UA": "1st Edition Unearthed Arcana"
+    },
+    "fields": {
+      "reversible": "true where the spreadsheet's Reversible column is filled",
+      "wildMagic": "true where the spell name ended in * in the spreadsheet (Wild Magic spell; owner is still debating whether to include them). nameAsPrinted keeps the asterisk.",
+      "schools": "School, School 2, School 3 in order; empty cells dropped",
+      "description": "as in the spreadsheet; null where blank"
+    },
+    "notes": [
+      "The Superscript column was ignored, as instructed.",
+      "Text encoding artefacts from the spreadsheet (curly quotes and dashes stored as single bytes) were converted to normal characters; wording was not changed otherwise.",
+      "Where two spells exist in different books the book precedence order applies; otherwise the DM decides (from the spreadsheet key)."
+    ],
+    "gaps": [
+      {
+        "spell": "Detect Invisibility",
+        "field": "castingTime"
+      }
+    ]
+  },
+  "spells": [
+    {
+      "id": "wizard2.agannazarsScorcher",
+      "name": "Agannazar’s Scorcher",
+      "level": 2,
+      "reversible": false,
+      "castingTime": "3s",
+      "range": "20yds/lvl",
+      "duration": "2rds/lvl",
+      "areaOfEffect": "2ft x 60ft Jet",
+      "savingThrow": "None/Half",
+      "components": "V S",
+      "reference": "FRA",
+      "schools": [
+        "Evocation"
+      ],
+      "wildMagic": false,
+      "description": "Upon casting this spell a jet of flame appear sat the casters fingertips and bursts out toward one target of the casters choice. That target will be hit by this flame for 3-18 points of damage in the first round and 3-18 points the following round, if he remains within the spells range. There is no saving throw against this spell, though anti-fire capabilities such as fire resistance will apply and may reduce or eliminate the damage. If the target moves more than 20 yards away from the caster or takes shelter behind some large, fireproof object the next round, the flame jet will remain directed toward its original target, even though no further damage can be caused. Other figures in the path of the flame jet can make a saving throw vs. spells to avoid 2-16 points of fire damage. A successful saving throw reduces this to 1-8.The casting mage cannot perform other actions the during the second round of the spell or discontinue the spell until it has run its course. Similar to the burning hands spell, this spell will ignite readily flammable material in its path."
+    },
+    {
+      "id": "wizard2.alterSelf",
+      "name": "Alter Self",
+      "level": 2,
+      "reversible": false,
+      "castingTime": "2s",
+      "range": 0,
+      "duration": "3d4 rds + 2rds/lvl",
+      "areaOfEffect": "The Caster",
+      "savingThrow": "None",
+      "components": "V S",
+      "reference": "PHB",
+      "schools": [
+        "Alteration"
+      ],
+      "wildMagic": false,
+      "description": "When this spell is cast, the wizard can alter his appearance and form--including clothing and equipment--to appear taller or shorter; thin, fat, or in between; human, humanoid, or any other generally man-shaped bipedal creature. The caster's body can undergo a limited physical alteration and his size can be changed up to 50%. If the form selected has wings, the wizard can actually fly, but at only one-third the speed of a true creature of that type, and with a loss of two maneuverability classes (to a minimum of E).If the form has gills, the caster can breathe under water as long as the spell lasts. However, the caster does not gain any multiple attack routines or additional damage allowed to an assumed form. The caster's attack rolls, Armor Class, and saving throws do not change. The spell does not confer special abilities, attack forms, or defenses. Once the new form is chosen, it remains for the duration of the spell. The caster can change back into his own form Attwill; this ends the spell immediately. A caster who is slain automatically returns to his normal form."
+    },
+    {
+      "id": "wizard2.bigbysDextrousDigits",
+      "name": "Bigby’s Dextrous Digits",
+      "level": 2,
+      "reversible": false,
+      "castingTime": "2s",
+      "range": "90yds",
+      "duration": "3 turns/lvl",
+      "areaOfEffect": "Special",
+      "savingThrow": "None",
+      "components": "V S M",
+      "reference": "GHA",
+      "schools": [
+        "Evocation"
+      ],
+      "wildMagic": false,
+      "description": "This spell summons into existence a pair of disembodied hands that will follow the mage's every order. The hands can perform all the functions of an unseen servant, but can also accomplish deeds requiring fine coordination, such as tinkering with tools, working with laboratory equipment, sculpting, painting, or playing a musical instrument. The hands can perform any task the caster can accomplish, including non-weapon proficiencies known by the mage. The hands will perform with a dexterity equal to that of the caster. Each hand can hold and carry up to 200 g.p. weight individually, or 500g.p. weight together. The hands can move no farther apart than the caster’s own hands. The hands can move 120 feet per round, regardless of weight carried, but can move no farther than 90 feet away from the caster or they vanish. The hands cannot act out the somatic component of a spell. The hands cannot wield a weapon in melee or punch or grapple. Although the hands are immune to physical attacks, they can be destroyed by six more points of magical damage. The material component is a pair of gloves embroidered with the mage’s initials."
+    },
+    {
+      "id": "wizard2.bigbysSilencingHand",
+      "name": "Bigby’s Silencing Hand",
+      "level": 2,
+      "reversible": false,
+      "castingTime": "2s",
+      "range": "40yds",
+      "duration": "2rds/lvl",
+      "areaOfEffect": "One Creature",
+      "savingThrow": "None",
+      "components": "V S M",
+      "reference": "GHA",
+      "schools": [
+        "Evocation",
+        "Enchantment"
+      ],
+      "wildMagic": false,
+      "description": "This spell creates an appropriately sized hand that will fly toward the chosen creature and clamp tightly over the creature’s mouth unless the creature makes its saving throw. A creature affected by the spell will be unable to talk clearly, cannot cast any spell requiring a verbal component, or use a magical item triggered by an audible command word. The hand cannot belulled away from a creature’s mouth or be harmed by a physical attack, but can be destroyed by six or more points of magical damage, although most magical attacks carry the risk of harming the affected creature. A successful dispel magic spell destroys the hand without injury to the creature. The material component is a cloth glove smeared with sticky syrup or honey."
+    },
+    {
+      "id": "wizard2.bind",
+      "name": "Bind",
+      "level": 2,
+      "reversible": false,
+      "castingTime": "2s",
+      "range": "30yds",
+      "duration": "1rd/lvl",
+      "areaOfEffect": "50ft + 5ft/lvl",
+      "savingThrow": "None",
+      "components": "V S M",
+      "reference": "PHB",
+      "schools": [
+        "Enchantment"
+      ],
+      "wildMagic": false,
+      "description": "When this spell is employed, the wizard can command any nonliving ropelike object, including string, yarn, cord, line, rope, or even a cable. The spell affects 50 feet of normal rope (with a 1 inch diameter), plus 5 feet per caster level. This length is reduced by 50%for every additional inch of thickness and increased by 50% for each half-inch less. The possible commands are Coil (form a neat, coiled stack), Coil & Knot, Loop, Loop &Knot, Tie & Knot, and the reverses of all of the above (Uncoil, etc.). One command can be given each round. The rope can only enwrap a creature or an object within 1 foot of it--it does not snake outward--so it must be thrown or hurled near the intended target. Note that the rope itself, and any knots tied in it, are not magical. A typical rope might be AC 6 and take 4 points of slashing damage before breaking. The rope does not inflict damage of any type, but it can be used as a trip line or to entangle a single opponent who fails a saving throw vs. Spell."
+    },
+    {
+      "id": "wizard2.bladethirst",
+      "name": "Bladethirst",
+      "level": 2,
+      "reversible": false,
+      "castingTime": "2s",
+      "range": "Touch",
+      "duration": "1rd",
+      "areaOfEffect": "Blade of one slashing weapon",
+      "savingThrow": "None",
+      "components": "V S M",
+      "reference": "FRA",
+      "schools": [
+        "Alteration"
+      ],
+      "wildMagic": false,
+      "description": "For the round following the casting of this spell, any single-edged, slashing weapon is granted a +3 bonus to hit (but not to damage). The blade ignites with fiery blue-white glow visible to all, which fades once the weapon has struck an opponent or at the end of the next round, whichever comes first. This bonus is in addition to any Strength bonus or inherent magical bonus of the item. A sword+1 provided with this spell will strike with a +4 bonus the next round, then return to being a +1 blade. The material component of bloodthirsty a drop of blood and a pinch of powdered silver. Only one blade thirst spell can be placed on an item at one time. Bloodthirsty cannot be made permanent."
+    },
+    {
+      "id": "wizard2.blindness",
+      "name": "Blindness",
+      "level": 2,
+      "reversible": false,
+      "castingTime": "2s",
+      "range": "30yds + 10yds/lvl",
+      "duration": "Special",
+      "areaOfEffect": "1 creature",
+      "savingThrow": "Negates",
+      "components": "V",
+      "reference": "PHB",
+      "schools": [
+        "Illusion/Phantasm"
+      ],
+      "wildMagic": false,
+      "description": "The blindness spell causes the victim to become blind, able to see only a grayness before its eyes. Various cure spells will not remove this effect, and only a dispel magic or the spellcaster can do away with the blindness if the creature fails its initial saving throws. spell. A blinded creature suffers a -4 penalty to its attack rolls, and its opponents gain a +4 bonus to their attack rolls."
+    },
+    {
+      "id": "wizard2.blur",
+      "name": "Blur",
+      "level": 2,
+      "reversible": false,
+      "castingTime": "2s",
+      "range": 0,
+      "duration": "3rds + 1rd/lvl",
+      "areaOfEffect": "The Caster",
+      "savingThrow": "None",
+      "components": "V S",
+      "reference": "PHB",
+      "schools": [
+        "Illusion/Phantasm"
+      ],
+      "wildMagic": false,
+      "description": "When a blur spell is cast, the wizard causes the outline of his form to become blurred, shifting and wavering. This distortion causes all missile and melee combat attacks against the caster to be made with -4 penalties on the first attempt and -2 penalties on all successive attacks. It also grants the wizard a +1 bonus to his saving throw for any direct magical attack. A detect invisibility spell will not counter this effect, but the 5th-levelpriest spell true seeing and similar magic will."
+    },
+    {
+      "id": "wizard2.chaosShield",
+      "name": "Chaos Shield",
+      "nameAsPrinted": "Chaos Shield*",
+      "level": 2,
+      "reversible": false,
+      "castingTime": "2s",
+      "range": 0,
+      "duration": "1d10rds + 2rds/lvl",
+      "areaOfEffect": "The Caster",
+      "savingThrow": "Special",
+      "components": "V S",
+      "reference": "TOM",
+      "schools": [
+        "Abjuration"
+      ],
+      "wildMagic": true,
+      "description": "Following the discovery of wild magic came the discovery of wild surges and the personal danger such surges create. After several wild mages destroyed themselves by rather spectacular means (or suffered very odd side effects), the chaos shield was created as protection from these surges. This spell imbues the wild mage with special protection against the effects of wild surges. It protects only against wild surges caused by the caster's own spells, not from the effects of another mage's wild surges. When a wild surge affects a caster protected by chaos shield, he is allowed a saving throw vs. magic. If the saving throw is successful, the effect of the surge on the caster is negated. If the saving throw is failed, the caster is affected normally by the surge. The spell does not protect against wild surges that might be caused by its own casting. The chaos shield protects only the caster and does not negate the effects of a wild surge for other characters who might be in the area of effect. The caster cannot voluntarily cancel the protection once he has learned the nature of a wild surge; the chaos shield protects from both good and harmful effects. Thus, if a wild surge resulted in a heal spell for all characters within 10 feet of the caster, the protected caster might not benefit, while all others in the radius would be healed. The spell remains in effect until it negates a wild surge or the spell duration expires."
+    },
+    {
+      "id": "wizard2.cloakFromUndead",
+      "name": "Cloak From Undead",
+      "level": 2,
+      "reversible": false,
+      "castingTime": "2s",
+      "range": "Touch",
+      "duration": "1rd/lvl",
+      "areaOfEffect": "One Creature",
+      "savingThrow": "None",
+      "components": "V S M",
+      "reference": "FRA",
+      "schools": [
+        "Alteration"
+      ],
+      "wildMagic": false,
+      "description": "By means of this spell, the caster or a single creature touched by the spellcaster is cloaked from undead in a similar manner to the priest spell invisibility to undead. The protected creature can take any non-hostile action and any undead nearby will ignore him. If the cloaked individual attacks an undead creature, only the undead that are actually attacked notice the protected individual and are allowed to attack back. A priest or paladin who is cloaked cannot turn undead. This spell is automatically effective against skeletons, zombies, ghouls, shadows, weights, ghasts, and other un-4 5dead with five or fewer hit dice. Wraiths, mummies, spectres, and more powerful undead are allowed to make a saving throw vs. spells to see the cloaked individual. Vampires and undead creatures with nine or more hit dice make this saving throw automatically. Creatures from other planes and creatures which are not undead are not affected by this spell. The material components of the spell are a piece of bone and a pinch of powdered silver."
+    },
+    {
+      "id": "wizard2.cloakUndead",
+      "name": "Cloak Undead",
+      "level": 2,
+      "reversible": false,
+      "castingTime": "2s",
+      "range": "10ft/lvl",
+      "duration": "1rd/lvl",
+      "areaOfEffect": "1 or more creatures in 15ft Radius",
+      "savingThrow": "Negates",
+      "components": "V S",
+      "reference": "FRA",
+      "schools": [
+        "Necromancy"
+      ],
+      "wildMagic": false,
+      "description": "This spell renders undead creatures within its radius invisible both to the naked eye and to the detect undead spell. The undead remain invisible as long as they remain within 15 feet of the spells center. If they move beyond that radius or attack in any fashion, they immediately become visible. The detect invisible spell will reveal their presence, as will true seeing and similar devices. The spell can be cast on the caster, on an object, or on a willing subject. Cloaked undead cannot normally be turned, though if the priest can detect them, as above, he may turn them in the normal fashion. Cloaked undead cannot enter areas normally protected from undead, nor gain any other advantages."
+    },
+    {
+      "id": "wizard2.continualLight",
+      "name": "Continual Light",
+      "level": 2,
+      "reversible": true,
+      "castingTime": "2s",
+      "range": "60yds",
+      "duration": "Permanent",
+      "areaOfEffect": "60ft radius",
+      "savingThrow": "Special",
+      "components": "V S",
+      "reference": "PHB",
+      "schools": [
+        "Alteration"
+      ],
+      "wildMagic": false,
+      "description": "This spell is similar to a light spell, except that it is as bright as full daylight and lasts until negated by magical darkness or by a dispel magic spell. Creatures who suffer penalties in bright light suffer them in this spell's area of effect. As with the light spell, it can be cast into the air, onto an object, or at a creature. When cast at a creature, the target gets a saving throw vs. spell; success indicates that the spell affects the space about 1 foot behind the creature instead. Note that this spell can also blind a creature if it is successfully cast upon the creature's visual organs, reducing its attack rolls, saving throws, and Armor Class by 4. If the spell is cast on a small object that is then placed in alight-proof covering, the spell's effects are blocked until the covering is removed. A continual light brought into an area of magical darkness (or vice versa) is temporarily negated so that the otherwise prevailing light conditions exist in the overlapping areas of effect. A direct casting of continual light against a similar or weaker magical darkness cancels both. This spell eventually consumes the material it is cast upon, but the process takes far longer than the time in the typical campaign. Extremely hard and expensive materials can last hundreds or even thousands of years."
+    },
+    {
+      "id": "wizard2.darkness15Radius",
+      "name": "Darkness, 15' Radius",
+      "level": 2,
+      "reversible": false,
+      "castingTime": "2s",
+      "range": "10yds/lvl",
+      "duration": "1turn + 1rd/lvl",
+      "areaOfEffect": "15ft Radius",
+      "savingThrow": "None",
+      "components": "V S M",
+      "reference": "PHB",
+      "schools": [
+        "Alteration"
+      ],
+      "wildMagic": false,
+      "description": "This spell causes total, impenetrable darkness in the area of effect. Infravision is useless. Neither normal nor magical light works unless a light or continual light spell is used. In the former event, the darkness spell is negated by the light spell, and vice versa. The material components of this spell are a bit of bat fur and either a drop of pitch or apiece of coal."
+    },
+    {
+      "id": "wizard2.deafness",
+      "name": "Deafness",
+      "level": 2,
+      "reversible": true,
+      "castingTime": "2s",
+      "range": "60yds",
+      "duration": "Special",
+      "areaOfEffect": "1 creature",
+      "savingThrow": "Negates",
+      "components": "V S M",
+      "reference": "PHB",
+      "schools": [
+        "Illusion/Phantasm"
+      ],
+      "wildMagic": false,
+      "description": "The deafness spell causes the recipient to become totally deaf and unable to hear any sounds. The victim is allowed a saving throw vs. spell. An affected creature has a -1penalty to its surprise rolls unless its other senses are unusually keen. Deafened spellcasters have a 20% chance to miscast any spell with a verbal component. This deafness can be done away with only by means of a dispel magic spell or by the spellcaster. The material component of this spell is beeswax."
+    },
+    {
+      "id": "wizard2.decastave",
+      "name": "Decastave",
+      "level": 2,
+      "reversible": false,
+      "castingTime": "2s",
+      "range": 0,
+      "duration": "1rd + 1rd/lvl",
+      "areaOfEffect": "Caster",
+      "savingThrow": "None",
+      "components": "V S M",
+      "reference": "FRA",
+      "schools": [
+        "Evocation"
+      ],
+      "wildMagic": false,
+      "description": "The material component of this spell is a small piece of wood. Upon casting the spell the wood vanishes and is replaced by a 10-foot-long pole of magical force, 2inches in diameter. The pole can only be wielded by the wizard and will cease to exist if he is no longer in contact with it. The pole will also cease to exist if cut by metal (treat as AC0).The pole cannot be shortened from its10-foot length, or bent. Other creatures may grasp the pole but only if their total Strength exceeds 18 can they hamper its movement or rip it out of the mages hands (causing it to dissolve).The decastave can be wielded as a weapon, inflicting 1-6 points of damage. The wizard suffers normal nonproficiency penalties if he does not have weapons proficiency in staves. The decastave is treated as a magic weapon with no pluses for striking creatures which are immune to normal weapons. Once per use of the spell the decastave can be used to drain a target of 1-4 hit points. This is done in addition to the decastaves normal damage. The caster must determine before rolling to hit whether he will use this power. The drained hit points are channeled into the decastaves wielder to heal damage. If the caster is uninjured, then the drained hit points are lost."
+    },
+    {
+      "id": "wizard2.deeppockets",
+      "name": "Deeppockets",
+      "level": 2,
+      "reversible": false,
+      "castingTime": "1 Turn",
+      "range": "Touch",
+      "duration": "12hrs + 1hr/lvl",
+      "areaOfEffect": "1 Garment",
+      "savingThrow": "None",
+      "components": "V S M",
+      "reference": "PHB",
+      "schools": [
+        "Alteration",
+        "Enchantment"
+      ],
+      "wildMagic": false,
+      "description": "This spell enables the wizard to specially prepare a garment so as to hold far more than it normally could. A finely sewn gown or robe of high-quality material (at least 50 gp value) is fashioned so as to contain numerous hand-sized pockets. One dozen is the minimum number. The deeppockets spell then enables these pockets to hold a total of 100pounds (5 cubic feet in volume) as if it were only 10 pounds of weight. Furthermore, there are no discernible bulges where the special pockets are. At the time of casting, the caster can instead choose to have 10 pockets each holding 10 pounds (_ cubic foot volume each). If the robe or like garment is sewn with 100 or more pockets (200 gp minimum cost), 100 pockets can be created to contain one pound of weight and 1/6 cubic foot volume each. Each special pocket is actually an extradimensional holding space. If the spell duration expires while there is material within the enchanted pockets, or if a successful dispel magic is cast upon the enchanted garment, all the material suddenly appears around the wearer and immediately falls to the ground. The caster can also cause all the pockets to empty with a single command. In addition to the garment, which is reusable, the material components of this spell area tiny golden needle and a strip of fine cloth given a half-twist and fastened at the ends.",
+      "descriptionNote": "Contains '_' where the source spreadsheet lost a symbol (probably a fraction such as 1/2); not corrected."
+    },
+    {
+      "id": "wizard2.detectEvil",
+      "name": "Detect Evil",
+      "level": 2,
+      "reversible": true,
+      "castingTime": "2s",
+      "range": 0,
+      "duration": "5rds/kvk",
+      "areaOfEffect": "10 x 180ft",
+      "savingThrow": "None",
+      "components": "V S",
+      "reference": "PHB",
+      "schools": [
+        "Diviniation"
+      ],
+      "wildMagic": false,
+      "description": "This spell discovers emanations of evil (or of good in the case of the reverse spell)from any creature, object, or area. Character alignment is not revealed under most circumstances: Characters who are strongly aligned, do not stray from their faith, and who are at least 9th level might radiate good or evil if they are intent upon appropriate actions. Powerful monsters, such as ki-rin, send forth emanations of evil or good, even if polymorphed. Aligned undead radiate evil, for it is this power and negative force that enables them to continue existing. An evilly cursed object or unholy water radiates evil, but a hidden trap or an unintelligent viper does not. The degree of evil (faint, moderate, strong, overwhelming) can be noted. Note that priests have a more powerful version of this spell. The spell has a path of detection 10 feet wide and 60 yards long in the direction in which the wizard is facing. The wizard must concentrate--stop, have quiet, and intently seek to detect the aura--for at least one round to receive a reading."
+    },
+    {
+      "id": "wizard2.detectInvisibility",
+      "name": "Detect Invisibility",
+      "level": 2,
+      "reversible": false,
+      "castingTime": null,
+      "range": 0,
+      "duration": "5rds/lvl",
+      "areaOfEffect": "10yds/lvl",
+      "savingThrow": "None",
+      "components": "V S M",
+      "reference": "PHB",
+      "schools": [
+        "Diviniation"
+      ],
+      "wildMagic": false,
+      "description": "When the wizard casts a detect invisibility spell, he is able to see clearly any objects or beings that are invisible, as well as any that are astral, ethereal, or out of phase. In addition, it enables the wizard to detect hidden or concealed creatures (for example, thieves in shadows, halflings in underbrush, and so on). It does not reveal the method of concealment or invisibility, except in the case of astral travelers (where the silver cord can be seen). It does not reveal illusions or enable the caster to see through physical objects. Detection is a path 10 ft. wide along the wizard's line of sight to the range limit. The material components of this spell are a pinch of talc and a small sprinkling of powdered silver."
+    },
+    {
+      "id": "wizard2.drawmijsAdventurersLuck",
+      "name": "Drawmij’s Adventurer’s Luck",
+      "level": 2,
+      "reversible": false,
+      "castingTime": "1rd",
+      "range": "Touch",
+      "duration": "3 Turns",
+      "areaOfEffect": "Creature Touched",
+      "savingThrow": "None",
+      "components": "V S M",
+      "reference": "GHA",
+      "schools": [
+        "Alteration"
+      ],
+      "wildMagic": false,
+      "description": "This spell bestows upon the touched creature a special form of luck. For the duration of the spell, the recipient of this magic can act as though he or she were holding a luckstone and using its magical effects. The material component is 5,000 gold pieces worth of ruby dust sprinkled over the creature’s head; this vanishes after the spell expires."
+    },
+    {
+      "id": "wizard2.drawmijsBreathOfLife",
+      "name": "Drawmij’s Breath of Life",
+      "level": 2,
+      "reversible": false,
+      "castingTime": "1s",
+      "range": "100yds",
+      "duration": "5 Turns",
+      "areaOfEffect": "1 Creature/lvl",
+      "savingThrow": "None",
+      "components": "V",
+      "reference": "GHA",
+      "schools": [
+        "Alteration"
+      ],
+      "wildMagic": false,
+      "description": "With the power of this spell, the mage can endow one or more creatures with sufficient endurance to hold their breath for five full turns. Affected creatures cannot drown or be subject to the effects of inhaled gases while holding their breath. The caster can bestow the spell upon one creature for every level of experience. The spell is only one word long, and has no somatic or material components, so the mage can cast the spell quickly in an emergency."
+    },
+    {
+      "id": "wizard2.drawmijsScentMask",
+      "name": "Drawmij’s Scent Mask",
+      "level": 2,
+      "reversible": false,
+      "castingTime": "2s",
+      "range": "Touch",
+      "duration": "1 turn/lvl",
+      "areaOfEffect": "1 Creature/lvl",
+      "savingThrow": "Special",
+      "components": "V S M",
+      "reference": "GHA",
+      "schools": [
+        "Illusion/Phantasm"
+      ],
+      "wildMagic": false,
+      "description": "This spell will conceal all odors emanating from a creature for the duration of the spell. If cast upon the mage or another person, that person cannot be detected by scent. The recipient of this spell cannot be tracked by an animal or being that uses its sense of smell to track, such as a bloodhound. If cast upon a creature that uses its odor as a weapon or form of defense, the spell negates the odor if the creature fails a save versus spells. The musky odor of a skunk or wolverine or the stench of a troglodyte could be suppressed by the spell. The material component is a scentless flower."
+    },
+    {
+      "id": "wizard2.esp",
+      "name": "ESP",
+      "level": 2,
+      "reversible": false,
+      "castingTime": "2s",
+      "range": 0,
+      "duration": "1rd/lvl",
+      "areaOfEffect": "5yds/lvl (max 90yds)",
+      "savingThrow": "None",
+      "components": "V S M",
+      "reference": "PHB",
+      "schools": [
+        "Diviniation"
+      ],
+      "wildMagic": false,
+      "description": "When an ESP spell is used, the caster is able to detect the surface thoughts of any creatures in range--except for those of undead and creatures without minds (as we know them). The ESP is stopped by 2 feet of rock, 2 inches of any metal other than lead, or a thin sheet of lead foil. The wizard employing the spell is able to probe the surface thoughts of one creature per round, getting simple instinctual thoughts from lower order creatures. Probes can continue on the same creature from round to round or can move on to other creatures. The caster can use the spell to help determine if a creature lurks behind a door, for example, but the ESP does not always reveal what sort of creature it is. If used as part of a program of interrogation, an intelligent and wary subject receives an initial saving throw. If successful, the creature successfully resists and the spell reveals no additional information. If the saving throw is failed, the caster may learn additional information, according to the DM's ruling. The creature's Wisdom adjustment applies, as may additional bonuses up to +4, based on the sensitivity of the information sought. The material component of this spell is a copper piece."
+    },
+    {
+      "id": "wizard2.fascinate",
+      "name": "Fascinate",
+      "level": 2,
+      "reversible": false,
+      "castingTime": "2s",
+      "range": "30ft",
+      "duration": "Special",
+      "areaOfEffect": "One Creature",
+      "savingThrow": "Negates",
+      "components": "V S",
+      "reference": "UA",
+      "schools": [
+        "Illusion/Phantasm"
+      ],
+      "wildMagic": false,
+      "description": "By means of this spell the illusionist attempts to captivate the subject creature’s attention and gain its love, Casting Time: 2 segments ILLUSIONIST SPELLS (2ND LEVEL)friendship, and/or obedience. The spell creates an illusion around the spell caster so that he or she becomes, in the eyes of the subject, a trusted and/or desired companion. Unless a saving throw versus spell is successful, the subject will follow the illusionist wherever he or she goes, if possible without undue risk to life and safety. If the illusionist is able to converse with the fascinated creature, the subject will obey requests from the spell caster as long as a roll of 3d6 per request does not exceed the comeliness of the illusionist. (Requests which are obviously against the better interests of the creature add+ 1 to the dice roll, and the more hazardous and unreasonable of these requests will add from + 2 to + 6 to the dice roll.) The spell is shattered whenever comeliness is exceeded, and the subject will certainly be filled with rage and hate. Creatures of normal sort with animal intelligence will remain fascinated for only a short period of time(1-4 days), but if the illusionist has been careful to treat the subject well, attend to its needs, and feed it, there is a 2% chance per point of comeliness of the illusionist that the subject will willingly choose to befriend and follow him or her. Otherwise, the creature will attack (if it was not cared for) or leave (if it was cared for) when the spell wears off. Non-intelligent creatures are not subject to a fascinate spell (cf.charm person)."
+    },
+    {
+      "id": "wizard2.flamingSphere",
+      "name": "Flaming Sphere",
+      "level": 2,
+      "reversible": false,
+      "castingTime": "2s",
+      "range": "10yds",
+      "duration": "1rd/lvl",
+      "areaOfEffect": "3ft Radius",
+      "savingThrow": "Negates",
+      "components": "V S M",
+      "reference": "PHB",
+      "schools": [
+        "Evocation"
+      ],
+      "wildMagic": false,
+      "description": "A flaming sphere spell creates a burning globe of fire within 10 yards of the caster. This sphere rolls in whichever direction the wizard points, at a rate of 30 feet per round. It rolls over barriers less than 4 feet tall, such as furniture, low walls, etc. Flammable substances are set afire by contact with the sphere. Creatures in contact with the globe must successfully save vs. spell or suffer 2d4 points of fire damage. Those within 5 feet of the sphere's surface must also save or suffer 1d4 points of heat damage. A successful saving throw means no damage is suffered. The DM may adjust the saving throws if there is little or no room to dodge the sphere. The sphere moves as long as the spellcaster actively directs it; otherwise, it merely stays at rest and burns. It can be extinguished by the same means as any normal fire of its size. The surface of the sphere has a spongy, yielding consistency and so does not cause damage except by its flame. It cannot push unwilling creatures aside or batter down large obstacles. The material components are a bit of tallow, a pinch of Sulphur, and a dusting of powdered iron."
+    },
+    {
+      "id": "wizard2.flyingFist",
+      "name": "Flying Fist",
+      "level": 2,
+      "reversible": false,
+      "castingTime": "2s",
+      "range": "10yds/lvl",
+      "duration": "1rd/lvl",
+      "areaOfEffect": "Special",
+      "savingThrow": "None",
+      "components": "V S",
+      "reference": "FRA",
+      "schools": [
+        "Evocation"
+      ],
+      "wildMagic": false,
+      "description": "This spell creates a small, utilitarian hand, normally in the shape of a gloved fist of magical force, which is visible only to the caster (though detect invisible or similar spells will allow others to see it).The hand has a movement rate of 12but it must remain within the range of the spell. It can hover, swoop, and dive at the mental command of the caster. No concentration is required to maintain the fist and it can follow a mage as he moves and fights. If the wizard casts another spell or is knocked unconscious, the fist is dispelled. The fist can perform any one of three tasks: It can grab small falling or floating objects weighing no more than 1 lb., and carry such objects for up to two rounds. The fist does not have the strength or the dexterity to remove items which are tethered, secured, or sheathed, or take items from a characters grasp. The fist can push or slap an opponent, causing that figures next attack to have a 1 penalty to hit.4 6 The fist can physically attack an opponent, causing 1-2 points of damage. The fist hits with the THAC0 of the caster, +2. It is not considered a missile(magical or otherwise).The fist cannot penetrate solid objector pass through walls of force or anti magic barriers. It can be destroyed physically by five points of damage. Its AC is 4if invisible, 7 if the attacker can see it. Destroying the fist does not affect the caster. The flying fist is recorded in more ancient tomes as Alcimers flying fist. Alcimer was extremely proud of the spell and disseminated its secret widely. Soon, so many mages were using it that they dropped Alcimers name from the title. Such is the nature of magical altruism."
+    },
+    {
+      "id": "wizard2.fogCloud",
+      "name": "Fog Cloud",
+      "level": 2,
+      "reversible": false,
+      "castingTime": "2s",
+      "range": "10yds",
+      "duration": "4rds + 1rd/lvl",
+      "areaOfEffect": "Special",
+      "savingThrow": "None",
+      "components": "V S",
+      "reference": "PHB",
+      "schools": [
+        "Alteration"
+      ],
+      "wildMagic": false,
+      "description": "The fog cloud spell can be cast in one of two ways, at the caster's option: as a large, stationary bank of normal fog, or as a harmless fog that resembles the 5th-level wizard spell cloudkill. As a fog bank, this spell creates a fog of any size and shape up to a maximum 20-footcube per caster level. The fog obscures all sight, normal and infravision, beyond 2 feet. As a cloud kill-like fog, this is a billowing mass of ghastly, yellowish-green vapors, measuring 40 feet x 20 feet x 20 feet. This moves away from the caster at 10 feet per round. The vapors are heavier than air and sink to the lowest level, even pouring down sinkholes and den openings. Very thick vegetation breaks up the fog after it has moved20 feet into the vegetation. The only effect of either version is to obscure vision. A strong breeze will disperse either effect in one round, while a moderate breeze will reduce the spell duration by 50%.The spell cannot be cast under water."
+    },
+    {
+      "id": "wizard2.foolsGold",
+      "name": "Fool's Gold",
+      "level": 2,
+      "reversible": false,
+      "castingTime": "1rd",
+      "range": "10yds",
+      "duration": "1hr/lvl",
+      "areaOfEffect": "10cu. in/lvl",
+      "savingThrow": "Special",
+      "components": "V S M",
+      "reference": "PHB",
+      "schools": [
+        "Alteration",
+        "Illusion"
+      ],
+      "wildMagic": false,
+      "description": "Copper coins can temporarily be changed to gold pieces, or brass items turned to solid gold, for the spell duration by means of this magic. The area of effect is 10 cubic inches per level--i.e., a 1-inch x 1-inch x 10-inch volume or equivalent, equal to about 150 gold coins. Any creature viewing the \"gold\" is entitled to a saving throw vs. spell, which can be modified by the creature's Wisdom; for every level of the wizard, the creature must subtract 1 from his dice roll. Thus, it is unlikely that fools' gold will be detected if created by a high-level caster. If the \"gold\" is struck hard by an object of cold-wrought iron, there is a slight chance it will revert to its natural state, depending on the material component used to create the \"gold.\" If a 25-gp citrine is powdered and sprinkled over the metal as this spell is cast, the chance that cold iron will return it to its true nature is 30%; if a 50-gp amber stone is powdered and used, the chance drops to 25%; if a 250-gp topaz is powdered and used, the chance drops to 10%; and if a 500-gp oriental (corundum) topaz is powdered and used, there is only a 1% chance that the cold iron will reveal that it is fools' gold."
+    },
+    {
+      "id": "wizard2.forget",
+      "name": "Forget",
+      "level": 2,
+      "reversible": false,
+      "castingTime": "2s",
+      "range": "30yds",
+      "duration": "Permanent",
+      "areaOfEffect": "1-4 Creatures",
+      "savingThrow": "Negates",
+      "components": "V S",
+      "reference": "PHB",
+      "schools": [
+        "Enchantment/Charm"
+      ],
+      "wildMagic": false,
+      "description": "By means of this spell, the spellcaster causes creatures within the area of effect to forget the events of the previous round (the one minute of time previous to the utterance of the spell). For every three levels of experience of the spellcaster, another minute of past time is forgotten. This does not negate charm, suggestion, geas, quest, or similar spells, but it is possible that the being who placed such magic upon the recipient could be forgotten. From one to four creatures can be affected, at the discretion of the caster. If only one is to be affected, the recipient saves vs. spell with a -2 penalty; if two, they save with -1 penalties; if three or four are to be affected, they save normally. All saving throws are adjusted by Wisdom. A priest's heal or restoration spell, if specially cast for this purpose, will restore the lost memories, as will a limited wish or wish, but no other means will do so."
+    },
+    {
+      "id": "wizard2.ghostPipes",
+      "name": "Ghost Pipes",
+      "level": 2,
+      "reversible": false,
+      "castingTime": "1rd",
+      "range": "Touch",
+      "duration": "Special",
+      "areaOfEffect": "One Onstrument",
+      "savingThrow": "None",
+      "components": "V S",
+      "reference": "FRA",
+      "schools": [
+        "Alteration"
+      ],
+      "wildMagic": false,
+      "description": "When this spell is cast, the mage can cause any one nonmagical musical instrument to play itself. The instrument must be whole and in playing condition. It need not be an instrument that the mage himself can play, but he must be able to softly whistle or hum the desired tune. This tune can be no more than one minute long. Upon releasing the instrument, it glows as if limned with faerie fire and levitates at the level it was released. The various parts of the instrument (keys, valves, strings, etc.) move under the control of the magic. Upon reaching the end of the song, the instrument will repeat the tune over and over until stopped. The ghost pipes stop playing when any living creature touches the instrument. The radiance fades and the instrument slowly settles to the ground. This spell was originally created by Vangerdahast of Suzail, currently royal magician to King Azoun IV. It was made available through the Council of Mages. Royal scuttlebutt claims firmly that the august and puissant Vangerdahast is deeply embarrassed by this early attempt at spell research and would have banned it completely except that His Majesty enjoys the spell as a novelty. The throne room is often filled with an orchestra of levitating, glowing instruments."
+    },
+    {
+      "id": "wizard2.glitterdust",
+      "name": "Glitterdust",
+      "level": 2,
+      "reversible": false,
+      "castingTime": "2s",
+      "range": "10tyds/lvl",
+      "duration": "Special",
+      "areaOfEffect": "20ft Cube",
+      "savingThrow": "Special",
+      "components": "V S M",
+      "reference": "PHB",
+      "schools": [
+        "Conjuration/Summoning"
+      ],
+      "wildMagic": false,
+      "description": "This spell creates a cloud of glittering golden particles within the area of effect. Those in the area must roll a successful saving throw vs. spell or be blinded (-4 penalties to attack rolls, saving throws, and Armor Class) for 1d4+1 rounds. In addition, all within the area are covered by the dust, which cannot be removed and continues to sparkle until it fades. Note that this reveals invisible creatures. The dust fades in 1d4 rounds plus one round per caster level. Thus, glitter dust cast by a 3rd-level wizard lasts for four to seven rounds. The material component is ground mica."
+    },
+    {
+      "id": "wizard2.hornungsBanefulDeflector",
+      "name": "Hornung's Baneful Deflector",
+      "nameAsPrinted": "Hornung's Baneful Deflector*",
+      "level": 2,
+      "reversible": false,
+      "castingTime": "2s",
+      "range": "Touch",
+      "duration": "2rds/lvl",
+      "areaOfEffect": "One Creature",
+      "savingThrow": "None",
+      "components": "V S M",
+      "reference": "TOM",
+      "schools": [
+        "Evocation"
+      ],
+      "wildMagic": true,
+      "description": "This spell partially surrounds the recipient in a shimmering, hemispherical field of force. The field is transparent and moves with the subject, forming a shell about one foot away from his body. The shell serves as a shield against all forms of individually targeted missile attacks (including magic missiles and other spells). The caster designates the position of the shell (protecting the front, rear, side, or top of the recipient). The spell does not protect against area effect spells or other attacks that strike several creatures at once. Whenever an individual missile attack is directed at a protected creature, the baneful deflector activates. Instead of striking the target creature, the missile's target is determined randomly among all creatures within a 15-foot hemisphere of the protected creature, including the protected creature. The missile then changes course toward its new target with normal chances to hit. If the new target is beyond the range of the missile, no target is hit. If the protected creature is struck, the spell immediately fails. If several people are protected by baneful deflector, a missile will change course several times before reaching its target. The material component is a small prism that shatters when the spell is cast."
+    },
+    {
+      "id": "wizard2.hypnoticPattern",
+      "name": "Hypnotic Pattern",
+      "level": 2,
+      "reversible": false,
+      "castingTime": "2s",
+      "range": "30yds",
+      "duration": "Special",
+      "areaOfEffect": "30ft Cube",
+      "savingThrow": "Negates",
+      "components": "S M",
+      "reference": "PHB",
+      "schools": [
+        "Illusion/Phantasm"
+      ],
+      "wildMagic": false,
+      "description": "When this spell is cast, the wizard creates a weaving, twisting pattern of subtle colors in the air. This pattern causes any creature looking at it to become fascinated and stand gazing at it as long as the spellcaster maintains the display, plus two rounds thereafter. The spell can captivate a maximum of 24 levels, or Hit Dice, of creatures (for example,24 creatures with 1 Hit Die each, 12 with 2 Hit Dice, etc.). All creatures affected must be within the area of effect, and each is entitled to a saving throw vs. spell. A damage inflicting attack on an affected creature frees it from the spell immediately. The wizard need not utter a sound, but he must gesture appropriately while holding allowing stick of incense or a crystal rod filled with phosphorescent material."
+    },
+    {
+      "id": "wizard2.improvedPhantasmalForce",
+      "name": "Improved Phantasmal Force",
+      "level": 2,
+      "reversible": false,
+      "castingTime": "2s",
+      "range": "60yds + 10yds/lvl",
+      "duration": "Special",
+      "areaOfEffect": "200sqft",
+      "savingThrow": "Special",
+      "components": "V S M",
+      "reference": "PHB",
+      "schools": [
+        "Illusion/Phantasm"
+      ],
+      "wildMagic": false,
+      "description": "Like the 1st-level phantasmal force spell, this spell creates the illusion of any object, creature, or force, as long as it is within the spell's area of effect. The spellcaster can maintain the illusion with minimal concentration; thus, he can move at half normal speed(but not cast other spells). Some minor sounds are included in the effects of the spell, but not understandable speech. Also, the improved phantasm continues for two rounds after the wizard ceases to concentrate upon it. The material component is a bit of fleece."
+    },
+    {
+      "id": "wizard2.insatiableThirst",
+      "name": "Insatiable Thirst",
+      "level": 2,
+      "reversible": false,
+      "castingTime": "2s",
+      "range": "5yds/lvl",
+      "duration": "1rd/lvl",
+      "areaOfEffect": "One Creature",
+      "savingThrow": "Negates",
+      "components": "V S",
+      "reference": "TOM",
+      "schools": [
+        "Enchantment/Charm"
+      ],
+      "wildMagic": false,
+      "description": "This spell instills in the victim an uncontrollable desire to drink. The victim is allowed a saving throw to avoid the effect. If the roll is failed, the creature must consume any potable liquids it can find (including magical potions, which might result in strange effects if potions are mixed). Although poisons are not considered potable, a victim may not realize that a liquid is poisonous. The victim will not consume a liquid he knows to be poisonous. No matter how much the creature drinks, its magical thirst is not quenched until the spell ends. During this time, the creature can do nothing but drink or look for liquids to drink. Victims of this spell believe they are dying of thirst and (depending upon their nature) may be willing to kill for drinkable fluids."
+    },
+    {
+      "id": "wizard2.invisibility",
+      "name": "Invisibility",
+      "level": 2,
+      "reversible": false,
+      "castingTime": "2s",
+      "range": "Touch",
+      "duration": "Special",
+      "areaOfEffect": "Creature Touched",
+      "savingThrow": "None",
+      "components": "V S M",
+      "reference": "PHB",
+      "schools": [
+        "Illusion/Phantasm"
+      ],
+      "wildMagic": false,
+      "description": "This spell causes the creature touched to vanish from sight and be undetectable by normal vision or even infravision. Of course, the invisible creature is not magically silenced, and certain other conditions can render the creature detectable. Even allies cannot see the invisible creature or his gear, unless these allies can normally see invisible things or employ magic to do so. Items dropped or put down by the invisible creature become visible; items picked up disappear if tucked into the clothing or pouches worn by the creature. Note, however, that light never becomes invisible, although a source of light can become so (thus, the effect is that of a light with no visible source).The spell remains in effect until it is magically broken or dispelled, until the wizard or recipient cancels it, until the recipient attacks any creature, or until 24 hours have passed. Thus, the invisible being can open doors, talk, eat, climb stairs, etc., but if he attacks, he immediately becomes visible, although the invisibility enables him to attack first. Note that the priest spells bless, chant, and prayer are not attacks for this purpose. All highly Intelligent (Intelligence 13 or more) creatures with 10 or more Hit Dice or levels of experience have a chance to detect invisible objects (they roll saving throws vs. spell; success means they noticed the invisible object).The material components of the invisibility spell are an eyelash and a bit of gum Arabic, the former encased in the latter."
+    },
+    {
+      "id": "wizard2.irritation",
+      "name": "Irritation",
+      "level": 2,
+      "reversible": false,
+      "castingTime": "2s",
+      "range": "10yds/lvl",
+      "duration": "Special",
+      "areaOfEffect": "1-4 Creatures",
+      "savingThrow": "Negates",
+      "components": "V S M",
+      "reference": "PHB",
+      "schools": [
+        "Alteration"
+      ],
+      "wildMagic": false,
+      "description": "An irritation spell affects the epidermis of the subject creatures. Creatures with very thick or insensitive skins (such as buffalo, elephants, scaled creatures, etc.) are basically unaffected. There are two versions of the spell, either of which can be cast from the standard preparation: Itching. When cast, this causes each subject to feel an instant itching sensation on some portion of its body. If one round is not immediately spent scratching the irritated area, the creature is so affected that the next three rounds are spent squirming and twisting, effectively worsening its Armor Class by 4 and its attack rolls by 2 during this time. Spell preparations are ruined in the first round this spell is in effect, but not in the following three rounds. Doing nothing but scratching the itch for a full round prevents the rest of the effect. If cast at one creature, the saving throw has a -3 penalty; if cast at two creatures, the saving throw has a -1 penalty; and if cast at three or four creatures, the saving throw is normal. Rash. When a rash is cast, the subject notices nothing for 1d4 rounds, but thereafter its entire skin breaks out in red welts that itch. The rash persists until either a cure disease or dispel magic spell is cast upon it. It lowers Charisma by 1 point per day for each of four days (i.e., maximum Charisma loss is 4 points). After one week, Dexterity is lowered by1 point also. Symptoms vanish immediately upon the removal of the rash, and all statistics return to normal. This can be cast at one creature only, with a saving throw penalty of -2.The material component for this spell is a leaf from poison ivy, oak, or sumac."
+    },
+    {
+      "id": "wizard2.knock",
+      "name": "Knock",
+      "level": 2,
+      "reversible": true,
+      "castingTime": "1s",
+      "range": "60yds",
+      "duration": "Special",
+      "areaOfEffect": "10sqft/lvl",
+      "savingThrow": "None",
+      "components": "V",
+      "reference": "PHB",
+      "schools": [
+        "Alteration"
+      ],
+      "wildMagic": false,
+      "description": "The knock spell opens stuck, barred, locked, held, or wizard-locked doors. It opens secret doors, as well as locked or trick-opening boxes or chests. It also loosens welds, shackles, or chains. If used to open a wizard-locked door, the spell does not remove the former spell, but simply suspends its functioning for one turn. In all other cases, it permanently opens locks or welds--although the former could be closed and locked again later. It does not raise barred gates or similar impediments (such as a portcullis), nor does it affect ropes, vines, and the like. Note that the effect is limited by the area; a 3rd-levelwizard can cast a knock spell on a door of 30 square feet or less (for example, a standard4-ft. x 7-ft. door). Each spell can undo up to two means of preventing egress through a portal. Thus if a door is locked, barred, and held, or triple locked, opening it requires two knock spells. In all cases, the location of the door or item must be known--the spell cannot be used against a wall in hopes of discovering a secret door. The reverse spell, lock, closes and locks a door or similar closure, provided there is a physical mechanism. It does not create a weld, but it locks physically operated locking mechanisms, set bars, and so on, up to two functions. It cannot affect a portcullis."
+    },
+    {
+      "id": "wizard2.knowAlignment",
+      "name": "Know Alignment",
+      "level": 2,
+      "reversible": true,
+      "castingTime": "1rd",
+      "range": "10yds",
+      "duration": "1rd/lvl",
+      "areaOfEffect": "1 creature or Object/2rds",
+      "savingThrow": "Negates",
+      "components": "V S",
+      "reference": "PHB",
+      "schools": [
+        "Diviniation"
+      ],
+      "wildMagic": false,
+      "description": "A know alignment spell enables the wizard to read the aura of a creature or an aligned object (unaligned objects reveal nothing). The caster must remain stationary and concentrate on the subject for two full rounds. A creature is allowed a saving throw vs. Spell and, if successful, the caster learns nothing about that particular creature from the casting. If the caster concentrates on a creature or object for only one round, he can learn only its alignment with respect to law and chaos. Certain magical devices negate the know alignment spell. The reverse, undetectable alignment, conceals the alignment of an object or creature for 24 hours--even from a know alignment spell."
+    },
+    {
+      "id": "wizard2.leomundsTrap",
+      "name": "Leomund's Trap",
+      "level": 2,
+      "reversible": false,
+      "castingTime": "3rds",
+      "range": "Touch",
+      "duration": "Permanent",
+      "areaOfEffect": "Object Touched",
+      "savingThrow": "None",
+      "components": "V S M",
+      "reference": "PHB",
+      "schools": [
+        "Illusion/Phantasm"
+      ],
+      "wildMagic": false,
+      "description": "This false trap is designed to fool a thief or other character attempting to pilfer the spellcaster's goods. The wizard places the spell upon any small mechanism or device, such as a lock, hinge, hasp, screw-on cap, ratchet, etc. Any character able to detect traps, or who uses any spell or device enabling trap detection, is 100% certain a real trap exists. Of course, the spell is illusory and nothing happens if the trap is sprung; its primary purpose is to frighten away thieves or make them waste precious time. The material component of the spell is a piece of iron pyrite touched to the object to be trapped while the object is sprinkled with a special dust requiring 200 gp to prepare. If another Leomund's trap is within 50 feet when the spell is cast, the casting fails."
+    },
+    {
+      "id": "wizard2.levitate",
+      "name": "Levitate",
+      "level": 2,
+      "reversible": false,
+      "castingTime": "2s",
+      "range": "20yds/lvl",
+      "duration": "1 turn/lvl",
+      "areaOfEffect": "1 creature or Object",
+      "savingThrow": "Negates",
+      "components": "V S M",
+      "reference": "PHB",
+      "schools": [
+        "Alteration"
+      ],
+      "wildMagic": false,
+      "description": "When a levitate spell is cast, the wizard can place it upon his person, an object, or a single creature, subject to a maximum weight limit of 100 pounds per level of experience(for example, a 3rd-level wizard can levitate a maximum of 300 pounds). If the spell is cast upon the wizard, he can move vertically up or down at a movement rate of 2 per round. If cast upon an object or another creature, the wizard can levitate it at the same speed, according to his command. This spell does not empower horizontal movement, but the recipient could push along the face of a cliff, for example, to move laterally. The spellcaster can cancel the spell as desired. If the subject of the spell is unwilling, or the object is in the possession of a creature, a saving throw vs. spell is allowed to determine if the levitate spell affects it. Once cast, the spell requires no concentration, except when changing height. A levitating creature attempting to use a missile weapon finds himself increasingly unstable; the first attack has an attack roll penalty of -1, the second -2, the third -3, etc., up to a maximum of -5. A full round spent stabilizing allows the creature to begin again at -1. Lack of leverage makes it impossible to cock a medium or heavy crossbow. The material component of this spell is either a small leather loop or a piece of golden wire bent into a cup shape with a long shank on one end."
+    },
+    {
+      "id": "wizard2.locateObject",
+      "name": "Locate Object",
+      "level": 2,
+      "reversible": true,
+      "castingTime": "2s",
+      "range": 0,
+      "duration": "1rd/lvl",
+      "areaOfEffect": "2-yds/lvl",
+      "savingThrow": "None",
+      "components": "V S M",
+      "reference": "PHB",
+      "schools": [
+        "Diviniation"
+      ],
+      "wildMagic": false,
+      "description": "This spell aids in locating a known or familiar object. The wizard casts the spell, slowly turns, and senses when he is facing in the direction of the object to be located, provided the object is within range (i.e., 60 yards for 3rd-level wizards, 80 yards for 4th,100 yards for 5th, etc.). The spell can locate such objects as apparel, jewelry, furniture, tools, weapons, or even a ladder or stairway. Note that attempting to find a specific item, such as jewelry or a crown, requires an accurate mental image; if the image is not close enough to the actual, the spell does not work. Desired but unique objects cannot be located by this spell unless they are known by the caster. The spell is blocked by lead. Creatures cannot be found by this spell. The material component is a forked twig. The reversal, obscure object, hides an object from location by spell, crystal ball, or similar means for eight hours. Creatures cannot be affected by this spell. The material component is a chameleon skin."
+    },
+    {
+      "id": "wizard2.magicMouth",
+      "name": "Magic Mouth",
+      "level": 2,
+      "reversible": false,
+      "castingTime": "2s",
+      "range": "10yds",
+      "duration": "Special",
+      "areaOfEffect": "1 Object",
+      "savingThrow": "None",
+      "components": "V S M",
+      "reference": "PHB",
+      "schools": [
+        "Alteration"
+      ],
+      "wildMagic": false,
+      "description": "When this spell is cast, the wizard imbues the chosen object with an enchanted mouth that suddenly appears and speaks its message when a specified event occurs. The message, which must be of 25 words or less, can be in any language known by the spellcaster, and can be delivered over a period of one turn. The mouth cannot speak magical spells or use command words. It does, however, move to the words articulated--if it is placed upon a statue, the mouth of the statue would actually move and appear to speak. Of course, the magic mouth can be placed upon a tree, rock, door, or any other object, excluding intelligent members of the animal or vegetable kingdoms. The spell functions when specific conditions are fulfilled, according to the command of the spellcaster. Some examples are to speak \"to the first creature that touches you,\" or \"to the first creature that passes within 30 feet.\" Commands can be as general or as detailed as desired, although only visual and audible triggers can be used, such as the following: \"Speak only when a venerable female human carrying a sack of groat clusters sits crosslegged within 1 foot.\" Such visual triggers can react to a character using the disguise ability. Command range is 5 yards per level of the wizard, so a 6th-level wizard can command the magic mouth to speak at a maximum encounter range of 30 yards(\"Speak when a winged creature comes within 30 yards.\"). The spell lasts until the speak command can be fulfilled; thus, the spell duration is variable. A magic mouth cannot distinguish invisible creatures, alignments, level, Hit Dice, or class, except by external garb. If desired, the effect can be keyed to a specific noise or spoken word. The material component of this spell is a small bit of honeycomb."
+    },
+    {
+      "id": "wizard2.maximiliansEarthenGrasp",
+      "name": "Maximilian's Earthen Grasp",
+      "level": 2,
+      "reversible": false,
+      "castingTime": "2s",
+      "range": "10yds + 10yds/lvl",
+      "duration": "3rds + 1rd/lvl",
+      "areaOfEffect": "One Creature",
+      "savingThrow": "Special",
+      "components": "V S M",
+      "reference": "TOM",
+      "schools": [
+        "Evocation"
+      ],
+      "wildMagic": false,
+      "description": "This spell causes an arm made of compacted soil to rise from the ground. The spell must be cast on open turf, such as a grassy field or a dirt floor. The earthen arm and hand (which are about the same size as a normal human limb)arise from the ground beneath one creature targeted by the caster. The hand attempts to grasp the creature's leg. The victim must attempt a saving throw; if successful, the hand sinks into the ground. Each round thereafter (until the spell ends or the target moves out of spell range), the hand has a 5% chance per level of the caster of reappearing beneath the targeted creature, at which time another saving throw is required. If a saving throw is missed, the earthen limb firmly grasps and holds the creature in place. An individual held by the hand suffers a movement rate of 0, Armor Class penalty of -2, and attack penalty of -2. All Dexterity combat bonuses are negated. The hand causes no physical damage to the victim. The arm may be attacked by any creature, including the arm's victim. The arm has AC 5 and hit points equal to double the caster's maximum hit points. For example, a caster who normally has 15 hit points can create an earthen hand with 30 hit points. The maximum number of hit points that an earthen hand may have is 40. When the arm's hit points are reduced to zero or when the spell duration ends, the hand crumbles. The material component is a miniature hand sculpted from clay, which crumbles to dust when the spell is cast."
+    },
+    {
+      "id": "wizard2.melfsAcidArrow",
+      "name": "Melf's Acid Arrow",
+      "level": 2,
+      "reversible": false,
+      "castingTime": "2s",
+      "range": "180yds",
+      "duration": "Special",
+      "areaOfEffect": "1 target",
+      "savingThrow": "Special",
+      "components": "V S M",
+      "reference": "PHB",
+      "schools": [
+        "Conjuration"
+      ],
+      "wildMagic": false,
+      "description": "By means of this spell, the wizard creates a magical arrow that speeds to its target as if fired from the bow of a fighter of the same level as the wizard. No modifiers for range, nonproficiency, or specialization are used. The arrow has no attack or damage bonus, but it inflicts 2d4 points of acid damage (with saving throws for items on the target); there is no splash damage. For every three levels that the caster has achieved, the acid, unless somehow neutralized, lasts for another round, inflicting another 2d4 points of damage each round. So at 3rd-5th level, the acid lasts two rounds; at 6th-8th level, the acid lasts for three rounds, etc. The material components of the spell are a dart, powdered rhubarb leaf, and an adder's stomach."
+    },
+    {
+      "id": "wizard2.mirrorImage",
+      "name": "Mirror Image",
+      "level": 2,
+      "reversible": false,
+      "castingTime": "2s",
+      "range": 0,
+      "duration": "3rds/lvl",
+      "areaOfEffect": "6ft Radius",
+      "savingThrow": "None",
+      "components": "V S",
+      "reference": "PHB",
+      "schools": [
+        "Illusion/Phantasm"
+      ],
+      "wildMagic": false,
+      "description": "When a mirror image spell is invoked, the spellcaster causes from two to eight exact duplicates of himself to come into being around him. These images do exactly what the wizard does. Since the spell causes a blurring and slight distortion when it is cast, it is impossible for opponents to be certain which are the illusions and which is the actual wizard. When an image is struck by a melee or missile attack, magical or otherwise, it disappears, but any other existing images remain intact until struck. The images seem to shift from round to round, so that if the actual wizard is struck during one round, he cannot be picked out from among his images the next. To determine the number of images that appear, roll 1d4 and add 1 for every three levels of experience the wizard has achieved, to a maximum of eight images. At the end of the spell duration, all surviving images wink out."
+    },
+    {
+      "id": "wizard2.misdirection",
+      "name": "Misdirection",
+      "level": 2,
+      "reversible": false,
+      "castingTime": "2s",
+      "range": "30yds",
+      "duration": "8hrs",
+      "areaOfEffect": "1 creature or object",
+      "savingThrow": "Negates",
+      "components": "V S",
+      "reference": "PHB",
+      "schools": [
+        "Illusion/Phantasm"
+      ],
+      "wildMagic": false,
+      "description": "By means of this spell, the wizard misdirects the information from a detection spell(detect charm, detect evil, detect invisibility, detect lie, detect magic, detect snares and pits, etc.). While the detection spell functions, it indicates the wrong area, creature, or the opposite of the truth with respect to detect evil or detect lie. The wizard directs the spell effect upon the object of the detection spell. If the caster of the detection spell fails his saving throw vs. spell, the misdirection takes place. Note that this spell does not affect other types of divination (know alignment, augury, ESP, clairvoyance, etc.)."
+    },
+    {
+      "id": "wizard2.mordenkainensEncompassingVision",
+      "name": "Mordenkainen’s Encompassing Vision",
+      "level": 2,
+      "reversible": false,
+      "castingTime": "1rd",
+      "range": "Touch",
+      "duration": "1hr/lvl",
+      "areaOfEffect": "Creature Touched",
+      "savingThrow": "None",
+      "components": "V S M",
+      "reference": "GHA",
+      "schools": [
+        "Alteration"
+      ],
+      "wildMagic": false,
+      "description": "This spell grants a creature a full 360 degrees of vision, so the creature can see sides and rear as well as it sees to the front. The creature cannot be surprised from the rear by any attacker the creature can see normally. The spell will work in combination with any sort of enhanced or magical vision, including infravision, ultravision, or x-ray vision. A creature with both detect invisibility and encompassing vision can see invisible, ethereal, or astral beings from the flank or rear as well. The person affected by this spell also has a -2 penalty on all saving throws vs. gas attacks. The material component is a crystal disc with eight eyes inscribed upon it, spaced at 45degree intervals around the edge of the disc."
+    },
+    {
+      "id": "wizard2.nahalsNonsensicalNullifier",
+      "name": "Nahal's Nonsensical Nullifier",
+      "nameAsPrinted": "Nahal's Nonsensical Nullifier*",
+      "level": 2,
+      "reversible": false,
+      "castingTime": "2s",
+      "range": "Touch",
+      "duration": "1d6rds + 1rd/lvl",
+      "areaOfEffect": "Creature Touched",
+      "savingThrow": "None",
+      "components": "V S M",
+      "reference": "TOM",
+      "schools": [
+        "Abjuration"
+      ],
+      "wildMagic": true,
+      "description": "This spell scrambles the aura of the affected creature, giving random results to know alignment, detect evil, and detect lie spells cast on that creature. When a protected creature is the focus of one of these divinations, the information gained is randomly determined. Thus, if know alignment is used against a chaotic evil creature protected by the nonsensical nullifier, the response could be any alignment combination. If two characters both use the same divination on the same target, two random results are generated. A new random result is generated each round; thus, continued observation of a protected creature usually results in different answers. The table below should be used to determine the random alignment.D10Roll Alignment1 Lawful Good2 Lawful Neutral3 Lawful Evil4 Neutral Good5 Neutral6 Neutral Evil7 Chaotic Good8 Chaotic Evil9 Chaotic Neutral10 No alignment The material component is a small amount of egg yolk smeared into the hair of the recipient."
+    },
+    {
+      "id": "wizard2.nystulsBlackmote",
+      "name": "Nystul’s Blackmote",
+      "level": 2,
+      "reversible": false,
+      "castingTime": "1rd",
+      "range": "30yds + 5yds/lvl",
+      "duration": "Special",
+      "areaOfEffect": "Special",
+      "savingThrow": "None",
+      "components": "V S M",
+      "reference": "GHA",
+      "schools": [
+        "Evocation"
+      ],
+      "wildMagic": false,
+      "description": "This spell summons a microscopic mote of energy from the Negative Material Plane to the caster’s hand. The caster must immediately roll a saving throw versus death magic at +2 to be able to control the black mote. If the caster saves, the black mote will lie dormant in the mage’s hand for one round, building up power. The caster can do nothing else during this period, a she or she must concentrate fully on the blackmote. If the caster's concentration is broken during this time, The blackmote is dispelled. At the end of the round, the spell is at full power, and the blackmote can be hurled at a creature within the range of the spell. The blackmote automatically strikes, exploding in a burst of darkness and cold, inflicting2d6 damage plus one point of damage per level of the caster. Undead and creatures from the Negative Material Plane or lower outer planes are unaffected by a blackmote. If the caster fails the initial save versus death magic, the mage loses control of the mote. It immediately explodes in the caster’s hand, inflicting one point of damage and paralyzing the mage for ld4 rounds. The material component is a sliver of bone taken from an undead skeleton."
+    },
+    {
+      "id": "wizard2.nystulsBlazingBeam",
+      "name": "Nystul’s Blazing Beam",
+      "level": 2,
+      "reversible": false,
+      "castingTime": "2s",
+      "range": "30yds +10yds/lvl",
+      "duration": "Instantaneous",
+      "areaOfEffect": "One Creature",
+      "savingThrow": "Special",
+      "components": "V S",
+      "reference": "GHA",
+      "schools": [
+        "Evocation"
+      ],
+      "wildMagic": false,
+      "description": "This spell draws a parcel of energy from the positive material plane to the caster's hand, which can be fired in a ray 1‘ wide and up to 30’ +l0’Aevel of the caster in range. Except for undead, a creature struck by the beam is entitled to a saving throw. A creature that successfully saves is struck by a glancing shot and is only dazed for ld4 rounds, suffering a - 2 penalty on hit rolls and a +2 penalty to armor class. A creature that fails is struck full in the face by the beam and is blinded for 2d4 rounds, suffering a -4 penalty on hit rolls and a+4 penalty to AC. An undead creature struck by the beam is not entitled to a save, and is not dazed or blinded, but suffers4d6 points of damage."
+    },
+    {
+      "id": "wizard2.nystulsCrystalDagger",
+      "name": "Nystul’s Crystal Dagger",
+      "level": 2,
+      "reversible": false,
+      "castingTime": "2s",
+      "range": 0,
+      "duration": "2rds + 1rd/lvl",
+      "areaOfEffect": "Special",
+      "savingThrow": "None",
+      "components": "V S M",
+      "reference": "GHA",
+      "schools": [
+        "Evocation",
+        "Conjuration"
+      ],
+      "wildMagic": false,
+      "description": "This spell summons into the caster's hand a dagger composed of material from the quasi-elemental plane of mineral, strongly infused with energy drawn from the Positive Material Plane. The crystal dagger has no hit bonus and inflicts ld4 +2 points of damage to opponents struck in melee. Against undead and creatures from the lower outer planes, the dagger inflictsld4 + 3 points of damage. If the crystal dagger does maximum damage to an undead or a lower plane creature, that monster is paralyzed for the next melee round and the dagger vanishes. The material component is a tiny dagger made from fine lead crystal, worth 250 g.p."
+    },
+    {
+      "id": "wizard2.otilukesBoilingOilBath",
+      "name": "Otiluke’s Boiling Oil Bath",
+      "level": 2,
+      "reversible": false,
+      "castingTime": "2s",
+      "range": "60yds",
+      "duration": "1 segment",
+      "areaOfEffect": "One Creature",
+      "savingThrow": "Negates",
+      "components": "V S M",
+      "reference": "GHA",
+      "schools": [
+        "Evocation",
+        "Conjuration"
+      ],
+      "wildMagic": false,
+      "description": "This spell creates a cauldron shaped container of force filled with boiling oil, which appears over the target’s head. The cauldron will dump its contents onto the creature unless a save versus spells is made. Success with the saving throw means the creature is aware of the cauldron’s sudden appearance and leaps clear before the oil is poured. A creature who fails the save takes the full dose of boiling oil, suffering 3d4 heat damage. The material components are a few drops of oil and a pinch of sulfur."
+    },
+    {
+      "id": "wizard2.ottosSoothingVibrations",
+      "name": "Otto’s Soothing Vibrations",
+      "level": 2,
+      "reversible": false,
+      "castingTime": "2rds",
+      "range": "60yds",
+      "duration": "1rd/lvl",
+      "areaOfEffect": "20ft Radius sphere",
+      "savingThrow": "Special",
+      "components": "V",
+      "reference": "GHA",
+      "schools": [
+        "Enchantment/Charm"
+      ],
+      "wildMagic": false,
+      "description": "As the mage casts the spell, all creatures in the area of effect begin to hear soothing vibrations that cause them to pause and listen. As the music continues, the creatures feel the mage broadcasting peaceful, kindly thoughts to them. The creatures will do nothing for one round until the mage is finished casting the spell. Thereafter, all animals in the area of effect of semi-intelligence or lower will feel kindly to the mage, and show no aggression or fear unless attacked first. All other creatures are entitled to a saving throw at +2 to avoid the spell's lulling effect. All animals and those creatures who fail the save are more susceptible to charm spells cast before the spell’s duration ends, and suffer a -2 penalty against any charm spell cast upon them, such as animal friendship, charm person or mammal, or charm monster: There is no somatic or material component to the spell, just the soothing, vibrating voice of the caster."
+    },
+    {
+      "id": "wizard2.ottosTonesOfForgetfulness",
+      "name": "Otto’s Tones of Forgetfulness",
+      "level": 2,
+      "reversible": false,
+      "castingTime": "2s",
+      "range": "10yds/lvl",
+      "duration": "1 turn/lvl",
+      "areaOfEffect": "One Creature",
+      "savingThrow": "Special",
+      "components": "V S M",
+      "reference": "GHA",
+      "schools": [
+        "Enchantment/Charm"
+      ],
+      "wildMagic": false,
+      "description": "When the mage casts this spell, the ears of the target creature are filled with exotic tones no one else can hear. Unless the creature makes its saving throw, the creature will lose all memory of nonweapon proficiencies known by the creature, and any attempt to use such a proficiency will meet with automatic failure. If the creature’s save is successful, the creature merely suffers a + 2 penalty to the chance of success with anon-weapon proficiency for the duration of the spell. The material components are a string from a sitar and a wooden mallet."
+    },
+    {
+      "id": "wizard2.pastLife",
+      "name": "Past Life",
+      "level": 2,
+      "reversible": false,
+      "castingTime": "1rd",
+      "range": "Touch",
+      "duration": "Special",
+      "areaOfEffect": "One Creature",
+      "savingThrow": "None",
+      "components": "V S",
+      "reference": "TOM",
+      "schools": [
+        "Diviniation"
+      ],
+      "wildMagic": false,
+      "description": "By touching the remains of a dead creature, this spell allows a caster to gain a mental image of the deceased's former appearance. The remains can be of any age and only a tiny fragment is required, such as a bone splinter or a strand of hair. When cast by a wizard of at least 7th level, he is able to view the final minute of the subject's life from the subject's point of view. When cast by a wizard of at least 9th level, a personal possession (a ring, a favorite walking stick, etc.) may be substituted for bodily remains."
+    },
+    {
+      "id": "wizard2.preserve",
+      "name": "Preserve",
+      "level": 2,
+      "reversible": false,
+      "castingTime": "2rds",
+      "range": "Touch",
+      "duration": "Permanent",
+      "areaOfEffect": "1/2cubic ft/lvl",
+      "savingThrow": "None",
+      "components": "V S M",
+      "reference": "UA",
+      "schools": [
+        "Abjuration"
+      ],
+      "wildMagic": false,
+      "description": "A preserve spell enables the caster to retain some item fresh and whole until some later time when it is needed in a spell. Of course, the dweomer is ineffective in retaining the potency of material such as mistletoe, holly berries, and similar stuffs which must be gathered periodically. It is likewise ineffective in preserving the deceased for later resurrection. It is otherwise effectual. The sort of material which can be treated by a preserve spell depends upon the level of the caster: Hard, relatively dry material: 2nd-4th level Soft, relatively wet material: 5th-7th level Semi-liquid and liquid materials: 8th level & up A container is necessary only in cases where a relatively high degree of moisture is concerned. The material components of the spell are a pinch of dust, a bit of resin (or amber), and a drop of brandy."
+    },
+    {
+      "id": "wizard2.protectionFromCantrips",
+      "name": "Protection From Cantrips",
+      "level": 2,
+      "reversible": false,
+      "castingTime": "1rd",
+      "range": "Touch",
+      "duration": "5hrs + 1hr/lvl",
+      "areaOfEffect": "Creature or object touched",
+      "savingThrow": "None",
+      "components": "V S",
+      "reference": "PHB",
+      "schools": [
+        "Abjuration"
+      ],
+      "wildMagic": false,
+      "description": "By casting this spell, the wizard receives immunity to the effects of cantrips cast by other wizards, apprentices, or creatures that use the cantrip spell. The spell protects the caster, or one item or person that he touches (such as a spell book or a drawer containing spell components). Any cantrip cast against the protected person or item dissipates with an audible popping sound. This spell is often used by a wizard who has mischievous apprentices, or one who wishes apprentices to clean or shine an area using elbow grease rather than magic. Any unwilling target of this spell must be touched (via an attack roll)and is allowed a saving throw vs. spell to escape the effect."
+    },
+    {
+      "id": "wizard2.protectionFromParalysis",
+      "name": "Protection From Paralysis",
+      "level": 2,
+      "reversible": false,
+      "castingTime": "2s",
+      "range": "Touch",
+      "duration": "1 turn/lvl",
+      "areaOfEffect": "One Creature",
+      "savingThrow": "None",
+      "components": "V S M",
+      "reference": "TOM",
+      "schools": [
+        "Abjuration"
+      ],
+      "wildMagic": false,
+      "description": "The recipient of this spell receives total immunity to magical paralysis. Spells such as hold person and slow have no effect on the individual. This spell also provides protection against the paralysis attacks of monsters (a ghoul's touch, for example). This spell offers no protection against physical damage. The material component is a bit of cloth taken from a priest's robes."
+    },
+    {
+      "id": "wizard2.pyrotechnics",
+      "name": "Pyrotechnics",
+      "level": 2,
+      "reversible": false,
+      "castingTime": "2s",
+      "range": "120yds",
+      "duration": "Special",
+      "areaOfEffect": "1 fire source",
+      "savingThrow": "None",
+      "components": "V S M",
+      "reference": "PHB",
+      "schools": [
+        "Alteration"
+      ],
+      "wildMagic": false,
+      "description": "A pyrotechnics spell draws on an existing fire source to produce one of two effects, at the option of the caster. First, it can produce a flashing and fiery burst of glowing, colored aerial fireworks that lasts one round. This effect temporarily blinds those creatures in, under, or within 120 feet of the area and that have an unobstructed line of sight to the burst. Creatures viewing this are blinded for 1d4+1 rounds unless they successfully save vs. spell. The fireworks fill a volume 10 times greater than that of the original fire source. This spell can also cause a thick, writhing stream of smoke to arise from the source and form a choking cloud that lasts for one round per experience level of the caster. This covers a roughly spherical volume from the ground or floor up (or conforming to the shape of a confined area) that totally obscures vision beyond 2 feet. The smoke fills a volume 100 times that of the fire source. All within the cloud must roll successful saving throws vs. spell or suffer -2 penalties to all combat rolls and Armor Class. The spell uses one fire source within a 20-foot cube, which is immediately extinguished. An extremely large fire used as a source might be only partially extinguished. Magical fires are not extinguished, although a fire-based creature (such as afire elemental) used as a source suffers 1 point of damage per caster level."
+    },
+    {
+      "id": "wizard2.quimbysEnchantingGourmet",
+      "name": "Quimby’s Enchanting Gourmet",
+      "level": 2,
+      "reversible": false,
+      "castingTime": "2s",
+      "range": 0,
+      "duration": "1hr + 1turn/lvl",
+      "areaOfEffect": "40ft Radius",
+      "savingThrow": "None",
+      "components": "V S M",
+      "reference": "FRA",
+      "schools": [
+        "Conjuration/Summoning"
+      ],
+      "wildMagic": false,
+      "description": "This specialized version of the unseen servant was developed with one particular task in mind cooking and cleaning in the kitchen while its creator is otherwise occupied. The enchanting gourmet is a magical force under the control of the mage. It can perform simple kitchen actions like stirring, carrying, measuring, cutting, and minding the fire. It is no stronger than an unseen servant and no more dextrous than its creator. The enchanting gourmet can be left to cook on its own, provided that it is cooking a meal that the mage himself has prepared at some point in his life. If something disrupts the smooth flow of the meal (such as the arrival of a dragon or an explosion in the kitchen),the enchanting gourmet will seek the advice of its creator. The enchanting gourmet can be dispelled by the caster at will, by a dispel magic spell, or by taking 6 points of damage from area effect attacks such as breath weapons, explosions, and the like. The enchanting gourmet cannot be used to brew potions and other magical drinks, but has been used to generate simple poisons and in one case to serve as a bartender. The creator of this spell, Quimby of Procampur, was an impatient cook but a lover of fine food in quantity. The spell is not one normally studied by adventuring mages but is often used by retired sages and other sedentary types. The material components of this spell are a block of wood and some string."
+    },
+    {
+      "id": "wizard2.rarysAptitudeAppropriater",
+      "name": "Rary’s Aptitude Appropriater",
+      "level": 2,
+      "reversible": false,
+      "castingTime": "1rd",
+      "range": "Touch",
+      "duration": "1 turn/lvl",
+      "areaOfEffect": "Special",
+      "savingThrow": "Special",
+      "components": "V S",
+      "reference": "GHA",
+      "schools": [
+        "Diviniation",
+        "Alteration"
+      ],
+      "wildMagic": false,
+      "description": "By using this spell, the mage can temporarily acquire the ability to use a nonweapon proficiency known to another creature. The caster must touch the creature already possessing the desired skill. If the creature is willing to transfer his knowledge of the proficiency, the transfer takes place without difficulty. If the creature is unwilling to transfer the proficiency, the creature is entitled to a saving throw versus spells to prevent the transfer from occurring. The creature touched does not lose his knowledge of the proficiency, but merely allows the caster to know the proficiency as well. Only nonweapon proficiencies can be transferred by the spell. Other skills, abilities, powers, or types of knowledge will not transfer. The mage’s level of ability with the proficiency is exactly that of the original owner, even if the appropriate ability for the proficiency differs between the caster and creature."
+    },
+    {
+      "id": "wizard2.rayOfEnfeeblement",
+      "name": "Ray of Enfeeblement",
+      "level": 2,
+      "reversible": false,
+      "castingTime": "2s",
+      "range": "10yds + 5yds/lvl",
+      "duration": "1rd/lvl",
+      "areaOfEffect": "1 creature",
+      "savingThrow": "Negates",
+      "components": "V S",
+      "reference": "PHB",
+      "schools": [
+        "Enchantment/Charm"
+      ],
+      "wildMagic": false,
+      "description": "By means of a ray of enfeeblement, a wizard weakens an opponent, reducing its Strength and thereby the attacks that rely upon it. Humans, demihumans, and humanoids of man-size or less are reduced to an effective Strength of 5, losing all Strength bonuses and suffering an attack roll penalty of -2 and a -1 penalty to damage. Other creatures suffer a penalty of -2 on attack rolls. Furthermore, they have a -1 penalty for each die of damage they inflict. (But no damage roll can inflict less than 1 point per die of damage.)Your DM will determine any other effects appropriate to the affected creature. If the target creature makes its saving throw, the spell has no effect. This spell does not affect combat bonuses due to magical items, and those conferring increased Strength function normally."
+    },
+    {
+      "id": "wizard2.rideTheWind",
+      "name": "Ride the Wind",
+      "level": 2,
+      "reversible": false,
+      "castingTime": "2s",
+      "range": "5yds/lvl",
+      "duration": "1 turn/lvl",
+      "areaOfEffect": "One Creature/lvl",
+      "savingThrow": "Negates",
+      "components": "V S M",
+      "reference": "TOM",
+      "schools": [
+        "Alteration"
+      ],
+      "wildMagic": false,
+      "description": "This spell allows creatures targeted by the caster to become virtually weightless and be lifted upon the wind. Affected creatures can control their altitude by rising or descending at a movement rate of 12, but are at the mercy of the wind for speed and direction. Recipients can stop forward movement only by grasping something to anchor them in place. If no wind is present, this spell has no effect. Unwilling targets are allowed a saving throw to resist the effect. Each subject and his equipment must weigh less than 100 pounds per level of the caster. Thus, a 6th-level wizard could affect six creatures each weighing 600lbs. or less. This spell may be cast only on living creatures. The material components are a small handful of straw and a dry leaf."
+    },
+    {
+      "id": "wizard2.ropeTrick",
+      "name": "Rope Trick",
+      "level": 2,
+      "reversible": false,
+      "castingTime": "2s",
+      "range": "Touch",
+      "duration": "2 turns/lvl",
+      "areaOfEffect": "Special",
+      "savingThrow": "None",
+      "components": "V S M",
+      "reference": "PHB",
+      "schools": [
+        "Alteration"
+      ],
+      "wildMagic": false,
+      "description": "When this spell is cast upon a piece of rope from 5 to 30 feet long, one end of the rope rises into the air until the whole rope hangs perpendicular, as if affixed at the upper end. The upper end is, in fact, fastened to an extradimensional space. The spellcaster and up to seven others can climb up the rope and disappear into this place of safety where no creature can find them. The rope can be taken into the extradimensional space if fewer than eight persons have climbed it; otherwise, it simply stays hanging in the air(extremely strong creatures might be able to remove it, at the DM's option). Spells cannot be cast across the interdimensional interface, nor can area effects cross it. Those in the extradimensional space can see out of it as if there were a 3-foot x 5-foot window centered on the rope. The persons in the extradimensional space must climb down prior to the end of the spell, or they are dropped from the height at which they entered the extradimensional space. The rope can be climbed by only one person at a time. Note that the rope trick spell enables climbers to reach a normal place if they do not climb all the way to the extradimensional space. Also note that creating or taking extradimensional spaces into an existing extradimensional space is hazardous. The material components of this spell are powdered corn extract and a twisted loop of parchment."
+    },
+    {
+      "id": "wizard2.scare",
+      "name": "Scare",
+      "level": 2,
+      "reversible": false,
+      "castingTime": "2s",
+      "range": "30yds + 10yds/lvl",
+      "duration": "1d4 rds + 1rd/lvl",
+      "areaOfEffect": "15ft Radius",
+      "savingThrow": "Special",
+      "components": "V S M",
+      "reference": "PHB",
+      "schools": [
+        "Enchantment/Charm"
+      ],
+      "wildMagic": false,
+      "description": "This spell causes creatures with fewer than 6 Hit Dice or levels of experience to fall into fits of trembling and shaking. The frightened creatures have a -2 reaction adjustment and may drop items held if encumbered. If cornered, they fight, but with -1 penalties to attack rolls, damage rolls, and saving throws. Only elves, half-elves, and priests are allowed saving throws against this spell. Note that this spell has no effect on the undead (skeletons, zombies, ghouls, and so on), or on upper or lower planar creatures of any sort. The material component used for this spell is a bit of bone from an undead skeleton, zombie, ghoul, ghasts, or mummy."
+    },
+    {
+      "id": "wizard2.senseShifting",
+      "name": "Sense Shifting",
+      "level": 2,
+      "reversible": false,
+      "castingTime": "2s",
+      "range": 0,
+      "duration": "3 turns",
+      "areaOfEffect": "The Caster",
+      "savingThrow": "None",
+      "components": "V S M",
+      "reference": "TOM",
+      "schools": [
+        "Alteration"
+      ],
+      "wildMagic": false,
+      "description": "Sense shifting allows the wizard to affect all spells of levels 1 through 3 that he casts within the duration of the spell. For each spell, he can modify one of three sensory features pertaining to the spell: color, sound, or patterned visual appearance of the spell effect. The changes produced by this spell do not affect the functions of the affected spell nor any saving throws that apply against their effects. Sense shifting might be used to produce green fireballs, magic missiles that streak through the air with a scream, colored continual light globes, customized designs for a hypnotic pattern, or a spectral hand that makes scrabbling sounds as it attempts to grasp a target. Sense shifting cannot create any form of invisibility. It cannot completely silence a spell effect (thus, a fireball's blast might be muted, but not wholly eliminated).The material component is a twist of multi-colored ribbon with a small silver bell fastened to its end."
+    },
+    {
+      "id": "wizard2.shatter",
+      "name": "Shatter",
+      "level": 2,
+      "reversible": false,
+      "castingTime": "2s",
+      "range": "30yds + 10yds/lvl",
+      "duration": "Instantaneous",
+      "areaOfEffect": "3ft Radius",
+      "savingThrow": "Negates",
+      "components": "V S M",
+      "reference": "PHB",
+      "schools": [
+        "Alteration"
+      ],
+      "wildMagic": false,
+      "description": "The shatter spell is a sound-based attack that affects nonmagical objects of crystal, glass, ceramic, or porcelain, such as vials, bottles, flasks, jugs, windows, mirrors, etc. All such objects within a 3-foot radius of the center of the spell effect are smashed into dozens of pieces by the spell. Objects weighing more than one pound per level of the caster are not affected, but all other objects of the appropriate composition must save vs. Crushing blow or be shattered. Alternatively, the spell can be focused against a single item of up to 10 pounds per caster level. Crystalline creatures usually suffer 1d6 points of damage per caster level to a maximum of 6d6, with a saving throw vs. spell for half damage. The material component of this spell is a chip of mica."
+    },
+    {
+      "id": "wizard2.snillocsSnowballSwarm",
+      "name": "Snilloc’s Snowball Swarm",
+      "level": 2,
+      "reversible": false,
+      "castingTime": "2s",
+      "range": "10yds/lvl",
+      "duration": "Instantaneous",
+      "areaOfEffect": "30ft Radius",
+      "savingThrow": "Save for Half",
+      "components": "V S M",
+      "reference": "FRA",
+      "schools": [
+        "Evocation"
+      ],
+      "wildMagic": false,
+      "description": "By means of this spell the caster causes a flurry of magical snowballs to erupt from a point within his range. The snowballs fly in all directions, hitting everything in the area of effect (including the caster) and causing 1-3 points of damage per level of the caster (to a maximum of 8d3). Against fire-using and fire-dwelling creatures, the spell inflicts 1-6 points of damage per level of the caster (again to a maximum of 8 dice of damage).Unlike the higher-level fireball, the snowball swarm is completely contained within its area of effect. Obstructions and low ceilings do not cause the cloud of snowballs to deform they just hit the walls and splatter. These snowballs are considered normal missiles when determining the effects of protection spells. However, all targets are considered AC10 against the snowballs; only Dexterity modifiers apply. This spell is much less powerful than the fireball spell, but useful where the dimensions of the area of effect are unknown  or  against fire using or fire-dwelling creatures. The material component of this spell is a chunk of ice or a single pearl."
+    },
+    {
+      "id": "wizard2.spectralHand",
+      "name": "Spectral Hand",
+      "level": 2,
+      "reversible": false,
+      "castingTime": "2s",
+      "range": "30yds + 5yds/lvl",
+      "duration": "2rds/lvl",
+      "areaOfEffect": "1 opponent",
+      "savingThrow": "None",
+      "components": "V S",
+      "reference": "PHB",
+      "schools": [
+        "Necromancy"
+      ],
+      "wildMagic": false,
+      "description": "This spell causes a ghostly, glowing hand, shaped from the caster's life force, to materialize within the spell range and move as the caster desires. Any touch attack spell of 4th level or less that is subsequently cast by the wizard can be delivered by the spectral hand. The spell gives the caster a +2 bonus to his attack roll. The caster cannot perform any other actions when attacking with the hand; the hand returns to the caster and hovers if the caster takes other actions. The hand lasts the full spell duration unless dismissed by the caster, and it is possible to use more than one touch attack with it. The hand receives flank and rear attack bonuses if the caster is in a position to do so. The hand is vulnerable to magical attack but has an Armor Class of -2. Any damage to the hand ends the spell and inflicts 1d4 points of damage to the caster."
+    },
+    {
+      "id": "wizard2.stinkingCloud",
+      "name": "Stinking Cloud",
+      "level": 2,
+      "reversible": false,
+      "castingTime": "2s",
+      "range": "30yds",
+      "duration": "1rd/lvl",
+      "areaOfEffect": "20ft Cube",
+      "savingThrow": "Special",
+      "components": "V S M",
+      "reference": "PHB",
+      "schools": [
+        "Evocation"
+      ],
+      "wildMagic": false,
+      "description": "When a stinking cloud is cast, the wizard creates a billowing mass of nauseous vapors up to 30 yards away from his position. Any creature caught within the cloud must roll a successful saving throw vs. poison or be reeling and unable to attack because of nausea for 1d4+1 rounds after leaving the cloud. Those who make successful saving throws can leave the cloud without suffering any ill effects, although those remaining in the cloud must continue to save each round. These poisonous effects can be slowed or neutralized by appropriate magic. The cloud duration is halved in a moderate breeze (8-18 m.p.h.)and is dispersed in one round by a stronger breeze. The material component of the spell is a rotten egg or several skunk cabbage leaves."
+    },
+    {
+      "id": "wizard2.strength",
+      "name": "Strength",
+      "level": 2,
+      "reversible": false,
+      "castingTime": "1 Turn",
+      "range": "Touch",
+      "duration": "1hr/lvl",
+      "areaOfEffect": "Person touched",
+      "savingThrow": "None",
+      "components": "V S M",
+      "reference": "PHB",
+      "schools": [
+        "Alteration"
+      ],
+      "wildMagic": false,
+      "description": "Application of this spell increases the Strength of the character by a number of points--or tenths of points after 18 Strength is attained (only if the character is a warrior).Benefits of the strength spell last for the duration of the magic. The amount of added Strength depends upon the spell recipient's group and is subject to all restrictions on Strength due to race and class. Multiclass characters use the best die. Class Strength Gain Priest 1d6 points Rogue 1d6 points Warrior 1d8 points Wizard 1d4 points If a warrior has an 18 Strength already, from 10% to 80% is added to his extraordinary Strength roll. The spell cannot confer a Strength of 19 or more, nor is it cumulative with other magic that adds to Strength. Beings without Strength scores (kobolds, lizard men, etc.) receive a +1 to attack and damage rolls. The material component of this spell is a few hairs, or a pinch of dung, from a particularly strong animal--ape, bear, ox, etc."
+    },
+    {
+      "id": "wizard2.summonSwarm",
+      "name": "Summon Swarm",
+      "level": 2,
+      "reversible": false,
+      "castingTime": "2s",
+      "range": "60yds",
+      "duration": "Special",
+      "areaOfEffect": "10ft Cube",
+      "savingThrow": "Negates",
+      "components": "V S M",
+      "reference": "PHB",
+      "schools": [
+        "Conjuration/Summoning"
+      ],
+      "wildMagic": false,
+      "description": "The swarm of small animals (roll on following table to determine type, or the DM can assign an appropriate creature) drawn by the summon swarm spell will viciously attack all creatures in the area chosen by the caster. Creatures actively defending against the swarm to the exclusion of other activities suffer 1 point of damage for each round spent in the swarm. Those taking other actions, including leaving the swarm, receive damage equal to 1d4 points + 1 point per three levels of the caster each round. Note that spellcasting within the swarm is impossible. Dice Roll Swarm Type01-40 Rats41-70 Bats71-80 Spiders81-90 Centipedes/beetles91-100 Flying insects The swarm cannot be fought effectively with weapons, but fire and area effects can force it to disperse by inflicting damage. The swarm disperses when it has taken a total of2 hit points per caster level from these attacks. A protection from evil spell keeps the swarm at bay, and certain area-effect spells, such as gust of wind and stinking cloud, disperse a swarm immediately, if appropriate to the swarm summoned (for example, only flyers are affected by a gust of wind). The caster must remain stationary and undisturbed to control the swarm; if his concentration lapses or is broken, the swarm disperses in two rounds. The swarm is stationary once conjured. The material component is a square of red cloth."
+    },
+    {
+      "id": "wizard2.tashasUncontrollableHideousLaughter",
+      "name": "Tasha's Uncontrollable Hideous Laughter",
+      "level": 2,
+      "reversible": false,
+      "castingTime": "2s",
+      "range": "60yds",
+      "duration": "1rd/lvl",
+      "areaOfEffect": "1 or more creatures in a 30ft cube",
+      "savingThrow": "Negates",
+      "components": "V S M",
+      "reference": "PHB",
+      "schools": [
+        "Enchantment/Charm"
+      ],
+      "wildMagic": false,
+      "description": "The victim of this spell perceives everything as hilariously funny. The effect is not immediate, and the creature feels only a slight tingling on the round the spell is cast. On the round immediately following, the victim begins smiling, then giggling, chuckling, tittering, snickering, guffawing, and finally collapsing into gales of uncontrollable, hideous laughter. Although this magical mirth lasts only a single round, the affected creature must spend the next round regaining its feet, and it loses 2 points from its Strength (or -2 to attack and damage rolls) for all remaining rounds of the spell. The saving throw vs. spell is modified by the Intelligence of the creature. Creatures with Intelligences of 4 or less (semi-intelligent) are totally unaffected. Those with Intelligences of 5-7 (low) save with -6 penalties. Those with Intelligences of 8-12(average to very) save with -4 penalties. Those with Intelligences of 13-14 (high) save with -2 penalties. Those with Intelligences of 15 or greater (exceptional) have unmodified saving throws. The caster can affect one creature for every three levels attained--for example, one at3rd level, two at 6th level, three at 9th level, etc. All affected beings must be within 30feet of each other. The material components are a small feather and minute tarts. The tarts are hurled at the subjects, while the feather is waved in one hand."
+    },
+    {
+      "id": "wizard2.tensersBrawl",
+      "name": "Tenser’s Brawl",
+      "level": 2,
+      "reversible": false,
+      "castingTime": "2s",
+      "range": "Touch",
+      "duration": "1rd/lvl",
+      "areaOfEffect": "Spell Caster",
+      "savingThrow": "None",
+      "components": "V S M",
+      "reference": "GHA",
+      "schools": [
+        "Alteration"
+      ],
+      "wildMagic": false,
+      "description": "This spell grants the recipient greater prowess in weaponless combat. The fighter gains a +2 bonus to hit with all pummeling, grappling, or overbearing attacks. The fighter receives a + 2 initiative bonus for pummeling attacks and a 10% bonus to stun an opponent. The fighter suffers no initiative penalty when performing a grappling attack, and any grappling hold achieved by the fighter is more secure, so the held creature attacks at -4. The material component for the spell is a bit of chest fur from a bear or gorilla."
+    },
+    {
+      "id": "wizard2.tensersHuntingHawk",
+      "name": "Tenser’s Hunting Hawk",
+      "level": 2,
+      "reversible": false,
+      "castingTime": "2s",
+      "range": "Touch",
+      "duration": "1rd/lvl",
+      "areaOfEffect": "One Arrow",
+      "savingThrow": "None",
+      "components": "V S M",
+      "reference": "GHA",
+      "schools": [
+        "Alteration"
+      ],
+      "wildMagic": false,
+      "description": "When this spell is cast upon an arrow, the missile gains a special dweomer that changes the arrow into a hunting hawk as the arrow leaves the bow. The hunting hawk: AC 6; Move 33“; HD 1; hp 6; #AT 3;Dmg 1-20-24 THACO 19; AL N. The hawk’s first strike is a swooping attack, striking at +2bonus to hit with its claw attacks doing double damage, but no beak attack is allowed. Thereafter, the hawk will continue to attack opponents as the caster orders, for one round per level of experience of the caster, or until the hawk is destroyed. If a magic arrow has hunting hawk cast upon it, then the hawk retains whatever magical bonuses the arrow had, including attack or damage bonuses, so a hawk formed from an arrow +2 will also be +2 on all attack and damage rolls. An arrow of slaying cannot be affected by the spell. When the spell’s duration ends, the affected arrow disappears permanently. The material components a wing feather."
+    },
+    {
+      "id": "wizard2.ultravision",
+      "name": "Ultravision",
+      "level": 2,
+      "reversible": false,
+      "castingTime": "2s",
+      "range": "Touch",
+      "duration": "6 turns + 1 turn/lvl",
+      "areaOfEffect": "Creature Touched",
+      "savingThrow": "None",
+      "components": "V S M",
+      "reference": "UA",
+      "schools": [
+        "Alteration"
+      ],
+      "wildMagic": false,
+      "description": "By means of this spell the magic-user empowers the recipient to see radiation in the ultraviolet spectrum. In night conditions this means that vision will be clear, as if it were daylight, to a range of 100 yards, and shadowy and indistinct from beyond100 yards to about 300 yards distance. If the night is very dark, with thick clouds overhead, reduction of ultravisual sight is 50%.Where more than about 6 feet of earth or 3 feet of stone interpose between the sky and the individual, such as in virtually any underground area, ultravision allows only vision of the dimmest sort in about a 3-fOOt radius, since the ultraviolet rays are screened out. (Of course, if an emission source is nearby, the visual capabilities improve accordingly.)Nearby light, including the radiance shed by magic items, tends to spoil ultravision, the brightness of the rays “blinding” the eyes to dimmer areas more distant. The material component for this spell is a crushed amethyst of at least 500 gp value. Note additionally that creatures with high intelligence might be able to detect invisible creatures by the use of ultravision, either natural or magically bestowed."
+    },
+    {
+      "id": "wizard2.undeadMount",
+      "name": "Undead Mount",
+      "level": 2,
+      "reversible": false,
+      "castingTime": "2s",
+      "range": "10yds",
+      "duration": "2hrs + 1hr/lvl",
+      "areaOfEffect": "1 mount",
+      "savingThrow": "None",
+      "components": "V S M",
+      "reference": "FRA",
+      "schools": [
+        "Necromancy"
+      ],
+      "wildMagic": false,
+      "description": "By means of this spell, a wizard can animate a dead horse or similar creature or assemble a magical mount from the bones of such creatures. The mount created by this spell is under the control of the caster. It can carry up to 300 lbs. of riders and equipment. Exceeding the 300 lb. limit destroys the spell and reduces the mount to4 7its original (dead) form. An undead mount is usually a horse(dead horses are easy to come by), but can also be a griffon, camel, hippogriff, or other beast of burden. Flying creatures which turned into undead mounts cannot fly, but they can move along the ground. Creatures that had some special ability while alive do not regain that ability in their undead state. The undead mount is unintelligent and cannot fight. It responds only to simple verbal commands. It cannot be affected by enchantment/charm magic. The undead mount has a movement rate of 18and moves silently. It has 1-4 hit points plus one additional hit point per level of the caster. Undead mounts can be turned as skeletons if they are primarily bones, or as zombies otherwise. Undead mounts ridden by more powerful undead cannot be turned separately, but if the rider is turned, so is the mount. The caster can choose when creating the undead mount to make it glow very faintly with a yellow, green, or red hue. The material components of this spell are a drop of water, a human hair, a pinch of powdered hoof, and the corpse or body of the animal that will serve as the mount."
+    },
+    {
+      "id": "wizard2.vocalize",
+      "name": "Vocalize",
+      "level": 2,
+      "reversible": false,
+      "castingTime": "2s",
+      "range": "Touch",
+      "duration": "5rds",
+      "areaOfEffect": "One spell casting creature",
+      "savingThrow": "None",
+      "components": "S M",
+      "reference": "FRA",
+      "schools": [
+        "Alteration"
+      ],
+      "wildMagic": false,
+      "description": "The recipient of this spell can cast spells with a verbal component without having to make any noise, so long as the casting takes place entirely within the duration of the vocalize spell. Only the verbal requirement of spells is deleted. This spell has no effect on other noises or speech it simply removes a spells verbal component. This spell is of great use when quiet is desired in spell-casting or the individual has been magically silenced. The vocalize spell does not negate the magical silence, it merely permits spell-casting without verbal components. The material component of this spell is a bell with no clapper."
+    },
+    {
+      "id": "wizard2.web",
+      "name": "Web",
+      "level": 2,
+      "reversible": false,
+      "castingTime": "2s",
+      "range": "5yds/lvl",
+      "duration": "2 turns/lvl",
+      "areaOfEffect": "8000 cubic ft",
+      "savingThrow": "Negates",
+      "components": "V S M",
+      "reference": "PHB",
+      "schools": [
+        "Evocation"
+      ],
+      "wildMagic": false,
+      "description": "A web spell creates a many-layered mass of strong, sticky strands similar to spiderwebs but far larger and tougher. These masses must be anchored to two or more solid and diametrically opposed points--floor and ceiling, opposite walls, etc.--or the web collapses upon itself and disappears. The web spell covers a maximum area of eight 10-foot x 10-foot x 10-foot cubes and the webs must be at least 10 feet thick, so a mass 40 feet high, 20 feet wide, and 10 feet deep may be cast. Creatures caught within webs, or simply touching them, become stuck among the gluey fibers. Anyone in the area when the spell is cast must roll a saving throw vs. spell with a -2penalty. If the saving throw is successful, two things may have occurred. If the creature has room to escape the area, then it is assumed to have jumped free. If there is no room to escape, then the webs are only half strength. Creatures with less than 13 Strength (7 if the webs are half strength) are stuck until freed by another or until the spell wears off. Missile fire is generally ineffective against creatures trapped in webs. Creatures with Strengths between 13 and 17 can break through 1 foot of webs per round. Creatures with 18 or greater Strength can break through 2 feet of webs per round. If the webs are at half strength, these rates are doubled. (Great mass equates to great strength in this case, and creatures of large mass hardly notice webs.) Strong and huge creatures can break through 10 feet of webs per round. Furthermore, the strands of a web spell are flammable. A magical flaming sword can slash them away as easily as a hand brushes away cobwebs. Any fire--torch, flaming oil, flaming sword, etc.--can set them alight and burn them away in a single round. All creatures within flaming webs suffer 2d4 points of damage from the flames, but those free of the strands are not harmed. The material component of this spell is a bit of spider web."
+    },
+    {
+      "id": "wizard2.whip",
+      "name": "Whip",
+      "level": 2,
+      "reversible": false,
+      "castingTime": "2s",
+      "range": "10ft",
+      "duration": "1rd/lvl",
+      "areaOfEffect": "Special",
+      "savingThrow": "Special",
+      "components": "V S M",
+      "reference": "UA",
+      "schools": [
+        "Evocation"
+      ],
+      "wildMagic": false,
+      "description": "By means of this spell, the magic-user creates a material, whip-like substance up to 1 ” distant from his or her person. The spell caster can then wield this whip by moving his or her hand as if it held an actual one, for the magical one will respond to movements made by its evoker. The lash can be used so as to make both a whistling crack and an actual strike each turn. The sound alone is sufficient to keep normal animals at bay unless they save versus spell. Any animal actually struck (as indicated by a normal “to hit” die roll) must save versus spell at -1 to -4 or else slink away and not return for at least an hour. Note that the whip does not do actual damage to the creature struck. Creatures with intelligence above 3 are not affected, nor are giant-sized animals above bear-size, nor are monsters. The whip can also be used in melee combat, a successful “to hit” roll indicating that the lash has struck and wrapped around an opponent's weapon. If that weapon is an edged one, the whip must make a saving throw versus crushing blow (13 or better); if the weapon is non-edged, the whip must save versus normal blow (6 or better). Success on this saving throw indicates that the whip has torn the weapon from the opponent’s hand - unless the opponent succeeds on a saving throw versus spell. An affected weapon will be cast to the ground, and the opponent must take 1 round to recover it. The magic bonus of a target weapon applies as a penalty to the whip's saving throw versus crushing blow or normal blow, and the magic resistance of an intended target opponent must fail for a “to hit” roll to be possible in the first place. The material component of the spell is a small bit of silk braided so as to form a miniature whip."
+    },
+    {
+      "id": "wizard2.whisperingWind",
+      "name": "Whispering Wind",
+      "level": 2,
+      "reversible": false,
+      "castingTime": "2s",
+      "range": "1mile/lvl",
+      "duration": "Special",
+      "areaOfEffect": "2ft radius",
+      "savingThrow": "None",
+      "components": "V S",
+      "reference": "PHB",
+      "schools": [
+        "Alteration",
+        "Phantasm"
+      ],
+      "wildMagic": false,
+      "description": "By means of this spell, the wizard is able to either send a message or cause some desired sound effect. The whispering wind can travel as many miles above ground as the spellcaster has levels of experience, to a specific location within range that is familiar tothe wizard. The whispering wind is as gentle and unnoticed as a zephyr until it reachesthe location. It then delivers its whisper-quiet message or other sound. Note that themessage is delivered regardless of whether anyone is present to hear it. The wind thendissipates. The wizard can prepare the spell to bear a message of up to 25 words, causethe spell to deliver other sounds for one round, or merely have the whispering wind seemto be a faint stirring of the air that has a susurrant sound. He can likewise cause the whispering wind to move as slowly as a mile per hour or as quickly as a mile per turn. When the spell reaches its objective, it swirls and remains until the message is delivered. As with the magic mouth spell, no spells may be cast via the whispering wind."
+    },
+    {
+      "id": "wizard2.wizardLock",
+      "name": "Wizard Lock",
+      "level": 2,
+      "reversible": false,
+      "castingTime": "2s",
+      "range": "Touch",
+      "duration": "Permanent",
+      "areaOfEffect": "30sqft/lvl",
+      "savingThrow": "None",
+      "components": "V S",
+      "reference": "PHB",
+      "schools": [
+        "Alteration"
+      ],
+      "wildMagic": false,
+      "description": "A wizard lock spell cast upon a door, chest, or portal magically locks it. The caster can freely pass his own lock without affecting it; otherwise, the wizard-locked door or object can be opened only by breaking in, by a successful dispel magic or knock spell, or by a wizard four or more levels higher than the one casting the spell. Note that the last two methods do not remove the wizard lock; they only negate it for a brief duration--about one turn. Creatures from other planes cannot burst a wizard lock as they can a held portal(see the hold portal spell)."
+    },
+    {
+      "id": "wizard2.zephyr",
+      "name": "Zephyr",
+      "level": 2,
+      "reversible": false,
+      "castingTime": "2s",
+      "range": 0,
+      "duration": "1 segment",
+      "areaOfEffect": "1ft path, 5ft/lvl length",
+      "savingThrow": "None",
+      "components": "V S M",
+      "reference": "UA",
+      "schools": [
+        "Evocation"
+      ],
+      "wildMagic": false,
+      "description": "By means of this spell, a gentle draft of air moves from the spell caster and travels in the direction that he or she is facing. It continues until the maximum area of effect is reached. The force of the zephyr is sufficient to cause small flames to waver and dance. It fans flames and fires of larger size, making them hotter( + 1 on damage dice, if applicable). It will hold back moving clouds of vapors (such as a cloudkill) for 1 round. It will weaken such vapors as fog cloud and wall of fog so as to reduce their duration by half. It will move stagnant air, vapors, or even poisonous gases backwards by1 ”, and this force likewise reduces their duration and potency by half, unless the vapor or gas is renewed by some source. The material component for this spell is a piece of fine parchment, accordion folded and tacked near the bottom with a pin or ivory or silver."
+    }
+  ]
+}

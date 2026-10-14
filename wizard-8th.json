@@ -1,0 +1,632 @@
+{
+  "meta": {
+    "source": "owner's master_list_of_spells - PHB-FRA-TOM-GHA-UA.xlsx, tab '8th'",
+    "level": 8,
+    "class": "wizard",
+    "count": 33,
+    "bookKey": {
+      "PHB": "2nd Edition Players Handbook",
+      "FRA": "2nd Edition Forgotten Realms Adventures",
+      "TOM": "2nd Edition Tome of Magic",
+      "GHA": "1st/2nd Edition Greyhawk Adventures",
+      "UA": "1st Edition Unearthed Arcana"
+    },
+    "fields": {
+      "reversible": "true where the spreadsheet's Reversible column is filled",
+      "wildMagic": "true where the spell name ended in * in the spreadsheet (Wild Magic spell; owner is still debating whether to include them). nameAsPrinted keeps the asterisk.",
+      "schools": "School, School 2, School 3 in order; empty cells dropped",
+      "description": "as in the spreadsheet; null where blank"
+    },
+    "notes": [
+      "The Superscript column was ignored, as instructed.",
+      "Text encoding artefacts from the spreadsheet (curly quotes and dashes stored as single bytes) were converted to normal characters; wording was not changed otherwise.",
+      "Where two spells exist in different books the book precedence order applies; otherwise the DM decides (from the spreadsheet key)."
+    ],
+    "gaps": []
+  },
+  "spells": [
+    {
+      "id": "wizard8.abiDalzimsHorridWilting",
+      "name": "Abi-Dalzim's Horrid Wilting",
+      "level": 8,
+      "reversible": false,
+      "castingTime": "8s",
+      "range": "20yds/lvl",
+      "duration": "Instantaneous",
+      "areaOfEffect": "30ft Cube",
+      "savingThrow": "For Half",
+      "components": "V S M",
+      "reference": "TOM",
+      "schools": [
+        "Alteration",
+        "Necromancy"
+      ],
+      "wildMagic": false,
+      "description": "This spell evaporates moisture from the bodies of every living creature within thearea of effect, inflicting 1d8 points of damage per level of the caster. Affected creaturesare allowed a saving throw, with success indicating half damage.This spell is especially devastating to water elementals and plant creatures, whoreceive a penalty of -2 to their saving throws.The material component is a bit of sponge."
+    },
+    {
+      "id": "wizard8.airboat",
+      "name": "Airboat",
+      "level": 8,
+      "reversible": false,
+      "castingTime": "1rd",
+      "range": "1 Mile",
+      "duration": "1 hr/lvl",
+      "areaOfEffect": "Special",
+      "savingThrow": "None",
+      "components": "V S M",
+      "reference": "TOM",
+      "schools": [
+        "Alteration",
+        "Enchantment"
+      ],
+      "wildMagic": false,
+      "description": "This spell must be cast under a cloudy sky. The caster points at a cloud, whichimmediately descends toward him. As it comes closer, the cloud changes shape,becoming any sort of vessel imagined by the wizard (a dragon-shaped galley, a one-mandinghy, etc.).Although the airboat is made of cloud, it feels solid and can support the weight of thecaster plus one passenger per level of the wizard. It can fly at any speed up to 5 miles perhour per level of the caster (to a maximum of 90 miles per hour).The caster maintains total telepathic control over the airboat's speed and direction.While controlling the vessel, the wizard is able to perform other actions but may not castother spells."
+    },
+    {
+      "id": "wizard8.antipathySympathy",
+      "name": "Antipathy-Sympathy",
+      "level": 8,
+      "reversible": false,
+      "castingTime": "1hr",
+      "range": "30yds",
+      "duration": "2hrs/lvl",
+      "areaOfEffect": "10ft cube or 1 item",
+      "savingThrow": "Special",
+      "components": "V S M",
+      "reference": "PHB",
+      "schools": [
+        "Enchantment/Charm"
+      ],
+      "wildMagic": false,
+      "description": "This spell allows the wizard to set certain vibrations to emanate from an object orlocation that tend to either repel or attract a specific type of intelligent creature orcharacters of a particular alignment. The wizard must decide which effect is desired withregard to what creature type or alignment before beginning the spellcasting, for thecomponents of each application differ. The spell cannot be cast upon living creatures.Antipathy: This spell causes the affected creature or alignment type to feel anoverpowering urge to leave the area or to not touch the affected item. If a saving throwvs. spell is successful, the creature can stay in the area or touch the item, but the creaturewill feel very uncomfortable, and a persistent itching will cause it to suffer the loss of 1point of Dexterity per round (for the spell's duration), subject to a maximum loss of 4points and a minimum Dexterity of 3. Failure to save vs. spell forces the being toabandon the area or item, shunning it permanently and never willingly returning to it untilthe spell is removed or expires.The material component for this application of the spell is a lump of alum soaked invinegar.Sympathy: By casting the sympathy application of the spell, the wizard can cause aparticular type of creature or alignment of character to feel elated and pleased to be in anarea or touching or possessing an object or item. The desire to stay in the area or touchthe object is overpowering. Unless a saving throw vs. spell is successfully rolled, thecreature or character will stay or refuse to release the object. If the saving throw issuccessful, the creature or character is released from the enchantment, but a subsequentsaving throw must be made 1d6 turns later. If this saving throw fails, the affected creaturewill return to the area or object.The material components of this spell are 1,000 gp worth of crushed pearls and a dropof honey.Note that the particular type of creature to be affected must be named specifically--forexample, red dragons, hill giants, wererats, lammasu, catoblepas, vampires, etc.Likewise, the specific alignment must be named--for example, chaotic evil, chaotic good,lawful neutral, true neutral, etc.If this spell is cast upon an area, a 10-foot cube can be enchanted for each experiencelevel of the caster. If an object or item is enchanted, only that single thing can beenchanted; affected creatures or characters save vs. spell with a -2 penalty."
+    },
+    {
+      "id": "wizard8.bigbysClenchedFist",
+      "name": "Bigby's Clenched Fist",
+      "level": 8,
+      "reversible": false,
+      "castingTime": "8s",
+      "range": "5yds/lvl",
+      "duration": "1rd/lvl",
+      "areaOfEffect": "Special",
+      "savingThrow": "None",
+      "components": "V S M",
+      "reference": "PHB",
+      "schools": [
+        "Evocation"
+      ],
+      "wildMagic": false,
+      "description": "The Bigby's clenched fist spell brings forth a huge, disembodied hand that is balled intoa fist. This magical member is under the mental control of the spellcaster, who can causeit to strike one opponent each round. No concentration is required once the spell is cast.The clenched fist never misses, but it can only strike as directed by the caster. Thus, itcan be fooled by invisibility or other methods of concealment and misdirection. Theeffectiveness of its blows varies from round to round.D20 Roll Result1-12 Glancing blow--1d6 hp13-16 Solid punch--2d6 hp17-19 Hard punch -- 3d6 hp; opponent is stunned for next round20 Crushing blow*--4d6 hp; opponent is stunned for next three rounds* The wizard adds +4 to the die rolls of subsequent attacks if the opponent is stunned,as the opponent is not capable of dodging or defending against the attack effectively.The fist has an Armor Class of 0, and is destroyed by damage equal to the hit points ofits caster at full health.The material component of this spell is a leather glove and a small device (similar tobrass knuckles) consisting of four rings joined so as to form a slightly curved line, withan \"I\" upon which the bottoms of the rings rest. The device must be fashioned of an alloyof copper and zinc."
+    },
+    {
+      "id": "wizard8.binding",
+      "name": "Binding",
+      "level": 8,
+      "reversible": false,
+      "castingTime": "Special",
+      "range": "10yds",
+      "duration": "Special",
+      "areaOfEffect": "1 Creature",
+      "savingThrow": "Special",
+      "components": "V S M",
+      "reference": "PHB",
+      "schools": [
+        "Enchantment/Charm"
+      ],
+      "wildMagic": false,
+      "description": "A binding spell creates a magical restraint to hold a creature, usually from anotherplane of existence. Extraplanar creatures must be confined by a circular diagram; othercreatures can be physically confined. The duration of the spell depends upon the form ofthe binding and the level of the caster(s), as well as the length of time the spell is actuallyuttered. The components vary according to the form of the spell, but they include acontinuous chanting utterance read from the scroll or book page giving the spell; gesturesappropriate to the form of binding; and materials such as miniature chains of specialmetal (silver for lycanthropes, etc.), soporific herbs of the rarest sort, a corundum ordiamond gem of great size (1,000 gp value per Hit Die of the subject creature), and avellum depiction or carved statuette of the subject to be captured.Magic resistance applies unless the subject's true name is used. A saving throw is notapplicable as long as the experience level of the caster is at least twice as great as the HitDice of the subject. The caster's level can be augmented by one-third of the levels of eachassisting wizard of 9th level or higher, and by one level for each assistant of 4th through8th level. No more than six other wizards can assist with this spell. If the caster's level isless than twice the Hit Dice of the subject, the subject gains a saving throw vs. spell,modified by the form of binding being attempted. The various forms of binding are:Chaining: The subject is confined by restraints that generate an antipathy spellaffecting all creatures who approach the subject, except the caster. Duration is as long asone year per level of the caster(s). The subject of this form of binding (as well as in theslumber and bound slumber versions) remains within the restraining barrier.Slumber: Brings a comatose sleep upon the subject for a duration of up to one year perlevel of the caster(s).Bound Slumber: A combination of chaining and slumber that lasts for up to one monthper level of the caster(s).Hedged Prison: The subject is transported to or otherwise brought within a confinedarea from which it cannot wander by any means until freed. The spell remains until themagical hedge is somehow broken.Metamorphosis: Causes the subject to change to some noncorporeal form, save for itshead or face. The binding is permanent until some prescribed act frees the subject.Minimus Containment: The subject is shrunken to a height of 1 inch or even less andheld within the hedged prison of some gem or similar object. The subject of a minimuscontainment, metamorphosis, or hedged prison radiates a very faint aura of magic.The subject of the chaining form of the spell receives a saving throw with nomodifications. However, slumber allows the subject a +1 bonus, bound slumber a +2bonus, hedged prison a +3 bonus, metamorphosis a +4 bonus, and minimus containmenta +5 bonus to the saving throw. If the subject is magically weakened, the DM can assigna -1, -2, or even -4 penalty to the saving throw. A successful saving throw enables thesubject to burst its bonds and do as it pleases.A binding spell can be renewed in the case of the first three forms of the spell, for thesubject does not have the opportunity to break the bonds. (If anything has caused aweakening of a chaining or slumber version, such as attempts to contact the subject ormagically touch it, a normal saving throw applies to the renewal of the spell.) Otherwise,after one year, and each year thereafter, the subject gains a normal saving throw vs. thespell. Whenever it is successful, the binding spell is broken and the creature is free."
+    },
+    {
+      "id": "wizard8.clone",
+      "name": "Clone",
+      "level": 8,
+      "reversible": false,
+      "castingTime": "1 Turn",
+      "range": "Touch",
+      "duration": "Permanent",
+      "areaOfEffect": "1 Clone",
+      "savingThrow": "None",
+      "components": "V S M",
+      "reference": "PHB",
+      "schools": [
+        "Necromancy"
+      ],
+      "wildMagic": false,
+      "description": "This spell creates a duplicate of a human, demihuman, or humanoid creature. Thisclone is in most respects the duplicate of the individual, complete to the level ofexperience, memories, etc. However, the duplicate really is the person, so if the originaland a duplicate exist at the same time, each knows of the other's existence; the originalperson and the clone will each desire to do away with the other, for such an alter-ego isunbearable to both. If one cannot destroy the other, one will go insane and destroy itself(90% likely to be the clone), or possibly both will become mad and destroy themselves(2% chance). These events nearly always occur within one week of the dual existence.Note that the clone is the person as he existed at the time at which the flesh was takenfor the spell component, and all subsequent knowledge, experience, etc., is totallyunknown to the clone. The clone is a physical duplicate, and possessions of the originalare another matter entirely. A clone takes 2d4 months to grow, and only after that time isdual existence established. Furthermore, the clone has one less Constitution point than thebody it was cloned from; the cloning fails if the clone would have a Constitution of 0.The material component of the spell is a small piece of the flesh from the person to beduplicated.The DM may, in addition, add other stipulations to the success of a cloning effort,requiring that some trace of life must remain in the flesh sample, that some means ofstoring and preserving the sample must be devised and maintained, etc."
+    },
+    {
+      "id": "wizard8.deathLink",
+      "name": "Death Link",
+      "level": 8,
+      "reversible": false,
+      "castingTime": "8s",
+      "range": "240yds",
+      "duration": "1 turn/lvl",
+      "areaOfEffect": "1 taregt Creature",
+      "savingThrow": "Negates",
+      "components": "V S M",
+      "reference": "FRA",
+      "schools": [
+        "Necromancy"
+      ],
+      "wildMagic": false,
+      "description": "Also called the body sympathy spell,this spell puts the wizard and his target ina two-way, sympathetic link. Any damageinflicted on the mage is automaticallyinflicted on the victim as well. Should thecaster die, so too will the victim. Conversely,if the victim is damaged or hurt,the caster will be hurt as well.Saving throws, ability checks, and armorclasses are considered those of the individualwho is attackedonly the effectis carried over to the partner in the deathlink. The only exception is that if the victimdies, the caster is unaffected, thoughthe victim can take sufficient damage onhis own to kill the caster while leaving thevictim wounded but unharmed. Both curativeand destructive spells cross thelinkhealing one heals the other.Once cast, the spell cannot be ended byeither party until its duration runs out orone or the other party physically leavesthe plane of existence the other is occupying. Distance between the parties (exceptat the initial casting of the spell) has no effecton this spell.The death link is occasionally used as atool of revenge by powerful magesagainst individuals weaker than themselves,but is more often used as a vouchsafeto protect one side or the other innegotiationsif both sides can be hurt bya single act of treachery, then both sidestend to negotiate in better faith."
+    },
+    {
+      "id": "wizard8.demand",
+      "name": "Demand",
+      "level": 8,
+      "reversible": false,
+      "castingTime": "1 Turn",
+      "range": "Unlimited",
+      "duration": "Special",
+      "areaOfEffect": "1 Creature",
+      "savingThrow": "Special",
+      "components": "V S M",
+      "reference": "PHB",
+      "schools": [
+        "Evocation",
+        "Enchantment/Charm"
+      ],
+      "wildMagic": false,
+      "description": "This spell is very much like the 5th-level wizard spell sending, allowing a brief contactwith a far distant creature. However, with this spell the message can also contain asuggestion (see the 3rd-level wizard spell suggestion), which the subject will do its bestto carry out if it fails its saving throw vs. spell, made with a -2 penalty. Of course, if themessage is impossible or meaningless according to the circumstances that exist for thesubject at the time the demand comes, the message is understood but no saving throw isnecessary and the suggestion is ineffective.The caster must be familiar with the creature contacted and must know its name andappearance well. If the creature in question is not in the same plane of existence as thespellcaster, there is a base 5% chance that the demand does not arrive. Local conditionson other planes may worsen this chance considerably at the option of the DM. Thedemand, if received, will be understood even if the creature has an Intelligence abilityscore as low as 1 (animal Intelligence). Creatures of demigod status or higher can chooseto come or not, as they please.The demand message to the creature must be 25 words or less, including thesuggestion. The creature can also give a short reply immediately.The material components of the spell are a pair of cylinders, each open at one end,connected by a thin piece of copper wire and some small part of the subject creature--ahair, a bit of nail, etc."
+    },
+    {
+      "id": "wizard8.gateway",
+      "name": "Gateway",
+      "level": 8,
+      "reversible": false,
+      "castingTime": "8s",
+      "range": "10yds",
+      "duration": "1rd + 1rd/lvl",
+      "areaOfEffect": "10ft diameter disk",
+      "savingThrow": "None",
+      "components": "V S M",
+      "reference": "FRA",
+      "schools": [
+        "Alteration"
+      ],
+      "wildMagic": false,
+      "description": "By means of this spell, the caster createsa magical portal to another location onthe same plane which the wizard has previouslyvisited. The wizard and other individualscan cross freely between oneside of the portal and the other for the durationof the spell.The gateway appears as a vertical disk10 feet in diameter. Through the portal onone side the terrain beyond can be clearlyseen. The other side of the disk is asmooth gray surface. The portal cannotbe called into being in the same space asanother object, but can be placed againsta wall or other flat surface.Creatures can pass through freely fromone side of the portal to the other, butnonliving material cannot unless broughtby living creatures. Each side of the gatewaymaintains its own environment, sothat opening a portal into a live volcanoor at the bottom of the ocean poses nodanger to someone on the other side unlesshe chooses to cross into such a deadlyarea.The gateway can only be cast into areasthat the wizard has himself visited. In addition,there is a success rate dependenton distance from the source.Within 100 miles of the area 100% successWithin 500 miles of area 50%On different planet 10%In different solar system 5%Failure indicates that no such portal canbe opened. Gateway portals cannot openinto other planes of existence or be castwhile on any plane other than the PrimeMaterial. A gateway can be dispelled by thecaster at will, a successful dispel magic, orby the spell duration elapsing. Any livingthing caught in the portal as it collapsesmust make a Dexterity check or be slicedbetween two different locations, presumablykilled instantly.The material component of this spell isa handful of earth from the casters location."
+    },
+    {
+      "id": "wizard8.glassteel",
+      "name": "Glassteel",
+      "level": 8,
+      "reversible": false,
+      "castingTime": "8s",
+      "range": "Touch",
+      "duration": "Permanent",
+      "areaOfEffect": "Object Touched",
+      "savingThrow": "None",
+      "components": "V S M",
+      "reference": "PHB",
+      "schools": [
+        "Alteration"
+      ],
+      "wildMagic": false,
+      "description": "The glassteel spell turns normal, nonmagical crystal or glass into a transparentsubstance that has the tensile strength and unbreakability of actual steel. Only a relativelysmall volume of material can be affected (a maximum weight of 10 pounds per level ofexperience of the spellcaster), and it must form one whole object. The Armor Class of thesubstance is 1.The material components of this spell are a small piece of glass and a small piece ofsteel."
+    },
+    {
+      "id": "wizard8.greatShout",
+      "name": "Great Shout",
+      "level": 8,
+      "reversible": false,
+      "castingTime": "1s",
+      "range": 0,
+      "duration": "Instantaneous",
+      "areaOfEffect": "90ft long by 20ft wide cone",
+      "savingThrow": "Special",
+      "components": "V M",
+      "reference": "FRA",
+      "schools": [
+        "Evocation"
+      ],
+      "wildMagic": false,
+      "description": "Upon uttering the great shout, thecaster releases a stunning force akin to ahorn of blasting from his mouth in thearea indicated, with additional damageinflicted along a narrow path in the centerof the cone, 1 foot wide by 8 feet long.The great shout is extremely taxing anddangerous to the user. The shout drains 2-8 hit points from the caster, and in additionthe caster must make a system shockroll or die from the exertion.All creatures within the general area ofeffect must save vs. spells. Those whichdo not save are stunned for two rounds,deafened for four rounds, and suffer 1-10points of damage. Those which do saveare stunned for only a single round anddeafened for two rounds.Damage is much greater in the heart ofthe cone, along the narrow path at theheart of the great shout. Boulders can besplit, cottages leveled, and powerful gatesbreached by this part of the shout. It inflictsstructural damage as if the shoutwere a missile flung by a large catapult(see Siege Damage on page 76 of theDungeon Masters Guide) with a 2 modifierto the saving throw. All items, magicaland nonmagical, within the narrowpath of the shout must make a savingthrow vs. crushing blow or be destroyed.Creatures within the narrow path take 2-20 points of damage if they fail their savingthrow and 1-10 points of damage ifthey make their saving throw. Deafnessand stunning effects apply as describedabove.  Nystuls magic aura as well as magicalitems. Powerful items such as artifactsand unique weapons cannot be used topower the great shout. The item is destroyedin the process.The material component of this spell isany item which radiates a magical aura,including those temporarily invested with"
+    },
+    {
+      "id": "wizard8.gunthersKaleidoscopicStrike",
+      "name": "Gunther's Kaleidoscopic Strike",
+      "level": 8,
+      "reversible": false,
+      "castingTime": "8s",
+      "range": "5yds/lvl",
+      "duration": "Instantaneous",
+      "areaOfEffect": "One Creature",
+      "savingThrow": "Negates",
+      "components": "V S",
+      "reference": "TOM",
+      "schools": [
+        "Invocation/Evocation"
+      ],
+      "wildMagic": false,
+      "description": "When this spell is cast, a thin beam of shimmering, kaleidoscopic light shoots fromthe wizard's fingertips toward his target. The victim is allowed a saving throw to resistthe beam.This spell has no effect on nonspellcasters, causing them no harm whatsoever.Creatures with innate spell-like abilities are also unaffected. Against wizards and priests,this spell can be devastating. It \"short-circuits\" the arcane energy stored in a spellcaster'smind, wiping away a number of memorized spells. Lost spells must be rememorized.The number of spells drained is equal to the caster's level minus 1d20. Thus, a 16thlevelwizard drains a maximum of 15 spells, but could drain no spells depending on thedie roll. After subtracting the die roll from the caster's level, any result of zero or anegative number indicates that the victim loses no spells.Spells are drained from the wizard's memorized spells beginning with 1st-level spellsand working up to higher level spells. Any decision regarding which spell should bedrained from a specific level should be determined randomly."
+    },
+    {
+      "id": "wizard8.homunculusShield",
+      "name": "Homunculus Shield",
+      "level": 8,
+      "reversible": false,
+      "castingTime": "3s",
+      "range": 0,
+      "duration": "1rd/lvl",
+      "areaOfEffect": "The Caster",
+      "savingThrow": "None",
+      "components": "V S M",
+      "reference": "TOM",
+      "schools": [
+        "Evocation",
+        "Necromancy"
+      ],
+      "wildMagic": false,
+      "description": "By creating a homunculus shield, the wizard separates a portion of his mind in theform of an exteriorized magical homunculus. This creature is invisible to all but thecaster and appears as a miniature version of the caster perched atop the wizard's head.The wizard may move and act normally while this spell is in effect. The magicalhomunculus operates as an independent spellcaster. It may cast only teleport,contingency, and protective spells of 4th level and lower. It casts only spells from thewizard's memorized store of spells, but any spells cast by the homunculus are done sowith a casting time of 1. The wizard selects which spells are cast by his homunculus;after they are cast, they are wiped from the caster's memory.The homunculus has 1 hit point per two levels of the caster. These points are\"borrowed\" from the caster; while the homunculus is present, the wizard's hit points arereduced by this amount.The homunculus cannot be struck by melee or missile weapons separately from thewizard. It can be damaged separately from the wizard (e.g., by a magic missile targeted atthe homunculus or by area effect spells). The homunculus has the attributes and savingthrows of the"
+    },
+    {
+      "id": "wizard8.hornungsRandomDispatcher",
+      "name": "Hornung's Random Dispatcher",
+      "nameAsPrinted": "Hornung's Random Dispatcher*",
+      "level": 8,
+      "reversible": true,
+      "castingTime": "2s",
+      "range": "30yds",
+      "duration": "Instantaneous",
+      "areaOfEffect": "One Creature",
+      "savingThrow": "Negates",
+      "components": "V",
+      "reference": "TOM",
+      "schools": [
+        "Abjuration"
+      ],
+      "wildMagic": true,
+      "description": "With the utterance of a few words, this spell can hurl a creature to a random plane andleave him there. The target, if unwilling, is allowed a saving throw. If successful, thespell fails. If unsuccessful, the victim and all items carried by him are sent to a randomplane. To determine the plane, roll on the table below.D100Roll Plane01-03 Abyss04-06 Acheron07-12 Alternate Prime Material Plane13-17 Arcadia18-23 Astral Plane24-27 Beastlands (Happy Hunting Grounds)28-30 Concordant Opposition31-35 Elemental Plane (Air, Fire, Earth, or Water)36-38 Elysium39-44 Ethereal Plane45-47 Gehenna48-50 Gladsheim51-53 Hades54-58 Limbo59-61 Negative Material Plane62-64 Negative Quasi-Plane (Vacuum, Ash, Dust, or Salt)65-67 Nine Hells68-70 Nirvana71-73 Olympus74-76 Pandemonium77-79 Para-Elemental Plane (Smoke, Magma, Ooze, or Ice)80-82 Positive Material Plane83-85 Positive Quasi-Plane (Lightning, Radiance, Minerals, or Steam)86-91 Prime Material Plane*92-94 Seven Heavens95-97 Tarterus98-100 Twin Paradises* Characters sent to the Prime Material plane are teleported elsewhere in the same world.The caster has no control over the destination of the target. The conditions at thedestination may kill the target (for example, arriving in the elemental plane of fire) ormerely make life difficult. This determination is left to the DM."
+    },
+    {
+      "id": "wizard8.incendiaryCloud",
+      "name": "Incendiary Cloud",
+      "level": 8,
+      "reversible": false,
+      "castingTime": "2s",
+      "range": "30yds",
+      "duration": "4rds + 1d6rds",
+      "areaOfEffect": "Special",
+      "savingThrow": "Special",
+      "components": "V S M",
+      "reference": "PHB",
+      "schools": [
+        "Alteration",
+        "Evocation"
+      ],
+      "wildMagic": false,
+      "description": "An incendiary cloud spell exactly resembles the smoke effects of a pyrotechnics spell,except that its minimum dimensions are a cloud 10 feet tall, 20 feet wide, and 20 feetlong. This dense vapor cloud billows forth, and on the third round of its existence beginsto flame, causing 1-2 points of damage per level of the spellcaster. On the fourth round itinflicts 1d4 points of damage per level of the caster, and on the fifth round this dropsback to 1-2 points of damage per level as its flames burn out. In any successive rounds ofexistence, the cloud is simply harmless smoke that obscures vision within its confines.Creatures within the cloud need to make only one saving throw if it is successful, but ifthey fail the first saving throw, they roll again on the fourth and fifth rounds (ifnecessary) to attempt to reduce the damage sustained by one-half.In order to cast this spell, the wizard must have an available fire source (just as with apyrotechnics spell), scrapings from beneath a dung pile, and a pinch of dust."
+    },
+    {
+      "id": "wizard8.massCharm",
+      "name": "Mass Charm",
+      "level": 8,
+      "reversible": false,
+      "castingTime": "8s",
+      "range": "5yds/lvl",
+      "duration": "Special",
+      "areaOfEffect": "30ft Cube",
+      "savingThrow": "Negates",
+      "components": "V",
+      "reference": "PHB",
+      "schools": [
+        "Enchantment/Charm"
+      ],
+      "wildMagic": false,
+      "description": "A mass charm spell affects either persons or monsters just as a charm person or charmmonster spell. The mass charm spell, however, affects a number of creatures whosecombined levels of experience or Hit Dice does not exceed twice the level of experienceof the spellcaster. All affected creatures must be within the spell range and within a 30-foot cube. Note that the creatures' saving throws are unaffected by the number ofrecipients (see the charm person and charm monster spells), but all target creatures aresubject to a penalty of -2 on their saving throws because of the efficiency and power ofthis spell. The Wisdom bonus against charm spells does apply."
+    },
+    {
+      "id": "wizard8.maze",
+      "name": "Maze",
+      "level": 8,
+      "reversible": false,
+      "castingTime": "3s",
+      "range": "5yds/lvl",
+      "duration": "Special",
+      "areaOfEffect": "1 creature",
+      "savingThrow": "None",
+      "components": "V S M",
+      "reference": "PHB",
+      "schools": [
+        "Conjuration/Summoning"
+      ],
+      "wildMagic": false,
+      "description": "An extradimensional space is brought into being upon the utterance of a maze spell.The subject vanishes into the shifting labyrinth of force planes for a period of time that isdependent upon its Intelligence. (Note: Minotaurs are not affected by this spell.)Intelligence of Time TrappedMazed Creature in Mazeunder 3 2d4 turns3-5 1d4 turns6-8 5d4 rounds9-11 4d4 rounds12-14 3d4 rounds15-17 2d4 rounds18+ 1d4 roundsNote that teleport and dimension door spells will not help a character escape a mazespell, although a plane shifting spell will."
+    },
+    {
+      "id": "wizard8.mindBlank",
+      "name": "Mind Blank",
+      "level": 8,
+      "reversible": false,
+      "castingTime": "1s",
+      "range": "30yds",
+      "duration": "1 day",
+      "areaOfEffect": "1 creature",
+      "savingThrow": "None",
+      "components": "V S M",
+      "reference": "PHB",
+      "schools": [
+        "Abjuration"
+      ],
+      "wildMagic": false,
+      "description": "When the very powerful mind blank spell is cast, the creature is totally protected fromall devices and spells that detect, influence, or read emotions or thoughts. This protectsagainst augury, charm, command, confusion, divination, empathy (all forms), ESP, fear,feeblemind, mass suggestion, phantasmal killer, possession, rulership, soul trapping,suggestion, and telepathy. Cloaking protection also extends to the prevention ofdiscovery or information gathering by crystal balls or other scrying devices,clairaudience, clairvoyance, communing, contacting other planes, or wish-relatedmethods (wish or limited wish). Of course, exceedingly powerful deities can penetrate thespell's barrier."
+    },
+    {
+      "id": "wizard8.monsterSummoningVi",
+      "name": "Monster Summoning VI",
+      "level": 8,
+      "reversible": false,
+      "castingTime": "8s",
+      "range": "Special",
+      "duration": "7rds + 1rd/lvl",
+      "areaOfEffect": "80yd Radius",
+      "savingThrow": "None",
+      "components": "V S M",
+      "reference": "PHB",
+      "schools": [
+        "Conjuration/Summoning"
+      ],
+      "wildMagic": false,
+      "description": "This spell is much like the 3rd-level spell monster summoning I, except that itsummons 1d3 6th-level monsters. These monsters appear in 1d3 rounds within the spell'sarea of effect and attack the caster's opponents, until either he commands them to cease,the spell duration expires, or the monsters are slain. These creatures do not check morale,and they vanish when slain. If no opponent exists to fight, summoned monsters can, if thewizard can communicate with them, and if they are physically capable, perform otherservices for the summoning wizard.The material components of this spell are a tiny bag and a small (not necessarily lit)candle."
+    },
+    {
+      "id": "wizard8.otilukesTelekineticSphere",
+      "name": "Otiluke's Telekinetic Sphere",
+      "level": 8,
+      "reversible": false,
+      "castingTime": "4s",
+      "range": "20yds",
+      "duration": "2rds/lvl",
+      "areaOfEffect": "Sphere with diameter 1ft/lvl",
+      "savingThrow": "Negates",
+      "components": "VS M",
+      "reference": "PHB",
+      "schools": [
+        "Evocation",
+        "Alteration"
+      ],
+      "wildMagic": false,
+      "description": "This spell is exactly the same as the 4th-level wizard spell Otiluke's resilient sphere,with the addition that the creatures or objects inside the globe are nearly weightless--anything contained within it weighs only 1/16 its normal weight. Any subject weighingup to 5,000 pounds can be telekinetically lifted in the sphere by the caster. Range ofcontrol extends to a maximum distance of 10 yards per level after the sphere has actuallysucceeded in encapsulating a subject or subjects. Note that even if more than 5,000pounds of weight is englobed, the perceived weight is only 1/16 of the actual weight, sothe orb can be rolled without exceptional effort. Because of the reduced weight, rapidmotion or falling within the field of the sphere is relatively harmless to the object therein,although it can be disastrous should the globe disappear when the subject inside is highabove a hard surface. The caster can dismiss the effect with a word.In addition to a hemispherical piece of diamond and a matching piece of gum arabic,the caster must also have a pair of small bar magnets as material components for thisspell."
+    },
+    {
+      "id": "wizard8.ottosIrresistibleDance",
+      "name": "Otto's Irresistible Dance",
+      "level": 8,
+      "reversible": false,
+      "castingTime": "5s",
+      "range": "Touch",
+      "duration": "1d4+1 rds",
+      "areaOfEffect": "Creature Touched",
+      "savingThrow": "None",
+      "components": "V",
+      "reference": "PHB",
+      "schools": [
+        "Enchantment/Charm"
+      ],
+      "wildMagic": false,
+      "description": "When an Otto's irresistible dance spell is placed upon a creature, the spell causes therecipient to begin dancing, complete with feet shuffling and tapping. This dance makes itimpossible for the victim to do anything other than caper and prance; this cavortingworsens the Armor Class of the creature by -4, makes saving throws impossible excepton a roll of 20, and negates any consideration of a shield. Note that the creature must betouched, as if melee combat were taking place and the spellcaster were striking to dodamage."
+    },
+    {
+      "id": "wizard8.permanency",
+      "name": "Permanency",
+      "level": 8,
+      "reversible": false,
+      "castingTime": "2rds",
+      "range": "Special",
+      "duration": "Permanent",
+      "areaOfEffect": "Special",
+      "savingThrow": "None",
+      "components": "V S M",
+      "reference": "PHB",
+      "schools": [
+        "Alteration"
+      ],
+      "wildMagic": false,
+      "description": "This spell affects the duration of certain other spells, making the duration permanent.The personal spells upon which a permanency is known to be effective are as follows:comprehend languages protection from evildetect evil protection from normal missilesdetect invisibility read magicdetect magic tonguesinfravision unseen servantprotection from cantripsThe wizard casts the desired spell and then follows it with the permanency spell. Eachpermanency spell lowers the wizard's Constitution by 1 point. The wizard cannot castthese spells upon other creatures. This application of permanency can be dispelled onlyby a wizard of greater level than the spellcaster was when he cast the spell.In addition to personal use, the permanency spell can be used to make the followingobject/creature or area-effect spells permanent:enlarge prismatic spherefear stinking cloudgust of wind wall of fireinvisibility wall of forcemagic mouth webAdditionally, the following spells can be cast upon objects or areas only and renderedpermanent:alarm wall of fireaudible glamer distance distortiondancing lights teleportsolid fogThese applications to other spells allow it to be cast simultaneously with any of thelatter when no living creature is the target, but the entire spell complex then can bedispelled normally, and thus negated.The permanency spell is also used in the fabrication of magical items (see the 6th-levelspell enchant an item). At the DM's option, permanency might become unstable or failafter a long period of at least 1,000 years. Unstable effects might operate intermittently orfail altogether.The DM may allow other selected spells to be made permanent. Researching thispossible application of a spell costs as much time and money as independentlyresearching the selected spell. If the DM has already determined that the application isnot possible, the research automatically fails. Note that the wizard never learns what ispossible except by the success or failure of his research."
+    },
+    {
+      "id": "wizard8.polymorphAnyObject",
+      "name": "Polymorph Any Object",
+      "level": 8,
+      "reversible": false,
+      "castingTime": "1rd",
+      "range": "5yds/lvl",
+      "duration": "Variable",
+      "areaOfEffect": "Special",
+      "savingThrow": "Special",
+      "components": "V S M",
+      "reference": "PHB",
+      "schools": [
+        "Alteration"
+      ],
+      "wildMagic": false,
+      "description": "This spell changes one object or creature into another. When used as a polymorphother or stone to flesh spell, simply treat the spell as a more powerful version, with savingthrows made with -4 penalties to the die roll. When it is cast in order to change otherobjects, the duration of the spell depends on how radical a change is made from theoriginal state to its enchanted state, as well as how different it is in size. The DMdetermines the changes by using the following guidelines:Kingdom Animal, vegetable, mineralClass Mammals, bipeds, fungi, metals, etc.Relationship Twig is to tree, sand is to beach, etc.Size Smaller, equal, largerShape Comparative resemblance of the original to the polymorphed stateIntelligence Particularly with regard to a change in which the end product ismore intelligentA change in kingdom makes the spell work for hours (if removed by one kingdom) orturns (if removed by two). Other changes likewise affect spell duration. Thus, changing alion to an androsphinx would be permanent, but turning a turnip to a purple worm wouldbe a change with a duration measured in hours. Turning a tusk into an elephant would bepermanent, but turning a twig into a sword would be a change with a duration of severalturns.All polymorphed objects radiate a strong magic, and if a dispel magic spell issuccessfully cast upon them, they return to their natural form. Note that a stone to fleshspell or its reverse will affect objects under this spell. As with other polymorph spells,damage sustained in the new form can result in the injury or death of the polymorphedcreature.For example, it is possible to polymorph a creature into rock and grind it to dust,causing damage, perhaps even death. If the creature was changed to dust to start with,more creative methods to damage it would be needed; perhaps the wizard could use agust of wind spell to scatter the dust far and wide. In general, damage occurs when thenew form is altered through physical force, although the DM will have to adjudicatemany of these situations.The system shock roll must be applied to living creatures, as must the restrictionsnoted regarding the polymorph other and stone to flesh spells. Also note that a polymorpheffect often detracts from an item's or creature's powers, but does not add new powers,except possibly movement capabilities not present in the old form. Thus, a vorpal swordpolymorphed into a dagger would not retain vorpal capability. Likewise, valueless itemscannot be made into permanent valuable items.The material components of this spell are mercury, gum arabic, and smoke."
+    },
+    {
+      "id": "wizard8.powerWordBlind",
+      "name": "Power Word, Blind",
+      "level": 8,
+      "reversible": false,
+      "castingTime": "1s",
+      "range": "5yds/lvl",
+      "duration": "Special",
+      "areaOfEffect": "15ft Radius",
+      "savingThrow": "None",
+      "components": "V",
+      "reference": "PHB",
+      "schools": [
+        "Conjuration/Summoning"
+      ],
+      "wildMagic": false,
+      "description": "When a power word, blind spell is cast, one or more creatures within the area of effectbecome sightless. The spellcaster selects one creature as the target center, and the effectspreads outward from the center, affecting creatures with the lowest hit point totals first;the spell can also be focused to affect only an individual creature. The spell affects up to100 hit points of creatures; creatures who currently have 100 or more hit points are notaffected and do not count against the number of creatures affected. The duration of thespell depends upon how many hit points are affected. If 25 or fewer hit points areaffected, the blindness is permanent until cured. If 26 to 50 hit points are affected, theblindness lasts for 1d4+1 turns. If 51 to 100 hit points are affected, the spell lasts for1d4+1 rounds. An individual creature cannot be partially affected. If all of its current hitpoints are affected, it is blinded; otherwise, it is not. Blindness can be removed by a cureblindness or dispel magic spell."
+    },
+    {
+      "id": "wizard8.prismaticWall",
+      "name": "Prismatic Wall",
+      "level": 8,
+      "reversible": false,
+      "castingTime": "7s",
+      "range": "10yds",
+      "duration": "1 turn/lvl",
+      "areaOfEffect": "4ft/lvel wide x 2ft/lvl high",
+      "savingThrow": "Special",
+      "components": "V S M",
+      "reference": "PHB",
+      "schools": [
+        "Conjuration/Summoning"
+      ],
+      "wildMagic": false,
+      "description": "This spell enables the wizard to conjure a vertical, opaque wall--a shimmering,multicolored plane of light that protects him from all forms of attack. The wall flasheswith all colors of the visible spectrum, seven of which have a distinct power and purpose.The wall is immobile, and the spellcaster can pass through the wall without harm.However, any creature with fewer than 8 Hit Dice that is within 20 feet of the wall anddoes not shield its vision is blinded for 2d4 rounds by the colors.Each color in the wall has a special effect. Each color can also be negated by a specificmagical effect, but the colors must be negated in the precise order of the spectrum. Theaccompanying table shows the seven colors of the wall, the order in which they appear,their effects on creatures trying to attack the spellcaster, and the magic needed to negateeach color.The wall's maximum proportions are 4 feet wide per level of experience of the casterand 2 feet high per level of experience. A prismatic wall spell cast to materialize in aspace occupied by a creature is disrupted and the spell is wasted.Prismatic Wall EffectsColor Order Effect of Color Spell Negated ByRed 1st Stops nonmagical missiles--inflicts 20 points of damage,save for half cone of coldOrange 2nd Stops magical missiles--inflicts 40 points of damage,save for half gust of windYellow 3rd Stops poisons, gases, and petrification--inflicts 80 pointsof damage, save for half disintegrateGreen 4th Stops breath weapons--save vs. poison or die;survivors suffer 20 points of damage passwallBlue 5th Stops location/detection and mental attacks--save vs.petrification or turn to stone magic missileIndigo 6th Stops magical spells--save vs. wand or go insane continual lightViolet 7th Force field protection--save vs. spell or be sent toanother plane dispel magic"
+    },
+    {
+      "id": "wizard8.screen",
+      "name": "Screen",
+      "level": 8,
+      "reversible": false,
+      "castingTime": "1 Turn",
+      "range": 0,
+      "duration": "1 hr/lvl",
+      "areaOfEffect": "30ft Cube/lvl",
+      "savingThrow": "Special",
+      "components": "V S M",
+      "reference": "PHB",
+      "schools": [
+        "Divination/Illisuion"
+      ],
+      "wildMagic": false,
+      "description": "This spell combines several elements to create a powerful protection from scrying anddirect observation. When the spell is cast, the wizard dictates what will and will not beobserved in the area of effect. The illusion created must be stated in general terms. Thus,the caster could specify the illusion of him and another playing chess for the duration ofthe spell, but he could not have the illusionary chess players take a break, make dinner,and then resume their game. He could have a crossroads appear quiet and empty evenwhile an army is actually passing through the area. He could specify that no one be seen(including passing strangers), that his troops be undetected, or even that every fifth manor unit should be visible. Once the conditions are set, they cannot be changed.Attempts to scry the area automatically detect the image stated by the caster with nosaving throw allowed. Sight and sound are appropriate to the illusion created. A band ofmen standing in a meadow could be concealed as an empty meadow with birds chirping,etc. Direct observation may allow a saving throw (as per a normal illusion), if there iscause to disbelieve what is seen. Certainly onlookers in the area would becomesuspicious if the column of a marching army disappeared at one point to reappear atanother! Even entering the area does not cancel the illusion or necessarily allow a savingthrow, assuming the hidden beings take care to stay out of the way of those affected bythe illusion."
+    },
+    {
+      "id": "wizard8.sertensSpellImmunity",
+      "name": "Serten's Spell Immunity",
+      "level": 8,
+      "reversible": false,
+      "castingTime": "1rd/recipient",
+      "range": "Touch",
+      "duration": "1 turn/lvl",
+      "areaOfEffect": "Creature(s) Touched",
+      "savingThrow": "None",
+      "components": "V S M",
+      "reference": "PHB",
+      "schools": [
+        "Abjuration"
+      ],
+      "wildMagic": false,
+      "description": "By use of this spell, the wizard is able to confer virtual immunity to certain spells andmagical attack forms upon those he touches. For every four levels of experience of thewizard, one creature can be protected by the Serten's spell immunity spell; however, ifmore than one is protected, the duration of the protection is divided among the protectedcreatures.For example, a 16th-level wizard can cast the spell upon one creature and it will last 16turns, or place it upon two creatures for eight turns, or four creatures for four turns.) Theprotection gives a bonus to saving throws, according to spell type and level, as shown inthe following table.Spell Level Wizard Spell Priest Spell1st-3rd +9* +74th-6th +7 +57th-8th +5 +3* Includes beguiling effects.The material component of this spell is a diamond of at least 500 gp value, which mustbe crushed and sprinkled over the spell recipients. Each such creature must also have inits possession a diamond of at least one carat size, intact and carried on its person."
+    },
+    {
+      "id": "wizard8.sink",
+      "name": "Sink",
+      "level": 8,
+      "reversible": false,
+      "castingTime": "8s",
+      "range": "10yds/lvl",
+      "duration": "Special",
+      "areaOfEffect": "1 creature or object. Max 1 cubic ft/lvl",
+      "savingThrow": "Special",
+      "components": "V S M",
+      "reference": "PHB",
+      "schools": [
+        "Enchantment",
+        "Alteration"
+      ],
+      "wildMagic": false,
+      "description": "By means of this spell, a wizard can force a creature or object into the very earth orfloor upon which it stands. When casting the spell, the wizard must chant the spell for theremainder of the round without interruption. At that juncture, the subject creature orobject becomes rooted to the spot unless a saving throw vs. spell (for a creature) ordisintegration (for an object with magical properties) is successful. (Note: \"magicalproperties\" include those of magical items as listed in the Dungeon Master Guide, thoseof items enchanted or otherwise of magical origin, and those of items with protectiontypespells or with permanent magical properties or similar spells upon them.) Items of anonmagical nature are not entitled to a saving throw. If a subject fails its saving throw, itbecomes of slightly greater density than the surface upon which it stands.The spellcaster now has the option of ceasing his spell and leaving the subject as it is,in which case the spell expires in four turns, and the subject returns to normal. If thecaster proceeds with the spell (into the next round), the subject begins to sink slowly intothe ground. Before any actions are taken in the new round, the subject sinks one-quarterof its height; after the first group acts, another quarter; after the second group acts,another; and at the end of the round, the victim is totally sunken into the ground.This entombment places a creature or object in a state of suspended animation. Thecessation of time means that the subject does not grow older. Bodily and other functionsvirtually cease, but the subject is otherwise unharmed. The subject exists in undamagedform in the surface into which it was sunk, its upper point as far beneath the surface asthe subject has height--a 6-foot-tall victim will be 6 feet beneath the surface, while a 60-foot-tall subject will have its uppermost point 60 feet below ground level. If the groundaround the subject is somehow removed, the spell is broken and the subject returns tonormal, but it does not rise up. Spells such as dig, transmute rock to mud, and freedom(the reverse of the 9th-level spell imprisonment) will not harm the sunken creature orobject and will often be helpful in recovering it. If a detect magic spell is cast over anarea upon which a sink spell was used, it reveals a faint magical aura of undefinablenature, even if the subject is beyond detection range. If the subject is within range of thedetection, the spell's schools can be discovered (alteration and enchantment)."
+    },
+    {
+      "id": "wizard8.spellEngine",
+      "name": "Spell Engine",
+      "level": 8,
+      "reversible": false,
+      "castingTime": "1 turn",
+      "range": 0,
+      "duration": "Permanen t until dispelled/destroyed",
+      "areaOfEffect": "10ft radius/lvl",
+      "savingThrow": "None",
+      "components": "V S M",
+      "reference": "FRA",
+      "schools": [
+        "Abjuration/Alteration"
+      ],
+      "wildMagic": false,
+      "description": "In casting this spell, the wizard callsinto being the spell engine, a great wheelthat absorbs magical energy, in particularcast spells. When initially cast, the engineis unactivated and remains invisible in thelocation where the wizard cast it. Once aspell is cast in the area of effect around theengine, the spell engine activates. A greatintangible wheel 12 feet in diameter and 2feet thick shimmers into existence. Magicalenergies used in the area will cause thegreat wheel to turn, shining with a glowingwhite light from the energy present.Once activated, the spell engine will notdeactivate; rather, it will eventually slowdown from lack of spell energy and becomeghostly and translucent.When activated, the spell engine absorbsall spell energy cast in the area of effect,reaching through solid objects to doso. Wizard and priest spells, spell-likeabilities of monsters and individuals, andmagical items with castable charges willnot function in this area. Their energy issucked into the wheel, which glowsbrighter and spins faster with every addition.Unlike the spelltrap, the spell enginecannot be overloaded.A spell engine can be destroyed by directcontact with a magical item (excludingpotions and scrolls but includingartifacts and unique magical items). Theengine will explode on contact with suchan item, inflicting 1-20 points of damageto everyone within 10 feet and 1-8 to everyonebetween 10 and 20 feet away fromthe wheel itself. The magical item is destroyedas well in the explosion. Artifactsand unique items (such as special purposeswords) are not destroyed, but they (andtheir wielder) are bodily moved to anotherplane or dimension. Getting homefrom there is the characters problem.A dispel magic spell will not destroy thespell engine, as its energy will be sucked up in the process. Symbols, glyphs, andabjuration magics already in place at thetime the spell engine is activated are notabsorbed, though new spells of that varietycast in the area are. A disintegratespell will cause the engine to explode thesame as if it contacted a magical item.A detect magic spell will reveal thepresence of an unactivated spell engine, aswill the ability to detect invisibility,though neither will activate the engine ifcast before entering the area of effect or ifthey are natural abilities.An operating spell engine has one beneficialsidelightif a spellcaster studies orprays in its light, the amount of time requiredto learn or receive spells is halved.This does not reduce the time required forrest, only to memorize spells.Other than the powers listed above, thespell engine does not affect living beings.Individuals with magical items will not affectan unactivated spell engine. Only thecasting of a spell in the area of effect willcall the spell engine into being.The material components of this spellare a disc of polished marble, shell, orbone, a tear from the caster, and a gemworth at least 1,000 gp."
+    },
+    {
+      "id": "wizard8.sunburst",
+      "name": "Sunburst",
+      "level": 8,
+      "reversible": false,
+      "castingTime": "4s",
+      "range": 0,
+      "duration": "Instantaneous",
+      "areaOfEffect": "10ft Radius/lvl",
+      "savingThrow": "Special",
+      "components": "V S M",
+      "reference": "FRA",
+      "schools": [
+        "Evocation"
+      ],
+      "wildMagic": false,
+      "description": "The sunburst spell causes a globe of radianceto explode silently from the castersform, reaching its limit of 10 feet per levelof the caster instantaneously. The sunbursthas the following effects: All creatures looking at the caster andwithin this area of effect must save vs.spells or be blinded for 1-3 rounds. All creatures looking at the caster andwithin the area of effect and who useinfravision are blinded for 2-8 roundsif they fail to save vs. spells. All creatures within the area of effectto whom sunlight is harmful mustmake a saving throw vs. spells. If theymake their saving throw, they areblinded for 2-12 roundsotherwisethey are blinded for 1-100 days. All undead within the radius, includingvampires, suffer 8d6 points ofdamage. They take half that damage ifthey make a saving throw vs. spells.  All fungoid life within the radius takes8d6 points of damage from the lightwith no saving throw.The material components of this spellare a piece of sunstone and a naked flame."
+    },
+    {
+      "id": "wizard8.symbol",
+      "name": "Symbol",
+      "level": 8,
+      "reversible": false,
+      "castingTime": "8s",
+      "range": "Touch",
+      "duration": "Special",
+      "areaOfEffect": "Special",
+      "savingThrow": "Special",
+      "components": "V S M",
+      "reference": "PHB",
+      "schools": [
+        "Conjuration/Summoning"
+      ],
+      "wildMagic": false,
+      "description": "A symbol spell creates magical runes affecting creatures that pass over, touch, or readthe runes, or pass through a portal upon which the symbol is inscribed. Upon casting thespell, the wizard inscribes the symbol upon whatever surface he desires. Likewise, thespellcaster is able to place the symbol of his choice, using any one of the following:Death One or more creatures, whose total hit points do not exceed 80, are slain.Discord All creatures are affected and immediately fall to loud bickering andarguing; there is a 50% probability that creatures of different alignmentsattack each other. The bickering lasts for 5d4 rounds, the fighting for 2d4rounds.Fear This symbol creates an extra-strong fear spell, causing all creatures to savevs. spell with -4 penalties to the die roll, or panic and flee as if attacked bya fear spell.Hopelessness All creatures are affected and must turn back in dejection unless they savevs. spell. Affected creatures submit to the demands of any opponent--forexample, surrender, get out, etc. The hopelessness lasts for 3d4 turns;during this period it is 25% probable that affected creatures take no actionduring any round, and 25% likely that those taking action turn back orretire from battle, as applicable.Insanity One or more creatures whose total hit points do not exceed 120 becomeinsane and remain so, acting as if a confusion spell had been placed uponthem, until a heal, restoration, or wish spell is used to remove themadness.Pain All creatures are afflicted with wracking pains shooting through theirbodies, causing a -2 penalty to Dexterity and a -4 penalty to attack rolls for2d10 turns.Sleep All creatures under 8+1 Hit Dice immediately fall into a catatonic slumberand cannot be awakened for 1d12+4 turns.Stunning One or more creatures whose total hit points do not exceed 160 arestunned and reeling for 3d4 rounds, dropping anything they are holding.The type of symbol cannot be recognized without being read and thus activating itseffects.The material components of this spell are powdered black opal and diamond dust,worth not less than 5,000 gp each."
+    },
+    {
+      "id": "wizard8.trapTheSoul",
+      "name": "Trap the Soul",
+      "level": 8,
+      "reversible": false,
+      "castingTime": "Special",
+      "range": "10yds",
+      "duration": "Permanent until broken",
+      "areaOfEffect": "1 Creature",
+      "savingThrow": "Special",
+      "components": "V S M",
+      "reference": "PHB",
+      "schools": [
+        "Conjuration/Summoning"
+      ],
+      "wildMagic": false,
+      "description": "This spell forces the creature's life force (and its material body) into a special prisongem enchanted by the spellcaster. The creature must be seen by the caster when the finalword is uttered.The spell can be triggered in one of two ways. First, the final word of the spell can bespoken when the creature is within spell range. This allows magic resistance (if any) anda saving throw vs. spell to avoid the effect. If the creature's real name is spoken as well,any magic resistance is ignored and the saving throw vs. spell suffers a penalty of -2. Ifthe saving throw is successful, the prison gem shatters.The second method is far more insidious, for it tricks the victim into accepting a triggerobject inscribed with the final spell word, automatically placing the creature's soul in thetrap. To use this method, both the creature's true name and the trigger word must beinscribed on the trigger item when the gem is enchanted. A sympathy spell can also beplaced on the trigger item. As soon as the subject creature picks up or accepts the triggeritem, its life force is automatically transferred to the gem, without the benefit of magicresistance or saving throw.The gem prison will hold the trapped entity indefinitely, or until the gem is broken andthe life force is released, allowing the material body to reform. If the trapped creature is apowerful creature from another plane (which could mean a character trapped by aninhabitant of another plane when the character is not on the Prime Material Plane), it canbe required to perform a service immediately upon being freed. Otherwise, the creaturecan go free once the gem imprisoning it is broken.Before the actual casting of the trap the soul spell, the wizard must prepare the prison,a gem of at least 1,000 gp value for every Hit Die or level of experience possessed by thecreature to be trapped (for example, it requires a gem of 10,000 gp value to trap a 10 HitDie or 10th-level creature). If the gem is not valuable enough, it shatters when theentrapment is attempted. (Note that while characters have no concept of level as such, thevalue of the gem needed to trap an individual can be researched. Remember that thisvalue can change over time as characters advance.) Creating the prison gem requires anenchant an item spell and the placement of a maze spell into the gem, thereby forming theprison to contain the life force."
+    },
+    {
+      "id": "wizard8.wildzone",
+      "name": "Wildzone",
+      "nameAsPrinted": "Wildzone*",
+      "level": 8,
+      "reversible": false,
+      "castingTime": "1d6rds",
+      "range": 0,
+      "duration": "2d6 Turns",
+      "areaOfEffect": "300x300ft Square",
+      "savingThrow": "Npne",
+      "components": "V S M",
+      "reference": "TOM",
+      "schools": [
+        "Conjuration/Summoning"
+      ],
+      "wildMagic": true,
+      "description": "This powerful spell creates a disruption in magical forces similar to the conditionsfound in wild magic regions (areas where the effects of magic have been permanentlyaltered). This spell has only a temporary effect, although the effects of wildzone couldpossibly be rendered permanent.The spell creates a wild magic region centered on the caster. The area of effect cannotbe shaped in any way; it is always a square 300 feet long on each side (90,000 squarefeet).Within the wildzone, wild magic reigns. Any spell cast in the area of effect isautomatically treated as a wild surge (see Table 2). Effects from magical items thatexpend charges are also treated as wild surges when used in the area. Other magical itemsfunction normally.Spells cast into the wildzone from outside the area of effect function normally, butspells cannot be cast out of the area of effect without triggering a wild surge.The material components are several pots of paint which must be spilled across asheet of hammered silver worth no less than 2,000 gp."
+    }
+  ]
+}

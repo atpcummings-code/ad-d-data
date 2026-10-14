@@ -1,0 +1,960 @@
+{
+  "meta": {
+    "source": "owner's master_list_of_spells - PHB-FRA-TOM-GHA-UA.xlsx, tab '7th'",
+    "level": 7,
+    "class": "wizard",
+    "count": 51,
+    "bookKey": {
+      "PHB": "2nd Edition Players Handbook",
+      "FRA": "2nd Edition Forgotten Realms Adventures",
+      "TOM": "2nd Edition Tome of Magic",
+      "GHA": "1st/2nd Edition Greyhawk Adventures",
+      "UA": "1st Edition Unearthed Arcana"
+    },
+    "fields": {
+      "reversible": "true where the spreadsheet's Reversible column is filled",
+      "wildMagic": "true where the spell name ended in * in the spreadsheet (Wild Magic spell; owner is still debating whether to include them). nameAsPrinted keeps the asterisk.",
+      "schools": "School, School 2, School 3 in order; empty cells dropped",
+      "description": "as in the spreadsheet; null where blank"
+    },
+    "notes": [
+      "The Superscript column was ignored, as instructed.",
+      "Text encoding artefacts from the spreadsheet (curly quotes and dashes stored as single bytes) were converted to normal characters; wording was not changed otherwise.",
+      "Where two spells exist in different books the book precedence order applies; otherwise the DM decides (from the spreadsheet key)."
+    ],
+    "gaps": []
+  },
+  "spells": [
+    {
+      "id": "wizard7.acidStorm",
+      "name": "Acid Storm",
+      "level": 7,
+      "reversible": false,
+      "castingTime": "7s",
+      "range": "10yds/lvl",
+      "duration": "1rd/lvl",
+      "areaOfEffect": "40ft Diameter Circle",
+      "savingThrow": "For Half",
+      "components": "V S M",
+      "reference": "TOM",
+      "schools": [
+        "Evocation"
+      ],
+      "wildMagic": false,
+      "description": "This deadly spell unleashes a downpour of magical, gelatinous acid droplets. Allcreatures within the area of effect are coated by globs of gooey acid. The acid can bewashed off only with wine, vinegar, or by a successful dispel magic or similar spell. Theacid remains present for 1 round per level of the caster, then vanishes.Creatures coated by the acid suffer 1d4 hit points of damage each round duringrounds 1-3, 1d6 points in each of rounds 4-6, and 1d8 points on each round thereafter.Characters who successfully save vs. spells during the first round suffer only half damagefrom the acid for the remaining rounds. When the spell expires, no further damage isinflicted.Acid damage can be healed through any means except regeneration. The materialcomponent is a drop of acid."
+    },
+    {
+      "id": "wizard7.banishment",
+      "name": "Banishment",
+      "level": 7,
+      "reversible": false,
+      "castingTime": "7s",
+      "range": "20yds",
+      "duration": "Instantaneous",
+      "areaOfEffect": "60ft Radius",
+      "savingThrow": "Special",
+      "components": "V S M",
+      "reference": "PHB",
+      "schools": [
+        "Abjuration"
+      ],
+      "wildMagic": false,
+      "description": "A banishment spell enables the caster to force some extraplanar creature out of thecaster's home plane. The effect is instantaneous, and the subject cannot come backwithout some special summoning or means of egress from its own plane to the one fromwhich it was banished. Up to 2 Hit Dice or levels of creature per caster level can bebanished.The caster must both name the type of creature(s) to be sent away and give its nameand title as well, if any. In any event, the creature's magic resistance must be overcomefor the spell to be effective.The material components of the spell are substances harmful, hateful, or opposed to thenature of the subject(s) of the spell. For every such substance included in the casting, thesubject creature(s) loses 5% from its magic resistance and suffers a -2 penalty to itssaving throw vs. spell. For example, if iron, holy water, sunstone, and a sprig of rosemarywere used in casting a banishment upon a being that hates those things, its saving throwversus the spell would be made with a -8 penalty (four substances times the factor of -2).Special items, such as hair from the tail of a ki-rin or couatl feathers, could also be addedto change the factor to -3 or -4 per item. In contrast, a titan's hair or mistletoe blessed by adruid might lower the factor to -1 with respect to the same creature. If the subject creaturesuccessfully rolls its saving throw vs. spell, the caster is stung by a backlash of energy,suffers 2d6 points of damage, and is stunned for one round."
+    },
+    {
+      "id": "wizard7.bigbysGraspingHand",
+      "name": "Bigby's Grasping Hand",
+      "level": 7,
+      "reversible": false,
+      "castingTime": "7s",
+      "range": "10yds/lvl",
+      "duration": "1rd/lvl",
+      "areaOfEffect": "Special",
+      "savingThrow": "None",
+      "components": "V S M",
+      "reference": "PHB",
+      "schools": [
+        "Evocation"
+      ],
+      "wildMagic": false,
+      "description": "Bigby's grasping hand is a superior version of the 6th-level spell Bigby's forceful hand.It creates a man-sized (5 feet) to gargantuan-sized (21 feet) hand that appears and graspsa creature designated by the caster, regardless of what the spellcaster does or how theopponent tries to escape it. The grasping hand can hold motionless a creature or object ofup to 1,000 pounds weight, slow movement to 10 feet per round if the creature weighsbetween 1,000 and 4,000 pounds, or slow movement by 50% if the creature weighs up to16,000 pounds. The hand itself inflicts no damage. The grasping hand has an ArmorClass of 0, has as many hit points as its caster in full health, and vanishes whendestroyed. The caster can order it to release a trapped opponent or can dismiss it oncommand.The material component is a leather glove."
+    },
+    {
+      "id": "wizard7.bloodstonesFrightfulJoining",
+      "name": "Bloodstone's Frightful Joining",
+      "level": 7,
+      "reversible": false,
+      "castingTime": "7s",
+      "range": "Touch",
+      "duration": "1 turn/lvl",
+      "areaOfEffect": "One undead Creature",
+      "savingThrow": "Special",
+      "components": "V S",
+      "reference": "TOM",
+      "schools": [
+        "Necromancy"
+      ],
+      "wildMagic": false,
+      "description": "When this powerful spell is employed, the wizard transfers his spirit to the body of anundead creature, totally dominating it. If the undead creature has intelligence, it isallowed a saving throw vs. spell to resist the joining. If the save is successful, the caster'sspirit is forced back into his own body. The wizard must make a system shock roll; if theroll fails, the wizard suffers 5d6 points of damage. If the roll succeeds, the wizard suffershalf this damage.If the creature's save fails, the necromancer joins his life essence with that of theundead. While in the creature's body, the caster can use all of its special attacks andinnate abilities, excluding spells memorized by the creature.The wizard's body remains comatose, is subject to all regular attacks, and suffersdamage normally. The wizard's spirit can travel an unlimited distance from his physicalbody as long as they remain on the same plane of existence.If intelligent, the possessed undead continually tries to purge the caster with mentalthreats that can be heard only by the wizard. The thoughts of the undead are ghastly.During the first minute of each hour of possession, the caster must succeed anIntelligence check in order to retain his sanity. The roll is modified by the differencebetween the creature's Intelligence and that of the spellcaster. If the undead has a higherscore, the difference is added to the die roll. If the necromancer has a higher Intelligence,the difference is subtracted from the roll.If the roll is successful, nothing happens and the caster may continue to possess theundead. If the Intelligence roll fails, the wizard's intellect degenerates, making him araving, homicidal maniac. His spirit is immediately forced to return to his body, and hemust attempt a system shock roll with damage occurring as outlined above. The casterremains dangerously insane until a heal or wish spell is used to restore his intellect.This spell can be very useful when combined with the mask of death spell.When the spell's duration expires, the necromancer's spirit immediately returns to hisbody."
+    },
+    {
+      "id": "wizard7.charmPlants",
+      "name": "Charm Plants",
+      "level": 7,
+      "reversible": false,
+      "castingTime": "1 Turn",
+      "range": "30yds",
+      "duration": "Permanent",
+      "areaOfEffect": "10ft x 30ft",
+      "savingThrow": "Negates",
+      "components": "V S M",
+      "reference": "PHB",
+      "schools": [
+        "Enchantment/Charm"
+      ],
+      "wildMagic": false,
+      "description": "The charm plants spell enables the spellcaster to bring under command vegetable lifeforms and communicate with them. These plants obey instructions to the best of theirability. The spell will charm plants in a 30-foot x 10-foot area. While the spell does notendow the vegetation with new abilities, it does enable the wizard to command the plantsto use whatever they have in order to fulfill his instructions. If the plants in the area ofeffect do have special or unusual abilities, these are used as commanded by the wizard.For example, this spell can generally duplicate the effects of the 1st-level priest spellentangle, if the caster desires. The saving throw applies only to intelligent plants, and it ismade with a -4 penalty to the die roll.The material components of the spell are a pinch of humus, a drop of water, and a twigor leaf."
+    },
+    {
+      "id": "wizard7.controlUndead",
+      "name": "Control Undead",
+      "level": 7,
+      "reversible": false,
+      "castingTime": "1rd",
+      "range": "60ft",
+      "duration": "3d4 rds + 1rd/lvl",
+      "areaOfEffect": "1d6 Undead",
+      "savingThrow": "Special",
+      "components": "V S M",
+      "reference": "PHB",
+      "schools": [
+        "Necromancy"
+      ],
+      "wildMagic": false,
+      "description": "This spell enables the wizard to command 1d6 undead creatures for a short period oftime. Upon casting the spell, the wizard selects one point within range of the spell. Thoseundead nearest to this point are affected, until either undead equal in Hit Dice to thecaster's level or six undead are affected. Undead with 3 Hit Dice or less are automaticallycontrolled. Those of greater Hit Dice are allowed a saving throw vs. spell, which, ifsuccessful, negates the attempt to control that creature. Regardless of the success orfailure of the saving throw, each creature required to make a check counts toward the HitDice limit of the spell.Those creatures under the control of the wizard can be commanded by the caster ifthey are within hearing range. There is no telepathic communication or languagerequirement between the caster and the controlled undead. Even if communication isimpossible, the controlled undead do not attack the spellcaster. At the end of the spell, thecontrolled undead revert to their normal behaviors. Those not mindless will remember thecontrol exerted by the wizard.The material component for this spell is a small piece each of bone and raw meat."
+    },
+    {
+      "id": "wizard7.delayedBlastFireball",
+      "name": "Delayed Blast Fireball",
+      "level": 7,
+      "reversible": false,
+      "castingTime": "7s",
+      "range": "100yds + 10yds/lvl",
+      "duration": "Special",
+      "areaOfEffect": "20ft Radius",
+      "savingThrow": "For Half",
+      "components": "V S M",
+      "reference": "PHB",
+      "schools": [
+        "Evocation"
+      ],
+      "wildMagic": false,
+      "description": "This spell creates a fireball, with a +1 bonus to each of its dice of damage, whichreleases its blast anytime from instantly to five rounds later, according to the commandgiven by the wizard. In other respects, the spell is the same as the 3rd-level spell fireball."
+    },
+    {
+      "id": "wizard7.drawmijsInstantSummons",
+      "name": "Drawmij's Instant Summons",
+      "level": 7,
+      "reversible": false,
+      "castingTime": "1s",
+      "range": "Infinite + Special",
+      "duration": "Instantaneous",
+      "areaOfEffect": "1 Small Object",
+      "savingThrow": "None",
+      "components": "V S M",
+      "reference": "PHB",
+      "schools": [
+        "Conjuration/Summoning"
+      ],
+      "wildMagic": false,
+      "description": "When this spell is cast, the wizard teleports some desired item from virtually anylocation directly to his hand. The single object can be no longer in any dimension than asword, can have no more weight than a shield (about eight pounds), and must benonliving.To prepare this spell, the wizard must hold a gem of not less than 5,000 gp value in hishand and utter all but the final word of the conjuration. At some point in the future, hemust crush the gem and utter the final word. The desired item is then transported instantlyinto the spellcaster's right or left hand, as he desires.The item must have been previously touched during the initial incantation andspecifically named; only that particular item is summoned by the spell. During the initialincantation, the gem becomes magically inscribed with the name of the item to besummoned. The inscription is invisible and unreadable, except by means of a read magicspell, to all but the wizard who cast the summons.If the item is in the possession of another creature, the spell does not work, and thecaster knows who the possessor is and roughly where he, she, or it is located when thesummons is cast. Items can be summoned from other planes of existence, but only if suchitems are not in the possession (not necessarily the physical grasp) of another creature.For each level of experience above the 14th, the wizard is able to summon a desired itemfrom one plane farther removed from the plane he is in at the time the spell is cast (oneplane away at 14th level, two planes away at 15th, etc.). Thus, a wizard of 16th levelcould cast the spell even if the desired item was on the second layer of one of the OuterPlanes, but at 14th level the wizard would be able to summon the item only if it were nofarther than one of the Inner Planes, the Ethereal Plane, or the Astral Plane (see thePlanescape Campaign Setting boxed set). Note that special wards or barriers, or factorsthat block the teleport or plane shift spells, may also block the operation of this spell.Objects in Leomund's secret chest cannot be recovered by using this spell.Note: If the item is wizard marked, it can be summoned from anywhere on the sameplane unless special local conditions apply. Furthermore, the details of the location of theitem are more specific, and the item is more easily traceable with other types of scryingmagic."
+    },
+    {
+      "id": "wizard7.duoDimension",
+      "name": "Duo-Dimension",
+      "level": 7,
+      "reversible": false,
+      "castingTime": "7s",
+      "range": 0,
+      "duration": "3rds + 1rd/lvl",
+      "areaOfEffect": "The Caster",
+      "savingThrow": "None",
+      "components": "V S M",
+      "reference": "PHB",
+      "schools": [
+        "Alteration"
+      ],
+      "wildMagic": false,
+      "description": "A duo-dimension spell causes the caster to have only two dimensions, height andwidth, with no depth. He is thus invisible when turned sideways. This invisibility can bedetected only by means of a true seeing spell or similar methods. In addition, the duodimensionalwizard can pass through the thinnest of spaces as long as these have theproper height--going through the space between a door and its frame is a simple matter.The wizard can perform all actions normally. He can turn and become invisible, move inthis state, and appear again next round and cast a spell, disappearing on the followinground.Note that when turned, the wizard cannot be affected by any form of attack, but whenvisible, he is subject to double the amount of damage normal for an attack form; forexample, a dagger thrust would inflict 2d4 points of damage if it struck a duodimensionalwizard. Furthermore, the wizard has a portion of his existence in the AstralPlane when the spell is in effect, and he is subject to possible notice by creatures there. Ifnoticed, it is 25% probable that the wizard is pulled entirely into the Astral Plane by anyattack from an astral creature. Such an attack (and any subsequent attack received on theAstral Plane) inflicts normal damage.The material components of this spell are a flat ivory likeness of the spellcaster (whichmust be of finest workmanship, gold filigreed, and enameled and gem-studded at anaverage cost of 500 to 1,000 gp) and a strip of parchment. As the spell is uttered, theparchment is given half a twist and joined at the ends. The figurine is then passed throughthe parchment loop, and both disappear forever."
+    },
+    {
+      "id": "wizard7.fingerOfDeath",
+      "name": "Finger of Death",
+      "level": 7,
+      "reversible": false,
+      "castingTime": "5s",
+      "range": "60yds",
+      "duration": "Permanent",
+      "areaOfEffect": "1 Creature",
+      "savingThrow": "Negates",
+      "components": "V S",
+      "reference": "PHB",
+      "schools": [
+        "Necromancy"
+      ],
+      "wildMagic": false,
+      "description": "The finger of death spell snuffs out the victim's life force. If successful, the victim canbe neither raised nor resurrected. In addition, in human subjects the spell initiates changesto the body such that after three days the caster can, by means of a special ceremonycosting not less than 1,000 gp plus 500 gp per body, animate the corpse as a juju zombieunder the control of the caster. The changes can be reversed before animation by a limitedwish or similar spell cast directly upon the body, and a full wish restores the subject tolife.The caster utters the finger of death spell incantation, points his index finger at thecreature to be slain, and unless the victim succeeds in a saving throw vs. spell, deathoccurs. A creature successfully saving still receives 2d8+1 points of damage. If thesubject dies of damage, no internal changes occur and the victim can then be revivednormally."
+    },
+    {
+      "id": "wizard7.forcecage",
+      "name": "Forcecage",
+      "level": 7,
+      "reversible": false,
+      "castingTime": "3-4s",
+      "range": "10yds/2lvls",
+      "duration": "6 Turns +1 turn/lvl",
+      "areaOfEffect": "20ft Cube",
+      "savingThrow": "None",
+      "components": "V S & Special",
+      "reference": "PHB",
+      "schools": [
+        "Evocation"
+      ],
+      "wildMagic": false,
+      "description": "This powerful spell enables the caster to bring into being a cube of force, but it isunlike the magical item of that name in one important respect: The forcecage does nothave solid walls of force; it has alternating bands of force with _-inch gaps between.Thus, it is truly a cage, rather than an enclosed space with solid walls. Creatures withinthe area of effect of the spell are caught and contained unless they are able to passthrough the openings--and, of course, all spells and breath weapons can pass through thegaps in the bars of force of the forcecage.A creature with magic resistance has a single attempt to pass through the walls of thecage. If the resistance check is successful, the creature escapes. If it fails, the creature iscaged. Note that a successful check does not destroy the cage, nor does it enable othercreatures (save familiars) to flee with the escaping creature. The forcecage is also unlikethe solid-walled protective device, cube of force, in that it can be gotten rid of only bymeans of a dispel magic spell or by the expiration of the spell.By means of special preparation at the time of memorization, a forcecage spell can bealtered to a forcecube spell. The cube created is 10 feet on a side, and the spell thenresembles that of a cube of force in all respects save that of the differences between a castspell and the magic of a device, including the methods of defeating its power.Although the actual casting of either application of the spell requires no materialcomponent, the study required to commit it to memory does demand that the wizardpowder a diamond of at least 1,000 gp value, using the diamond dust to trace the outlinesof the cage or cube he desires to create via spellcasting at some later time. Thus, inmemorization, the diamond dust is employed and expended, for upon completion ofstudy, the wizard must then toss the dust into the air and it will disappear.",
+      "descriptionNote": "Contains '_' where the source spreadsheet lost a symbol (probably a fraction such as 1/2); not corrected."
+    },
+    {
+      "id": "wizard7.gemjump",
+      "name": "Gemjump",
+      "level": 7,
+      "reversible": false,
+      "castingTime": "2rds",
+      "range": 0,
+      "duration": "Instantaneous",
+      "areaOfEffect": "The Caster",
+      "savingThrow": "None",
+      "components": "V S M",
+      "reference": "FRA",
+      "schools": [
+        "Alteration"
+      ],
+      "wildMagic": false,
+      "description": "This spell is initially cast upon a specialgem known as a roguestone (see undergems & treasures of the Realms). The roguestoneis enchanted in the process of thespell and is not destroyed in the initialcasting or subsequent activation of thespell. At any time afterward, by uttering acommand word, the caster can immediatelyteleport to the location of the gem.The teleport will always be on target(never high or low). If the area the gem isin is too confined, the caster will appear inthe next sufficiently large space. Thistransport is one-way, the spellcaster cannotjump back to his initial location byuse of this spell.The caster can use the roguestone togemjump any time after the initial casting.There is no time limit, and the castercan be slain, resurrected, reincarnated,shapechanged, or become undead andstill be able to use the roguestone to gemjump.Gemjumping requires only the utteringof a word, whether the caster is inchains or otherwise bound, or within amagical entrapment such as a force cage.The caster can be on a different plane orplanet than the stone and still have itfunction correctly. The caster cannot usethe command word if feebleminded,asleep, unconscious, petrified, paralyzed,or insane, nor will the gemjump operate ifthe caster or the roguestone is within ananti-magic shell. Only the caster and hisnormal clothing will be so transported,any chains, equipment, and allies will beleft behind.The roguestone itself radiates no detectablemagical energy unless it is in theprocess of gemjumping. Multiple gemjumpscan be cast on a single roguestoneby separate wizards. These additionalspells do not negate the previous gemjumpson the roguestone. A limited wishwill reveal the number (though not theidentity) of gemjumps cast on a roguestone.Only a full wish will dispel thosemagics on a roguestone. Physical destructionof the roguestone will also destroy corthemagic, though spellcasters who havelinks with a roguestone will be aware ofits destruction. The roguestone saves asrock crystal."
+    },
+    {
+      "id": "wizard7.hatchTheStoneFromTheEgg",
+      "name": "Hatch the Stone From the Egg",
+      "level": 7,
+      "reversible": false,
+      "castingTime": "1d4+4 hrs",
+      "range": "Touch",
+      "duration": "Special",
+      "areaOfEffect": "One alchemical mixture",
+      "savingThrow": "None",
+      "components": "V S M",
+      "reference": "TOM",
+      "schools": [
+        "Alteration",
+        "Enchantment",
+        "Evocation"
+      ],
+      "wildMagic": false,
+      "description": "When a wizard wishes to create the magical item known as the philosopher's stone,he must first discover its alchemical formula, which tells him the necessary ingredientsand the method of preparing them. This information is not provided by this spell, and thisspell is useless without the formula. (The exact ingredients and formula are decided bythe Dungeon Master and must be discovered by the wizard by adventuring.)When the formula has been discovered and the ingredients prepared, the wizardenchants the alchemical mixture with the enchant an item spell. Hatch the stone from theegg is then cast upon the mixture. This spell slowly transmutes the mixture into its finalform as the philosopher's stone. The process is completed with a permanency spell.The material component for this spell is a magical item known as the philosopher'segg, which is an enchanted retort used to hold the alchemical mixture. The egg is notdestroyed upon completion of the spell and may be used again. (Further details about thephilosopher's egg are found in Chapter 4 of this book.)"
+    },
+    {
+      "id": "wizard7.hornungsSurgeSelector",
+      "name": "Hornung's Surge Selector",
+      "nameAsPrinted": "Hornung's Surge Selector*",
+      "level": 7,
+      "reversible": false,
+      "castingTime": "1rd",
+      "range": 0,
+      "duration": "Special",
+      "areaOfEffect": "The Caster",
+      "savingThrow": "None",
+      "components": "V S M",
+      "reference": "TOM",
+      "schools": [
+        "Alteration"
+      ],
+      "wildMagic": true,
+      "description": "The great Hornung, having been blasted more than once by his own wild surges,devised a method of improving the results of wild magic and, not incidentally, his ownchances of survival. The result was Hornung's surge selector.By casting this spell, the wild mage gains greater control over wild surges. When thecaster's spell creates a wild surge, two separate results are determined from Table 2. Thecaster can then choose which of the two results will take effect. This spell can be used inconjunction with Nahal's reckless dweomer.The spell's duration is a fixed number of surges or 12 hours, whichever comes first.The wild mage is able to shape one wild surge per five levels of his experience; thus, a15th-level caster could shape three wild surges within a 12-hour period. At the end of 12hours, the spell expires, regardless of the number of surges remaining.The material component is a brass spinner."
+    },
+    {
+      "id": "wizard7.intensifySummoning",
+      "name": "Intensify Summoning",
+      "level": 7,
+      "reversible": false,
+      "castingTime": "6s",
+      "range": "Special",
+      "duration": "1 Turn",
+      "areaOfEffect": "Special",
+      "savingThrow": "None",
+      "components": "V S M",
+      "reference": "TOM",
+      "schools": [
+        "Conjuration/Summoning",
+        "Necromancy"
+      ],
+      "wildMagic": false,
+      "description": "This spell enhances the strength of creatures summoned by the caster via 1st through6th level conjuration/summoning spells. Only spells which bring summoned creatures tothe wizard are affected.The first two conjuration/summoning spells cast by the wizard within one turnfollowing the intensify summoning spell are affected. Summoned creatures gain 2 hitpoints per hit die. The affected creatures retain their bonus hit points until the normalexpiration of the spell that summoned them.The material components are a small leather pouch and a miniature silver candelabra."
+    },
+    {
+      "id": "wizard7.khelbensWardingWhip",
+      "name": "Khelben’s Warding Whip",
+      "level": 7,
+      "reversible": false,
+      "castingTime": "7s",
+      "range": "Within 10yds of Caster",
+      "duration": "1rd/lvl",
+      "areaOfEffect": "Special",
+      "savingThrow": "None",
+      "components": "V S M",
+      "reference": "FRA",
+      "schools": [
+        "Abjuration"
+      ],
+      "wildMagic": false,
+      "description": "This specialized and rare spell creates awhiplike lash of mystical force controlledby the caster. This magical whip is particularlyeffective against those spells whichtake the form of pushing, striking, orcrushing forces, in particular the popularspells created by Bigby.The mage need not concentrate tomaintain the warding whip, but cannotcast other spells while using it or wieldother weapons. When using the whip, itstrikes or parries automatically under thedirection of its wielder. The effects of thewhip are as follows: The whip confers to the user immunityto the push spell. The whip will immediately dissipate ashield spell without effect to itself. The whip has a 40% chance of destroyinga Tensers floating disk per attack.The whip is not affected. The whip affects any of Bigbys handspells as follows:Interposing Hand  Destroyed, with a20% chance of the whip being destroyedas well.Forceful Hand  90% chance destroyedper attack, with a 30% chanceof the whip being destroyed per attack.Grasping Hand  80% chance destroyedper attack, with a 40% chanceof the whip being destroyed per attack.Clenched Fist  70% chance destroyedper attack, with a 50% chanceof the whip being destroyed per attack.Crushing Hand  65% chance of beingdestroyed per attack, with a 60%chance of the whip being destroyedper attack.Lesser Bigby spells (strangling grip,battering gauntlet, fantastic fencers,etc..) are destroyed upon contact withthe whip, as a shield spell would.   The whip has no effect on nonmovingmagical barriers such as the wall offorce or prismatic sphere. The whip has no effect on spells whichdo not use magical force as a solidentityholds, slow, reverse gravity,etc. The whip cannot harm living objects,and so cannot be used as a weapon. The whip can be used to parry physicalattacks, including those from magicalweapons and weapons made ofmagical force (decastave, spiritualhammer, etc. . .) This parrying has abase 60% chance of success plus 2%per level of the whips caster. An attackparried this way does no damage,but the mage using the whip musthave initiative over his attacker in orderto parry.As noted, this spell was developed byKhelben Arunsun, the Blackstaff of Waterdeep,as a specific counter to the variousBigby spells which have appeared in theRealms. Whether the mythical Bigby ofGreyhawk visited the Realms or Khelbenor some other Realmsmage visited Oerthto bring these spells from one world to anotheris not known. The Blackstaff has apparentlymet the great Bigby at some timein the past, though the meeting was apparentlynot on the best of terms. As the wizardof Waterdeep once noted to hisapprentice Illistar, The old goat comes upwith one good gimmick, and beats it todeath with a rock. Bigbys response, if any,has never been recorded. The materialcomponent of this spell is a piece of wireand a pinch of powdered electrum."
+    },
+    {
+      "id": "wizard7.limitedWish",
+      "name": "Limited Wish",
+      "level": 7,
+      "reversible": false,
+      "castingTime": "Special",
+      "range": "Unlimited",
+      "duration": "Special",
+      "areaOfEffect": "Special",
+      "savingThrow": "Special",
+      "components": "V",
+      "reference": "PHB",
+      "schools": [
+        "Conjuration/Summoning",
+        "Invocation/Evocation"
+      ],
+      "wildMagic": false,
+      "description": "The limited wish is a very potent but difficult spell. It will fulfill literally, but onlypartially or for a limited duration, the utterance of the spellcaster. Thus, the actuality ofthe past, present, or future might be altered (but possibly only for the wizard unless thewording of the spell is most carefully stated) in some limited manner. The use of alimited wish will not substantially change major realities, nor will it bring wealth orexperience merely by asking. The spell can, for example, restore some hit points (or allhit points for a limited duration) lost by the wizard. It can reduce opponent hitprobabilities or damage, increase duration of some magical effect, cause a creature to befavorably disposed to the spellcaster, mimic a spell of 7th level or less, and so on (see the9th-level wish spell). Greedy desires usually end in disaster for the wisher. Casting timeis based on the time spent preparing the wording for the spell (clever players decide whatthey want to say before using the spell). Normally, the casting time is one round (most ofit being taken up by deciding what to say). Casting this spell ages the caster one year per100 years of regular life span."
+    },
+    {
+      "id": "wizard7.malecKethsFlameFist",
+      "name": "Malec-Keth's Flame Fist",
+      "level": 7,
+      "reversible": false,
+      "castingTime": "1s",
+      "range": 0,
+      "duration": "1rd/lvl",
+      "areaOfEffect": "One creature or Object",
+      "savingThrow": "Special",
+      "components": "V S",
+      "reference": "TOM",
+      "schools": [
+        "Evocation"
+      ],
+      "wildMagic": false,
+      "description": "When this spell is completed, one of the caster's hands (his choice) bursts into lightand is surrounded by an aura of flame. The caster suffers no damage from this effect.Illumination is equal to that of a torch.If the wizard successfully touches an opponent, the subject must attempt a savingthrow. If the roll is successful, the flame remains on the caster's hand (and he may use itto make further attacks until the spell's duration expires) and the touched creature suffers1d4+2 points of fire damage. If the save is failed, the flame leaves the caster's hand tosurround the victim's body in an aura of searing fire. The superheated aura burns for 1round, inflicting 1d4 points of damage per level of the caster.Instead of attacking a creature, the caster may choose to touch any single object,which is automatically surrounded by the searing aura for 1 round and must succeed at anitem saving throw vs. magical fire or be destroyed. The aura can surround an object up to5 cubic feet in volume per level of the caster."
+    },
+    {
+      "id": "wizard7.massInvisibility",
+      "name": "Mass Invisibility",
+      "level": 7,
+      "reversible": false,
+      "castingTime": "7s",
+      "range": "10yds/lvl",
+      "duration": "Special",
+      "areaOfEffect": "60yds x 60yds",
+      "savingThrow": "None",
+      "components": "V S M",
+      "reference": "PHB",
+      "schools": [
+        "Illusion/Phantasm"
+      ],
+      "wildMagic": false,
+      "description": "This is a more extensive adaptation of the invisibility spell for battlefield use. It canhide creatures in a 60-yard x 60-yard area: up to 400 man-sized creatures, 30 to 40 giants,or six to eight large dragons. The effect is mobile with the unit and is broken when theunit attacks. Individuals leaving the unit become visible. The wizard can end this spellupon command.The material components of the mass invisibility spell are an eyelash and a bit of gumarabic, the former encased in the latter."
+    },
+    {
+      "id": "wizard7.monsterSummoningV",
+      "name": "Monster Summoning V",
+      "level": 7,
+      "reversible": false,
+      "castingTime": "6s",
+      "range": "Special",
+      "duration": "6rds + 1rd/lvl",
+      "areaOfEffect": "70yd Radius",
+      "savingThrow": "None",
+      "components": "V S M",
+      "reference": "PHB",
+      "schools": [
+        "Conjuration/Summoning"
+      ],
+      "wildMagic": false,
+      "description": "This spell is much like the 3rd-level monster summoning I spell, except that this spellsummons 1d3 5th-level monsters. These appear within the spell's area of effect and attackthe caster's opponents until either he commands them to cease, the spell duration expires,or the monsters are slain. These creatures do not check morale, and they vanish whenslain. If no opponent exists to fight, summoned monsters can, if the wizard cancommunicate with them, and if they are physically capable, perform other services for thesummoning wizard.The material components of this spell are a tiny bag and a small (not necessarily lit)candle."
+    },
+    {
+      "id": "wizard7.mordenkainensPenultimateCogitation",
+      "name": "Mordenkainen’s Penultimate Cogitation",
+      "level": 7,
+      "reversible": false,
+      "castingTime": "1s",
+      "range": 0,
+      "duration": "Instantaneous",
+      "areaOfEffect": "The caster",
+      "savingThrow": "None",
+      "components": "V S",
+      "reference": "GHA",
+      "schools": [
+        "Alteration"
+      ],
+      "wildMagic": false,
+      "description": "This permits the mage to callto mind one spell from one of the caster’s personal spellbooks, provided the appropriate spell book is within onemile of the mage. The spell must be one that the casterknows, as explained in the Players Handbook. The spellcannot be called from a scroll or another mage’s spell book.The called spell can be any of the 1st to 6th level. Only onespell can be called per casting ofthe penultimate cogitation.The called spell can be cast on any succeeding round. Thereis always a 10% chance that the called spell will be magicallyerased from the mage’s spell book."
+    },
+    {
+      "id": "wizard7.mordenkainensMagnificentMansion",
+      "name": "Mordenkainen's Magnificent Mansion",
+      "level": 7,
+      "reversible": false,
+      "castingTime": "7rds",
+      "range": "10yds",
+      "duration": "1hr/lvl",
+      "areaOfEffect": "300sqft/lvl",
+      "savingThrow": "None",
+      "components": "V S M",
+      "reference": "PHB",
+      "schools": [
+        "Alteration",
+        "Conjuration"
+      ],
+      "wildMagic": false,
+      "description": "By means of this spell, the wizard conjures up an extradimensional dwelling, entranceto which can be gained only at a single point of space on the plane from which the spellwas cast. From the entry point, those creatures observing the area see only a faintshimmering in the air, in an area 4 feet wide and 8 feet high. The caster of the spellcontrols entry to the mansion, and the portal is shut and made invisible behind him whenhe enters. He may open it again from his own side at will. Once observers have passedbeyond the entrance, they behold a magnificent foyer and numerous chambers beyond.The place is furnished and contains sufficient foodstuffs to serve a nine-course banquet toas many dozens of people as the spellcaster has levels of experience. There is a staff ofnear-transparent servants, liveried and obedient, to wait upon all who enter. Theatmosphere is clean, fresh, and warm.Since the place can be entered only through its special portal, outside conditions do notaffect the mansion, nor do conditions inside it pass to the plane beyond. Rest andrelaxation within the place is normal, but the food is not. It seems excellent and quitefilling as long as one is within the place. Once outside, however, its effects disappearimmediately, and if those resting have not eaten real food within a reasonable time span,ravenous hunger strikes. Failure to eat normal food immediately results in the onset offatigue or starvation penalties as decided by the DM.The material components of this spell are a miniature portal carved from ivory, a smallpiece of polished marble, and a tiny silver spoon. These are utterly destroyed when thespell is cast.(It is worth mentioning that this spell has been used in conjunction with a normalportal, as well as with illusion magic. There is evidence that the design and interior of thespace created can be altered to suit the caster's wishes.)"
+    },
+    {
+      "id": "wizard7.mordenkainensSword",
+      "name": "Mordenkainen's Sword",
+      "level": 7,
+      "reversible": false,
+      "castingTime": "7s",
+      "range": "30yds",
+      "duration": "1rd/lvl",
+      "areaOfEffect": "Special",
+      "savingThrow": "None",
+      "components": "V S M",
+      "reference": "PHB",
+      "schools": [
+        "Evocation"
+      ],
+      "wildMagic": false,
+      "description": "Upon casting this spell, the wizard brings into being a shimmering, swordlike plane offorce. The spellcaster is able to mentally wield this weapon (to the exclusion of allactivities other than movement), causing it to move and strike as if it were being used bya fighter. The basic chance for Mordenkainen's sword to hit is the same as the chance fora sword wielded by a fighter of half the level of the spellcaster. For example, if cast by a14th-level wizard, the weapon has the same hit probability as a sword wielded by a 7thlevelfighter.The sword has no magical attack bonuses, but it can hit nearly any sort of opponent,even those normally struck only by +3 weapons or those who are astral, ethereal, or outof phase. It hits any Armor Class on a roll of 19 or 20. It inflicts 5d4 points of damage toopponents of man size or smaller, and 5d6 points of damage to opponents larger than mansize. It lasts until the spell duration expires, a dispel magic is used successfully upon it, orits caster no longer desires it.The material component is a miniature platinum sword with a grip and pommel ofcopper and zinc, which costs 500 gp to construct, and which disappears after the spell'scompletion."
+    },
+    {
+      "id": "wizard7.otilukesDeathScreen",
+      "name": "Otiluke’s Death Screen",
+      "level": 7,
+      "reversible": false,
+      "castingTime": "7s",
+      "range": "5yds/lvl",
+      "duration": "1rd/lvl",
+      "areaOfEffect": "20ft  square",
+      "savingThrow": "Special",
+      "components": "V S M",
+      "reference": "GHA",
+      "schools": [
+        "Evocation",
+        "Alteration"
+      ],
+      "wildMagic": false,
+      "description": "This spell calls into existencea grey, misty screen shaped as the caster wills. Any creaturepassing through the screen will suddenly find itselftrapped in a mysterious zone of nil-space where the creatureis subject to anti-energy drawn from one of the fournegative quasi-planes. For every round the creature istrapped, it will lose 25% of its current hit point total, droppingto 0 hit points at the end of the 4th round if the creaturefails to escape. The creature will be dead with - 10 hitpoints at the end of the 5th round. For every round a creatureis trapped, it is entitled to a saving throw versus deathmagic. Success indicates the creature escapes back into theprime material plane, emerging from the side of the screenopposite the side entered. The saving throw to escape ismade at - 1 in the 1st round, -2 in the 2d, - 3 in the 3d,and -4 in the 4th round.If the spell ends before a creature escapes or dies, the creatureis released onto the material plane as the screen disappears,as if the creature had escaped on its own. A creaturere-emerging onto the prime material plane, injured butalive, is stunned for ld4 rounds as it recovers from theeffect of the life-draining zone. Those imprisoned in thezone may heal themselves and use any other magics, butcan’t escape unless they make saving throws for the zone.The material components are a sheet of lead crystal, earthfrom a vampire’s coffin, and a hollow sphere (for vacuum)."
+    },
+    {
+      "id": "wizard7.otilukesFireAndIce",
+      "name": "Otiluke’s Fire and Ice",
+      "level": 7,
+      "reversible": false,
+      "castingTime": "7s",
+      "range": "50tds",
+      "duration": "Instantaneous",
+      "areaOfEffect": "30ft radius sphere",
+      "savingThrow": "Special",
+      "components": "V S M",
+      "reference": "GHA",
+      "schools": [
+        "Evocation"
+      ],
+      "wildMagic": false,
+      "description": "When the spell is cast, a redcrystal sphere immediately appears before the caster, thenflies away at great speed toward an area targeted. A splitsecondlater, a blue crystal sphere appears and quickly followsbehind the red sphere. When the red sphere reachesthe area chosen by the caster, it explodes in a fireball 30feet in radius, inflicting 4d4 points of fire damage to allwithin the area of effect. A successful saving throw willreduce the damage by one-half. A split-second later, theblue sphere explodes in the same area of effect, causing 4d4points of cold damage to all within a 30 foot radius. Thosewho made the save versus fire will also take only one-halfdamage from the cold blast, but those who failed the savetake full damage from the cold. The greatest effect of theone-two attack combination is the tremendous shockinflicted on inanimate objects by the radical change in temperature.All items in the area of effect must save as nonmagicalitems. Failing this save will probably cause thematerials to crack or shatter. The material components area pinch of phosphorus and a small quartz crystal."
+    },
+    {
+      "id": "wizard7.otilukesSiegeSphere",
+      "name": "Otiluke’s Siege Sphere",
+      "level": 7,
+      "reversible": false,
+      "castingTime": "1rd",
+      "range": "Touch",
+      "duration": "1 Turn",
+      "areaOfEffect": "Special",
+      "savingThrow": "None",
+      "components": "V S M",
+      "reference": "GHA",
+      "schools": [
+        "Evocation"
+      ],
+      "wildMagic": false,
+      "description": "This spell creates a large,boulder-sized sphere of force that can be fired by a catapult.The siege sphere will last for one complete turn before it fadesout of existence, 90 it must be fired within one turn of thespell’s casting. The siege sphere can take several differentforms, and the type of sphere to be created must be decidedwhen the spell is memorized. The siege sphere is as hard asadamantine steel before it is launched, and can only bedestroyed by a wish, dispel magic, or disintegrate. ARer thesphere is fired, it will take on a different form that depends onthe attack type of the sphere. Regardless of the form that theattack takes, the siege sphere is dispelled after it performs itsattack. Different types of siege spheres are described below.Liquid Fire: When the sphere strikes its target, it instantlyshatters, spraying a mass of liquid fire over an area 30feet in radius. All combustibles in the area of effect will beignited. Any creature struck by the liquid fire will take 2d4points of damage per round for 2d6 rounds unless the fire isdoused or the burning fluid is washed off. The materialcomponents for this form are a drop of pitch, a bit of phosphorus,and a pinch of diamond dust.Crystal Shards: This siege sphere splinters apart 30 feetabove the ground, raining down crystal shards in a 20-footradiuscircle. Each creature in the area affected will take5d6 points of damage regardless of its armor class. Thematerial component is a sample of sharp diamond flakes.Wrecking Ball: Upon nearing its target, the sphere’s densitydramatically increases so it strikes with three times theimpact (and damage) of a heavy catapult. The materialcomponents are a lodestone and a pinch of diamond dust."
+    },
+    {
+      "id": "wizard7.phaseDoor",
+      "name": "Phase Door",
+      "level": 7,
+      "reversible": false,
+      "castingTime": "7s",
+      "range": "Touch",
+      "duration": "1usage/2/lvls",
+      "areaOfEffect": "Special",
+      "savingThrow": "None",
+      "components": "V",
+      "reference": "PHB",
+      "schools": [
+        "Alteration"
+      ],
+      "wildMagic": false,
+      "description": "When this spell is cast, the wizard attunes his body, and a section of wall is affected asif by a passwall spell. The phase door is invisible to all creatures save the spellcaster, andonly he can use the space or passage the spell creates, disappearing when the phase dooris entered, and appearing when it is exited. If the caster desires, one other creature of mansize or less can be taken through the door; this counts as two uses of the door. The doordoes not pass light, sound, or spell effects, nor can the caster see through it without usingit. Thus, the spell can provide an escape route, though certain creatures, such as phasespiders, can follow with ease. A gem of true seeing and similar magic will reveal thepresence of a phase door but will not allow its use.The phase door lasts for one usage for every two levels of experience of the spellcaster.It can be dispelled only by a casting of dispel magic from a higher-level wizard, or fromseveral lower-level wizards, casting in concert, whose combined levels of experience aremore than double that of the wizard who cast the spell (this is the only instance in whichdispel effects can be combined).Rumor has it that this spell has been adapted by a certain powerful wizard (or wizards)to create renewable (or permanent) portals, which may (or may not) be keyed to specificindividuals (henchmen) or items (such as rings)."
+    },
+    {
+      "id": "wizard7.powerWordStun",
+      "name": "Power Word, Stun",
+      "level": 7,
+      "reversible": false,
+      "castingTime": "1s",
+      "range": "5yds/lvl",
+      "duration": "Special",
+      "areaOfEffect": "1 Creature",
+      "savingThrow": "None",
+      "components": "V",
+      "reference": "PHB",
+      "schools": [
+        "Conjuration/Summoning"
+      ],
+      "wildMagic": false,
+      "description": "When a power word, stun spell is uttered, any creature of the wizard's choice isstunned--reeling and unable to think coherently or act--for a duration dependent on itscurrent hit points. Of course, the wizard must be facing the creature, and the creaturemust be within the range of 5 yards per experience level of the caster. Creatures with 1 to30 hit points are stunned for 4d4 rounds, those with 31 to 60 hit points are stunned for2d4 rounds, those with 61 to 90 hit points are stunned for 1d4 rounds, and creatures withover 90 hit points are not affected. Note that if a creature is weakened so that its hit pointsare below its usual maximum, the current number of hit points is used."
+    },
+    {
+      "id": "wizard7.prismaticSpray",
+      "name": "Prismatic Spray",
+      "level": 7,
+      "reversible": false,
+      "castingTime": "7s",
+      "range": 0,
+      "duration": "Instantaneous",
+      "areaOfEffect": "70ft x 15ft Spray",
+      "savingThrow": "Special",
+      "components": "V S",
+      "reference": "PHB",
+      "schools": [
+        "Conjuration/Summoning"
+      ],
+      "wildMagic": false,
+      "description": "When this spell is cast, the wizard causes seven shimmering, multicolored rays of lightto flash from his hand in a triangular spray. This spray is 70 feet long and spreads to 15feet wide at the end. It includes all colors of the visible spectrum; each ray has a differentpower and purpose. Any creature with fewer than 8 Hit Dice struck by a ray is blinded for2d4 rounds, regardless of any other effect.Any creature in the area of effect will be touched by one or more of the rays. Todetermine which ray strikes a creature, roll 1d8 and consult the following table:Prismatic Spray Results1 = red 5 = blue2 = orange 6 = indigo3 = yellow 7 = violet4 = green 8 = struck by two rays, roll again twice (ignoring any 8s)Color Orderof Ray of Ray Effect of RayRed 1st Inflicts 20 points of damage, save vs. spell for half.Orange 2nd Inflicts 40 points of damage, save vs. spell for half.Yellow 3rd Inflicts 80 points of damage, save vs. spell for half.Green 4th Save vs. poison or die; survivors suffer 20 points ofpoison damage.Blue 5th Save vs. petrification or be turned to stone.Indigo 6th Save vs. wand or go insane.Violet 7th Save vs. spell or be sent to another plane."
+    },
+    {
+      "id": "wizard7.rarysPlaneTruth",
+      "name": "Rary’s Plane Truth",
+      "level": 7,
+      "reversible": false,
+      "castingTime": "1 Turn",
+      "range": "Special",
+      "duration": "3rds + 1rd/lvl",
+      "areaOfEffect": "one creature per 2 rounds",
+      "savingThrow": "None",
+      "components": "V S",
+      "reference": "GHA",
+      "schools": [
+        "Divination"
+      ],
+      "wildMagic": false,
+      "description": "This spell is a more preciseand exacting version of know alignment. A creature’salignment will be revealed to the caster in the first roundof study. With a second round of concentration, the creature’shome plane is revealed. The deity or deities worshippedby the creature also become known to the mage.One creature can be studied for every two rounds of thespell’s duration."
+    },
+    {
+      "id": "wizard7.reverseGravity",
+      "name": "Reverse Gravity",
+      "level": 7,
+      "reversible": false,
+      "castingTime": "7s",
+      "range": "5yds/lvl",
+      "duration": "1rd/lvl",
+      "areaOfEffect": "30ft x 30ft",
+      "savingThrow": "None",
+      "components": "V S M",
+      "reference": "PHB",
+      "schools": [
+        "Alteration"
+      ],
+      "wildMagic": false,
+      "description": "This spell reverses gravity in the area of effect, causing all unattached objects andcreatures within it to \"fall\" upward. The reverse gravity lasts as long as the caster desiresor until the spell expires. If some solid object is encountered in this \"fall,\" the objectstrikes it in the same manner as it would during a normal downward fall. At the end ofthe spell duration, the affected objects and creatures fall downward. As the spell affectsan area, objects tens, hundreds, or even thousands of feet in the air above the area can beaffected.The material components of this spell are a lodestone and iron filings."
+    },
+    {
+      "id": "wizard7.rubyRayOfReversal",
+      "name": "Ruby Ray of Reversal",
+      "level": 7,
+      "reversible": false,
+      "castingTime": "7s",
+      "range": "10yd/lvl",
+      "duration": "Instantaneous",
+      "areaOfEffect": "Special",
+      "savingThrow": "None",
+      "components": "V S M",
+      "reference": "FRA",
+      "schools": [
+        "Alteration"
+      ],
+      "wildMagic": false,
+      "description": "The ruby ray of reversal is a powerfulspell developed by Nezram the Transmuterto reverse the effects of other spells and situations.It harnesses the magical energynaturally occurring within the ruby andcreating a beam that lances out in a straightline in the casters chosen direction. Theruby (which much be worth at least 1,000gp) is destroyed in the process.Upon contact with any of the followingsituations or spells, the ruby ray will correct the situation as listed, then wink outof existence. The ruby ray can only affectone such item, character, or situation percasting. Situations and spells affected bythe ruby ray include:Webs (natural and mystical) and viscousglobs will immediately meltaway, one patch of webbing or globstotally vanishing.Mechanical and magical traps will beautomatically sprung. If there are targetsthese traps can affect, they will beaffected normally.Knots will be untied by the ruby rayand chains, straps, and other restrictivedevices will fall loose.Entangling devices and situationsbrought about by spells will be negatedand the targets will be freed.Locked and barred doors will beopened upon the ruby ray strikingthem.Wizard locked and held portals will beopened.A 1-foot-wide hole will be opened in awall of force or force cage. The forcestructure is not destroyed by the spell,but the hole can allow escape for thosewithin or for spells to pass through it.Any illusion struck by the ruby ray isdispelled immediately.Any transformed individual, whetherturned to stone or polymorphed, is returnedto his original state. A systemshock roll is still required where normallynecessary.The ruby ray reverses the effect of amagic jar spell.The ruby ray cannot pass through solidobjects, or effect creatures or items inother dimensions. It cannot pierce ananti-magic shell or prismatic sphere or affectany other magics and situations thanthose listed here."
+    },
+    {
+      "id": "wizard7.sequester",
+      "name": "Sequester",
+      "level": 7,
+      "reversible": false,
+      "castingTime": "7s",
+      "range": "Touch",
+      "duration": "1 week + 1day/lvl",
+      "areaOfEffect": "2ft Cube/lvl",
+      "savingThrow": "Special",
+      "components": "V S M",
+      "reference": "PHB",
+      "schools": [
+        "Illusion/Phantasm",
+        "Abjuration"
+      ],
+      "wildMagic": false,
+      "description": "When cast, this spell not only prevents detection and location spells from working todetect or locate the objects affected by the sequester spell, it also renders the affectedobject(s) invisible to any form of sight or seeing. Thus, a sequester spell can mask asecret door, a treasure vault, etc. Of course, the spell does not prevent the subject frombeing discovered through tactile means or through the use of devices (such as a robe ofeyes or a gem of seeing). If cast upon a creature who is unwilling to be affected, thecreature receives a normal saving throw. Living creatures (and even undead types)affected by a sequester spell become comatose and are effectively in a state of suspendedanimation until the spell wears off or is dispelled.The material components of the spell are a basilisk eyelash, gum arabic, and a dram ofwhitewash."
+    },
+    {
+      "id": "wizard7.shadowWalk",
+      "name": "Shadow Walk",
+      "level": 7,
+      "reversible": false,
+      "castingTime": "1s",
+      "range": "Touch",
+      "duration": "6 Turns/lvl",
+      "areaOfEffect": "Special",
+      "savingThrow": "None",
+      "components": "V S",
+      "reference": "PHB",
+      "schools": [
+        "Illusion",
+        "Enchantment"
+      ],
+      "wildMagic": false,
+      "description": "In order to use the shadow walk spell, the wizard must be in an area of heavy shadows.The caster and any creature he touches are then transported to the edge of the PrimeMaterial Plane where it borders the Demiplane of Shadow. In this region, the wizard canmove at a rate of up to 7 miles per turn, moving normally on the borders of theDemiplane of Shadow but much more rapidly relative to the Prime Material Plane. Thus,a wizard can use this spell to travel rapidly by stepping onto the Demiplane of Shadow,moving the desired distance, and then stepping back onto the Prime Material Plane. Thewizard knows where he will come out on the Prime Material Plane.The shadow walk spell can also be used to travel to other planes that border on theDemiplane of Shadow, but this requires the potentially perilous transit of the Demiplaneof Shadow to arrive at a border with another plane of reality.Any creatures touched by the wizard when shadow walk is cast also make thetransition to the borders of the Demiplane of Shadow. They may opt to follow the wizard,wander off through the plane, or stumble back into the Prime Material Plane (50% chancefor either result if they are lost or abandoned by the wizard). Creatures unwilling toaccompany the wizard into the Demiplane of Shadow receive a saving throw, negatingthe effect if successful."
+    },
+    {
+      "id": "wizard7.shadowcat",
+      "name": "Shadowcat",
+      "level": 7,
+      "reversible": false,
+      "castingTime": "3s",
+      "range": "10yds/lvl",
+      "duration": "1 turn/lvl",
+      "areaOfEffect": "Special",
+      "savingThrow": "None",
+      "components": "V S M",
+      "reference": "TOM",
+      "schools": [
+        "Illusion"
+      ],
+      "wildMagic": false,
+      "description": "When this spell is cast, the wizard brings into being a cat made of shadow. Theshadowcat is the size of a normal cat and may be either grey or black at the caster'soption. The caster has complete telepathic control of the feline; he can see, hear, and evenspeak through it as long as it remains within range. At the moment it moves out of range,the shadowcat vanishes. The caster does not need to concentrate on the shadowcat.The shadowy feline is insubstantial, making subject only to magical or specialattacks, including those by weapons of +1 or better. It has AC 5, a movement rate of 18,and saving throws equal to those of the caster. The cat dissipates if it loses hit pointsequal to one-half the caster's total hit points. The shadowcat has no attacks of its own andcannot touch or carry objects. A successful dispel magic spell causes the cat to vanish.A shadowcat makes no sound as it moves. It is 90% undetectable in all but thebrightest conditions. It can pass through small holes or narrow openings.The material components of this spell are a black pearl of at least 100 gp value and aclaw from a grey or black cat."
+    },
+    {
+      "id": "wizard7.simulacrum",
+      "name": "Simulacrum",
+      "level": 7,
+      "reversible": false,
+      "castingTime": "Special",
+      "range": "Touch",
+      "duration": "Permanent",
+      "areaOfEffect": "1 Creature",
+      "savingThrow": "None",
+      "components": "V S M",
+      "reference": "PHB",
+      "schools": [
+        "Illusion/Phantasm"
+      ],
+      "wildMagic": false,
+      "description": "By means of this spell, the wizard is able to create a duplicate of any creature. Theduplicate appears to be exactly the same as the original, but there are differences: Thesimulacrum has only 51% to 60% (50% + 1d10%) of the hit points of the real creature,there are personality differences, there are areas of knowledge that the duplicate does nothave, and a detect magic spell will instantly reveal it as a simulacrum, as will a trueseeing spell. At all times the simulacrum remains under the absolute command of thewizard who created it. No special telepathic link exists, so command must be exercised insome other manner. The spell creates the form of the creature, but it is only a zombielikecreation. A reincarnation spell must be used to give the duplicate a vital force, and alimited wish spell must be used to empower the duplicate with 40% to 65% (35% + 5 to30%) of the knowledge and personality of the original. The level of the simulacrum, ifany, is from 20% to 50% of that of the original creature.The duplicate creature is formed from ice or snow. The spell is cast over the roughform and some piece of the creature to be duplicated must be placed inside the snow orice. Additionally, the spell requires powdered ruby.The simulacrum has no ability to become more powerful; it cannot increase its level orabilities. If destroyed, it reverts to snow and melts into nothingness. Damage to thesimulacrum can be repaired by a complex process requiring at least one day, 100 gp perhit point, and a fully equipped laboratory."
+    },
+    {
+      "id": "wizard7.spectralGuard",
+      "name": "Spectral Guard",
+      "level": 7,
+      "reversible": false,
+      "castingTime": "7s",
+      "range": "60yds",
+      "duration": "Special",
+      "areaOfEffect": "20ft Radius Sphere",
+      "savingThrow": "None",
+      "components": "V S M",
+      "reference": "FRA",
+      "schools": [
+        "Evocation"
+      ],
+      "wildMagic": false,
+      "description": "This spell creates an invisible guardianwhich will stand watch at a specific locationno larger than a 20-foot-radiussphere. The guard waits, undetectable bynormal, nonmagical means, though it will radiate a strong magical aura and be completelyvisible to true sight and similarmagic.When the spectral guard is created, it isdone so with specific activation conditions,such as the opening of a particularchest or door, or a specific creature (orcreature who is not the caster) touching aparticular object. When this condition isfulfilled, the spectral guard appears.The spectral guard appears as awraithlike creature with a tapering, leglessform and powerful limbs. One ofthese limbs will wield a melee weaponchosen by the caster at the time of the creationof spectral guard. The spectralguard is noncorporeal and able to passthrough solid barriers. It can attack gaseouscreatures and creatures in the Etherealplane, as well as those normally onlystruck by +2 weapons or better.The strike of a spectral guardian inflictsdamage according to the weapon it carries.Victims feel a chill as the spectralblade passes through them. This chill hasno game effect. The guard strikes twiceper round with the same THAC0 as thecaster at the time the guard was created.The spectral guard has the same numberof hit points as the caster at the time theguard was created. The creature is AC 0and flies silently with a movement rate of24, maneuverability class B. It can movebeyond the radius of its initial watch inpursuit of its victims.The spectral guard cannot be charmed,turned, repelled, blinded, confused, ortricked with illusion/phantasm magic. Itcan automatically detect living creatureswithin 50 feet of its position. It will ignoreundead, and undead creatures will not activatethe spell.No more than one spectral guard can beplaced within a 20-foot radiusattempting to place a spectral guard in anarea already under the influence of anotherspectral guard will cause the secondspell to fail. The spectral guard will fightuntil destroyed or it discharges its duty.The original caster can also dispel thespectral guard at will after it has been activated.The spectral guard can be dispelledwith standard chances against the casterslevel.The material components of the spectralguard are a human bone, the driedeye of a beholder, and a nonmagical versionof the weapon to be used by the spectralguard. All are destroyed in thecreation of the spectral guard. In creatingthe guard, the caster can fashion the face and form to resemble a real person thecaster is familiar with, or just of a typicalface, race, age, and build."
+    },
+    {
+      "id": "wizard7.spellShape",
+      "name": "Spell Shape",
+      "nameAsPrinted": "Spell Shape*",
+      "level": 7,
+      "reversible": false,
+      "castingTime": "1rd",
+      "range": 0,
+      "duration": "1d4+1rds",
+      "areaOfEffect": "The Caster",
+      "savingThrow": "Special",
+      "components": "V S M",
+      "reference": "TOM",
+      "schools": [
+        "Alteration"
+      ],
+      "wildMagic": true,
+      "description": "This spell gives the wild mage the ability to seize magical energy directed at him andreshape it as he desires. While it is in effect, the spell gives no visible sign of itsexistence. It offers no protection against area effect spells.If a wild mage is the target of a spell or magical item, this spell automatically allowshim a saving throw. If the saving throw is failed, the opponent's spell has normal effects.If the saving throw is successful, the spell shape absorbs the magical energy of theopponent's spell. The wild mage can then choose to let the energy dissipate or he caninstantly use it to cast a spell back at the opposing mage. The return spell must be of anequal or lesser spell level than the original one and must be currently memorized by themage. The act of returning the spell does not cost the wild mage any of his memorizedspells. Spell energy cannot be saved; if not used immediately, it dissipates.For example, Hamos, a wild mage, is protected by a spell shape and is struck by afinger of death (a 7th-level spell). He succeeds at his saving throw and is now able to casta spell of 7th level or lower. Hamos currently has feeblemind memorized. Since it is onlya 5th-level spell, he chooses to cast it back at his enemy. He makes his level variationcheck (and doesn't get a wild surge) and the feeblemind is sent hurtling back at his foe.Hamos still has his original feeblemind memorized. The remaining two spell levels arelost, since they were not used in the same round.If a wild mage is struck by two spells at once, he may choose which spell to shape.He suffers all effects of the remaining spell.The material component is a diamond worth no less than 2,000 gp. When the spell iscast, the diamond is transformed into a lump of coal."
+    },
+    {
+      "id": "wizard7.spellTurning",
+      "name": "Spell Turning",
+      "level": 7,
+      "reversible": false,
+      "castingTime": "7s",
+      "range": 0,
+      "duration": "Up to 3rds/lvl",
+      "areaOfEffect": "The Caster",
+      "savingThrow": "None",
+      "components": "V S M",
+      "reference": "PHB",
+      "schools": [
+        "Abjuration"
+      ],
+      "wildMagic": false,
+      "description": "This powerful abjuration causes spells cast against the wizard to rebound on theoriginal caster. This includes spells cast from scrolls and innate spell-like abilities, butspecifically excludes the following: area effects that are not centered directly upon theprotected wizard, spell effects delivered by touch, and spell effects from devices such aswands, staves, etc. Thus, a light spell cast to blind the protected wizard could be turnedback upon and possibly blind the caster, while the same spell would be unaffected if castto light an area within which the protected wizard is standing.From seven to ten spell levels are affected by the turning. The exact number is secretlyrolled by the DM; the player never knows for certain how effective the spell is.A spell may be only partially turned--divide the number of remaining levels that can beturned by the spell level of the incoming spell to see what fraction of the effect is turned,with the remainder affecting the caster. For example, an incoming fireball is centered ona wizard with one level of spell turning left. This means that 2/3 of the fireball affects theprotected wizard, 1/3 affects the caster, and each is the center of a fireball effect. If therolled damage is 40 points, the protected wizard receives 27 points of damage and thecaster suffers 13. Both (and any creatures in the respective areas) can roll saving throwsvs. spell for half damage. A partially turned hold or paralysis spell will act as a slow spellon those who are 50% or more affected.If the protected wizard and a spellcasting attacker both have spell turning effectsoperating, a resonating field is created that has the following effects:D100 Roll Effect01-70 Spell drains away without effect71-80 Spell affects both equally at full damage81-97 Both turning effects are rendered nonfunctional for 1d4 turns98-00 Both casters go through a rift into the Positive Energy planeThe material component for the spell is a small silver mirror."
+    },
+    {
+      "id": "wizard7.spelltrap",
+      "name": "Spelltrap",
+      "level": 7,
+      "reversible": false,
+      "castingTime": "1 Turn",
+      "range": "Caster",
+      "duration": "1rd/lvl",
+      "areaOfEffect": "Special",
+      "savingThrow": "None",
+      "components": "V S M",
+      "reference": "FRA",
+      "schools": [
+        "Alteration/Abjuration"
+      ],
+      "wildMagic": false,
+      "description": "Casting this spell creates a visible silveryoval which hangs over the head ofthe caster. This oval can absorb spell attackscast directly on the wizard and dischargethem randomly at a later time,within the duration of the spell.Any spell cast directly on the spellcasteris automatically sucked into thespelltrap. This includes spells that nevermiss (such as magic missiles) and those requiringthe casters touch, but not area affectspells (such as fireball). The mageusing the spelltrap does not know whatspells have been absorbed by thespelltrap, other than obvious clues (againsuch as magic missiles slicing toward himor an enemy wizard shouting power wordKill!). Spell-like abilities are absorbed bythe spelltrap, provided that they can berated against existing wizard or priestspells. If they cannot be rated against awizard spell of a particular level, then thespell-like effects takes effect on the mageusing the spelltrap as if the spelltrap didnot exist. If in doubt, such spells can beabsorbed, but count as 9th level spells forpurposes of overloading. Spells cast bythe wizard on himself are not sucked upby the spelltrap.The spelltrap can absorb a number ofspell levels equal to twice the casters experiencelevel. A level 17 wizard can have34 spell-levels absorbed by his spelltrap,with a 1st level spell counting as one spelllevel and a 3rd level spell counting asthree spell levels. If the spelltrap is overloaded,it explodes immediately, inflicting6d4 points of damage to everyone within20 feet and stunning the survivors for tworounds (a saving throw vs. spells does notnegate the blast damage, but does negatethe stun).As long as a spell is within the spelltrap,the wizard can fire off a random spelllodged within it by pointing at a targetand summoning the magical energy. Thecaster cannot know which spells arewithin the spelltrap, or if multiple spells are currently trapped, which spell will befired.When a spell is released from the trap,roll randomly among the spells currentlytrapped to determine which one is released.The spell then takes effect as if castby its original caster, but against the targetselected by the spelltraps caster. If thespell is inapplicable or the target is beyondthe range of the spell, the spell iswasted. The target must be within 10yards/level of the caster in any event forthe spelltrapped spell to fire. Spells whichrequire touch to be effective can be firedup to a range of 10 yards/level in thisfashion.The spelltrap can be fired in this fashiononce per round. It can also fire if physicallyattacked (with hand-held weapons)immediately against the attacker. Finally,the spelltrap will fire if a dispel magic iscast upon it. These other firings can takeplace in addition to the one discharge perround permitted to the caster of thespelltrap, and if attacked from multipledirections, will respond multiple times inhe same round. The spelltrap is itself immuneto handheld weapons and missileweapons. It will not respond if hit withmissile weapons.The spelltrap will wink out of existencewithout discharging remaining spell energies)at the end of the spells duration. Itwill also cease to exist if the mage is feebleminded,slain, or rendered unconscious.The spelltrap will remain with thecaster even if he should use magic tochange location or even move to anotherplane.This spell, it has been suggested, wascreated by a wizard who disliked otherwizards, since the common tactic for battlingit (once it is recognized) is to overloadthe spelltrap with beneficial spells.The material components of this spell area diamond fragment worth at least 2,000gp and a moonstone, both of which arelost in the casting. Transmuters and abjurerscannot use the spelltrap."
+    },
+    {
+      "id": "wizard7.statue",
+      "name": "Statue",
+      "level": 7,
+      "reversible": false,
+      "castingTime": "7s",
+      "range": "Touch",
+      "duration": "1hr/lvl",
+      "areaOfEffect": "Creature Touched",
+      "savingThrow": "Special",
+      "components": "V S M",
+      "reference": "PHB",
+      "schools": [
+        "Alteration"
+      ],
+      "wildMagic": false,
+      "description": "When a statue spell is cast, the wizard or other creature is apparently turned to solidstone, along with any garments and equipment worn or carried. The initial transformationfrom flesh to stone requires one full round after the spell is cast.During the transformation, there's an 18% chance that the targeted creature suffers asystem shock failure and dies. The creature must roll percentile dice and add itsConstitution score to the roll. If the total is 18 or less, the creature dies. If the total is 19or more, the creature survives the transformation; the creature can withstand anyinspection and appear to be a stone statue, although faint magic is detected from the stoneif someone checks for it. Note that a creature with a Constitution of 18 or more willalways survive the transformation.Despite being in this condition, the petrified individual can see, hear, and smellnormally. Feeling is limited to those sensations that can affect the granite-hard substanceof the individual's body--i.e., chipping is equal to a slight wound, but breaking off one ofthe statue's arms is serious damage.The individual under the magic of a statue spell can return to his normal state instantly,act, and then return to the statue state, if he so desires, as long as the spell duration is ineffect.The material components of this spell are lime, sand, and a drop of water stirred by aniron bar, such as a nail or spike."
+    },
+    {
+      "id": "wizard7.stealEnchantment",
+      "name": "Steal Enchantment",
+      "level": 7,
+      "reversible": false,
+      "castingTime": "1hr",
+      "range": "Touch",
+      "duration": "Permanent",
+      "areaOfEffect": "One Item",
+      "savingThrow": "Negates",
+      "components": "V S M",
+      "reference": "TOM",
+      "schools": [
+        "Enchantment"
+      ],
+      "wildMagic": false,
+      "description": "This spell \"steals\" the enchantment from a magical item and places it within another,non-magical item (the material component). Both objects must be touched by the wizardduring casting. The two items must be of the same category (blunt weapon, edgedweapon, ring, amulet, shield, armor, wand, etc.).The enchantment can be transferred only to a nonmagical item. Only the energy ofone item can be transferred; it is not possible to combine two magical items into oneitem. The new item has all the properties of the original magical item (including the samenumber of charges, if any).At the culmination of the spell, the original magical object is allowed an item savingthrow vs. disintegration with all modifiers it is allowed as a magical item. Exceptionallypowerful objects (such as artifacts) may be considered to automatically succeed thesaving throw at the DM's discretion.If the saving throw is successful, the magical object resists the effect and the spellends in failure. If the roll is failed, the magical item loses all of its powers, which aretransferred to the previously nonmagical object.Even if the magical item fails its saving throw, the spell's success is not guaranteed.There is a chance that the enchantment might be lost. The base chance of this occurring is100%, modified by -5% per level of the caster. Thus, a 20th-level wizard has no chanceof losing the magic. If the enchantment is lost, both items become nonmagical.The material component is the nonmagical item which is to receive the enchantment.It must be of equal or greater value than the object to be drained."
+    },
+    {
+      "id": "wizard7.suffocate",
+      "name": "Suffocate",
+      "level": 7,
+      "reversible": false,
+      "castingTime": "7s",
+      "range": "30yds",
+      "duration": "1rd/lvl",
+      "areaOfEffect": "10ft Radius Circle",
+      "savingThrow": "NEgates",
+      "components": "V S M",
+      "reference": "TOM",
+      "schools": [
+        "Alteration",
+        "Necromancy"
+      ],
+      "wildMagic": false,
+      "description": "This spell draws the breath out of all creatures within the area of effect who fail asaving throw. Their breath is placed within a small silk bag held by the caster.Each round, a victim of this spell must attempt a Constitution check. If failed, thecreature suffers 2d4 points of damage. If successful, the subject has taken in enough air toreduce the damage to 1d4.As they struggle and gasp for air, affected creatures move and attack at half theirnormal rates, have a -4 Armor Class penalty, an attack penalty of -4, and lose allDexterity combat bonuses.Effects of this spell continue each round regardless of whether the victims remain inthe original area of effect. The damage accumulates until the spell expires, the silk bag isopened, or a successful dispel magic spell is cast upon the bag. The penalties to combatremain in effect for 1d3 rounds after the spell ends.The material component is a small silk bag studded with black opals worth a total ofno less than 5,000 gp. The bag is not destroyed during casting, but becomes useless forfuture castings if a successful dispel magic spell is used on it."
+    },
+    {
+      "id": "wizard7.teleportWithoutError",
+      "name": "Teleport Without Error",
+      "level": 7,
+      "reversible": false,
+      "castingTime": "1s",
+      "range": "Touch",
+      "duration": "Instantaneous",
+      "areaOfEffect": "Special",
+      "savingThrow": "none",
+      "components": "V",
+      "reference": "PHB",
+      "schools": [
+        "Alteration"
+      ],
+      "wildMagic": false,
+      "description": "This spell is similar to the teleport spell. The caster is able to transport himself, alongwith the material weight noted for a teleport spell, to any known location in his homeplane with no chance for error. The spell also enables the caster to travel to other planesof existence, but any such plane is, at best, \"studied carefully.\" This assumes that thecaster has, in fact, actually been to the plane and carefully perused an area for an eventualteleportation without error spell. The table for the teleport spell is used, with the caster'sknowledge of the area to which transportation is desired used to determine the chance oferror. (For an exception, see the 9th-level wizard spell succor.) The caster can do nothingelse in the round that he appears from a teleport."
+    },
+    {
+      "id": "wizard7.theSimbulsSynostodweomer",
+      "name": "The Simbul’s Synostodweomer",
+      "level": 7,
+      "reversible": false,
+      "castingTime": "7s",
+      "range": 0,
+      "duration": "1rd/lvl",
+      "areaOfEffect": "The Caster",
+      "savingThrow": "None",
+      "components": "V S",
+      "reference": "FRA",
+      "schools": [
+        "Alteration/Necromancy"
+      ],
+      "wildMagic": false,
+      "description": "This powerful spell allows the caster totransform magical energy from a learnedspell into healing magic. The synostodweomeris cast first, then the spell to betransformed. This second spell will notfunction in its normal manner, thoughany material components for it will still beexpended. Instead, the individualtouched by the caster will recover two hitpoints for every level of the transformedspell (a 9th level spell would thereforeconvert to 18 hit points healed). The secondspell is then forgotten as if it had beencast normally.The healing must be used immediatelyor be lost, along with the supplementalspell. Healing is by touch. Only spellsmemorized by the wizard can be transformedin this manner. Spells from scrollsor spell-like magical items or abilities cannotbe transformed into healing energy.The material component of this spell isthe material component (if any) of thespell that is broken down and convertedto healing energy."
+    },
+    {
+      "id": "wizard7.torment",
+      "name": "Torment",
+      "level": 7,
+      "reversible": false,
+      "castingTime": "1rd",
+      "range": "10yds",
+      "duration": "Special",
+      "areaOfEffect": "One Creature",
+      "savingThrow": "Special",
+      "components": "V S M",
+      "reference": "UA",
+      "schools": [
+        "Evocation",
+        "Alteration"
+      ],
+      "wildMagic": false,
+      "description": "When this spell is cast, the magic-userseeks to force submission and obedience from a captive creaturefrom another plane from whom a service is being demanded (also seedolor and ensnarement spells herein). The initial uttering of the spellcauses a link from the caster to the captive creature bound in a magiccircle, thaumaturgic triangle, or pentagram. (An intended victim ofthis spell must fail a magic resistance check, if applicable, for the tormentto have any effect.) Thereafter, the magic-user continues to readthe balance of the specially prepared writing, and each round thiscontinues, the captive feels progressively worse - discomfort andthen pain. The first two rounds bring twinges, the third and fourthrounds of reading bring shootingpains, and the fifth and sixth roundsof reading cause aches and then cramps.The creature refusing to submit to the performance of a service isgiven a straight saving throw versus spell, adjusted each round forthe intensity of the dweomer to be affected by it. The save in the firstround is made at -1 to the die roll, the second at -2, the third at -3, thefourth at -4, and the fifth and sixth at -6 and -8 respectively. Failing thesaving throw indicates the creature has agreed to the mage’s demands.There is no penalty following round 8 in any event.The effects of the torment will have an effect on the creature should itbreak loose. The creature is -1 on initiative for every 2 rounds the spellhas been in effect, up to a maximum penalty of -4 on round 8. In addition,the creature is -1 to hit and -1 per die of damage after 3 rounds ofthe spell, this increasing by -1 per round to -4 in round 6, then decreasingagain to -1 in round 9.It is likely that any intelligent creature with low moral standards willsubmit once it realizes the nature of the spell it is being subjected to.Naturally, this does not cause the creature to feel anything other thanimmense hatred for the magic-user. The forced service will be carriedout to the letter, as is the case with all such agreements, but the creaturewill most certainly seek whatever revenge it can.Preparation for the casting of a torment spell requires either the secretname for the type of creature or its given name to be inscribed inthe text of the incantation. The caster must also identify himself orherself. This establishes the link and allows the dweomer to be efficacious.However, for every 1 point of intelligence of the creature above that of the spell caster, there is a 1% chance that the captive creaturewill gain control, draw the caster into the confines of its prison, andcarry him or her off to its own plane and whatever fate is thus decreed.If the magic-user is interrupted or distracted during the reading, thereis a 5% chance per point of intelligence of the captive creature that itwill gain control.The material component of the spell is the aforementioned “speciallyprepared writing” (in the form of a scroll). Its special inks will requirean expenditure of not less than 1,000 gp per hit die of the creature tobe affected by the dweomer of the spell."
+    },
+    {
+      "id": "wizard7.truename",
+      "name": "Truename",
+      "level": 7,
+      "reversible": false,
+      "castingTime": "Special",
+      "range": "30yds",
+      "duration": "Special",
+      "areaOfEffect": "Thing Named",
+      "savingThrow": "Negates",
+      "components": "V S",
+      "reference": "UA",
+      "schools": [
+        "Enchantment/Alteration"
+      ],
+      "wildMagic": false,
+      "description": "This spell enables the magic-user to have great power over any livingthing which has a name, generic or individual, known to the spellcaster. Naturally, most true names are not known (even by the creaturesthemselves), for the common names of most things are not theirtrue and secret names. True names are discovered through hardwork, spying, extensive use of legend lore and sagecraft (at the mostdifficult levels). The casting of a truename spell requires the magicuserto call out the true name of the subject and then begin a recitationof verse which encompasses the nature andlor history of thesubject. This will require 3 segments. Thereafter, still in verse (andpreferably rhyming or near-rhyming), the caster must describe the desiredresult of the truename spell. Each possible result differs in thelength of time necessary to effectuate it:Multiple Suggestion: The verses can contain from 1 to 4 suggestionpowers, just as if each were a spell. Each verse requires 1 segment torecite. (See suggestion spell.) In a total of 7 segments (including thetime for the initial reading), 4 suggestions can be made.Weakness and Surrender: The verses recited cause actual loss of 1point of strength (-1 to hit and damage, -1 on movement rate) for eachsegment of recitation. With the loss of each point of strength, the subjectmust save versus paralyzation or meekly surrender. Each versemust continue for 1 segment. Strength loss is recovered in from 2-8rounds after the recitation ceases, and with recovery of strength thesubject regains its will to resist.Polymorph: The verses can cause the subject to change into somethingelse, just as if a polymorph any object spell had been cast. Nosystem shock saving throw is needed. The length of time in verses (1segment per verse) to cause the polymorph depends on how radicalthe change:mineral to animal = 10 versesmineral to vegetable = 9 versesvegetable to animal = 8 versesmonster to normal = 7 versesmonster to monster = 6 versesother to human = 5 versesanimal to animal = 4 versesvegetable to vegetable = 3 versesmineral to mineral = 2 versesThe reverse of the preceding cases also holds. In cases not stated,the DM is to use the closest stated case as a guide. The subject returnsto its natural form in time. Duration is 6 turns per level of thespell caster minus 1 turn for every verse required to effect the polymorph.The subject will think and behave exactly as a nonpolymorphedthing of the same type, but have its original hit points.Transport: When the transport verses are recited, the subject will beteleported without error or otherwise moved to some other place. Thenumber of verses required depends on the location of the transport:same plane/100 mile range = 4 versessame plane/500 mile range = 5 versessame plane/2,000 mile range = 6 verses one planelworld removed = 7 versestwo planeslworlds removed = 8 versesThe subject will automatically be altered so as to be able to physicallysurvive the normal conditions of the place to which it is sent. There isno saving throw if the subjects are willing, even if they have a magicresistance.If at any time during the recitation of the spell the caster is interrupted,the magic fails and the spell is lost."
+    },
+    {
+      "id": "wizard7.vanish",
+      "name": "Vanish",
+      "level": 7,
+      "reversible": false,
+      "castingTime": "2s",
+      "range": "Touch",
+      "duration": "Special",
+      "areaOfEffect": "1 Object",
+      "savingThrow": "None",
+      "components": "V",
+      "reference": "PHB",
+      "schools": [
+        "Alteration"
+      ],
+      "wildMagic": false,
+      "description": "When the wizard employs this spell, he causes an object to vanish (i.e., to be teleportedas if by a teleport spell) if it weighs no more than 50 pounds per caster level. Thus, a14th-level caster can vanish, and cause to reappear at a desired location, an object up to700 pounds in weight. The maximum volume of material that can be affected is 3 cubicfeet per level of experience. Thus, both weight and volume limit the spell. An object thatexceeds either limitation is unaffected and the spell fails.If desired, a vanished object can be placed deep within the Ethereal Plane. In this case,the point from which the object vanished remains faintly magical until the item isretrieved. A successful dispel magic spell cast on the point will bring the vanished itemback from the Ethereal Plane. Note that creatures and magical forces cannot be made tovanish.There is a 1% chance that a vanished item will be disintegrated instead. There is also a1% chance that a creature from the Ethereal Plane is able to gain access to the PrimeMaterial Plane through the vanished item's connection."
+    },
+    {
+      "id": "wizard7.vision",
+      "name": "Vision",
+      "level": 7,
+      "reversible": false,
+      "castingTime": "7s",
+      "range": 0,
+      "duration": "Special",
+      "areaOfEffect": "The Caster",
+      "savingThrow": "None",
+      "components": "V S M",
+      "reference": "PHB",
+      "schools": [
+        "Divination"
+      ],
+      "wildMagic": false,
+      "description": "When a wizard wishes to gain supernatural guidance, he casts a vision spell, callingupon whatever power he desires aid from and asking a question that will be answeredwith a vision. Two six-sided dice are rolled. If they total 2 to 6, the power is annoyed andrefuses to answer the question; instead, the power causes the wizard to perform someservice (by an ultrapowerful geas or quest). If the dice total 7 to 9, the power isindifferent and gives some minor vision, though it may be unrelated to the question. If thedice total 10 or better, the power grants the vision.The material component of the spell is the sacrifice of something valued by thespellcaster or by the power supplicated. The more precious the sacrifice, the better thechance of spell success. A very precious item grants a bonus of +1 to the dice roll, anextremely precious item adds +2, and a priceless item adds +3."
+    },
+    {
+      "id": "wizard7.volley",
+      "name": "Volley",
+      "level": 7,
+      "reversible": false,
+      "castingTime": "1s",
+      "range": "Special",
+      "duration": "Special",
+      "areaOfEffect": "Special",
+      "savingThrow": "Special",
+      "components": "V S M",
+      "reference": "UA",
+      "schools": [
+        "Abjuration"
+      ],
+      "wildMagic": false,
+      "description": "This highly dangerous dweomer enablesthe prospective recipient of a spell to turn the casting back upon itssender. Thus, the range, duration, area of effect, and saving throw ofthis spell depend upon circumstances and the spell being volleyed.Assume that apower word kill is cast at a magic-user prepared with avolley spell. The volley has been cast also, so that when the powerword kill is aimed at the target, the volley causes the spell to bounceback upon its caster. Then, if the caster of the first spell fails to make asaving throw versus spell, the power word kill works upon its casterrather than its intended target. However, if the original caster doessave versus spell, the spell once again flies toward the original target.The caster of the volley spell must then save versus spell, or be affectedby the attack. Again, if the caster of the volley spell saves, thenthe spell is returned to its originator, who must again save or be affected.The spell will be sent back and forth until one or the other failsto save, or until the spell loses its power. The entire spell is volleyed,such that if a lightning bolt were to start 10 feet before the volleyingmagic-user, the full spell would be returned, leaving others in the volleyingparty unscathed. Each exchange will take a single second. Aspell will lose power if it passes through a number of exchanges equalto its level, counting each volley, but not the original casting, as half ofa single exchange; i.e., a 1st-level spell will be cast, volleyed the firsttime, (perhaps) return volleyed, and then will dissipate; a 2nd-levelspell would go through four volley portions (two complete exchanges)before being exhausted; and so on. The material component is a bit ofbent willow or other flexible wood, crisscrossed with specially preparedstrands of gut."
+    },
+    {
+      "id": "wizard7.weird",
+      "name": "Weird",
+      "level": 7,
+      "reversible": false,
+      "castingTime": "7s",
+      "range": "30ft",
+      "duration": "Special",
+      "areaOfEffect": "20ft Radius",
+      "savingThrow": "Special",
+      "components": "V S",
+      "reference": "UA",
+      "schools": [
+        "Illusion/Phantasm"
+      ],
+      "wildMagic": false,
+      "description": "When this spell is cast the illusionist mustbe able to converse with the subject or subjects to bring the dweomerinto being. During the casting, the illusionist must call out to the subjector subjects, informing one or all that their final fate, indeed theirdoom, now is upon them. The force of the magic is such that even ifthe subject or subjects make their saving throw, fear will paralyzethem for a full 7 segments, and they will lose from 1-4 strength pointsfrom this fear, although the lost strength will return in 7 rounds. Failureto save versus spell will cause the subject or subjects to face theirnemesis, the opponent(s) most feared and inimical to them. Actualcombat must then take place, for no magical means of escape will bepossible. The foe fought is real for all intents and purposes. If the subjector subjects lose, then death occurs. If the weird caused by thedweomer is slain, then the subject or subjects emerge with no damage,no loss of items seemingly used in the combat, and no loss ofspells likewise seemingly expended. The characters gain experiencefor defeating the weird if applicable. Although each round of combatseems normal, it takes but 1 segment of real time. During the courseof the spell, the illusionist must concentrate fully upon maintaining it."
+    }
+  ]
+}
