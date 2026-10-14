@@ -26,7 +26,7 @@
       "index": "magic-items.json (this file): tables, XP, restrictions, support tables",
       "descriptions": "magic-item-descriptions.json: description text keyed by item id, general rule sections (generalRuleTitles[].key is the index into generalRules)"
     },
-    "removedByOwner": "Tables 88, 90, 105, 106, 109, 111-119 and their related information were removed at the owner's request (category roll, scrolls, armour type and adjustment, attack roll adjustment, potion compatibility, spell failure, intelligent weapon tables, and the related general rules text). Smoke Powder (dusts.smokePowder, table 101) removed at the owner's request: it was only usable if the arquebus is allowed, and the arquebus was removed.",
+    "removedByOwner": "Tables 88, 90, 105, 106, 109, 111-119 and their related information were removed at the owner's request (category roll, scrolls, armour type and adjustment, attack roll adjustment, potion compatibility, spell failure, intelligent weapon tables, and the related general rules text). Smoke Powder (dusts.smokePowder, table 101) removed at the owner's request: it was only usable if the arquebus is allowed, and the arquebus was removed. Protection scrolls (name and XP only) were added back as a separate table 'protectionScrolls' by the owner.",
     "variantsNotExpanded": {
       "perUseOrContents": "Not expanded (outside the fixed-at-creation scope): Wand of Wonder, Iron Flask, Robe of Useful Items, Bag of Tricks, Beaker of Plentiful Potions, Necklace of Prayer Beads, Boots of Varied Tracks, Book of Infinite Spells, Crystal Ball, Figurines of Wondrous Power, Quaal's Feather Token, ring secondary-power tables (Clumsiness, Contrariness, Weakness), Spell Storing, Staff of Power."
     }
@@ -10424,6 +10424,738 @@
       "footnotes": {
         "*": "See item description"
       }
+    },
+    "protectionScrolls": {
+      "table": null,
+      "title": "Protection Scrolls",
+      "die": null,
+      "key": "scrolls",
+      "source": "owner-supplied list (name and XP value only)",
+      "subtables": [
+        {
+          "label": null,
+          "dieRange": null,
+          "items": [
+            {
+              "roll": null,
+              "name": "Scroll of Protection from Acid",
+              "xp": 2500,
+              "xpPrinted": "2,500",
+              "id": "scrolls.protectionFromAcid",
+              "type": "scroll",
+              "hasDescription": false,
+              "weightLbs": null,
+              "source": "owner-supplied"
+            },
+            {
+              "roll": null,
+              "name": "Scroll of Protection from Cold",
+              "xp": 2000,
+              "xpPrinted": "2,000",
+              "id": "scrolls.protectionFromCold",
+              "type": "scroll",
+              "hasDescription": false,
+              "weightLbs": null,
+              "source": "owner-supplied"
+            },
+            {
+              "roll": null,
+              "name": "Scroll of Protection from Dragon Breath",
+              "xp": 2000,
+              "xpPrinted": "2,000",
+              "id": "scrolls.protectionFromDragonBreath",
+              "type": "scroll",
+              "hasDescription": false,
+              "weightLbs": null,
+              "source": "owner-supplied"
+            },
+            {
+              "roll": null,
+              "name": "Scroll of Protection from Electricity",
+              "xp": 1500,
+              "xpPrinted": "1,500",
+              "id": "scrolls.protectionFromElectricity",
+              "type": "scroll",
+              "hasDescription": false,
+              "weightLbs": null,
+              "source": "owner-supplied"
+            },
+            {
+              "roll": null,
+              "name": "Scroll of Protection from Elementals",
+              "xp": 1500,
+              "xpPrinted": "1,500",
+              "id": "scrolls.protectionFromElementals",
+              "type": "scroll",
+              "hasDescription": false,
+              "weightLbs": null,
+              "source": "owner-supplied"
+            },
+            {
+              "roll": null,
+              "name": "Scroll of Protection from Fire",
+              "xp": 2000,
+              "xpPrinted": "2,000",
+              "id": "scrolls.protectionFromFire",
+              "type": "scroll",
+              "hasDescription": false,
+              "weightLbs": null,
+              "source": "owner-supplied"
+            },
+            {
+              "roll": null,
+              "name": "Scroll of Protection from Gas",
+              "xp": 2000,
+              "xpPrinted": "2,000",
+              "id": "scrolls.protectionFromGas",
+              "type": "scroll",
+              "hasDescription": false,
+              "weightLbs": null,
+              "source": "owner-supplied"
+            },
+            {
+              "roll": null,
+              "name": "Scroll of Protection from Werebears",
+              "xp": 1000,
+              "xpPrinted": "1,000",
+              "id": "scrolls.protectionFromWerebears",
+              "type": "scroll",
+              "hasDescription": false,
+              "weightLbs": null,
+              "source": "owner-supplied"
+            },
+            {
+              "roll": null,
+              "name": "Scroll of Protection from Wereboars",
+              "xp": 1000,
+              "xpPrinted": "1,000",
+              "id": "scrolls.protectionFromWereboars",
+              "type": "scroll",
+              "hasDescription": false,
+              "weightLbs": null,
+              "source": "owner-supplied"
+            },
+            {
+              "roll": null,
+              "name": "Scroll of Protection from Wererats",
+              "xp": 1000,
+              "xpPrinted": "1,000",
+              "id": "scrolls.protectionFromWererats",
+              "type": "scroll",
+              "hasDescription": false,
+              "weightLbs": null,
+              "source": "owner-supplied"
+            },
+            {
+              "roll": null,
+              "name": "Scroll of Protection from Weretigers",
+              "xp": 1000,
+              "xpPrinted": "1,000",
+              "id": "scrolls.protectionFromWeretigers",
+              "type": "scroll",
+              "hasDescription": false,
+              "weightLbs": null,
+              "source": "owner-supplied"
+            },
+            {
+              "roll": null,
+              "name": "Scroll of Protection from Werewolves",
+              "xp": 1000,
+              "xpPrinted": "1,000",
+              "id": "scrolls.protectionFromWerewolves",
+              "type": "scroll",
+              "hasDescription": false,
+              "weightLbs": null,
+              "source": "owner-supplied"
+            },
+            {
+              "roll": null,
+              "name": "Scroll of Protection from All Lycanthropes",
+              "xp": 3000,
+              "xpPrinted": "3,000",
+              "id": "scrolls.protectionFromAllLycanthropes",
+              "type": "scroll",
+              "hasDescription": false,
+              "weightLbs": null,
+              "source": "owner-supplied"
+            },
+            {
+              "roll": null,
+              "name": "Scroll of Protection from Shape-Changers",
+              "xp": 3000,
+              "xpPrinted": "3,000",
+              "id": "scrolls.protectionFromShapeChangers",
+              "type": "scroll",
+              "hasDescription": false,
+              "weightLbs": null,
+              "source": "owner-supplied"
+            },
+            {
+              "roll": null,
+              "name": "Scroll of Protection from Magic",
+              "xp": 1500,
+              "xpPrinted": "1,500",
+              "id": "scrolls.protectionFromMagic",
+              "type": "scroll",
+              "hasDescription": false,
+              "weightLbs": null,
+              "source": "owner-supplied"
+            },
+            {
+              "roll": null,
+              "name": "Scroll of Protection from Magic 10ft Radius",
+              "xp": 5000,
+              "xpPrinted": "5,000",
+              "id": "scrolls.protectionFromMagic10ftRadius",
+              "type": "scroll",
+              "hasDescription": false,
+              "weightLbs": null,
+              "source": "owner-supplied"
+            },
+            {
+              "roll": null,
+              "name": "Scroll of Protection from Petrification",
+              "xp": 2000,
+              "xpPrinted": "2,000",
+              "id": "scrolls.protectionFromPetrification",
+              "type": "scroll",
+              "hasDescription": false,
+              "weightLbs": null,
+              "source": "owner-supplied"
+            },
+            {
+              "roll": null,
+              "name": "Scroll of Protection from Plants",
+              "xp": 1000,
+              "xpPrinted": "1,000",
+              "id": "scrolls.protectionFromPlants",
+              "type": "scroll",
+              "hasDescription": false,
+              "weightLbs": null,
+              "source": "owner-supplied"
+            },
+            {
+              "roll": null,
+              "name": "Scroll of Protection from Poison",
+              "xp": 1000,
+              "xpPrinted": "1,000",
+              "id": "scrolls.protectionFromPoison",
+              "type": "scroll",
+              "hasDescription": false,
+              "weightLbs": null,
+              "source": "owner-supplied"
+            },
+            {
+              "roll": null,
+              "name": "Scroll of Protection from Possession",
+              "xp": 2000,
+              "xpPrinted": "2,000",
+              "id": "scrolls.protectionFromPossession",
+              "type": "scroll",
+              "hasDescription": false,
+              "weightLbs": null,
+              "source": "owner-supplied"
+            },
+            {
+              "roll": null,
+              "name": "Scroll of Protection from Paralysis",
+              "xp": 2000,
+              "xpPrinted": "2,000",
+              "id": "scrolls.protectionFromParalysis",
+              "type": "scroll",
+              "hasDescription": false,
+              "weightLbs": null,
+              "source": "owner-supplied"
+            },
+            {
+              "roll": null,
+              "name": "Scroll of Protection from All Undead",
+              "xp": 15000,
+              "xpPrinted": "15,000",
+              "id": "scrolls.protectionFromAllUndead",
+              "type": "scroll",
+              "hasDescription": false,
+              "weightLbs": null,
+              "source": "owner-supplied"
+            },
+            {
+              "roll": null,
+              "name": "Scroll of Protection from Ghasts",
+              "xp": 1750,
+              "xpPrinted": "1,750",
+              "id": "scrolls.protectionFromGhasts",
+              "type": "scroll",
+              "hasDescription": false,
+              "weightLbs": null,
+              "source": "owner-supplied"
+            },
+            {
+              "roll": null,
+              "name": "Scroll of Protection from Ghosts",
+              "xp": 3000,
+              "xpPrinted": "3,000",
+              "id": "scrolls.protectionFromGhosts",
+              "type": "scroll",
+              "hasDescription": false,
+              "weightLbs": null,
+              "source": "owner-supplied"
+            },
+            {
+              "roll": null,
+              "name": "Scroll of Protection from Ghouls",
+              "xp": 1750,
+              "xpPrinted": "1,750",
+              "id": "scrolls.protectionFromGhouls",
+              "type": "scroll",
+              "hasDescription": false,
+              "weightLbs": null,
+              "source": "owner-supplied"
+            },
+            {
+              "roll": null,
+              "name": "Scroll of Protection from Shadows",
+              "xp": 1750,
+              "xpPrinted": "1,750",
+              "id": "scrolls.protectionFromShadows",
+              "type": "scroll",
+              "hasDescription": false,
+              "weightLbs": null,
+              "source": "owner-supplied"
+            },
+            {
+              "roll": null,
+              "name": "Scroll of Protection from Skeletons",
+              "xp": 1500,
+              "xpPrinted": "1,500",
+              "id": "scrolls.protectionFromSkeletons",
+              "type": "scroll",
+              "hasDescription": false,
+              "weightLbs": null,
+              "source": "owner-supplied"
+            },
+            {
+              "roll": null,
+              "name": "Scroll of Protection from Spectres",
+              "xp": 2000,
+              "xpPrinted": "2,000",
+              "id": "scrolls.protectionFromSpectres",
+              "type": "scroll",
+              "hasDescription": false,
+              "weightLbs": null,
+              "source": "owner-supplied"
+            },
+            {
+              "roll": null,
+              "name": "Scroll of Protection from Wights",
+              "xp": 2000,
+              "xpPrinted": "2,000",
+              "id": "scrolls.protectionFromWights",
+              "type": "scroll",
+              "hasDescription": false,
+              "weightLbs": null,
+              "source": "owner-supplied"
+            },
+            {
+              "roll": null,
+              "name": "Scroll of Protection from Wraiths",
+              "xp": 2000,
+              "xpPrinted": "2,000",
+              "id": "scrolls.protectionFromWraiths",
+              "type": "scroll",
+              "hasDescription": false,
+              "weightLbs": null,
+              "source": "owner-supplied"
+            },
+            {
+              "roll": null,
+              "name": "Scroll of Protection from Vampires",
+              "xp": 2000,
+              "xpPrinted": "2,000",
+              "id": "scrolls.protectionFromVampires",
+              "type": "scroll",
+              "hasDescription": false,
+              "weightLbs": null,
+              "source": "owner-supplied"
+            },
+            {
+              "roll": null,
+              "name": "Scroll of Protection from Zombies",
+              "xp": 1500,
+              "xpPrinted": "1,500",
+              "id": "scrolls.protectionFromZombies",
+              "type": "scroll",
+              "hasDescription": false,
+              "weightLbs": null,
+              "source": "owner-supplied"
+            },
+            {
+              "roll": null,
+              "name": "Scroll of Protection from Mummies",
+              "xp": 2000,
+              "xpPrinted": "2,000",
+              "id": "scrolls.protectionFromMummies",
+              "type": "scroll",
+              "hasDescription": false,
+              "weightLbs": null,
+              "source": "owner-supplied"
+            },
+            {
+              "roll": null,
+              "name": "Scroll of Protection from Liches",
+              "xp": 5000,
+              "xpPrinted": "5,000",
+              "id": "scrolls.protectionFromLiches",
+              "type": "scroll",
+              "hasDescription": false,
+              "weightLbs": null,
+              "source": "owner-supplied"
+            },
+            {
+              "roll": null,
+              "name": "Scroll of Protection from Water/Ice",
+              "xp": 1500,
+              "xpPrinted": "1,500",
+              "id": "scrolls.protectionFromWaterIce",
+              "type": "scroll",
+              "hasDescription": false,
+              "weightLbs": null,
+              "source": "owner-supplied"
+            },
+            {
+              "roll": null,
+              "name": "Scroll of Protection from All Normal Weapons",
+              "xp": 5000,
+              "xpPrinted": "5,000",
+              "id": "scrolls.protectionFromAllNormalWeapons",
+              "type": "scroll",
+              "hasDescription": false,
+              "weightLbs": null,
+              "source": "owner-supplied"
+            },
+            {
+              "roll": null,
+              "name": "Scroll of Protection from Blunt Weapons",
+              "xp": 3000,
+              "xpPrinted": "3,000",
+              "id": "scrolls.protectionFromBluntWeapons",
+              "type": "scroll",
+              "hasDescription": false,
+              "weightLbs": null,
+              "source": "owner-supplied"
+            },
+            {
+              "roll": null,
+              "name": "Scroll of Protection from Piercing Weapons",
+              "xp": 3000,
+              "xpPrinted": "3,000",
+              "id": "scrolls.protectionFromPiercingWeapons",
+              "type": "scroll",
+              "hasDescription": false,
+              "weightLbs": null,
+              "source": "owner-supplied"
+            },
+            {
+              "roll": null,
+              "name": "Scroll of Protection from Slashing Weapons",
+              "xp": 3000,
+              "xpPrinted": "3,000",
+              "id": "scrolls.protectionFromSlashingWeapons",
+              "type": "scroll",
+              "hasDescription": false,
+              "weightLbs": null,
+              "source": "owner-supplied"
+            },
+            {
+              "roll": null,
+              "name": "Scroll of Protection from All Magical Weapons",
+              "xp": 7500,
+              "xpPrinted": "7,500",
+              "id": "scrolls.protectionFromAllMagicalWeapons",
+              "type": "scroll",
+              "hasDescription": false,
+              "weightLbs": null,
+              "source": "owner-supplied"
+            },
+            {
+              "roll": null,
+              "name": "Scroll of Protection from Vermin",
+              "xp": 1000,
+              "xpPrinted": "1,000",
+              "id": "scrolls.protectionFromVermin",
+              "type": "scroll",
+              "hasDescription": false,
+              "weightLbs": null,
+              "source": "owner-supplied"
+            },
+            {
+              "roll": null,
+              "name": "Scroll of Protection from Scrying",
+              "xp": 1500,
+              "xpPrinted": "1,500",
+              "id": "scrolls.protectionFromScrying",
+              "type": "scroll",
+              "hasDescription": false,
+              "weightLbs": null,
+              "source": "owner-supplied"
+            },
+            {
+              "roll": null,
+              "name": "Scroll of Protection from 1st level Spells",
+              "xp": 1000,
+              "xpPrinted": "1,000",
+              "id": "scrolls.protectionFrom1stLevelSpells",
+              "type": "scroll",
+              "hasDescription": false,
+              "weightLbs": null,
+              "source": "owner-supplied"
+            },
+            {
+              "roll": null,
+              "name": "Scroll of Protection from 2nd level Spells",
+              "xp": 2000,
+              "xpPrinted": "2,000",
+              "id": "scrolls.protectionFrom2ndLevelSpells",
+              "type": "scroll",
+              "hasDescription": false,
+              "weightLbs": null,
+              "source": "owner-supplied"
+            },
+            {
+              "roll": null,
+              "name": "Scroll of Protection from 3rd level Spells",
+              "xp": 3000,
+              "xpPrinted": "3,000",
+              "id": "scrolls.protectionFrom3rdLevelSpells",
+              "type": "scroll",
+              "hasDescription": false,
+              "weightLbs": null,
+              "source": "owner-supplied"
+            },
+            {
+              "roll": null,
+              "name": "Scroll of Protection from 4th level Spells",
+              "xp": 4000,
+              "xpPrinted": "4,000",
+              "id": "scrolls.protectionFrom4thLevelSpells",
+              "type": "scroll",
+              "hasDescription": false,
+              "weightLbs": null,
+              "source": "owner-supplied"
+            },
+            {
+              "roll": null,
+              "name": "Scroll of Protection from 5th level Spells",
+              "xp": 5000,
+              "xpPrinted": "5,000",
+              "id": "scrolls.protectionFrom5thLevelSpells",
+              "type": "scroll",
+              "hasDescription": false,
+              "weightLbs": null,
+              "source": "owner-supplied"
+            },
+            {
+              "roll": null,
+              "name": "Scroll of Protection from 6th level Spells",
+              "xp": 6000,
+              "xpPrinted": "6,000",
+              "id": "scrolls.protectionFrom6thLevelSpells",
+              "type": "scroll",
+              "hasDescription": false,
+              "weightLbs": null,
+              "source": "owner-supplied"
+            },
+            {
+              "roll": null,
+              "name": "Scroll of Protection from 7th level Spells",
+              "xp": 7000,
+              "xpPrinted": "7,000",
+              "id": "scrolls.protectionFrom7thLevelSpells",
+              "type": "scroll",
+              "hasDescription": false,
+              "weightLbs": null,
+              "source": "owner-supplied"
+            },
+            {
+              "roll": null,
+              "name": "Scroll of Protection from 8th level Spells",
+              "xp": 8000,
+              "xpPrinted": "8,000",
+              "id": "scrolls.protectionFrom8thLevelSpells",
+              "type": "scroll",
+              "hasDescription": false,
+              "weightLbs": null,
+              "source": "owner-supplied"
+            },
+            {
+              "roll": null,
+              "name": "Scroll of Protection from 9th level Spells",
+              "xp": 9000,
+              "xpPrinted": "9,000",
+              "id": "scrolls.protectionFrom9thLevelSpells",
+              "type": "scroll",
+              "hasDescription": false,
+              "weightLbs": null,
+              "source": "owner-supplied"
+            },
+            {
+              "roll": null,
+              "name": "Scroll of Protection from All Dragons",
+              "xp": 25000,
+              "xpPrinted": "25,000",
+              "id": "scrolls.protectionFromAllDragons",
+              "type": "scroll",
+              "hasDescription": false,
+              "weightLbs": null,
+              "source": "owner-supplied"
+            },
+            {
+              "roll": null,
+              "name": "Scroll of Protection from Gold Dragons",
+              "xp": 10000,
+              "xpPrinted": "10,000",
+              "id": "scrolls.protectionFromGoldDragons",
+              "type": "scroll",
+              "hasDescription": false,
+              "weightLbs": null,
+              "source": "owner-supplied"
+            },
+            {
+              "roll": null,
+              "name": "Scroll of Protection from Silver Dragons",
+              "xp": 8000,
+              "xpPrinted": "8,000",
+              "id": "scrolls.protectionFromSilverDragons",
+              "type": "scroll",
+              "hasDescription": false,
+              "weightLbs": null,
+              "source": "owner-supplied"
+            },
+            {
+              "roll": null,
+              "name": "Scroll of Protection from Bronze Dragons",
+              "xp": 6000,
+              "xpPrinted": "6,000",
+              "id": "scrolls.protectionFromBronzeDragons",
+              "type": "scroll",
+              "hasDescription": false,
+              "weightLbs": null,
+              "source": "owner-supplied"
+            },
+            {
+              "roll": null,
+              "name": "Scroll of Protection from Brass Dragons",
+              "xp": 4000,
+              "xpPrinted": "4,000",
+              "id": "scrolls.protectionFromBrassDragons",
+              "type": "scroll",
+              "hasDescription": false,
+              "weightLbs": null,
+              "source": "owner-supplied"
+            },
+            {
+              "roll": null,
+              "name": "Scroll of Protection from Copper Dragons",
+              "xp": 2000,
+              "xpPrinted": "2,000",
+              "id": "scrolls.protectionFromCopperDragons",
+              "type": "scroll",
+              "hasDescription": false,
+              "weightLbs": null,
+              "source": "owner-supplied"
+            },
+            {
+              "roll": null,
+              "name": "Scroll of Protection from Red Dragons",
+              "xp": 10000,
+              "xpPrinted": "10,000",
+              "id": "scrolls.protectionFromRedDragons",
+              "type": "scroll",
+              "hasDescription": false,
+              "weightLbs": null,
+              "source": "owner-supplied"
+            },
+            {
+              "roll": null,
+              "name": "Scroll of Protection from Blue Dragons",
+              "xp": 8000,
+              "xpPrinted": "8,000",
+              "id": "scrolls.protectionFromBlueDragons",
+              "type": "scroll",
+              "hasDescription": false,
+              "weightLbs": null,
+              "source": "owner-supplied"
+            },
+            {
+              "roll": null,
+              "name": "Scroll of Protection from Green Dragons",
+              "xp": 6000,
+              "xpPrinted": "6,000",
+              "id": "scrolls.protectionFromGreenDragons",
+              "type": "scroll",
+              "hasDescription": false,
+              "weightLbs": null,
+              "source": "owner-supplied"
+            },
+            {
+              "roll": null,
+              "name": "Scroll of Protection from Black Dragons",
+              "xp": 4000,
+              "xpPrinted": "4,000",
+              "id": "scrolls.protectionFromBlackDragons",
+              "type": "scroll",
+              "hasDescription": false,
+              "weightLbs": null,
+              "source": "owner-supplied"
+            },
+            {
+              "roll": null,
+              "name": "Scroll of Protection from White Dragons",
+              "xp": 2000,
+              "xpPrinted": "2,000",
+              "id": "scrolls.protectionFromWhiteDragons",
+              "type": "scroll",
+              "hasDescription": false,
+              "weightLbs": null,
+              "source": "owner-supplied"
+            },
+            {
+              "roll": null,
+              "name": "Scroll of Protection from Magical Blunt Weapons",
+              "xp": 4000,
+              "xpPrinted": "4,000",
+              "id": "scrolls.protectionFromMagicalBluntWeapons",
+              "type": "scroll",
+              "hasDescription": false,
+              "weightLbs": null,
+              "source": "owner-supplied"
+            },
+            {
+              "roll": null,
+              "name": "Scroll of Protection from Magical Piercing Weapons",
+              "xp": 4000,
+              "xpPrinted": "4,000",
+              "id": "scrolls.protectionFromMagicalPiercingWeapons",
+              "type": "scroll",
+              "hasDescription": false,
+              "weightLbs": null,
+              "source": "owner-supplied"
+            },
+            {
+              "roll": null,
+              "name": "Scroll of Protection from Magical Slashing Weapons",
+              "xp": 4000,
+              "xpPrinted": "4,000",
+              "id": "scrolls.protectionFromMagicalSlashingWeapons",
+              "type": "scroll",
+              "hasDescription": false,
+              "weightLbs": null,
+              "source": "owner-supplied"
+            }
+          ]
+        }
+      ],
+      "footnotes": {},
+      "note": "Added back by the owner after Table 90 (scrolls) was removed. No dice roll, weight, gold value or description supplied; those fields are left empty. Spell scrolls are not included."
     }
   },
   "supportTables": {
