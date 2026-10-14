@@ -20,13 +20,13 @@
       "Gauntets of Fumbling": "corrected to Gauntlets of Fumbling",
       "Ram, Ring of the": "normalised to Ring of the Ram",
       "Horn of Goodness (Evil)": "normalised to Horn of Goodness/Evil (the description heading reads Horn of Goodness/Evil)",
-      "Weapon table 110 subtable B": "Trident of Fish Command (50), Submission (1,50) and Warning (1,00) print truncated XP values and Trident of Yearning prints a dash; Spear, Cursed Backbiter has a blank. Stored exactly as printed with xpPrintedTruncated: true."
+      "Weapon table 110 subtable B": "Trident of Fish Command (50), Submission (1,50) and Warning (1,00) print truncated XP values and Trident of Yearning prints a dash; Spear, Cursed Backbiter has a blank. Stored exactly as printed with xpPrintedTruncated: true. Owner confirmed 0 XP for all five (xpPrinted left as printed); owner-added items also 0 XP."
     },
     "files": {
       "index": "magic-items.json (this file): tables, XP, restrictions, support tables",
       "descriptions": "magic-item-descriptions.json: description text keyed by item id, general rule sections (generalRuleTitles[].key is the index into generalRules)"
     },
-    "removedByOwner": "Tables 88, 90, 105, 106, 109, 111-119 and their related information were removed at the owner's request (category roll, scrolls, armour type and adjustment, attack roll adjustment, potion compatibility, spell failure, intelligent weapon tables, and the related general rules text).",
+    "removedByOwner": "Tables 88, 90, 105, 106, 109, 111-119 and their related information were removed at the owner's request (category roll, scrolls, armour type and adjustment, attack roll adjustment, potion compatibility, spell failure, intelligent weapon tables, and the related general rules text). Smoke Powder (dusts.smokePowder, table 101) removed at the owner's request: it was only usable if the arquebus is allowed, and the arquebus was removed.",
     "variantsNotExpanded": {
       "perUseOrContents": "Not expanded (outside the fixed-at-creation scope): Wand of Wonder, Iron Flask, Robe of Useful Items, Bag of Tricks, Beaker of Plentiful Potions, Necklace of Prayer Beads, Boots of Varied Tracks, Book of Infinite Spells, Crystal Ball, Figurines of Wondrous Power, Quaal's Feather Token, ring secondary-power tables (Clumsiness, Contrariness, Weakness), Spell Storing, Staff of Power."
     }
@@ -1650,34 +1650,37 @@
           "name": "Holy Water",
           "id": "potions.holyWater",
           "roll": null,
-          "xp": null,
+          "xp": 0,
           "xpPrinted": null,
           "valueGp": 25,
           "weightLbs": 0.1,
           "hasDescription": false,
-          "source": "owner-added"
+          "source": "owner-added",
+          "xpSource": "owner-confirmed 0 XP"
         },
         {
           "name": "Unholy Water",
           "id": "potions.unholyWater",
           "roll": null,
-          "xp": null,
+          "xp": 0,
           "xpPrinted": null,
           "valueGp": 25,
           "weightLbs": 0.1,
           "hasDescription": false,
-          "source": "owner-added"
+          "source": "owner-added",
+          "xpSource": "owner-confirmed 0 XP"
         },
         {
           "name": "Protection from Poisonous Gases",
           "id": "potions.protectionFromPoisonousGases",
           "roll": null,
-          "xp": null,
+          "xp": 0,
           "xpPrinted": null,
           "valueGp": 1000,
           "weightLbs": 0.1,
           "hasDescription": false,
-          "source": "owner-added"
+          "source": "owner-added",
+          "xpSource": "owner-confirmed 0 XP"
         }
       ]
     },
@@ -5161,23 +5164,25 @@
           "name": "Continual Light Gem",
           "id": "jewels.continualLightGem",
           "roll": null,
-          "xp": 300,
+          "xp": 0,
           "xpPrinted": "300",
           "valueGp": 300,
           "weightLbs": 0.1,
           "hasDescription": false,
-          "source": "owner-added"
+          "source": "owner-added",
+          "xpSource": "owner-confirmed 0 XP"
         },
         {
           "name": "Continual Darkness Gem",
           "id": "jewels.continualDarknessGem",
           "roll": null,
-          "xp": 300,
+          "xp": 0,
           "xpPrinted": "300",
           "valueGp": 300,
           "weightLbs": 0.1,
           "hasDescription": false,
-          "source": "owner-added"
+          "source": "owner-added",
+          "xpSource": "owner-confirmed 0 XP"
         }
       ]
     },
@@ -6992,20 +6997,6 @@
             },
             {
               "roll": [
-                14,
-                14
-              ],
-              "nameMarker": "**",
-              "name": "Smoke Powder",
-              "xp": null,
-              "xpPrinted": "—",
-              "id": "dusts.smokePowder",
-              "hasDescription": true,
-              "weightLbs": 0.01,
-              "weightSource": "owner-supplied (placeholder, may be revised)"
-            },
-            {
-              "roll": [
                 15,
                 15
               ],
@@ -7083,8 +7074,7 @@
         }
       ],
       "footnotes": {
-        "*": "Per stone or pot of pigment",
-        "**": "This item is optional and should not be given unless the arquebus is allowed in the campaign."
+        "*": "Per stone or pot of pigment"
       }
     },
     "102": {
@@ -8330,13 +8320,14 @@
           "name": "Goodberries",
           "id": "weird.goodberries",
           "roll": null,
-          "xp": null,
+          "xp": 0,
           "xpPrinted": null,
           "valueGp": null,
           "weightLbs": 0.02,
           "weightNote": "50 berries to the lb, so 0.02 lb each",
           "hasDescription": false,
-          "source": "owner-added"
+          "source": "owner-added",
+          "xpSource": "owner-confirmed 0 XP"
         }
       ]
     },
@@ -9908,7 +9899,7 @@
                 15
               ],
               "name": "Spear, Cursed Backbiter",
-              "xp": null,
+              "xp": 0,
               "xpPrinted": null,
               "xpPrintedTruncated": true,
               "id": "specialWeapons.spearCursedBackbiter",
@@ -9918,7 +9909,8 @@
               "speedFactorBase": 6,
               "plus": null,
               "speedFactor": null,
-              "speedFactorNote": "plus not fixed by the description (variable or DM option), so no speed factor given"
+              "speedFactorNote": "plus not fixed by the description (variable or DM option), so no speed factor given",
+              "xpSource": "owner-confirmed 0 XP"
             },
             {
               "roll": [
@@ -9926,7 +9918,7 @@
                 16
               ],
               "name": "Trident of Fish Command",
-              "xp": 50,
+              "xp": 0,
               "xpPrinted": "50",
               "xpPrintedTruncated": true,
               "id": "specialWeapons.tridentOfFishCommand",
@@ -9936,7 +9928,8 @@
               "speedFactorBase": 7,
               "plus": 0,
               "speedFactor": 7,
-              "mappingAssumption": "named as a trident; description says it resembles a military fork, trident values used"
+              "mappingAssumption": "named as a trident; description says it resembles a military fork, trident values used",
+              "xpSource": "owner-confirmed 0 XP"
             },
             {
               "roll": [
@@ -9944,7 +9937,7 @@
                 17
               ],
               "name": "Trident of Submission",
-              "xp": 150,
+              "xp": 0,
               "xpPrinted": "1,50",
               "xpPrintedTruncated": true,
               "id": "specialWeapons.tridentOfSubmission",
@@ -9953,7 +9946,8 @@
               "weightLbs": 5,
               "speedFactorBase": 7,
               "plus": 0,
-              "speedFactor": 7
+              "speedFactor": 7,
+              "xpSource": "owner-confirmed 0 XP"
             },
             {
               "roll": [
@@ -9961,7 +9955,7 @@
                 18
               ],
               "name": "Trident of Warning",
-              "xp": 100,
+              "xp": 0,
               "xpPrinted": "1,00",
               "xpPrintedTruncated": true,
               "id": "specialWeapons.tridentOfWarning",
@@ -9970,7 +9964,8 @@
               "weightLbs": 5,
               "speedFactorBase": 7,
               "plus": 0,
-              "speedFactor": 7
+              "speedFactor": 7,
+              "xpSource": "owner-confirmed 0 XP"
             },
             {
               "roll": [
@@ -9978,7 +9973,7 @@
                 19
               ],
               "name": "Trident of Yearning",
-              "xp": null,
+              "xp": 0,
               "xpPrinted": "–",
               "xpPrintedTruncated": true,
               "id": "specialWeapons.tridentOfYearning",
@@ -9987,7 +9982,8 @@
               "weightLbs": 5,
               "speedFactorBase": 7,
               "plus": 0,
-              "speedFactor": 7
+              "speedFactor": 7,
+              "xpSource": "owner-confirmed 0 XP"
             },
             {
               "roll": [
