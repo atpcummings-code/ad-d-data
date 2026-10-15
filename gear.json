@@ -209,7 +209,6 @@
     "footnotes": {
       "1": "Inflicts double damage against charging creatures of Large or greater size.",
       "2": "Can dismount a rider on a successful hit.",
-      "3": "Available only if allowed by the DM. One charge costs 5 sp.",
       "4": "Inflicts double damage when used from the back of a charging mount.",
       "5": "Inflicts double damage when firmly set to receive a charge.",
       "6": "Type column: Bludgeoning (B), Piercing (P), Slashing (S). Affects effectiveness against different armour types (optional rule)."
@@ -218,7 +217,7 @@
       "*": "Weighs little individually. Ten of these weigh one pound. Stored as weightLbs 0.1."
     },
     "fields": {
-      "kind": "weapon (melee or thrown), launcher (bows, crossbows, sling, blowgun, arquebus) or ammunition",
+      "kind": "weapon (melee or thrown), launcher (bows, crossbows, sling, blowgun) or ammunition",
       "parent": "Heading the item is listed under on the table (Bow, Crossbow, Lance, Polearm, Sling, Sword, Blowgun)",
       "cost": "null where the table prints a dash. 'unit' is set where the price covers several (arrows: per 12 / per 6).",
       "speedFactor": "null for ammunition and for the Bastard sword (see its modes)",
@@ -229,40 +228,6 @@
       "usage": "Where the weapon appears in the app: 'melee' (hand-held list), 'missile' (missile/thrown list), or both for weapons that can be used either way (dagger, hand axe, javelin, spear, club, knife, harpoon, melee warhammer is melee only). Melee armour adjustments are on the weapon; missile ones are on its missileRanges row."
     },
     "items": [
-      {
-        "id": "arquebus",
-        "name": "Arquebus",
-        "kind": "launcher",
-        "cost": {
-          "amount": 500,
-          "coin": "gp",
-          "costInCp": 50000
-        },
-        "weightLbs": 10,
-        "size": "M",
-        "type": [
-          "P"
-        ],
-        "speedFactor": 15,
-        "damageSM": "1d10",
-        "damageL": "1d10",
-        "footnotes": [
-          3
-        ],
-        "flags": [
-          "availableOnlyIfDmAllows"
-        ],
-        "note": "Available only if the DM allows. One charge costs 5 sp.",
-        "chargeCost": {
-          "amount": 5,
-          "coin": "sp",
-          "costInCp": 50
-        },
-        "source": "PHB",
-        "usage": [
-          "missile"
-        ]
-      },
       {
         "id": "battleAxe",
         "name": "Battle axe",
@@ -3502,29 +3467,10 @@
       "rules": [
         "ROF is the rate of fire: how many shots the weapon can make in a round. It is independent of the character's melee attacks.",
         "Each range band includes distances equal to or less than the figure given, so a heavy crossbow fired at a target 136 yards away uses the medium range modifier.",
-        "Attack roll modifiers for range are -2 at medium range and -5 at long range.",
-        "Arquebuses (if allowed) double all range modifiers."
+        "Attack roll modifiers for range are -2 at medium range and -5 at long range."
       ],
-      "arquebusDoublesRangeModifiers": true,
       "unit": "yards",
       "rows": [
-        {
-          "id": "arquebus",
-          "label": "Arquebus",
-          "weaponId": "arquebus",
-          "ammunitionId": null,
-          "rof": {
-            "text": "1/3",
-            "shots": 1,
-            "rounds": 3
-          },
-          "rangeYards": {
-            "short": 50,
-            "medium": 150,
-            "long": 210
-          },
-          "source": "PHB"
-        },
         {
           "id": "blowgun",
           "label": "Blowgun",
@@ -4967,7 +4913,7 @@
       "shield": "Shields are listed under a 'Shield' heading with four types."
     },
     "fields": {
-      "cost": "{amount, coin, costInCp} or a range {min, max, coin, ...} (Full plate)",
+      "cost": "{amount, coin, costInCp}",
       "weightLbs": "pounds",
       "armourClass": "null until entered from the PHB (not on this table)",
       "movementEffect": "null until entered from the PHB (not on this table)"
@@ -5035,36 +4981,6 @@
         "armourClass": 5,
         "movementEffect": null,
         "armourClassWithShield": 4
-      },
-      {
-        "id": "fieldPlate",
-        "name": "Field plate",
-        "type": "body",
-        "cost": {
-          "amount": 2000,
-          "coin": "gp",
-          "costInCp": 200000
-        },
-        "weightLbs": 60,
-        "armourClass": 2,
-        "movementEffect": null,
-        "armourClassWithShield": 1
-      },
-      {
-        "id": "fullPlate",
-        "name": "Full plate",
-        "type": "body",
-        "cost": {
-          "min": 4000,
-          "max": 10000,
-          "coin": "gp",
-          "costInCpMin": 400000,
-          "costInCpMax": 1000000
-        },
-        "weightLbs": 70,
-        "armourClass": 1,
-        "movementEffect": null,
-        "armourClassWithShield": 0
       },
       {
         "id": "helmetGreatHelm",
@@ -5305,18 +5221,29 @@
         },
         {
           "ac": 2,
-          "description": "Plate mail + shield, field plate"
+          "description": "Plate mail + shield"
         },
         {
           "ac": 1,
-          "description": "Field plate armour + shield, full plate"
+          "description": "No remaining armour type (field plate and full plate removed by owner)"
         },
         {
           "ac": 0,
-          "description": "Full plate armour + shield"
+          "description": "No remaining armour type (full plate armour + shield removed by owner)"
         }
-      ]
-    }
+      ],
+      "removalNote": "Field plate and Full plate removed from the available armour types (owner decision). Rows kept as printed on Table 46 for reference."
+    },
+    "removedByOwner": [
+      {
+        "id": "fieldPlate",
+        "name": "Field plate"
+      },
+      {
+        "id": "fullPlate",
+        "name": "Full plate"
+      }
+    ]
   },
   "equipment": {
     "status": "from-PHB-table-44",
