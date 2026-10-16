@@ -7235,6 +7235,25 @@
         }
       },
       {
+        "id": "moneyPouch",
+        "name": "Money pouch",
+        "category": "miscellaneous",
+        "cost": null,
+        "costNote": "Not supplied by owner.",
+        "weightLbs": 0.05,
+        "type": "EquipmentContainer",
+        "capacity": {
+          "weightLimitLbs": 1,
+          "volume": null,
+          "count": {
+            "max": 50,
+            "of": "coins"
+          },
+          "restriction": "coins only (any type)"
+        },
+        "source": "owner"
+      },
+      {
         "id": "blockAndTackle",
         "name": "Block and tackle",
         "category": "miscellaneous",
