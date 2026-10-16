@@ -5067,6 +5067,19 @@
         "armourClassWithShield": 2
       },
       {
+        "id": "redDragonScaleArmour",
+        "name": "Red Dragon Scale Armour",
+        "type": "body",
+        "cost": null,
+        "costNote": "Not supplied by owner.",
+        "weightLbs": 40,
+        "armourClass": -1,
+        "movementEffect": null,
+        "armourClassWithShield": null,
+        "armourClassWithShieldNote": "Not supplied by owner.",
+        "source": "owner"
+      },
+      {
         "id": "ringMail",
         "name": "Ring mail",
         "type": "body",
