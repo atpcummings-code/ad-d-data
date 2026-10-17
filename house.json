@@ -814,12 +814,6 @@
             "of": "damage suffered",
             "rounding": "down"
           }
-        },
-        {
-          "id": "d8",
-          "level": 1,
-          "type": "restriction",
-          "text": "A druid cannot turn undead."
         }
       ],
       "sheetOnlyAbilities": [
@@ -1015,8 +1009,6 @@
           "brigandine",
           "bronzePlateMail",
           "chainMail",
-          "fieldPlate",
-          "fullPlate",
           "hide",
           "plateMail",
           "ringMail",
