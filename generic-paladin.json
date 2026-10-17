@@ -15,7 +15,7 @@
       "Only spells whose Original Reference is PHB, PHB1, TOM or UA are included.",
       "id matches the spell id in priest-spells.json.",
       "castingTime, range and savingThrow are copied from priest-spells.json.",
-      "Spell levels 1-7 are listed as for the cleric and druid; which levels a paladin can actually cast comes from the paladin spell progression (Table 17), not from this file."
+      "spellProgression is copied from rules-core.json (PHB Table 17). Spell levels 1-7 are listed as for the cleric and druid; the paladin can only cast the levels given in spellProgression.spellLevels."
     ],
     "count": 60,
     "countByLevel": {
@@ -29,6 +29,203 @@
     }
   },
   "class": "Generic Paladin",
+  "spellProgression": {
+    "appliesTo": [
+      "paladin"
+    ],
+    "source": "PHB Table 17: Paladin Spell Progression (image supplied by owner)",
+    "spellType": "priest",
+    "spellLevels": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "startsAtPaladinLevel": 9,
+    "castingLevelByPaladinLevel": {
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 0,
+      "9": 1,
+      "10": 2,
+      "11": 3,
+      "12": 4,
+      "13": 5,
+      "14": 6,
+      "15": 7,
+      "16": 8,
+      "17": 9,
+      "18": 9,
+      "19": 9,
+      "20": 9
+    },
+    "castingLevelRule": "castingLevel = paladinLevel - 8 from paladin level 9, capped at 9 (levels 17 and above all print 9*).",
+    "slotsByLevel": {
+      "1": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "2": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "3": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "4": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "5": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "6": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "7": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "8": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "9": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "10": [
+        2,
+        0,
+        0,
+        0
+      ],
+      "11": [
+        2,
+        1,
+        0,
+        0
+      ],
+      "12": [
+        2,
+        2,
+        0,
+        0
+      ],
+      "13": [
+        2,
+        2,
+        1,
+        0
+      ],
+      "14": [
+        3,
+        2,
+        1,
+        0
+      ],
+      "15": [
+        3,
+        2,
+        1,
+        1
+      ],
+      "16": [
+        3,
+        3,
+        2,
+        1
+      ],
+      "17": [
+        3,
+        3,
+        3,
+        1
+      ],
+      "18": [
+        3,
+        3,
+        3,
+        1
+      ],
+      "19": [
+        3,
+        3,
+        3,
+        2
+      ],
+      "20": [
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    "highestSpellLevelByLevel": {
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 0,
+      "9": 1,
+      "10": 1,
+      "11": 2,
+      "12": 2,
+      "13": 3,
+      "14": 3,
+      "15": 4,
+      "16": 4,
+      "17": 4,
+      "18": 4,
+      "19": 4,
+      "20": 4
+    },
+    "tableMarkers": {
+      "*": "Maximum spell ability.",
+      "printedOn": "Casting level 9 at paladin levels 17-20, and paladin level 20."
+    },
+    "bonusSpells": "None: paladins never gain bonus spells for WIS or INT (house.json bonusSpells.never).",
+    "stillNeeded": [
+      "The spell lists for those four spheres (part of the spell module).",
+      "Whether the casting level (not the paladin level) is used for spell effects: Table 17 gives 'spell progression and casting level'; confirm how it is applied."
+    ],
+    "spheres": [
+      "combat",
+      "divination",
+      "healing",
+      "protection"
+    ],
+    "sphereNote": "Paladins may cast only spells of the combat, divination, healing and protective spheres (PHB text supplied by owner). Scrolls: not clerical or druidical scrolls."
+  },
   "spellsByLevel": {
     "1": [
       {
