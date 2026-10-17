@@ -1,0 +1,1045 @@
+{
+  "meta": {
+    "title": "Generic Ranger spell list",
+    "source": "priest-spells.json",
+    "status": "first-draft-from-spreadsheet",
+    "majorAccessSpheres": [
+      "Animal",
+      "Plant"
+    ],
+    "minorAccessSpheres": [],
+    "rules": [
+      "Spell included if any of its spheres is a major-access sphere (Animal, Plant).",
+      "Only spells whose Original Reference is PHB, PHB1, TOM or UA are included.",
+      "id matches the spell id in priest-spells.json.",
+      "castingTime, range and savingThrow are copied from priest-spells.json.",
+      "spellProgression is copied from rules-core.json (PHB Table 18). Spell levels 1-7 are listed as for the other classes; the ranger can only cast the levels given in spellProgression.spellLevels."
+    ],
+    "count": 48,
+    "countByLevel": {
+      "1": 7,
+      "2": 9,
+      "3": 7,
+      "4": 9,
+      "5": 6,
+      "6": 6,
+      "7": 4
+    }
+  },
+  "class": "Generic Ranger",
+  "spellProgression": {
+    "appliesTo": [
+      "ranger"
+    ],
+    "source": "PHB Table 18: Ranger Abilities, casting level and priest spell columns (image supplied by owner)",
+    "spellType": "priest",
+    "spellLevels": [
+      1,
+      2,
+      3
+    ],
+    "startsAtRangerLevel": 8,
+    "castingLevelByRangerLevel": {
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 1,
+      "9": 2,
+      "10": 3,
+      "11": 4,
+      "12": 5,
+      "13": 6,
+      "14": 7,
+      "15": 8,
+      "16": 9,
+      "17": 9,
+      "18": 9,
+      "19": 9,
+      "20": 9
+    },
+    "castingLevelRule": "castingLevel = rangerLevel - 7 from ranger level 8, capped at 9 (printed 9* at level 16).",
+    "slotsByLevel": {
+      "1": [
+        0,
+        0,
+        0
+      ],
+      "2": [
+        0,
+        0,
+        0
+      ],
+      "3": [
+        0,
+        0,
+        0
+      ],
+      "4": [
+        0,
+        0,
+        0
+      ],
+      "5": [
+        0,
+        0,
+        0
+      ],
+      "6": [
+        0,
+        0,
+        0
+      ],
+      "7": [
+        0,
+        0,
+        0
+      ],
+      "8": [
+        1,
+        0,
+        0
+      ],
+      "9": [
+        2,
+        0,
+        0
+      ],
+      "10": [
+        2,
+        1,
+        0
+      ],
+      "11": [
+        2,
+        2,
+        0
+      ],
+      "12": [
+        2,
+        2,
+        1
+      ],
+      "13": [
+        3,
+        2,
+        1
+      ],
+      "14": [
+        3,
+        2,
+        2
+      ],
+      "15": [
+        3,
+        3,
+        2
+      ],
+      "16": [
+        3,
+        3,
+        3
+      ],
+      "17": [
+        3,
+        3,
+        3
+      ],
+      "18": [
+        3,
+        3,
+        3
+      ],
+      "19": [
+        3,
+        3,
+        3
+      ],
+      "20": [
+        3,
+        3,
+        3
+      ]
+    },
+    "highestSpellLevelByLevel": {
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 1,
+      "9": 1,
+      "10": 2,
+      "11": 2,
+      "12": 3,
+      "13": 3,
+      "14": 3,
+      "15": 3,
+      "16": 3,
+      "17": 3,
+      "18": 3,
+      "19": 3,
+      "20": 3
+    },
+    "tableMarkers": {
+      "*": "Maximum attainable.",
+      "printedOn": "Casting level 9 and the 3/3/3 spell slots at ranger level 16."
+    },
+    "levelsAbove16": {
+      "status": "assumed",
+      "rule": "Table 18 stops at level 16, which is marked maximum attainable. Levels 17-20 use the level 16 values."
+    },
+    "bonusSpells": "None: rangers never gain bonus spells for WIS or INT (house.json bonusSpells.never).",
+    "stillNeeded": [
+      "Which priest spheres and spells a ranger may use (not on this table).",
+      "Whether the casting level (not the ranger level) is used for spell effects: confirm from the PHB text."
+    ]
+  },
+  "spellsByLevel": {
+    "1": [
+      {
+        "id": "priest1.animalFriendship",
+        "name": "Animal Friendship",
+        "level": 1,
+        "reversible": false,
+        "castingTime": "1hr",
+        "range": "10YDS",
+        "savingThrow": "Negates",
+        "access": "major",
+        "accessVia": [
+          "Animal"
+        ],
+        "spheres": [
+          "Animal"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest1.detectSnaresPits",
+        "name": "Detect Snares & Pits",
+        "level": 1,
+        "reversible": false,
+        "castingTime": "4s",
+        "range": "0",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Animal"
+        ],
+        "spheres": [
+          "Animal"
+        ],
+        "reference": "PHB1"
+      },
+      {
+        "id": "priest1.entangle",
+        "name": "Entangle",
+        "level": 1,
+        "reversible": false,
+        "castingTime": "4s",
+        "range": "80YDS",
+        "savingThrow": "1",
+        "access": "major",
+        "accessVia": [
+          "Plant"
+        ],
+        "spheres": [
+          "Plant"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest1.invisibilityToAnimals",
+        "name": "Invisibility to Animals",
+        "level": 1,
+        "reversible": false,
+        "castingTime": "4s",
+        "range": "TOUCH",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Animal"
+        ],
+        "spheres": [
+          "Animal"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest1.locateAnimalsOrPlants",
+        "name": "Locate Animals or Plants",
+        "level": 1,
+        "reversible": false,
+        "castingTime": "1rd",
+        "range": "100YDS +20YDS/Level",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Plant",
+          "Animal"
+        ],
+        "spheres": [
+          "Plant",
+          "Animal"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest1.passWithoutTrace",
+        "name": "Pass Without Trace",
+        "level": 1,
+        "reversible": false,
+        "castingTime": "1rd",
+        "range": "TOUCH",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Plant"
+        ],
+        "spheres": [
+          "Plant"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest1.shillelagh",
+        "name": "Shillelagh",
+        "level": 1,
+        "reversible": false,
+        "castingTime": "2s",
+        "range": "TOUCH",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Plant"
+        ],
+        "spheres": [
+          "Plant"
+        ],
+        "reference": "PHB"
+      }
+    ],
+    "2": [
+      {
+        "id": "priest2.barkskin",
+        "name": "Barkskin",
+        "level": 2,
+        "reversible": false,
+        "castingTime": "5s",
+        "range": "TOUCH",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Plant"
+        ],
+        "spheres": [
+          "Plant"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest2.charmPersonOrMammal",
+        "name": "Charm Person or Mammal",
+        "level": 2,
+        "reversible": false,
+        "castingTime": "5s",
+        "range": "80YDS",
+        "savingThrow": "Negates",
+        "access": "major",
+        "accessVia": [
+          "Animal"
+        ],
+        "spheres": [
+          "Animal"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest2.detectSnaresPits",
+        "name": "Detect Snares & Pits",
+        "level": 2,
+        "reversible": false,
+        "castingTime": "7s",
+        "range": "1 MILE RADIUS",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Plant"
+        ],
+        "spheres": [
+          "Plant"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest2.goodberry",
+        "name": "Goodberry",
+        "level": 2,
+        "reversible": true,
+        "castingTime": "1rd",
+        "range": "TOUCH",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Plant"
+        ],
+        "spheres": [
+          "Plant"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest2.messenger",
+        "name": "Messenger",
+        "level": 2,
+        "reversible": false,
+        "castingTime": "1rd",
+        "range": "20YDS / Level",
+        "savingThrow": "Negates",
+        "access": "major",
+        "accessVia": [
+          "Animal"
+        ],
+        "spheres": [
+          "Summoning",
+          "Animal"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest2.snakeCharm",
+        "name": "Snake Charm",
+        "level": 2,
+        "reversible": false,
+        "castingTime": "5s",
+        "range": "30YDS",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Animal"
+        ],
+        "spheres": [
+          "Charm",
+          "Animal"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest2.speakWithAnimals",
+        "name": "Speak with Animals",
+        "level": 2,
+        "reversible": false,
+        "castingTime": "5s",
+        "range": "0",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Animal"
+        ],
+        "spheres": [
+          "Animal",
+          "Divination"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest2.trip",
+        "name": "Trip",
+        "level": 2,
+        "reversible": false,
+        "castingTime": "5s",
+        "range": "TOUCH",
+        "savingThrow": "Negates",
+        "access": "major",
+        "accessVia": [
+          "Plant"
+        ],
+        "spheres": [
+          "Plant"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest2.warpWood",
+        "name": "Warp Wood",
+        "level": 2,
+        "reversible": true,
+        "castingTime": "5s",
+        "range": "10YDS / Level",
+        "savingThrow": "Special",
+        "access": "major",
+        "accessVia": [
+          "Plant"
+        ],
+        "spheres": [
+          "Plant"
+        ],
+        "reference": "PHB"
+      }
+    ],
+    "3": [
+      {
+        "id": "priest3.holdAnimal",
+        "name": "Hold Animal",
+        "level": 3,
+        "reversible": false,
+        "castingTime": "6s",
+        "range": "80YDS",
+        "savingThrow": "Negates",
+        "access": "major",
+        "accessVia": [
+          "Animal"
+        ],
+        "spheres": [
+          "Animal"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest3.plantGrowth",
+        "name": "Plant Growth",
+        "level": 3,
+        "reversible": false,
+        "castingTime": "1rd",
+        "range": "160YDS",
+        "savingThrow": "Special",
+        "access": "major",
+        "accessVia": [
+          "Plant"
+        ],
+        "spheres": [
+          "Plant"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest3.slowRot",
+        "name": "Slow Rot",
+        "level": 3,
+        "reversible": false,
+        "castingTime": "1rd",
+        "range": "TOUCH",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Plant"
+        ],
+        "spheres": [
+          "Plant"
+        ],
+        "reference": "TOM"
+      },
+      {
+        "id": "priest3.snare",
+        "name": "Snare",
+        "level": 3,
+        "reversible": false,
+        "castingTime": "3rds",
+        "range": "TOUCH",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Plant"
+        ],
+        "spheres": [
+          "Plant"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest3.spikeGrowth",
+        "name": "Spike Growth",
+        "level": 3,
+        "reversible": false,
+        "castingTime": "6s",
+        "range": "60YDS",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Plant"
+        ],
+        "spheres": [
+          "Plant"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest3.summonsInsects",
+        "name": "Summons Insects",
+        "level": 3,
+        "reversible": false,
+        "castingTime": "1rd",
+        "range": "30YDS",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Animal"
+        ],
+        "spheres": [
+          "Animal"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest3.tree",
+        "name": "Tree",
+        "level": 3,
+        "reversible": false,
+        "castingTime": "6s",
+        "range": "0",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Plant"
+        ],
+        "spheres": [
+          "Plant"
+        ],
+        "reference": "PHB"
+      }
+    ],
+    "4": [
+      {
+        "id": "priest4.animalSummoningI",
+        "name": "Animal Summoning I",
+        "level": 4,
+        "reversible": false,
+        "castingTime": "7s",
+        "range": "1 MILE RADIUS",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Animal"
+        ],
+        "spheres": [
+          "Animal"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest4.callWoodlandBeings",
+        "name": "Call Woodland Beings",
+        "level": 4,
+        "reversible": false,
+        "castingTime": "Special",
+        "range": "100YDS / Level",
+        "savingThrow": "Negates",
+        "access": "major",
+        "accessVia": [
+          "Animal"
+        ],
+        "spheres": [
+          "Animal"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest4.giantInsect",
+        "name": "Giant Insect",
+        "level": 4,
+        "reversible": true,
+        "castingTime": "7s",
+        "range": "20YDS",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Animal"
+        ],
+        "spheres": [
+          "Animal"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest4.hallucinatoryForest",
+        "name": "Hallucinatory Forest",
+        "level": 4,
+        "reversible": false,
+        "castingTime": "7s",
+        "range": "80YDS",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Plant"
+        ],
+        "spheres": [
+          "Plant"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest4.holdPlant",
+        "name": "Hold Plant",
+        "level": 4,
+        "reversible": false,
+        "castingTime": "7s",
+        "range": "80YDS",
+        "savingThrow": "Negates",
+        "access": "major",
+        "accessVia": [
+          "Plant"
+        ],
+        "spheres": [
+          "Plant"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest4.plantDoor",
+        "name": "Plant Door",
+        "level": 4,
+        "reversible": false,
+        "castingTime": "7s",
+        "range": "TOUCH",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Plant"
+        ],
+        "spheres": [
+          "Plant"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest4.repelInsects",
+        "name": "Repel Insects",
+        "level": 4,
+        "reversible": false,
+        "castingTime": "1rd",
+        "range": "0",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Animal"
+        ],
+        "spheres": [
+          "Animal"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest4.speakWithPlants",
+        "name": "Speak with Plants",
+        "level": 4,
+        "reversible": false,
+        "castingTime": "1 turn",
+        "range": "0",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Plant"
+        ],
+        "spheres": [
+          "Plant"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest4.sticksToSnakes",
+        "name": "Sticks to Snakes",
+        "level": 4,
+        "reversible": true,
+        "castingTime": "7s",
+        "range": "30YDS",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Plant"
+        ],
+        "spheres": [
+          "Plant",
+          "Creation"
+        ],
+        "reference": "PHB"
+      }
+    ],
+    "5": [
+      {
+        "id": "priest5.animalGrowth",
+        "name": "Animal Growth",
+        "level": 5,
+        "reversible": true,
+        "castingTime": "8s",
+        "range": "80YDS",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Animal"
+        ],
+        "spheres": [
+          "Animal"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest5.animalSummoningIi",
+        "name": "Animal Summoning Ii",
+        "level": 5,
+        "reversible": false,
+        "castingTime": "8s",
+        "range": "60 YDS / Level",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Animal"
+        ],
+        "spheres": [
+          "Animal"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest5.antiPlantShell",
+        "name": "Anti-Plant Shell",
+        "level": 5,
+        "reversible": false,
+        "castingTime": "8s",
+        "range": "0",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Plant"
+        ],
+        "spheres": [
+          "Protection",
+          "Plant"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest5.communeWithNature",
+        "name": "Commune with Nature",
+        "level": 5,
+        "reversible": false,
+        "castingTime": "3rd",
+        "range": "TOUCH",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Animal",
+          "Plant"
+        ],
+        "spheres": [
+          "Animal",
+          "Plant"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest5.insectPlague",
+        "name": "Insect Plague",
+        "level": 5,
+        "reversible": false,
+        "castingTime": "1 turn",
+        "range": "120YDS",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Animal"
+        ],
+        "spheres": [
+          "Animal"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest5.passPlant",
+        "name": "Pass Plant",
+        "level": 5,
+        "reversible": false,
+        "castingTime": "8s",
+        "range": "Special",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Plant"
+        ],
+        "spheres": [
+          "Plant"
+        ],
+        "reference": "PHB"
+      }
+    ],
+    "6": [
+      {
+        "id": "priest6.animalSummoningIii",
+        "name": "Animal Summoning Iii",
+        "level": 6,
+        "reversible": false,
+        "castingTime": "9s",
+        "range": "100 YDS / Level",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Animal"
+        ],
+        "spheres": [
+          "Animal"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest6.antiAnimalShell",
+        "name": "Anti-Animal Shell",
+        "level": 6,
+        "reversible": false,
+        "castingTime": "1rd",
+        "range": "0",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Animal"
+        ],
+        "spheres": [
+          "Animal",
+          "Protection"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest6.liveoak",
+        "name": "Liveoak",
+        "level": 6,
+        "reversible": false,
+        "castingTime": "1 turn",
+        "range": "TOUCH",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Plant"
+        ],
+        "spheres": [
+          "Plant"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest6.transportViaPlants",
+        "name": "Transport Via Plants",
+        "level": 6,
+        "reversible": false,
+        "castingTime": "4s",
+        "range": "TOUCH",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Plant"
+        ],
+        "spheres": [
+          "Plant"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest6.turnWood",
+        "name": "Turn Wood",
+        "level": 6,
+        "reversible": false,
+        "castingTime": "9s",
+        "range": "0",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Plant"
+        ],
+        "spheres": [
+          "Plant"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest6.wallOfThorns",
+        "name": "Wall of Thorns",
+        "level": 6,
+        "reversible": false,
+        "castingTime": "9s",
+        "range": "80YDS",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Plant"
+        ],
+        "spheres": [
+          "Plant"
+        ],
+        "reference": "PHB"
+      }
+    ],
+    "7": [
+      {
+        "id": "priest7.changestaff",
+        "name": "Changestaff",
+        "level": 7,
+        "reversible": false,
+        "castingTime": "4s",
+        "range": "TOUCH",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Plant"
+        ],
+        "spheres": [
+          "Plant"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest7.creepingDoom",
+        "name": "Creeping Doom",
+        "level": 7,
+        "reversible": false,
+        "castingTime": "1rd",
+        "range": "0",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Animal"
+        ],
+        "spheres": [
+          "Animal"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest7.fingerOfDeath",
+        "name": "Finger of Death",
+        "level": 7,
+        "reversible": false,
+        "castingTime": "3s",
+        "range": "60YDS",
+        "savingThrow": "Negates",
+        "access": "major",
+        "accessVia": [
+          "Animal"
+        ],
+        "spheres": [
+          "Animal"
+        ],
+        "reference": "PHB1"
+      },
+      {
+        "id": "priest7.reincarnate",
+        "name": "Reincarnate",
+        "level": 7,
+        "reversible": false,
+        "castingTime": "1 turn",
+        "range": "TOUCH",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Animal"
+        ],
+        "spheres": [
+          "Animal"
+        ],
+        "reference": "PHB"
+      }
+    ]
+  }
+}
