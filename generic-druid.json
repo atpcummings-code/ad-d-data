@@ -1,0 +1,2507 @@
+{
+  "meta": {
+    "title": "Generic Druid spell list",
+    "source": "priest-spells.json",
+    "status": "first-draft-from-spreadsheet",
+    "majorAccessSpheres": [
+      "All",
+      "Animal",
+      "Elemental Air",
+      "Elemental Water",
+      "Elemental Earth",
+      "Elemental Fire",
+      "Healing",
+      "Plant",
+      "Sun",
+      "Weather"
+    ],
+    "minorAccessSpheres": [
+      "Divination"
+    ],
+    "rules": [
+      "Spell included if any of its spheres is a major-access sphere, or a minor-access sphere and the spell is 1st-3rd level (2e PHB minor access rule, owner-confirmed).",
+      "Only spells whose Original Reference is PHB, PHB1, TOM or UA are included.",
+      "id matches the spell id in priest-spells.json.",
+      "castingTime, range and savingThrow are copied from priest-spells.json."
+    ],
+    "count": 142,
+    "countByLevel": {
+      "1": 24,
+      "2": 23,
+      "3": 25,
+      "4": 22,
+      "5": 19,
+      "6": 14,
+      "7": 15
+    }
+  },
+  "class": "Generic Druid",
+  "spellsByLevel": {
+    "1": [
+      {
+        "id": "priest1.analyzeBalance",
+        "name": "Analyze Balance",
+        "level": 1,
+        "reversible": false,
+        "castingTime": "1rd",
+        "range": "80YDS",
+        "savingThrow": "None",
+        "access": "minor",
+        "accessVia": [
+          "Divination"
+        ],
+        "spheres": [
+          "Divination",
+          "Numbers"
+        ],
+        "reference": "TOM"
+      },
+      {
+        "id": "priest1.animalFriendship",
+        "name": "Animal Friendship",
+        "level": 1,
+        "reversible": false,
+        "castingTime": "1hr",
+        "range": "10YDS",
+        "savingThrow": "Negates",
+        "access": "major",
+        "accessVia": [
+          "Animal"
+        ],
+        "spheres": [
+          "Animal"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest1.bless",
+        "name": "Bless",
+        "level": 1,
+        "reversible": true,
+        "castingTime": "1rd",
+        "range": "60YDS",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "All"
+        ],
+        "spheres": [
+          "All"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest1.ceremony",
+        "name": "Ceremony",
+        "level": 1,
+        "reversible": false,
+        "castingTime": "1hr",
+        "range": "TOUCH",
+        "savingThrow": "Special",
+        "access": "major",
+        "accessVia": [
+          "All"
+        ],
+        "spheres": [
+          "All"
+        ],
+        "reference": "UA"
+      },
+      {
+        "id": "priest1.combine",
+        "name": "Combine",
+        "level": 1,
+        "reversible": false,
+        "castingTime": "1rd",
+        "range": "TOUCH",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "All"
+        ],
+        "spheres": [
+          "All"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest1.createWater",
+        "name": "Create Water",
+        "level": 1,
+        "reversible": true,
+        "castingTime": "1rd",
+        "range": "30YDS",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Elemental Water"
+        ],
+        "spheres": [
+          "Elemental Water"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest1.cureLightWounds",
+        "name": "Cure Light Wounds",
+        "level": 1,
+        "reversible": true,
+        "castingTime": "5 segments",
+        "range": "TOUCH",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Healing"
+        ],
+        "spheres": [
+          "Healing"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest1.detectEvil",
+        "name": "Detect Evil",
+        "level": 1,
+        "reversible": true,
+        "castingTime": "1rd",
+        "range": "0",
+        "savingThrow": "None",
+        "access": "minor",
+        "accessVia": [
+          "Divination"
+        ],
+        "spheres": [
+          "Divination"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest1.detectMagic",
+        "name": "Detect Magic",
+        "level": 1,
+        "reversible": false,
+        "castingTime": "1rd",
+        "range": "30YDS",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "All"
+        ],
+        "spheres": [
+          "All"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest1.detectPoison",
+        "name": "Detect Poison",
+        "level": 1,
+        "reversible": false,
+        "castingTime": "4 segments",
+        "range": "0",
+        "savingThrow": "None",
+        "access": "minor",
+        "accessVia": [
+          "Divination"
+        ],
+        "spheres": [
+          "Divination"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest1.detectSnaresPits",
+        "name": "Detect Snares & Pits",
+        "level": 1,
+        "reversible": false,
+        "castingTime": "4 segments",
+        "range": "0",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Animal"
+        ],
+        "spheres": [
+          "Animal"
+        ],
+        "reference": "PHB1"
+      },
+      {
+        "id": "priest1.entangle",
+        "name": "Entangle",
+        "level": 1,
+        "reversible": false,
+        "castingTime": "4 segments",
+        "range": "80YDS",
+        "savingThrow": "1",
+        "access": "major",
+        "accessVia": [
+          "Plant"
+        ],
+        "spheres": [
+          "Plant"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest1.faerieFire",
+        "name": "Faerie Fire",
+        "level": 1,
+        "reversible": false,
+        "castingTime": "4 segments",
+        "range": "80YDS",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Weather"
+        ],
+        "spheres": [
+          "Weather"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest1.invisibilityToAnimals",
+        "name": "Invisibility to Animals",
+        "level": 1,
+        "reversible": false,
+        "castingTime": "4 segments",
+        "range": "TOUCH",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Animal"
+        ],
+        "spheres": [
+          "Animal"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest1.light",
+        "name": "Light",
+        "level": 1,
+        "reversible": true,
+        "castingTime": "4 segments",
+        "range": "120YDS",
+        "savingThrow": "Special",
+        "access": "major",
+        "accessVia": [
+          "Sun"
+        ],
+        "spheres": [
+          "Sun",
+          "Guardian",
+          "Creation"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest1.locateAnimalsOrPlants",
+        "name": "Locate Animals or Plants",
+        "level": 1,
+        "reversible": false,
+        "castingTime": "1rd",
+        "range": "100YDS +20YDS/Level",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Plant",
+          "Animal"
+        ],
+        "spheres": [
+          "Plant",
+          "Animal"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest1.logOfEverburning",
+        "name": "Log of Everburning",
+        "level": 1,
+        "reversible": false,
+        "castingTime": "4 segments",
+        "range": "TOUCH",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Elemental Fire"
+        ],
+        "spheres": [
+          "Elemental Fire"
+        ],
+        "reference": "TOM"
+      },
+      {
+        "id": "priest1.passWithoutTrace",
+        "name": "Pass Without Trace",
+        "level": 1,
+        "reversible": false,
+        "castingTime": "1rd",
+        "range": "TOUCH",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Plant"
+        ],
+        "spheres": [
+          "Plant"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest1.portent",
+        "name": "Portent",
+        "level": 1,
+        "reversible": false,
+        "castingTime": "1 turn",
+        "range": "TOUCH",
+        "savingThrow": "None",
+        "access": "minor",
+        "accessVia": [
+          "Divination"
+        ],
+        "spheres": [
+          "Divination",
+          "Chaos"
+        ],
+        "reference": "TOM"
+      },
+      {
+        "id": "priest1.precipitation",
+        "name": "Precipitation",
+        "level": 1,
+        "reversible": false,
+        "castingTime": "4 segments",
+        "range": "10YDS / Level",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Weather",
+          "Elemental Water"
+        ],
+        "spheres": [
+          "Weather",
+          "Elemental Water"
+        ],
+        "reference": "UA"
+      },
+      {
+        "id": "priest1.predictWeather",
+        "name": "Predict Weather",
+        "level": 1,
+        "reversible": false,
+        "castingTime": "1rd",
+        "range": "0",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Weather"
+        ],
+        "spheres": [
+          "Weather",
+          "Divination"
+        ],
+        "reference": "PHB1"
+      },
+      {
+        "id": "priest1.purifyFoodDrink",
+        "name": "Purify Food & Drink",
+        "level": 1,
+        "reversible": false,
+        "castingTime": "1rd",
+        "range": "30YDS",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "All"
+        ],
+        "spheres": [
+          "All"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest1.purifyWater",
+        "name": "Purify Water",
+        "level": 1,
+        "reversible": true,
+        "castingTime": "1rd",
+        "range": "40YDS",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Elemental Water"
+        ],
+        "spheres": [
+          "Elemental Water"
+        ],
+        "reference": "PHB1"
+      },
+      {
+        "id": "priest1.shillelagh",
+        "name": "Shillelagh",
+        "level": 1,
+        "reversible": false,
+        "castingTime": "2 segments",
+        "range": "TOUCH",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Plant"
+        ],
+        "spheres": [
+          "Plant"
+        ],
+        "reference": "PHB"
+      }
+    ],
+    "2": [
+      {
+        "id": "priest2.augury",
+        "name": "Augury",
+        "level": 2,
+        "reversible": false,
+        "castingTime": "2rds",
+        "range": "0",
+        "savingThrow": "None",
+        "access": "minor",
+        "accessVia": [
+          "Divination"
+        ],
+        "spheres": [
+          "Divination"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest2.barkskin",
+        "name": "Barkskin",
+        "level": 2,
+        "reversible": false,
+        "castingTime": "5 segments",
+        "range": "TOUCH",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Plant"
+        ],
+        "spheres": [
+          "Plant"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest2.chant",
+        "name": "Chant",
+        "level": 2,
+        "reversible": false,
+        "castingTime": "2rds",
+        "range": "0",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "All"
+        ],
+        "spheres": [
+          "All"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest2.charmPersonOrMammal",
+        "name": "Charm Person or Mammal",
+        "level": 2,
+        "reversible": false,
+        "castingTime": "5 segments",
+        "range": "80YDS",
+        "savingThrow": "Negates",
+        "access": "major",
+        "accessVia": [
+          "Animal"
+        ],
+        "spheres": [
+          "Animal"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest2.detectCharm",
+        "name": "Detect Charm",
+        "level": 2,
+        "reversible": true,
+        "castingTime": "1rd",
+        "range": "30YDS",
+        "savingThrow": "None",
+        "access": "minor",
+        "accessVia": [
+          "Divination"
+        ],
+        "spheres": [
+          "Charm",
+          "Divination"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest2.detectSnaresPits",
+        "name": "Detect Snares & Pits",
+        "level": 2,
+        "reversible": false,
+        "castingTime": "7 segments",
+        "range": "1 MILE RADIUS",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Plant"
+        ],
+        "spheres": [
+          "Plant"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest2.dustDevil",
+        "name": "Dust Devil",
+        "level": 2,
+        "reversible": false,
+        "castingTime": "2rds",
+        "range": "30YDS",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Elemental Air"
+        ],
+        "spheres": [
+          "Summoning",
+          "Elemental Air"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest2.findTraps",
+        "name": "Find Traps",
+        "level": 2,
+        "reversible": false,
+        "castingTime": "5 segments",
+        "range": "0",
+        "savingThrow": "None",
+        "access": "minor",
+        "accessVia": [
+          "Divination"
+        ],
+        "spheres": [
+          "Divination"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest2.fireTrap",
+        "name": "Fire Trap",
+        "level": 2,
+        "reversible": false,
+        "castingTime": "1 turn",
+        "range": "TOUCH",
+        "savingThrow": "0.5",
+        "access": "major",
+        "accessVia": [
+          "Elemental Fire"
+        ],
+        "spheres": [
+          "Elemental Fire"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest2.flameBlade",
+        "name": "Flame Blade",
+        "level": 2,
+        "reversible": false,
+        "castingTime": "4 segments",
+        "range": "0",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Elemental Fire"
+        ],
+        "spheres": [
+          "Elemental Fire"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest2.goodberry",
+        "name": "Goodberry",
+        "level": 2,
+        "reversible": true,
+        "castingTime": "1rd",
+        "range": "TOUCH",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Plant"
+        ],
+        "spheres": [
+          "Plant"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest2.heatMetal",
+        "name": "Heat Metal",
+        "level": 2,
+        "reversible": true,
+        "castingTime": "5 segments",
+        "range": "40YDS",
+        "savingThrow": "Special",
+        "access": "major",
+        "accessVia": [
+          "Elemental Fire"
+        ],
+        "spheres": [
+          "Elemental Fire"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest2.knowAlignment",
+        "name": "Know Alignment",
+        "level": 2,
+        "reversible": true,
+        "castingTime": "1rd",
+        "range": "10YDS",
+        "savingThrow": "Negates",
+        "access": "minor",
+        "accessVia": [
+          "Divination"
+        ],
+        "spheres": [
+          "Divination"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest2.messenger",
+        "name": "Messenger",
+        "level": 2,
+        "reversible": false,
+        "castingTime": "1rd",
+        "range": "20YDS / Level",
+        "savingThrow": "Negates",
+        "access": "major",
+        "accessVia": [
+          "Animal"
+        ],
+        "spheres": [
+          "Summoning",
+          "Animal"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest2.mysticTransfer",
+        "name": "Mystic Transfer",
+        "level": 2,
+        "reversible": false,
+        "castingTime": "1rd",
+        "range": "0",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "All"
+        ],
+        "spheres": [
+          "All"
+        ],
+        "reference": "TOM"
+      },
+      {
+        "id": "priest2.obscurement",
+        "name": "Obscurement",
+        "level": 2,
+        "reversible": false,
+        "castingTime": "5 segments",
+        "range": "0",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Weather"
+        ],
+        "spheres": [
+          "Weather"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest2.produceFlame",
+        "name": "Produce Flame",
+        "level": 2,
+        "reversible": false,
+        "castingTime": "5 segments",
+        "range": "0",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Elemental Fire"
+        ],
+        "spheres": [
+          "Elemental Fire"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest2.sanctify",
+        "name": "Sanctify",
+        "level": 2,
+        "reversible": true,
+        "castingTime": "1 turn",
+        "range": "10YDS",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "All"
+        ],
+        "spheres": [
+          "All"
+        ],
+        "reference": "TOM"
+      },
+      {
+        "id": "priest2.slowPoison",
+        "name": "Slow Poison",
+        "level": 2,
+        "reversible": false,
+        "castingTime": "1 segment",
+        "range": "TOUCH",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Healing"
+        ],
+        "spheres": [
+          "Healing"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest2.snakeCharm",
+        "name": "Snake Charm",
+        "level": 2,
+        "reversible": false,
+        "castingTime": "5 segments",
+        "range": "30YDS",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Animal"
+        ],
+        "spheres": [
+          "Charm",
+          "Animal"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest2.speakWithAnimals",
+        "name": "Speak with Animals",
+        "level": 2,
+        "reversible": false,
+        "castingTime": "5 segments",
+        "range": "0",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Animal"
+        ],
+        "spheres": [
+          "Animal",
+          "Divination"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest2.trip",
+        "name": "Trip",
+        "level": 2,
+        "reversible": false,
+        "castingTime": "5 segments",
+        "range": "TOUCH",
+        "savingThrow": "Negates",
+        "access": "major",
+        "accessVia": [
+          "Plant"
+        ],
+        "spheres": [
+          "Plant"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest2.warpWood",
+        "name": "Warp Wood",
+        "level": 2,
+        "reversible": true,
+        "castingTime": "5 segments",
+        "range": "10YDS / Level",
+        "savingThrow": "Special",
+        "access": "major",
+        "accessVia": [
+          "Plant"
+        ],
+        "spheres": [
+          "Plant"
+        ],
+        "reference": "PHB"
+      }
+    ],
+    "3": [
+      {
+        "id": "priest3.callLightning",
+        "name": "Call Lightning",
+        "level": 3,
+        "reversible": false,
+        "castingTime": "1 turn",
+        "range": "360YDS",
+        "savingThrow": "0.5",
+        "access": "major",
+        "accessVia": [
+          "Weather"
+        ],
+        "spheres": [
+          "Weather"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest3.cloudburst",
+        "name": "Cloudburst",
+        "level": 3,
+        "reversible": false,
+        "castingTime": "6 segments",
+        "range": "10YDS / Level",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Elemental Water",
+          "Weather"
+        ],
+        "spheres": [
+          "Elemental Water",
+          "Weather"
+        ],
+        "reference": "UA"
+      },
+      {
+        "id": "priest3.continualLight",
+        "name": "Continual Light",
+        "level": 3,
+        "reversible": true,
+        "castingTime": "6 segments",
+        "range": "120YDS",
+        "savingThrow": "Special",
+        "access": "major",
+        "accessVia": [
+          "Sun"
+        ],
+        "spheres": [
+          "Creation",
+          "Guardian",
+          "Sun"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest3.cureBlindnessOrDeafness",
+        "name": "Cure Blindness or Deafness",
+        "level": 3,
+        "reversible": true,
+        "castingTime": "1rd",
+        "range": "TOUCH",
+        "savingThrow": "Special",
+        "access": "major",
+        "accessVia": [
+          "Healing"
+        ],
+        "spheres": [
+          "Healing"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest3.cureDisease",
+        "name": "Cure Disease",
+        "level": 3,
+        "reversible": true,
+        "castingTime": "1rd",
+        "range": "TOUCH",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Healing"
+        ],
+        "spheres": [
+          "Healing"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest3.dispelMagic",
+        "name": "Dispel Magic",
+        "level": 3,
+        "reversible": false,
+        "castingTime": "6 segments",
+        "range": "60YDS",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "All"
+        ],
+        "spheres": [
+          "All"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest3.extradimensionalDetection",
+        "name": "Extradimensional Detection",
+        "level": 3,
+        "reversible": false,
+        "castingTime": "3 segments",
+        "range": "0",
+        "savingThrow": "None",
+        "access": "minor",
+        "accessVia": [
+          "Divination"
+        ],
+        "spheres": [
+          "Divination",
+          "Numbers"
+        ],
+        "reference": "TOM"
+      },
+      {
+        "id": "priest3.holdAnimal",
+        "name": "Hold Animal",
+        "level": 3,
+        "reversible": false,
+        "castingTime": "6 segments",
+        "range": "80YDS",
+        "savingThrow": "Negates",
+        "access": "major",
+        "accessVia": [
+          "Animal"
+        ],
+        "spheres": [
+          "Animal"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest3.locateObject",
+        "name": "Locate Object",
+        "level": 3,
+        "reversible": true,
+        "castingTime": "1 turn",
+        "range": "60YDS + 10YDS/Level",
+        "savingThrow": "None",
+        "access": "minor",
+        "accessVia": [
+          "Divination"
+        ],
+        "spheres": [
+          "Divination"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest3.meldIntoStone",
+        "name": "Meld Into Stone",
+        "level": 3,
+        "reversible": false,
+        "castingTime": "6 segments",
+        "range": "0",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Elemental Earth"
+        ],
+        "spheres": [
+          "Elemental Earth"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest3.plantGrowth",
+        "name": "Plant Growth",
+        "level": 3,
+        "reversible": false,
+        "castingTime": "1rd",
+        "range": "160YDS",
+        "savingThrow": "Special",
+        "access": "major",
+        "accessVia": [
+          "Plant"
+        ],
+        "spheres": [
+          "Plant"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest3.protectionFromFire",
+        "name": "Protection from Fire",
+        "level": 3,
+        "reversible": false,
+        "castingTime": "6 segments",
+        "range": "TOUCH",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Elemental Fire"
+        ],
+        "spheres": [
+          "Elemental Fire"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest3.pyrotechnics",
+        "name": "Pyrotechnics",
+        "level": 3,
+        "reversible": false,
+        "castingTime": "6 segments",
+        "range": "160YDS",
+        "savingThrow": "Special",
+        "access": "major",
+        "accessVia": [
+          "Elemental Fire"
+        ],
+        "spheres": [
+          "Elemental Fire"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest3.removeCurse",
+        "name": "Remove Curse",
+        "level": 3,
+        "reversible": true,
+        "castingTime": "6 segments",
+        "range": "TOUCH",
+        "savingThrow": "Special",
+        "access": "major",
+        "accessVia": [
+          "All"
+        ],
+        "spheres": [
+          "All"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest3.slowRot",
+        "name": "Slow Rot",
+        "level": 3,
+        "reversible": false,
+        "castingTime": "1rd",
+        "range": "TOUCH",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Plant"
+        ],
+        "spheres": [
+          "Plant"
+        ],
+        "reference": "TOM"
+      },
+      {
+        "id": "priest3.snare",
+        "name": "Snare",
+        "level": 3,
+        "reversible": false,
+        "castingTime": "3rds",
+        "range": "TOUCH",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Plant"
+        ],
+        "spheres": [
+          "Plant"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest3.speakWithDead",
+        "name": "Speak with Dead",
+        "level": 3,
+        "reversible": false,
+        "castingTime": "1 turn",
+        "range": "1YD",
+        "savingThrow": "Special",
+        "access": "minor",
+        "accessVia": [
+          "Divination"
+        ],
+        "spheres": [
+          "Necromantic",
+          "Divination"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest3.spikeGrowth",
+        "name": "Spike Growth",
+        "level": 3,
+        "reversible": false,
+        "castingTime": "6 segments",
+        "range": "60YDS",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Plant"
+        ],
+        "spheres": [
+          "Plant"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest3.starshine",
+        "name": "Starshine",
+        "level": 3,
+        "reversible": false,
+        "castingTime": "6 segments",
+        "range": "10YDS / Level",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Sun"
+        ],
+        "spheres": [
+          "Sun"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest3.stoneShape",
+        "name": "Stone Shape",
+        "level": 3,
+        "reversible": false,
+        "castingTime": "1rd",
+        "range": "TOUCH",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Elemental Earth"
+        ],
+        "spheres": [
+          "Elemental Earth"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest3.summonsInsects",
+        "name": "Summons Insects",
+        "level": 3,
+        "reversible": false,
+        "castingTime": "1rd",
+        "range": "30YDS",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Animal"
+        ],
+        "spheres": [
+          "Animal"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest3.tree",
+        "name": "Tree",
+        "level": 3,
+        "reversible": false,
+        "castingTime": "6 segments",
+        "range": "0",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Plant"
+        ],
+        "spheres": [
+          "Plant"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest3.waterBreathing",
+        "name": "Water Breathing",
+        "level": 3,
+        "reversible": true,
+        "castingTime": "6 segments",
+        "range": "TOUCH",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Elemental Air",
+          "Elemental Water"
+        ],
+        "spheres": [
+          "Elemental Air",
+          "Elemental Water"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest3.waterWalk",
+        "name": "Water Walk",
+        "level": 3,
+        "reversible": false,
+        "castingTime": "6 segments",
+        "range": "TOUCH",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Elemental Water"
+        ],
+        "spheres": [
+          "Elemental Water"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest3.zoneOfSweetAir",
+        "name": "Zone of Sweet Air",
+        "level": 3,
+        "reversible": false,
+        "castingTime": "6 segments",
+        "range": "10YDS / Level",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Elemental Air"
+        ],
+        "spheres": [
+          "Wards",
+          "Elemental Air"
+        ],
+        "reference": "TOM"
+      }
+    ],
+    "4": [
+      {
+        "id": "priest4.animalSummoningI",
+        "name": "Animal Summoning I",
+        "level": 4,
+        "reversible": false,
+        "castingTime": "7 segments",
+        "range": "1 MILE RADIUS",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Animal"
+        ],
+        "spheres": [
+          "Animal"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest4.blessedWarmth",
+        "name": "Blessed Warmth",
+        "level": 4,
+        "reversible": false,
+        "castingTime": "4 segments",
+        "range": "TOUCH",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Sun"
+        ],
+        "spheres": [
+          "Sun"
+        ],
+        "reference": "TOM"
+      },
+      {
+        "id": "priest4.callWoodlandBeings",
+        "name": "Call Woodland Beings",
+        "level": 4,
+        "reversible": false,
+        "castingTime": "Special",
+        "range": "100YDS / Level",
+        "savingThrow": "Negates",
+        "access": "major",
+        "accessVia": [
+          "Animal"
+        ],
+        "spheres": [
+          "Animal"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest4.controlTemperture10Radius",
+        "name": "Control Temperture, 10' Radius",
+        "level": 4,
+        "reversible": false,
+        "castingTime": "7 segments",
+        "range": "0",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Weather"
+        ],
+        "spheres": [
+          "Weather"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest4.cureSeriousWounds",
+        "name": "Cure Serious Wounds",
+        "level": 4,
+        "reversible": true,
+        "castingTime": "7 segments",
+        "range": "TOUCH",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Healing"
+        ],
+        "spheres": [
+          "Healing"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest4.focus",
+        "name": "Focus",
+        "level": 4,
+        "reversible": false,
+        "castingTime": "1 day",
+        "range": "10FT",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "All"
+        ],
+        "spheres": [
+          "All"
+        ],
+        "reference": "TOM"
+      },
+      {
+        "id": "priest4.fortifyHealing",
+        "name": "Fortify Healing",
+        "level": 4,
+        "reversible": false,
+        "castingTime": "6 segments",
+        "range": "0",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Healing"
+        ],
+        "spheres": [
+          "Healing"
+        ],
+        "reference": "TOM"
+      },
+      {
+        "id": "priest4.giantInsect",
+        "name": "Giant Insect",
+        "level": 4,
+        "reversible": true,
+        "castingTime": "7 segments",
+        "range": "20YDS",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Animal"
+        ],
+        "spheres": [
+          "Animal"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest4.hallucinatoryForest",
+        "name": "Hallucinatory Forest",
+        "level": 4,
+        "reversible": false,
+        "castingTime": "7 segments",
+        "range": "80YDS",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Plant"
+        ],
+        "spheres": [
+          "Plant"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest4.holdPlant",
+        "name": "Hold Plant",
+        "level": 4,
+        "reversible": false,
+        "castingTime": "7 segments",
+        "range": "80YDS",
+        "savingThrow": "Negates",
+        "access": "major",
+        "accessVia": [
+          "Plant"
+        ],
+        "spheres": [
+          "Plant"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest4.lowerWater",
+        "name": "Lower Water",
+        "level": 4,
+        "reversible": true,
+        "castingTime": "1 turn",
+        "range": "120YDS",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Elemental Water"
+        ],
+        "spheres": [
+          "Elemental Water"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest4.neutralizePoison",
+        "name": "Neutralize Poison",
+        "level": 4,
+        "reversible": true,
+        "castingTime": "7 segments",
+        "range": "TOUCH",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Healing"
+        ],
+        "spheres": [
+          "Healing"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest4.plantDoor",
+        "name": "Plant Door",
+        "level": 4,
+        "reversible": false,
+        "castingTime": "7 segments",
+        "range": "TOUCH",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Plant"
+        ],
+        "spheres": [
+          "Plant"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest4.produceFire",
+        "name": "Produce Fire",
+        "level": 4,
+        "reversible": true,
+        "castingTime": "1rd",
+        "range": "40YDS",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Elemental Fire"
+        ],
+        "spheres": [
+          "Elemental Fire"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest4.protectionFromLightning",
+        "name": "Protection from Lightning",
+        "level": 4,
+        "reversible": false,
+        "castingTime": "7 segments",
+        "range": "TOUCH",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Weather"
+        ],
+        "spheres": [
+          "Weather"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest4.reflectingPool",
+        "name": "Reflecting Pool",
+        "level": 4,
+        "reversible": false,
+        "castingTime": "2hrs",
+        "range": "10YDS",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Elemental Water"
+        ],
+        "spheres": [
+          "Elemental Water"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest4.repelInsects",
+        "name": "Repel Insects",
+        "level": 4,
+        "reversible": false,
+        "castingTime": "1rd",
+        "range": "0",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Animal"
+        ],
+        "spheres": [
+          "Animal"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest4.speakWithPlants",
+        "name": "Speak with Plants",
+        "level": 4,
+        "reversible": false,
+        "castingTime": "1 turn",
+        "range": "0",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Plant"
+        ],
+        "spheres": [
+          "Plant"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest4.sticksToSnakes",
+        "name": "Sticks to Snakes",
+        "level": 4,
+        "reversible": true,
+        "castingTime": "7 segments",
+        "range": "30YDS",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Plant"
+        ],
+        "spheres": [
+          "Plant",
+          "Creation"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest4.tongues",
+        "name": "Tongues",
+        "level": 4,
+        "reversible": true,
+        "castingTime": "7 segments",
+        "range": "0",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "All"
+        ],
+        "spheres": [
+          "All",
+          "Divination"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest4.uplift",
+        "name": "Uplift",
+        "level": 4,
+        "reversible": false,
+        "castingTime": "12hrs",
+        "range": "0",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "All"
+        ],
+        "spheres": [
+          "All"
+        ],
+        "reference": "TOM"
+      },
+      {
+        "id": "priest4.weatherStasis",
+        "name": "Weather Stasis",
+        "level": 4,
+        "reversible": false,
+        "castingTime": "1 turn",
+        "range": "30YDS",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Weather"
+        ],
+        "spheres": [
+          "Wards",
+          "Weather"
+        ],
+        "reference": "TOM"
+      }
+    ],
+    "5": [
+      {
+        "id": "priest5.airWalk",
+        "name": "Air Walk",
+        "level": 5,
+        "reversible": false,
+        "castingTime": "8 segments",
+        "range": "Touch",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Elemental Air"
+        ],
+        "spheres": [
+          "Elemental Air"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest5.animalGrowth",
+        "name": "Animal Growth",
+        "level": 5,
+        "reversible": true,
+        "castingTime": "8 segments",
+        "range": "80YDS",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Animal"
+        ],
+        "spheres": [
+          "Animal"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest5.animalSummoningIi",
+        "name": "Animal Summoning Ii",
+        "level": 5,
+        "reversible": false,
+        "castingTime": "8 segments",
+        "range": "60 YDS / Level",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Animal"
+        ],
+        "spheres": [
+          "Animal"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest5.antiPlantShell",
+        "name": "Anti-Plant Shell",
+        "level": 5,
+        "reversible": false,
+        "castingTime": "8 segments",
+        "range": "0",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Plant"
+        ],
+        "spheres": [
+          "Protection",
+          "Plant"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest5.atonement",
+        "name": "Atonement",
+        "level": 5,
+        "reversible": false,
+        "castingTime": "1 turn",
+        "range": "TOUCH",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "All"
+        ],
+        "spheres": [
+          "All"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest5.cloudOfPurification",
+        "name": "Cloud of Purification",
+        "level": 5,
+        "reversible": false,
+        "castingTime": "5 segments",
+        "range": "30YDS",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Elemental Air"
+        ],
+        "spheres": [
+          "Elemental Air"
+        ],
+        "reference": "TOM"
+      },
+      {
+        "id": "priest5.commune",
+        "name": "Commune",
+        "level": 5,
+        "reversible": false,
+        "castingTime": "1 turn",
+        "range": "0",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "All"
+        ],
+        "spheres": [
+          "All"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest5.communeWithNature",
+        "name": "Commune with Nature",
+        "level": 5,
+        "reversible": false,
+        "castingTime": "3rd",
+        "range": "TOUCH",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Animal",
+          "Plant"
+        ],
+        "spheres": [
+          "Animal",
+          "Plant"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest5.controlWinds",
+        "name": "Control Winds",
+        "level": 5,
+        "reversible": false,
+        "castingTime": "8 segments",
+        "range": "0",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Elemental Air",
+          "Weather"
+        ],
+        "spheres": [
+          "Elemental Air",
+          "Weather"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest5.cureCriticalWounds",
+        "name": "Cure Critical Wounds",
+        "level": 5,
+        "reversible": true,
+        "castingTime": "8 segments",
+        "range": "TOUCH",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Healing"
+        ],
+        "spheres": [
+          "Healing"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest5.insectPlague",
+        "name": "Insect Plague",
+        "level": 5,
+        "reversible": false,
+        "castingTime": "1 turn",
+        "range": "120YDS",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Animal"
+        ],
+        "spheres": [
+          "Animal"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest5.moonbeam",
+        "name": "Moonbeam",
+        "level": 5,
+        "reversible": false,
+        "castingTime": "7 segments",
+        "range": "60YDS + 10YDS/Level",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Sun"
+        ],
+        "spheres": [
+          "Sun"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest5.passPlant",
+        "name": "Pass Plant",
+        "level": 5,
+        "reversible": false,
+        "castingTime": "8 segments",
+        "range": "Special",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Plant"
+        ],
+        "spheres": [
+          "Plant"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest5.quest",
+        "name": "Quest",
+        "level": 5,
+        "reversible": false,
+        "castingTime": "8 segments",
+        "range": "60YDS",
+        "savingThrow": "Negates",
+        "access": "major",
+        "accessVia": [
+          "All"
+        ],
+        "spheres": [
+          "All"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest5.rainbow",
+        "name": "Rainbow",
+        "level": 5,
+        "reversible": false,
+        "castingTime": "7 segments",
+        "range": "120YDS",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Sun",
+          "Weather"
+        ],
+        "spheres": [
+          "Sun",
+          "Weather"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest5.spikeStones",
+        "name": "Spike Stones",
+        "level": 5,
+        "reversible": false,
+        "castingTime": "6 segments",
+        "range": "30YDS",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Elemental Earth"
+        ],
+        "spheres": [
+          "Elemental Earth"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest5.transmuteRockToMud",
+        "name": "Transmute Rock to Mud",
+        "level": 5,
+        "reversible": true,
+        "castingTime": "8 segments",
+        "range": "160YDS",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Elemental Earth",
+          "Elemental Water"
+        ],
+        "spheres": [
+          "Elemental Earth",
+          "Elemental Water"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest5.trueSeeing",
+        "name": "True Seeing",
+        "level": 5,
+        "reversible": true,
+        "castingTime": "8 segments",
+        "range": "TOUCH",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "All"
+        ],
+        "spheres": [
+          "All"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest5.wallOfFire",
+        "name": "Wall of Fire",
+        "level": 5,
+        "reversible": false,
+        "castingTime": "8 segments",
+        "range": "80YDS",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Elemental Fire"
+        ],
+        "spheres": [
+          "Elemental Fire"
+        ],
+        "reference": "PHB"
+      }
+    ],
+    "6": [
+      {
+        "id": "priest6.animalSummoningIii",
+        "name": "Animal Summoning Iii",
+        "level": 6,
+        "reversible": false,
+        "castingTime": "9 segments",
+        "range": "100 YDS / Level",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Animal"
+        ],
+        "spheres": [
+          "Animal"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest6.antiAnimalShell",
+        "name": "Anti-Animal Shell",
+        "level": 6,
+        "reversible": false,
+        "castingTime": "1rd",
+        "range": "0",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Animal"
+        ],
+        "spheres": [
+          "Animal",
+          "Protection"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest6.conjureFireElemental",
+        "name": "Conjure Fire Elemental",
+        "level": 6,
+        "reversible": false,
+        "castingTime": "1 turn",
+        "range": "80YDS",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Elemental Fire"
+        ],
+        "spheres": [
+          "Elemental Fire"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest6.fireSeeds",
+        "name": "Fire Seeds",
+        "level": 6,
+        "reversible": false,
+        "castingTime": "1rd / seed",
+        "range": "TOUCH",
+        "savingThrow": "1",
+        "access": "major",
+        "accessVia": [
+          "Elemental Fire"
+        ],
+        "spheres": [
+          "Elemental Fire"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest6.heal",
+        "name": "Heal",
+        "level": 6,
+        "reversible": true,
+        "castingTime": "1rd",
+        "range": "TOUCH",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Healing"
+        ],
+        "spheres": [
+          "Healing"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest6.liveoak",
+        "name": "Liveoak",
+        "level": 6,
+        "reversible": false,
+        "castingTime": "1 turn",
+        "range": "TOUCH",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Plant"
+        ],
+        "spheres": [
+          "Plant"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest6.partWater",
+        "name": "Part Water",
+        "level": 6,
+        "reversible": false,
+        "castingTime": "1 turn",
+        "range": "20YDS / Level",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Elemental Water"
+        ],
+        "spheres": [
+          "Elemental Water"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest6.solSSearingOrb",
+        "name": "Sol's Searing Orb",
+        "level": 6,
+        "reversible": false,
+        "castingTime": "6 segments",
+        "range": "30YDS",
+        "savingThrow": "Special",
+        "access": "major",
+        "accessVia": [
+          "Sun"
+        ],
+        "spheres": [
+          "Sun"
+        ],
+        "reference": "TOM"
+      },
+      {
+        "id": "priest6.speakWithMonsters",
+        "name": "Speak with Monsters",
+        "level": 6,
+        "reversible": false,
+        "castingTime": "9 segments",
+        "range": "30YDS",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "All"
+        ],
+        "spheres": [
+          "All"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest6.transmuteWaterToDust",
+        "name": "Transmute Water to Dust",
+        "level": 6,
+        "reversible": true,
+        "castingTime": "8 segments",
+        "range": "60YDS",
+        "savingThrow": "Special",
+        "access": "major",
+        "accessVia": [
+          "Elemental Earth",
+          "Elemental Water"
+        ],
+        "spheres": [
+          "Elemental Earth",
+          "Elemental Water"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest6.transportViaPlants",
+        "name": "Transport Via Plants",
+        "level": 6,
+        "reversible": false,
+        "castingTime": "4 segments",
+        "range": "TOUCH",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Plant"
+        ],
+        "spheres": [
+          "Plant"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest6.turnWood",
+        "name": "Turn Wood",
+        "level": 6,
+        "reversible": false,
+        "castingTime": "9 segments",
+        "range": "0",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Plant"
+        ],
+        "spheres": [
+          "Plant"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest6.wallOfThorns",
+        "name": "Wall of Thorns",
+        "level": 6,
+        "reversible": false,
+        "castingTime": "9 segments",
+        "range": "80YDS",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Plant"
+        ],
+        "spheres": [
+          "Plant"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest6.weatherSummoning",
+        "name": "Weather Summoning",
+        "level": 6,
+        "reversible": false,
+        "castingTime": "1 turn",
+        "range": "0",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Weather"
+        ],
+        "spheres": [
+          "Weather"
+        ],
+        "reference": "PHB"
+      }
+    ],
+    "7": [
+      {
+        "id": "priest7.animateRock",
+        "name": "Animate Rock",
+        "level": 7,
+        "reversible": false,
+        "castingTime": "1rd",
+        "range": "40 YDS",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Elemental Earth"
+        ],
+        "spheres": [
+          "Elemental Earth"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest7.changestaff",
+        "name": "Changestaff",
+        "level": 7,
+        "reversible": false,
+        "castingTime": "4 segments",
+        "range": "TOUCH",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Plant"
+        ],
+        "spheres": [
+          "Plant"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest7.chariotOfSustarre",
+        "name": "Chariot of Sustarre",
+        "level": 7,
+        "reversible": false,
+        "castingTime": "1 turn",
+        "range": "10YDS",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Elemental Fire"
+        ],
+        "spheres": [
+          "Elemental Fire"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest7.conjureEarthElemental",
+        "name": "Conjure Earth Elemental",
+        "level": 7,
+        "reversible": false,
+        "castingTime": "1 turn",
+        "range": "30YDS",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Elemental Earth"
+        ],
+        "spheres": [
+          "Elemental Earth"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest7.controlWeather",
+        "name": "Control Weather",
+        "level": 7,
+        "reversible": false,
+        "castingTime": "1 turn",
+        "range": "0",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Weather"
+        ],
+        "spheres": [
+          "Weather"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest7.creepingDoom",
+        "name": "Creeping Doom",
+        "level": 7,
+        "reversible": false,
+        "castingTime": "1rd",
+        "range": "0",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Animal"
+        ],
+        "spheres": [
+          "Animal"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest7.earthquake",
+        "name": "Earthquake",
+        "level": 7,
+        "reversible": false,
+        "castingTime": "1 turn",
+        "range": "120YDS",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Elemental Earth"
+        ],
+        "spheres": [
+          "Elemental Earth"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest7.fingerOfDeath",
+        "name": "Finger of Death",
+        "level": 7,
+        "reversible": false,
+        "castingTime": "3 segments",
+        "range": "60YDS",
+        "savingThrow": "Negates",
+        "access": "major",
+        "accessVia": [
+          "Animal"
+        ],
+        "spheres": [
+          "Animal"
+        ],
+        "reference": "PHB1"
+      },
+      {
+        "id": "priest7.fireStorm",
+        "name": "Fire Storm",
+        "level": 7,
+        "reversible": true,
+        "castingTime": "1rd",
+        "range": "160YDS",
+        "savingThrow": "0.5",
+        "access": "major",
+        "accessVia": [
+          "Elemental Fire"
+        ],
+        "spheres": [
+          "Elemental Fire"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest7.gate",
+        "name": "Gate",
+        "level": 7,
+        "reversible": false,
+        "castingTime": "5 segments",
+        "range": "30YDS",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "All"
+        ],
+        "spheres": [
+          "All"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest7.regenerate",
+        "name": "Regenerate",
+        "level": 7,
+        "reversible": true,
+        "castingTime": "3rds",
+        "range": "TOUCH",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Healing"
+        ],
+        "spheres": [
+          "Healing"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest7.reincarnate",
+        "name": "Reincarnate",
+        "level": 7,
+        "reversible": false,
+        "castingTime": "1 turn",
+        "range": "TOUCH",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Animal"
+        ],
+        "spheres": [
+          "Animal"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest7.sunray",
+        "name": "Sunray",
+        "level": 7,
+        "reversible": false,
+        "castingTime": "4 segments",
+        "range": "10YDS / Level",
+        "savingThrow": "Special",
+        "access": "major",
+        "accessVia": [
+          "Sun"
+        ],
+        "spheres": [
+          "Sun"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest7.transmuteMetalToWood",
+        "name": "Transmute Metal to Wood",
+        "level": 7,
+        "reversible": false,
+        "castingTime": "1rd",
+        "range": "80YDS",
+        "savingThrow": "Special",
+        "access": "major",
+        "accessVia": [
+          "Elemental Earth"
+        ],
+        "spheres": [
+          "Elemental Earth"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest7.windWalk",
+        "name": "Wind Walk",
+        "level": 7,
+        "reversible": false,
+        "castingTime": "1rd",
+        "range": "TOUCH",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Elemental Air"
+        ],
+        "spheres": [
+          "Elemental Air"
+        ],
+        "reference": "PHB"
+      }
+    ]
+  }
+}
