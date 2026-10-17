@@ -14,7 +14,9 @@
       "speedFactor": "Weapons only. speedFactorBase = speed factor of the named weapon in gear.json; plus = the magical plus; speedFactor = speedFactorBase minus plus (owner rule, e.g. long sword 5 becomes 4 at +1). Minimum 0 (owner rule): a result below 0 is stored as 0. Table 108 entries have no plus yet, so only speedFactorBase is given and speedFactor is null until the plus is known. Ammunition has no speed factor. gearRef names the gear.json weapon(s) used; mappingAssumption flags a judgement.",
       "armourWeight": "Magical armour weighs the same as its mundane counterpart in gear.json (owner rule), referenced by gearRef. Empty where the base armour type is not fixed or has no gear.json equivalent.",
       "extraItems": "Items added by the owner that are not on the printed table (no die roll, roll null). source 'owner-added'. valueGp = gold piece value (new field; not printed on the tables). hasDescription false until description text is supplied.",
-      "variants": "Items whose version is fixed once by a random roll are stored as one entry per possible version. Each variant row keeps the parent's table roll, has id = parent id + variant key, variantOf = parent id and variant = {die, roll [from,to] on the item's own die, label}. Variant xp, weightLbs, plus and speedFactor are filled where the item text gives them. The generic entry is removed. nameMarker footnotes about 'type determined by die roll' no longer apply to variant rows. Items not expanded are listed in variantsNotExpanded."
+      "variants": "Items whose version is fixed once by a random roll are stored as one entry per possible version. Each variant row keeps the parent's table roll, has id = parent id + variant key, variantOf = parent id and variant = {die, roll [from,to] on the item's own die, label}. Variant xp, weightLbs, plus and speedFactor are filled where the item text gives them. The generic entry is removed. nameMarker footnotes about 'type determined by die roll' no longer apply to variant rows. Items not expanded are listed in variantsNotExpanded.",
+      "specialWeaponTypes": "Table 110 items carry weaponTypeOptions (gear.json weapon ids the item can be) and weaponTypeSelection: 'fixed' (one option), 'choice' (the app shows a selector) or 'none' (no gear.json item, e.g. nets). plus is the item's magical plus (null where it varies or isn't stated; plusNote explains). weightLbs and speedFactorBase/speedFactor on 'choice' items are not fixed by the item: when a type is selected take weight and speedFactorBase from that gear.json weapon and speedFactor = max(0, speedFactorBase - plus). Sun Blade is a bastard sword in appearance and damage but its weight and speed factor are those of a short sword (gearRef shortSword) per its description. Owner choices: generic swords may be any of the 12 gear.json Sword-group items; hammers may be Warhammer, Warhammer (Thrown) or Warhammer, two-handed; Hornblade may be Knife, Dagger or Short sword; Buckle Knife is Knife; crossbows may be any of the five gear.json crossbows (hand, light, heavy, disk, doubled); Bow +1 may be short, long, composite short or composite long.",
+      "specialArmourTypes": "Table 107 items carry armourTypeOptions (gear.json armour ids the item can be) and armourTypeSelection ('fixed' = one option, 'choice' = the app shows a selector). plus is the item's magical AC plus (null where it is not fixed); plusOptions lists the allowed values where the plus is a choice (Elven Chain Mail +1 to +5, owner-set; Plate Mail of Vulnerability -2, -3 or -4 per its description); plusNote explains. On 'choice' items weightLbs is not fixed by the item: take weight from the selected gear.json armour. Owner choices: Armor of Blending and Armor of Missile Attraction may be any of the 12 body armours except Red Dragon Scale Armour; Shield, Large is Shield, Body; Shield -1, Missile Attractor may be any of the four shields. The armour and shield type tables are not in the data files."
     },
     "typos": {
       "Gauntets of Fumbling": "corrected to Gauntlets of Fumbling",
@@ -8348,7 +8350,12 @@
           "id": "specialArmor.armorOfCommand",
           "hasDescription": true,
           "gearRef": "plateMail",
-          "weightLbs": 50
+          "weightLbs": 50,
+          "armourTypeOptions": [
+            "plateMail"
+          ],
+          "armourTypeSelection": "fixed",
+          "plus": 1
         },
         {
           "roll": [
@@ -8361,7 +8368,24 @@
           "id": "specialArmor.armorOfBlending",
           "hasDescription": true,
           "weightLbs": null,
-          "weightNote": "armour type is determined when the item is generated; left empty"
+          "weightNote": "armour type is determined when the item is generated; left empty",
+          "armourTypeOptions": [
+            "bandedMail",
+            "brigandine",
+            "bronzePlateMail",
+            "chainMail",
+            "hide",
+            "leather",
+            "padded",
+            "plateMail",
+            "ringMail",
+            "scaleMail",
+            "splintMail",
+            "studdedLeather"
+          ],
+          "armourTypeSelection": "choice",
+          "plus": null,
+          "plusNote": "Type and AC modifier are determined normally (negative results ignored), so no plus is fixed."
         },
         {
           "roll": [
@@ -8373,7 +8397,24 @@
           "id": "specialArmor.armorOfMissileAttraction",
           "hasDescription": true,
           "weightLbs": null,
-          "weightNote": "armour type is determined when the item is generated; left empty"
+          "weightNote": "armour type is determined when the item is generated; left empty",
+          "armourTypeOptions": [
+            "bandedMail",
+            "brigandine",
+            "bronzePlateMail",
+            "chainMail",
+            "hide",
+            "leather",
+            "padded",
+            "plateMail",
+            "ringMail",
+            "scaleMail",
+            "splintMail",
+            "studdedLeather"
+          ],
+          "armourTypeSelection": "choice",
+          "plus": null,
+          "plusNote": "Type and modifier are determined normally, so no plus is fixed."
         },
         {
           "roll": [
@@ -8385,7 +8426,12 @@
           "id": "specialArmor.armorOfRage",
           "hasDescription": true,
           "gearRef": "plateMail",
-          "weightLbs": 50
+          "weightLbs": 50,
+          "armourTypeOptions": [
+            "plateMail"
+          ],
+          "armourTypeSelection": "fixed",
+          "plus": 1
         },
         {
           "roll": [
@@ -8408,7 +8454,20 @@
               10
             ],
             "label": "gnome/halfling"
-          }
+          },
+          "armourTypeOptions": [
+            "chainMail"
+          ],
+          "armourTypeSelection": "fixed",
+          "plus": null,
+          "plusOptions": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "plusNote": "Magical plus is +1 to +5 (owner-set range); the description does not fix a single value."
         },
         {
           "roll": [
@@ -8431,7 +8490,20 @@
               15
             ],
             "label": "dwarf/halfling"
-          }
+          },
+          "armourTypeOptions": [
+            "chainMail"
+          ],
+          "armourTypeSelection": "fixed",
+          "plus": null,
+          "plusOptions": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "plusNote": "Magical plus is +1 to +5 (owner-set range); the description does not fix a single value."
         },
         {
           "roll": [
@@ -8454,7 +8526,20 @@
               80
             ],
             "label": "elf/half-elf"
-          }
+          },
+          "armourTypeOptions": [
+            "chainMail"
+          ],
+          "armourTypeSelection": "fixed",
+          "plus": null,
+          "plusOptions": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "plusNote": "Magical plus is +1 to +5 (owner-set range); the description does not fix a single value."
         },
         {
           "roll": [
@@ -8477,7 +8562,20 @@
               95
             ],
             "label": "man-sized, normal"
-          }
+          },
+          "armourTypeOptions": [
+            "chainMail"
+          ],
+          "armourTypeSelection": "fixed",
+          "plus": null,
+          "plusOptions": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "plusNote": "Magical plus is +1 to +5 (owner-set range); the description does not fix a single value."
         },
         {
           "roll": [
@@ -8500,7 +8598,20 @@
               100
             ],
             "label": "man-sized, large"
-          }
+          },
+          "armourTypeOptions": [
+            "chainMail"
+          ],
+          "armourTypeSelection": "fixed",
+          "plus": null,
+          "plusOptions": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "plusNote": "Magical plus is +1 to +5 (owner-set range); the description does not fix a single value."
         },
         {
           "roll": [
@@ -8512,7 +8623,13 @@
           "id": "specialArmor.plateMailOfEtherealness",
           "hasDescription": true,
           "gearRef": "plateMail",
-          "weightLbs": 50
+          "weightLbs": 50,
+          "armourTypeOptions": [
+            "plateMail"
+          ],
+          "armourTypeSelection": "fixed",
+          "plus": 5,
+          "plusNote": "+5 when new; drops by 1 for every five charges used (+1 once all 20 are spent)."
         },
         {
           "roll": [
@@ -8524,7 +8641,12 @@
           "id": "specialArmor.plateMailOfFear",
           "hasDescription": true,
           "gearRef": "plateMail",
-          "weightLbs": 50
+          "weightLbs": 50,
+          "armourTypeOptions": [
+            "plateMail"
+          ],
+          "armourTypeSelection": "fixed",
+          "plus": 1
         },
         {
           "roll": [
@@ -8536,7 +8658,18 @@
           "id": "specialArmor.plateMailOfVulnerability",
           "hasDescription": true,
           "gearRef": "plateMail",
-          "weightLbs": 50
+          "weightLbs": 50,
+          "armourTypeOptions": [
+            "plateMail"
+          ],
+          "armourTypeSelection": "fixed",
+          "plus": null,
+          "plusOptions": [
+            -2,
+            -3,
+            -4
+          ],
+          "plusNote": "Appears to be +1, +2 or +3 but is actually cursed -2, -3 or -4."
         },
         {
           "roll": [
@@ -8548,7 +8681,13 @@
           "id": "specialArmor.shieldLarge14VsMissiles",
           "hasDescription": true,
           "weightLbs": null,
-          "weightNote": "gear.json has no large shield; left empty"
+          "weightNote": "gear.json has no large shield; left empty",
+          "armourTypeOptions": [
+            "shieldBody"
+          ],
+          "armourTypeSelection": "fixed",
+          "plus": 1,
+          "plusNote": "+1 vs. melee; +4 vs. missiles (see name and description)."
         },
         {
           "roll": [
@@ -8560,7 +8699,15 @@
           "id": "specialArmor.shield1MissileAttractor",
           "hasDescription": true,
           "weightLbs": null,
-          "weightNote": "shield type not stated; left empty"
+          "weightNote": "shield type not stated; left empty",
+          "armourTypeOptions": [
+            "shieldBuckler",
+            "shieldSmall",
+            "shieldMedium",
+            "shieldBody"
+          ],
+          "armourTypeSelection": "choice",
+          "plus": -1
         }
       ],
       "footnotes": {
@@ -8966,7 +9113,12 @@
               "weightLbs": 0.1,
               "speedFactorBase": null,
               "plus": 0,
-              "speedFactor": null
+              "speedFactor": null,
+              "weaponTypeOptions": [
+                "flightArrow",
+                "sheafArrow"
+              ],
+              "weaponTypeSelection": "choice"
             },
             {
               "roll": [
@@ -8985,7 +9137,12 @@
               "weightLbs": 0.1,
               "speedFactorBase": null,
               "plus": 3,
-              "speedFactor": null
+              "speedFactor": null,
+              "weaponTypeOptions": [
+                "flightArrow",
+                "sheafArrow"
+              ],
+              "weaponTypeSelection": "choice"
             },
             {
               "roll": [
@@ -9001,7 +9158,11 @@
               "weightLbs": 5,
               "speedFactorBase": 4,
               "plus": 2,
-              "speedFactor": 2
+              "speedFactor": 2,
+              "weaponTypeOptions": [
+                "handOrThrowingAxe"
+              ],
+              "weaponTypeSelection": "fixed"
             },
             {
               "roll": [
@@ -9026,7 +9187,11 @@
                   5
                 ],
                 "label": "+1"
-              }
+              },
+              "weaponTypeOptions": [
+                "handOrThrowingAxe"
+              ],
+              "weaponTypeSelection": "fixed"
             },
             {
               "roll": [
@@ -9051,7 +9216,11 @@
                   10
                 ],
                 "label": "+2"
-              }
+              },
+              "weaponTypeOptions": [
+                "handOrThrowingAxe"
+              ],
+              "weaponTypeSelection": "fixed"
             },
             {
               "roll": [
@@ -9076,7 +9245,11 @@
                   15
                 ],
                 "label": "+3"
-              }
+              },
+              "weaponTypeOptions": [
+                "handOrThrowingAxe"
+              ],
+              "weaponTypeSelection": "fixed"
             },
             {
               "roll": [
@@ -9101,7 +9274,11 @@
                   19
                 ],
                 "label": "+4"
-              }
+              },
+              "weaponTypeOptions": [
+                "handOrThrowingAxe"
+              ],
+              "weaponTypeSelection": "fixed"
             },
             {
               "roll": [
@@ -9126,7 +9303,11 @@
                   20
                 ],
                 "label": "+5"
-              }
+              },
+              "weaponTypeOptions": [
+                "handOrThrowingAxe"
+              ],
+              "weaponTypeSelection": "fixed"
             },
             {
               "roll": [
@@ -9142,7 +9323,14 @@
               "speedFactorBase": null,
               "plus": 1,
               "speedFactor": null,
-              "weightNote": "bow/crossbow type not fixed by the description"
+              "weightNote": "bow/crossbow type not fixed by the description",
+              "weaponTypeOptions": [
+                "shortBow",
+                "longBow",
+                "compositeShortBow",
+                "compositeLongBow"
+              ],
+              "weaponTypeSelection": "choice"
             },
             {
               "roll": [
@@ -9158,7 +9346,15 @@
               "speedFactorBase": null,
               "plus": 3,
               "speedFactor": null,
-              "weightNote": "bow/crossbow type not fixed by the description"
+              "weightNote": "bow/crossbow type not fixed by the description",
+              "weaponTypeOptions": [
+                "handCrossbow",
+                "lightCrossbow",
+                "heavyCrossbow",
+                "crossbowDisk",
+                "crossbowDoubled"
+              ],
+              "weaponTypeSelection": "choice"
             },
             {
               "roll": [
@@ -9174,7 +9370,15 @@
               "speedFactorBase": null,
               "plus": 1,
               "speedFactor": null,
-              "weightNote": "bow/crossbow type not fixed by the description"
+              "weightNote": "bow/crossbow type not fixed by the description",
+              "weaponTypeOptions": [
+                "handCrossbow",
+                "lightCrossbow",
+                "heavyCrossbow",
+                "crossbowDisk",
+                "crossbowDoubled"
+              ],
+              "weaponTypeSelection": "choice"
             },
             {
               "roll": [
@@ -9190,7 +9394,15 @@
               "speedFactorBase": null,
               "plus": 0,
               "speedFactor": null,
-              "weightNote": "bow/crossbow type not fixed by the description"
+              "weightNote": "bow/crossbow type not fixed by the description",
+              "weaponTypeOptions": [
+                "handCrossbow",
+                "lightCrossbow",
+                "heavyCrossbow",
+                "crossbowDisk",
+                "crossbowDoubled"
+              ],
+              "weaponTypeSelection": "choice"
             },
             {
               "roll": [
@@ -9205,7 +9417,11 @@
               "weightLbs": 1,
               "speedFactorBase": 2,
               "plus": 1,
-              "speedFactor": 1
+              "speedFactor": 1,
+              "weaponTypeOptions": [
+                "daggerOrDirk"
+              ],
+              "weaponTypeSelection": "fixed"
             },
             {
               "roll": [
@@ -9220,7 +9436,11 @@
               "weightLbs": 1,
               "speedFactorBase": 2,
               "plus": 2,
-              "speedFactor": 0
+              "speedFactor": 0,
+              "weaponTypeOptions": [
+                "daggerOrDirk"
+              ],
+              "weaponTypeSelection": "fixed"
             },
             {
               "roll": [
@@ -9236,7 +9456,11 @@
               "weightLbs": 1,
               "speedFactorBase": 2,
               "plus": 2,
-              "speedFactor": 0
+              "speedFactor": 0,
+              "weaponTypeOptions": [
+                "daggerOrDirk"
+              ],
+              "weaponTypeSelection": "fixed"
             },
             {
               "roll": [
@@ -9261,7 +9485,11 @@
                   35
                 ],
                 "label": "+1"
-              }
+              },
+              "weaponTypeOptions": [
+                "daggerOrDirk"
+              ],
+              "weaponTypeSelection": "fixed"
             },
             {
               "roll": [
@@ -9286,7 +9514,11 @@
                   65
                 ],
                 "label": "+2"
-              }
+              },
+              "weaponTypeOptions": [
+                "daggerOrDirk"
+              ],
+              "weaponTypeSelection": "fixed"
             },
             {
               "roll": [
@@ -9311,7 +9543,11 @@
                   90
                 ],
                 "label": "+3"
-              }
+              },
+              "weaponTypeOptions": [
+                "daggerOrDirk"
+              ],
+              "weaponTypeSelection": "fixed"
             },
             {
               "roll": [
@@ -9336,7 +9572,11 @@
                   100
                 ],
                 "label": "+4"
-              }
+              },
+              "weaponTypeOptions": [
+                "daggerOrDirk"
+              ],
+              "weaponTypeSelection": "fixed"
             },
             {
               "roll": [
@@ -9352,7 +9592,11 @@
               "weightLbs": 1,
               "speedFactorBase": 2,
               "plus": 1,
-              "speedFactor": 1
+              "speedFactor": 1,
+              "weaponTypeOptions": [
+                "daggerOrDirk"
+              ],
+              "weaponTypeSelection": "fixed"
             },
             {
               "roll": [
@@ -9368,7 +9612,11 @@
               "weightLbs": 0.5,
               "speedFactorBase": 2,
               "plus": 3,
-              "speedFactor": 0
+              "speedFactor": 0,
+              "weaponTypeOptions": [
+                "dart"
+              ],
+              "weaponTypeSelection": "fixed"
             },
             {
               "roll": [
@@ -9385,7 +9633,13 @@
               "speedFactorBase": 4,
               "plus": 3,
               "speedFactor": 1,
-              "mappingAssumption": "'hammer' read as Warhammer (Thrown) (gear.json missileRanges row warhammerThrown), since the Dwarven Thrower is hurled"
+              "mappingAssumption": "'hammer' read as Warhammer (Thrown) (gear.json missileRanges row warhammerThrown), since the Dwarven Thrower is hurled",
+              "weaponTypeOptions": [
+                "warhammer",
+                "warhammerThrown",
+                "warhammerTwoHanded"
+              ],
+              "weaponTypeSelection": "choice"
             },
             {
               "roll": [
@@ -9401,7 +9655,13 @@
               "speedFactorBase": null,
               "plus": 3,
               "speedFactor": null,
-              "weightNote": "large extra-heavy hammer, not a gear.json item; left empty"
+              "weightNote": "large extra-heavy hammer, not a gear.json item; left empty",
+              "weaponTypeOptions": [
+                "warhammer",
+                "warhammerThrown",
+                "warhammerTwoHanded"
+              ],
+              "weaponTypeSelection": "choice"
             },
             {
               "roll": [
@@ -9438,7 +9698,13 @@
               "speedFactorBase": null,
               "plus": null,
               "speedFactor": null,
-              "weightNote": "no equivalent in gear.json; left empty"
+              "weightNote": "no equivalent in gear.json; left empty",
+              "weaponTypeOptions": [
+                "knife",
+                "daggerOrDirk",
+                "shortSword"
+              ],
+              "weaponTypeSelection": "choice"
             },
             {
               "roll": [
@@ -9455,7 +9721,11 @@
               "speedFactorBase": 4,
               "plus": 0,
               "speedFactor": 4,
-              "speedFactorNote": "description: equal to +2 for what it can hit but no attack or damage bonus, so no speed reduction applied"
+              "speedFactorNote": "description: equal to +2 for what it can hit but no attack or damage bonus, so no speed reduction applied",
+              "weaponTypeOptions": [
+                "javelin"
+              ],
+              "weaponTypeSelection": "fixed"
             },
             {
               "roll": [
@@ -9471,7 +9741,11 @@
               "weightLbs": 2,
               "speedFactorBase": 4,
               "plus": 6,
-              "speedFactor": 0
+              "speedFactor": 0,
+              "weaponTypeOptions": [
+                "javelin"
+              ],
+              "weaponTypeSelection": "fixed"
             },
             {
               "roll": [
@@ -9497,7 +9771,11 @@
                 ],
                 "label": "+1"
               },
-              "weightSource": "owner-supplied (placeholder, may be revised)"
+              "weightSource": "owner-supplied (placeholder, may be revised)",
+              "weaponTypeOptions": [
+                "knife"
+              ],
+              "weaponTypeSelection": "fixed"
             },
             {
               "roll": [
@@ -9523,7 +9801,11 @@
                 ],
                 "label": "+2"
               },
-              "weightSource": "owner-supplied (placeholder, may be revised)"
+              "weightSource": "owner-supplied (placeholder, may be revised)",
+              "weaponTypeOptions": [
+                "knife"
+              ],
+              "weaponTypeSelection": "fixed"
             },
             {
               "roll": [
@@ -9549,7 +9831,11 @@
                 ],
                 "label": "+3"
               },
-              "weightSource": "owner-supplied (placeholder, may be revised)"
+              "weightSource": "owner-supplied (placeholder, may be revised)",
+              "weaponTypeOptions": [
+                "knife"
+              ],
+              "weaponTypeSelection": "fixed"
             },
             {
               "roll": [
@@ -9575,7 +9861,11 @@
                 ],
                 "label": "+4"
               },
-              "weightSource": "owner-supplied (placeholder, may be revised)"
+              "weightSource": "owner-supplied (placeholder, may be revised)",
+              "weaponTypeOptions": [
+                "knife"
+              ],
+              "weaponTypeSelection": "fixed"
             },
             {
               "roll": [
@@ -9591,7 +9881,11 @@
               "speedFactorBase": null,
               "plus": 1,
               "speedFactor": null,
-              "weightSource": "owner-supplied (placeholder, may be revised)"
+              "weightSource": "owner-supplied (placeholder, may be revised)",
+              "weaponTypeOptions": [
+                "footmansMace"
+              ],
+              "weaponTypeSelection": "fixed"
             },
             {
               "roll": [
@@ -9607,7 +9901,9 @@
               "speedFactorBase": null,
               "plus": null,
               "speedFactor": null,
-              "weightNote": "no equivalent in gear.json; left empty"
+              "weightNote": "no equivalent in gear.json; left empty",
+              "weaponTypeOptions": [],
+              "weaponTypeSelection": "none"
             },
             {
               "roll": [
@@ -9623,7 +9919,9 @@
               "speedFactorBase": null,
               "plus": null,
               "speedFactor": null,
-              "weightNote": "no equivalent in gear.json; left empty"
+              "weightNote": "no equivalent in gear.json; left empty",
+              "weaponTypeOptions": [],
+              "weaponTypeSelection": "none"
             },
             {
               "roll": [
@@ -9648,7 +9946,11 @@
                   5
                 ],
                 "label": "+1"
-              }
+              },
+              "weaponTypeOptions": [
+                "quarterstaff"
+              ],
+              "weaponTypeSelection": "fixed"
             },
             {
               "roll": [
@@ -9673,7 +9975,11 @@
                   9
                 ],
                 "label": "+2"
-              }
+              },
+              "weaponTypeOptions": [
+                "quarterstaff"
+              ],
+              "weaponTypeSelection": "fixed"
             },
             {
               "roll": [
@@ -9698,7 +10004,11 @@
                   13
                 ],
                 "label": "+3"
-              }
+              },
+              "weaponTypeOptions": [
+                "quarterstaff"
+              ],
+              "weaponTypeSelection": "fixed"
             },
             {
               "roll": [
@@ -9723,7 +10033,11 @@
                   17
                 ],
                 "label": "+4"
-              }
+              },
+              "weaponTypeOptions": [
+                "quarterstaff"
+              ],
+              "weaponTypeSelection": "fixed"
             },
             {
               "roll": [
@@ -9748,7 +10062,11 @@
                   20
                 ],
                 "label": "+5"
-              }
+              },
+              "weaponTypeOptions": [
+                "quarterstaff"
+              ],
+              "weaponTypeSelection": "fixed"
             },
             {
               "roll": [
@@ -9771,7 +10089,11 @@
                 "roll": null,
                 "label": "+2"
               },
-              "variantChancePercent": 75
+              "variantChancePercent": 75,
+              "weaponTypeOptions": [
+                "scimitar"
+              ],
+              "weaponTypeSelection": "fixed"
             },
             {
               "roll": [
@@ -9797,7 +10119,11 @@
                 ],
                 "label": "+1"
               },
-              "variantNote": "One scimitar in four is not +2; for those, roll d100 on this table."
+              "variantNote": "One scimitar in four is not +2; for those, roll d100 on this table.",
+              "weaponTypeOptions": [
+                "scimitar"
+              ],
+              "weaponTypeSelection": "fixed"
             },
             {
               "roll": [
@@ -9823,7 +10149,11 @@
                 ],
                 "label": "+3"
               },
-              "variantNote": "One scimitar in four is not +2; for those, roll d100 on this table."
+              "variantNote": "One scimitar in four is not +2; for those, roll d100 on this table.",
+              "weaponTypeOptions": [
+                "scimitar"
+              ],
+              "weaponTypeSelection": "fixed"
             },
             {
               "roll": [
@@ -9849,7 +10179,11 @@
                 ],
                 "label": "+4"
               },
-              "variantNote": "One scimitar in four is not +2; for those, roll d100 on this table."
+              "variantNote": "One scimitar in four is not +2; for those, roll d100 on this table.",
+              "weaponTypeOptions": [
+                "scimitar"
+              ],
+              "weaponTypeSelection": "fixed"
             },
             {
               "roll": [
@@ -9875,7 +10209,11 @@
                 ],
                 "label": "+5"
               },
-              "variantNote": "One scimitar in four is not +2; for those, roll d100 on this table."
+              "variantNote": "One scimitar in four is not +2; for those, roll d100 on this table.",
+              "weaponTypeOptions": [
+                "scimitar"
+              ],
+              "weaponTypeSelection": "fixed"
             },
             {
               "roll": [
@@ -9891,7 +10229,11 @@
               "weightLbs": 0.1,
               "speedFactorBase": 6,
               "plus": 2,
-              "speedFactor": 4
+              "speedFactor": 4,
+              "weaponTypeOptions": [
+                "sling"
+              ],
+              "weaponTypeSelection": "fixed"
             },
             {
               "roll": [
@@ -9907,10 +10249,15 @@
               "gearRef": "spear",
               "weightLbs": 5,
               "speedFactorBase": 6,
-              "plus": null,
+              "plus": 1,
               "speedFactor": null,
               "speedFactorNote": "plus not fixed by the description (variable or DM option), so no speed factor given",
-              "xpSource": "owner-confirmed 0 XP"
+              "xpSource": "owner-confirmed 0 XP",
+              "weaponTypeOptions": [
+                "spear"
+              ],
+              "weaponTypeSelection": "fixed",
+              "plusNote": "+1 as printed; description allows +2 or +3 at the DM's option."
             },
             {
               "roll": [
@@ -9929,7 +10276,11 @@
               "plus": 0,
               "speedFactor": 7,
               "mappingAssumption": "named as a trident; description says it resembles a military fork, trident values used",
-              "xpSource": "owner-confirmed 0 XP"
+              "xpSource": "owner-confirmed 0 XP",
+              "weaponTypeOptions": [
+                "trident"
+              ],
+              "weaponTypeSelection": "fixed"
             },
             {
               "roll": [
@@ -9947,7 +10298,11 @@
               "speedFactorBase": 7,
               "plus": 0,
               "speedFactor": 7,
-              "xpSource": "owner-confirmed 0 XP"
+              "xpSource": "owner-confirmed 0 XP",
+              "weaponTypeOptions": [
+                "trident"
+              ],
+              "weaponTypeSelection": "fixed"
             },
             {
               "roll": [
@@ -9965,7 +10320,11 @@
               "speedFactorBase": 7,
               "plus": 0,
               "speedFactor": 7,
-              "xpSource": "owner-confirmed 0 XP"
+              "xpSource": "owner-confirmed 0 XP",
+              "weaponTypeOptions": [
+                "trident"
+              ],
+              "weaponTypeSelection": "fixed"
             },
             {
               "roll": [
@@ -9983,7 +10342,11 @@
               "speedFactorBase": 7,
               "plus": 0,
               "speedFactor": 7,
-              "xpSource": "owner-confirmed 0 XP"
+              "xpSource": "owner-confirmed 0 XP",
+              "weaponTypeOptions": [
+                "trident"
+              ],
+              "weaponTypeSelection": "fixed"
             },
             {
               "roll": [
@@ -10019,7 +10382,11 @@
               "speedFactorBase": 3,
               "plus": 2,
               "speedFactor": 1,
-              "weightNote": "description: weight and speed factor as a short sword; +2 in normal combat"
+              "weightNote": "description: weight and speed factor as a short sword; +2 in normal combat",
+              "weaponTypeOptions": [
+                "bastardSword"
+              ],
+              "weaponTypeSelection": "fixed"
             },
             {
               "roll": [
@@ -10033,9 +10400,25 @@
               "hasDescription": true,
               "weightLbs": null,
               "speedFactorBase": null,
-              "plus": null,
+              "plus": 1,
               "speedFactor": null,
-              "weightNote": "sword type not stated in the item description"
+              "weightNote": "sword type not stated in the item description",
+              "weaponTypeOptions": [
+                "bastardSword",
+                "broadSword",
+                "khopesh",
+                "longSword",
+                "scimitar",
+                "shortSword",
+                "twoHandedSword",
+                "dwarvenClaymore",
+                "falchion",
+                "katana",
+                "sabre",
+                "claymore"
+              ],
+              "weaponTypeSelection": "choice",
+              "plusNote": "Base plus; the higher plus in the name applies vs. the named creatures."
             },
             {
               "roll": [
@@ -10049,9 +10432,25 @@
               "hasDescription": true,
               "weightLbs": null,
               "speedFactorBase": null,
-              "plus": null,
+              "plus": 1,
               "speedFactor": null,
-              "weightNote": "sword type not stated in the item description"
+              "weightNote": "sword type not stated in the item description",
+              "weaponTypeOptions": [
+                "bastardSword",
+                "broadSword",
+                "khopesh",
+                "longSword",
+                "scimitar",
+                "shortSword",
+                "twoHandedSword",
+                "dwarvenClaymore",
+                "falchion",
+                "katana",
+                "sabre",
+                "claymore"
+              ],
+              "weaponTypeSelection": "choice",
+              "plusNote": "Base plus; the higher plus in the name applies vs. the named creatures."
             },
             {
               "roll": [
@@ -10065,9 +10464,25 @@
               "hasDescription": true,
               "weightLbs": null,
               "speedFactorBase": null,
-              "plus": null,
+              "plus": 1,
               "speedFactor": null,
-              "weightNote": "sword type not stated in the item description"
+              "weightNote": "sword type not stated in the item description",
+              "weaponTypeOptions": [
+                "bastardSword",
+                "broadSword",
+                "khopesh",
+                "longSword",
+                "scimitar",
+                "shortSword",
+                "twoHandedSword",
+                "dwarvenClaymore",
+                "falchion",
+                "katana",
+                "sabre",
+                "claymore"
+              ],
+              "weaponTypeSelection": "choice",
+              "plusNote": "Base plus; the higher plus in the name applies vs. the named creatures."
             },
             {
               "roll": [
@@ -10081,9 +10496,25 @@
               "hasDescription": true,
               "weightLbs": null,
               "speedFactorBase": null,
-              "plus": null,
+              "plus": 1,
               "speedFactor": null,
-              "weightNote": "sword type not stated in the item description"
+              "weightNote": "sword type not stated in the item description",
+              "weaponTypeOptions": [
+                "bastardSword",
+                "broadSword",
+                "khopesh",
+                "longSword",
+                "scimitar",
+                "shortSword",
+                "twoHandedSword",
+                "dwarvenClaymore",
+                "falchion",
+                "katana",
+                "sabre",
+                "claymore"
+              ],
+              "weaponTypeSelection": "choice",
+              "plusNote": "Base plus; the higher plus in the name applies vs. the named creatures."
             },
             {
               "roll": [
@@ -10097,9 +10528,24 @@
               "hasDescription": true,
               "weightLbs": null,
               "speedFactorBase": null,
-              "plus": null,
+              "plus": 1,
               "speedFactor": null,
-              "weightNote": "sword type not stated in the item description"
+              "weightNote": "sword type not stated in the item description",
+              "weaponTypeOptions": [
+                "bastardSword",
+                "broadSword",
+                "khopesh",
+                "longSword",
+                "scimitar",
+                "shortSword",
+                "twoHandedSword",
+                "dwarvenClaymore",
+                "falchion",
+                "katana",
+                "sabre",
+                "claymore"
+              ],
+              "weaponTypeSelection": "choice"
             },
             {
               "roll": [
@@ -10113,9 +10559,25 @@
               "hasDescription": true,
               "weightLbs": null,
               "speedFactorBase": null,
-              "plus": null,
+              "plus": 1,
               "speedFactor": null,
-              "weightNote": "sword type not stated in the item description"
+              "weightNote": "sword type not stated in the item description",
+              "weaponTypeOptions": [
+                "bastardSword",
+                "broadSword",
+                "khopesh",
+                "longSword",
+                "scimitar",
+                "shortSword",
+                "twoHandedSword",
+                "dwarvenClaymore",
+                "falchion",
+                "katana",
+                "sabre",
+                "claymore"
+              ],
+              "weaponTypeSelection": "choice",
+              "plusNote": "Base plus; higher bonuses vs. certain creatures are in the name."
             },
             {
               "roll": [
@@ -10129,9 +10591,24 @@
               "hasDescription": true,
               "weightLbs": null,
               "speedFactorBase": null,
-              "plus": null,
+              "plus": 1,
               "speedFactor": null,
-              "weightNote": "sword type not stated in the item description"
+              "weightNote": "sword type not stated in the item description",
+              "weaponTypeOptions": [
+                "bastardSword",
+                "broadSword",
+                "khopesh",
+                "longSword",
+                "scimitar",
+                "shortSword",
+                "twoHandedSword",
+                "dwarvenClaymore",
+                "falchion",
+                "katana",
+                "sabre",
+                "claymore"
+              ],
+              "weaponTypeSelection": "choice"
             },
             {
               "roll": [
@@ -10145,9 +10622,24 @@
               "hasDescription": true,
               "weightLbs": null,
               "speedFactorBase": null,
-              "plus": null,
+              "plus": 2,
               "speedFactor": null,
-              "weightNote": "sword type not stated in the item description"
+              "weightNote": "sword type not stated in the item description",
+              "weaponTypeOptions": [
+                "bastardSword",
+                "broadSword",
+                "khopesh",
+                "longSword",
+                "scimitar",
+                "shortSword",
+                "twoHandedSword",
+                "dwarvenClaymore",
+                "falchion",
+                "katana",
+                "sabre",
+                "claymore"
+              ],
+              "weaponTypeSelection": "choice"
             },
             {
               "roll": [
@@ -10161,9 +10653,24 @@
               "hasDescription": true,
               "weightLbs": null,
               "speedFactorBase": null,
-              "plus": null,
+              "plus": 2,
               "speedFactor": null,
-              "weightNote": "sword type not stated in the item description"
+              "weightNote": "sword type not stated in the item description",
+              "weaponTypeOptions": [
+                "bastardSword",
+                "broadSword",
+                "khopesh",
+                "longSword",
+                "scimitar",
+                "shortSword",
+                "twoHandedSword",
+                "dwarvenClaymore",
+                "falchion",
+                "katana",
+                "sabre",
+                "claymore"
+              ],
+              "weaponTypeSelection": "choice"
             },
             {
               "roll": [
@@ -10196,9 +10703,24 @@
               "hasDescription": true,
               "weightLbs": null,
               "speedFactorBase": null,
-              "plus": null,
+              "plus": 2,
               "speedFactor": null,
-              "weightNote": "sword type not stated in the item description"
+              "weightNote": "sword type not stated in the item description",
+              "weaponTypeOptions": [
+                "bastardSword",
+                "broadSword",
+                "khopesh",
+                "longSword",
+                "scimitar",
+                "shortSword",
+                "twoHandedSword",
+                "dwarvenClaymore",
+                "falchion",
+                "katana",
+                "sabre",
+                "claymore"
+              ],
+              "weaponTypeSelection": "choice"
             },
             {
               "roll": [
@@ -10212,9 +10734,25 @@
               "hasDescription": true,
               "weightLbs": null,
               "speedFactorBase": null,
-              "plus": null,
+              "plus": 3,
               "speedFactor": null,
-              "weightNote": "sword type not stated in the item description"
+              "weightNote": "sword type not stated in the item description",
+              "weaponTypeOptions": [
+                "bastardSword",
+                "broadSword",
+                "khopesh",
+                "longSword",
+                "scimitar",
+                "shortSword",
+                "twoHandedSword",
+                "dwarvenClaymore",
+                "falchion",
+                "katana",
+                "sabre",
+                "claymore"
+              ],
+              "weaponTypeSelection": "choice",
+              "plusNote": "Base plus; +6 vs. fire-using/dwelling creatures."
             },
             {
               "roll": [
@@ -10228,9 +10766,24 @@
               "hasDescription": true,
               "weightLbs": null,
               "speedFactorBase": null,
-              "plus": null,
+              "plus": 4,
               "speedFactor": null,
-              "weightNote": "sword type not stated in the item description"
+              "weightNote": "sword type not stated in the item description",
+              "weaponTypeOptions": [
+                "bastardSword",
+                "broadSword",
+                "khopesh",
+                "longSword",
+                "scimitar",
+                "shortSword",
+                "twoHandedSword",
+                "dwarvenClaymore",
+                "falchion",
+                "katana",
+                "sabre",
+                "claymore"
+              ],
+              "weaponTypeSelection": "choice"
             },
             {
               "roll": [
@@ -10244,9 +10797,24 @@
               "hasDescription": true,
               "weightLbs": null,
               "speedFactorBase": null,
-              "plus": null,
+              "plus": 5,
               "speedFactor": null,
-              "weightNote": "sword type not stated in the item description"
+              "weightNote": "sword type not stated in the item description",
+              "weaponTypeOptions": [
+                "bastardSword",
+                "broadSword",
+                "khopesh",
+                "longSword",
+                "scimitar",
+                "shortSword",
+                "twoHandedSword",
+                "dwarvenClaymore",
+                "falchion",
+                "katana",
+                "sabre",
+                "claymore"
+              ],
+              "weaponTypeSelection": "choice"
             },
             {
               "roll": [
@@ -10260,9 +10828,25 @@
               "hasDescription": true,
               "weightLbs": null,
               "speedFactorBase": null,
-              "plus": null,
+              "plus": 5,
               "speedFactor": null,
-              "weightNote": "sword type not stated in the item description"
+              "weightNote": "sword type not stated in the item description",
+              "weaponTypeOptions": [
+                "bastardSword",
+                "broadSword",
+                "khopesh",
+                "longSword",
+                "scimitar",
+                "shortSword",
+                "twoHandedSword",
+                "dwarvenClaymore",
+                "falchion",
+                "katana",
+                "sabre",
+                "claymore"
+              ],
+              "weaponTypeSelection": "choice",
+              "plusNote": "+5 in a paladin's hands; performs only as +2 for anyone else (see description)."
             },
             {
               "roll": [
@@ -10276,9 +10860,24 @@
               "hasDescription": true,
               "weightLbs": null,
               "speedFactorBase": null,
-              "plus": null,
+              "plus": -2,
               "speedFactor": null,
-              "weightNote": "sword type not stated in the item description"
+              "weightNote": "sword type not stated in the item description",
+              "weaponTypeOptions": [
+                "bastardSword",
+                "broadSword",
+                "khopesh",
+                "longSword",
+                "scimitar",
+                "shortSword",
+                "twoHandedSword",
+                "dwarvenClaymore",
+                "falchion",
+                "katana",
+                "sabre",
+                "claymore"
+              ],
+              "weaponTypeSelection": "choice"
             },
             {
               "roll": [
@@ -10294,7 +10893,23 @@
               "speedFactorBase": null,
               "plus": null,
               "speedFactor": null,
-              "weightNote": "sword type not stated in the item description"
+              "weightNote": "sword type not stated in the item description",
+              "weaponTypeOptions": [
+                "bastardSword",
+                "broadSword",
+                "khopesh",
+                "longSword",
+                "scimitar",
+                "shortSword",
+                "twoHandedSword",
+                "dwarvenClaymore",
+                "falchion",
+                "katana",
+                "sabre",
+                "claymore"
+              ],
+              "weaponTypeSelection": "choice",
+              "plusNote": "Bonus cycles +1, +2, +3, +4 over four melee rounds (see description); no single fixed plus."
             },
             {
               "roll": [
@@ -10308,9 +10923,24 @@
               "hasDescription": true,
               "weightLbs": null,
               "speedFactorBase": null,
-              "plus": null,
+              "plus": 2,
               "speedFactor": null,
-              "weightNote": "sword type not stated in the item description"
+              "weightNote": "sword type not stated in the item description",
+              "weaponTypeOptions": [
+                "bastardSword",
+                "broadSword",
+                "khopesh",
+                "longSword",
+                "scimitar",
+                "shortSword",
+                "twoHandedSword",
+                "dwarvenClaymore",
+                "falchion",
+                "katana",
+                "sabre",
+                "claymore"
+              ],
+              "weaponTypeSelection": "choice"
             },
             {
               "roll": [
@@ -10324,9 +10954,24 @@
               "hasDescription": true,
               "weightLbs": null,
               "speedFactorBase": null,
-              "plus": null,
+              "plus": 1,
               "speedFactor": null,
-              "weightNote": "sword type not stated in the item description"
+              "weightNote": "sword type not stated in the item description",
+              "weaponTypeOptions": [
+                "bastardSword",
+                "broadSword",
+                "khopesh",
+                "longSword",
+                "scimitar",
+                "shortSword",
+                "twoHandedSword",
+                "dwarvenClaymore",
+                "falchion",
+                "katana",
+                "sabre",
+                "claymore"
+              ],
+              "weaponTypeSelection": "choice"
             },
             {
               "roll": [
@@ -10340,9 +10985,25 @@
               "hasDescription": true,
               "weightLbs": null,
               "speedFactorBase": null,
-              "plus": null,
+              "plus": 1,
               "speedFactor": null,
-              "weightNote": "sword type not stated in the item description"
+              "weightNote": "sword type not stated in the item description",
+              "weaponTypeOptions": [
+                "bastardSword",
+                "broadSword",
+                "khopesh",
+                "longSword",
+                "scimitar",
+                "shortSword",
+                "twoHandedSword",
+                "dwarvenClaymore",
+                "falchion",
+                "katana",
+                "sabre",
+                "claymore"
+              ],
+              "weaponTypeSelection": "choice",
+              "plusNote": "+1 on the Prime Material Plane (printed base); +2 on Inner Planes, +3 on Outer Planes (see description)."
             },
             {
               "roll": [
@@ -10356,9 +11017,24 @@
               "hasDescription": true,
               "weightLbs": null,
               "speedFactorBase": null,
-              "plus": null,
+              "plus": 1,
               "speedFactor": null,
-              "weightNote": "sword type not stated in the item description"
+              "weightNote": "sword type not stated in the item description",
+              "weaponTypeOptions": [
+                "bastardSword",
+                "broadSword",
+                "khopesh",
+                "longSword",
+                "scimitar",
+                "shortSword",
+                "twoHandedSword",
+                "dwarvenClaymore",
+                "falchion",
+                "katana",
+                "sabre",
+                "claymore"
+              ],
+              "weaponTypeSelection": "choice"
             },
             {
               "roll": [
@@ -10372,9 +11048,25 @@
               "hasDescription": true,
               "weightLbs": null,
               "speedFactorBase": null,
-              "plus": null,
+              "plus": 2,
               "speedFactor": null,
-              "weightNote": "sword type not stated in the item description"
+              "weightNote": "sword type not stated in the item description",
+              "weaponTypeOptions": [
+                "bastardSword",
+                "broadSword",
+                "khopesh",
+                "longSword",
+                "scimitar",
+                "shortSword",
+                "twoHandedSword",
+                "dwarvenClaymore",
+                "falchion",
+                "katana",
+                "sabre",
+                "claymore"
+              ],
+              "weaponTypeSelection": "choice",
+              "plusNote": "Description: +2 bonus, otherwise acts as a cursed sword +1."
             },
             {
               "roll": [
@@ -10390,7 +11082,11 @@
               "weightLbs": 3,
               "speedFactorBase": 3,
               "plus": 2,
-              "speedFactor": 1
+              "speedFactor": 1,
+              "weaponTypeOptions": [
+                "shortSword"
+              ],
+              "weaponTypeSelection": "fixed"
             },
             {
               "roll": [
@@ -10404,9 +11100,24 @@
               "hasDescription": true,
               "weightLbs": null,
               "speedFactorBase": null,
-              "plus": null,
+              "plus": 3,
               "speedFactor": null,
-              "weightNote": "sword type not stated in the item description"
+              "weightNote": "sword type not stated in the item description",
+              "weaponTypeOptions": [
+                "bastardSword",
+                "broadSword",
+                "khopesh",
+                "longSword",
+                "scimitar",
+                "shortSword",
+                "twoHandedSword",
+                "dwarvenClaymore",
+                "falchion",
+                "katana",
+                "sabre",
+                "claymore"
+              ],
+              "weaponTypeSelection": "choice"
             },
             {
               "roll": [
