@@ -1,0 +1,1089 @@
+{
+  "meta": {
+    "title": "Generic Paladin spell list",
+    "source": "priest-spells.json",
+    "status": "first-draft-from-spreadsheet",
+    "majorAccessSpheres": [
+      "Combat",
+      "Healing",
+      "Divination",
+      "Protection"
+    ],
+    "minorAccessSpheres": [],
+    "rules": [
+      "Spell included if any of its spheres is a major-access sphere (Combat, Healing, Divination, Protection).",
+      "Only spells whose Original Reference is PHB, PHB1, TOM or UA are included.",
+      "id matches the spell id in priest-spells.json.",
+      "castingTime, range and savingThrow are copied from priest-spells.json.",
+      "Spell levels 1-7 are listed as for the cleric and druid; which levels a paladin can actually cast comes from the paladin spell progression (Table 17), not from this file."
+    ],
+    "count": 60,
+    "countByLevel": {
+      "1": 12,
+      "2": 10,
+      "3": 12,
+      "4": 9,
+      "5": 5,
+      "6": 7,
+      "7": 5
+    }
+  },
+  "class": "Generic Paladin",
+  "spellsByLevel": {
+    "1": [
+      {
+        "id": "priest1.analyzeBalance",
+        "name": "Analyze Balance",
+        "level": 1,
+        "reversible": false,
+        "castingTime": "1rd",
+        "range": "80YDS",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Divination"
+        ],
+        "spheres": [
+          "Divination",
+          "Numbers"
+        ],
+        "reference": "TOM"
+      },
+      {
+        "id": "priest1.command",
+        "name": "Command",
+        "level": 1,
+        "reversible": false,
+        "castingTime": "1 segment",
+        "range": "30YDS",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Combat"
+        ],
+        "spheres": [
+          "Combat",
+          "Charm",
+          "Law"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest1.cureLightWounds",
+        "name": "Cure Light Wounds",
+        "level": 1,
+        "reversible": true,
+        "castingTime": "5 segments",
+        "range": "TOUCH",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Healing"
+        ],
+        "spheres": [
+          "Healing"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest1.detectEvil",
+        "name": "Detect Evil",
+        "level": 1,
+        "reversible": true,
+        "castingTime": "1rd",
+        "range": "0",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Divination"
+        ],
+        "spheres": [
+          "Divination"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest1.detectPoison",
+        "name": "Detect Poison",
+        "level": 1,
+        "reversible": false,
+        "castingTime": "4 segments",
+        "range": "0",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Divination"
+        ],
+        "spheres": [
+          "Divination"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest1.endureHeatEndureCold",
+        "name": "Endure Heat/Endure Cold",
+        "level": 1,
+        "reversible": false,
+        "castingTime": "1rd",
+        "range": "TOUCH",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Protection"
+        ],
+        "spheres": [
+          "Protection"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest1.magicalStone",
+        "name": "Magical Stone",
+        "level": 1,
+        "reversible": false,
+        "castingTime": "4 segments",
+        "range": "TOUCH",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Combat"
+        ],
+        "spheres": [
+          "Combat"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest1.portent",
+        "name": "Portent",
+        "level": 1,
+        "reversible": false,
+        "castingTime": "1 turn",
+        "range": "TOUCH",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Divination"
+        ],
+        "spheres": [
+          "Divination",
+          "Chaos"
+        ],
+        "reference": "TOM"
+      },
+      {
+        "id": "priest1.predictWeather",
+        "name": "Predict Weather",
+        "level": 1,
+        "reversible": false,
+        "castingTime": "1rd",
+        "range": "0",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Divination"
+        ],
+        "spheres": [
+          "Weather",
+          "Divination"
+        ],
+        "reference": "PHB1"
+      },
+      {
+        "id": "priest1.protectionFromEvil",
+        "name": "Protection from Evil",
+        "level": 1,
+        "reversible": true,
+        "castingTime": "4 segments",
+        "range": "TOUCH",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Protection"
+        ],
+        "spheres": [
+          "Protection"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest1.ringOfHands",
+        "name": "Ring of Hands",
+        "level": 1,
+        "reversible": true,
+        "castingTime": "5 segments",
+        "range": "0",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Protection"
+        ],
+        "spheres": [
+          "Protection"
+        ],
+        "reference": "TOM"
+      },
+      {
+        "id": "priest1.sanctuary",
+        "name": "Sanctuary",
+        "level": 1,
+        "reversible": false,
+        "castingTime": "4 segments",
+        "range": "TOUCH",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Protection"
+        ],
+        "spheres": [
+          "Protection"
+        ],
+        "reference": "PHB"
+      }
+    ],
+    "2": [
+      {
+        "id": "priest2.aid",
+        "name": "Aid",
+        "level": 2,
+        "reversible": false,
+        "castingTime": "5 segments",
+        "range": "TOUCH",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Combat"
+        ],
+        "spheres": [
+          "Combat",
+          "Necromantic"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest2.augury",
+        "name": "Augury",
+        "level": 2,
+        "reversible": false,
+        "castingTime": "2rds",
+        "range": "0",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Divination"
+        ],
+        "spheres": [
+          "Divination"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest2.detectCharm",
+        "name": "Detect Charm",
+        "level": 2,
+        "reversible": true,
+        "castingTime": "1rd",
+        "range": "30YDS",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Divination"
+        ],
+        "spheres": [
+          "Charm",
+          "Divination"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest2.findTraps",
+        "name": "Find Traps",
+        "level": 2,
+        "reversible": false,
+        "castingTime": "5 segments",
+        "range": "0",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Divination"
+        ],
+        "spheres": [
+          "Divination"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest2.knowAlignment",
+        "name": "Know Alignment",
+        "level": 2,
+        "reversible": true,
+        "castingTime": "1rd",
+        "range": "10YDS",
+        "savingThrow": "Negates",
+        "access": "major",
+        "accessVia": [
+          "Divination"
+        ],
+        "spheres": [
+          "Divination"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest2.resistFireResistCold",
+        "name": "Resist Fire/ Resist Cold",
+        "level": 2,
+        "reversible": false,
+        "castingTime": "5 segments",
+        "range": "TOUCH",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Protection"
+        ],
+        "spheres": [
+          "Protection"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest2.slowPoison",
+        "name": "Slow Poison",
+        "level": 2,
+        "reversible": false,
+        "castingTime": "1 segment",
+        "range": "TOUCH",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Healing"
+        ],
+        "spheres": [
+          "Healing"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest2.speakWithAnimals",
+        "name": "Speak with Animals",
+        "level": 2,
+        "reversible": false,
+        "castingTime": "5 segments",
+        "range": "0",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Divination"
+        ],
+        "spheres": [
+          "Animal",
+          "Divination"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest2.spiritualHammer",
+        "name": "Spiritual Hammer",
+        "level": 2,
+        "reversible": false,
+        "castingTime": "5 segments",
+        "range": "10YDS / Level",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Combat"
+        ],
+        "spheres": [
+          "Combat"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest2.withdraw",
+        "name": "Withdraw",
+        "level": 2,
+        "reversible": false,
+        "castingTime": "5 segments",
+        "range": "0",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Protection"
+        ],
+        "spheres": [
+          "Protection"
+        ],
+        "reference": "PHB"
+      }
+    ],
+    "3": [
+      {
+        "id": "priest3.adaptation",
+        "name": "Adaptation",
+        "level": 3,
+        "reversible": false,
+        "castingTime": "Special",
+        "range": "Special",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Protection"
+        ],
+        "spheres": [
+          "War",
+          "Protection"
+        ],
+        "reference": "TOM"
+      },
+      {
+        "id": "priest3.cureBlindnessOrDeafness",
+        "name": "Cure Blindness or Deafness",
+        "level": 3,
+        "reversible": true,
+        "castingTime": "1rd",
+        "range": "TOUCH",
+        "savingThrow": "Special",
+        "access": "major",
+        "accessVia": [
+          "Healing"
+        ],
+        "spheres": [
+          "Healing"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest3.cureDisease",
+        "name": "Cure Disease",
+        "level": 3,
+        "reversible": true,
+        "castingTime": "1rd",
+        "range": "TOUCH",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Healing"
+        ],
+        "spheres": [
+          "Healing"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest3.extradimensionalDetection",
+        "name": "Extradimensional Detection",
+        "level": 3,
+        "reversible": false,
+        "castingTime": "3 segments",
+        "range": "0",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Divination"
+        ],
+        "spheres": [
+          "Divination",
+          "Numbers"
+        ],
+        "reference": "TOM"
+      },
+      {
+        "id": "priest3.lineOfProtection",
+        "name": "Line of Protection",
+        "level": 3,
+        "reversible": true,
+        "castingTime": "1rd",
+        "range": "0",
+        "savingThrow": "Negates",
+        "access": "major",
+        "accessVia": [
+          "Protection"
+        ],
+        "spheres": [
+          "Protection"
+        ],
+        "reference": "TOM"
+      },
+      {
+        "id": "priest3.locateObject",
+        "name": "Locate Object",
+        "level": 3,
+        "reversible": true,
+        "castingTime": "1 turn",
+        "range": "60YDS + 10YDS/Level",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Divination"
+        ],
+        "spheres": [
+          "Divination"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest3.magicalVestment",
+        "name": "Magical Vestment",
+        "level": 3,
+        "reversible": false,
+        "castingTime": "1rd",
+        "range": "0",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Protection"
+        ],
+        "spheres": [
+          "Protection"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest3.negativePlaneProtection",
+        "name": "Negative Plane Protection",
+        "level": 3,
+        "reversible": false,
+        "castingTime": "1rd",
+        "range": "TOUCH",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Protection"
+        ],
+        "spheres": [
+          "Necromantic",
+          "Protection"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest3.prayer",
+        "name": "Prayer",
+        "level": 3,
+        "reversible": false,
+        "castingTime": "6 segments",
+        "range": "0",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Combat"
+        ],
+        "spheres": [
+          "Combat"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest3.removeParalysis",
+        "name": "Remove Paralysis",
+        "level": 3,
+        "reversible": false,
+        "castingTime": "6 segments",
+        "range": "10YDS / Level",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Protection"
+        ],
+        "spheres": [
+          "Necromantic",
+          "Protection"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest3.speakWithDead",
+        "name": "Speak with Dead",
+        "level": 3,
+        "reversible": false,
+        "castingTime": "1 turn",
+        "range": "1YD",
+        "savingThrow": "Special",
+        "access": "major",
+        "accessVia": [
+          "Divination"
+        ],
+        "spheres": [
+          "Necromantic",
+          "Divination"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest3.unearthlyChoir",
+        "name": "Unearthly Choir",
+        "level": 3,
+        "reversible": false,
+        "castingTime": "6 segments",
+        "range": "0",
+        "savingThrow": "Special",
+        "access": "major",
+        "accessVia": [
+          "Combat"
+        ],
+        "spheres": [
+          "Combat"
+        ],
+        "reference": "TOM"
+      }
+    ],
+    "4": [
+      {
+        "id": "priest4.cureSeriousWounds",
+        "name": "Cure Serious Wounds",
+        "level": 4,
+        "reversible": true,
+        "castingTime": "7 segments",
+        "range": "TOUCH",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Healing"
+        ],
+        "spheres": [
+          "Healing"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest4.detectLie",
+        "name": "Detect Lie",
+        "level": 4,
+        "reversible": true,
+        "castingTime": "7 segments",
+        "range": "30YDS",
+        "savingThrow": "Negates",
+        "access": "major",
+        "accessVia": [
+          "Divination"
+        ],
+        "spheres": [
+          "Divination"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest4.divination",
+        "name": "Divination",
+        "level": 4,
+        "reversible": false,
+        "castingTime": "1 turn",
+        "range": "0",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Divination"
+        ],
+        "spheres": [
+          "Divination"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest4.fortifyHealing",
+        "name": "Fortify Healing",
+        "level": 4,
+        "reversible": false,
+        "castingTime": "6 segments",
+        "range": "0",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Healing"
+        ],
+        "spheres": [
+          "Healing"
+        ],
+        "reference": "TOM"
+      },
+      {
+        "id": "priest4.neutralizePoison",
+        "name": "Neutralize Poison",
+        "level": 4,
+        "reversible": true,
+        "castingTime": "7 segments",
+        "range": "TOUCH",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Healing"
+        ],
+        "spheres": [
+          "Healing"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest4.protectionFromEvil10Radius",
+        "name": "Protection from Evil 10' Radius",
+        "level": 4,
+        "reversible": true,
+        "castingTime": "7 segments",
+        "range": "TOUCH",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Protection"
+        ],
+        "spheres": [
+          "Protection"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest4.protectionFromMisfortune",
+        "name": "Protection from Misfortune",
+        "level": 4,
+        "reversible": false,
+        "castingTime": "3 segments",
+        "range": "0",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Protection"
+        ],
+        "spheres": [
+          "Protection",
+          "Chaos"
+        ],
+        "reference": "TOM"
+      },
+      {
+        "id": "priest4.spellImmunity",
+        "name": "Spell Immunity",
+        "level": 4,
+        "reversible": false,
+        "castingTime": "1rd",
+        "range": "TOUCH",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Protection"
+        ],
+        "spheres": [
+          "Protection"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest4.tongues",
+        "name": "Tongues",
+        "level": 4,
+        "reversible": true,
+        "castingTime": "7 segments",
+        "range": "0",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Divination"
+        ],
+        "spheres": [
+          "All",
+          "Divination"
+        ],
+        "reference": "PHB"
+      }
+    ],
+    "5": [
+      {
+        "id": "priest5.antiPlantShell",
+        "name": "Anti-Plant Shell",
+        "level": 5,
+        "reversible": false,
+        "castingTime": "8 segments",
+        "range": "0",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Protection"
+        ],
+        "spheres": [
+          "Protection",
+          "Plant"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest5.consequence",
+        "name": "Consequence",
+        "level": 5,
+        "reversible": false,
+        "castingTime": "5 segments",
+        "range": "TOUCH",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Divination"
+        ],
+        "spheres": [
+          "Divination",
+          "Numbers"
+        ],
+        "reference": "TOM"
+      },
+      {
+        "id": "priest5.cureCriticalWounds",
+        "name": "Cure Critical Wounds",
+        "level": 5,
+        "reversible": true,
+        "castingTime": "8 segments",
+        "range": "TOUCH",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Healing"
+        ],
+        "spheres": [
+          "Healing"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest5.flameStrike",
+        "name": "Flame Strike",
+        "level": 5,
+        "reversible": false,
+        "castingTime": "8 segments",
+        "range": "60YDS",
+        "savingThrow": "0.5",
+        "access": "major",
+        "accessVia": [
+          "Combat"
+        ],
+        "spheres": [
+          "Combat"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest5.magicFont",
+        "name": "Magic Font",
+        "level": 5,
+        "reversible": false,
+        "castingTime": "1 hr",
+        "range": "TOUCH",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Divination"
+        ],
+        "spheres": [
+          "Divination"
+        ],
+        "reference": "PHB"
+      }
+    ],
+    "6": [
+      {
+        "id": "priest6.antiAnimalShell",
+        "name": "Anti-Animal Shell",
+        "level": 6,
+        "reversible": false,
+        "castingTime": "1rd",
+        "range": "0",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Protection"
+        ],
+        "spheres": [
+          "Animal",
+          "Protection"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest6.everchangingSelf",
+        "name": "Everchanging Self",
+        "level": 6,
+        "reversible": false,
+        "castingTime": "9 segments",
+        "range": "0",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Protection"
+        ],
+        "spheres": [
+          "Chaos",
+          "Protection"
+        ],
+        "reference": "TOM"
+      },
+      {
+        "id": "priest6.findThePath",
+        "name": "Find the Path",
+        "level": 6,
+        "reversible": false,
+        "castingTime": "3rds",
+        "range": "TOUCH",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Divination"
+        ],
+        "spheres": [
+          "Divination"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest6.heal",
+        "name": "Heal",
+        "level": 6,
+        "reversible": true,
+        "castingTime": "1rd",
+        "range": "TOUCH",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Healing"
+        ],
+        "spheres": [
+          "Healing"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest6.spiritualWrath",
+        "name": "Spiritual Wrath",
+        "level": 6,
+        "reversible": false,
+        "castingTime": "1 turn",
+        "range": "300YDS",
+        "savingThrow": "0.5",
+        "access": "major",
+        "accessVia": [
+          "Combat"
+        ],
+        "spheres": [
+          "Combat"
+        ],
+        "reference": "TOM"
+      },
+      {
+        "id": "priest6.stoneTell",
+        "name": "Stone Tell",
+        "level": 6,
+        "reversible": false,
+        "castingTime": "1 turn",
+        "range": "TOUCH",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Divination"
+        ],
+        "spheres": [
+          "Divination"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest6.wordOfRecall",
+        "name": "Word of Recall",
+        "level": 6,
+        "reversible": false,
+        "castingTime": "1 segment",
+        "range": "0",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Combat"
+        ],
+        "spheres": [
+          "Combat"
+        ],
+        "reference": "PHB"
+      }
+    ],
+    "7": [
+      {
+        "id": "priest7.divineInspiration",
+        "name": "Divine Inspiration",
+        "level": 7,
+        "reversible": false,
+        "castingTime": "5 segments",
+        "range": "0",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Divination"
+        ],
+        "spheres": [
+          "Divination",
+          "Thought"
+        ],
+        "reference": "TOM"
+      },
+      {
+        "id": "priest7.holyWord",
+        "name": "Holy Word",
+        "level": 7,
+        "reversible": true,
+        "castingTime": "1 segment",
+        "range": "0",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Combat"
+        ],
+        "spheres": [
+          "Combat"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest7.imperviousSanctityOfMind",
+        "name": "Impervious Sanctity of Mind",
+        "level": 7,
+        "reversible": false,
+        "castingTime": "1rd",
+        "range": "0",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Protection"
+        ],
+        "spheres": [
+          "Thought",
+          "Protection"
+        ],
+        "reference": "TOM"
+      },
+      {
+        "id": "priest7.mindtracker",
+        "name": "Mindtracker",
+        "level": 7,
+        "reversible": false,
+        "castingTime": "Special",
+        "range": "Special",
+        "savingThrow": "Special",
+        "access": "major",
+        "accessVia": [
+          "Divination"
+        ],
+        "spheres": [
+          "Divination"
+        ],
+        "reference": "TOM"
+      },
+      {
+        "id": "priest7.regenerate",
+        "name": "Regenerate",
+        "level": 7,
+        "reversible": true,
+        "castingTime": "3rds",
+        "range": "TOUCH",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Healing"
+        ],
+        "spheres": [
+          "Healing"
+        ],
+        "reference": "PHB"
+      }
+    ]
+  }
+}
