@@ -111,7 +111,7 @@
       "hideInShadows",
       "detectNoise"
     ],
-    "abilities": {
+    "monkClassAbilities": {
       "stunAndFatalBlow": {
         "summary": "With Open Hand a Monk may stun a humanoid opponent if the to-hit roll is exceeded by 5 or more, or a natural 20 is rolled (unless a 20 is required to hit). An opponent can only be affected once. Opponents are stunned for the remainder of that round and 1d4 additional rounds. Stunned victims suffer a loss of dexterity bonuses, -4 on AC, to hit and all saves, and are unable to cast spells.",
         "stun": {
@@ -142,8 +142,9 @@
         "summary": "The Monk's body counts as magical weapons for deciding which creatures may be hit (see the Qi column). This bonus does not apply to hit or damage rolls.",
         "example": "13th level: body counts as a +3 magical weapon for deciding which creatures can be hit. Natural ability unaffected by magic or planes. Does not add to to-hit or damage."
       },
-      "areaEffects": "Against magical damaging spells or breath weapons where saving throws are allowed, the Monk sustains no damage if the save succeeds and only 50% of the total damage if it fails.",
-      "noPrimeRequisiteXpBonus": true,
+      "areaEffects": "Against magical damaging spells or breath weapons where saving throws are allowed, the Monk sustains no damage if the save succeeds and only 50% of the total damage if it fails."
+    },
+    "monkLevelAbilities": {
       "mindOverBody": {
         "level": 1,
         "summary": "Suppress the need for food, water, rest or sleep for up to 2 consecutive days per level (10th level: 20 days). Also heals himself 2 hp per level once per day.",
@@ -601,6 +602,7 @@
       ],
       "alignments": "any lawful"
     },
+    "noPrimeRequisiteXpBonus": true,
     "title": [
       "Novice",
       "Initiate of Rudiments",

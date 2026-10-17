@@ -3791,8 +3791,6 @@
             "brigandine",
             "bronzePlateMail",
             "chainMail",
-            "fieldPlate",
-            "fullPlate",
             "plateMail",
             "ringMail",
             "scaleMail",
@@ -4005,9 +4003,7 @@
               "splintMail",
               "bandedMail",
               "bronzePlateMail",
-              "plateMail",
-              "fieldPlate",
-              "fullPlate"
+              "plateMail"
             ],
             "elvenChainNote": "Elven chain is not in the armour table, so it is not in these lists."
           },
@@ -5061,7 +5057,7 @@
     "modifiersElsewhere": [
       "Paladin: +2 to all saves (house.json classAbilities.paladin).",
       "Druid: +2 vs fire and electrical attacks (house.json classAbilities.druid).",
-      "Monk area-effects note (house.json monk.abilities.areaEffects).",
+      "Monk area-effects note (house.json monk.monkClassAbilities.areaEffects).",
       "CON poison save (rules-core abilityScores.table.con) and WIS magical defense (table.wis) apply on top; how they combine with these numbers is to be confirmed.",
       "Racial saving throw bonuses are not entered yet (races data still to come)."
     ]
