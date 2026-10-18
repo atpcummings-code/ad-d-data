@@ -4860,6 +4860,16 @@
           "gearIds": [
             "longBow"
           ]
+        },
+        {
+          "printed": "Longsword",
+          "name": "Longsword",
+          "gearId": "longSword",
+          "match": "exact",
+          "gearIds": [
+            "longSword"
+          ],
+          "matchNote": "Added by the owner (not on the spreadsheet)."
         }
       ],
       "requiredProficiency": {
