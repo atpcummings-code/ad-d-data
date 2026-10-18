@@ -17,7 +17,8 @@
       "variants": "Items whose version is fixed once by a random roll are stored as one entry per possible version. Each variant row keeps the parent's table roll, has id = parent id + variant key, variantOf = parent id and variant = {die, roll [from,to] on the item's own die, label}. Variant xp, weightLbs, plus and speedFactor are filled where the item text gives them. The generic entry is removed. nameMarker footnotes about 'type determined by die roll' no longer apply to variant rows. Items not expanded are listed in variantsNotExpanded.",
       "specialWeaponTypes": "Table 110 items carry weaponTypeOptions (gear.json weapon ids the item can be) and weaponTypeSelection: 'fixed' (one option), 'choice' (the app shows a selector) or 'none' (no gear.json item, e.g. nets). plus is the item's magical plus (null where it varies or isn't stated; plusNote explains). weightLbs and speedFactorBase/speedFactor on 'choice' items are not fixed by the item: when a type is selected take weight and speedFactorBase from that gear.json weapon and speedFactor = max(0, speedFactorBase - plus). Sun Blade is a bastard sword in appearance and damage but its weight and speed factor are those of a short sword (gearRef shortSword) per its description. Owner choices: generic swords may be any of the 12 gear.json Sword-group items; hammers may be Warhammer, Warhammer (Thrown) or Warhammer, two-handed; Hornblade may be Knife, Dagger or Short sword; Buckle Knife is Knife; crossbows may be any of the five gear.json crossbows (hand, light, heavy, disk, doubled); Bow +1 may be short, long, composite short or composite long.",
       "specialArmourTypes": "Table 107 items carry armourTypeOptions (gear.json armour ids the item can be) and armourTypeSelection ('fixed' = one option, 'choice' = the app shows a selector). plus is the item's magical AC plus (null where it is not fixed); plusOptions lists the allowed values where the plus is a choice (Elven Chain Mail +1 to +5, owner-set; Plate Mail of Vulnerability -2, -3 or -4 per its description); plusNote explains. On 'choice' items weightLbs is not fixed by the item: take weight from the selected gear.json armour. Owner choices: Armor of Blending and Armor of Missile Attraction may be any of the 12 body armours except Red Dragon Scale Armour; Shield, Large is Shield, Body; Shield -1, Missile Attractor may be any of the four shields. The armour and shield type tables are not in the data files.",
-      "hasCharges": "true on items that carry charges (from the item description, or the Table 91 ring footnote 'limited by the number of charges'). The field is absent on all other items. The number of charges is not stored: it varies by item and is to be recorded by the app."
+      "hasCharges": "true on items that carry charges (from the item description, or the Table 91 ring footnote 'limited by the number of charges'). The field is absent on all other items. The number of charges is not stored: it varies by item and is to be recorded by the app.",
+      "container": "type EquipmentContainer marks an item that holds other items, with capacity in the same form as gear.json equipment containers: weightLimitLbs, volume {dimensionsIn, printed, volumeCuIn}, count {max, of}, restriction (null = none or not supplied). compartments (new here) lists identical compartments as quantity x limits, for items that are several containers in one; the totals on capacity are the sum. A volume with derived true was calculated from stated dimensions."
     },
     "typos": {
       "Gauntets of Fumbling": "corrected to Gauntlets of Fumbling",
@@ -6343,7 +6344,31 @@
               "id": "girdles.girdleOfManyPouches",
               "hasDescription": true,
               "weightLbs": 3,
-              "weightSource": "owner-supplied (placeholder, may be revised)"
+              "weightSource": "owner-supplied (placeholder, may be revised)",
+              "type": "EquipmentContainer",
+              "capacity": {
+                "weightLimitLbs": 640,
+                "volume": {
+                  "dimensionsIn": null,
+                  "printed": "64 cu. ft. (64 pouches x 1 cu. ft.)",
+                  "volumeCuIn": 110592
+                },
+                "count": null,
+                "restriction": null,
+                "compartments": [
+                  {
+                    "name": "Pouch",
+                    "quantity": 64,
+                    "weightLimitLbs": 10,
+                    "volume": {
+                      "dimensionsIn": null,
+                      "printed": "1 cu. ft.",
+                      "volumeCuIn": 1728
+                    }
+                  }
+                ]
+              },
+              "capacityNote": "64 pouches (seven hidden behind each of eight visible ones); each holds up to 1 cu. ft. or 10 lb. Totals are calculated."
             },
             {
               "roll": [
@@ -6534,7 +6559,18 @@
               },
               "weightLbs": 15,
               "weightLimitLbs": 250,
-              "volumeLimitCuFt": 30
+              "volumeLimitCuFt": 30,
+              "type": "EquipmentContainer",
+              "capacity": {
+                "weightLimitLbs": 250,
+                "volume": {
+                  "dimensionsIn": null,
+                  "printed": "30 cu. ft.",
+                  "volumeCuIn": 51840
+                },
+                "count": null,
+                "restriction": null
+              }
             },
             {
               "roll": [
@@ -6557,7 +6593,18 @@
               },
               "weightLbs": 15,
               "weightLimitLbs": 500,
-              "volumeLimitCuFt": 70
+              "volumeLimitCuFt": 70,
+              "type": "EquipmentContainer",
+              "capacity": {
+                "weightLimitLbs": 500,
+                "volume": {
+                  "dimensionsIn": null,
+                  "printed": "70 cu. ft.",
+                  "volumeCuIn": 120960
+                },
+                "count": null,
+                "restriction": null
+              }
             },
             {
               "roll": [
@@ -6580,7 +6627,18 @@
               },
               "weightLbs": 35,
               "weightLimitLbs": 1000,
-              "volumeLimitCuFt": 150
+              "volumeLimitCuFt": 150,
+              "type": "EquipmentContainer",
+              "capacity": {
+                "weightLimitLbs": 1000,
+                "volume": {
+                  "dimensionsIn": null,
+                  "printed": "150 cu. ft.",
+                  "volumeCuIn": 259200
+                },
+                "count": null,
+                "restriction": null
+              }
             },
             {
               "roll": [
@@ -6603,7 +6661,18 @@
               },
               "weightLbs": 60,
               "weightLimitLbs": 1500,
-              "volumeLimitCuFt": 250
+              "volumeLimitCuFt": 250,
+              "type": "EquipmentContainer",
+              "capacity": {
+                "weightLimitLbs": 1500,
+                "volume": {
+                  "dimensionsIn": null,
+                  "printed": "250 cu. ft.",
+                  "volumeCuIn": 432000
+                },
+                "count": null,
+                "restriction": null
+              }
             },
             {
               "roll": [
@@ -6779,7 +6848,41 @@
               "id": "bags.hewardsHandyHaversack",
               "hasDescription": true,
               "weightLbs": 3,
-              "weightSource": "owner-supplied (placeholder, may be revised)"
+              "weightSource": "owner-supplied (placeholder, may be revised)",
+              "type": "EquipmentContainer",
+              "capacity": {
+                "weightLimitLbs": 120,
+                "volume": {
+                  "dimensionsIn": null,
+                  "printed": "12 cu. ft. (2 + 2 + 8)",
+                  "volumeCuIn": 20736
+                },
+                "count": null,
+                "restriction": null,
+                "compartments": [
+                  {
+                    "name": "Side pouch",
+                    "quantity": 2,
+                    "weightLimitLbs": 20,
+                    "volume": {
+                      "dimensionsIn": null,
+                      "printed": "2 cu. ft.",
+                      "volumeCuIn": 3456
+                    }
+                  },
+                  {
+                    "name": "Central compartment",
+                    "quantity": 1,
+                    "weightLimitLbs": 80,
+                    "volume": {
+                      "dimensionsIn": null,
+                      "printed": "8 cu. ft.",
+                      "volumeCuIn": 13824
+                    }
+                  }
+                ]
+              },
+              "capacityNote": "Totals are the sum of the compartments (weight 20+20+80, volume 2+2+8 cu. ft.). Weight and volume limits are both stated; the description gives each as an either/or limit."
             },
             {
               "roll": [
@@ -6805,7 +6908,20 @@
               "id": "bags.portableHole",
               "hasDescription": true,
               "weightLbs": 0,
-              "weightSource": "owner-supplied (placeholder, may be revised)"
+              "weightSource": "owner-supplied (placeholder, may be revised)",
+              "type": "EquipmentContainer",
+              "capacity": {
+                "weightLimitLbs": null,
+                "volume": {
+                  "dimensionsIn": null,
+                  "printed": "6' diameter x 10' deep (cylinder)",
+                  "volumeCuIn": 488580,
+                  "derived": true
+                },
+                "count": null,
+                "restriction": null
+              },
+              "capacityNote": "weightLimitLbs is null: the description says the cloth gains no weight and states no weight limit. Volume is calculated from the stated size (6 ft diameter, 10 ft deep): about 282.7 cu. ft."
             },
             {
               "roll": [
@@ -6817,8 +6933,32 @@
               "xpPrinted": "1,500",
               "id": "bags.pouchOfAccessibility",
               "hasDescription": true,
-              "weightLbs": 0,
-              "weightSource": "owner-supplied (placeholder, may be revised)"
+              "weightLbs": 2,
+              "weightSource": "owner-supplied",
+              "type": "EquipmentContainer",
+              "capacity": {
+                "weightLimitLbs": 300,
+                "volume": {
+                  "dimensionsIn": null,
+                  "printed": "30 cu. ft. (30 pockets x 1 cu. ft.)",
+                  "volumeCuIn": 51840
+                },
+                "count": null,
+                "restriction": null,
+                "compartments": [
+                  {
+                    "name": "Pocket",
+                    "quantity": 30,
+                    "weightLimitLbs": 10,
+                    "volume": {
+                      "dimensionsIn": null,
+                      "printed": "1 cu. ft.",
+                      "volumeCuIn": 1728
+                    }
+                  }
+                ]
+              },
+              "capacityNote": "Total weight limit 300 lb is stated; the 30 cu. ft. total is calculated from 30 pockets of 1 cu. ft. Each pocket holds 10 lb or 1 cu. ft., whichever is reached first. The description says the pouch weighs 1 lb empty and 4 lb when filled; weightLbs is 2, as set by the owner (the description's 1 lb empty / 4 lb full is not used)."
             },
             {
               "roll": [
@@ -8253,7 +8393,41 @@
               "id": "weird.quiverOfEhlonna",
               "hasDescription": true,
               "weightLbs": 2,
-              "weightSource": "owner-supplied (placeholder, may be revised)"
+              "weightSource": "owner-supplied (placeholder, may be revised)",
+              "type": "EquipmentContainer",
+              "capacity": {
+                "weightLimitLbs": null,
+                "volume": null,
+                "count": null,
+                "restriction": null,
+                "compartments": [
+                  {
+                    "name": "Arrow compartment",
+                    "quantity": 1,
+                    "count": {
+                      "max": 60,
+                      "of": "objects the size and shape of long bow arrows"
+                    }
+                  },
+                  {
+                    "name": "Javelin compartment",
+                    "quantity": 1,
+                    "count": {
+                      "max": 18,
+                      "of": "objects the size and shape of a javelin"
+                    }
+                  },
+                  {
+                    "name": "Long compartment",
+                    "quantity": 1,
+                    "count": {
+                      "max": 6,
+                      "of": "objects the size and shape of a bow (spears or staves, for example)"
+                    }
+                  }
+                ]
+              },
+              "capacityNote": "Three compartments with item-count limits only; no weight or volume limit is stated."
             },
             {
               "roll": [
