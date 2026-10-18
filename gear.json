@@ -845,27 +845,58 @@
         "type": [
           "P"
         ],
-        "speedFactor": 7,
-        "damageSM": "2d4",
-        "damageL": "2d6",
+        "speedFactor": null,
+        "damageSM": null,
+        "damageL": null,
+        "modes": [
+          {
+            "id": "oneHanded",
+            "label": "One-handed",
+            "speedFactor": 7,
+            "damageSM": "1d4+1",
+            "damageL": "1d6+1",
+            "armourAdjustments": {
+              "10": 0,
+              "9": 0,
+              "8": 0,
+              "7": 0,
+              "6": 0,
+              "5": -1,
+              "4": -1,
+              "3": -1,
+              "2": -2,
+              "1": -2,
+              "0": -3
+            },
+            "note": "Speed and damage from the owner-supplied Master Weapons Chart (Table 6). Armour class adjustments are the same as the two-handed mode (owner instruction)."
+          },
+          {
+            "id": "twoHanded",
+            "label": "Two-handed",
+            "speedFactor": 7,
+            "damageSM": "2d4",
+            "damageL": "2d6",
+            "armourAdjustments": {
+              "10": 0,
+              "9": 0,
+              "8": 0,
+              "7": 0,
+              "6": 0,
+              "5": -1,
+              "4": -1,
+              "3": -1,
+              "2": -2,
+              "1": -2,
+              "0": -3
+            }
+          }
+        ],
         "source": "PHB",
-        "armourAdjustments": {
-          "10": 0,
-          "9": 0,
-          "8": 0,
-          "7": 0,
-          "6": 0,
-          "5": -1,
-          "4": -1,
-          "3": -1,
-          "2": -2,
-          "1": -2,
-          "0": -3
-        },
         "usage": [
           "melee",
           "missile"
-        ]
+        ],
+        "modesNote": "Table 6 lists the harpoon one-handed and two-handed. The previous single entry matched the two-handed row. The same armour class adjustments are used for both modes (owner instruction)."
       },
       {
         "id": "horsemansFlail",
@@ -2145,27 +2176,58 @@
         "type": [
           "P"
         ],
-        "speedFactor": 6,
-        "damageSM": "1d6",
-        "damageL": "1d8",
+        "speedFactor": null,
+        "damageSM": null,
+        "damageL": null,
         "source": "PHB",
-        "armourAdjustments": {
-          "10": 0,
-          "9": 0,
-          "8": 0,
-          "7": 0,
-          "6": 0,
-          "5": -1,
-          "4": -1,
-          "3": -1,
-          "2": -2,
-          "1": -2,
-          "0": -2
-        },
         "usage": [
           "melee",
           "missile"
-        ]
+        ],
+        "modes": [
+          {
+            "id": "oneHanded",
+            "label": "One-handed",
+            "speedFactor": 6,
+            "damageSM": "1d6",
+            "damageL": "1d8",
+            "armourAdjustments": {
+              "10": 0,
+              "9": 0,
+              "8": 0,
+              "7": 0,
+              "6": 0,
+              "5": -1,
+              "4": -1,
+              "3": -1,
+              "2": -2,
+              "1": -2,
+              "0": -2
+            }
+          },
+          {
+            "id": "twoHanded",
+            "label": "Two-handed",
+            "speedFactor": 6,
+            "damageSM": "1d8+1",
+            "damageL": "2d6",
+            "armourAdjustments": {
+              "10": 0,
+              "9": 0,
+              "8": 0,
+              "7": 0,
+              "6": 0,
+              "5": 0,
+              "4": 0,
+              "3": 0,
+              "2": -1,
+              "1": -1,
+              "0": -1
+            },
+            "note": "Speed and damage from the owner-supplied Master Weapons Chart (Table 6). Armour class adjustments supplied by the owner."
+          }
+        ],
+        "modesNote": "Table 6 lists the spear one-handed and two-handed. The previous single entry matched the one-handed row, so its values stay on the one-handed mode."
       },
       {
         "id": "staffSling",
@@ -2496,26 +2558,57 @@
         "type": [
           "P"
         ],
-        "speedFactor": 7,
-        "damageSM": "1d6+1",
-        "damageL": "3d4",
+        "speedFactor": null,
+        "damageSM": null,
+        "damageL": null,
         "source": "PHB",
-        "armourAdjustments": {
-          "10": 1,
-          "9": 0,
-          "8": 1,
-          "7": 0,
-          "6": 0,
-          "5": -1,
-          "4": -1,
-          "3": -2,
-          "2": -3,
-          "1": -3,
-          "0": -4
-        },
         "usage": [
           "melee"
-        ]
+        ],
+        "modes": [
+          {
+            "id": "oneHanded",
+            "label": "One-handed",
+            "speedFactor": 7,
+            "damageSM": "1d6+1",
+            "damageL": "3d4",
+            "armourAdjustments": {
+              "10": 1,
+              "9": 0,
+              "8": 1,
+              "7": 0,
+              "6": 0,
+              "5": -1,
+              "4": -1,
+              "3": -2,
+              "2": -3,
+              "1": -3,
+              "0": -4
+            }
+          },
+          {
+            "id": "twoHanded",
+            "label": "Two-handed",
+            "speedFactor": 7,
+            "damageSM": "1d8+1",
+            "damageL": "3d4",
+            "armourAdjustments": {
+              "10": 2,
+              "9": 1,
+              "8": 2,
+              "7": 0,
+              "6": 0,
+              "5": 0,
+              "4": 0,
+              "3": -1,
+              "2": -2,
+              "1": -2,
+              "0": -3
+            },
+            "note": "Speed and damage from the owner-supplied Master Weapons Chart (Table 6). Armour class adjustments supplied by the owner."
+          }
+        ],
+        "modesNote": "Table 6 lists the trident one-handed and two-handed. The previous single entry matched the one-handed row, so its values stay on the one-handed mode."
       },
       {
         "id": "warhammer",
@@ -3461,15 +3554,19 @@
         "name": "Cutlass",
         "parent": "Sword",
         "kind": "weapon",
-        "cost": null,
-        "weightLbs": null,
+        "cost": {
+          "amount": 12,
+          "coin": "gp",
+          "costInCp": 1200
+        },
+        "weightLbs": 4,
         "size": "M",
         "type": [
           "S"
         ],
-        "speedFactor": 4,
-        "damageSM": "1d6+1",
-        "damageL": "1d8+1",
+        "speedFactor": 5,
+        "damageSM": "1d6",
+        "damageL": "1d8",
         "source": "owner-added",
         "armourAdjustments": {
           "10": 2,
@@ -3487,8 +3584,8 @@
         "usage": [
           "melee"
         ],
-        "statsFrom": "sabre",
-        "note": "Added by the owner. Size, type, speed factor, damage, armour class adjustments and usage are copied from Sabre. Cost and weight were not supplied."
+        "statsFrom": "Table 6 (owner-supplied image) for cost, weight, size, type, speed factor and damage; armour class adjustments copied from Sabre",
+        "note": "Added by the owner. Cost, weight, size, type, speed factor and damage are from the owner-supplied Master Weapons Chart (Table 6). The table has no armour class adjustments, so those remain copied from Sabre."
       },
       {
         "id": "garrote",
@@ -3610,17 +3707,22 @@
         "id": "net",
         "name": "Net",
         "kind": "weapon",
-        "cost": null,
-        "weightLbs": null,
-        "size": null,
+        "cost": {
+          "amount": 5,
+          "coin": "gp",
+          "costInCp": 500
+        },
+        "weightLbs": 10,
+        "size": "M",
         "type": null,
-        "speedFactor": null,
+        "speedFactor": 10,
         "damageSM": null,
         "damageL": null,
         "source": "owner-added",
         "armourAdjustments": null,
         "usage": [],
-        "note": "Added by the owner with no statistics (owner asked for these to be left empty)."
+        "note": "Added by the owner. Cost, weight, size and speed factor are from the owner-supplied Master Weapons Chart (Table 6). The table prints no damage type or damage, so those stay empty. Armour class adjustments and usage were not supplied.",
+        "statsFrom": "Table 6 (owner-supplied image)"
       },
       {
         "id": "scythe",
@@ -3694,7 +3796,11 @@
         "id": "spikedGauntlet",
         "name": "Spiked Gauntlet",
         "kind": "weapon",
-        "cost": null,
+        "cost": {
+          "amount": 1,
+          "coin": "gp",
+          "costInCp": 100
+        },
         "weightLbs": 0,
         "size": "S",
         "type": [
@@ -3720,7 +3826,7 @@
         "usage": [
           "melee"
         ],
-        "note": "Added by the owner. Weight, size, type, speed factor, damage and armour class adjustments are from the owner spreadsheet row Fist or Open Hand. Cost was not supplied.",
+        "note": "Added by the owner. Weight, size, type, speed factor, damage and armour class adjustments are from the owner spreadsheet row Fist or Open Hand. Cost supplied by the owner (1 gp).",
         "statsFrom": "Fist or Open Hand (owner spreadsheet row)"
       }
     ],
