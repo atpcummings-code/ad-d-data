@@ -1553,6 +1553,19 @@
           ]
         },
         {
+          "id": "alertness",
+          "name": "Alertness",
+          "slots": 1,
+          "ability": "wis",
+          "modifier": 1,
+          "groups": [
+            "general"
+          ],
+          "groupPrinted": "General",
+          "source": "Player's Handbook",
+          "addedBy": "owner"
+        },
+        {
           "id": "ancientHistory",
           "name": "Ancient History",
           "slots": 1,
@@ -1583,6 +1596,19 @@
           "groups": [
             "warrior"
           ]
+        },
+        {
+          "id": "animalSigns",
+          "name": "Animal Signs",
+          "slots": 1,
+          "ability": "int",
+          "modifier": -1,
+          "groups": [
+            "general"
+          ],
+          "groupPrinted": "General",
+          "source": "Player's Handbook",
+          "addedBy": "owner"
         },
         {
           "id": "animalTraining",
@@ -1636,6 +1662,20 @@
           ]
         },
         {
+          "id": "bargaining",
+          "name": "Bargaining",
+          "slots": 1,
+          "ability": "cha",
+          "modifier": -2,
+          "groups": [
+            "rogue",
+            "wizard"
+          ],
+          "groupPrinted": "Rogue / Wizard",
+          "source": "The Complete Sha'ir's Handbook",
+          "addedBy": "owner"
+        },
+        {
           "id": "blacksmithing",
           "name": "Blacksmithing",
           "slots": 1,
@@ -1666,6 +1706,19 @@
           "groups": [
             "warrior"
           ]
+        },
+        {
+          "id": "brawling",
+          "name": "Brawling",
+          "slots": 1,
+          "ability": "dex",
+          "modifier": 2,
+          "groups": [
+            "warrior"
+          ],
+          "groupPrinted": "Warrior",
+          "source": "The Complete Fighter's Handbook",
+          "addedBy": "owner"
         },
         {
           "id": "brewing",
@@ -1789,6 +1842,19 @@
           ]
         },
         {
+          "id": "fireFighting",
+          "name": "Fire-fighting",
+          "slots": 1,
+          "ability": "wis",
+          "modifier": 0,
+          "groups": [
+            "general"
+          ],
+          "groupPrinted": "General",
+          "source": "City Sites / Urban Guide",
+          "addedBy": "owner"
+        },
+        {
           "id": "fishing",
           "name": "Fishing",
           "slots": 1,
@@ -1807,6 +1873,20 @@
           "groups": [
             "rogue"
           ]
+        },
+        {
+          "id": "forging",
+          "name": "Forging",
+          "slots": 1,
+          "ability": "dex",
+          "modifier": -1,
+          "groups": [
+            "warrior"
+          ],
+          "groupPrinted": "Warrior / Dwarf Group",
+          "source": "The Complete Book of Dwarves",
+          "addedBy": "owner",
+          "note": "Printed group \"Dwarf Group\" is not one of the five PHB groups, so it is not in groups."
         },
         {
           "id": "gaming",
@@ -1872,6 +1952,48 @@
           ]
         },
         {
+          "id": "hypnotism",
+          "name": "Hypnotism",
+          "slots": 1,
+          "ability": "cha",
+          "modifier": -2,
+          "groups": [
+            "wizard"
+          ],
+          "groupPrinted": "Wizard",
+          "source": "Player's Handbook",
+          "addedBy": "owner"
+        },
+        {
+          "id": "informationGathering",
+          "name": "Information Gathering",
+          "slots": 1,
+          "ability": "cha",
+          "modifier": 0,
+          "groups": [
+            "rogue"
+          ],
+          "groupPrinted": "Rogue",
+          "source": "The Complete Thief's Handbook",
+          "addedBy": "owner"
+        },
+        {
+          "id": "intimidation",
+          "name": "Intimidation",
+          "slots": 1,
+          "ability": "cha",
+          "modifier": 0,
+          "groups": [
+            "warrior",
+            "rogue"
+          ],
+          "abilityAlternate": "str",
+          "groupPrinted": "Warrior / Rogue",
+          "source": "The Complete Thief's / Humanoids Handbook",
+          "addedBy": "owner",
+          "note": "Two abilities printed (Strength / Charisma). Owner confirmed Charisma as the main ability; Strength is stored as abilityAlternate. The asterisk printed on the modifier is ignored (owner instruction)."
+        },
+        {
           "id": "juggling",
           "name": "Juggling",
           "slots": 1,
@@ -1913,6 +2035,19 @@
           ]
         },
         {
+          "id": "law",
+          "name": "Law",
+          "slots": 1,
+          "ability": "wis",
+          "modifier": 0,
+          "groups": [
+            "general"
+          ],
+          "groupPrinted": "General",
+          "source": "The Complete Paladin's Handbook",
+          "addedBy": "owner"
+        },
+        {
           "id": "leatherworking",
           "name": "Leatherworking",
           "slots": 1,
@@ -1932,6 +2067,32 @@
             "priest",
             "rogue"
           ]
+        },
+        {
+          "id": "looting",
+          "name": "Looting",
+          "slots": 1,
+          "ability": "dex",
+          "modifier": 0,
+          "groups": [
+            "rogue"
+          ],
+          "groupPrinted": "Rogue",
+          "source": "The Complete Thief's Handbook",
+          "addedBy": "owner"
+        },
+        {
+          "id": "maliciousRumors",
+          "name": "Malicious Rumors",
+          "slots": 1,
+          "ability": "cha",
+          "modifier": -2,
+          "groups": [
+            "priest"
+          ],
+          "groupPrinted": "Priest",
+          "source": "Faiths & Avatars",
+          "addedBy": "owner"
         },
         {
           "id": "mining",
@@ -1978,6 +2139,46 @@
           ]
         },
         {
+          "id": "necrology",
+          "name": "Necrology",
+          "slots": 1,
+          "ability": "wis",
+          "modifier": 0,
+          "groups": [
+            "priest",
+            "wizard"
+          ],
+          "groupPrinted": "Priest / Wizard",
+          "source": "The Complete Book of Necromancers",
+          "addedBy": "owner"
+        },
+        {
+          "id": "observation",
+          "name": "Observation",
+          "slots": 1,
+          "ability": "wis",
+          "modifier": 0,
+          "groups": [
+            "rogue"
+          ],
+          "groupPrinted": "Rogue",
+          "source": "The Complete Thief's Handbook",
+          "addedBy": "owner"
+        },
+        {
+          "id": "poetry",
+          "name": "Poetry",
+          "slots": 1,
+          "ability": "int",
+          "modifier": -2,
+          "groups": [
+            "general"
+          ],
+          "groupPrinted": "General",
+          "source": "Player's Handbook",
+          "addedBy": "owner"
+        },
+        {
           "id": "pottery",
           "name": "Pottery",
           "slots": 1,
@@ -1986,6 +2187,20 @@
           "groups": [
             "general"
           ]
+        },
+        {
+          "id": "psionicLore",
+          "name": "Psionic Lore",
+          "slots": 1,
+          "ability": "wis",
+          "modifier": -1,
+          "groups": [
+            "general"
+          ],
+          "groupPrinted": "Psionicist Group",
+          "source": "The Complete Psionics Handbook",
+          "addedBy": "owner",
+          "note": "Printed group \"Psionicist Group\" is not one of the five PHB groups. Owner confirmed it is stored in the General group."
         },
         {
           "id": "readingLips",
@@ -2080,6 +2295,19 @@
           ]
         },
         {
+          "id": "secretSigns",
+          "name": "Secret Signs",
+          "slots": 1,
+          "ability": "int",
+          "modifier": 0,
+          "groups": [
+            "rogue"
+          ],
+          "groupPrinted": "Rogue",
+          "source": "The Complete Thief's Handbook",
+          "addedBy": "owner"
+        },
+        {
           "id": "setSnares",
           "name": "Set Snares",
           "slots": 1,
@@ -2112,6 +2340,20 @@
           ]
         },
         {
+          "id": "spelunking",
+          "name": "Spelunking",
+          "slots": 2,
+          "ability": "int",
+          "modifier": -2,
+          "groups": [
+            "general"
+          ],
+          "groupPrinted": "General / Subterranean",
+          "source": "Player's Handbook",
+          "addedBy": "owner",
+          "note": "Printed group \"Subterranean\" is not one of the five PHB groups, so it is not in groups."
+        },
+        {
           "id": "stonemasonry",
           "name": "Stonemasonry",
           "slots": 1,
@@ -2142,6 +2384,19 @@
           ]
         },
         {
+          "id": "tactics",
+          "name": "Tactics",
+          "slots": 1,
+          "ability": "int",
+          "modifier": -2,
+          "groups": [
+            "warrior"
+          ],
+          "groupPrinted": "Warrior",
+          "source": "Player's Option: Combat & Tactics",
+          "addedBy": "owner"
+        },
+        {
           "id": "tightropeWalking",
           "name": "Tightrope Walking",
           "slots": 1,
@@ -2150,6 +2405,20 @@
           "groups": [
             "rogue"
           ]
+        },
+        {
+          "id": "torture",
+          "name": "Torture",
+          "slots": 1,
+          "ability": "int",
+          "modifier": -1,
+          "groups": [
+            "wizard",
+            "rogue"
+          ],
+          "groupPrinted": "Wizard / Rogue",
+          "source": "The Complete Book of Necromancers",
+          "addedBy": "owner"
         },
         {
           "id": "tracking",
@@ -2337,7 +2606,8 @@
             "note": "Listed on Table 38 as a specialist wizard. Not a class id yet; add when specialist wizards are defined."
           }
         }
-      }
+      },
+      "additionalProficiencies": "20 proficiencies that are not on PHB Table 37 were added from the owner's list (2026-10-18). Each carries source (sourcebook as printed), groupPrinted (class category as printed) and addedBy 'owner'. Slots, ability and modifier are as supplied."
     }
   }
 }

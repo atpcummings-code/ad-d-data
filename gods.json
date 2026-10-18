@@ -1,0 +1,6158 @@
+{
+  "meta": {
+    "title": "AD&D 2nd Edition Forgotten Realms gods (Time of Troubles / Godswar)",
+    "source": "Owner-supplied spreadsheet forgotten_realms_gods_time_of_troubles.xlsx (sheets: Human Pantheon, Dwarves, Elves, Gnomes, Halflings, Orcs & Half-Orcs)",
+    "count": 99,
+    "byPantheon": {
+      "human": 53,
+      "dwarf": 14,
+      "elf": 12,
+      "gnome": 8,
+      "halfling": 6,
+      "orc": 6
+    },
+    "fields": {
+      "printed": "Text exactly as in the spreadsheet. name is the same text with an obvious typo or spelling variant corrected (Sythe to Scythe, Blind-fight to Blind-fighting).",
+      "alignment": "Core deity alignment code.",
+      "worshipperAlignments": "List of allowed worshipper alignments; null where the sheet gives text instead of codes (see worshipperAlignmentsPrinted).",
+      "allowedWeapons[].match": "exact = the gear.json weapon(s) named in gearIds (more than one where the owner confirmed several versions are allowed, e.g. Mace = Footman's and Horseman's); spellingVariant = printed name differs from the gear name, owner confirmed (Staff = Quarterstaff); category / natural / none = not a single weapon; notInGear = no such weapon in gear.json. gearId is the single id where there is exactly one, otherwise null.",
+      "requiredProficiency / bonusProficiency": "nonWeaponId links to rules-skills.json proficiencies.nonWeapon.list. match: exact (matchNote records a confirmed spelling difference) or notInJson (no such nonweapon proficiency in the current JSON files). A bracketed part such as (Forest) is kept as specialisation.",
+      "innatePower": "printed is the sheet text. name, description and frequency are split from it. frequency.type: limited (uses per day or week), constant, atWill.",
+      "godswarStatus": "Human Pantheon sheet only, as printed."
+    },
+    "status": "from-spreadsheet",
+    "notes": [
+      "No values were added beyond the spreadsheet. The dwarf, elf, gnome, halfling and orc sheets have no Godswar status column.",
+      "Worshipper alignments printed as text (for example Any (Trade focuses on gold, not alignment)) are kept as text.",
+      "All proficiencies now exist in rules-skills.json; the 20 not on PHB Table 37 were added from the owner list."
+    ]
+  },
+  "gods": [
+    {
+      "id": "bane",
+      "name": "Bane",
+      "pantheon": "human",
+      "portfolio": "Tyranny, Hatred, Strife",
+      "portfolioList": [
+        "Tyranny",
+        "Hatred",
+        "Strife"
+      ],
+      "godswarStatus": "Slain by Torm at Tantras",
+      "alignment": "LE",
+      "worshipperAlignments": [
+        "LN",
+        "LE",
+        "NE"
+      ],
+      "worshipperAlignmentsPrinted": "LN, LE, NE",
+      "allowedWeapons": [
+        {
+          "printed": "Mace",
+          "name": "Mace",
+          "gearId": null,
+          "match": "exact",
+          "gearIds": [
+            "footmansMace",
+            "horsemansMace"
+          ],
+          "matchNote": "Owner confirmed: both the Footman's and the Horseman's version are allowed."
+        },
+        {
+          "printed": "Flail",
+          "name": "Flail",
+          "gearId": null,
+          "match": "exact",
+          "gearIds": [
+            "footmansFlail",
+            "horsemansFlail"
+          ],
+          "matchNote": "Owner confirmed: both the Footman's and the Horseman's version are allowed."
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Intimidation",
+        "name": "Intimidation",
+        "nonWeaponId": "intimidation",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Religion",
+        "name": "Religion",
+        "nonWeaponId": "religion",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Fear Touch (Scales +1 die size/4 lvls) - 1/day",
+        "frequency": {
+          "text": "1/day",
+          "type": "limited",
+          "uses": 1,
+          "per": "day"
+        },
+        "name": "Fear Touch",
+        "description": "Scales +1 die size/4 lvls"
+      },
+      "source": {
+        "sheet": "Human Pantheon",
+        "row": 2
+      }
+    },
+    {
+      "id": "myrkul",
+      "name": "Myrkul",
+      "pantheon": "human",
+      "portfolio": "Death, Decay, Old Age",
+      "portfolioList": [
+        "Death",
+        "Decay",
+        "Old Age"
+      ],
+      "godswarStatus": "Slain by Midnight over Waterdeep",
+      "alignment": "NE",
+      "worshipperAlignments": [
+        "LN",
+        "LE",
+        "NE",
+        "CE"
+      ],
+      "worshipperAlignmentsPrinted": "LN, LE, NE, CE",
+      "allowedWeapons": [
+        {
+          "printed": "Sythe",
+          "name": "Scythe",
+          "gearId": null,
+          "match": "notInGear",
+          "gearIds": []
+        },
+        {
+          "printed": "Dagger",
+          "name": "Dagger",
+          "gearId": "daggerOrDirk",
+          "match": "exact",
+          "gearIds": [
+            "daggerOrDirk"
+          ]
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Ancient History",
+        "name": "Ancient History",
+        "nonWeaponId": "ancientHistory",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Necrology",
+        "name": "Necrology",
+        "nonWeaponId": "necrology",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Scythe of Doom (+1 round duration/lvl) - 1/day",
+        "frequency": {
+          "text": "1/day",
+          "type": "limited",
+          "uses": 1,
+          "per": "day"
+        },
+        "name": "Scythe of Doom",
+        "description": "+1 round duration/lvl"
+      },
+      "source": {
+        "sheet": "Human Pantheon",
+        "row": 3
+      }
+    },
+    {
+      "id": "bhaal",
+      "name": "Bhaal",
+      "pantheon": "human",
+      "portfolio": "Murder, Violence",
+      "portfolioList": [
+        "Murder",
+        "Violence"
+      ],
+      "godswarStatus": "Assassinated by Cyric via Godsbane",
+      "alignment": "NE",
+      "worshipperAlignments": [
+        "LE",
+        "NE",
+        "CE"
+      ],
+      "worshipperAlignmentsPrinted": "LE, NE, CE",
+      "allowedWeapons": [
+        {
+          "printed": "Dagger",
+          "name": "Dagger",
+          "gearId": "daggerOrDirk",
+          "match": "exact",
+          "gearIds": [
+            "daggerOrDirk"
+          ]
+        },
+        {
+          "printed": "Garrote",
+          "name": "Garrote",
+          "gearId": null,
+          "match": "notInGear",
+          "gearIds": []
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Looting",
+        "name": "Looting",
+        "nonWeaponId": "looting",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Tracking",
+        "name": "Tracking",
+        "nonWeaponId": "tracking",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Murderous Strike (+1 damage/lvl) - 1/day",
+        "frequency": {
+          "text": "1/day",
+          "type": "limited",
+          "uses": 1,
+          "per": "day"
+        },
+        "name": "Murderous Strike",
+        "description": "+1 damage/lvl"
+      },
+      "source": {
+        "sheet": "Human Pantheon",
+        "row": 4
+      }
+    },
+    {
+      "id": "mystraOld",
+      "name": "Mystra (Old)",
+      "pantheon": "human",
+      "portfolio": "Magic, Spells",
+      "portfolioList": [
+        "Magic",
+        "Spells"
+      ],
+      "godswarStatus": "Slain by Helm at Celestial Staircase",
+      "alignment": "LN",
+      "worshipperAlignments": [
+        "LG",
+        "LN",
+        "LE",
+        "NG",
+        "N",
+        "NE",
+        "CG",
+        "CN",
+        "CE"
+      ],
+      "worshipperAlignmentsPrinted": "LG, LN, LE, NG, N, NE, CG, CN, CE",
+      "allowedWeapons": [
+        {
+          "printed": "Any bludgeoning",
+          "name": "Any bludgeoning",
+          "gearId": null,
+          "match": "category",
+          "gearIds": []
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Spellcraft",
+        "name": "Spellcraft",
+        "nonWeaponId": "spellcraft",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Reading/Writing",
+        "name": "Reading/Writing",
+        "nonWeaponId": "readingWriting",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Spell Shield (Absorbs 1 spell level/3 lvls) - 1/day",
+        "frequency": {
+          "text": "1/day",
+          "type": "limited",
+          "uses": 1,
+          "per": "day"
+        },
+        "name": "Spell Shield",
+        "description": "Absorbs 1 spell level/3 lvls"
+      },
+      "source": {
+        "sheet": "Human Pantheon",
+        "row": 5
+      }
+    },
+    {
+      "id": "leira",
+      "name": "Leira",
+      "pantheon": "human",
+      "portfolio": "Illusion, Deception",
+      "portfolioList": [
+        "Illusion",
+        "Deception"
+      ],
+      "godswarStatus": "Murdered post-crisis by Cyric and Mask",
+      "alignment": "CN",
+      "worshipperAlignments": [
+        "CG",
+        "CN",
+        "CE",
+        "NG",
+        "N",
+        "NE"
+      ],
+      "worshipperAlignmentsPrinted": "CG, CN, CE, NG, N, NE",
+      "allowedWeapons": [
+        {
+          "printed": "Dagger",
+          "name": "Dagger",
+          "gearId": "daggerOrDirk",
+          "match": "exact",
+          "gearIds": [
+            "daggerOrDirk"
+          ]
+        },
+        {
+          "printed": "Dart",
+          "name": "Dart",
+          "gearId": "dart",
+          "match": "exact",
+          "gearIds": [
+            "dart"
+          ]
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Disguise",
+        "name": "Disguise",
+        "nonWeaponId": "disguise",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Information Gathering",
+        "name": "Information Gathering",
+        "nonWeaponId": "informationGathering",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Misdirection Passives scale up per level - Constant",
+        "frequency": {
+          "text": "Constant",
+          "type": "constant"
+        },
+        "name": "Misdirection Passives scale up per level",
+        "description": null
+      },
+      "source": {
+        "sheet": "Human Pantheon",
+        "row": 6
+      }
+    },
+    {
+      "id": "midnightMystra",
+      "name": "Midnight (Mystra)",
+      "pantheon": "human",
+      "portfolio": "Magic, Spells (Ascended)",
+      "portfolioList": [
+        "Magic",
+        "Spells (Ascended)"
+      ],
+      "godswarStatus": "Mortal ascended to replace Mystra",
+      "alignment": "NG",
+      "worshipperAlignments": [
+        "LG",
+        "LN",
+        "NG",
+        "N",
+        "CG",
+        "CN"
+      ],
+      "worshipperAlignmentsPrinted": "LG, LN, NG, N, CG, CN",
+      "allowedWeapons": [
+        {
+          "printed": "Any bludgeoning",
+          "name": "Any bludgeoning",
+          "gearId": null,
+          "match": "category",
+          "gearIds": []
+        },
+        {
+          "printed": "Staff",
+          "name": "Quarterstaff",
+          "gearId": "quarterstaff",
+          "match": "spellingVariant",
+          "gearIds": [
+            "quarterstaff"
+          ],
+          "matchNote": "Printed \"Staff\"; owner confirmed this is the Quarterstaff."
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Spellcraft",
+        "name": "Spellcraft",
+        "nonWeaponId": "spellcraft",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Reading/Writing",
+        "name": "Reading/Writing",
+        "nonWeaponId": "readingWriting",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Magic Missile (Count mirrors Wizard tier unlocks) - 3/day",
+        "frequency": {
+          "text": "3/day",
+          "type": "limited",
+          "uses": 3,
+          "per": "day"
+        },
+        "name": "Magic Missile",
+        "description": "Count mirrors Wizard tier unlocks"
+      },
+      "source": {
+        "sheet": "Human Pantheon",
+        "row": 7
+      }
+    },
+    {
+      "id": "cyric",
+      "name": "Cyric",
+      "pantheon": "human",
+      "portfolio": "Tyranny, Murder, Death, Illusion",
+      "portfolioList": [
+        "Tyranny",
+        "Murder",
+        "Death",
+        "Illusion"
+      ],
+      "godswarStatus": "Mortal ascended to claim portfolios of Dead Three",
+      "alignment": "CE",
+      "worshipperAlignments": [
+        "LE",
+        "NE",
+        "CE",
+        "CN"
+      ],
+      "worshipperAlignmentsPrinted": "LE, NE, CE, CN",
+      "allowedWeapons": [
+        {
+          "printed": "Longsword",
+          "name": "Longsword",
+          "gearId": "longSword",
+          "match": "exact",
+          "gearIds": [
+            "longSword"
+          ]
+        },
+        {
+          "printed": "Dagger",
+          "name": "Dagger",
+          "gearId": "daggerOrDirk",
+          "match": "exact",
+          "gearIds": [
+            "daggerOrDirk"
+          ]
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Intimidation",
+        "name": "Intimidation",
+        "nonWeaponId": "intimidation",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Religion",
+        "name": "Religion",
+        "nonWeaponId": "religion",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Prince of Lies Aura (Fear radius scales +5ft/lvl) - 1/day",
+        "frequency": {
+          "text": "1/day",
+          "type": "limited",
+          "uses": 1,
+          "per": "day"
+        },
+        "name": "Prince of Lies Aura",
+        "description": "Fear radius scales +5ft/lvl"
+      },
+      "source": {
+        "sheet": "Human Pantheon",
+        "row": 8
+      }
+    },
+    {
+      "id": "kelemvor",
+      "name": "Kelemvor",
+      "pantheon": "human",
+      "portfolio": "The Dead (Ascended 1368 DR)",
+      "portfolioList": [
+        "The Dead (Ascended 1368 DR)"
+      ],
+      "godswarStatus": "Mortal ascended later (1368 DR) claiming Death",
+      "alignment": "LN",
+      "worshipperAlignments": [
+        "LG",
+        "LN",
+        "LE",
+        "NG",
+        "N",
+        "NE"
+      ],
+      "worshipperAlignmentsPrinted": "LG, LN, LE, NG, N, NE",
+      "allowedWeapons": [
+        {
+          "printed": "Bastard Sword",
+          "name": "Bastard Sword",
+          "gearId": "bastardSword",
+          "match": "exact",
+          "gearIds": [
+            "bastardSword"
+          ]
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Ancient History",
+        "name": "Ancient History",
+        "nonWeaponId": "ancientHistory",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Necrology",
+        "name": "Necrology",
+        "nonWeaponId": "necrology",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Grave Rest (Calms dead within 10ft/lvl) - At Will",
+        "frequency": {
+          "text": "At Will",
+          "type": "atWill"
+        },
+        "name": "Grave Rest",
+        "description": "Calms dead within 10ft/lvl"
+      },
+      "source": {
+        "sheet": "Human Pantheon",
+        "row": 9
+      }
+    },
+    {
+      "id": "finderWyvernspur",
+      "name": "Finder Wyvernspur",
+      "pantheon": "human",
+      "portfolio": "Cycle of Life, Bards",
+      "portfolioList": [
+        "Cycle of Life",
+        "Bards"
+      ],
+      "godswarStatus": "Mortal ascended post-crisis by slaying Moander",
+      "alignment": "CN",
+      "worshipperAlignments": [
+        "NG",
+        "CG",
+        "CN",
+        "N"
+      ],
+      "worshipperAlignmentsPrinted": "NG, CG, CN, N",
+      "allowedWeapons": [
+        {
+          "printed": "Bastard Sword",
+          "name": "Bastard Sword",
+          "gearId": "bastardSword",
+          "match": "exact",
+          "gearIds": [
+            "bastardSword"
+          ]
+        },
+        {
+          "printed": "Dagger",
+          "name": "Dagger",
+          "gearId": "daggerOrDirk",
+          "match": "exact",
+          "gearIds": [
+            "daggerOrDirk"
+          ]
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Musical Instrument",
+        "name": "Musical Instrument",
+        "nonWeaponId": "musicalInstrument",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Poetry",
+        "name": "Poetry",
+        "nonWeaponId": "poetry",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Song of Renewal (Restores 1d4 HP/lvl, Cap 10d4) - 1/day",
+        "frequency": {
+          "text": "1/day",
+          "type": "limited",
+          "uses": 1,
+          "per": "day"
+        },
+        "name": "Song of Renewal",
+        "description": "Restores 1d4 HP/lvl, Cap 10d4"
+      },
+      "source": {
+        "sheet": "Human Pantheon",
+        "row": 10
+      }
+    },
+    {
+      "id": "torm",
+      "name": "Torm",
+      "pantheon": "human",
+      "portfolio": "Duty, Loyalty, Obedience",
+      "portfolioList": [
+        "Duty",
+        "Loyalty",
+        "Obedience"
+      ],
+      "godswarStatus": "Died destroying Bane; immediately resurrected by Ao",
+      "alignment": "LG",
+      "worshipperAlignments": [
+        "LG",
+        "NG",
+        "LN"
+      ],
+      "worshipperAlignmentsPrinted": "LG, NG, LN",
+      "allowedWeapons": [
+        {
+          "printed": "Warhammer",
+          "name": "Warhammer",
+          "gearId": "warhammer",
+          "match": "exact",
+          "gearIds": [
+            "warhammer"
+          ]
+        },
+        {
+          "printed": "Mace",
+          "name": "Mace",
+          "gearId": null,
+          "match": "exact",
+          "gearIds": [
+            "footmansMace",
+            "horsemansMace"
+          ],
+          "matchNote": "Owner confirmed: both the Footman's and the Horseman's version are allowed."
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Tactics",
+        "name": "Tactics",
+        "nonWeaponId": "tactics",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Law",
+        "name": "Law",
+        "nonWeaponId": "law",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Righteous Fury (Attack bonuses scale to +3 max) - 1/day",
+        "frequency": {
+          "text": "1/day",
+          "type": "limited",
+          "uses": 1,
+          "per": "day"
+        },
+        "name": "Righteous Fury",
+        "description": "Attack bonuses scale to +3 max"
+      },
+      "source": {
+        "sheet": "Human Pantheon",
+        "row": 11
+      }
+    },
+    {
+      "id": "helm",
+      "name": "Helm",
+      "pantheon": "human",
+      "portfolio": "Guardians, Vigilance",
+      "portfolioList": [
+        "Guardians",
+        "Vigilance"
+      ],
+      "godswarStatus": "Retained full divine power; guarded Staircase",
+      "alignment": "LN",
+      "worshipperAlignments": [
+        "LG",
+        "LN",
+        "LE",
+        "NG",
+        "N",
+        "NE"
+      ],
+      "worshipperAlignmentsPrinted": "LG, LN, LE, NG, N, NE",
+      "allowedWeapons": [
+        {
+          "printed": "Bastard Sword",
+          "name": "Bastard Sword",
+          "gearId": "bastardSword",
+          "match": "exact",
+          "gearIds": [
+            "bastardSword"
+          ]
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Observation",
+        "name": "Observation",
+        "nonWeaponId": "observation",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Alertness",
+        "name": "Alertness",
+        "nonWeaponId": "alertness",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Sentry Eyes (Negates surprise checks completely) - Constant",
+        "frequency": {
+          "text": "Constant",
+          "type": "constant"
+        },
+        "name": "Sentry Eyes",
+        "description": "Negates surprise checks completely"
+      },
+      "source": {
+        "sheet": "Human Pantheon",
+        "row": 12
+      }
+    },
+    {
+      "id": "waukeen",
+      "name": "Waukeen",
+      "pantheon": "human",
+      "portfolio": "Trade, Wealth, Currency",
+      "portfolioList": [
+        "Trade",
+        "Wealth",
+        "Currency"
+      ],
+      "godswarStatus": "Trapped in Abyss; captured by Graz'zt",
+      "alignment": "N",
+      "worshipperAlignments": null,
+      "worshipperAlignmentsPrinted": "Any (Trade focuses on gold, not alignment)",
+      "worshipperAlignmentsNote": "Printed as text, not a list of alignments; stored as printed.",
+      "allowedWeapons": [
+        {
+          "printed": "Any bludgeoning",
+          "name": "Any bludgeoning",
+          "gearId": null,
+          "match": "category",
+          "gearIds": []
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Appraising",
+        "name": "Appraising",
+        "nonWeaponId": "appraising",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Bargaining",
+        "name": "Bargaining",
+        "nonWeaponId": "bargaining",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Appraise Insight (Increases margin accuracy to 95% Cap) - 3/day",
+        "frequency": {
+          "text": "3/day",
+          "type": "limited",
+          "uses": 3,
+          "per": "day"
+        },
+        "name": "Appraise Insight",
+        "description": "Increases margin accuracy to 95% Cap"
+      },
+      "source": {
+        "sheet": "Human Pantheon",
+        "row": 13
+      }
+    },
+    {
+      "id": "ibrandul",
+      "name": "Ibrandul",
+      "pantheon": "human",
+      "portfolio": "Caverns, Dungeons",
+      "portfolioList": [
+        "Caverns",
+        "Dungeons"
+      ],
+      "godswarStatus": "Secretly murdered by Shar during crisis",
+      "alignment": "NE",
+      "worshipperAlignments": [
+        "LE",
+        "NE",
+        "CE"
+      ],
+      "worshipperAlignmentsPrinted": "LE, NE, CE",
+      "allowedWeapons": [
+        {
+          "printed": "Shortsword",
+          "name": "Shortsword",
+          "gearId": "shortSword",
+          "match": "exact",
+          "gearIds": [
+            "shortSword"
+          ]
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Spelunking",
+        "name": "Spelunking",
+        "nonWeaponId": "spelunking",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Mining",
+        "name": "Mining",
+        "nonWeaponId": "mining",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Deep Vision (Infravision extension scales per level) - Constant",
+        "frequency": {
+          "text": "Constant",
+          "type": "constant"
+        },
+        "name": "Deep Vision",
+        "description": "Infravision extension scales per level"
+      },
+      "source": {
+        "sheet": "Human Pantheon",
+        "row": 14
+      }
+    },
+    {
+      "id": "azuth",
+      "name": "Azuth",
+      "pantheon": "human",
+      "portfolio": "Wizards, Spellcasters",
+      "portfolioList": [
+        "Wizards",
+        "Spellcasters"
+      ],
+      "godswarStatus": "Survived Unchanged",
+      "alignment": "LN",
+      "worshipperAlignments": [
+        "LG",
+        "LN",
+        "LE",
+        "NG",
+        "N",
+        "NE"
+      ],
+      "worshipperAlignmentsPrinted": "LG, LN, LE, NG, N, NE",
+      "allowedWeapons": [
+        {
+          "printed": "Quarterstaff",
+          "name": "Quarterstaff",
+          "gearId": "quarterstaff",
+          "match": "exact",
+          "gearIds": [
+            "quarterstaff"
+          ]
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Spellcraft",
+        "name": "Spellcraft",
+        "nonWeaponId": "spellcraft",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Reading/Writing",
+        "name": "Reading/Writing",
+        "nonWeaponId": "readingWriting",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Weave Mastery (+5% spell retention per level) - 1/day",
+        "frequency": {
+          "text": "1/day",
+          "type": "limited",
+          "uses": 1,
+          "per": "day"
+        },
+        "name": "Weave Mastery",
+        "description": "+5% spell retention per level"
+      },
+      "source": {
+        "sheet": "Human Pantheon",
+        "row": 15
+      }
+    },
+    {
+      "id": "chauntea",
+      "name": "Chauntea",
+      "pantheon": "human",
+      "portfolio": "Agriculture, Earth, Fertility",
+      "portfolioList": [
+        "Agriculture",
+        "Earth",
+        "Fertility"
+      ],
+      "godswarStatus": "Survived Unchanged",
+      "alignment": "NG",
+      "worshipperAlignments": [
+        "LG",
+        "NG",
+        "CG",
+        "LN",
+        "N"
+      ],
+      "worshipperAlignmentsPrinted": "LG, NG, CG, LN, N",
+      "allowedWeapons": [
+        {
+          "printed": "Sickle",
+          "name": "Sickle",
+          "gearId": "sickle",
+          "match": "exact",
+          "gearIds": [
+            "sickle"
+          ]
+        },
+        {
+          "printed": "Club",
+          "name": "Club",
+          "gearId": "club",
+          "match": "exact",
+          "gearIds": [
+            "club"
+          ]
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Agriculture",
+        "name": "Agriculture",
+        "nonWeaponId": "agriculture",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Weather Sense",
+        "name": "Weather Sense",
+        "nonWeaponId": "weatherSense",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Bountiful Harvest (Restores dead crops, area scales) - 1/week",
+        "frequency": {
+          "text": "1/week",
+          "type": "limited",
+          "uses": 1,
+          "per": "week"
+        },
+        "name": "Bountiful Harvest",
+        "description": "Restores dead crops, area scales"
+      },
+      "source": {
+        "sheet": "Human Pantheon",
+        "row": 16
+      }
+    },
+    {
+      "id": "deneir",
+      "name": "Deneir",
+      "pantheon": "human",
+      "portfolio": "Glyphs, Images, Literature",
+      "portfolioList": [
+        "Glyphs",
+        "Images",
+        "Literature"
+      ],
+      "godswarStatus": "Survived Unchanged",
+      "alignment": "NG",
+      "worshipperAlignments": [
+        "LG",
+        "NG",
+        "CG"
+      ],
+      "worshipperAlignmentsPrinted": "LG, NG, CG",
+      "allowedWeapons": [
+        {
+          "printed": "Quarterstaff",
+          "name": "Quarterstaff",
+          "gearId": "quarterstaff",
+          "match": "exact",
+          "gearIds": [
+            "quarterstaff"
+          ]
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Reading/Writing",
+        "name": "Reading/Writing",
+        "nonWeaponId": "readingWriting",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Forging",
+        "name": "Forging",
+        "nonWeaponId": "forging",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Glyph Reading (Instant deciphering of seals) - At Will",
+        "frequency": {
+          "text": "At Will",
+          "type": "atWill"
+        },
+        "name": "Glyph Reading",
+        "description": "Instant deciphering of seals"
+      },
+      "source": {
+        "sheet": "Human Pantheon",
+        "row": 17
+      }
+    },
+    {
+      "id": "gond",
+      "name": "Gond",
+      "pantheon": "human",
+      "portfolio": "Artifice, Craft, Smithing",
+      "portfolioList": [
+        "Artifice",
+        "Craft",
+        "Smithing"
+      ],
+      "godswarStatus": "Survived Unchanged",
+      "alignment": "N",
+      "worshipperAlignments": null,
+      "worshipperAlignmentsPrinted": "Any (Accepts all crafters)",
+      "worshipperAlignmentsNote": "Printed as text, not a list of alignments; stored as printed.",
+      "allowedWeapons": [
+        {
+          "printed": "Any hammer/craft tool",
+          "name": "Any hammer/craft tool",
+          "gearId": null,
+          "match": "category",
+          "gearIds": []
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Blacksmithing",
+        "name": "Blacksmithing",
+        "nonWeaponId": "blacksmithing",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Engineering",
+        "name": "Engineering",
+        "nonWeaponId": "engineering",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Invention Spark (+10% craft check modifier per level) - 1/day",
+        "frequency": {
+          "text": "1/day",
+          "type": "limited",
+          "uses": 1,
+          "per": "day"
+        },
+        "name": "Invention Spark",
+        "description": "+10% craft check modifier per level"
+      },
+      "source": {
+        "sheet": "Human Pantheon",
+        "row": 18
+      }
+    },
+    {
+      "id": "ilmater",
+      "name": "Ilmater",
+      "pantheon": "human",
+      "portfolio": "Endurance, Suffering",
+      "portfolioList": [
+        "Endurance",
+        "Suffering"
+      ],
+      "godswarStatus": "Survived Unchanged",
+      "alignment": "LG",
+      "worshipperAlignments": [
+        "LG",
+        "NG",
+        "LN",
+        "N"
+      ],
+      "worshipperAlignmentsPrinted": "LG, NG, LN, N",
+      "allowedWeapons": [
+        {
+          "printed": "None (Unarmed subdual)",
+          "name": "None (Unarmed subdual)",
+          "gearId": null,
+          "match": "none",
+          "gearIds": []
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Endurance",
+        "name": "Endurance",
+        "nonWeaponId": "endurance",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Healing",
+        "name": "Healing",
+        "nonWeaponId": "healing",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Empathic Transfer (Absorbs up to 2 HP/lvl of ally damage) - At Will",
+        "frequency": {
+          "text": "At Will",
+          "type": "atWill"
+        },
+        "name": "Empathic Transfer",
+        "description": "Absorbs up to 2 HP/lvl of ally damage"
+      },
+      "source": {
+        "sheet": "Human Pantheon",
+        "row": 19
+      }
+    },
+    {
+      "id": "lathander",
+      "name": "Lathander",
+      "pantheon": "human",
+      "portfolio": "Dawn, Renewal, Spring",
+      "portfolioList": [
+        "Dawn",
+        "Renewal",
+        "Spring"
+      ],
+      "godswarStatus": "Survived Unchanged",
+      "alignment": "NG",
+      "worshipperAlignments": [
+        "LG",
+        "NG",
+        "CG"
+      ],
+      "worshipperAlignmentsPrinted": "LG, NG, CG",
+      "allowedWeapons": [
+        {
+          "printed": "Mace",
+          "name": "Mace",
+          "gearId": null,
+          "match": "exact",
+          "gearIds": [
+            "footmansMace",
+            "horsemansMace"
+          ],
+          "matchNote": "Owner confirmed: both the Footman's and the Horseman's version are allowed."
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Local History",
+        "name": "Local History",
+        "nonWeaponId": "localHistory",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Healing",
+        "name": "Healing",
+        "nonWeaponId": "healing",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Boon of Dawn (Double healing throughput at sunrise) - 1/day",
+        "frequency": {
+          "text": "1/day",
+          "type": "limited",
+          "uses": 1,
+          "per": "day"
+        },
+        "name": "Boon of Dawn",
+        "description": "Double healing throughput at sunrise"
+      },
+      "source": {
+        "sheet": "Human Pantheon",
+        "row": 20
+      }
+    },
+    {
+      "id": "mielikki",
+      "name": "Mielikki",
+      "pantheon": "human",
+      "portfolio": "Forests, Rangers, Autumn",
+      "portfolioList": [
+        "Forests",
+        "Rangers",
+        "Autumn"
+      ],
+      "godswarStatus": "Survived Unchanged",
+      "alignment": "NG",
+      "worshipperAlignments": [
+        "LG",
+        "NG",
+        "CG",
+        "N"
+      ],
+      "worshipperAlignmentsPrinted": "LG, NG, CG, N",
+      "allowedWeapons": [
+        {
+          "printed": "Scimitar",
+          "name": "Scimitar",
+          "gearId": "scimitar",
+          "match": "exact",
+          "gearIds": [
+            "scimitar"
+          ]
+        },
+        {
+          "printed": "Longbow",
+          "name": "Longbow",
+          "gearId": "longBow",
+          "match": "exact",
+          "gearIds": [
+            "longBow"
+          ]
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Survival (Forest)",
+        "name": "Survival",
+        "specialisation": "Forest",
+        "nonWeaponId": "survival",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Tracking",
+        "name": "Tracking",
+        "nonWeaponId": "tracking",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Tree Stride (Teleport step scales +20ft/lvl) - 2/day",
+        "frequency": {
+          "text": "2/day",
+          "type": "limited",
+          "uses": 2,
+          "per": "day"
+        },
+        "name": "Tree Stride",
+        "description": "Teleport step scales +20ft/lvl"
+      },
+      "source": {
+        "sheet": "Human Pantheon",
+        "row": 21
+      }
+    },
+    {
+      "id": "milil",
+      "name": "Milil",
+      "pantheon": "human",
+      "portfolio": "Poetry, Song, Eloquence",
+      "portfolioList": [
+        "Poetry",
+        "Song",
+        "Eloquence"
+      ],
+      "godswarStatus": "Survived Unchanged",
+      "alignment": "NG",
+      "worshipperAlignments": [
+        "LG",
+        "NG",
+        "CG"
+      ],
+      "worshipperAlignmentsPrinted": "LG, NG, CG",
+      "allowedWeapons": [
+        {
+          "printed": "Dagger",
+          "name": "Dagger",
+          "gearId": "daggerOrDirk",
+          "match": "exact",
+          "gearIds": [
+            "daggerOrDirk"
+          ]
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Poetry",
+        "name": "Poetry",
+        "nonWeaponId": "poetry",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Musical Instrument",
+        "name": "Musical Instrument",
+        "nonWeaponId": "musicalInstrument",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Harmonious Note (Calms aggression, duration scales) - 1/day",
+        "frequency": {
+          "text": "1/day",
+          "type": "limited",
+          "uses": 1,
+          "per": "day"
+        },
+        "name": "Harmonious Note",
+        "description": "Calms aggression, duration scales"
+      },
+      "source": {
+        "sheet": "Human Pantheon",
+        "row": 22
+      }
+    },
+    {
+      "id": "oghma",
+      "name": "Oghma",
+      "pantheon": "human",
+      "portfolio": "Knowledge, Invention",
+      "portfolioList": [
+        "Knowledge",
+        "Invention"
+      ],
+      "godswarStatus": "Survived Unchanged",
+      "alignment": "N",
+      "worshipperAlignments": null,
+      "worshipperAlignmentsPrinted": "Any (Knowledge has no moral boundary)",
+      "worshipperAlignmentsNote": "Printed as text, not a list of alignments; stored as printed.",
+      "allowedWeapons": [
+        {
+          "printed": "Quarterstaff",
+          "name": "Quarterstaff",
+          "gearId": "quarterstaff",
+          "match": "exact",
+          "gearIds": [
+            "quarterstaff"
+          ]
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Ancient History",
+        "name": "Ancient History",
+        "nonWeaponId": "ancientHistory",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Reading/Writing",
+        "name": "Reading/Writing",
+        "nonWeaponId": "readingWriting",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Loremaster Recall (Percent chance to know mythos scales) - At Will",
+        "frequency": {
+          "text": "At Will",
+          "type": "atWill"
+        },
+        "name": "Loremaster Recall",
+        "description": "Percent chance to know mythos scales"
+      },
+      "source": {
+        "sheet": "Human Pantheon",
+        "row": 23
+      }
+    },
+    {
+      "id": "selune",
+      "name": "Selûne",
+      "pantheon": "human",
+      "portfolio": "The Moon, Stars, Navigation",
+      "portfolioList": [
+        "The Moon",
+        "Stars",
+        "Navigation"
+      ],
+      "godswarStatus": "Survived Unchanged",
+      "alignment": "CG",
+      "worshipperAlignments": [
+        "LG",
+        "NG",
+        "CG",
+        "N",
+        "CN"
+      ],
+      "worshipperAlignmentsPrinted": "LG, NG, CG, N, CN",
+      "allowedWeapons": [
+        {
+          "printed": "Mace",
+          "name": "Mace",
+          "gearId": null,
+          "match": "exact",
+          "gearIds": [
+            "footmansMace",
+            "horsemansMace"
+          ],
+          "matchNote": "Owner confirmed: both the Footman's and the Horseman's version are allowed."
+        },
+        {
+          "printed": "Quarterstaff",
+          "name": "Quarterstaff",
+          "gearId": "quarterstaff",
+          "match": "exact",
+          "gearIds": [
+            "quarterstaff"
+          ]
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Astrology",
+        "name": "Astrology",
+        "nonWeaponId": "astrology",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Navigation",
+        "name": "Navigation",
+        "nonWeaponId": "navigation",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Moonlight Beacon (Illuminates absolute dark up to 60ft) - Constant",
+        "frequency": {
+          "text": "Constant",
+          "type": "constant"
+        },
+        "name": "Moonlight Beacon",
+        "description": "Illuminates absolute dark up to 60ft"
+      },
+      "source": {
+        "sheet": "Human Pantheon",
+        "row": 24
+      }
+    },
+    {
+      "id": "silvanus",
+      "name": "Silvanus",
+      "pantheon": "human",
+      "portfolio": "Wild Nature, Druids",
+      "portfolioList": [
+        "Wild Nature",
+        "Druids"
+      ],
+      "godswarStatus": "Survived Unchanged",
+      "alignment": "N",
+      "worshipperAlignments": [
+        "LG",
+        "NG",
+        "CG",
+        "LN",
+        "N",
+        "CN"
+      ],
+      "worshipperAlignmentsPrinted": "LG, NG, CG, LN, N, CN",
+      "allowedWeapons": [
+        {
+          "printed": "Sickle",
+          "name": "Sickle",
+          "gearId": "sickle",
+          "match": "exact",
+          "gearIds": [
+            "sickle"
+          ]
+        },
+        {
+          "printed": "Club",
+          "name": "Club",
+          "gearId": "club",
+          "match": "exact",
+          "gearIds": [
+            "club"
+          ]
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Survival (Forest)",
+        "name": "Survival",
+        "specialisation": "Forest",
+        "nonWeaponId": "survival",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Herbalism",
+        "name": "Herbalism",
+        "nonWeaponId": "herbalism",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Nature's Wrath (Entangles targets, radius scales) - 1/day",
+        "frequency": {
+          "text": "1/day",
+          "type": "limited",
+          "uses": 1,
+          "per": "day"
+        },
+        "name": "Nature's Wrath",
+        "description": "Entangles targets, radius scales"
+      },
+      "source": {
+        "sheet": "Human Pantheon",
+        "row": 25
+      }
+    },
+    {
+      "id": "sune",
+      "name": "Sune",
+      "pantheon": "human",
+      "portfolio": "Beauty, Love, Passion",
+      "portfolioList": [
+        "Beauty",
+        "Love",
+        "Passion"
+      ],
+      "godswarStatus": "Survived Unchanged",
+      "alignment": "CG",
+      "worshipperAlignments": [
+        "LG",
+        "NG",
+        "CG"
+      ],
+      "worshipperAlignmentsPrinted": "LG, NG, CG",
+      "allowedWeapons": [
+        {
+          "printed": "Whip",
+          "name": "Whip",
+          "gearId": "whip",
+          "match": "exact",
+          "gearIds": [
+            "whip"
+          ]
+        },
+        {
+          "printed": "Dart",
+          "name": "Dart",
+          "gearId": "dart",
+          "match": "exact",
+          "gearIds": [
+            "dart"
+          ]
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Etiquette",
+        "name": "Etiquette",
+        "nonWeaponId": "etiquette",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Dancing",
+        "name": "Dancing",
+        "nonWeaponId": "dancing",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Allure Passive (Charisma modifier buff steps up) - Constant",
+        "frequency": {
+          "text": "Constant",
+          "type": "constant"
+        },
+        "name": "Allure Passive",
+        "description": "Charisma modifier buff steps up"
+      },
+      "source": {
+        "sheet": "Human Pantheon",
+        "row": 26
+      }
+    },
+    {
+      "id": "tymora",
+      "name": "Tymora",
+      "pantheon": "human",
+      "portfolio": "Good Luck, Fortune",
+      "portfolioList": [
+        "Good Luck",
+        "Fortune"
+      ],
+      "godswarStatus": "Survived Unchanged",
+      "alignment": "CG",
+      "worshipperAlignments": [
+        "NG",
+        "CG",
+        "CN"
+      ],
+      "worshipperAlignmentsPrinted": "NG, CG, CN",
+      "allowedWeapons": [
+        {
+          "printed": "Shortsword",
+          "name": "Shortsword",
+          "gearId": "shortSword",
+          "match": "exact",
+          "gearIds": [
+            "shortSword"
+          ]
+        },
+        {
+          "printed": "Sling",
+          "name": "Sling",
+          "gearId": "sling",
+          "match": "exact",
+          "gearIds": [
+            "sling"
+          ]
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Gaming",
+        "name": "Gaming",
+        "nonWeaponId": "gaming",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Jumping",
+        "name": "Jumping",
+        "nonWeaponId": "jumping",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Lady Luck (Reroll 1 failed attack or save line) - 1/day",
+        "frequency": {
+          "text": "1/day",
+          "type": "limited",
+          "uses": 1,
+          "per": "day"
+        },
+        "name": "Lady Luck",
+        "description": "Reroll 1 failed attack or save line"
+      },
+      "source": {
+        "sheet": "Human Pantheon",
+        "row": 27
+      }
+    },
+    {
+      "id": "tyr",
+      "name": "Tyr",
+      "pantheon": "human",
+      "portfolio": "Justice, Law, Righteousness",
+      "portfolioList": [
+        "Justice",
+        "Law",
+        "Righteousness"
+      ],
+      "godswarStatus": "Survived Unchanged",
+      "alignment": "LG",
+      "worshipperAlignments": [
+        "LG",
+        "NG",
+        "LN"
+      ],
+      "worshipperAlignmentsPrinted": "LG, NG, LN",
+      "allowedWeapons": [
+        {
+          "printed": "Longsword",
+          "name": "Longsword",
+          "gearId": "longSword",
+          "match": "exact",
+          "gearIds": [
+            "longSword"
+          ]
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Tactics",
+        "name": "Tactics",
+        "nonWeaponId": "tactics",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Law",
+        "name": "Law",
+        "nonWeaponId": "law",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Hammer of Justice (Stuns target, duration scales) - 1/day",
+        "frequency": {
+          "text": "1/day",
+          "type": "limited",
+          "uses": 1,
+          "per": "day"
+        },
+        "name": "Hammer of Justice",
+        "description": "Stuns target, duration scales"
+      },
+      "source": {
+        "sheet": "Human Pantheon",
+        "row": 28
+      }
+    },
+    {
+      "id": "beshaba",
+      "name": "Beshaba",
+      "pantheon": "human",
+      "portfolio": "Bad Luck, Misfortune",
+      "portfolioList": [
+        "Bad Luck",
+        "Misfortune"
+      ],
+      "godswarStatus": "Survived Unchanged",
+      "alignment": "CE",
+      "worshipperAlignments": [
+        "CN",
+        "LE",
+        "NE",
+        "CE"
+      ],
+      "worshipperAlignmentsPrinted": "CN, LE, NE, CE",
+      "allowedWeapons": [
+        {
+          "printed": "Scourge",
+          "name": "Scourge",
+          "gearId": "scourge",
+          "match": "exact",
+          "gearIds": [
+            "scourge"
+          ]
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Malicious Rumors",
+        "name": "Malicious Rumors",
+        "nonWeaponId": "maliciousRumors",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Intimidation",
+        "name": "Intimidation",
+        "nonWeaponId": "intimidation",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Misfortune Curse (Imposes -1 penalty step/5 lvls) - 1/day",
+        "frequency": {
+          "text": "1/day",
+          "type": "limited",
+          "uses": 1,
+          "per": "day"
+        },
+        "name": "Misfortune Curse",
+        "description": "Imposes -1 penalty step/5 lvls"
+      },
+      "source": {
+        "sheet": "Human Pantheon",
+        "row": 29
+      }
+    },
+    {
+      "id": "loviatar",
+      "name": "Loviatar",
+      "pantheon": "human",
+      "portfolio": "Pain, Torture, Agony",
+      "portfolioList": [
+        "Pain",
+        "Torture",
+        "Agony"
+      ],
+      "godswarStatus": "Survived Unchanged",
+      "alignment": "LE",
+      "worshipperAlignments": [
+        "LN",
+        "LE",
+        "NE"
+      ],
+      "worshipperAlignmentsPrinted": "LN, LE, NE",
+      "allowedWeapons": [
+        {
+          "printed": "Whip",
+          "name": "Whip",
+          "gearId": "whip",
+          "match": "exact",
+          "gearIds": [
+            "whip"
+          ]
+        },
+        {
+          "printed": "Scourge",
+          "name": "Scourge",
+          "gearId": "scourge",
+          "match": "exact",
+          "gearIds": [
+            "scourge"
+          ]
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Torture",
+        "name": "Torture",
+        "nonWeaponId": "torture",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Intimidation",
+        "name": "Intimidation",
+        "nonWeaponId": "intimidation",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Agony Touch (Stuns target via systemic shock) - 1/day",
+        "frequency": {
+          "text": "1/day",
+          "type": "limited",
+          "uses": 1,
+          "per": "day"
+        },
+        "name": "Agony Touch",
+        "description": "Stuns target via systemic shock"
+      },
+      "source": {
+        "sheet": "Human Pantheon",
+        "row": 30
+      }
+    },
+    {
+      "id": "malar",
+      "name": "Malar",
+      "pantheon": "human",
+      "portfolio": "The Hunt, Bloodlust",
+      "portfolioList": [
+        "The Hunt",
+        "Bloodlust"
+      ],
+      "godswarStatus": "Survived Unchanged",
+      "alignment": "CE",
+      "worshipperAlignments": [
+        "CN",
+        "NE",
+        "CE"
+      ],
+      "worshipperAlignmentsPrinted": "CN, NE, CE",
+      "allowedWeapons": [
+        {
+          "printed": "Claws",
+          "name": "Claws",
+          "gearId": null,
+          "match": "natural",
+          "gearIds": []
+        },
+        {
+          "printed": "Spear",
+          "name": "Spear",
+          "gearId": "spear",
+          "match": "exact",
+          "gearIds": [
+            "spear"
+          ]
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Hunting",
+        "name": "Hunting",
+        "nonWeaponId": "hunting",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Tracking",
+        "name": "Tracking",
+        "nonWeaponId": "tracking",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Feral Speed (Movement speed increments +1 per 3 lvls) - Constant",
+        "frequency": {
+          "text": "Constant",
+          "type": "constant"
+        },
+        "name": "Feral Speed",
+        "description": "Movement speed increments +1 per 3 lvls"
+      },
+      "source": {
+        "sheet": "Human Pantheon",
+        "row": 31
+      }
+    },
+    {
+      "id": "mask",
+      "name": "Mask",
+      "pantheon": "human",
+      "portfolio": "Thieves, Shadows, Stealth",
+      "portfolioList": [
+        "Thieves",
+        "Shadows",
+        "Stealth"
+      ],
+      "godswarStatus": "Survived Unchanged",
+      "alignment": "NE",
+      "worshipperAlignments": [
+        "LN",
+        "N",
+        "CN",
+        "LE",
+        "NE",
+        "CE"
+      ],
+      "worshipperAlignmentsPrinted": "LN, N, CN, LE, NE, CE",
+      "allowedWeapons": [
+        {
+          "printed": "Longsword",
+          "name": "Longsword",
+          "gearId": "longSword",
+          "match": "exact",
+          "gearIds": [
+            "longSword"
+          ]
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Looting",
+        "name": "Looting",
+        "nonWeaponId": "looting",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Appraising",
+        "name": "Appraising",
+        "nonWeaponId": "appraising",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Shadow Blend (Stealth concealment steps up inside dark) - Constant",
+        "frequency": {
+          "text": "Constant",
+          "type": "constant"
+        },
+        "name": "Shadow Blend",
+        "description": "Stealth concealment steps up inside dark"
+      },
+      "source": {
+        "sheet": "Human Pantheon",
+        "row": 32
+      }
+    },
+    {
+      "id": "shar",
+      "name": "Shar",
+      "pantheon": "human",
+      "portfolio": "Darkness, Loss, Secrets",
+      "portfolioList": [
+        "Darkness",
+        "Loss",
+        "Secrets"
+      ],
+      "godswarStatus": "Survived Unchanged",
+      "alignment": "NE",
+      "worshipperAlignments": [
+        "LE",
+        "NE",
+        "CE"
+      ],
+      "worshipperAlignmentsPrinted": "LE, NE, CE",
+      "allowedWeapons": [
+        {
+          "printed": "Chakram",
+          "name": "Chakram",
+          "gearId": "chakram",
+          "match": "exact",
+          "gearIds": [
+            "chakram"
+          ]
+        },
+        {
+          "printed": "Dagger",
+          "name": "Dagger",
+          "gearId": "daggerOrDirk",
+          "match": "exact",
+          "gearIds": [
+            "daggerOrDirk"
+          ]
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Secret Signs",
+        "name": "Secret Signs",
+        "nonWeaponId": "secretSigns",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Blind-fighting",
+        "name": "Blind-fighting",
+        "nonWeaponId": "blindFighting",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Blindness Aura (Radius extends outward with levels) - 1/day",
+        "frequency": {
+          "text": "1/day",
+          "type": "limited",
+          "uses": 1,
+          "per": "day"
+        },
+        "name": "Blindness Aura",
+        "description": "Radius extends outward with levels"
+      },
+      "source": {
+        "sheet": "Human Pantheon",
+        "row": 33
+      }
+    },
+    {
+      "id": "talona",
+      "name": "Talona",
+      "pantheon": "human",
+      "portfolio": "Disease, Poison",
+      "portfolioList": [
+        "Disease",
+        "Poison"
+      ],
+      "godswarStatus": "Survived Unchanged",
+      "alignment": "CE",
+      "worshipperAlignments": [
+        "NE",
+        "CE"
+      ],
+      "worshipperAlignmentsPrinted": "NE, CE",
+      "allowedWeapons": [
+        {
+          "printed": "Dagger",
+          "name": "Dagger",
+          "gearId": "daggerOrDirk",
+          "match": "exact",
+          "gearIds": [
+            "daggerOrDirk"
+          ]
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Herbalism",
+        "name": "Herbalism",
+        "nonWeaponId": "herbalism",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Brewing",
+        "name": "Brewing",
+        "nonWeaponId": "brewing",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Plague Vector (Deals toxic cloud damage per level) - 1/week",
+        "frequency": {
+          "text": "1/week",
+          "type": "limited",
+          "uses": 1,
+          "per": "week"
+        },
+        "name": "Plague Vector",
+        "description": "Deals toxic cloud damage per level"
+      },
+      "source": {
+        "sheet": "Human Pantheon",
+        "row": 34
+      }
+    },
+    {
+      "id": "talos",
+      "name": "Talos",
+      "pantheon": "human",
+      "portfolio": "Storms, Destruction",
+      "portfolioList": [
+        "Storms",
+        "Destruction"
+      ],
+      "godswarStatus": "Survived Unchanged",
+      "alignment": "CE",
+      "worshipperAlignments": [
+        "CN",
+        "NE",
+        "CE"
+      ],
+      "worshipperAlignmentsPrinted": "CN, NE, CE",
+      "allowedWeapons": [
+        {
+          "printed": "Longsword",
+          "name": "Longsword",
+          "gearId": "longSword",
+          "match": "exact",
+          "gearIds": [
+            "longSword"
+          ]
+        },
+        {
+          "printed": "Spear",
+          "name": "Spear",
+          "gearId": "spear",
+          "match": "exact",
+          "gearIds": [
+            "spear"
+          ]
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Weather Sense",
+        "name": "Weather Sense",
+        "nonWeaponId": "weatherSense",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Intimidation",
+        "name": "Intimidation",
+        "nonWeaponId": "intimidation",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Lightning Call (Damage scales 1d6/lvl, Cap 10d6) - 1/day",
+        "frequency": {
+          "text": "1/day",
+          "type": "limited",
+          "uses": 1,
+          "per": "day"
+        },
+        "name": "Lightning Call",
+        "description": "Damage scales 1d6/lvl, Cap 10d6"
+      },
+      "source": {
+        "sheet": "Human Pantheon",
+        "row": 35
+      }
+    },
+    {
+      "id": "umberlee",
+      "name": "Umberlee",
+      "pantheon": "human",
+      "portfolio": "Oceans, Currents, Sea Storms",
+      "portfolioList": [
+        "Oceans",
+        "Currents",
+        "Sea Storms"
+      ],
+      "godswarStatus": "Survived Unchanged",
+      "alignment": "CE",
+      "worshipperAlignments": [
+        "CN",
+        "NE",
+        "CE"
+      ],
+      "worshipperAlignmentsPrinted": "CN, NE, CE",
+      "allowedWeapons": [
+        {
+          "printed": "Trident",
+          "name": "Trident",
+          "gearId": "trident",
+          "match": "exact",
+          "gearIds": [
+            "trident"
+          ]
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Swimming",
+        "name": "Swimming",
+        "nonWeaponId": "swimming",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Navigation (Marine)",
+        "name": "Navigation",
+        "specialisation": "Marine",
+        "nonWeaponId": "navigation",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Wave Crash (Knocks back maritime vessels, scale based) - 1/day",
+        "frequency": {
+          "text": "1/day",
+          "type": "limited",
+          "uses": 1,
+          "per": "day"
+        },
+        "name": "Wave Crash",
+        "description": "Knocks back maritime vessels, scale based"
+      },
+      "source": {
+        "sheet": "Human Pantheon",
+        "row": 36
+      }
+    },
+    {
+      "id": "akadi",
+      "name": "Akadi",
+      "pantheon": "human",
+      "portfolio": "Elemental Air, Movement",
+      "portfolioList": [
+        "Elemental Air",
+        "Movement"
+      ],
+      "godswarStatus": "Elemental Lord; Survived Unchanged",
+      "alignment": "N",
+      "worshipperAlignments": [
+        "NG",
+        "CG",
+        "CN",
+        "N",
+        "CE"
+      ],
+      "worshipperAlignmentsPrinted": "NG, CG, CN, N, CE",
+      "allowedWeapons": [
+        {
+          "printed": "Quarterstaff",
+          "name": "Quarterstaff",
+          "gearId": "quarterstaff",
+          "match": "exact",
+          "gearIds": [
+            "quarterstaff"
+          ]
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Weather Sense",
+        "name": "Weather Sense",
+        "nonWeaponId": "weatherSense",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Navigation",
+        "name": "Navigation",
+        "nonWeaponId": "navigation",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Air Walk (Duration scales +10 mins per level) - 1/day",
+        "frequency": {
+          "text": "1/day",
+          "type": "limited",
+          "uses": 1,
+          "per": "day"
+        },
+        "name": "Air Walk",
+        "description": "Duration scales +10 mins per level"
+      },
+      "source": {
+        "sheet": "Human Pantheon",
+        "row": 37
+      }
+    },
+    {
+      "id": "grumbar",
+      "name": "Grumbar",
+      "pantheon": "human",
+      "portfolio": "Elemental Earth, Solidity",
+      "portfolioList": [
+        "Elemental Earth",
+        "Solidity"
+      ],
+      "godswarStatus": "Elemental Lord; Survived Unchanged",
+      "alignment": "N",
+      "worshipperAlignments": [
+        "LG",
+        "LN",
+        "LE",
+        "N"
+      ],
+      "worshipperAlignmentsPrinted": "LG, LN, LE, N",
+      "allowedWeapons": [
+        {
+          "printed": "Warhammer",
+          "name": "Warhammer",
+          "gearId": "warhammer",
+          "match": "exact",
+          "gearIds": [
+            "warhammer"
+          ]
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Spelunking",
+        "name": "Spelunking",
+        "nonWeaponId": "spelunking",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Mining",
+        "name": "Mining",
+        "nonWeaponId": "mining",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Stone Skin (Absorbs 1 physical hit / 3 levels) - 1/day",
+        "frequency": {
+          "text": "1/day",
+          "type": "limited",
+          "uses": 1,
+          "per": "day"
+        },
+        "name": "Stone Skin",
+        "description": "Absorbs 1 physical hit / 3 levels"
+      },
+      "source": {
+        "sheet": "Human Pantheon",
+        "row": 38
+      }
+    },
+    {
+      "id": "istishia",
+      "name": "Istishia",
+      "pantheon": "human",
+      "portfolio": "Elemental Water, Purification",
+      "portfolioList": [
+        "Elemental Water",
+        "Purification"
+      ],
+      "godswarStatus": "Elemental Lord; Survived Unchanged",
+      "alignment": "N",
+      "worshipperAlignments": [
+        "LN",
+        "N",
+        "CN",
+        "NG",
+        "NE"
+      ],
+      "worshipperAlignmentsPrinted": "LN, N, CN, NG, NE",
+      "allowedWeapons": [
+        {
+          "printed": "Trident",
+          "name": "Trident",
+          "gearId": "trident",
+          "match": "exact",
+          "gearIds": [
+            "trident"
+          ]
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Swimming",
+        "name": "Swimming",
+        "nonWeaponId": "swimming",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Navigation (Marine)",
+        "name": "Navigation",
+        "specialisation": "Marine",
+        "nonWeaponId": "navigation",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Purify Water (Volume scales 10 gallons per level) - 3/day",
+        "frequency": {
+          "text": "3/day",
+          "type": "limited",
+          "uses": 3,
+          "per": "day"
+        },
+        "name": "Purify Water",
+        "description": "Volume scales 10 gallons per level"
+      },
+      "source": {
+        "sheet": "Human Pantheon",
+        "row": 39
+      }
+    },
+    {
+      "id": "kossuth",
+      "name": "Kossuth",
+      "pantheon": "human",
+      "portfolio": "Elemental Fire, Purification",
+      "portfolioList": [
+        "Elemental Fire",
+        "Purification"
+      ],
+      "godswarStatus": "Elemental Lord; Survived Unchanged",
+      "alignment": "N",
+      "worshipperAlignments": [
+        "LN",
+        "N",
+        "CN",
+        "LE",
+        "NE",
+        "CE"
+      ],
+      "worshipperAlignmentsPrinted": "LN, N, CN, LE, NE, CE",
+      "allowedWeapons": [
+        {
+          "printed": "Scimitar",
+          "name": "Scimitar",
+          "gearId": "scimitar",
+          "match": "exact",
+          "gearIds": [
+            "scimitar"
+          ]
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Fire-fighting",
+        "name": "Fire-fighting",
+        "nonWeaponId": "fireFighting",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Blacksmithing",
+        "name": "Blacksmithing",
+        "nonWeaponId": "blacksmithing",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Fire Shield (Warm/Chill choices scale in duration) - 1/day",
+        "frequency": {
+          "text": "1/day",
+          "type": "limited",
+          "uses": 1,
+          "per": "day"
+        },
+        "name": "Fire Shield",
+        "description": "Warm/Chill choices scale in duration"
+      },
+      "source": {
+        "sheet": "Human Pantheon",
+        "row": 40
+      }
+    },
+    {
+      "id": "garagos",
+      "name": "Garagos",
+      "pantheon": "human",
+      "portfolio": "War, Plunder, Destruction",
+      "portfolioList": [
+        "War",
+        "Plunder",
+        "Destruction"
+      ],
+      "godswarStatus": "Minor Power; Survived Unchanged",
+      "alignment": "CN",
+      "worshipperAlignments": [
+        "CN",
+        "CE",
+        "N"
+      ],
+      "worshipperAlignmentsPrinted": "CN, CE, N",
+      "allowedWeapons": [
+        {
+          "printed": "Bastard Sword",
+          "name": "Bastard Sword",
+          "gearId": "bastardSword",
+          "match": "exact",
+          "gearIds": [
+            "bastardSword"
+          ]
+        },
+        {
+          "printed": "Claws",
+          "name": "Claws",
+          "gearId": null,
+          "match": "natural",
+          "gearIds": []
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Brawling",
+        "name": "Brawling",
+        "nonWeaponId": "brawling",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Intimidation",
+        "name": "Intimidation",
+        "nonWeaponId": "intimidation",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Bloodrage (+2 hit/damage rolls, scales at high tiers) - 1/day",
+        "frequency": {
+          "text": "1/day",
+          "type": "limited",
+          "uses": 1,
+          "per": "day"
+        },
+        "name": "Bloodrage",
+        "description": "+2 hit/damage rolls, scales at high tiers"
+      },
+      "source": {
+        "sheet": "Human Pantheon",
+        "row": 41
+      }
+    },
+    {
+      "id": "hoar",
+      "name": "Hoar",
+      "pantheon": "human",
+      "portfolio": "Revenge, Retribution, Poetic Justice",
+      "portfolioList": [
+        "Revenge",
+        "Retribution",
+        "Poetic Justice"
+      ],
+      "godswarStatus": "Minor Power; Survived Unchanged",
+      "alignment": "LN",
+      "worshipperAlignments": [
+        "LG",
+        "LN",
+        "LE"
+      ],
+      "worshipperAlignmentsPrinted": "LG, LN, LE",
+      "allowedWeapons": [
+        {
+          "printed": "Dart",
+          "name": "Dart",
+          "gearId": "dart",
+          "match": "exact",
+          "gearIds": [
+            "dart"
+          ]
+        },
+        {
+          "printed": "Javelin",
+          "name": "Javelin",
+          "gearId": "javelin",
+          "match": "exact",
+          "gearIds": [
+            "javelin"
+          ]
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Local History",
+        "name": "Local History",
+        "nonWeaponId": "localHistory",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Tracking",
+        "name": "Tracking",
+        "nonWeaponId": "tracking",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Vengeance Mark (Tracks targets across any distance) - Constant",
+        "frequency": {
+          "text": "Constant",
+          "type": "constant"
+        },
+        "name": "Vengeance Mark",
+        "description": "Tracks targets across any distance"
+      },
+      "source": {
+        "sheet": "Human Pantheon",
+        "row": 42
+      }
+    },
+    {
+      "id": "savras",
+      "name": "Savras",
+      "pantheon": "human",
+      "portfolio": "Divination, Fate",
+      "portfolioList": [
+        "Divination",
+        "Fate"
+      ],
+      "godswarStatus": "Trapped in Azuth's staff; Survived Unchanged",
+      "alignment": "LN",
+      "worshipperAlignments": [
+        "LG",
+        "LN",
+        "LE",
+        "NG",
+        "N",
+        "NE"
+      ],
+      "worshipperAlignmentsPrinted": "LG, LN, LE, NG, N, NE",
+      "allowedWeapons": [
+        {
+          "printed": "Quarterstaff",
+          "name": "Quarterstaff",
+          "gearId": "quarterstaff",
+          "match": "exact",
+          "gearIds": [
+            "quarterstaff"
+          ]
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Spellcraft",
+        "name": "Spellcraft",
+        "nonWeaponId": "spellcraft",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Reading/Writing",
+        "name": "Reading/Writing",
+        "nonWeaponId": "readingWriting",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Portent (Provides +1/lvl bonus to initiative tracking) - 3/day",
+        "frequency": {
+          "text": "3/day",
+          "type": "limited",
+          "uses": 3,
+          "per": "day"
+        },
+        "name": "Portent",
+        "description": "Provides +1/lvl bonus to initiative tracking"
+      },
+      "source": {
+        "sheet": "Human Pantheon",
+        "row": 43
+      }
+    },
+    {
+      "id": "shaundakul",
+      "name": "Shaundakul",
+      "pantheon": "human",
+      "portfolio": "Travel, Exploration, Portals",
+      "portfolioList": [
+        "Travel",
+        "Exploration",
+        "Portals"
+      ],
+      "godswarStatus": "Minor Power; Survived Unchanged",
+      "alignment": "CN",
+      "worshipperAlignments": [
+        "NG",
+        "CG",
+        "CN",
+        "N"
+      ],
+      "worshipperAlignmentsPrinted": "NG, CG, CN, N",
+      "allowedWeapons": [
+        {
+          "printed": "Greatsword",
+          "name": "Greatsword",
+          "gearId": null,
+          "match": "notInGear",
+          "gearIds": []
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Direction Sense",
+        "name": "Direction Sense",
+        "nonWeaponId": "directionSense",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Survival (Plains)",
+        "name": "Survival",
+        "specialisation": "Plains",
+        "nonWeaponId": "survival",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Portal Find (Detects dimensional portals within 30ft) - At Will",
+        "frequency": {
+          "text": "At Will",
+          "type": "atWill"
+        },
+        "name": "Portal Find",
+        "description": "Detects dimensional portals within 30ft"
+      },
+      "source": {
+        "sheet": "Human Pantheon",
+        "row": 44
+      }
+    },
+    {
+      "id": "sharess",
+      "name": "Sharess",
+      "pantheon": "human",
+      "portfolio": "Hedonism, Festivity, Cats",
+      "portfolioList": [
+        "Hedonism",
+        "Festivity",
+        "Cats"
+      ],
+      "godswarStatus": "Minor Power; Survived Unchanged",
+      "alignment": "CG",
+      "worshipperAlignments": [
+        "CG",
+        "CN",
+        "NG",
+        "N"
+      ],
+      "worshipperAlignmentsPrinted": "CG, CN, NG, N",
+      "allowedWeapons": [
+        {
+          "printed": "Dagger",
+          "name": "Dagger",
+          "gearId": "daggerOrDirk",
+          "match": "exact",
+          "gearIds": [
+            "daggerOrDirk"
+          ]
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Dancing",
+        "name": "Dancing",
+        "nonWeaponId": "dancing",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Local History",
+        "name": "Local History",
+        "nonWeaponId": "localHistory",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Catnap (Shortens long rest recovery cycle for party) - 1/day",
+        "frequency": {
+          "text": "1/day",
+          "type": "limited",
+          "uses": 1,
+          "per": "day"
+        },
+        "name": "Catnap",
+        "description": "Shortens long rest recovery cycle for party"
+      },
+      "source": {
+        "sheet": "Human Pantheon",
+        "row": 45
+      }
+    },
+    {
+      "id": "siamorphe",
+      "name": "Siamorphe",
+      "pantheon": "human",
+      "portfolio": "Nobility, Right to Rule",
+      "portfolioList": [
+        "Nobility",
+        "Right to Rule"
+      ],
+      "godswarStatus": "Minor Power; Survived Unchanged",
+      "alignment": "LG",
+      "worshipperAlignments": [
+        "LG",
+        "LN",
+        "NG"
+      ],
+      "worshipperAlignmentsPrinted": "LG, LN, NG",
+      "allowedWeapons": [
+        {
+          "printed": "Light Mace",
+          "name": "Light Mace",
+          "gearId": null,
+          "match": "notInGear",
+          "gearIds": []
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Etiquette",
+        "name": "Etiquette",
+        "nonWeaponId": "etiquette",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Heraldry",
+        "name": "Heraldry",
+        "nonWeaponId": "heraldry",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Noble Aura (Commands respect, saving throw modifiers scale) - Constant",
+        "frequency": {
+          "text": "Constant",
+          "type": "constant"
+        },
+        "name": "Noble Aura",
+        "description": "Commands respect, saving throw modifiers scale"
+      },
+      "source": {
+        "sheet": "Human Pantheon",
+        "row": 46
+      }
+    },
+    {
+      "id": "valkur",
+      "name": "Valkur",
+      "pantheon": "human",
+      "portfolio": "Sailors, Ships, Favorable Winds",
+      "portfolioList": [
+        "Sailors",
+        "Ships",
+        "Favorable Winds"
+      ],
+      "godswarStatus": "Minor Power; Survived Unchanged",
+      "alignment": "CG",
+      "worshipperAlignments": [
+        "CG",
+        "CN",
+        "NG",
+        "N"
+      ],
+      "worshipperAlignmentsPrinted": "CG, CN, NG, N",
+      "allowedWeapons": [
+        {
+          "printed": "Cutlass",
+          "name": "Cutlass",
+          "gearId": null,
+          "match": "notInGear",
+          "gearIds": []
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Navigation",
+        "name": "Navigation",
+        "nonWeaponId": "navigation",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Weather Sense",
+        "name": "Weather Sense",
+        "nonWeaponId": "weatherSense",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Safe Passage (Prevents capsizing in storms) - Constant",
+        "frequency": {
+          "text": "Constant",
+          "type": "constant"
+        },
+        "name": "Safe Passage",
+        "description": "Prevents capsizing in storms"
+      },
+      "source": {
+        "sheet": "Human Pantheon",
+        "row": 47
+      }
+    },
+    {
+      "id": "gwaeronWindstrom",
+      "name": "Gwaeron Windstrom",
+      "pantheon": "human",
+      "portfolio": "Tracking, Rangers",
+      "portfolioList": [
+        "Tracking",
+        "Rangers"
+      ],
+      "godswarStatus": "Minor Power; Survived Unchanged",
+      "alignment": "NG",
+      "worshipperAlignments": [
+        "NG",
+        "CG",
+        "N"
+      ],
+      "worshipperAlignmentsPrinted": "NG, CG, N",
+      "allowedWeapons": [
+        {
+          "printed": "Longbow",
+          "name": "Longbow",
+          "gearId": "longBow",
+          "match": "exact",
+          "gearIds": [
+            "longBow"
+          ]
+        },
+        {
+          "printed": "Spear",
+          "name": "Spear",
+          "gearId": "spear",
+          "match": "exact",
+          "gearIds": [
+            "spear"
+          ]
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Tracking",
+        "name": "Tracking",
+        "nonWeaponId": "tracking",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Survival (Forest)",
+        "name": "Survival",
+        "specialisation": "Forest",
+        "nonWeaponId": "survival",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Forest Stealth (+5% tracking evasion per level) - Constant",
+        "frequency": {
+          "text": "Constant",
+          "type": "constant"
+        },
+        "name": "Forest Stealth",
+        "description": "+5% tracking evasion per level"
+      },
+      "source": {
+        "sheet": "Human Pantheon",
+        "row": 48
+      }
+    },
+    {
+      "id": "lurue",
+      "name": "Lurue",
+      "pantheon": "human",
+      "portfolio": "Talking Beasts, Unicorns",
+      "portfolioList": [
+        "Talking Beasts",
+        "Unicorns"
+      ],
+      "godswarStatus": "Beast Power; Survived Unchanged",
+      "alignment": "CG",
+      "worshipperAlignments": [
+        "NG",
+        "CG",
+        "CN"
+      ],
+      "worshipperAlignmentsPrinted": "NG, CG, CN",
+      "allowedWeapons": [
+        {
+          "printed": "None (Horn strike)",
+          "name": "None (Horn strike)",
+          "gearId": null,
+          "match": "none",
+          "gearIds": []
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Animal Lore",
+        "name": "Animal Lore",
+        "nonWeaponId": "animalLore",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Healing",
+        "name": "Healing",
+        "nonWeaponId": "healing",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Healing Horn (Restores full HP to any beast type) - 1/day",
+        "frequency": {
+          "text": "1/day",
+          "type": "limited",
+          "uses": 1,
+          "per": "day"
+        },
+        "name": "Healing Horn",
+        "description": "Restores full HP to any beast type"
+      },
+      "source": {
+        "sheet": "Human Pantheon",
+        "row": 49
+      }
+    },
+    {
+      "id": "nobanion",
+      "name": "Nobanion",
+      "pantheon": "human",
+      "portfolio": "Noble Beasts, Royalty, Lions",
+      "portfolioList": [
+        "Noble Beasts",
+        "Royalty",
+        "Lions"
+      ],
+      "godswarStatus": "Beast Power; Survived Unchanged",
+      "alignment": "LG",
+      "worshipperAlignments": [
+        "LG",
+        "NG",
+        "LN"
+      ],
+      "worshipperAlignmentsPrinted": "LG, NG, LN",
+      "allowedWeapons": [
+        {
+          "printed": "Claws",
+          "name": "Claws",
+          "gearId": null,
+          "match": "natural",
+          "gearIds": []
+        },
+        {
+          "printed": "Shortsword",
+          "name": "Shortsword",
+          "gearId": "shortSword",
+          "match": "exact",
+          "gearIds": [
+            "shortSword"
+          ]
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Tactics",
+        "name": "Tactics",
+        "nonWeaponId": "tactics",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Intimidation",
+        "name": "Intimidation",
+        "nonWeaponId": "intimidation",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Lion Courage (Immunity to fear arrays, transfers to allies) - Constant",
+        "frequency": {
+          "text": "Constant",
+          "type": "constant"
+        },
+        "name": "Lion Courage",
+        "description": "Immunity to fear arrays, transfers to allies"
+      },
+      "source": {
+        "sheet": "Human Pantheon",
+        "row": 50
+      }
+    },
+    {
+      "id": "shiallia",
+      "name": "Shiallia",
+      "pantheon": "human",
+      "portfolio": "Woodland Fertility",
+      "portfolioList": [
+        "Woodland Fertility"
+      ],
+      "godswarStatus": "Beast Power; Survived Unchanged",
+      "alignment": "NG",
+      "worshipperAlignments": [
+        "NG",
+        "CG",
+        "N"
+      ],
+      "worshipperAlignmentsPrinted": "NG, CG, N",
+      "allowedWeapons": [
+        {
+          "printed": "Sickle",
+          "name": "Sickle",
+          "gearId": "sickle",
+          "match": "exact",
+          "gearIds": [
+            "sickle"
+          ]
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Herbalism",
+        "name": "Herbalism",
+        "nonWeaponId": "herbalism",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Animal Training",
+        "name": "Animal Training",
+        "nonWeaponId": "animalTraining",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Verdant Growth (Instantly blooms woodland terrain) - 1/day",
+        "frequency": {
+          "text": "1/day",
+          "type": "limited",
+          "uses": 1,
+          "per": "day"
+        },
+        "name": "Verdant Growth",
+        "description": "Instantly blooms woodland terrain"
+      },
+      "source": {
+        "sheet": "Human Pantheon",
+        "row": 51
+      }
+    },
+    {
+      "id": "jergal",
+      "name": "Jergal",
+      "pantheon": "human",
+      "portfolio": "Scribe of the Dead",
+      "portfolioList": [
+        "Scribe of the Dead"
+      ],
+      "godswarStatus": "Survived Unchanged as Scribe",
+      "alignment": "LN",
+      "worshipperAlignments": [
+        "LG",
+        "LN",
+        "LE",
+        "N",
+        "NG",
+        "NE"
+      ],
+      "worshipperAlignmentsPrinted": "LG, LN, LE, N, NG, NE",
+      "allowedWeapons": [
+        {
+          "printed": "Dagger",
+          "name": "Dagger",
+          "gearId": "daggerOrDirk",
+          "match": "exact",
+          "gearIds": [
+            "daggerOrDirk"
+          ]
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Ancient History",
+        "name": "Ancient History",
+        "nonWeaponId": "ancientHistory",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Reading/Writing",
+        "name": "Reading/Writing",
+        "nonWeaponId": "readingWriting",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Life Ledger (Instantly detects undead counts within 100ft) - At Will",
+        "frequency": {
+          "text": "At Will",
+          "type": "atWill"
+        },
+        "name": "Life Ledger",
+        "description": "Instantly detects undead counts within 100ft"
+      },
+      "source": {
+        "sheet": "Human Pantheon",
+        "row": 52
+      }
+    },
+    {
+      "id": "moander",
+      "name": "Moander",
+      "pantheon": "human",
+      "portfolio": "Rot, Decay, Corruption",
+      "portfolioList": [
+        "Rot",
+        "Decay",
+        "Corruption"
+      ],
+      "godswarStatus": "Slain post-crisis by Finder Wyvernspur",
+      "alignment": "CE",
+      "worshipperAlignments": [
+        "NE",
+        "CE"
+      ],
+      "worshipperAlignmentsPrinted": "NE, CE",
+      "allowedWeapons": [
+        {
+          "printed": "Sickle",
+          "name": "Sickle",
+          "gearId": "sickle",
+          "match": "exact",
+          "gearIds": [
+            "sickle"
+          ]
+        },
+        {
+          "printed": "Dart",
+          "name": "Dart",
+          "gearId": "dart",
+          "match": "exact",
+          "gearIds": [
+            "dart"
+          ]
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Herbalism",
+        "name": "Herbalism",
+        "nonWeaponId": "herbalism",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Intimidation",
+        "name": "Intimidation",
+        "nonWeaponId": "intimidation",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Spore Cloud (Blinds and chokes target targets) - 1/day",
+        "frequency": {
+          "text": "1/day",
+          "type": "limited",
+          "uses": 1,
+          "per": "day"
+        },
+        "name": "Spore Cloud",
+        "description": "Blinds and chokes target targets"
+      },
+      "source": {
+        "sheet": "Human Pantheon",
+        "row": 53
+      }
+    },
+    {
+      "id": "ulutiu",
+      "name": "Ulutiu",
+      "pantheon": "human",
+      "portfolio": "Glaciers, Ice, Frozen Sea",
+      "portfolioList": [
+        "Glaciers",
+        "Ice",
+        "Frozen Sea"
+      ],
+      "godswarStatus": "Sleeping Ice God; Survived Unchanged",
+      "alignment": "LN",
+      "worshipperAlignments": [
+        "LN",
+        "LE",
+        "N"
+      ],
+      "worshipperAlignmentsPrinted": "LN, LE, N",
+      "allowedWeapons": [
+        {
+          "printed": "Spear",
+          "name": "Spear",
+          "gearId": "spear",
+          "match": "exact",
+          "gearIds": [
+            "spear"
+          ]
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Survival (Arctic)",
+        "name": "Survival",
+        "specialisation": "Arctic",
+        "nonWeaponId": "survival",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Weather Sense",
+        "name": "Weather Sense",
+        "nonWeaponId": "weatherSense",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Glacier Grip (Freezes surface liquids, thickness scales) - 1/day",
+        "frequency": {
+          "text": "1/day",
+          "type": "limited",
+          "uses": 1,
+          "per": "day"
+        },
+        "name": "Glacier Grip",
+        "description": "Freezes surface liquids, thickness scales"
+      },
+      "source": {
+        "sheet": "Human Pantheon",
+        "row": 54
+      }
+    },
+    {
+      "id": "moradin",
+      "name": "Moradin",
+      "pantheon": "dwarf",
+      "portfolio": "Creation, Smithing",
+      "portfolioList": [
+        "Creation",
+        "Smithing"
+      ],
+      "alignment": "LG",
+      "worshipperAlignments": [
+        "LG",
+        "NG",
+        "LN"
+      ],
+      "worshipperAlignmentsPrinted": "LG, NG, LN",
+      "allowedWeapons": [
+        {
+          "printed": "Warhammer",
+          "name": "Warhammer",
+          "gearId": "warhammer",
+          "match": "exact",
+          "gearIds": [
+            "warhammer"
+          ]
+        },
+        {
+          "printed": "Mace",
+          "name": "Mace",
+          "gearId": null,
+          "match": "exact",
+          "gearIds": [
+            "footmansMace",
+            "horsemansMace"
+          ],
+          "matchNote": "Owner confirmed: both the Footman's and the Horseman's version are allowed."
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Blacksmithing",
+        "name": "Blacksmithing",
+        "nonWeaponId": "blacksmithing",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Armorer",
+        "name": "Armorer",
+        "nonWeaponId": "armorer",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Forge Shield: Scales up armor value +1 step per 3 levels (Cap AC 0). 1/day",
+        "name": "Forge Shield",
+        "description": "Scales up armor value +1 step per 3 levels (Cap AC 0).",
+        "frequency": {
+          "text": "1/day",
+          "type": "limited",
+          "uses": 1,
+          "per": "day"
+        }
+      },
+      "source": {
+        "sheet": "Dwarves",
+        "row": 2
+      }
+    },
+    {
+      "id": "abbathor",
+      "name": "Abbathor",
+      "pantheon": "dwarf",
+      "portfolio": "Greed, Stealth",
+      "portfolioList": [
+        "Greed",
+        "Stealth"
+      ],
+      "alignment": "NE",
+      "worshipperAlignments": [
+        "LE",
+        "NE",
+        "CE"
+      ],
+      "worshipperAlignmentsPrinted": "LE, NE, CE",
+      "allowedWeapons": [
+        {
+          "printed": "Dagger",
+          "name": "Dagger",
+          "gearId": "daggerOrDirk",
+          "match": "exact",
+          "gearIds": [
+            "daggerOrDirk"
+          ]
+        },
+        {
+          "printed": "Shortsword",
+          "name": "Shortsword",
+          "gearId": "shortSword",
+          "match": "exact",
+          "gearIds": [
+            "shortSword"
+          ]
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Looting",
+        "name": "Looting",
+        "nonWeaponId": "looting",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Appraising",
+        "name": "Appraising",
+        "nonWeaponId": "appraising",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Steal Shadow: Scales up core thieving stealth checks by +5% per level. 1/day",
+        "name": "Steal Shadow",
+        "description": "Scales up core thieving stealth checks by +5% per level.",
+        "frequency": {
+          "text": "1/day",
+          "type": "limited",
+          "uses": 1,
+          "per": "day"
+        }
+      },
+      "source": {
+        "sheet": "Dwarves",
+        "row": 3
+      }
+    },
+    {
+      "id": "berronarTruesilver",
+      "name": "Berronar Truesilver",
+      "pantheon": "dwarf",
+      "portfolio": "Home, Hearth, Family",
+      "portfolioList": [
+        "Home",
+        "Hearth",
+        "Family"
+      ],
+      "alignment": "LG",
+      "worshipperAlignments": [
+        "LG",
+        "NG",
+        "LN"
+      ],
+      "worshipperAlignmentsPrinted": "LG, NG, LN",
+      "allowedWeapons": [
+        {
+          "printed": "Mace",
+          "name": "Mace",
+          "gearId": null,
+          "match": "exact",
+          "gearIds": [
+            "footmansMace",
+            "horsemansMace"
+          ],
+          "matchNote": "Owner confirmed: both the Footman's and the Horseman's version are allowed."
+        },
+        {
+          "printed": "Flail",
+          "name": "Flail",
+          "gearId": null,
+          "match": "exact",
+          "gearIds": [
+            "footmansFlail",
+            "horsemansFlail"
+          ],
+          "matchNote": "Owner confirmed: both the Footman's and the Horseman's version are allowed."
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Local History",
+        "name": "Local History",
+        "nonWeaponId": "localHistory",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Cooking",
+        "name": "Cooking",
+        "nonWeaponId": "cooking",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Hearth Glow: Restores 1d8 HP +1 per level (Cap +10 bonus). 2/day",
+        "name": "Hearth Glow",
+        "description": "Restores 1d8 HP +1 per level (Cap +10 bonus).",
+        "frequency": {
+          "text": "2/day",
+          "type": "limited",
+          "uses": 2,
+          "per": "day"
+        }
+      },
+      "source": {
+        "sheet": "Dwarves",
+        "row": 4
+      }
+    },
+    {
+      "id": "clangeddinSilverbeard",
+      "name": "Clangeddin Silverbeard",
+      "pantheon": "dwarf",
+      "portfolio": "Battle, Valor",
+      "portfolioList": [
+        "Battle",
+        "Valor"
+      ],
+      "alignment": "LG",
+      "worshipperAlignments": [
+        "LG",
+        "NG",
+        "LN"
+      ],
+      "worshipperAlignmentsPrinted": "LG, NG, LN",
+      "allowedWeapons": [
+        {
+          "printed": "Battleaxe",
+          "name": "Battleaxe",
+          "gearId": "battleAxe",
+          "match": "exact",
+          "gearIds": [
+            "battleAxe"
+          ]
+        },
+        {
+          "printed": "Warhammer",
+          "name": "Warhammer",
+          "gearId": "warhammer",
+          "match": "exact",
+          "gearIds": [
+            "warhammer"
+          ]
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Tactics",
+        "name": "Tactics",
+        "nonWeaponId": "tactics",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Weaponsmithing",
+        "name": "Weaponsmithing",
+        "nonWeaponId": "weaponsmithing",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Battle Cry: Grants +2 to attack hit lines, scaling up every 4 levels (Cap +4). 1/day",
+        "name": "Battle Cry",
+        "description": "Grants +2 to attack hit lines, scaling up every 4 levels (Cap +4).",
+        "frequency": {
+          "text": "1/day",
+          "type": "limited",
+          "uses": 1,
+          "per": "day"
+        }
+      },
+      "source": {
+        "sheet": "Dwarves",
+        "row": 5
+      }
+    },
+    {
+      "id": "deepDuerra",
+      "name": "Deep Duerra",
+      "pantheon": "dwarf",
+      "portfolio": "Duergar Psionics",
+      "portfolioList": [
+        "Duergar Psionics"
+      ],
+      "alignment": "LE",
+      "worshipperAlignments": [
+        "LE",
+        "NE",
+        "LN"
+      ],
+      "worshipperAlignmentsPrinted": "LE, NE, LN",
+      "allowedWeapons": [
+        {
+          "printed": "Mace",
+          "name": "Mace",
+          "gearId": null,
+          "match": "exact",
+          "gearIds": [
+            "footmansMace",
+            "horsemansMace"
+          ],
+          "matchNote": "Owner confirmed: both the Footman's and the Horseman's version are allowed."
+        },
+        {
+          "printed": "Heavy Pick",
+          "name": "Heavy Pick",
+          "gearId": null,
+          "match": "notInGear",
+          "gearIds": []
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Psionic Lore",
+        "name": "Psionic Lore",
+        "nonWeaponId": "psionicLore",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Intimidation",
+        "name": "Intimidation",
+        "nonWeaponId": "intimidation",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Mind Blast: Cone stun duration scales directly up with character level metrics. 1/day",
+        "name": "Mind Blast",
+        "description": "Cone stun duration scales directly up with character level metrics.",
+        "frequency": {
+          "text": "1/day",
+          "type": "limited",
+          "uses": 1,
+          "per": "day"
+        }
+      },
+      "source": {
+        "sheet": "Dwarves",
+        "row": 6
+      }
+    },
+    {
+      "id": "dugmarenBrightmantle",
+      "name": "Dugmaren Brightmantle",
+      "pantheon": "dwarf",
+      "portfolio": "Scholarship, Craft",
+      "portfolioList": [
+        "Scholarship",
+        "Craft"
+      ],
+      "alignment": "CG",
+      "worshipperAlignments": [
+        "NG",
+        "CG",
+        "CN"
+      ],
+      "worshipperAlignmentsPrinted": "NG, CG, CN",
+      "allowedWeapons": [
+        {
+          "printed": "Any bludgeoning",
+          "name": "Any bludgeoning",
+          "gearId": null,
+          "match": "category",
+          "gearIds": []
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Ancient History",
+        "name": "Ancient History",
+        "nonWeaponId": "ancientHistory",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Reading/Writing",
+        "name": "Reading/Writing",
+        "nonWeaponId": "readingWriting",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Invention Spark: Grants +10% engineering/craft success modifiers per level. 3/day",
+        "name": "Invention Spark",
+        "description": "Grants +10% engineering/craft success modifiers per level.",
+        "frequency": {
+          "text": "3/day",
+          "type": "limited",
+          "uses": 3,
+          "per": "day"
+        }
+      },
+      "source": {
+        "sheet": "Dwarves",
+        "row": 7
+      }
+    },
+    {
+      "id": "dumathoin",
+      "name": "Dumathoin",
+      "pantheon": "dwarf",
+      "portfolio": "Mining, Underground",
+      "portfolioList": [
+        "Mining",
+        "Underground"
+      ],
+      "alignment": "N",
+      "worshipperAlignments": null,
+      "worshipperAlignmentsPrinted": "Any Dwarf worker",
+      "worshipperAlignmentsNote": "Printed as text, not a list of alignments; stored as printed.",
+      "allowedWeapons": [
+        {
+          "printed": "Pick",
+          "name": "Pick",
+          "gearId": null,
+          "match": "exact",
+          "gearIds": [
+            "footmansPick",
+            "horsemansPick"
+          ],
+          "matchNote": "Owner confirmed: both the Footman's and the Horseman's version are allowed."
+        },
+        {
+          "printed": "Warhammer",
+          "name": "Warhammer",
+          "gearId": "warhammer",
+          "match": "exact",
+          "gearIds": [
+            "warhammer"
+          ]
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Spelunking",
+        "name": "Spelunking",
+        "nonWeaponId": "spelunking",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Mining",
+        "name": "Mining",
+        "nonWeaponId": "mining",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Ore Sense: Detects veins through rock, radius scales +10 ft/level. Constant Passive",
+        "name": "Ore Sense",
+        "description": "Detects veins through rock, radius scales +10 ft/level.",
+        "frequency": {
+          "text": "Constant Passive",
+          "type": "constant"
+        }
+      },
+      "source": {
+        "sheet": "Dwarves",
+        "row": 8
+      }
+    },
+    {
+      "id": "gormGulthyn",
+      "name": "Gorm Gulthyn",
+      "pantheon": "dwarf",
+      "portfolio": "Defense, Vigilance",
+      "portfolioList": [
+        "Defense",
+        "Vigilance"
+      ],
+      "alignment": "LG",
+      "worshipperAlignments": [
+        "LG",
+        "NG",
+        "LN"
+      ],
+      "worshipperAlignmentsPrinted": "LG, NG, LN",
+      "allowedWeapons": [
+        {
+          "printed": "Warhammer",
+          "name": "Warhammer",
+          "gearId": "warhammer",
+          "match": "exact",
+          "gearIds": [
+            "warhammer"
+          ]
+        },
+        {
+          "printed": "Shield",
+          "name": "Shield",
+          "gearId": null,
+          "match": "notInGear",
+          "gearIds": []
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Observation",
+        "name": "Observation",
+        "nonWeaponId": "observation",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Alertness",
+        "name": "Alertness",
+        "nonWeaponId": "alertness",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Guardian Wall: Projects damage absorption barriers scaling per level. 1/day",
+        "name": "Guardian Wall",
+        "description": "Projects damage absorption barriers scaling per level.",
+        "frequency": {
+          "text": "1/day",
+          "type": "limited",
+          "uses": 1,
+          "per": "day"
+        }
+      },
+      "source": {
+        "sheet": "Dwarves",
+        "row": 9
+      }
+    },
+    {
+      "id": "haelaBrightaxe",
+      "name": "Haela Brightaxe",
+      "pantheon": "dwarf",
+      "portfolio": "Luck in Battle",
+      "portfolioList": [
+        "Luck in Battle"
+      ],
+      "alignment": "CG",
+      "worshipperAlignments": [
+        "NG",
+        "CG",
+        "CN"
+      ],
+      "worshipperAlignmentsPrinted": "NG, CG, CN",
+      "allowedWeapons": [
+        {
+          "printed": "Greatsword",
+          "name": "Greatsword",
+          "gearId": null,
+          "match": "notInGear",
+          "gearIds": []
+        },
+        {
+          "printed": "Battleaxe",
+          "name": "Battleaxe",
+          "gearId": "battleAxe",
+          "match": "exact",
+          "gearIds": [
+            "battleAxe"
+          ]
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Blind-fighting",
+        "name": "Blind-fighting",
+        "nonWeaponId": "blindFighting",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Weaponsmithing",
+        "name": "Weaponsmithing",
+        "nonWeaponId": "weaponsmithing",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Luck Step: Reroll failed saving throw lines (Unlocks 2/day at level 10). 1/day base",
+        "name": "Luck Step",
+        "description": "Reroll failed saving throw lines (Unlocks 2/day at level 10).",
+        "frequency": {
+          "text": "1/day base",
+          "type": "limited",
+          "uses": 1,
+          "per": "day",
+          "note": "base"
+        }
+      },
+      "source": {
+        "sheet": "Dwarves",
+        "row": 10
+      }
+    },
+    {
+      "id": "laduguer",
+      "name": "Laduguer",
+      "pantheon": "dwarf",
+      "portfolio": "Duergar Crafting",
+      "portfolioList": [
+        "Duergar Crafting"
+      ],
+      "alignment": "LE",
+      "worshipperAlignments": [
+        "LE",
+        "NE",
+        "LN"
+      ],
+      "worshipperAlignmentsPrinted": "LE, NE, LN",
+      "allowedWeapons": [
+        {
+          "printed": "Heavy Pick",
+          "name": "Heavy Pick",
+          "gearId": null,
+          "match": "notInGear",
+          "gearIds": []
+        },
+        {
+          "printed": "Warhammer",
+          "name": "Warhammer",
+          "gearId": "warhammer",
+          "match": "exact",
+          "gearIds": [
+            "warhammer"
+          ]
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Armorer",
+        "name": "Armorer",
+        "nonWeaponId": "armorer",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Mining",
+        "name": "Mining",
+        "nonWeaponId": "mining",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Hardship Fortitude: Multiplies saving throw matrices +1 step per 4 levels. Constant Passive",
+        "name": "Hardship Fortitude",
+        "description": "Multiplies saving throw matrices +1 step per 4 levels.",
+        "frequency": {
+          "text": "Constant Passive",
+          "type": "constant"
+        }
+      },
+      "source": {
+        "sheet": "Dwarves",
+        "row": 11
+      }
+    },
+    {
+      "id": "marthammorDuin",
+      "name": "Marthammor Duin",
+      "pantheon": "dwarf",
+      "portfolio": "Travel, Surface Dwarves",
+      "portfolioList": [
+        "Travel",
+        "Surface Dwarves"
+      ],
+      "alignment": "NG",
+      "worshipperAlignments": [
+        "LG",
+        "NG",
+        "CG",
+        "N"
+      ],
+      "worshipperAlignmentsPrinted": "LG, NG, CG, N",
+      "allowedWeapons": [
+        {
+          "printed": "Quarterstaff",
+          "name": "Quarterstaff",
+          "gearId": "quarterstaff",
+          "match": "exact",
+          "gearIds": [
+            "quarterstaff"
+          ]
+        },
+        {
+          "printed": "Sling",
+          "name": "Sling",
+          "gearId": "sling",
+          "match": "exact",
+          "gearIds": [
+            "sling"
+          ]
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Direction Sense",
+        "name": "Direction Sense",
+        "nonWeaponId": "directionSense",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Navigation",
+        "name": "Navigation",
+        "nonWeaponId": "navigation",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Trail Finder: Automatically bypasses wilderness movement penalties. 2/day",
+        "name": "Trail Finder",
+        "description": "Automatically bypasses wilderness movement penalties.",
+        "frequency": {
+          "text": "2/day",
+          "type": "limited",
+          "uses": 2,
+          "per": "day"
+        }
+      },
+      "source": {
+        "sheet": "Dwarves",
+        "row": 12
+      }
+    },
+    {
+      "id": "sharindlar",
+      "name": "Sharindlar",
+      "pantheon": "dwarf",
+      "portfolio": "Healing, Fertility",
+      "portfolioList": [
+        "Healing",
+        "Fertility"
+      ],
+      "alignment": "CG",
+      "worshipperAlignments": [
+        "NG",
+        "CG",
+        "CN"
+      ],
+      "worshipperAlignmentsPrinted": "NG, CG, CN",
+      "allowedWeapons": [
+        {
+          "printed": "Whip",
+          "name": "Whip",
+          "gearId": "whip",
+          "match": "exact",
+          "gearIds": [
+            "whip"
+          ]
+        },
+        {
+          "printed": "Mace",
+          "name": "Mace",
+          "gearId": null,
+          "match": "exact",
+          "gearIds": [
+            "footmansMace",
+            "horsemansMace"
+          ],
+          "matchNote": "Owner confirmed: both the Footman's and the Horseman's version are allowed."
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Healing",
+        "name": "Healing",
+        "nonWeaponId": "healing",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Herbalism",
+        "name": "Herbalism",
+        "nonWeaponId": "herbalism",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Moon Healed: Restores wounds at double rates when manifested inside night hours. 1/day",
+        "name": "Moon Healed",
+        "description": "Restores wounds at double rates when manifested inside night hours.",
+        "frequency": {
+          "text": "1/day",
+          "type": "limited",
+          "uses": 1,
+          "per": "day"
+        }
+      },
+      "source": {
+        "sheet": "Dwarves",
+        "row": 13
+      }
+    },
+    {
+      "id": "thardHarr",
+      "name": "Thard Harr",
+      "pantheon": "dwarf",
+      "portfolio": "Wild Dwarves, Jungle",
+      "portfolioList": [
+        "Wild Dwarves",
+        "Jungle"
+      ],
+      "alignment": "CG",
+      "worshipperAlignments": [
+        "NG",
+        "CG",
+        "CN"
+      ],
+      "worshipperAlignmentsPrinted": "NG, CG, CN",
+      "allowedWeapons": [
+        {
+          "printed": "Spiked club",
+          "name": "Spiked Club",
+          "gearId": null,
+          "match": "notInGear",
+          "gearIds": []
+        },
+        {
+          "printed": "Spear",
+          "name": "Spear",
+          "gearId": "spear",
+          "match": "exact",
+          "gearIds": [
+            "spear"
+          ]
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Survival (Jungle)",
+        "name": "Survival",
+        "specialisation": "Jungle",
+        "nonWeaponId": "survival",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Tracking",
+        "name": "Tracking",
+        "nonWeaponId": "tracking",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Jungle Stride: Completely ignores natural thick jungle flora obstacles. Constant Passive",
+        "name": "Jungle Stride",
+        "description": "Completely ignores natural thick jungle flora obstacles.",
+        "frequency": {
+          "text": "Constant Passive",
+          "type": "constant"
+        }
+      },
+      "source": {
+        "sheet": "Dwarves",
+        "row": 14
+      }
+    },
+    {
+      "id": "vergadain",
+      "name": "Vergadain",
+      "pantheon": "dwarf",
+      "portfolio": "Wealth, Trade, Luck",
+      "portfolioList": [
+        "Wealth",
+        "Trade",
+        "Luck"
+      ],
+      "alignment": "N",
+      "worshipperAlignments": [
+        "LN",
+        "N",
+        "CN",
+        "NG",
+        "NE"
+      ],
+      "worshipperAlignmentsPrinted": "LN, N, CN, NG, NE",
+      "allowedWeapons": [
+        {
+          "printed": "Shortsword",
+          "name": "Shortsword",
+          "gearId": "shortSword",
+          "match": "exact",
+          "gearIds": [
+            "shortSword"
+          ]
+        },
+        {
+          "printed": "Dagger",
+          "name": "Dagger",
+          "gearId": "daggerOrDirk",
+          "match": "exact",
+          "gearIds": [
+            "daggerOrDirk"
+          ]
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Appraising",
+        "name": "Appraising",
+        "nonWeaponId": "appraising",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Gem Cutting",
+        "name": "Gem Cutting",
+        "nonWeaponId": "gemCutting",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Gold Finder: Pinpoints exact metal concentrations, scanning radius scales. 1/day",
+        "name": "Gold Finder",
+        "description": "Pinpoints exact metal concentrations, scanning radius scales.",
+        "frequency": {
+          "text": "1/day",
+          "type": "limited",
+          "uses": 1,
+          "per": "day"
+        }
+      },
+      "source": {
+        "sheet": "Dwarves",
+        "row": 15
+      }
+    },
+    {
+      "id": "corellonLarethian",
+      "name": "Corellon Larethian",
+      "pantheon": "elf",
+      "portfolio": "Magic, Arts, Warfare, Leadership",
+      "portfolioList": [
+        "Magic",
+        "Arts",
+        "Warfare",
+        "Leadership"
+      ],
+      "alignment": "CG",
+      "worshipperAlignments": [
+        "NG",
+        "CG",
+        "CN"
+      ],
+      "worshipperAlignmentsPrinted": "NG, CG, CN",
+      "allowedWeapons": [
+        {
+          "printed": "Longsword",
+          "name": "Longsword",
+          "gearId": "longSword",
+          "match": "exact",
+          "gearIds": [
+            "longSword"
+          ]
+        },
+        {
+          "printed": "Longbow",
+          "name": "Longbow",
+          "gearId": "longBow",
+          "match": "exact",
+          "gearIds": [
+            "longBow"
+          ]
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Spellcraft",
+        "name": "Spellcraft",
+        "nonWeaponId": "spellcraft",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Ancient History",
+        "name": "Ancient History",
+        "nonWeaponId": "ancientHistory",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Elven Grace: Grants +1 to AC and reflex checks per 4 levels. Constant Passive",
+        "name": "Elven Grace",
+        "description": "Grants +1 to AC and reflex checks per 4 levels.",
+        "frequency": {
+          "text": "Constant Passive",
+          "type": "constant"
+        }
+      },
+      "source": {
+        "sheet": "Elves",
+        "row": 2
+      }
+    },
+    {
+      "id": "aerdrieFaenya",
+      "name": "Aerdrie Faenya",
+      "pantheon": "elf",
+      "portfolio": "Air, Rain, Weather, Avariel",
+      "portfolioList": [
+        "Air",
+        "Rain",
+        "Weather",
+        "Avariel"
+      ],
+      "alignment": "CG",
+      "worshipperAlignments": [
+        "NG",
+        "CG",
+        "CN"
+      ],
+      "worshipperAlignmentsPrinted": "NG, CG, CN",
+      "allowedWeapons": [
+        {
+          "printed": "Sling",
+          "name": "Sling",
+          "gearId": "sling",
+          "match": "exact",
+          "gearIds": [
+            "sling"
+          ]
+        },
+        {
+          "printed": "Dart",
+          "name": "Dart",
+          "gearId": "dart",
+          "match": "exact",
+          "gearIds": [
+            "dart"
+          ]
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Weather Sense",
+        "name": "Weather Sense",
+        "nonWeaponId": "weatherSense",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Navigation",
+        "name": "Navigation",
+        "nonWeaponId": "navigation",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Cloud Walk: Can walk on air/clouds, duration scales +5 mins/lvl. 1/day",
+        "name": "Cloud Walk",
+        "description": "Can walk on air/clouds, duration scales +5 mins/lvl.",
+        "frequency": {
+          "text": "1/day",
+          "type": "limited",
+          "uses": 1,
+          "per": "day"
+        }
+      },
+      "source": {
+        "sheet": "Elves",
+        "row": 3
+      }
+    },
+    {
+      "id": "angharradh",
+      "name": "Angharradh",
+      "pantheon": "elf",
+      "portfolio": "Unity, Protection, Nature",
+      "portfolioList": [
+        "Unity",
+        "Protection",
+        "Nature"
+      ],
+      "alignment": "CG",
+      "worshipperAlignments": [
+        "LG",
+        "NG",
+        "CG"
+      ],
+      "worshipperAlignmentsPrinted": "LG, NG, CG",
+      "allowedWeapons": [
+        {
+          "printed": "Mace",
+          "name": "Mace",
+          "gearId": null,
+          "match": "exact",
+          "gearIds": [
+            "footmansMace",
+            "horsemansMace"
+          ],
+          "matchNote": "Owner confirmed: both the Footman's and the Horseman's version are allowed."
+        },
+        {
+          "printed": "Quarterstaff",
+          "name": "Quarterstaff",
+          "gearId": "quarterstaff",
+          "match": "exact",
+          "gearIds": [
+            "quarterstaff"
+          ]
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Religion",
+        "name": "Religion",
+        "nonWeaponId": "religion",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Healing",
+        "name": "Healing",
+        "nonWeaponId": "healing",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Triune Shield: Creates defensive barrier absorbing 1d6 damage/3 lvls. 1/day",
+        "name": "Triune Shield",
+        "description": "Creates defensive barrier absorbing 1d6 damage/3 lvls.",
+        "frequency": {
+          "text": "1/day",
+          "type": "limited",
+          "uses": 1,
+          "per": "day"
+        }
+      },
+      "source": {
+        "sheet": "Elves",
+        "row": 4
+      }
+    },
+    {
+      "id": "deepSashelas",
+      "name": "Deep Sashelas",
+      "pantheon": "elf",
+      "portfolio": "Oceans, Sea Elves, Knowledge",
+      "portfolioList": [
+        "Oceans",
+        "Sea Elves",
+        "Knowledge"
+      ],
+      "alignment": "CG",
+      "worshipperAlignments": [
+        "NG",
+        "CG",
+        "CN"
+      ],
+      "worshipperAlignmentsPrinted": "NG, CG, CN",
+      "allowedWeapons": [
+        {
+          "printed": "Trident",
+          "name": "Trident",
+          "gearId": "trident",
+          "match": "exact",
+          "gearIds": [
+            "trident"
+          ]
+        },
+        {
+          "printed": "Net",
+          "name": "Net",
+          "gearId": null,
+          "match": "notInGear",
+          "gearIds": []
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Swimming",
+        "name": "Swimming",
+        "nonWeaponId": "swimming",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Navigation (Marine)",
+        "name": "Navigation",
+        "specialisation": "Marine",
+        "nonWeaponId": "navigation",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Water Breathing: Grants underwater survival, scales dynamically. At Will",
+        "name": "Water Breathing",
+        "description": "Grants underwater survival, scales dynamically.",
+        "frequency": {
+          "text": "At Will",
+          "type": "atWill"
+        }
+      },
+      "source": {
+        "sheet": "Elves",
+        "row": 5
+      }
+    },
+    {
+      "id": "erevanIlesere",
+      "name": "Erevan Ilesere",
+      "pantheon": "elf",
+      "portfolio": "Mischief, Change, Rogueish Trickery",
+      "portfolioList": [
+        "Mischief",
+        "Change",
+        "Rogueish Trickery"
+      ],
+      "alignment": "CG",
+      "worshipperAlignments": [
+        "NG",
+        "CG",
+        "CN"
+      ],
+      "worshipperAlignmentsPrinted": "NG, CG, CN",
+      "allowedWeapons": [
+        {
+          "printed": "Dagger",
+          "name": "Dagger",
+          "gearId": "daggerOrDirk",
+          "match": "exact",
+          "gearIds": [
+            "daggerOrDirk"
+          ]
+        },
+        {
+          "printed": "Dart",
+          "name": "Dart",
+          "gearId": "dart",
+          "match": "exact",
+          "gearIds": [
+            "dart"
+          ]
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Gaming",
+        "name": "Gaming",
+        "nonWeaponId": "gaming",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Disguise",
+        "name": "Disguise",
+        "nonWeaponId": "disguise",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Trickster Leap: Short distance teleport step, range scales per level. 3/day",
+        "name": "Trickster Leap",
+        "description": "Short distance teleport step, range scales per level.",
+        "frequency": {
+          "text": "3/day",
+          "type": "limited",
+          "uses": 3,
+          "per": "day"
+        }
+      },
+      "source": {
+        "sheet": "Elves",
+        "row": 6
+      }
+    },
+    {
+      "id": "fenmarelMestarine",
+      "name": "Fenmarel Mestarine",
+      "pantheon": "elf",
+      "portfolio": "Outcasts, Wild Elves, Isolation",
+      "portfolioList": [
+        "Outcasts",
+        "Wild Elves",
+        "Isolation"
+      ],
+      "alignment": "CN",
+      "worshipperAlignments": [
+        "NG",
+        "CG",
+        "LN",
+        "N",
+        "CN",
+        "NE",
+        "CE"
+      ],
+      "worshipperAlignmentsPrinted": "NG, CG, LN, N, CN, NE, CE",
+      "allowedWeapons": [
+        {
+          "printed": "Spear",
+          "name": "Spear",
+          "gearId": "spear",
+          "match": "exact",
+          "gearIds": [
+            "spear"
+          ]
+        },
+        {
+          "printed": "Shortbow",
+          "name": "Shortbow",
+          "gearId": "shortBow",
+          "match": "exact",
+          "gearIds": [
+            "shortBow"
+          ]
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Survival",
+        "name": "Survival",
+        "nonWeaponId": "survival",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Hunting",
+        "name": "Hunting",
+        "nonWeaponId": "hunting",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Wild Hide: Blends into wilderness flora (+10% camouflage bonus). Constant Passive",
+        "name": "Wild Hide",
+        "description": "Blends into wilderness flora (+10% camouflage bonus).",
+        "frequency": {
+          "text": "Constant Passive",
+          "type": "constant"
+        }
+      },
+      "source": {
+        "sheet": "Elves",
+        "row": 7
+      }
+    },
+    {
+      "id": "hanaliCelanil",
+      "name": "Hanali Celanil",
+      "pantheon": "elf",
+      "portfolio": "Love, Beauty, Romance",
+      "portfolioList": [
+        "Love",
+        "Beauty",
+        "Romance"
+      ],
+      "alignment": "CG",
+      "worshipperAlignments": [
+        "NG",
+        "CG",
+        "CN"
+      ],
+      "worshipperAlignmentsPrinted": "NG, CG, CN",
+      "allowedWeapons": [
+        {
+          "printed": "Dagger",
+          "name": "Dagger",
+          "gearId": "daggerOrDirk",
+          "match": "exact",
+          "gearIds": [
+            "daggerOrDirk"
+          ]
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Etiquette",
+        "name": "Etiquette",
+        "nonWeaponId": "etiquette",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Poetry",
+        "name": "Poetry",
+        "nonWeaponId": "poetry",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Aura of Beauty: Charmed gaze commands targets, save modifier scales. 1/day",
+        "name": "Aura of Beauty",
+        "description": "Charmed gaze commands targets, save modifier scales.",
+        "frequency": {
+          "text": "1/day",
+          "type": "limited",
+          "uses": 1,
+          "per": "day"
+        }
+      },
+      "source": {
+        "sheet": "Elves",
+        "row": 8
+      }
+    },
+    {
+      "id": "labelasEnoreth",
+      "name": "Labelas Enoreth",
+      "pantheon": "elf",
+      "portfolio": "Time, History, Longevity",
+      "portfolioList": [
+        "Time",
+        "History",
+        "Longevity"
+      ],
+      "alignment": "CG",
+      "worshipperAlignments": [
+        "NG",
+        "CG",
+        "CN"
+      ],
+      "worshipperAlignmentsPrinted": "NG, CG, CN",
+      "allowedWeapons": [
+        {
+          "printed": "Quarterstaff",
+          "name": "Quarterstaff",
+          "gearId": "quarterstaff",
+          "match": "exact",
+          "gearIds": [
+            "quarterstaff"
+          ]
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Ancient History",
+        "name": "Ancient History",
+        "nonWeaponId": "ancientHistory",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Astrology",
+        "name": "Astrology",
+        "nonWeaponId": "astrology",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Time Step: Can step forward 1 round in time per 5 levels to dodge. 1/day",
+        "name": "Time Step",
+        "description": "Can step forward 1 round in time per 5 levels to dodge.",
+        "frequency": {
+          "text": "1/day",
+          "type": "limited",
+          "uses": 1,
+          "per": "day"
+        }
+      },
+      "source": {
+        "sheet": "Elves",
+        "row": 9
+      }
+    },
+    {
+      "id": "rillifaneRallathil",
+      "name": "Rillifane Rallathil",
+      "pantheon": "elf",
+      "portfolio": "Nature, Woodlands, Wood Elves",
+      "portfolioList": [
+        "Nature",
+        "Woodlands",
+        "Wood Elves"
+      ],
+      "alignment": "CG",
+      "worshipperAlignments": [
+        "NG",
+        "CG",
+        "CN"
+      ],
+      "worshipperAlignmentsPrinted": "NG, CG, CN",
+      "allowedWeapons": [
+        {
+          "printed": "Quarterstaff",
+          "name": "Quarterstaff",
+          "gearId": "quarterstaff",
+          "match": "exact",
+          "gearIds": [
+            "quarterstaff"
+          ]
+        },
+        {
+          "printed": "Sickle",
+          "name": "Sickle",
+          "gearId": "sickle",
+          "match": "exact",
+          "gearIds": [
+            "sickle"
+          ]
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Survival (Forest)",
+        "name": "Survival",
+        "specialisation": "Forest",
+        "nonWeaponId": "survival",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Herbalism",
+        "name": "Herbalism",
+        "nonWeaponId": "herbalism",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Oak Skin: Grants structural natural armor bonus scaling with level. 1/day",
+        "name": "Oak Skin",
+        "description": "Grants structural natural armor bonus scaling with level.",
+        "frequency": {
+          "text": "1/day",
+          "type": "limited",
+          "uses": 1,
+          "per": "day"
+        }
+      },
+      "source": {
+        "sheet": "Elves",
+        "row": 10
+      }
+    },
+    {
+      "id": "sehanineMoonbow",
+      "name": "Sehanine Moonbow",
+      "pantheon": "elf",
+      "portfolio": "Mysticism, Dreams, Death, The Moon",
+      "portfolioList": [
+        "Mysticism",
+        "Dreams",
+        "Death",
+        "The Moon"
+      ],
+      "alignment": "CG",
+      "worshipperAlignments": [
+        "NG",
+        "CG",
+        "CN"
+      ],
+      "worshipperAlignmentsPrinted": "NG, CG, CN",
+      "allowedWeapons": [
+        {
+          "printed": "Mace",
+          "name": "Mace",
+          "gearId": null,
+          "match": "exact",
+          "gearIds": [
+            "footmansMace",
+            "horsemansMace"
+          ],
+          "matchNote": "Owner confirmed: both the Footman's and the Horseman's version are allowed."
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Astrology",
+        "name": "Astrology",
+        "nonWeaponId": "astrology",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Hypnotism",
+        "name": "Hypnotism",
+        "nonWeaponId": "hypnotism",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Dream Walk: Can send messages into sleeping minds across distances. 1/day",
+        "name": "Dream Walk",
+        "description": "Can send messages into sleeping minds across distances.",
+        "frequency": {
+          "text": "1/day",
+          "type": "limited",
+          "uses": 1,
+          "per": "day"
+        }
+      },
+      "source": {
+        "sheet": "Elves",
+        "row": 11
+      }
+    },
+    {
+      "id": "shevarash",
+      "name": "Shevarash",
+      "pantheon": "elf",
+      "portfolio": "Vengeance, Hatred of the Drow",
+      "portfolioList": [
+        "Vengeance",
+        "Hatred of the Drow"
+      ],
+      "alignment": "CN",
+      "worshipperAlignments": [
+        "NG",
+        "CG",
+        "LN",
+        "N",
+        "CN",
+        "NE",
+        "CE"
+      ],
+      "worshipperAlignmentsPrinted": "NG, CG, LN, N, CN, NE, CE",
+      "allowedWeapons": [
+        {
+          "printed": "Longsword",
+          "name": "Longsword",
+          "gearId": "longSword",
+          "match": "exact",
+          "gearIds": [
+            "longSword"
+          ]
+        },
+        {
+          "printed": "Shortbow",
+          "name": "Shortbow",
+          "gearId": "shortBow",
+          "match": "exact",
+          "gearIds": [
+            "shortBow"
+          ]
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Tracking",
+        "name": "Tracking",
+        "nonWeaponId": "tracking",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Blind-fighting",
+        "name": "Blind-fighting",
+        "nonWeaponId": "blindFighting",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Drow Bane: Grants +1 hit/damage bonuses against dark elven entities. Constant Passive",
+        "name": "Drow Bane",
+        "description": "Grants +1 hit/damage bonuses against dark elven entities.",
+        "frequency": {
+          "text": "Constant Passive",
+          "type": "constant"
+        }
+      },
+      "source": {
+        "sheet": "Elves",
+        "row": 12
+      }
+    },
+    {
+      "id": "solonorThelandira",
+      "name": "Solonor Thelandira",
+      "pantheon": "elf",
+      "portfolio": "Archery, Hunting, Wilderness Survival",
+      "portfolioList": [
+        "Archery",
+        "Hunting",
+        "Wilderness Survival"
+      ],
+      "alignment": "CG",
+      "worshipperAlignments": [
+        "NG",
+        "CG",
+        "CN"
+      ],
+      "worshipperAlignmentsPrinted": "NG, CG, CN",
+      "allowedWeapons": [
+        {
+          "printed": "Longbow",
+          "name": "Longbow",
+          "gearId": "longBow",
+          "match": "exact",
+          "gearIds": [
+            "longBow"
+          ]
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Hunting",
+        "name": "Hunting",
+        "nonWeaponId": "hunting",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Bowyer/Fletcher",
+        "name": "Bowyer/Fletcher",
+        "nonWeaponId": "bowyerFletcher",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "True Shot: Adds +1 to ranged bow attack tables every 3 levels. Constant Passive",
+        "name": "True Shot",
+        "description": "Adds +1 to ranged bow attack tables every 3 levels.",
+        "frequency": {
+          "text": "Constant Passive",
+          "type": "constant"
+        }
+      },
+      "source": {
+        "sheet": "Elves",
+        "row": 13
+      }
+    },
+    {
+      "id": "garlGlittergold",
+      "name": "Garl Glittergold",
+      "pantheon": "gnome",
+      "portfolio": "Humour, Luck, Trickery, Leadership",
+      "portfolioList": [
+        "Humour",
+        "Luck",
+        "Trickery",
+        "Leadership"
+      ],
+      "alignment": "NG",
+      "worshipperAlignments": [
+        "LG",
+        "NG",
+        "CG",
+        "LN",
+        "N",
+        "CN"
+      ],
+      "worshipperAlignmentsPrinted": "LG, NG, CG, LN, N, CN",
+      "allowedWeapons": [
+        {
+          "printed": "Battleaxe",
+          "name": "Battleaxe",
+          "gearId": "battleAxe",
+          "match": "exact",
+          "gearIds": [
+            "battleAxe"
+          ]
+        },
+        {
+          "printed": "Warhammer",
+          "name": "Warhammer",
+          "gearId": "warhammer",
+          "match": "exact",
+          "gearIds": [
+            "warhammer"
+          ]
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Gem Cutting",
+        "name": "Gem Cutting",
+        "nonWeaponId": "gemCutting",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Appraising",
+        "name": "Appraising",
+        "nonWeaponId": "appraising",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Glittering Jest: Blinds target with gold dust, duration scales. 2/day",
+        "name": "Glittering Jest",
+        "description": "Blinds target with gold dust, duration scales.",
+        "frequency": {
+          "text": "2/day",
+          "type": "limited",
+          "uses": 2,
+          "per": "day"
+        }
+      },
+      "source": {
+        "sheet": "Gnomes",
+        "row": 2
+      }
+    },
+    {
+      "id": "baervanWildwanderer",
+      "name": "Baervan Wildwanderer",
+      "pantheon": "gnome",
+      "portfolio": "Nature, Travel, Forests, Forest Gnomes",
+      "portfolioList": [
+        "Nature",
+        "Travel",
+        "Forests",
+        "Forest Gnomes"
+      ],
+      "alignment": "NG",
+      "worshipperAlignments": [
+        "LG",
+        "NG",
+        "CG",
+        "N"
+      ],
+      "worshipperAlignmentsPrinted": "LG, NG, CG, N",
+      "allowedWeapons": [
+        {
+          "printed": "Quarterstaff",
+          "name": "Quarterstaff",
+          "gearId": "quarterstaff",
+          "match": "exact",
+          "gearIds": [
+            "quarterstaff"
+          ]
+        },
+        {
+          "printed": "Sling",
+          "name": "Sling",
+          "gearId": "sling",
+          "match": "exact",
+          "gearIds": [
+            "sling"
+          ]
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Survival (Forest)",
+        "name": "Survival",
+        "specialisation": "Forest",
+        "nonWeaponId": "survival",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Animal Signs",
+        "name": "Animal Signs",
+        "nonWeaponId": "animalSigns",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Forest Companion: Summons small woodland animal ally based on tier. 1/day",
+        "name": "Forest Companion",
+        "description": "Summons small woodland animal ally based on tier.",
+        "frequency": {
+          "text": "1/day",
+          "type": "limited",
+          "uses": 1,
+          "per": "day"
+        }
+      },
+      "source": {
+        "sheet": "Gnomes",
+        "row": 3
+      }
+    },
+    {
+      "id": "baravarCloakshadow",
+      "name": "Baravar Cloakshadow",
+      "pantheon": "gnome",
+      "portfolio": "Illusions, Deception, Warding",
+      "portfolioList": [
+        "Illusions",
+        "Deception",
+        "Warding"
+      ],
+      "alignment": "NG",
+      "worshipperAlignments": [
+        "LG",
+        "NG",
+        "CG",
+        "LN",
+        "N",
+        "CN"
+      ],
+      "worshipperAlignmentsPrinted": "LG, NG, CG, LN, N, CN",
+      "allowedWeapons": [
+        {
+          "printed": "Dagger",
+          "name": "Dagger",
+          "gearId": "daggerOrDirk",
+          "match": "exact",
+          "gearIds": [
+            "daggerOrDirk"
+          ]
+        },
+        {
+          "printed": "Dart",
+          "name": "Dart",
+          "gearId": "dart",
+          "match": "exact",
+          "gearIds": [
+            "dart"
+          ]
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Disguise",
+        "name": "Disguise",
+        "nonWeaponId": "disguise",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Alertness",
+        "name": "Alertness",
+        "nonWeaponId": "alertness",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Illusion Veil: Blurs form (+2 AC bonus, duration scales per level). 1/day",
+        "name": "Illusion Veil",
+        "description": "Blurs form (+2 AC bonus, duration scales per level).",
+        "frequency": {
+          "text": "1/day",
+          "type": "limited",
+          "uses": 1,
+          "per": "day"
+        }
+      },
+      "source": {
+        "sheet": "Gnomes",
+        "row": 4
+      }
+    },
+    {
+      "id": "callarduranSmoothhands",
+      "name": "Callarduran Smoothhands",
+      "pantheon": "gnome",
+      "portfolio": "Stone, Mining, Svirfneblin",
+      "portfolioList": [
+        "Stone",
+        "Mining",
+        "Svirfneblin"
+      ],
+      "alignment": "N",
+      "worshipperAlignments": [
+        "LG",
+        "NG",
+        "CG",
+        "LN",
+        "N",
+        "CN"
+      ],
+      "worshipperAlignmentsPrinted": "LG, NG, CG, LN, N, CN",
+      "allowedWeapons": [
+        {
+          "printed": "Pick",
+          "name": "Pick",
+          "gearId": null,
+          "match": "exact",
+          "gearIds": [
+            "footmansPick",
+            "horsemansPick"
+          ],
+          "matchNote": "Owner confirmed: both the Footman's and the Horseman's version are allowed."
+        },
+        {
+          "printed": "dagger",
+          "name": "dagger",
+          "gearId": "daggerOrDirk",
+          "match": "exact",
+          "gearIds": [
+            "daggerOrDirk"
+          ]
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Spelunking",
+        "name": "Spelunking",
+        "nonWeaponId": "spelunking",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Gem Cutting",
+        "name": "Gem Cutting",
+        "nonWeaponId": "gemCutting",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Stone Form: Skin hardens to granite, grants high damage reduction. 1/day",
+        "name": "Stone Form",
+        "description": "Skin hardens to granite, grants high damage reduction.",
+        "frequency": {
+          "text": "1/day",
+          "type": "limited",
+          "uses": 1,
+          "per": "day"
+        }
+      },
+      "source": {
+        "sheet": "Gnomes",
+        "row": 5
+      }
+    },
+    {
+      "id": "flandalSteelskin",
+      "name": "Flandal Steelskin",
+      "pantheon": "gnome",
+      "portfolio": "Smithing, Metalworking",
+      "portfolioList": [
+        "Smithing",
+        "Metalworking"
+      ],
+      "alignment": "NG",
+      "worshipperAlignments": [
+        "LG",
+        "NG",
+        "CG"
+      ],
+      "worshipperAlignmentsPrinted": "LG, NG, CG",
+      "allowedWeapons": [
+        {
+          "printed": "Warhammer",
+          "name": "Warhammer",
+          "gearId": "warhammer",
+          "match": "exact",
+          "gearIds": [
+            "warhammer"
+          ]
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Weaponsmithing",
+        "name": "Weaponsmithing",
+        "nonWeaponId": "weaponsmithing",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Blacksmithing",
+        "name": "Blacksmithing",
+        "nonWeaponId": "blacksmithing",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Flame Forge: Immunity to mundane heat and forge fire damage types. Constant Passive",
+        "name": "Flame Forge",
+        "description": "Immunity to mundane heat and forge fire damage types.",
+        "frequency": {
+          "text": "Constant Passive",
+          "type": "constant"
+        }
+      },
+      "source": {
+        "sheet": "Gnomes",
+        "row": 6
+      }
+    },
+    {
+      "id": "gaerdalIronhand",
+      "name": "Gaerdal Ironhand",
+      "pantheon": "gnome",
+      "portfolio": "Vigilance, Defense, Combat",
+      "portfolioList": [
+        "Vigilance",
+        "Defense",
+        "Combat"
+      ],
+      "alignment": "LG",
+      "worshipperAlignments": [
+        "LG",
+        "NG",
+        "LN"
+      ],
+      "worshipperAlignmentsPrinted": "LG, NG, LN",
+      "allowedWeapons": [
+        {
+          "printed": "Longsword",
+          "name": "Longsword",
+          "gearId": "longSword",
+          "match": "exact",
+          "gearIds": [
+            "longSword"
+          ]
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Tactics",
+        "name": "Tactics",
+        "nonWeaponId": "tactics",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Observation",
+        "name": "Observation",
+        "nonWeaponId": "observation",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Iron Guard: Grants defensive counter-attack lines to adjacent allies. Constant Passive",
+        "name": "Iron Guard",
+        "description": "Grants defensive counter-attack lines to adjacent allies.",
+        "frequency": {
+          "text": "Constant Passive",
+          "type": "constant"
+        }
+      },
+      "source": {
+        "sheet": "Gnomes",
+        "row": 7
+      }
+    },
+    {
+      "id": "segojanEarthcaller",
+      "name": "Segojan Earthcaller",
+      "pantheon": "gnome",
+      "portfolio": "Earth, Nature, Dead, Rock Gnomes",
+      "portfolioList": [
+        "Earth",
+        "Nature",
+        "Dead",
+        "Rock Gnomes"
+      ],
+      "alignment": "NG",
+      "worshipperAlignments": [
+        "LG",
+        "NG",
+        "CG"
+      ],
+      "worshipperAlignmentsPrinted": "LG, NG, CG",
+      "allowedWeapons": [
+        {
+          "printed": "Quarterstaff",
+          "name": "Quarterstaff",
+          "gearId": "quarterstaff",
+          "match": "exact",
+          "gearIds": [
+            "quarterstaff"
+          ]
+        },
+        {
+          "printed": "Club",
+          "name": "Club",
+          "gearId": "club",
+          "match": "exact",
+          "gearIds": [
+            "club"
+          ]
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Ancient History",
+        "name": "Ancient History",
+        "nonWeaponId": "ancientHistory",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Animal Training",
+        "name": "Animal Training",
+        "nonWeaponId": "animalTraining",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Earth Call: Can command earth elementals or burrowing fauna. 1/day",
+        "name": "Earth Call",
+        "description": "Can command earth elementals or burrowing fauna.",
+        "frequency": {
+          "text": "1/day",
+          "type": "limited",
+          "uses": 1,
+          "per": "day"
+        }
+      },
+      "source": {
+        "sheet": "Gnomes",
+        "row": 8
+      }
+    },
+    {
+      "id": "urdlen",
+      "name": "Urdlen",
+      "pantheon": "gnome",
+      "portfolio": "Greed, Bloodlust, Hatred",
+      "portfolioList": [
+        "Greed",
+        "Bloodlust",
+        "Hatred"
+      ],
+      "alignment": "CE",
+      "worshipperAlignments": [
+        "NE",
+        "CE",
+        "CN"
+      ],
+      "worshipperAlignmentsPrinted": "NE, CE, CN",
+      "allowedWeapons": [
+        {
+          "printed": "Claws",
+          "name": "Claws",
+          "gearId": null,
+          "match": "natural",
+          "gearIds": []
+        },
+        {
+          "printed": "Spiked gauntlet",
+          "name": "Spiked gauntlet",
+          "gearId": null,
+          "match": "notInGear",
+          "gearIds": []
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Intimidation",
+        "name": "Intimidation",
+        "nonWeaponId": "intimidation",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Brawling",
+        "name": "Brawling",
+        "nonWeaponId": "brawling",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Blood Craze: Enters absolute berzerker frenzy buffing hit profiles. 1/day",
+        "name": "Blood Craze",
+        "description": "Enters absolute berzerker frenzy buffing hit profiles.",
+        "frequency": {
+          "text": "1/day",
+          "type": "limited",
+          "uses": 1,
+          "per": "day"
+        }
+      },
+      "source": {
+        "sheet": "Gnomes",
+        "row": 9
+      }
+    },
+    {
+      "id": "yondalla",
+      "name": "Yondalla",
+      "pantheon": "halfling",
+      "portfolio": "Protection, Life, Leadership, Creation",
+      "portfolioList": [
+        "Protection",
+        "Life",
+        "Leadership",
+        "Creation"
+      ],
+      "alignment": "LG",
+      "worshipperAlignments": [
+        "LG",
+        "NG",
+        "LN"
+      ],
+      "worshipperAlignmentsPrinted": "LG, NG, LN",
+      "allowedWeapons": [
+        {
+          "printed": "Shortsword",
+          "name": "Shortsword",
+          "gearId": "shortSword",
+          "match": "exact",
+          "gearIds": [
+            "shortSword"
+          ]
+        },
+        {
+          "printed": "Sling",
+          "name": "Sling",
+          "gearId": "sling",
+          "match": "exact",
+          "gearIds": [
+            "sling"
+          ]
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Cooking",
+        "name": "Cooking",
+        "nonWeaponId": "cooking",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Etiquette",
+        "name": "Etiquette",
+        "nonWeaponId": "etiquette",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Matriarch Shield: Grants bonus step (+1) to saving throws every 3 levels. 1/day",
+        "name": "Matriarch Shield",
+        "description": "Grants bonus step (+1) to saving throws every 3 levels.",
+        "frequency": {
+          "text": "1/day",
+          "type": "limited",
+          "uses": 1,
+          "per": "day"
+        }
+      },
+      "source": {
+        "sheet": "Halflings",
+        "row": 2
+      }
+    },
+    {
+      "id": "arvoreen",
+      "name": "Arvoreen",
+      "pantheon": "halfling",
+      "portfolio": "Defense, Vigilance, Guardianship",
+      "portfolioList": [
+        "Defense",
+        "Vigilance",
+        "Guardianship"
+      ],
+      "alignment": "LG",
+      "worshipperAlignments": [
+        "LG",
+        "NG",
+        "LN"
+      ],
+      "worshipperAlignmentsPrinted": "LG, NG, LN",
+      "allowedWeapons": [
+        {
+          "printed": "Shortsword",
+          "name": "Shortsword",
+          "gearId": "shortSword",
+          "match": "exact",
+          "gearIds": [
+            "shortSword"
+          ]
+        },
+        {
+          "printed": "Shortbow",
+          "name": "Shortbow",
+          "gearId": "shortBow",
+          "match": "exact",
+          "gearIds": [
+            "shortBow"
+          ]
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Observation",
+        "name": "Observation",
+        "nonWeaponId": "observation",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Alertness",
+        "name": "Alertness",
+        "nonWeaponId": "alertness",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Sentry Focus: Complete immunity to ambush surprise matrices (Cap 1 hr duration). Constant Passive",
+        "name": "Sentry Focus",
+        "description": "Complete immunity to ambush surprise matrices (Cap 1 hr duration).",
+        "frequency": {
+          "text": "Constant Passive",
+          "type": "constant"
+        }
+      },
+      "source": {
+        "sheet": "Halflings",
+        "row": 3
+      }
+    },
+    {
+      "id": "brandobaris",
+      "name": "Brandobaris",
+      "pantheon": "halfling",
+      "portfolio": "Thievery, Stealth, Adventure",
+      "portfolioList": [
+        "Thievery",
+        "Stealth",
+        "Adventure"
+      ],
+      "alignment": "N",
+      "worshipperAlignments": [
+        "NG",
+        "CG",
+        "LN",
+        "N",
+        "CN",
+        "NE"
+      ],
+      "worshipperAlignmentsPrinted": "NG, CG, LN, N, CN, NE",
+      "allowedWeapons": [
+        {
+          "printed": "Dagger",
+          "name": "Dagger",
+          "gearId": "daggerOrDirk",
+          "match": "exact",
+          "gearIds": [
+            "daggerOrDirk"
+          ]
+        },
+        {
+          "printed": "Sling",
+          "name": "Sling",
+          "gearId": "sling",
+          "match": "exact",
+          "gearIds": [
+            "sling"
+          ]
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Looting",
+        "name": "Looting",
+        "nonWeaponId": "looting",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Disguise",
+        "name": "Disguise",
+        "nonWeaponId": "disguise",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Shadow Blend: Upgrades hide checks by +5% per level milestone (Hard cap 90%). 2/day",
+        "name": "Shadow Blend",
+        "description": "Upgrades hide checks by +5% per level milestone (Hard cap 90%).",
+        "frequency": {
+          "text": "2/day",
+          "type": "limited",
+          "uses": 2,
+          "per": "day"
+        }
+      },
+      "source": {
+        "sheet": "Halflings",
+        "row": 4
+      }
+    },
+    {
+      "id": "cyrrollalee",
+      "name": "Cyrrollalee",
+      "pantheon": "halfling",
+      "portfolio": "Friendship, Trust, Hearth, Hospitality",
+      "portfolioList": [
+        "Friendship",
+        "Trust",
+        "Hearth",
+        "Hospitality"
+      ],
+      "alignment": "LG",
+      "worshipperAlignments": [
+        "LG",
+        "NG",
+        "LN"
+      ],
+      "worshipperAlignmentsPrinted": "LG, NG, LN",
+      "allowedWeapons": [
+        {
+          "printed": "Mace",
+          "name": "Mace",
+          "gearId": null,
+          "match": "exact",
+          "gearIds": [
+            "footmansMace",
+            "horsemansMace"
+          ],
+          "matchNote": "Owner confirmed: both the Footman's and the Horseman's version are allowed."
+        },
+        {
+          "printed": "Quarterstaff",
+          "name": "Quarterstaff",
+          "gearId": "quarterstaff",
+          "match": "exact",
+          "gearIds": [
+            "quarterstaff"
+          ]
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Local History",
+        "name": "Local History",
+        "nonWeaponId": "localHistory",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Etiquette",
+        "name": "Etiquette",
+        "nonWeaponId": "etiquette",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Hearth Bond: Purges fatigue lines and heals nearby party members uniformly. 1/day",
+        "name": "Hearth Bond",
+        "description": "Purges fatigue lines and heals nearby party members uniformly.",
+        "frequency": {
+          "text": "1/day",
+          "type": "limited",
+          "uses": 1,
+          "per": "day"
+        }
+      },
+      "source": {
+        "sheet": "Halflings",
+        "row": 5
+      }
+    },
+    {
+      "id": "sheelaPeryroyl",
+      "name": "Sheela Peryroyl",
+      "pantheon": "halfling",
+      "portfolio": "Agriculture, Nature, Weather, Love",
+      "portfolioList": [
+        "Agriculture",
+        "Nature",
+        "Weather",
+        "Love"
+      ],
+      "alignment": "N",
+      "worshipperAlignments": [
+        "LG",
+        "NG",
+        "CG",
+        "LN",
+        "N",
+        "CN"
+      ],
+      "worshipperAlignmentsPrinted": "LG, NG, CG, LN, N, CN",
+      "allowedWeapons": [
+        {
+          "printed": "Sickle",
+          "name": "Sickle",
+          "gearId": "sickle",
+          "match": "exact",
+          "gearIds": [
+            "sickle"
+          ]
+        },
+        {
+          "printed": "Sling",
+          "name": "Sling",
+          "gearId": "sling",
+          "match": "exact",
+          "gearIds": [
+            "sling"
+          ]
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Agriculture",
+        "name": "Agriculture",
+        "nonWeaponId": "agriculture",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Herbalism",
+        "name": "Herbalism",
+        "nonWeaponId": "herbalism",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Green Growth: Roots targets via local plant lines, range scales per level. 1/day",
+        "name": "Green Growth",
+        "description": "Roots targets via local plant lines, range scales per level.",
+        "frequency": {
+          "text": "1/day",
+          "type": "limited",
+          "uses": 1,
+          "per": "day"
+        }
+      },
+      "source": {
+        "sheet": "Halflings",
+        "row": 6
+      }
+    },
+    {
+      "id": "urogalan",
+      "name": "Urogalan",
+      "pantheon": "halfling",
+      "portfolio": "Earth, Death, Halfling Dead",
+      "portfolioList": [
+        "Earth",
+        "Death",
+        "Halfling Dead"
+      ],
+      "alignment": "LN",
+      "worshipperAlignments": [
+        "LG",
+        "NG",
+        "LN",
+        "N",
+        "LE"
+      ],
+      "worshipperAlignmentsPrinted": "LG, NG, LN, N, LE",
+      "allowedWeapons": [
+        {
+          "printed": "Flail",
+          "name": "Flail",
+          "gearId": null,
+          "match": "exact",
+          "gearIds": [
+            "footmansFlail",
+            "horsemansFlail"
+          ],
+          "matchNote": "Owner confirmed: both the Footman's and the Horseman's version are allowed."
+        },
+        {
+          "printed": "Scythe",
+          "name": "Scythe",
+          "gearId": null,
+          "match": "notInGear",
+          "gearIds": []
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Ancient History",
+        "name": "Ancient History",
+        "nonWeaponId": "ancientHistory",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Reading/Writing",
+        "name": "Reading/Writing",
+        "nonWeaponId": "readingWriting",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Grave Ward: Grants +2 protection bonus on saves vs hostile necromancy loops. 3/day",
+        "name": "Grave Ward",
+        "description": "Grants +2 protection bonus on saves vs hostile necromancy loops.",
+        "frequency": {
+          "text": "3/day",
+          "type": "limited",
+          "uses": 3,
+          "per": "day"
+        }
+      },
+      "source": {
+        "sheet": "Halflings",
+        "row": 7
+      }
+    },
+    {
+      "id": "gruumshOneEye",
+      "name": "Gruumsh One-Eye",
+      "pantheon": "orc",
+      "portfolio": "Conquest, Destruction, War, Survival",
+      "portfolioList": [
+        "Conquest",
+        "Destruction",
+        "War",
+        "Survival"
+      ],
+      "alignment": "CE",
+      "worshipperAlignments": [
+        "CN",
+        "NE",
+        "CE"
+      ],
+      "worshipperAlignmentsPrinted": "CN, NE, CE",
+      "allowedWeapons": [
+        {
+          "printed": "Spear",
+          "name": "Spear",
+          "gearId": "spear",
+          "match": "exact",
+          "gearIds": [
+            "spear"
+          ]
+        },
+        {
+          "printed": "Shortsword",
+          "name": "Shortsword",
+          "gearId": "shortSword",
+          "match": "exact",
+          "gearIds": [
+            "shortSword"
+          ]
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Intimidation",
+        "name": "Intimidation",
+        "nonWeaponId": "intimidation",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Tracking",
+        "name": "Tracking",
+        "nonWeaponId": "tracking",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Eye Bite: Blinds target, duration scales up +1 round per level. 1/day",
+        "name": "Eye Bite",
+        "description": "Blinds target, duration scales up +1 round per level.",
+        "frequency": {
+          "text": "1/day",
+          "type": "limited",
+          "uses": 1,
+          "per": "day"
+        }
+      },
+      "source": {
+        "sheet": "Orcs & Half-Orcs",
+        "row": 2
+      }
+    },
+    {
+      "id": "bahgtru",
+      "name": "Bahgtru",
+      "pantheon": "orc",
+      "portfolio": "Brute Strength, Blind Loyalty",
+      "portfolioList": [
+        "Brute Strength",
+        "Blind Loyalty"
+      ],
+      "alignment": "CE",
+      "worshipperAlignments": [
+        "LN",
+        "N",
+        "CN",
+        "LE",
+        "NE",
+        "CE"
+      ],
+      "worshipperAlignmentsPrinted": "LN, N, CN, LE, NE, CE",
+      "allowedWeapons": [
+        {
+          "printed": "Unarmed",
+          "name": "Unarmed",
+          "gearId": null,
+          "match": "natural",
+          "gearIds": []
+        },
+        {
+          "printed": "Spiked Club",
+          "name": "Spiked Club",
+          "gearId": null,
+          "match": "notInGear",
+          "gearIds": []
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Endurance",
+        "name": "Endurance",
+        "nonWeaponId": "endurance",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Brawling",
+        "name": "Brawling",
+        "nonWeaponId": "brawling",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Brute Force: Temporarily raises effective Strength score +1 step per 5 levels. Constant Passive",
+        "name": "Brute Force",
+        "description": "Temporarily raises effective Strength score +1 step per 5 levels.",
+        "frequency": {
+          "text": "Constant Passive",
+          "type": "constant"
+        }
+      },
+      "source": {
+        "sheet": "Orcs & Half-Orcs",
+        "row": 3
+      }
+    },
+    {
+      "id": "ilneval",
+      "name": "Ilneval",
+      "pantheon": "orc",
+      "portfolio": "Strategy, Hordes, Military Leadership",
+      "portfolioList": [
+        "Strategy",
+        "Hordes",
+        "Military Leadership"
+      ],
+      "alignment": "NE",
+      "worshipperAlignments": [
+        "LN",
+        "LE",
+        "NE",
+        "CE"
+      ],
+      "worshipperAlignmentsPrinted": "LN, LE, NE, CE",
+      "allowedWeapons": [
+        {
+          "printed": "Broadsword",
+          "name": "Broadsword",
+          "gearId": "broadSword",
+          "match": "exact",
+          "gearIds": [
+            "broadSword"
+          ]
+        },
+        {
+          "printed": "Spear",
+          "name": "Spear",
+          "gearId": "spear",
+          "match": "exact",
+          "gearIds": [
+            "spear"
+          ]
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Tactics",
+        "name": "Tactics",
+        "nonWeaponId": "tactics",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Intimidation",
+        "name": "Intimidation",
+        "nonWeaponId": "intimidation",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Horde Rally: Projects +1 combat hit bonus to all adjacent tactical allies. 1/day",
+        "name": "Horde Rally",
+        "description": "Projects +1 combat hit bonus to all adjacent tactical allies.",
+        "frequency": {
+          "text": "1/day",
+          "type": "limited",
+          "uses": 1,
+          "per": "day"
+        }
+      },
+      "source": {
+        "sheet": "Orcs & Half-Orcs",
+        "row": 4
+      }
+    },
+    {
+      "id": "luthic",
+      "name": "Luthic",
+      "pantheon": "orc",
+      "portfolio": "Caves, Home, Healing, Fecundity",
+      "portfolioList": [
+        "Caves",
+        "Home",
+        "Healing",
+        "Fecundity"
+      ],
+      "alignment": "NE",
+      "worshipperAlignments": [
+        "LN",
+        "N",
+        "LE",
+        "NE",
+        "CE"
+      ],
+      "worshipperAlignmentsPrinted": "LN, N, LE, NE, CE",
+      "allowedWeapons": [
+        {
+          "printed": "Claws",
+          "name": "Claws",
+          "gearId": null,
+          "match": "natural",
+          "gearIds": []
+        },
+        {
+          "printed": "Dagger",
+          "name": "Dagger",
+          "gearId": "daggerOrDirk",
+          "match": "exact",
+          "gearIds": [
+            "daggerOrDirk"
+          ]
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Survival",
+        "name": "Survival",
+        "nonWeaponId": "survival",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Healing",
+        "name": "Healing",
+        "nonWeaponId": "healing",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Cave Healed: Doubles native execution of regeneration values while underground. Constant Passive",
+        "name": "Cave Healed",
+        "description": "Doubles native execution of regeneration values while underground.",
+        "frequency": {
+          "text": "Constant Passive",
+          "type": "constant"
+        }
+      },
+      "source": {
+        "sheet": "Orcs & Half-Orcs",
+        "row": 5
+      }
+    },
+    {
+      "id": "shargaas",
+      "name": "Shargaas",
+      "pantheon": "orc",
+      "portfolio": "Darkness, Stealth, Thieves, Night",
+      "portfolioList": [
+        "Darkness",
+        "Stealth",
+        "Thieves",
+        "Night"
+      ],
+      "alignment": "CE",
+      "worshipperAlignments": [
+        "CN",
+        "NE",
+        "CE"
+      ],
+      "worshipperAlignmentsPrinted": "CN, NE, CE",
+      "allowedWeapons": [
+        {
+          "printed": "Shortsword",
+          "name": "Shortsword",
+          "gearId": "shortSword",
+          "match": "exact",
+          "gearIds": [
+            "shortSword"
+          ]
+        },
+        {
+          "printed": "Dart",
+          "name": "Dart",
+          "gearId": "dart",
+          "match": "exact",
+          "gearIds": [
+            "dart"
+          ]
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Looting",
+        "name": "Looting",
+        "nonWeaponId": "looting",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Blind-fight",
+        "name": "Blind-fighting",
+        "nonWeaponId": "blindFighting",
+        "match": "exact",
+        "matchNote": "Printed \"Blind-fight\"; owner confirmed this is Blind-fighting."
+      },
+      "innatePower": {
+        "printed": "Shadow Step: Teleport safely between ambient unlit areas, range scales +10 ft/level. 2/day",
+        "name": "Shadow Step",
+        "description": "Teleport safely between ambient unlit areas, range scales +10 ft/level.",
+        "frequency": {
+          "text": "2/day",
+          "type": "limited",
+          "uses": 2,
+          "per": "day"
+        }
+      },
+      "source": {
+        "sheet": "Orcs & Half-Orcs",
+        "row": 6
+      }
+    },
+    {
+      "id": "yurtrus",
+      "name": "Yurtrus",
+      "pantheon": "orc",
+      "portfolio": "Disease, Rotten Flesh, Death",
+      "portfolioList": [
+        "Disease",
+        "Rotten Flesh",
+        "Death"
+      ],
+      "alignment": "NE",
+      "worshipperAlignments": [
+        "LN",
+        "N",
+        "CN",
+        "LE",
+        "NE",
+        "CE"
+      ],
+      "worshipperAlignmentsPrinted": "LN, N, CN, LE, NE, CE",
+      "allowedWeapons": [
+        {
+          "printed": "Unarmed",
+          "name": "Unarmed",
+          "gearId": null,
+          "match": "natural",
+          "gearIds": []
+        },
+        {
+          "printed": "Sickle",
+          "name": "Sickle",
+          "gearId": "sickle",
+          "match": "exact",
+          "gearIds": [
+            "sickle"
+          ]
+        }
+      ],
+      "requiredProficiency": {
+        "printed": "Herbalism",
+        "name": "Herbalism",
+        "nonWeaponId": "herbalism",
+        "match": "exact"
+      },
+      "bonusProficiency": {
+        "printed": "Ancient History",
+        "name": "Ancient History",
+        "nonWeaponId": "ancientHistory",
+        "match": "exact"
+      },
+      "innatePower": {
+        "printed": "Disease Cloud: Emanates infectious rot strains, damage scales per level. 1/week",
+        "name": "Disease Cloud",
+        "description": "Emanates infectious rot strains, damage scales per level.",
+        "frequency": {
+          "text": "1/week",
+          "type": "limited",
+          "uses": 1,
+          "per": "week"
+        }
+      },
+      "source": {
+        "sheet": "Orcs & Half-Orcs",
+        "row": 7
+      }
+    }
+  ]
+}
