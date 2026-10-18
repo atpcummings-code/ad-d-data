@@ -555,8 +555,19 @@
           "detectNoise": 5,
           "climbWalls": -15,
           "readLanguages": -5
+        },
+        "halfOrc": {
+          "pickPockets": 0,
+          "openLocks": 0,
+          "findRemoveTraps": 5,
+          "moveSilently": 0,
+          "hideInShadows": 0,
+          "detectNoise": 5,
+          "climbWalls": 0,
+          "readLanguages": 0
         }
-      }
+      },
+      "halfOrcNote": "Half-orc column owner-supplied: find/remove traps +5, detect noise +5, all others 0."
     },
     "dexAdjustmentsPct": {
       "source": "PHB Table 28: Thieving Skill Dexterity Adjustments",

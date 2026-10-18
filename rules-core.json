@@ -2303,43 +2303,60 @@
           "height": {
             "unit": "inches",
             "base": {
-              "male": 66,
-              "female": 62
+              "male": 60,
+              "female": 58
             },
             "modifier": {
-              "text": "1d4",
+              "text": "1d12",
               "count": 1,
-              "sides": 4
+              "sides": 12
             },
-            "note": "Owner decision: one modifier for both sexes (the supplied table showed male 1d4, female 1d3)."
+            "note": "Owner-supplied (replaces the earlier half-orc height figures). One modifier for both sexes. Range 59 to 72 inches."
           },
           "weight": {
             "unit": "pounds",
             "base": {
-              "male": 150,
-              "female": 120
+              "male": 135,
+              "female": 95
             },
             "modifier": {
-              "text": "2d8",
-              "count": 2,
-              "sides": 8
+              "text": "6d10",
+              "count": 6,
+              "sides": 10
             },
-            "note": "Owner decision: one modifier for both sexes, 2d8 (the supplied table showed male 2d8, female 3d6)."
+            "note": "Owner-supplied (replaces the earlier half-orc weight figures). One modifier for both sexes. Range 101 to 195 pounds."
           },
-          "age": "not supplied",
-          "source": "owner-supplied table (Half-Orc height and weight)"
+          "age": {
+            "startingAge": {
+              "base": 12,
+              "variable": {
+                "text": "1d4",
+                "count": 1,
+                "sides": 4
+              }
+            },
+            "maximumAge": {
+              "base": 60,
+              "variable": {
+                "text": "1d20",
+                "count": 1,
+                "sides": 20
+              }
+            }
+          },
+          "source": "owner-supplied (half-orc age, height and weight)"
         }
       }
     },
     "halfOrc": {
-      "status": "ability adjustments, languages, infravision, height and weight entered; age/aging tables, saves and other traits still not supplied",
-      "note": "The half-orc was listed with base move 12. It is not in the height/weight/age/aging tables (Tables 10-12) or the thief racial adjustments supplied so far. Its ability limits, class access, level limits and physical tables still need to be supplied if the app should offer it.",
-      "optionalRace": "to confirm whether the app should include it, and whether it is a core or house race",
+      "status": "complete (owner confirmed)",
+      "note": "Base move 12. Age, height and weight are owner-supplied (aging thresholds are calculated from the base maximum age of 60, as for other races). Half-orc is not in the PHB Tables 10-12 or Table 27 data supplied earlier.",
       "abilityAdjustments": {
         "str": 1,
         "con": 1,
         "cha": -2
-      }
+      },
+      "raceType": "house"
     },
     "raceIdsSeen": [
       "human",
@@ -2350,9 +2367,7 @@
       "halfling",
       "halfOrc"
     ],
-    "stillNeeded": [
-      "Half-orc: age table (starting and maximum age, aging thresholds) and any saving throw or other racial traits (not supplied)."
-    ],
+    "stillNeeded": [],
     "levelLimits": {
       "coreRule": "Not entered: core level limits by race and class are ignored.",
       "houseRule": "Unlimited for every race and class (house.json levelLimits, houseRules.noLevelLimits).",
@@ -3018,7 +3033,8 @@
             ],
             "note": "warhammerThrown is a gear.json missileRanges row id (missile-only weapon)."
           }
-        ]
+        ],
+        "halfOrc": "none (owner confirmed)"
       },
       "note": "Half-elves do not get these bonuses (the text names elves and halflings only). Harpoon and blowgun are not flagged for halflings on the spreadsheet.",
       "resolved": "Staff sling counts as a sling for halflings (flagged Yes on the spreadsheet). Thrown weapons are the ones flagged Yes, replacing the earlier Table 45 assumption."
@@ -3390,7 +3406,8 @@
             "Multi-class armour restriction: handled outside the app (owner)."
           ],
           "multiClassXp": "all earned experience divided equally between the classes (already covered by the multi-class rules)",
-          "note": "Printed multi-class combinations match the owner's list (F/C, F/T, C/T). Text assumes PCs are within the superior 10% of half-orcs."
+          "note": "Printed multi-class combinations match the owner's list (F/C, F/T, C/T). Text assumes PCs are within the superior 10% of half-orcs.",
+          "saveBonuses": "none (owner confirmed)"
         }
       }
     }
