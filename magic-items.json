@@ -16,7 +16,8 @@
       "extraItems": "Items added by the owner that are not on the printed table (no die roll, roll null). source 'owner-added'. valueGp = gold piece value (new field; not printed on the tables). hasDescription false until description text is supplied.",
       "variants": "Items whose version is fixed once by a random roll are stored as one entry per possible version. Each variant row keeps the parent's table roll, has id = parent id + variant key, variantOf = parent id and variant = {die, roll [from,to] on the item's own die, label}. Variant xp, weightLbs, plus and speedFactor are filled where the item text gives them. The generic entry is removed. nameMarker footnotes about 'type determined by die roll' no longer apply to variant rows. Items not expanded are listed in variantsNotExpanded.",
       "specialWeaponTypes": "Table 110 items carry weaponTypeOptions (gear.json weapon ids the item can be) and weaponTypeSelection: 'fixed' (one option), 'choice' (the app shows a selector) or 'none' (no gear.json item, e.g. nets). plus is the item's magical plus (null where it varies or isn't stated; plusNote explains). weightLbs and speedFactorBase/speedFactor on 'choice' items are not fixed by the item: when a type is selected take weight and speedFactorBase from that gear.json weapon and speedFactor = max(0, speedFactorBase - plus). Sun Blade is a bastard sword in appearance and damage but its weight and speed factor are those of a short sword (gearRef shortSword) per its description. Owner choices: generic swords may be any of the 12 gear.json Sword-group items; hammers may be Warhammer, Warhammer (Thrown) or Warhammer, two-handed; Hornblade may be Knife, Dagger or Short sword; Buckle Knife is Knife; crossbows may be any of the five gear.json crossbows (hand, light, heavy, disk, doubled); Bow +1 may be short, long, composite short or composite long.",
-      "specialArmourTypes": "Table 107 items carry armourTypeOptions (gear.json armour ids the item can be) and armourTypeSelection ('fixed' = one option, 'choice' = the app shows a selector). plus is the item's magical AC plus (null where it is not fixed); plusOptions lists the allowed values where the plus is a choice (Elven Chain Mail +1 to +5, owner-set; Plate Mail of Vulnerability -2, -3 or -4 per its description); plusNote explains. On 'choice' items weightLbs is not fixed by the item: take weight from the selected gear.json armour. Owner choices: Armor of Blending and Armor of Missile Attraction may be any of the 12 body armours except Red Dragon Scale Armour; Shield, Large is Shield, Body; Shield -1, Missile Attractor may be any of the four shields. The armour and shield type tables are not in the data files."
+      "specialArmourTypes": "Table 107 items carry armourTypeOptions (gear.json armour ids the item can be) and armourTypeSelection ('fixed' = one option, 'choice' = the app shows a selector). plus is the item's magical AC plus (null where it is not fixed); plusOptions lists the allowed values where the plus is a choice (Elven Chain Mail +1 to +5, owner-set; Plate Mail of Vulnerability -2, -3 or -4 per its description); plusNote explains. On 'choice' items weightLbs is not fixed by the item: take weight from the selected gear.json armour. Owner choices: Armor of Blending and Armor of Missile Attraction may be any of the 12 body armours except Red Dragon Scale Armour; Shield, Large is Shield, Body; Shield -1, Missile Attractor may be any of the four shields. The armour and shield type tables are not in the data files.",
+      "hasCharges": "true on items that carry charges (from the item description, or the Table 91 ring footnote 'limited by the number of charges'). The field is absent on all other items. The number of charges is not stored: it varies by item and is to be recorded by the app."
     },
     "typos": {
       "Gauntets of Fumbling": "corrected to Gauntlets of Fumbling",
@@ -1686,7 +1687,8 @@
               "id": "rings.animalFriendship",
               "hasDescription": true,
               "weightLbs": 0.015,
-              "weightSource": "owner-supplied (placeholder, may be revised)"
+              "weightSource": "owner-supplied (placeholder, may be revised)",
+              "hasCharges": true
             },
             {
               "roll": [
@@ -1765,7 +1767,8 @@
               "id": "rings.djinniSummoning",
               "hasDescription": true,
               "weightLbs": 0.015,
-              "weightSource": "owner-supplied (placeholder, may be revised)"
+              "weightSource": "owner-supplied (placeholder, may be revised)",
+              "hasCharges": true
             },
             {
               "roll": [
@@ -1870,7 +1873,8 @@
               "id": "rings.mammalControl",
               "hasDescription": true,
               "weightLbs": 0.015,
-              "weightSource": "owner-supplied (placeholder, may be revised)"
+              "weightSource": "owner-supplied (placeholder, may be revised)",
+              "hasCharges": true
             },
             {
               "roll": [
@@ -2229,7 +2233,8 @@
               "id": "rings.ringOfTheRam",
               "hasDescription": true,
               "weightLbs": 0.015,
-              "weightSource": "owner-supplied (placeholder, may be revised)"
+              "weightSource": "owner-supplied (placeholder, may be revised)",
+              "hasCharges": true
             },
             {
               "roll": [
@@ -2527,7 +2532,8 @@
               "id": "rings.wishesMultiple",
               "hasDescription": true,
               "weightLbs": 0.015,
-              "weightSource": "owner-supplied (placeholder, may be revised)"
+              "weightSource": "owner-supplied (placeholder, may be revised)",
+              "hasCharges": true
             },
             {
               "roll": [
@@ -2541,7 +2547,8 @@
               "id": "rings.wishesThree",
               "hasDescription": true,
               "weightLbs": 0.015,
-              "weightSource": "owner-supplied (placeholder, may be revised)"
+              "weightSource": "owner-supplied (placeholder, may be revised)",
+              "hasCharges": true
             },
             {
               "roll": [
@@ -2558,7 +2565,8 @@
               "id": "rings.wizardry",
               "hasDescription": true,
               "weightLbs": 0.015,
-              "weightSource": "owner-supplied (placeholder, may be revised)"
+              "weightSource": "owner-supplied (placeholder, may be revised)",
+              "hasCharges": true
             },
             {
               "roll": [
@@ -2615,7 +2623,8 @@
               "xpPrinted": "7,500",
               "id": "rods.absorption",
               "hasDescription": true,
-              "weightLbs": 3.5
+              "weightLbs": 3.5,
+              "hasCharges": true
             },
             {
               "roll": [
@@ -2627,7 +2636,8 @@
               "xpPrinted": "7,000",
               "id": "rods.alertness",
               "hasDescription": true,
-              "weightLbs": 3.5
+              "weightLbs": 3.5,
+              "hasCharges": true
             },
             {
               "roll": [
@@ -2644,7 +2654,8 @@
               "xpPrinted": "5,000",
               "id": "rods.beguiling",
               "hasDescription": true,
-              "weightLbs": 3.5
+              "weightLbs": 3.5,
+              "hasCharges": true
             },
             {
               "roll": [
@@ -2668,7 +2679,8 @@
               "xpPrinted": "2,000",
               "id": "rods.flailing",
               "hasDescription": true,
-              "weightLbs": 3.5
+              "weightLbs": 3.5,
+              "hasCharges": true
             },
             {
               "roll": [
@@ -2683,7 +2695,8 @@
               "xpPrinted": "6,000",
               "id": "rods.lordlyMight",
               "hasDescription": true,
-              "weightLbs": 3.5
+              "weightLbs": 3.5,
+              "hasCharges": true
             },
             {
               "roll": [
@@ -2695,7 +2708,8 @@
               "xpPrinted": "5,000",
               "id": "rods.passage",
               "hasDescription": true,
-              "weightLbs": 3.5
+              "weightLbs": 3.5,
+              "hasCharges": true
             },
             {
               "roll": [
@@ -2710,7 +2724,8 @@
               "xpPrinted": "10,000",
               "id": "rods.resurrection",
               "hasDescription": true,
-              "weightLbs": 3.5
+              "weightLbs": 3.5,
+              "hasCharges": true
             },
             {
               "roll": [
@@ -2722,7 +2737,8 @@
               "xpPrinted": "8,000",
               "id": "rods.rulership",
               "hasDescription": true,
-              "weightLbs": 3.5
+              "weightLbs": 3.5,
+              "hasCharges": true
             },
             {
               "roll": [
@@ -2734,7 +2750,8 @@
               "xpPrinted": "3,000",
               "id": "rods.security",
               "hasDescription": true,
-              "weightLbs": 3.5
+              "weightLbs": 3.5,
+              "hasCharges": true
             },
             {
               "roll": [
@@ -2750,7 +2767,8 @@
               "xpPrinted": "4,000",
               "id": "rods.smiting",
               "hasDescription": true,
-              "weightLbs": 3.5
+              "weightLbs": 3.5,
+              "hasCharges": true
             },
             {
               "roll": [
@@ -2762,7 +2780,8 @@
               "xpPrinted": "2,500",
               "id": "rods.splendor",
               "hasDescription": true,
-              "weightLbs": 3.5
+              "weightLbs": 3.5,
+              "hasCharges": true
             },
             {
               "roll": [
@@ -2774,7 +2793,8 @@
               "xpPrinted": "3,000",
               "id": "rods.terror",
               "hasDescription": true,
-              "weightLbs": 3.5
+              "weightLbs": 3.5,
+              "hasCharges": true
             },
             {
               "roll": [
@@ -2827,7 +2847,8 @@
               "xpPrinted": "5,000",
               "id": "staves.command",
               "hasDescription": true,
-              "weightLbs": 5
+              "weightLbs": 5,
+              "hasCharges": true
             },
             {
               "roll": [
@@ -2842,7 +2863,8 @@
               "xpPrinted": "6,000",
               "id": "staves.curing",
               "hasDescription": true,
-              "weightLbs": 5
+              "weightLbs": 5,
+              "hasCharges": true
             },
             {
               "roll": [
@@ -2857,7 +2879,8 @@
               "xpPrinted": "15,000",
               "id": "staves.magi",
               "hasDescription": true,
-              "weightLbs": 5
+              "weightLbs": 5,
+              "hasCharges": true
             },
             {
               "roll": [
@@ -2872,7 +2895,8 @@
               "xpPrinted": "12,000",
               "id": "staves.power",
               "hasDescription": true,
-              "weightLbs": 5
+              "weightLbs": 5,
+              "hasCharges": true
             },
             {
               "roll": [
@@ -2902,7 +2926,8 @@
               "xpPrinted": "2,000",
               "id": "staves.slinging",
               "hasDescription": true,
-              "weightLbs": 5
+              "weightLbs": 5,
+              "hasCharges": true
             },
             {
               "roll": [
@@ -3050,7 +3075,8 @@
               "xpPrinted": "6,000",
               "id": "staves.striking",
               "hasDescription": true,
-              "weightLbs": 5
+              "weightLbs": 5,
+              "hasCharges": true
             },
             {
               "roll": [
@@ -3067,7 +3093,8 @@
               "xpMarker": "**",
               "id": "staves.swarmingInsects",
               "hasDescription": true,
-              "weightLbs": 5
+              "weightLbs": 5,
+              "hasCharges": true
             },
             {
               "roll": [
@@ -3079,7 +3106,8 @@
               "xpPrinted": "8,000",
               "id": "staves.thunderLightning",
               "hasDescription": true,
-              "weightLbs": 5
+              "weightLbs": 5,
+              "hasCharges": true
             },
             {
               "roll": [
@@ -3091,7 +3119,8 @@
               "xpPrinted": "8,000",
               "id": "staves.withering",
               "hasDescription": true,
-              "weightLbs": 5
+              "weightLbs": 5,
+              "hasCharges": true
             },
             {
               "roll": [
@@ -3106,7 +3135,8 @@
               "xpPrinted": "8,000",
               "id": "staves.woodlands",
               "hasDescription": true,
-              "weightLbs": 5
+              "weightLbs": 5,
+              "hasCharges": true
             },
             {
               "roll": [
@@ -3149,7 +3179,8 @@
               "xpPrinted": "7,000",
               "id": "wands.conjuration",
               "hasDescription": true,
-              "weightLbs": 0.1
+              "weightLbs": 0.1,
+              "hasCharges": true
             },
             {
               "roll": [
@@ -3161,7 +3192,8 @@
               "xpPrinted": "1,000",
               "id": "wands.earthAndStone",
               "hasDescription": true,
-              "weightLbs": 0.1
+              "weightLbs": 0.1,
+              "hasCharges": true
             },
             {
               "roll": [
@@ -3173,7 +3205,8 @@
               "xpPrinted": "2,000",
               "id": "wands.enemyDetection",
               "hasDescription": true,
-              "weightLbs": 0.1
+              "weightLbs": 0.1,
+              "hasCharges": true
             },
             {
               "roll": [
@@ -3189,7 +3222,8 @@
               "xpPrinted": "3,000",
               "id": "wands.fear",
               "hasDescription": true,
-              "weightLbs": 0.1
+              "weightLbs": 0.1,
+              "hasCharges": true
             },
             {
               "roll": [
@@ -3204,7 +3238,8 @@
               "xpPrinted": "4,500",
               "id": "wands.fire",
               "hasDescription": true,
-              "weightLbs": 0.1
+              "weightLbs": 0.1,
+              "hasCharges": true
             },
             {
               "roll": [
@@ -3216,7 +3251,8 @@
               "xpPrinted": "1,500",
               "id": "wands.flameExtinguishing",
               "hasDescription": true,
-              "weightLbs": 0.1
+              "weightLbs": 0.1,
+              "hasCharges": true
             },
             {
               "roll": [
@@ -3231,7 +3267,8 @@
               "xpPrinted": "6,000",
               "id": "wands.frost",
               "hasDescription": true,
-              "weightLbs": 0.1
+              "weightLbs": 0.1,
+              "hasCharges": true
             },
             {
               "roll": [
@@ -3243,7 +3280,8 @@
               "xpPrinted": "2,000",
               "id": "wands.illumination",
               "hasDescription": true,
-              "weightLbs": 0.1
+              "weightLbs": 0.1,
+              "hasCharges": true
             },
             {
               "roll": [
@@ -3258,7 +3296,8 @@
               "xpPrinted": "3,000",
               "id": "wands.illusion",
               "hasDescription": true,
-              "weightLbs": 0.1
+              "weightLbs": 0.1,
+              "hasCharges": true
             },
             {
               "roll": [
@@ -3273,7 +3312,8 @@
               "xpPrinted": "4,000",
               "id": "wands.lightning",
               "hasDescription": true,
-              "weightLbs": 0.1
+              "weightLbs": 0.1,
+              "hasCharges": true
             },
             {
               "roll": [
@@ -3285,7 +3325,8 @@
               "xpPrinted": "2,500",
               "id": "wands.magicDetection",
               "hasDescription": true,
-              "weightLbs": 0.1
+              "weightLbs": 0.1,
+              "hasCharges": true
             },
             {
               "roll": [
@@ -3297,7 +3338,8 @@
               "xpPrinted": "4,000",
               "id": "wands.magicMissiles",
               "hasDescription": true,
-              "weightLbs": 0.1
+              "weightLbs": 0.1,
+              "hasCharges": true
             },
             {
               "roll": [
@@ -3309,7 +3351,8 @@
               "xpPrinted": "1,500",
               "id": "wands.metalAndMineralDetection",
               "hasDescription": true,
-              "weightLbs": 0.1
+              "weightLbs": 0.1,
+              "hasCharges": true
             },
             {
               "roll": [
@@ -3321,7 +3364,8 @@
               "xpPrinted": "3,500",
               "id": "wands.negation",
               "hasDescription": true,
-              "weightLbs": 0.1
+              "weightLbs": 0.1,
+              "hasCharges": true
             },
             {
               "roll": [
@@ -3336,7 +3380,8 @@
               "xpPrinted": "3,500",
               "id": "wands.paralyzation",
               "hasDescription": true,
-              "weightLbs": 0.1
+              "weightLbs": 0.1,
+              "hasCharges": true
             },
             {
               "roll": [
@@ -3351,7 +3396,8 @@
               "xpPrinted": "3,500",
               "id": "wands.polymorphing",
               "hasDescription": true,
-              "weightLbs": 0.1
+              "weightLbs": 0.1,
+              "hasCharges": true
             },
             {
               "roll": [
@@ -3363,7 +3409,8 @@
               "xpPrinted": "5,000",
               "id": "wands.secretDoorAndTrapLocation",
               "hasDescription": true,
-              "weightLbs": 0.1
+              "weightLbs": 0.1,
+              "hasCharges": true
             },
             {
               "roll": [
@@ -3375,7 +3422,8 @@
               "xpPrinted": "3,000",
               "id": "wands.sizeAlteration",
               "hasDescription": true,
-              "weightLbs": 0.1
+              "weightLbs": 0.1,
+              "hasCharges": true
             },
             {
               "roll": [
@@ -3387,7 +3435,8 @@
               "xpPrinted": "6,000",
               "id": "wands.wonder",
               "hasDescription": true,
-              "weightLbs": 0.1
+              "weightLbs": 0.1,
+              "hasCharges": true
             },
             {
               "roll": [
@@ -3994,7 +4043,8 @@
               "id": "jewels.gemOfBrightness",
               "hasDescription": true,
               "weightLbs": 0.01,
-              "weightSource": "owner-supplied (placeholder, may be revised)"
+              "weightSource": "owner-supplied (placeholder, may be revised)",
+              "hasCharges": true
             },
             {
               "roll": [
@@ -4897,7 +4947,8 @@
               "id": "jewels.scarabOfEnragingEnemies",
               "hasDescription": true,
               "weightLbs": 0.1,
-              "weightSource": "owner-supplied (placeholder, may be revised)"
+              "weightSource": "owner-supplied (placeholder, may be revised)",
+              "hasCharges": true
             },
             {
               "roll": [
@@ -4910,7 +4961,8 @@
               "id": "jewels.scarabOfInsanity",
               "hasDescription": true,
               "weightLbs": 0.1,
-              "weightSource": "owner-supplied (placeholder, may be revised)"
+              "weightSource": "owner-supplied (placeholder, may be revised)",
+              "hasCharges": true
             },
             {
               "roll": [
@@ -5071,7 +5123,8 @@
               "id": "jewels.talismanOfPureGood",
               "hasDescription": true,
               "weightLbs": 0.2,
-              "weightSource": "owner-supplied (placeholder, may be revised)"
+              "weightSource": "owner-supplied (placeholder, may be revised)",
+              "hasCharges": true
             },
             {
               "roll": [
@@ -5103,7 +5156,8 @@
               "id": "jewels.talismanOfUltimateEvil",
               "hasDescription": true,
               "weightLbs": 0.2,
-              "weightSource": "owner-supplied (placeholder, may be revised)"
+              "weightSource": "owner-supplied (placeholder, may be revised)",
+              "hasCharges": true
             },
             {
               "roll": [
@@ -7467,7 +7521,8 @@
               "id": "instruments.chimeOfOpening",
               "hasDescription": true,
               "weightLbs": 0.05,
-              "weightSource": "owner-supplied (placeholder, may be revised)"
+              "weightSource": "owner-supplied (placeholder, may be revised)",
+              "hasCharges": true
             },
             {
               "roll": [
@@ -7966,7 +8021,8 @@
               "id": "weird.cubeOfForce",
               "hasDescription": true,
               "weightLbs": 0.1,
-              "weightSource": "owner-supplied (placeholder, may be revised)"
+              "weightSource": "owner-supplied (placeholder, may be revised)",
+              "hasCharges": true
             },
             {
               "roll": [
@@ -8605,7 +8661,8 @@
           ],
           "armourTypeSelection": "fixed",
           "plus": 5,
-          "plusNote": "+5 when new; drops by 1 for every five charges used (+1 once all 20 are spent)."
+          "plusNote": "+5 when new; drops by 1 for every five charges used (+1 once all 20 are spent).",
+          "hasCharges": true
         },
         {
           "roll": [
@@ -8622,7 +8679,8 @@
             "plateMail"
           ],
           "armourTypeSelection": "fixed",
-          "plus": 1
+          "plus": 1,
+          "hasCharges": true
         },
         {
           "roll": [
@@ -10256,7 +10314,8 @@
               "weaponTypeOptions": [
                 "trident"
               ],
-              "weaponTypeSelection": "fixed"
+              "weaponTypeSelection": "fixed",
+              "hasCharges": true
             },
             {
               "roll": [
@@ -10278,7 +10337,8 @@
               "weaponTypeOptions": [
                 "trident"
               ],
-              "weaponTypeSelection": "fixed"
+              "weaponTypeSelection": "fixed",
+              "hasCharges": true
             },
             {
               "roll": [
@@ -10300,7 +10360,8 @@
               "weaponTypeOptions": [
                 "trident"
               ],
-              "weaponTypeSelection": "fixed"
+              "weaponTypeSelection": "fixed",
+              "hasCharges": true
             },
             {
               "roll": [
@@ -10696,7 +10757,8 @@
                 "sabre",
                 "claymore"
               ],
-              "weaponTypeSelection": "choice"
+              "weaponTypeSelection": "choice",
+              "hasCharges": true
             },
             {
               "roll": [
