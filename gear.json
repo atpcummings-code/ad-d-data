@@ -3455,6 +3455,273 @@
         "usage": [
           "missile"
         ]
+      },
+      {
+        "id": "cutlass",
+        "name": "Cutlass",
+        "parent": "Sword",
+        "kind": "weapon",
+        "cost": null,
+        "weightLbs": null,
+        "size": "M",
+        "type": [
+          "S"
+        ],
+        "speedFactor": 4,
+        "damageSM": "1d6+1",
+        "damageL": "1d8+1",
+        "source": "owner-added",
+        "armourAdjustments": {
+          "10": 2,
+          "9": 1,
+          "8": 1,
+          "7": 0,
+          "6": 0,
+          "5": -1,
+          "4": -2,
+          "3": -2,
+          "2": -3,
+          "1": -3,
+          "0": -4
+        },
+        "usage": [
+          "melee"
+        ],
+        "statsFrom": "sabre",
+        "note": "Added by the owner. Size, type, speed factor, damage, armour class adjustments and usage are copied from Sabre. Cost and weight were not supplied."
+      },
+      {
+        "id": "garrote",
+        "name": "Garrote",
+        "kind": "weapon",
+        "cost": null,
+        "weightLbs": null,
+        "size": null,
+        "type": null,
+        "speedFactor": null,
+        "damageSM": null,
+        "damageL": null,
+        "source": "owner-added",
+        "armourAdjustments": null,
+        "usage": [],
+        "note": "Added by the owner with no statistics (owner asked for these to be left empty)."
+      },
+      {
+        "id": "greatsword",
+        "name": "Greatsword",
+        "parent": "Sword",
+        "kind": "weapon",
+        "cost": null,
+        "weightLbs": null,
+        "size": "L",
+        "type": [
+          "S"
+        ],
+        "speedFactor": 10,
+        "damageSM": "1d10",
+        "damageL": "3d6",
+        "source": "owner-added",
+        "armourAdjustments": {
+          "10": 0,
+          "9": 1,
+          "8": 3,
+          "7": 3,
+          "6": 3,
+          "5": 2,
+          "4": 2,
+          "3": 2,
+          "2": 2,
+          "1": 2,
+          "0": 2
+        },
+        "usage": [
+          "melee"
+        ],
+        "statsFrom": "twoHandedSword",
+        "note": "Added by the owner. Size, type, speed factor, damage, armour class adjustments and usage are copied from Two-handed sword. Cost and weight were not supplied."
+      },
+      {
+        "id": "heavyPick",
+        "name": "Heavy Pick",
+        "kind": "weapon",
+        "cost": null,
+        "weightLbs": null,
+        "size": "M",
+        "type": [
+          "P"
+        ],
+        "speedFactor": 7,
+        "damageSM": "1d6+1",
+        "damageL": "2d4",
+        "source": "owner-added",
+        "armourAdjustments": {
+          "10": -2,
+          "9": -1,
+          "8": -1,
+          "7": -1,
+          "6": 0,
+          "5": 1,
+          "4": 1,
+          "3": 2,
+          "2": 2,
+          "1": 3,
+          "0": 3
+        },
+        "usage": [
+          "melee"
+        ],
+        "statsFrom": "footmansPick",
+        "note": "Added by the owner. Size, type, speed factor, damage, armour class adjustments and usage are copied from Footman's pick. Cost and weight were not supplied."
+      },
+      {
+        "id": "lightMace",
+        "name": "Light Mace",
+        "kind": "weapon",
+        "cost": null,
+        "weightLbs": null,
+        "size": "M",
+        "type": [
+          "B"
+        ],
+        "speedFactor": 6,
+        "damageSM": "1d6",
+        "damageL": "1d4",
+        "source": "owner-added",
+        "armourAdjustments": {
+          "10": 0,
+          "9": 0,
+          "8": 0,
+          "7": 0,
+          "6": 0,
+          "5": 0,
+          "4": 0,
+          "3": 1,
+          "2": 1,
+          "1": 2,
+          "0": 2
+        },
+        "usage": [
+          "melee"
+        ],
+        "statsFrom": "horsemansMace",
+        "note": "Added by the owner. Size, type, speed factor, damage, armour class adjustments and usage are copied from Horseman's mace. Cost and weight were not supplied."
+      },
+      {
+        "id": "net",
+        "name": "Net",
+        "kind": "weapon",
+        "cost": null,
+        "weightLbs": null,
+        "size": null,
+        "type": null,
+        "speedFactor": null,
+        "damageSM": null,
+        "damageL": null,
+        "source": "owner-added",
+        "armourAdjustments": null,
+        "usage": [],
+        "note": "Added by the owner with no statistics (owner asked for these to be left empty)."
+      },
+      {
+        "id": "scythe",
+        "name": "Scythe",
+        "parent": "Polearm",
+        "kind": "weapon",
+        "cost": null,
+        "weightLbs": null,
+        "size": "L",
+        "type": [
+          "S"
+        ],
+        "speedFactor": 8,
+        "damageSM": "2d4",
+        "damageL": "1d8",
+        "source": "owner-added",
+        "armourAdjustments": {
+          "10": -1,
+          "9": -1,
+          "8": 0,
+          "7": 0,
+          "6": 0,
+          "5": -1,
+          "4": -1,
+          "3": -2,
+          "2": -2,
+          "1": -3,
+          "0": -3
+        },
+        "usage": [
+          "melee"
+        ],
+        "statsFrom": "guisarme",
+        "note": "Added by the owner. Size, type, speed factor, damage, armour class adjustments and usage are copied from Guisarme. Cost and weight were not supplied."
+      },
+      {
+        "id": "spikedClub",
+        "name": "Spiked Club",
+        "kind": "weapon",
+        "cost": null,
+        "weightLbs": null,
+        "size": "M",
+        "type": [
+          "B"
+        ],
+        "speedFactor": 4,
+        "damageSM": "1d6",
+        "damageL": "1d3",
+        "source": "owner-added",
+        "armourAdjustments": {
+          "10": 1,
+          "9": 0,
+          "8": 0,
+          "7": -1,
+          "6": -1,
+          "5": -2,
+          "4": -3,
+          "3": -4,
+          "2": -5,
+          "1": -6,
+          "0": -7
+        },
+        "usage": [
+          "melee",
+          "missile"
+        ],
+        "statsFrom": "club",
+        "note": "Added by the owner. Size, type, speed factor, damage, armour class adjustments and usage are copied from Club. Cost and weight were not supplied."
+      },
+      {
+        "id": "spikedGauntlet",
+        "name": "Spiked Gauntlet",
+        "kind": "weapon",
+        "cost": null,
+        "weightLbs": 0,
+        "size": "S",
+        "type": [
+          "B"
+        ],
+        "speedFactor": 1,
+        "damageSM": "1d3",
+        "damageL": "1d3",
+        "source": "owner-added",
+        "armourAdjustments": {
+          "10": 4,
+          "9": 0,
+          "8": 2,
+          "7": 0,
+          "6": 0,
+          "5": -1,
+          "4": -3,
+          "3": -5,
+          "2": -7,
+          "1": -8,
+          "0": -9
+        },
+        "usage": [
+          "melee"
+        ],
+        "note": "Added by the owner. Weight, size, type, speed factor, damage and armour class adjustments are from the owner spreadsheet row Fist or Open Hand. Cost was not supplied.",
+        "statsFrom": "Fist or Open Hand (owner spreadsheet row)"
       }
     ],
     "missileRanges": {
@@ -4887,6 +5154,53 @@
             2,
             3
           ]
+        },
+        {
+          "id": "spikedClub",
+          "label": "Spiked Club",
+          "weaponId": "spikedClub",
+          "ammunitionId": null,
+          "rof": {
+            "text": "1",
+            "shots": 1,
+            "rounds": 1
+          },
+          "rangeYards": {
+            "short": 10,
+            "medium": 20,
+            "long": 30
+          },
+          "source": "owner-added",
+          "damageSM": "1d6",
+          "damageL": "1d3",
+          "armourAdjustments": {
+            "10": 0,
+            "9": 0,
+            "8": -1,
+            "7": -1,
+            "6": -1,
+            "5": -2,
+            "4": -3,
+            "3": -5,
+            "2": -7,
+            "1": -8,
+            "0": -9
+          },
+          "pointBlank": {
+            "allowed": false,
+            "rangeFt": null
+          },
+          "strengthBonusApplies": true,
+          "additionalSpecialisationSlots": 1,
+          "racialAttackBonus": {
+            "elf": 0,
+            "halfling": 1
+          },
+          "rangeSheetUnitsOf10Yards": [
+            1,
+            2,
+            3
+          ]
         }
       ]
     },
@@ -4902,6 +5216,17 @@
       "Claymore two-handed row has a blank Source cell; Dwarven claymore cost is printed '**' with no value.",
       "Javelin range on the spreadsheet (30/60/90 yards) differs from PHB Table 45 (20/40/60); Table 45 kept in rangeYards, spreadsheet values in rangeSheetUnitsOf10Yards. Decision needed.",
       "Warhammer (Thrown) is an item with usage ['missile'] only (and a missileRanges row), so it is not in the melee list. Every item now has a usage field."
+    ],
+    "addedByOwner": [
+      "cutlass",
+      "garrote",
+      "greatsword",
+      "heavyPick",
+      "lightMace",
+      "net",
+      "scythe",
+      "spikedClub",
+      "spikedGauntlet"
     ]
   },
   "armour": {

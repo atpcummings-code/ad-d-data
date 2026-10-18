@@ -15,7 +15,7 @@
       "printed": "Text exactly as in the spreadsheet. name is the same text with an obvious typo or spelling variant corrected (Sythe to Scythe, Blind-fight to Blind-fighting).",
       "alignment": "Core deity alignment code.",
       "worshipperAlignments": "List of allowed worshipper alignments; null where the sheet gives text instead of codes (see worshipperAlignmentsPrinted).",
-      "allowedWeapons[].match": "exact = the gear.json weapon(s) named in gearIds (more than one where the owner confirmed several versions are allowed, e.g. Mace = Footman's and Horseman's); spellingVariant = printed name differs from the gear name, owner confirmed (Staff = Quarterstaff); category / natural / none = not a single weapon; notInGear = no such weapon in gear.json. gearId is the single id where there is exactly one, otherwise null.",
+      "allowedWeapons[].match": "exact = the gear.json weapon(s) named in gearIds (more than one where the owner confirmed several versions are allowed, e.g. Mace = Footman's and Horseman's); spellingVariant = printed name differs from the gear name, owner confirmed (Staff = Quarterstaff); category / natural / none = not a single weapon; notInGear = no such weapon in gear.json. gearId is the single id where there is exactly one, otherwise null. armourIds is used where the item is a shield in gear.json armour.",
       "requiredProficiency / bonusProficiency": "nonWeaponId links to rules-skills.json proficiencies.nonWeapon.list. match: exact (matchNote records a confirmed spelling difference) or notInJson (no such nonweapon proficiency in the current JSON files). A bracketed part such as (Forest) is kept as specialisation.",
       "innatePower": "printed is the sheet text. name, description and frequency are split from it. frequency.type: limited (uses per day or week), constant, atWill.",
       "godswarStatus": "Human Pantheon sheet only, as printed."
@@ -121,9 +121,12 @@
         {
           "printed": "Sythe",
           "name": "Scythe",
-          "gearId": null,
-          "match": "notInGear",
-          "gearIds": []
+          "gearId": "scythe",
+          "match": "exact",
+          "gearIds": [
+            "scythe"
+          ],
+          "matchNote": "Added to gear.json by the owner; statistics copied from Guisarme."
         },
         {
           "printed": "Dagger",
@@ -193,9 +196,12 @@
         {
           "printed": "Garrote",
           "name": "Garrote",
-          "gearId": null,
-          "match": "notInGear",
-          "gearIds": []
+          "gearId": "garrote",
+          "match": "exact",
+          "gearIds": [
+            "garrote"
+          ],
+          "matchNote": "Added to gear.json by the owner with empty statistics."
         }
       ],
       "requiredProficiency": {
@@ -2614,9 +2620,12 @@
         {
           "printed": "Greatsword",
           "name": "Greatsword",
-          "gearId": null,
-          "match": "notInGear",
-          "gearIds": []
+          "gearId": "greatsword",
+          "match": "exact",
+          "gearIds": [
+            "greatsword"
+          ],
+          "matchNote": "Added to gear.json by the owner; statistics copied from Two-handed sword."
         }
       ],
       "requiredProficiency": {
@@ -2725,9 +2734,12 @@
         {
           "printed": "Light Mace",
           "name": "Light Mace",
-          "gearId": null,
-          "match": "notInGear",
-          "gearIds": []
+          "gearId": "lightMace",
+          "match": "exact",
+          "gearIds": [
+            "lightMace"
+          ],
+          "matchNote": "Added to gear.json by the owner; statistics copied from Horseman's mace."
         }
       ],
       "requiredProficiency": {
@@ -2779,9 +2791,12 @@
         {
           "printed": "Cutlass",
           "name": "Cutlass",
-          "gearId": null,
-          "match": "notInGear",
-          "gearIds": []
+          "gearId": "cutlass",
+          "match": "exact",
+          "gearIds": [
+            "cutlass"
+          ],
+          "matchNote": "Added to gear.json by the owner; statistics copied from Sabre."
         }
       ],
       "requiredProficiency": {
@@ -3517,9 +3532,12 @@
         {
           "printed": "Heavy Pick",
           "name": "Heavy Pick",
-          "gearId": null,
-          "match": "notInGear",
-          "gearIds": []
+          "gearId": "heavyPick",
+          "match": "exact",
+          "gearIds": [
+            "heavyPick"
+          ],
+          "matchNote": "Added to gear.json by the owner; statistics copied from Footman's pick."
         }
       ],
       "requiredProficiency": {
@@ -3694,8 +3712,12 @@
           "printed": "Shield",
           "name": "Shield",
           "gearId": null,
-          "match": "notInGear",
-          "gearIds": []
+          "match": "exact",
+          "gearIds": [],
+          "armourIds": [
+            "shieldMedium"
+          ],
+          "matchNote": "Owner confirmed: Shield, Medium (an armour item in gear.json, not a weapon)."
         }
       ],
       "requiredProficiency": {
@@ -3745,9 +3767,12 @@
         {
           "printed": "Greatsword",
           "name": "Greatsword",
-          "gearId": null,
-          "match": "notInGear",
-          "gearIds": []
+          "gearId": "greatsword",
+          "match": "exact",
+          "gearIds": [
+            "greatsword"
+          ],
+          "matchNote": "Added to gear.json by the owner; statistics copied from Two-handed sword."
         },
         {
           "printed": "Battleaxe",
@@ -3807,9 +3832,12 @@
         {
           "printed": "Heavy Pick",
           "name": "Heavy Pick",
-          "gearId": null,
-          "match": "notInGear",
-          "gearIds": []
+          "gearId": "heavyPick",
+          "match": "exact",
+          "gearIds": [
+            "heavyPick"
+          ],
+          "matchNote": "Added to gear.json by the owner; statistics copied from Footman's pick."
         },
         {
           "printed": "Warhammer",
@@ -3998,9 +4026,12 @@
         {
           "printed": "Spiked club",
           "name": "Spiked Club",
-          "gearId": null,
-          "match": "notInGear",
-          "gearIds": []
+          "gearId": "spikedClub",
+          "match": "exact",
+          "gearIds": [
+            "spikedClub"
+          ],
+          "matchNote": "Added to gear.json by the owner; statistics copied from Club."
         },
         {
           "printed": "Spear",
@@ -4333,9 +4364,12 @@
         {
           "printed": "Net",
           "name": "Net",
-          "gearId": null,
-          "match": "notInGear",
-          "gearIds": []
+          "gearId": "net",
+          "match": "exact",
+          "gearIds": [
+            "net"
+          ],
+          "matchNote": "Added to gear.json by the owner with empty statistics."
         }
       ],
       "requiredProficiency": {
@@ -5330,9 +5364,12 @@
         {
           "printed": "Spiked gauntlet",
           "name": "Spiked gauntlet",
-          "gearId": null,
-          "match": "notInGear",
-          "gearIds": []
+          "gearId": "spikedGauntlet",
+          "match": "exact",
+          "gearIds": [
+            "spikedGauntlet"
+          ],
+          "matchNote": "Added to gear.json by the owner; statistics from the Fist or Open Hand row."
         }
       ],
       "requiredProficiency": {
@@ -5731,9 +5768,12 @@
         {
           "printed": "Scythe",
           "name": "Scythe",
-          "gearId": null,
-          "match": "notInGear",
-          "gearIds": []
+          "gearId": "scythe",
+          "match": "exact",
+          "gearIds": [
+            "scythe"
+          ],
+          "matchNote": "Added to gear.json by the owner; statistics copied from Guisarme."
         }
       ],
       "requiredProficiency": {
@@ -5860,9 +5900,12 @@
         {
           "printed": "Spiked Club",
           "name": "Spiked Club",
-          "gearId": null,
-          "match": "notInGear",
-          "gearIds": []
+          "gearId": "spikedClub",
+          "match": "exact",
+          "gearIds": [
+            "spikedClub"
+          ],
+          "matchNote": "Added to gear.json by the owner; statistics copied from Club."
         }
       ],
       "requiredProficiency": {
