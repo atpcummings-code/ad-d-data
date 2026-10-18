@@ -8232,6 +8232,32 @@
           "count": null,
           "restriction": null
         }
+      },
+      {
+        "id": "holyWater",
+        "name": "Holy Water",
+        "category": "miscellaneous",
+        "cost": {
+          "amount": 25,
+          "coin": "gp",
+          "costInCp": 2500
+        },
+        "weightLbs": 0.1,
+        "source": "owner-supplied",
+        "note": "Moved from magic-items.json (table 89 extra items); cost and weight unchanged."
+      },
+      {
+        "id": "unholyWater",
+        "name": "Unholy Water",
+        "category": "miscellaneous",
+        "cost": {
+          "amount": 25,
+          "coin": "gp",
+          "costInCp": 2500
+        },
+        "weightLbs": 0.1,
+        "source": "owner-supplied",
+        "note": "Moved from magic-items.json (table 89 extra items); cost and weight unchanged."
       }
     ],
     "proofreadingNote": "Transcribed from images by Claude. Please spot-check prices and weights against your book before relying on them.",
@@ -8383,7 +8409,7 @@
     "notes": [
       "Each pack is type EquipmentContainer (defined in the Emergent app). containerGearRef points at the empty Backpack in equipment.items; contents are the sheet lines with quantity above 0 (zero-quantity lines in the sheet are omitted).",
       "Weights and costs are copied from equipment.items (per unit) and never guessed. Where gear.json has no figure the line has null weight/cost and a gap note.",
-      "Holy Water comes from magic-items.json (table 89 extraItems, potions.holyWater).",
+      "Holy Water comes from equipment.items (id holyWater); it was moved out of magic-items.json.",
       "Line totals = qty x per-unit figure."
     ],
     "gaps": {
@@ -8710,8 +8736,7 @@
             "id": "holyWater",
             "name": "Holy Water",
             "qty": 2,
-            "gearRef": "potions.holyWater",
-            "refFile": "magic-items.json",
+            "gearRef": "holyWater",
             "weightLbs": 0.1,
             "cost": {
               "amount": 25,
@@ -9375,8 +9400,7 @@
             "id": "holyWater",
             "name": "Holy Water",
             "qty": 2,
-            "gearRef": "potions.holyWater",
-            "refFile": "magic-items.json",
+            "gearRef": "holyWater",
             "weightLbs": 0.1,
             "cost": {
               "amount": 25,

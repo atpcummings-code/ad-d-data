@@ -52,7 +52,7 @@
                 1,
                 1
               ],
-              "name": "Animal Control (Mammal/Marsupial)",
+              "name": "Potion of Animal Control (Mammal/Marsupial)",
               "xp": 250,
               "xpPrinted": "250",
               "id": "potions.animalControlMammal",
@@ -73,7 +73,7 @@
                 1,
                 1
               ],
-              "name": "Animal Control (Avian)",
+              "name": "Potion of Animal Control (Avian)",
               "xp": 250,
               "xpPrinted": "250",
               "id": "potions.animalControlAvian",
@@ -94,7 +94,7 @@
                 1,
                 1
               ],
-              "name": "Animal Control (Reptile/Amphibian)",
+              "name": "Potion of Animal Control (Reptile/Amphibian)",
               "xp": 250,
               "xpPrinted": "250",
               "id": "potions.animalControlReptile",
@@ -115,7 +115,7 @@
                 1,
                 1
               ],
-              "name": "Animal Control (Fish)",
+              "name": "Potion of Animal Control (Fish)",
               "xp": 250,
               "xpPrinted": "250",
               "id": "potions.animalControlFish",
@@ -136,7 +136,7 @@
                 1,
                 1
               ],
-              "name": "Animal Control (Mammal/Marsupial/Avian)",
+              "name": "Potion of Animal Control (Mammal/Marsupial/Avian)",
               "xp": 250,
               "xpPrinted": "250",
               "id": "potions.animalControlMammalAvian",
@@ -157,7 +157,7 @@
                 1,
                 1
               ],
-              "name": "Animal Control (Reptile/Amphibian/Fish)",
+              "name": "Potion of Animal Control (Reptile/Amphibian/Fish)",
               "xp": 250,
               "xpPrinted": "250",
               "id": "potions.animalControlReptileFish",
@@ -178,7 +178,7 @@
                 1,
                 1
               ],
-              "name": "Animal Control (All)",
+              "name": "Potion of Animal Control (All)",
               "xp": 250,
               "xpPrinted": "250",
               "id": "potions.animalControlAll",
@@ -199,7 +199,7 @@
                 2,
                 2
               ],
-              "name": "Clairaudience",
+              "name": "Potion of Clairaudience",
               "xp": 250,
               "xpPrinted": "250",
               "id": "potions.clairaudience",
@@ -211,7 +211,7 @@
                 3,
                 3
               ],
-              "name": "Clairvoyance",
+              "name": "Potion of Clairvoyance",
               "xp": 300,
               "xpPrinted": "300",
               "id": "potions.clairvoyance",
@@ -223,7 +223,7 @@
                 4,
                 4
               ],
-              "name": "Climbing",
+              "name": "Potion of Climbing",
               "xp": 300,
               "xpPrinted": "300",
               "id": "potions.climbing",
@@ -236,7 +236,7 @@
                 6
               ],
               "nameMarker": "**",
-              "name": "Delusion",
+              "name": "Potion of Delusion",
               "xp": null,
               "xpPrinted": "—",
               "id": "potions.delusion",
@@ -248,7 +248,7 @@
                 7,
                 7
               ],
-              "name": "Diminution",
+              "name": "Potion of Diminution",
               "xp": 300,
               "xpPrinted": "300",
               "id": "potions.diminution",
@@ -260,7 +260,7 @@
                 8,
                 8
               ],
-              "name": "Dragon Control (White)",
+              "name": "Potion of Dragon Control (White)",
               "xp": 700,
               "xpPrinted": "700",
               "id": "potions.dragonControlWhite",
@@ -281,7 +281,7 @@
                 8,
                 8
               ],
-              "name": "Dragon Control (Black)",
+              "name": "Potion of Dragon Control (Black)",
               "xp": 700,
               "xpPrinted": "700",
               "id": "potions.dragonControlBlack",
@@ -302,7 +302,7 @@
                 8,
                 8
               ],
-              "name": "Dragon Control (Green)",
+              "name": "Potion of Dragon Control (Green)",
               "xp": 700,
               "xpPrinted": "700",
               "id": "potions.dragonControlGreen",
@@ -323,7 +323,7 @@
                 8,
                 8
               ],
-              "name": "Dragon Control (Blue)",
+              "name": "Potion of Dragon Control (Blue)",
               "xp": 700,
               "xpPrinted": "700",
               "id": "potions.dragonControlBlue",
@@ -344,7 +344,7 @@
                 8,
                 8
               ],
-              "name": "Dragon Control (Red)",
+              "name": "Potion of Dragon Control (Red)",
               "xp": 700,
               "xpPrinted": "700",
               "id": "potions.dragonControlRed",
@@ -365,7 +365,7 @@
                 8,
                 8
               ],
-              "name": "Dragon Control (Brass)",
+              "name": "Potion of Dragon Control (Brass)",
               "xp": 700,
               "xpPrinted": "700",
               "id": "potions.dragonControlBrass",
@@ -386,7 +386,7 @@
                 8,
                 8
               ],
-              "name": "Dragon Control (Copper)",
+              "name": "Potion of Dragon Control (Copper)",
               "xp": 700,
               "xpPrinted": "700",
               "id": "potions.dragonControlCopper",
@@ -407,7 +407,7 @@
                 8,
                 8
               ],
-              "name": "Dragon Control (Bronze)",
+              "name": "Potion of Dragon Control (Bronze)",
               "xp": 700,
               "xpPrinted": "700",
               "id": "potions.dragonControlBronze",
@@ -428,7 +428,7 @@
                 8,
                 8
               ],
-              "name": "Dragon Control (Silver)",
+              "name": "Potion of Dragon Control (Silver)",
               "xp": 700,
               "xpPrinted": "700",
               "id": "potions.dragonControlSilver",
@@ -449,7 +449,7 @@
                 8,
                 8
               ],
-              "name": "Dragon Control (Gold)",
+              "name": "Potion of Dragon Control (Gold)",
               "xp": 700,
               "xpPrinted": "700",
               "id": "potions.dragonControlGold",
@@ -470,7 +470,7 @@
                 8,
                 8
               ],
-              "name": "Dragon Control (Evil)",
+              "name": "Potion of Dragon Control (Evil)",
               "xp": 700,
               "xpPrinted": "700",
               "id": "potions.dragonControlEvil",
@@ -491,7 +491,7 @@
                 8,
                 8
               ],
-              "name": "Dragon Control (Good)",
+              "name": "Potion of Dragon Control (Good)",
               "xp": 700,
               "xpPrinted": "700",
               "id": "potions.dragonControlGood",
@@ -549,7 +549,7 @@
                 13,
                 13
               ],
-              "name": "ESP",
+              "name": "Potion of ESP",
               "xp": 500,
               "xpPrinted": "500",
               "id": "potions.esp",
@@ -561,7 +561,7 @@
                 14,
                 15
               ],
-              "name": "Extra-healing",
+              "name": "Potion of Extra-healing",
               "xp": 400,
               "xpPrinted": "400",
               "id": "potions.extraHealing",
@@ -573,7 +573,7 @@
                 16,
                 16
               ],
-              "name": "Fire Breath",
+              "name": "Potion of Fire Breath",
               "xp": 400,
               "xpPrinted": "400",
               "id": "potions.fireBreath",
@@ -585,7 +585,7 @@
                 17,
                 17
               ],
-              "name": "Fire Resistance",
+              "name": "Potion of Fire Resistance",
               "xp": 250,
               "xpPrinted": "250",
               "id": "potions.fireResistance",
@@ -597,7 +597,7 @@
                 18,
                 18
               ],
-              "name": "Flying",
+              "name": "Potion of Flying",
               "xp": 500,
               "xpPrinted": "500",
               "id": "potions.flying",
@@ -609,7 +609,7 @@
                 19,
                 19
               ],
-              "name": "Gaseous Form",
+              "name": "Potion of Gaseous Form",
               "xp": 300,
               "xpPrinted": "300",
               "id": "potions.gaseousForm",
@@ -640,7 +640,7 @@
                 1,
                 1
               ],
-              "name": "Giant Control (Hill Giant)",
+              "name": "Potion of Giant Control (Hill Giant)",
               "xp": 600,
               "xpPrinted": "600",
               "id": "potions.giantControlHill",
@@ -661,7 +661,7 @@
                 1,
                 1
               ],
-              "name": "Giant Control (Stone Giant)",
+              "name": "Potion of Giant Control (Stone Giant)",
               "xp": 600,
               "xpPrinted": "600",
               "id": "potions.giantControlStone",
@@ -682,7 +682,7 @@
                 1,
                 1
               ],
-              "name": "Giant Control (Frost Giant)",
+              "name": "Potion of Giant Control (Frost Giant)",
               "xp": 600,
               "xpPrinted": "600",
               "id": "potions.giantControlFrost",
@@ -703,7 +703,7 @@
                 1,
                 1
               ],
-              "name": "Giant Control (Fire Giant)",
+              "name": "Potion of Giant Control (Fire Giant)",
               "xp": 600,
               "xpPrinted": "600",
               "id": "potions.giantControlFire",
@@ -724,7 +724,7 @@
                 1,
                 1
               ],
-              "name": "Giant Control (Cloud Giant)",
+              "name": "Potion of Giant Control (Cloud Giant)",
               "xp": 600,
               "xpPrinted": "600",
               "id": "potions.giantControlCloud",
@@ -745,7 +745,7 @@
                 1,
                 1
               ],
-              "name": "Giant Control (Storm Giant)",
+              "name": "Potion of Giant Control (Storm Giant)",
               "xp": 600,
               "xpPrinted": "600",
               "id": "potions.giantControlStorm",
@@ -770,7 +770,7 @@
                 "warrior"
               ],
               "nameMarker": "*",
-              "name": "Giant Strength",
+              "name": "Potion of Giant Strength",
               "xp": 550,
               "xpPrinted": "550",
               "id": "potions.giantStrength",
@@ -782,7 +782,7 @@
                 3,
                 3
               ],
-              "name": "Growth",
+              "name": "Potion of Growth",
               "xp": 250,
               "xpPrinted": "250",
               "id": "potions.growth",
@@ -794,7 +794,7 @@
                 4,
                 5
               ],
-              "name": "Healing",
+              "name": "Potion of Healing",
               "xp": 200,
               "xpPrinted": "200",
               "id": "potions.healing",
@@ -809,7 +809,7 @@
               "classRestriction": [
                 "warrior"
               ],
-              "name": "Heroism",
+              "name": "Potion of Heroism",
               "xp": 300,
               "xpPrinted": "300",
               "id": "potions.heroism",
@@ -821,7 +821,7 @@
                 7,
                 7
               ],
-              "name": "Human Control (Dwarves)",
+              "name": "Potion of Human Control (Dwarves)",
               "xp": 500,
               "xpPrinted": "500",
               "id": "potions.humanControlDwarves",
@@ -842,7 +842,7 @@
                 7,
                 7
               ],
-              "name": "Human Control (Elves/Half-Elves)",
+              "name": "Potion of Human Control (Elves/Half-Elves)",
               "xp": 500,
               "xpPrinted": "500",
               "id": "potions.humanControlElves",
@@ -863,7 +863,7 @@
                 7,
                 7
               ],
-              "name": "Human Control (Gnomes)",
+              "name": "Potion of Human Control (Gnomes)",
               "xp": 500,
               "xpPrinted": "500",
               "id": "potions.humanControlGnomes",
@@ -884,7 +884,7 @@
                 7,
                 7
               ],
-              "name": "Human Control (Halflings)",
+              "name": "Potion of Human Control (Halflings)",
               "xp": 500,
               "xpPrinted": "500",
               "id": "potions.humanControlHalflings",
@@ -905,7 +905,7 @@
                 7,
                 7
               ],
-              "name": "Human Control (Half-Orcs)",
+              "name": "Potion of Human Control (Half-Orcs)",
               "xp": 500,
               "xpPrinted": "500",
               "id": "potions.humanControlHalfOrcs",
@@ -926,7 +926,7 @@
                 7,
                 7
               ],
-              "name": "Human Control (Humans)",
+              "name": "Potion of Human Control (Humans)",
               "xp": 500,
               "xpPrinted": "500",
               "id": "potions.humanControlHumans",
@@ -947,7 +947,7 @@
                 7,
                 7
               ],
-              "name": "Human Control (Humanoids)",
+              "name": "Potion of Human Control (Humanoids)",
               "xp": 500,
               "xpPrinted": "500",
               "id": "potions.humanControlHumanoids",
@@ -968,7 +968,7 @@
                 7,
                 7
               ],
-              "name": "Human Control (Elves, Half-Elves, and Humans)",
+              "name": "Potion of Human Control (Elves, Half-Elves, and Humans)",
               "xp": 500,
               "xpPrinted": "500",
               "id": "potions.humanControlElvesHumans",
@@ -989,7 +989,7 @@
                 8,
                 8
               ],
-              "name": "Invisibility",
+              "name": "Potion of Invisibility",
               "xp": 250,
               "xpPrinted": "250",
               "id": "potions.invisibility",
@@ -1004,7 +1004,7 @@
               "classRestriction": [
                 "warrior"
               ],
-              "name": "Invulnerability",
+              "name": "Potion of Invulnerability",
               "xp": 350,
               "xpPrinted": "350",
               "id": "potions.invulnerability",
@@ -1016,7 +1016,7 @@
                 10,
                 10
               ],
-              "name": "Levitation",
+              "name": "Potion of Levitation",
               "xp": 250,
               "xpPrinted": "250",
               "id": "potions.levitation",
@@ -1028,7 +1028,7 @@
                 11,
                 11
               ],
-              "name": "Longevity",
+              "name": "Potion of Longevity",
               "xp": 500,
               "xpPrinted": "500",
               "id": "potions.longevity",
@@ -1289,7 +1289,7 @@
                 6,
                 6
               ],
-              "name": "Plant Control",
+              "name": "Potion of Plant Control",
               "xp": 250,
               "xpPrinted": "250",
               "id": "potions.plantControl",
@@ -1302,7 +1302,7 @@
                 8
               ],
               "nameMarker": "**",
-              "name": "Poison",
+              "name": "Potion of Poison",
               "xp": null,
               "xpPrinted": "—",
               "id": "potions.poison",
@@ -1314,7 +1314,7 @@
                 9,
                 9
               ],
-              "name": "Polymorph Self",
+              "name": "Potion of Polymorph Self",
               "xp": 200,
               "xpPrinted": "200",
               "id": "potions.polymorphSelf",
@@ -1326,7 +1326,7 @@
                 10,
                 10
               ],
-              "name": "Rainbow Hues",
+              "name": "Potion of Rainbow Hues",
               "xp": 200,
               "xpPrinted": "200",
               "id": "potions.rainbowHues",
@@ -1338,7 +1338,7 @@
                 11,
                 11
               ],
-              "name": "Speed",
+              "name": "Potion of Speed",
               "xp": 200,
               "xpPrinted": "200",
               "id": "potions.speed",
@@ -1353,7 +1353,7 @@
               "classRestriction": [
                 "warrior"
               ],
-              "name": "Super-heroism",
+              "name": "Potion of Super-heroism",
               "xp": 450,
               "xpPrinted": "450",
               "id": "potions.superHeroism",
@@ -1365,7 +1365,7 @@
                 14,
                 14
               ],
-              "name": "Sweet Water",
+              "name": "Potion of Sweet Water",
               "xp": 200,
               "xpPrinted": "200",
               "id": "potions.sweetWater",
@@ -1377,7 +1377,7 @@
                 15,
                 15
               ],
-              "name": "Treasure Finding",
+              "name": "Potion of Treasure Finding",
               "xp": 600,
               "xpPrinted": "600",
               "id": "potions.treasureFinding",
@@ -1389,7 +1389,7 @@
                 16,
                 16
               ],
-              "name": "Undead Control (Ghasts)",
+              "name": "Potion of Undead Control (Ghasts)",
               "xp": 700,
               "xpPrinted": "700",
               "id": "potions.undeadControlGhasts",
@@ -1410,7 +1410,7 @@
                 16,
                 16
               ],
-              "name": "Undead Control (Ghosts)",
+              "name": "Potion of Undead Control (Ghosts)",
               "xp": 700,
               "xpPrinted": "700",
               "id": "potions.undeadControlGhosts",
@@ -1431,7 +1431,7 @@
                 16,
                 16
               ],
-              "name": "Undead Control (Ghouls)",
+              "name": "Potion of Undead Control (Ghouls)",
               "xp": 700,
               "xpPrinted": "700",
               "id": "potions.undeadControlGhouls",
@@ -1452,7 +1452,7 @@
                 16,
                 16
               ],
-              "name": "Undead Control (Shadows)",
+              "name": "Potion of Undead Control (Shadows)",
               "xp": 700,
               "xpPrinted": "700",
               "id": "potions.undeadControlShadows",
@@ -1473,7 +1473,7 @@
                 16,
                 16
               ],
-              "name": "Undead Control (Skeletons)",
+              "name": "Potion of Undead Control (Skeletons)",
               "xp": 700,
               "xpPrinted": "700",
               "id": "potions.undeadControlSkeletons",
@@ -1494,7 +1494,7 @@
                 16,
                 16
               ],
-              "name": "Undead Control (Spectres)",
+              "name": "Potion of Undead Control (Spectres)",
               "xp": 700,
               "xpPrinted": "700",
               "id": "potions.undeadControlSpectres",
@@ -1515,7 +1515,7 @@
                 16,
                 16
               ],
-              "name": "Undead Control (Wights)",
+              "name": "Potion of Undead Control (Wights)",
               "xp": 700,
               "xpPrinted": "700",
               "id": "potions.undeadControlWights",
@@ -1536,7 +1536,7 @@
                 16,
                 16
               ],
-              "name": "Undead Control (Wraiths)",
+              "name": "Potion of Undead Control (Wraiths)",
               "xp": 700,
               "xpPrinted": "700",
               "id": "potions.undeadControlWraiths",
@@ -1557,7 +1557,7 @@
                 16,
                 16
               ],
-              "name": "Undead Control (Vampires)",
+              "name": "Potion of Undead Control (Vampires)",
               "xp": 700,
               "xpPrinted": "700",
               "id": "potions.undeadControlVampires",
@@ -1578,7 +1578,7 @@
                 16,
                 16
               ],
-              "name": "Undead Control (Zombies)",
+              "name": "Potion of Undead Control (Zombies)",
               "xp": 700,
               "xpPrinted": "700",
               "id": "potions.undeadControlZombies",
@@ -1599,7 +1599,7 @@
                 17,
                 17
               ],
-              "name": "Ventriloquism",
+              "name": "Potion of Ventriloquism",
               "xp": 200,
               "xpPrinted": "200",
               "id": "potions.ventriloquism",
@@ -1611,7 +1611,7 @@
                 18,
                 18
               ],
-              "name": "Vitality",
+              "name": "Potion of Vitality",
               "xp": 300,
               "xpPrinted": "300",
               "id": "potions.vitality",
@@ -1623,7 +1623,7 @@
                 19,
                 19
               ],
-              "name": "Water Breathing",
+              "name": "Potion of Water Breathing",
               "xp": 400,
               "xpPrinted": "400",
               "id": "potions.waterBreathing",
@@ -1649,31 +1649,7 @@
       },
       "extraItems": [
         {
-          "name": "Holy Water",
-          "id": "potions.holyWater",
-          "roll": null,
-          "xp": 0,
-          "xpPrinted": null,
-          "valueGp": 25,
-          "weightLbs": 0.1,
-          "hasDescription": false,
-          "source": "owner-added",
-          "xpSource": "owner-confirmed 0 XP"
-        },
-        {
-          "name": "Unholy Water",
-          "id": "potions.unholyWater",
-          "roll": null,
-          "xp": 0,
-          "xpPrinted": null,
-          "valueGp": 25,
-          "weightLbs": 0.1,
-          "hasDescription": false,
-          "source": "owner-added",
-          "xpSource": "owner-confirmed 0 XP"
-        },
-        {
-          "name": "Protection from Poisonous Gases",
+          "name": "Potion of Protection from Poisonous Gases",
           "id": "potions.protectionFromPoisonousGases",
           "roll": null,
           "xp": 0,
@@ -2634,7 +2610,7 @@
                 "priest",
                 "wizard"
               ],
-              "name": "Absorption",
+              "name": "Rod of Absorption",
               "xp": 7500,
               "xpPrinted": "7,500",
               "id": "rods.absorption",
@@ -2646,7 +2622,7 @@
                 3,
                 4
               ],
-              "name": "Alertness",
+              "name": "Rod of Alertness",
               "xp": 7000,
               "xpPrinted": "7,000",
               "id": "rods.alertness",
@@ -2663,7 +2639,7 @@
                 "rogue",
                 "wizard"
               ],
-              "name": "Beguiling",
+              "name": "Rod of Beguiling",
               "xp": 5000,
               "xpPrinted": "5,000",
               "id": "rods.beguiling",
@@ -2675,7 +2651,7 @@
                 6,
                 7
               ],
-              "name": "Cancellation",
+              "name": "Rod of Cancellation",
               "xp": 10000,
               "xpPrinted": "10,000",
               "id": "rods.cancellation",
@@ -2687,7 +2663,7 @@
                 8,
                 8
               ],
-              "name": "Flailing",
+              "name": "Rod of Flailing",
               "xp": 2000,
               "xpPrinted": "2,000",
               "id": "rods.flailing",
@@ -2702,7 +2678,7 @@
               "classRestriction": [
                 "warrior"
               ],
-              "name": "Lordly Might",
+              "name": "Rod of Lordly Might",
               "xp": 6000,
               "xpPrinted": "6,000",
               "id": "rods.lordlyMight",
@@ -2714,7 +2690,7 @@
                 10,
                 10
               ],
-              "name": "Passage",
+              "name": "Rod of Passage",
               "xp": 5000,
               "xpPrinted": "5,000",
               "id": "rods.passage",
@@ -2729,7 +2705,7 @@
               "classRestriction": [
                 "priest"
               ],
-              "name": "Resurrection",
+              "name": "Rod of Resurrection",
               "xp": 10000,
               "xpPrinted": "10,000",
               "id": "rods.resurrection",
@@ -2741,7 +2717,7 @@
                 12,
                 12
               ],
-              "name": "Rulership",
+              "name": "Rod of Rulership",
               "xp": 8000,
               "xpPrinted": "8,000",
               "id": "rods.rulership",
@@ -2753,7 +2729,7 @@
                 13,
                 14
               ],
-              "name": "Security",
+              "name": "Rod of Security",
               "xp": 3000,
               "xpPrinted": "3,000",
               "id": "rods.security",
@@ -2769,7 +2745,7 @@
                 "priest",
                 "wizard"
               ],
-              "name": "Smiting",
+              "name": "Rod of Smiting",
               "xp": 4000,
               "xpPrinted": "4,000",
               "id": "rods.smiting",
@@ -2781,7 +2757,7 @@
                 17,
                 17
               ],
-              "name": "Splendor",
+              "name": "Rod of Splendor",
               "xp": 2500,
               "xpPrinted": "2,500",
               "id": "rods.splendor",
@@ -2793,7 +2769,7 @@
                 18,
                 19
               ],
-              "name": "Terror",
+              "name": "Rod of Terror",
               "xp": 3000,
               "xpPrinted": "3,000",
               "id": "rods.terror",
@@ -2830,7 +2806,7 @@
                 1,
                 2
               ],
-              "name": "Mace",
+              "name": "Staff-Mace",
               "xp": 1500,
               "xpPrinted": "1,500",
               "id": "staves.mace",
@@ -2846,7 +2822,7 @@
                 "priest",
                 "wizard"
               ],
-              "name": "Command",
+              "name": "Staff of Command",
               "xp": 5000,
               "xpPrinted": "5,000",
               "id": "staves.command",
@@ -2861,7 +2837,7 @@
               "classRestriction": [
                 "priest"
               ],
-              "name": "Curing",
+              "name": "Staff of Curing",
               "xp": 6000,
               "xpPrinted": "6,000",
               "id": "staves.curing",
@@ -2876,7 +2852,7 @@
               "classRestriction": [
                 "wizard"
               ],
-              "name": "Magi",
+              "name": "Staff of the Magi",
               "xp": 15000,
               "xpPrinted": "15,000",
               "id": "staves.magi",
@@ -2891,7 +2867,7 @@
               "classRestriction": [
                 "wizard"
               ],
-              "name": "Power",
+              "name": "Staff of Power",
               "xp": 12000,
               "xpPrinted": "12,000",
               "id": "staves.power",
@@ -2906,7 +2882,7 @@
               "classRestriction": [
                 "priest"
               ],
-              "name": "Serpent",
+              "name": "Staff of the Serpent",
               "xp": 7000,
               "xpPrinted": "7,000",
               "id": "staves.serpent",
@@ -2921,7 +2897,7 @@
               "classRestriction": [
                 "priest"
               ],
-              "name": "Slinging",
+              "name": "Staff of Slinging",
               "xp": 2000,
               "xpPrinted": "2,000",
               "id": "staves.slinging",
@@ -2933,7 +2909,7 @@
                 11,
                 12
               ],
-              "name": "Spear +1",
+              "name": "Staff-Spear +1",
               "xp": 1000,
               "xpPrinted": "1,000",
               "id": "staves.spearPlus1",
@@ -2955,7 +2931,7 @@
                 11,
                 12
               ],
-              "name": "Spear +2",
+              "name": "Staff-Spear +2",
               "xp": 1500,
               "xpPrinted": "1,500",
               "id": "staves.spearPlus2",
@@ -2977,7 +2953,7 @@
                 11,
                 12
               ],
-              "name": "Spear +3",
+              "name": "Staff-Spear +3",
               "xp": 2000,
               "xpPrinted": "2,000",
               "id": "staves.spearPlus3",
@@ -2999,7 +2975,7 @@
                 11,
                 12
               ],
-              "name": "Spear +4",
+              "name": "Staff-Spear +4",
               "xp": 2500,
               "xpPrinted": "2,500",
               "id": "staves.spearPlus4",
@@ -3021,7 +2997,7 @@
                 11,
                 12
               ],
-              "name": "Spear +5",
+              "name": "Staff-Spear +5",
               "xp": 3000,
               "xpPrinted": "3,000",
               "id": "staves.spearPlus5",
@@ -3043,7 +3019,7 @@
                 11,
                 12
               ],
-              "name": "Spear +3*",
+              "name": "Staff-Spear +3*",
               "xp": 3500,
               "xpPrinted": "3,500",
               "id": "staves.spearPlus3Ranseur",
@@ -3069,7 +3045,7 @@
                 "priest",
                 "wizard"
               ],
-              "name": "Striking",
+              "name": "Staff of Striking",
               "xp": 6000,
               "xpPrinted": "6,000",
               "id": "staves.striking",
@@ -3085,7 +3061,7 @@
                 "priest",
                 "wizard"
               ],
-              "name": "Swarming Insects",
+              "name": "Staff of Swarming Insects",
               "xp": 100,
               "xpPrinted": "100**",
               "xpMarker": "**",
@@ -3098,7 +3074,7 @@
                 16,
                 16
               ],
-              "name": "Thunder & Lightning",
+              "name": "Staff of Thunder & Lightning",
               "xp": 8000,
               "xpPrinted": "8,000",
               "id": "staves.thunderLightning",
@@ -3110,7 +3086,7 @@
                 17,
                 18
               ],
-              "name": "Withering",
+              "name": "Staff of Withering",
               "xp": 8000,
               "xpPrinted": "8,000",
               "id": "staves.withering",
@@ -3125,7 +3101,7 @@
               "classRestriction": [
                 "druid"
               ],
-              "name": "Woodlands",
+              "name": "Staff of the Woodlands",
               "xp": 8000,
               "xpPrinted": "8,000",
               "id": "staves.woodlands",
@@ -3168,7 +3144,7 @@
               "classRestriction": [
                 "wizard"
               ],
-              "name": "Conjuration",
+              "name": "Wand of Conjuration",
               "xp": 7000,
               "xpPrinted": "7,000",
               "id": "wands.conjuration",
@@ -3180,7 +3156,7 @@
                 2,
                 2
               ],
-              "name": "Earth and Stone",
+              "name": "Wand of Earth and Stone",
               "xp": 1000,
               "xpPrinted": "1,000",
               "id": "wands.earthAndStone",
@@ -3192,7 +3168,7 @@
                 3,
                 3
               ],
-              "name": "Enemy Detection",
+              "name": "Wand of Enemy Detection",
               "xp": 2000,
               "xpPrinted": "2,000",
               "id": "wands.enemyDetection",
@@ -3208,7 +3184,7 @@
                 "priest",
                 "wizard"
               ],
-              "name": "Fear",
+              "name": "Wand of Fear",
               "xp": 3000,
               "xpPrinted": "3,000",
               "id": "wands.fear",
@@ -3223,7 +3199,7 @@
               "classRestriction": [
                 "wizard"
               ],
-              "name": "Fire",
+              "name": "Wand of Fire",
               "xp": 4500,
               "xpPrinted": "4,500",
               "id": "wands.fire",
@@ -3235,7 +3211,7 @@
                 6,
                 6
               ],
-              "name": "Flame Extinguishing",
+              "name": "Wand of Flame Extinguishing",
               "xp": 1500,
               "xpPrinted": "1,500",
               "id": "wands.flameExtinguishing",
@@ -3250,7 +3226,7 @@
               "classRestriction": [
                 "wizard"
               ],
-              "name": "Frost",
+              "name": "Wand of Frost",
               "xp": 6000,
               "xpPrinted": "6,000",
               "id": "wands.frost",
@@ -3262,7 +3238,7 @@
                 8,
                 8
               ],
-              "name": "Illumination",
+              "name": "Wand of Illumination",
               "xp": 2000,
               "xpPrinted": "2,000",
               "id": "wands.illumination",
@@ -3277,7 +3253,7 @@
               "classRestriction": [
                 "wizard"
               ],
-              "name": "Illusion",
+              "name": "Wand of Illusion",
               "xp": 3000,
               "xpPrinted": "3,000",
               "id": "wands.illusion",
@@ -3292,7 +3268,7 @@
               "classRestriction": [
                 "wizard"
               ],
-              "name": "Lightning",
+              "name": "Wand of Lightning",
               "xp": 4000,
               "xpPrinted": "4,000",
               "id": "wands.lightning",
@@ -3304,7 +3280,7 @@
                 11,
                 11
               ],
-              "name": "Magic Detection",
+              "name": "Wand of Magic Detection",
               "xp": 2500,
               "xpPrinted": "2,500",
               "id": "wands.magicDetection",
@@ -3316,7 +3292,7 @@
                 12,
                 12
               ],
-              "name": "Magic Missiles",
+              "name": "Wand of Magic Missiles",
               "xp": 4000,
               "xpPrinted": "4,000",
               "id": "wands.magicMissiles",
@@ -3328,7 +3304,7 @@
                 13,
                 13
               ],
-              "name": "Metal and Mineral Detection",
+              "name": "Wand of Metal and Mineral Detection",
               "xp": 1500,
               "xpPrinted": "1,500",
               "id": "wands.metalAndMineralDetection",
@@ -3340,7 +3316,7 @@
                 14,
                 14
               ],
-              "name": "Negation",
+              "name": "Wand of Negation",
               "xp": 3500,
               "xpPrinted": "3,500",
               "id": "wands.negation",
@@ -3355,7 +3331,7 @@
               "classRestriction": [
                 "wizard"
               ],
-              "name": "Paralyzation",
+              "name": "Wand of Paralyzation",
               "xp": 3500,
               "xpPrinted": "3,500",
               "id": "wands.paralyzation",
@@ -3370,7 +3346,7 @@
               "classRestriction": [
                 "wizard"
               ],
-              "name": "Polymorphing",
+              "name": "Wand of Polymorphing",
               "xp": 3500,
               "xpPrinted": "3,500",
               "id": "wands.polymorphing",
@@ -3382,7 +3358,7 @@
                 17,
                 17
               ],
-              "name": "Secret Door and Trap Location",
+              "name": "Wand of Secret Door and Trap Location",
               "xp": 5000,
               "xpPrinted": "5,000",
               "id": "wands.secretDoorAndTrapLocation",
@@ -3394,7 +3370,7 @@
                 18,
                 18
               ],
-              "name": "Size Alteration",
+              "name": "Wand of Size Alteration",
               "xp": 3000,
               "xpPrinted": "3,000",
               "id": "wands.sizeAlteration",
@@ -3406,7 +3382,7 @@
                 19,
                 19
               ],
-              "name": "Wonder",
+              "name": "Wand of Wonder",
               "xp": 6000,
               "xpPrinted": "6,000",
               "id": "wands.wonder",
