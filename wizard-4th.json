@@ -3,13 +3,14 @@
     "source": "owner's master_list_of_spells - PHB-FRA-TOM-GHA-UA.xlsx, tab '4th'",
     "level": 4,
     "class": "wizard",
-    "count": 95,
+    "count": 96,
     "bookKey": {
       "PHB": "2nd Edition Players Handbook",
       "FRA": "2nd Edition Forgotten Realms Adventures",
       "TOM": "2nd Edition Tome of Magic",
       "GHA": "1st/2nd Edition Greyhawk Adventures",
-      "UA": "1st Edition Unearthed Arcana"
+      "UA": "1st Edition Unearthed Arcana",
+      "POSM": "2nd Edition Player's Option: Spells & Magic"
     },
     "fields": {
       "reversible": "true where the spreadsheet's Reversible column is filled",
@@ -893,6 +894,25 @@
       ],
       "wildMagic": false,
       "description": "This spell summons a pair of shimmering violet phantom beings that will stay on either side of the mage and protect him from all attackers. The shield-maidens are AC 4 (phantom chain mail and large shield); Move 12”; HD 3; hp 20; Dmg ld6 (phantom spear);THACO 16; AL N. The shield-maidens stay close enough to the caster for their shields to help cover the mage. The shield of one maiden will provide the caster with a -1armor class bonus. If both shield-maidens protect the same side of the caster with their shields, the armor class bonus is -2. While the shield-maidens can protect the caster from attacks from different directions, they will move no farther than 50 feet away from the caster, even if the mage orders them to move away. They follow magically wherever the caster goes. The material components are a pair of small crystal shields tied with string to a miniature wooden figure of the caster."
+    },
+    {
+      "id": "wizard4.mordenkainensForceMissiles",
+      "name": "Mordenkainen’s Force Missiles",
+      "level": 4,
+      "reversible": false,
+      "castingTime": "4s",
+      "range": "30yds + 10yds/lvl",
+      "duration": "Instantaneous",
+      "areaOfEffect": "1 or more creatures or objects",
+      "savingThrow": "Special",
+      "components": "V S",
+      "reference": "POSM",
+      "schools": [
+        "Evocation"
+      ],
+      "wildMagic": false,
+      "description": "This spell creates a brilliant globe of magical energy, which streaks forth from the caster’s hand to unerringly strike its target, much like a magic missile spell. The target must be seen or otherwise detected.\n\nThe wizard creates one missile at 7th level, and an additional missile at every third level after 7th—in other words, two missiles at 10th level, three at 13th, four at 16th, and so on, to a maximum of seven missiles at 25th level.\n\nEach missile inflicts 2d4 points of impact damage upon the target creature, and then bursts in a concussive blast that inflicts 1 point of damage per level of the caster to all within in a 3-foot radius. For example, a 12th-level wizard could conjure two force missiles, each of which strikes for 2d4+12 damage. A target creature that makes a successful saving throw vs. spell negates the concussion damage, but the impact of the missile itself allows no saving throw.\n\nAs with the magic missile spell, the force missiles can be directed at as many or as few targets as the caster likes. The missiles can damage or destroy inanimate objects, especially fragile or delicate items. Such items must make a successful saving throw vs. crushing blow or be shattered. Sturdy objects, such as thick stonework, are unlikely to be affected.",
+      "descriptionNote": "Pasted by the owner. Two text-scan errors were corrected: \"| point\" is now \"1 point\" and \"3foot\" is now \"3-foot\". Paragraph breaks are kept as blank lines."
     },
     {
       "id": "wizard4.mordenkainensProtectionFromSlime",
