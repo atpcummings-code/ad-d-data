@@ -18,7 +18,9 @@
       "allowedWeapons[].match": "exact = the gear.json weapon(s) named in gearIds (more than one where the owner confirmed several versions are allowed, e.g. Mace = Footman's and Horseman's); spellingVariant = printed name differs from the gear name, owner confirmed (Staff = Quarterstaff); category / natural / none = not a single weapon; notInGear = no such weapon in gear.json. gearId is the single id where there is exactly one, otherwise null. armourIds is used where the item is a shield in gear.json armour.",
       "requiredProficiency / bonusProficiency": "nonWeaponId links to rules-skills.json proficiencies.nonWeapon.list. match: exact (matchNote records a confirmed spelling difference) or notInJson (no such nonweapon proficiency in the current JSON files). A bracketed part such as (Forest) is kept as specialisation.",
       "innatePower": "printed is the sheet text. name, description and frequency are split from it. frequency.type: limited (uses per day or week), constant, atWill.",
-      "godswarStatus": "Human Pantheon sheet only, as printed."
+      "godswarStatus": "Human Pantheon sheet only, as printed.",
+      "bonusProficiency": "Usually a single object. A god may have a list of objects where several bonus proficiencies are given (Clangeddin Silverbeard, owner-supplied). appliesTo: who receives it (clerics).",
+      "requiredProficiency": "A single object, or null where the god has no required proficiency (Clangeddin Silverbeard, owner-supplied)."
     },
     "status": "from-spreadsheet",
     "notes": [
@@ -3474,18 +3476,23 @@
           ]
         }
       ],
-      "requiredProficiency": {
-        "printed": "Tactics",
-        "name": "Tactics",
-        "nonWeaponId": "tactics",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Weaponsmithing",
-        "name": "Weaponsmithing",
-        "nonWeaponId": "weaponsmithing",
-        "match": "exact"
-      },
+      "requiredProficiency": null,
+      "bonusProficiency": [
+        {
+          "printed": "Religion",
+          "name": "Religion",
+          "nonWeaponId": "religion",
+          "match": "exact",
+          "appliesTo": "clerics"
+        },
+        {
+          "printed": "Reading/Writing",
+          "name": "Reading/Writing",
+          "nonWeaponId": "readingWriting",
+          "match": "exact",
+          "appliesTo": "clerics"
+        }
+      ],
       "innatePower": {
         "printed": "Battle Cry: Grants +2 to attack hit lines, scaling up every 4 levels (Cap +4). 1/day",
         "name": "Battle Cry",
@@ -3500,7 +3507,8 @@
       "source": {
         "sheet": "Dwarves",
         "row": 5
-      }
+      },
+      "proficiencyNote": "Clerics of Clangeddin receive religion and reading/writing as bonus nonweapon proficiencies. There are no required proficiencies. (Owner-supplied; replaces the spreadsheet entry of Tactics required and Weaponsmithing bonus.)"
     },
     {
       "id": "deepDuerra",
