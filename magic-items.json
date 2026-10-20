@@ -18,7 +18,8 @@
       "specialWeaponTypes": "Table 110 items carry weaponTypeOptions (gear.json weapon ids the item can be) and weaponTypeSelection: 'fixed' (one option), 'choice' (the app shows a selector) or 'none' (no gear.json item, e.g. nets). plus is the item's magical plus (null where it varies or isn't stated; plusNote explains). weightLbs and speedFactorBase/speedFactor on 'choice' items are not fixed by the item: when a type is selected take weight and speedFactorBase from that gear.json weapon and speedFactor = max(0, speedFactorBase - plus). Sun Blade is a bastard sword in appearance and damage but its weight and speed factor are those of a short sword (gearRef shortSword) per its description. Owner choices: generic swords may be any of the 12 gear.json Sword-group items; hammers may be Warhammer, Warhammer (Thrown) or Warhammer, two-handed; Hornblade may be Knife, Dagger or Short sword; Buckle Knife is Knife; crossbows may be any of the five gear.json crossbows (hand, light, heavy, disk, doubled); Bow +1 may be short, long, composite short or composite long.",
       "specialArmourTypes": "Table 107 items carry armourTypeOptions (gear.json armour ids the item can be) and armourTypeSelection ('fixed' = one option, 'choice' = the app shows a selector). plus is the item's magical AC plus (null where it is not fixed); plusOptions lists the allowed values where the plus is a choice (Elven Chain Mail +1 to +5, owner-set; Plate Mail of Vulnerability -2, -3 or -4 per its description); plusNote explains. On 'choice' items weightLbs is not fixed by the item: take weight from the selected gear.json armour. Owner choices: Armor of Blending and Armor of Missile Attraction may be any of the 12 body armours except Red Dragon Scale Armour; Shield, Large is Shield, Body; Shield -1, Missile Attractor may be any of the four shields. The armour and shield type tables are not in the data files.",
       "hasCharges": "true on items that carry charges (from the item description, or the Table 91 ring footnote 'limited by the number of charges'). The field is absent on all other items. The number of charges is not stored: it varies by item and is to be recorded by the app.",
-      "container": "type EquipmentContainer marks an item that holds other items, with capacity in the same form as gear.json equipment containers: weightLimitLbs, volume {dimensionsIn, printed, volumeCuIn}, count {max, of}, restriction (null = none or not supplied). compartments (new here) lists identical compartments as quantity x limits, for items that are several containers in one; the totals on capacity are the sum. A volume with derived true was calculated from stated dimensions."
+      "container": "type EquipmentContainer marks an item that holds other items, with capacity in the same form as gear.json equipment containers: weightLimitLbs, volume {dimensionsIn, printed, volumeCuIn}, count {max, of}, restriction (null = none or not supplied). compartments (new here) lists identical compartments as quantity x limits, for items that are several containers in one; the totals on capacity are the sum. A volume with derived true was calculated from stated dimensions.",
+      "tomItems": "See meta.tomItems."
     },
     "typos": {
       "Gauntets of Fumbling": "corrected to Gauntlets of Fumbling",
@@ -33,6 +34,21 @@
     "removedByOwner": "Tables 88, 90, 105, 106, 109, 111-119 and their related information were removed at the owner's request (category roll, scrolls, armour type and adjustment, attack roll adjustment, potion compatibility, spell failure, intelligent weapon tables, and the related general rules text). Smoke Powder (dusts.smokePowder, table 101) removed at the owner's request: it was only usable if the arquebus is allowed, and the arquebus was removed. Protection scrolls (name and XP only) were added back as a separate table 'protectionScrolls' by the owner.",
     "variantsNotExpanded": {
       "perUseOrContents": "Not expanded (outside the fixed-at-creation scope): Wand of Wonder, Iron Flask, Robe of Useful Items, Bag of Tricks, Beaker of Plentiful Potions, Necklace of Prayer Beads, Boots of Varied Tracks, Book of Infinite Spells, Crystal Ball, Figurines of Wondrous Power, Quaal's Feather Token, ring secondary-power tables (Clumsiness, Contrariness, Weakness), Spell Storing, Staff of Power."
+    },
+    "tomItems": {
+      "source": "Tome of Magic Chapter 4 (owner-supplied PDF tomitems.pdf, 38 pages): Tables 4-13 and the item descriptions.",
+      "placement": "Merged into the matching existing tables as extraItems (roll null, source TOM); no Tome of Magic dice rolls are stored (owner choice).",
+      "xp": "As printed in the Tome of Magic tables; a dash is stored as null with xpPrinted '--'.",
+      "classRestriction": "Table markers P = priest, W = wizard, Wr = warrior; (P,W) = priest and wizard.",
+      "weights": "Owner-set only: aromatic oils, oils and potions 0.1 lb, wands 0.1, rod 3.5, staff 5. No other weights given.",
+      "variants": "Split into one entry per version fixed at creation (owner choice): Potion of Elemental Control (4), Oil of Elemental Plane Invulnerability (16), Ring of Affliction (8), Ring of Elemental Metamorphosis (4), Ring of Fortitude (3), Ring of Randomness (7), Ring of Resistance (8), School Cap (8), Amulet of Magic Resistance (12: strength 5-30% x all spells or 1st-6th only), Bag of Bones (2), Disintegration Chamber (6 sizes), Teleportation Chamber (6 sizes). The generic entry is not stored. Each variant has its own description copy.",
+      "tablePlacement": "Table 9 items are placed by item type: Bracers and Gloves in the boots/bracers/gloves table, Fur of Warmth and Robe in cloaks and robes, School Cap in girdles/hats/helms; Table 12: Horn of Valor in instruments, the rest in household items.",
+      "notes": [
+        "Oils of Elemental Plane Invulnerability (table name) is stored as Oil of Elemental Plane Invulnerability (the description heading).",
+        "Table 8 and Table 13 items follow the printed names.",
+        "Trimia's Catalogue of Outer Plane Artifacts: the plane devices are per-use content and are not split.",
+        "The Tome of Magic PDF lost fraction glyphs in two places; owner confirmed: Amulet of Extension '1½ rounds' and '1¼ rounds'; Warp Marble '(½-inch diameter)'. Descriptions corrected."
+      ]
     }
   },
   "tables": {
@@ -1661,6 +1677,493 @@
           "hasDescription": false,
           "source": "owner-added",
           "xpSource": "owner-confirmed 0 XP"
+        },
+        {
+          "name": "Aroma of Dreams",
+          "id": "potions.aromaOfDreams",
+          "roll": null,
+          "xp": 300,
+          "xpPrinted": "300",
+          "source": "TOM",
+          "weightLbs": 0.1,
+          "weightSource": "owner-set",
+          "hasDescription": true
+        },
+        {
+          "name": "Curdled Death",
+          "id": "potions.curdledDeath",
+          "roll": null,
+          "xp": 750,
+          "xpPrinted": "750",
+          "source": "TOM",
+          "weightLbs": 0.1,
+          "weightSource": "owner-set",
+          "hasDescription": true
+        },
+        {
+          "name": "Murdock's Insect Ward",
+          "id": "potions.murdocksInsectWard",
+          "roll": null,
+          "xp": 200,
+          "xpPrinted": "200",
+          "source": "TOM",
+          "weightLbs": 0.1,
+          "weightSource": "owner-set",
+          "hasDescription": true
+        },
+        {
+          "name": "Oil of Elemental Plane Invulnerability (Air)",
+          "id": "potions.oilOfElementalPlaneInvulnerabilityAir",
+          "roll": null,
+          "xp": 5000,
+          "xpPrinted": "5,000",
+          "source": "TOM",
+          "weightLbs": 0.1,
+          "weightSource": "owner-set",
+          "hasDescription": true,
+          "variantOf": "potions.oilOfElementalPlaneInvulnerability",
+          "variant": {
+            "die": "d4 (table) then d4 (plane)",
+            "table": "A",
+            "tableRoll": 1,
+            "roll": [
+              1,
+              1
+            ],
+            "label": "Air"
+          }
+        },
+        {
+          "name": "Oil of Elemental Plane Invulnerability (Water)",
+          "id": "potions.oilOfElementalPlaneInvulnerabilityWater",
+          "roll": null,
+          "xp": 5000,
+          "xpPrinted": "5,000",
+          "source": "TOM",
+          "weightLbs": 0.1,
+          "weightSource": "owner-set",
+          "hasDescription": true,
+          "variantOf": "potions.oilOfElementalPlaneInvulnerability",
+          "variant": {
+            "die": "d4 (table) then d4 (plane)",
+            "table": "A",
+            "tableRoll": 1,
+            "roll": [
+              2,
+              2
+            ],
+            "label": "Water"
+          }
+        },
+        {
+          "name": "Oil of Elemental Plane Invulnerability (Earth)",
+          "id": "potions.oilOfElementalPlaneInvulnerabilityEarth",
+          "roll": null,
+          "xp": 5000,
+          "xpPrinted": "5,000",
+          "source": "TOM",
+          "weightLbs": 0.1,
+          "weightSource": "owner-set",
+          "hasDescription": true,
+          "variantOf": "potions.oilOfElementalPlaneInvulnerability",
+          "variant": {
+            "die": "d4 (table) then d4 (plane)",
+            "table": "A",
+            "tableRoll": 1,
+            "roll": [
+              3,
+              3
+            ],
+            "label": "Earth"
+          }
+        },
+        {
+          "name": "Oil of Elemental Plane Invulnerability (Fire)",
+          "id": "potions.oilOfElementalPlaneInvulnerabilityFire",
+          "roll": null,
+          "xp": 5000,
+          "xpPrinted": "5,000",
+          "source": "TOM",
+          "weightLbs": 0.1,
+          "weightSource": "owner-set",
+          "hasDescription": true,
+          "variantOf": "potions.oilOfElementalPlaneInvulnerability",
+          "variant": {
+            "die": "d4 (table) then d4 (plane)",
+            "table": "A",
+            "tableRoll": 1,
+            "roll": [
+              4,
+              4
+            ],
+            "label": "Fire"
+          }
+        },
+        {
+          "name": "Oil of Elemental Plane Invulnerability (Smoke)",
+          "id": "potions.oilOfElementalPlaneInvulnerabilitySmoke",
+          "roll": null,
+          "xp": 5000,
+          "xpPrinted": "5,000",
+          "source": "TOM",
+          "weightLbs": 0.1,
+          "weightSource": "owner-set",
+          "hasDescription": true,
+          "variantOf": "potions.oilOfElementalPlaneInvulnerability",
+          "variant": {
+            "die": "d4 (table) then d4 (plane)",
+            "table": "B",
+            "tableRoll": 2,
+            "roll": [
+              1,
+              1
+            ],
+            "label": "Smoke"
+          }
+        },
+        {
+          "name": "Oil of Elemental Plane Invulnerability (Ice)",
+          "id": "potions.oilOfElementalPlaneInvulnerabilityIce",
+          "roll": null,
+          "xp": 5000,
+          "xpPrinted": "5,000",
+          "source": "TOM",
+          "weightLbs": 0.1,
+          "weightSource": "owner-set",
+          "hasDescription": true,
+          "variantOf": "potions.oilOfElementalPlaneInvulnerability",
+          "variant": {
+            "die": "d4 (table) then d4 (plane)",
+            "table": "B",
+            "tableRoll": 2,
+            "roll": [
+              2,
+              2
+            ],
+            "label": "Ice"
+          }
+        },
+        {
+          "name": "Oil of Elemental Plane Invulnerability (Ooze)",
+          "id": "potions.oilOfElementalPlaneInvulnerabilityOoze",
+          "roll": null,
+          "xp": 5000,
+          "xpPrinted": "5,000",
+          "source": "TOM",
+          "weightLbs": 0.1,
+          "weightSource": "owner-set",
+          "hasDescription": true,
+          "variantOf": "potions.oilOfElementalPlaneInvulnerability",
+          "variant": {
+            "die": "d4 (table) then d4 (plane)",
+            "table": "B",
+            "tableRoll": 2,
+            "roll": [
+              3,
+              3
+            ],
+            "label": "Ooze"
+          }
+        },
+        {
+          "name": "Oil of Elemental Plane Invulnerability (Magma)",
+          "id": "potions.oilOfElementalPlaneInvulnerabilityMagma",
+          "roll": null,
+          "xp": 5000,
+          "xpPrinted": "5,000",
+          "source": "TOM",
+          "weightLbs": 0.1,
+          "weightSource": "owner-set",
+          "hasDescription": true,
+          "variantOf": "potions.oilOfElementalPlaneInvulnerability",
+          "variant": {
+            "die": "d4 (table) then d4 (plane)",
+            "table": "B",
+            "tableRoll": 2,
+            "roll": [
+              4,
+              4
+            ],
+            "label": "Magma"
+          }
+        },
+        {
+          "name": "Oil of Elemental Plane Invulnerability (Lightning)",
+          "id": "potions.oilOfElementalPlaneInvulnerabilityLightning",
+          "roll": null,
+          "xp": 5000,
+          "xpPrinted": "5,000",
+          "source": "TOM",
+          "weightLbs": 0.1,
+          "weightSource": "owner-set",
+          "hasDescription": true,
+          "variantOf": "potions.oilOfElementalPlaneInvulnerability",
+          "variant": {
+            "die": "d4 (table) then d4 (plane)",
+            "table": "C",
+            "tableRoll": 3,
+            "roll": [
+              1,
+              1
+            ],
+            "label": "Lightning"
+          }
+        },
+        {
+          "name": "Oil of Elemental Plane Invulnerability (Steam)",
+          "id": "potions.oilOfElementalPlaneInvulnerabilitySteam",
+          "roll": null,
+          "xp": 5000,
+          "xpPrinted": "5,000",
+          "source": "TOM",
+          "weightLbs": 0.1,
+          "weightSource": "owner-set",
+          "hasDescription": true,
+          "variantOf": "potions.oilOfElementalPlaneInvulnerability",
+          "variant": {
+            "die": "d4 (table) then d4 (plane)",
+            "table": "C",
+            "tableRoll": 3,
+            "roll": [
+              2,
+              2
+            ],
+            "label": "Steam"
+          }
+        },
+        {
+          "name": "Oil of Elemental Plane Invulnerability (Radiance)",
+          "id": "potions.oilOfElementalPlaneInvulnerabilityRadiance",
+          "roll": null,
+          "xp": 5000,
+          "xpPrinted": "5,000",
+          "source": "TOM",
+          "weightLbs": 0.1,
+          "weightSource": "owner-set",
+          "hasDescription": true,
+          "variantOf": "potions.oilOfElementalPlaneInvulnerability",
+          "variant": {
+            "die": "d4 (table) then d4 (plane)",
+            "table": "C",
+            "tableRoll": 3,
+            "roll": [
+              3,
+              3
+            ],
+            "label": "Radiance"
+          }
+        },
+        {
+          "name": "Oil of Elemental Plane Invulnerability (Minerals)",
+          "id": "potions.oilOfElementalPlaneInvulnerabilityMinerals",
+          "roll": null,
+          "xp": 5000,
+          "xpPrinted": "5,000",
+          "source": "TOM",
+          "weightLbs": 0.1,
+          "weightSource": "owner-set",
+          "hasDescription": true,
+          "variantOf": "potions.oilOfElementalPlaneInvulnerability",
+          "variant": {
+            "die": "d4 (table) then d4 (plane)",
+            "table": "C",
+            "tableRoll": 3,
+            "roll": [
+              4,
+              4
+            ],
+            "label": "Minerals"
+          }
+        },
+        {
+          "name": "Oil of Elemental Plane Invulnerability (Vacuum)",
+          "id": "potions.oilOfElementalPlaneInvulnerabilityVacuum",
+          "roll": null,
+          "xp": 5000,
+          "xpPrinted": "5,000",
+          "source": "TOM",
+          "weightLbs": 0.1,
+          "weightSource": "owner-set",
+          "hasDescription": true,
+          "variantOf": "potions.oilOfElementalPlaneInvulnerability",
+          "variant": {
+            "die": "d4 (table) then d4 (plane)",
+            "table": "D",
+            "tableRoll": 4,
+            "roll": [
+              1,
+              1
+            ],
+            "label": "Vacuum"
+          }
+        },
+        {
+          "name": "Oil of Elemental Plane Invulnerability (Salt)",
+          "id": "potions.oilOfElementalPlaneInvulnerabilitySalt",
+          "roll": null,
+          "xp": 5000,
+          "xpPrinted": "5,000",
+          "source": "TOM",
+          "weightLbs": 0.1,
+          "weightSource": "owner-set",
+          "hasDescription": true,
+          "variantOf": "potions.oilOfElementalPlaneInvulnerability",
+          "variant": {
+            "die": "d4 (table) then d4 (plane)",
+            "table": "D",
+            "tableRoll": 4,
+            "roll": [
+              2,
+              2
+            ],
+            "label": "Salt"
+          }
+        },
+        {
+          "name": "Oil of Elemental Plane Invulnerability (Ash)",
+          "id": "potions.oilOfElementalPlaneInvulnerabilityAsh",
+          "roll": null,
+          "xp": 5000,
+          "xpPrinted": "5,000",
+          "source": "TOM",
+          "weightLbs": 0.1,
+          "weightSource": "owner-set",
+          "hasDescription": true,
+          "variantOf": "potions.oilOfElementalPlaneInvulnerability",
+          "variant": {
+            "die": "d4 (table) then d4 (plane)",
+            "table": "D",
+            "tableRoll": 4,
+            "roll": [
+              3,
+              3
+            ],
+            "label": "Ash"
+          }
+        },
+        {
+          "name": "Oil of Elemental Plane Invulnerability (Dust)",
+          "id": "potions.oilOfElementalPlaneInvulnerabilityDust",
+          "roll": null,
+          "xp": 5000,
+          "xpPrinted": "5,000",
+          "source": "TOM",
+          "weightLbs": 0.1,
+          "weightSource": "owner-set",
+          "hasDescription": true,
+          "variantOf": "potions.oilOfElementalPlaneInvulnerability",
+          "variant": {
+            "die": "d4 (table) then d4 (plane)",
+            "table": "D",
+            "tableRoll": 4,
+            "roll": [
+              4,
+              4
+            ],
+            "label": "Dust"
+          }
+        },
+        {
+          "name": "Oil of Preservation",
+          "id": "potions.oilOfPreservation",
+          "roll": null,
+          "xp": 750,
+          "xpPrinted": "750",
+          "source": "TOM",
+          "weightLbs": 0.1,
+          "weightSource": "owner-set",
+          "hasDescription": true
+        },
+        {
+          "name": "Potion of Elemental Control (Air)",
+          "id": "potions.elementalControlAir",
+          "roll": null,
+          "xp": 600,
+          "xpPrinted": "600",
+          "source": "TOM",
+          "weightLbs": 0.1,
+          "weightSource": "owner-set",
+          "hasDescription": true,
+          "variantOf": "potions.elementalControl",
+          "variant": {
+            "die": "d4",
+            "roll": [
+              1,
+              1
+            ],
+            "label": "Air"
+          }
+        },
+        {
+          "name": "Potion of Elemental Control (Earth)",
+          "id": "potions.elementalControlEarth",
+          "roll": null,
+          "xp": 600,
+          "xpPrinted": "600",
+          "source": "TOM",
+          "weightLbs": 0.1,
+          "weightSource": "owner-set",
+          "hasDescription": true,
+          "variantOf": "potions.elementalControl",
+          "variant": {
+            "die": "d4",
+            "roll": [
+              2,
+              2
+            ],
+            "label": "Earth"
+          }
+        },
+        {
+          "name": "Potion of Elemental Control (Fire)",
+          "id": "potions.elementalControlFire",
+          "roll": null,
+          "xp": 600,
+          "xpPrinted": "600",
+          "source": "TOM",
+          "weightLbs": 0.1,
+          "weightSource": "owner-set",
+          "hasDescription": true,
+          "variantOf": "potions.elementalControl",
+          "variant": {
+            "die": "d4",
+            "roll": [
+              3,
+              3
+            ],
+            "label": "Fire"
+          }
+        },
+        {
+          "name": "Potion of Elemental Control (Water)",
+          "id": "potions.elementalControlWater",
+          "roll": null,
+          "xp": 600,
+          "xpPrinted": "600",
+          "source": "TOM",
+          "weightLbs": 0.1,
+          "weightSource": "owner-set",
+          "hasDescription": true,
+          "variantOf": "potions.elementalControl",
+          "variant": {
+            "die": "d4",
+            "roll": [
+              4,
+              4
+            ],
+            "label": "Water"
+          }
+        },
+        {
+          "name": "Starella's Aphrodisiac",
+          "id": "potions.starellasAphrodisiac",
+          "roll": null,
+          "xp": 250,
+          "xpPrinted": "250",
+          "source": "TOM",
+          "weightLbs": 0.1,
+          "weightSource": "owner-set",
+          "hasDescription": true
         }
       ]
     },
@@ -2598,7 +3101,618 @@
       "footnotes": {
         "*": "The power of these rings is limited by the number of charges.",
         "**": "Per +1 of protection."
-      }
+      },
+      "extraItems": [
+        {
+          "name": "Ring of Affliction (Abjuration)",
+          "id": "rings.afflictionAbjuration",
+          "roll": null,
+          "xp": null,
+          "xpPrinted": "--",
+          "source": "TOM",
+          "hasDescription": true,
+          "variantOf": "rings.affliction",
+          "variant": {
+            "die": "d8",
+            "roll": [
+              1,
+              1
+            ],
+            "label": "Abjuration"
+          }
+        },
+        {
+          "name": "Ring of Affliction (Alteration)",
+          "id": "rings.afflictionAlteration",
+          "roll": null,
+          "xp": null,
+          "xpPrinted": "--",
+          "source": "TOM",
+          "hasDescription": true,
+          "variantOf": "rings.affliction",
+          "variant": {
+            "die": "d8",
+            "roll": [
+              2,
+              2
+            ],
+            "label": "Alteration"
+          }
+        },
+        {
+          "name": "Ring of Affliction (Conjuration/Summoning)",
+          "id": "rings.afflictionConjurationSummoning",
+          "roll": null,
+          "xp": null,
+          "xpPrinted": "--",
+          "source": "TOM",
+          "hasDescription": true,
+          "variantOf": "rings.affliction",
+          "variant": {
+            "die": "d8",
+            "roll": [
+              3,
+              3
+            ],
+            "label": "Conjuration/Summoning"
+          }
+        },
+        {
+          "name": "Ring of Affliction (Enchantment/Charm)",
+          "id": "rings.afflictionEnchantmentCharm",
+          "roll": null,
+          "xp": null,
+          "xpPrinted": "--",
+          "source": "TOM",
+          "hasDescription": true,
+          "variantOf": "rings.affliction",
+          "variant": {
+            "die": "d8",
+            "roll": [
+              4,
+              4
+            ],
+            "label": "Enchantment/Charm"
+          }
+        },
+        {
+          "name": "Ring of Affliction (Illusion/Phantasm)",
+          "id": "rings.afflictionIllusionPhantasm",
+          "roll": null,
+          "xp": null,
+          "xpPrinted": "--",
+          "source": "TOM",
+          "hasDescription": true,
+          "variantOf": "rings.affliction",
+          "variant": {
+            "die": "d8",
+            "roll": [
+              5,
+              5
+            ],
+            "label": "Illusion/Phantasm"
+          }
+        },
+        {
+          "name": "Ring of Affliction (Invocation/Evocation)",
+          "id": "rings.afflictionInvocationEvocation",
+          "roll": null,
+          "xp": null,
+          "xpPrinted": "--",
+          "source": "TOM",
+          "hasDescription": true,
+          "variantOf": "rings.affliction",
+          "variant": {
+            "die": "d8",
+            "roll": [
+              6,
+              6
+            ],
+            "label": "Invocation/Evocation"
+          }
+        },
+        {
+          "name": "Ring of Affliction (Lesser/Greater Divination)",
+          "id": "rings.afflictionLesserGreaterDivination",
+          "roll": null,
+          "xp": null,
+          "xpPrinted": "--",
+          "source": "TOM",
+          "hasDescription": true,
+          "variantOf": "rings.affliction",
+          "variant": {
+            "die": "d8",
+            "roll": [
+              7,
+              7
+            ],
+            "label": "Lesser/Greater Divination"
+          }
+        },
+        {
+          "name": "Ring of Affliction (Necromancy)",
+          "id": "rings.afflictionNecromancy",
+          "roll": null,
+          "xp": null,
+          "xpPrinted": "--",
+          "source": "TOM",
+          "hasDescription": true,
+          "variantOf": "rings.affliction",
+          "variant": {
+            "die": "d8",
+            "roll": [
+              8,
+              8
+            ],
+            "label": "Necromancy"
+          }
+        },
+        {
+          "name": "Ring of Armoring",
+          "id": "rings.armoring",
+          "roll": null,
+          "xp": 2000,
+          "xpPrinted": "2,000",
+          "source": "TOM",
+          "classRestriction": [
+            "wizard"
+          ],
+          "hasDescription": true
+        },
+        {
+          "name": "Ring of Bureaucratic Wizardry",
+          "id": "rings.bureaucraticWizardry",
+          "roll": null,
+          "xp": null,
+          "xpPrinted": "--",
+          "source": "TOM",
+          "classRestriction": [
+            "wizard"
+          ],
+          "hasDescription": true
+        },
+        {
+          "name": "Ring of Elemental Metamorphosis (Air)",
+          "id": "rings.elementalMetamorphosisAir",
+          "roll": null,
+          "xp": 3000,
+          "xpPrinted": "3,000",
+          "source": "TOM",
+          "hasDescription": true,
+          "variantOf": "rings.elementalMetamorphosis",
+          "variant": {
+            "die": "d4",
+            "roll": [
+              1,
+              1
+            ],
+            "label": "Air"
+          }
+        },
+        {
+          "name": "Ring of Elemental Metamorphosis (Earth)",
+          "id": "rings.elementalMetamorphosisEarth",
+          "roll": null,
+          "xp": 3000,
+          "xpPrinted": "3,000",
+          "source": "TOM",
+          "hasDescription": true,
+          "variantOf": "rings.elementalMetamorphosis",
+          "variant": {
+            "die": "d4",
+            "roll": [
+              2,
+              2
+            ],
+            "label": "Earth"
+          }
+        },
+        {
+          "name": "Ring of Elemental Metamorphosis (Fire)",
+          "id": "rings.elementalMetamorphosisFire",
+          "roll": null,
+          "xp": 3000,
+          "xpPrinted": "3,000",
+          "source": "TOM",
+          "hasDescription": true,
+          "variantOf": "rings.elementalMetamorphosis",
+          "variant": {
+            "die": "d4",
+            "roll": [
+              3,
+              3
+            ],
+            "label": "Fire"
+          }
+        },
+        {
+          "name": "Ring of Elemental Metamorphosis (Water)",
+          "id": "rings.elementalMetamorphosisWater",
+          "roll": null,
+          "xp": 3000,
+          "xpPrinted": "3,000",
+          "source": "TOM",
+          "hasDescription": true,
+          "variantOf": "rings.elementalMetamorphosis",
+          "variant": {
+            "die": "d4",
+            "roll": [
+              4,
+              4
+            ],
+            "label": "Water"
+          }
+        },
+        {
+          "name": "Ring of Fortitude (Dexterity)",
+          "id": "rings.fortitudeDexterity",
+          "roll": null,
+          "xp": 1000,
+          "xpPrinted": "1,000",
+          "source": "TOM",
+          "hasDescription": true,
+          "variantOf": "rings.fortitude",
+          "variant": {
+            "die": "d12",
+            "roll": [
+              1,
+              6
+            ],
+            "label": "Dexterity"
+          }
+        },
+        {
+          "name": "Ring of Fortitude (Wisdom)",
+          "id": "rings.fortitudeWisdom",
+          "roll": null,
+          "xp": 1000,
+          "xpPrinted": "1,000",
+          "source": "TOM",
+          "hasDescription": true,
+          "variantOf": "rings.fortitude",
+          "variant": {
+            "die": "d12",
+            "roll": [
+              7,
+              11
+            ],
+            "label": "Wisdom"
+          }
+        },
+        {
+          "name": "Ring of Fortitude (Constitution)",
+          "id": "rings.fortitudeConstitution",
+          "roll": null,
+          "xp": 1000,
+          "xpPrinted": "1,000",
+          "source": "TOM",
+          "hasDescription": true,
+          "variantOf": "rings.fortitude",
+          "variant": {
+            "die": "d12",
+            "roll": [
+              12,
+              12
+            ],
+            "label": "Constitution"
+          }
+        },
+        {
+          "name": "Ring of Randomness (protection from evil)",
+          "id": "rings.randomnessProtectionFromEvil",
+          "roll": null,
+          "xp": null,
+          "xpPrinted": "--",
+          "source": "TOM",
+          "classRestriction": [
+            "priest"
+          ],
+          "hasDescription": true,
+          "variantOf": "rings.randomness",
+          "variant": {
+            "die": "d100",
+            "roll": [
+              1,
+              25
+            ],
+            "label": "protection from evil"
+          }
+        },
+        {
+          "name": "Ring of Randomness (continual light)",
+          "id": "rings.randomnessContinualLight",
+          "roll": null,
+          "xp": null,
+          "xpPrinted": "--",
+          "source": "TOM",
+          "classRestriction": [
+            "priest"
+          ],
+          "hasDescription": true,
+          "variantOf": "rings.randomness",
+          "variant": {
+            "die": "d100",
+            "roll": [
+              26,
+              40
+            ],
+            "label": "continual light"
+          }
+        },
+        {
+          "name": "Ring of Randomness (bless)",
+          "id": "rings.randomnessBless",
+          "roll": null,
+          "xp": null,
+          "xpPrinted": "--",
+          "source": "TOM",
+          "classRestriction": [
+            "priest"
+          ],
+          "hasDescription": true,
+          "variantOf": "rings.randomness",
+          "variant": {
+            "die": "d100",
+            "roll": [
+              41,
+              60
+            ],
+            "label": "bless"
+          }
+        },
+        {
+          "name": "Ring of Randomness (cure light wounds)",
+          "id": "rings.randomnessCureLightWounds",
+          "roll": null,
+          "xp": null,
+          "xpPrinted": "--",
+          "source": "TOM",
+          "classRestriction": [
+            "priest"
+          ],
+          "hasDescription": true,
+          "variantOf": "rings.randomness",
+          "variant": {
+            "die": "d100",
+            "roll": [
+              61,
+              70
+            ],
+            "label": "cure light wounds"
+          }
+        },
+        {
+          "name": "Ring of Randomness (remove fear)",
+          "id": "rings.randomnessRemoveFear",
+          "roll": null,
+          "xp": null,
+          "xpPrinted": "--",
+          "source": "TOM",
+          "classRestriction": [
+            "priest"
+          ],
+          "hasDescription": true,
+          "variantOf": "rings.randomness",
+          "variant": {
+            "die": "d100",
+            "roll": [
+              71,
+              80
+            ],
+            "label": "remove fear"
+          }
+        },
+        {
+          "name": "Ring of Randomness (heat metal)",
+          "id": "rings.randomnessHeatMetal",
+          "roll": null,
+          "xp": null,
+          "xpPrinted": "--",
+          "source": "TOM",
+          "classRestriction": [
+            "priest"
+          ],
+          "hasDescription": true,
+          "variantOf": "rings.randomness",
+          "variant": {
+            "die": "d100",
+            "roll": [
+              81,
+              90
+            ],
+            "label": "heat metal"
+          }
+        },
+        {
+          "name": "Ring of Randomness (cure blindness or deafness)",
+          "id": "rings.randomnessCureBlindnessOrDeafness",
+          "roll": null,
+          "xp": null,
+          "xpPrinted": "--",
+          "source": "TOM",
+          "classRestriction": [
+            "priest"
+          ],
+          "hasDescription": true,
+          "variantOf": "rings.randomness",
+          "variant": {
+            "die": "d100",
+            "roll": [
+              91,
+              100
+            ],
+            "label": "cure blindness or deafness"
+          }
+        },
+        {
+          "name": "Ring of Resistance (Abjuration)",
+          "id": "rings.resistanceAbjuration",
+          "roll": null,
+          "xp": 1000,
+          "xpPrinted": "1,000",
+          "source": "TOM",
+          "classRestriction": [
+            "wizard"
+          ],
+          "hasDescription": true,
+          "variantOf": "rings.resistance",
+          "variant": {
+            "die": "d8",
+            "roll": [
+              1,
+              1
+            ],
+            "label": "Abjuration"
+          }
+        },
+        {
+          "name": "Ring of Resistance (Alteration)",
+          "id": "rings.resistanceAlteration",
+          "roll": null,
+          "xp": 1000,
+          "xpPrinted": "1,000",
+          "source": "TOM",
+          "classRestriction": [
+            "wizard"
+          ],
+          "hasDescription": true,
+          "variantOf": "rings.resistance",
+          "variant": {
+            "die": "d8",
+            "roll": [
+              2,
+              2
+            ],
+            "label": "Alteration"
+          }
+        },
+        {
+          "name": "Ring of Resistance (Conjuration/Summoning)",
+          "id": "rings.resistanceConjurationSummoning",
+          "roll": null,
+          "xp": 1000,
+          "xpPrinted": "1,000",
+          "source": "TOM",
+          "classRestriction": [
+            "wizard"
+          ],
+          "hasDescription": true,
+          "variantOf": "rings.resistance",
+          "variant": {
+            "die": "d8",
+            "roll": [
+              3,
+              3
+            ],
+            "label": "Conjuration/Summoning"
+          }
+        },
+        {
+          "name": "Ring of Resistance (Enchantment/Charm)",
+          "id": "rings.resistanceEnchantmentCharm",
+          "roll": null,
+          "xp": 1000,
+          "xpPrinted": "1,000",
+          "source": "TOM",
+          "classRestriction": [
+            "wizard"
+          ],
+          "hasDescription": true,
+          "variantOf": "rings.resistance",
+          "variant": {
+            "die": "d8",
+            "roll": [
+              4,
+              4
+            ],
+            "label": "Enchantment/Charm"
+          }
+        },
+        {
+          "name": "Ring of Resistance (Illusion/Phantasm)",
+          "id": "rings.resistanceIllusionPhantasm",
+          "roll": null,
+          "xp": 1000,
+          "xpPrinted": "1,000",
+          "source": "TOM",
+          "classRestriction": [
+            "wizard"
+          ],
+          "hasDescription": true,
+          "variantOf": "rings.resistance",
+          "variant": {
+            "die": "d8",
+            "roll": [
+              5,
+              5
+            ],
+            "label": "Illusion/Phantasm"
+          }
+        },
+        {
+          "name": "Ring of Resistance (Invocation/Evocation)",
+          "id": "rings.resistanceInvocationEvocation",
+          "roll": null,
+          "xp": 1000,
+          "xpPrinted": "1,000",
+          "source": "TOM",
+          "classRestriction": [
+            "wizard"
+          ],
+          "hasDescription": true,
+          "variantOf": "rings.resistance",
+          "variant": {
+            "die": "d8",
+            "roll": [
+              6,
+              6
+            ],
+            "label": "Invocation/Evocation"
+          }
+        },
+        {
+          "name": "Ring of Resistance (Lesser/Greater Divination)",
+          "id": "rings.resistanceLesserGreaterDivination",
+          "roll": null,
+          "xp": 1000,
+          "xpPrinted": "1,000",
+          "source": "TOM",
+          "classRestriction": [
+            "wizard"
+          ],
+          "hasDescription": true,
+          "variantOf": "rings.resistance",
+          "variant": {
+            "die": "d8",
+            "roll": [
+              7,
+              7
+            ],
+            "label": "Lesser/Greater Divination"
+          }
+        },
+        {
+          "name": "Ring of Resistance (Necromancy)",
+          "id": "rings.resistanceNecromancy",
+          "roll": null,
+          "xp": 1000,
+          "xpPrinted": "1,000",
+          "source": "TOM",
+          "classRestriction": [
+            "wizard"
+          ],
+          "hasDescription": true,
+          "variantOf": "rings.resistance",
+          "variant": {
+            "die": "d8",
+            "roll": [
+              8,
+              8
+            ],
+            "label": "Necromancy"
+          }
+        }
+      ]
     },
     "92": {
       "table": 92,
@@ -2810,7 +3924,20 @@
           ]
         }
       ],
-      "footnotes": {}
+      "footnotes": {},
+      "extraItems": [
+        {
+          "name": "Rod of Distortion",
+          "id": "rods.distortion",
+          "roll": null,
+          "xp": 5000,
+          "xpPrinted": "5,000",
+          "source": "TOM",
+          "weightLbs": 3.5,
+          "weightSource": "owner-set",
+          "hasDescription": true
+        }
+      ]
     },
     "93": {
       "table": 93,
@@ -3155,7 +4282,24 @@
       "footnotes": {
         "*": "per +1 of power.",
         "**": "per charge."
-      }
+      },
+      "extraItems": [
+        {
+          "name": "Staff of the Elements",
+          "id": "staves.elements",
+          "roll": null,
+          "xp": 10000,
+          "xpPrinted": "10,000",
+          "source": "TOM",
+          "classRestriction": [
+            "wizard"
+          ],
+          "weightLbs": 5,
+          "weightSource": "owner-set",
+          "hasCharges": true,
+          "hasDescription": true
+        }
+      ]
     },
     "94": {
       "table": 94,
@@ -3452,7 +4596,57 @@
           ]
         }
       ],
-      "footnotes": {}
+      "footnotes": {},
+      "extraItems": [
+        {
+          "name": "Wand of Corridors",
+          "id": "wands.corridors",
+          "roll": null,
+          "xp": 4000,
+          "xpPrinted": "4,000",
+          "source": "TOM",
+          "weightLbs": 0.1,
+          "weightSource": "owner-set",
+          "hasCharges": true,
+          "hasDescription": true
+        },
+        {
+          "name": "Wand of Element Transmogrification",
+          "id": "wands.elementTransmogrification",
+          "roll": null,
+          "xp": 2000,
+          "xpPrinted": "2,000",
+          "source": "TOM",
+          "weightLbs": 0.1,
+          "weightSource": "owner-set",
+          "hasCharges": true,
+          "hasDescription": true
+        },
+        {
+          "name": "Wand of Misplaced Objects",
+          "id": "wands.misplacedObjects",
+          "roll": null,
+          "xp": 2000,
+          "xpPrinted": "2,000",
+          "source": "TOM",
+          "weightLbs": 0.1,
+          "weightSource": "owner-set",
+          "hasCharges": true,
+          "hasDescription": true
+        },
+        {
+          "name": "Wand of Prime Material Pocket",
+          "id": "wands.primeMaterialPocket",
+          "roll": null,
+          "xp": 5000,
+          "xpPrinted": "5,000",
+          "source": "TOM",
+          "weightLbs": 0.1,
+          "weightSource": "owner-set",
+          "hasCharges": true,
+          "hasDescription": true
+        }
+      ]
     },
     "95": {
       "table": 95,
@@ -3829,7 +5023,42 @@
           ]
         }
       ],
-      "footnotes": {}
+      "footnotes": {},
+      "extraItems": [
+        {
+          "name": "Manual of Dogmatic Methods",
+          "id": "books.manualOfDogmaticMethods",
+          "roll": null,
+          "xp": null,
+          "xpPrinted": "--",
+          "source": "TOM",
+          "hasDescription": true
+        },
+        {
+          "name": "Tome of Mystical Equations",
+          "id": "books.tomeOfMysticalEquations",
+          "roll": null,
+          "xp": 1000,
+          "xpPrinted": "1,000",
+          "source": "TOM",
+          "classRestriction": [
+            "priest"
+          ],
+          "hasDescription": true
+        },
+        {
+          "name": "Trimia's Catalogue of Outer Plane Artifacts",
+          "id": "books.trimiasCatalogueOfOuterPlaneArtifacts",
+          "roll": null,
+          "xp": 12000,
+          "xpPrinted": "12,000",
+          "source": "TOM",
+          "classRestriction": [
+            "wizard"
+          ],
+          "hasDescription": true
+        }
+      ]
     },
     "96": {
       "table": 96,
@@ -5201,7 +6430,7 @@
           "xpPrinted": "300",
           "valueGp": 300,
           "weightLbs": 0.1,
-          "hasDescription": false,
+          "hasDescription": true,
           "source": "owner-added",
           "xpSource": "owner-confirmed 0 XP"
         },
@@ -5213,9 +6442,375 @@
           "xpPrinted": "300",
           "valueGp": 300,
           "weightLbs": 0.1,
-          "hasDescription": false,
+          "hasDescription": true,
           "source": "owner-added",
           "xpSource": "owner-confirmed 0 XP"
+        },
+        {
+          "name": "Amulet of Extension",
+          "id": "jewels.amuletOfExtension",
+          "roll": null,
+          "xp": 1000,
+          "xpPrinted": "1,000",
+          "source": "TOM",
+          "classRestriction": [
+            "wizard"
+          ],
+          "hasDescription": true
+        },
+        {
+          "name": "Amulet of Far Reaching",
+          "id": "jewels.amuletOfFarReaching",
+          "roll": null,
+          "xp": 1000,
+          "xpPrinted": "1,000",
+          "source": "TOM",
+          "classRestriction": [
+            "wizard"
+          ],
+          "hasDescription": true
+        },
+        {
+          "name": "Amulet of Leadership",
+          "id": "jewels.amuletOfLeadership",
+          "roll": null,
+          "xp": 5000,
+          "xpPrinted": "5,000",
+          "source": "TOM",
+          "hasDescription": true
+        },
+        {
+          "name": "Amulet of Magic Resistance (5% resistance, all spells)",
+          "id": "jewels.amuletOfMagicResistanceAll5",
+          "roll": null,
+          "xp": 5000,
+          "xpPrinted": "5,000",
+          "source": "TOM",
+          "hasDescription": true,
+          "variantOf": "jewels.amuletOfMagicResistance",
+          "variant": {
+            "die": "d6 (x5%)",
+            "roll": [
+              1,
+              1
+            ],
+            "label": "5% resistance, all spells",
+            "resistancePercent": 5,
+            "scope": "all spells",
+            "scopeChancePercent": 50
+          }
+        },
+        {
+          "name": "Amulet of Magic Resistance (10% resistance, all spells)",
+          "id": "jewels.amuletOfMagicResistanceAll10",
+          "roll": null,
+          "xp": 5000,
+          "xpPrinted": "5,000",
+          "source": "TOM",
+          "hasDescription": true,
+          "variantOf": "jewels.amuletOfMagicResistance",
+          "variant": {
+            "die": "d6 (x5%)",
+            "roll": [
+              2,
+              2
+            ],
+            "label": "10% resistance, all spells",
+            "resistancePercent": 10,
+            "scope": "all spells",
+            "scopeChancePercent": 50
+          }
+        },
+        {
+          "name": "Amulet of Magic Resistance (15% resistance, all spells)",
+          "id": "jewels.amuletOfMagicResistanceAll15",
+          "roll": null,
+          "xp": 5000,
+          "xpPrinted": "5,000",
+          "source": "TOM",
+          "hasDescription": true,
+          "variantOf": "jewels.amuletOfMagicResistance",
+          "variant": {
+            "die": "d6 (x5%)",
+            "roll": [
+              3,
+              3
+            ],
+            "label": "15% resistance, all spells",
+            "resistancePercent": 15,
+            "scope": "all spells",
+            "scopeChancePercent": 50
+          }
+        },
+        {
+          "name": "Amulet of Magic Resistance (20% resistance, all spells)",
+          "id": "jewels.amuletOfMagicResistanceAll20",
+          "roll": null,
+          "xp": 5000,
+          "xpPrinted": "5,000",
+          "source": "TOM",
+          "hasDescription": true,
+          "variantOf": "jewels.amuletOfMagicResistance",
+          "variant": {
+            "die": "d6 (x5%)",
+            "roll": [
+              4,
+              4
+            ],
+            "label": "20% resistance, all spells",
+            "resistancePercent": 20,
+            "scope": "all spells",
+            "scopeChancePercent": 50
+          }
+        },
+        {
+          "name": "Amulet of Magic Resistance (25% resistance, all spells)",
+          "id": "jewels.amuletOfMagicResistanceAll25",
+          "roll": null,
+          "xp": 5000,
+          "xpPrinted": "5,000",
+          "source": "TOM",
+          "hasDescription": true,
+          "variantOf": "jewels.amuletOfMagicResistance",
+          "variant": {
+            "die": "d6 (x5%)",
+            "roll": [
+              5,
+              5
+            ],
+            "label": "25% resistance, all spells",
+            "resistancePercent": 25,
+            "scope": "all spells",
+            "scopeChancePercent": 50
+          }
+        },
+        {
+          "name": "Amulet of Magic Resistance (30% resistance, all spells)",
+          "id": "jewels.amuletOfMagicResistanceAll30",
+          "roll": null,
+          "xp": 5000,
+          "xpPrinted": "5,000",
+          "source": "TOM",
+          "hasDescription": true,
+          "variantOf": "jewels.amuletOfMagicResistance",
+          "variant": {
+            "die": "d6 (x5%)",
+            "roll": [
+              6,
+              6
+            ],
+            "label": "30% resistance, all spells",
+            "resistancePercent": 30,
+            "scope": "all spells",
+            "scopeChancePercent": 50
+          }
+        },
+        {
+          "name": "Amulet of Magic Resistance (5% resistance, spells of 1st-6th level only)",
+          "id": "jewels.amuletOfMagicResistanceLimited5",
+          "roll": null,
+          "xp": 5000,
+          "xpPrinted": "5,000",
+          "source": "TOM",
+          "hasDescription": true,
+          "variantOf": "jewels.amuletOfMagicResistance",
+          "variant": {
+            "die": "d6 (x5%)",
+            "roll": [
+              1,
+              1
+            ],
+            "label": "5% resistance, spells of 1st-6th level only",
+            "resistancePercent": 5,
+            "scope": "spells of 1st-6th level only",
+            "scopeChancePercent": 50
+          }
+        },
+        {
+          "name": "Amulet of Magic Resistance (10% resistance, spells of 1st-6th level only)",
+          "id": "jewels.amuletOfMagicResistanceLimited10",
+          "roll": null,
+          "xp": 5000,
+          "xpPrinted": "5,000",
+          "source": "TOM",
+          "hasDescription": true,
+          "variantOf": "jewels.amuletOfMagicResistance",
+          "variant": {
+            "die": "d6 (x5%)",
+            "roll": [
+              2,
+              2
+            ],
+            "label": "10% resistance, spells of 1st-6th level only",
+            "resistancePercent": 10,
+            "scope": "spells of 1st-6th level only",
+            "scopeChancePercent": 50
+          }
+        },
+        {
+          "name": "Amulet of Magic Resistance (15% resistance, spells of 1st-6th level only)",
+          "id": "jewels.amuletOfMagicResistanceLimited15",
+          "roll": null,
+          "xp": 5000,
+          "xpPrinted": "5,000",
+          "source": "TOM",
+          "hasDescription": true,
+          "variantOf": "jewels.amuletOfMagicResistance",
+          "variant": {
+            "die": "d6 (x5%)",
+            "roll": [
+              3,
+              3
+            ],
+            "label": "15% resistance, spells of 1st-6th level only",
+            "resistancePercent": 15,
+            "scope": "spells of 1st-6th level only",
+            "scopeChancePercent": 50
+          }
+        },
+        {
+          "name": "Amulet of Magic Resistance (20% resistance, spells of 1st-6th level only)",
+          "id": "jewels.amuletOfMagicResistanceLimited20",
+          "roll": null,
+          "xp": 5000,
+          "xpPrinted": "5,000",
+          "source": "TOM",
+          "hasDescription": true,
+          "variantOf": "jewels.amuletOfMagicResistance",
+          "variant": {
+            "die": "d6 (x5%)",
+            "roll": [
+              4,
+              4
+            ],
+            "label": "20% resistance, spells of 1st-6th level only",
+            "resistancePercent": 20,
+            "scope": "spells of 1st-6th level only",
+            "scopeChancePercent": 50
+          }
+        },
+        {
+          "name": "Amulet of Magic Resistance (25% resistance, spells of 1st-6th level only)",
+          "id": "jewels.amuletOfMagicResistanceLimited25",
+          "roll": null,
+          "xp": 5000,
+          "xpPrinted": "5,000",
+          "source": "TOM",
+          "hasDescription": true,
+          "variantOf": "jewels.amuletOfMagicResistance",
+          "variant": {
+            "die": "d6 (x5%)",
+            "roll": [
+              5,
+              5
+            ],
+            "label": "25% resistance, spells of 1st-6th level only",
+            "resistancePercent": 25,
+            "scope": "spells of 1st-6th level only",
+            "scopeChancePercent": 50
+          }
+        },
+        {
+          "name": "Amulet of Magic Resistance (30% resistance, spells of 1st-6th level only)",
+          "id": "jewels.amuletOfMagicResistanceLimited30",
+          "roll": null,
+          "xp": 5000,
+          "xpPrinted": "5,000",
+          "source": "TOM",
+          "hasDescription": true,
+          "variantOf": "jewels.amuletOfMagicResistance",
+          "variant": {
+            "die": "d6 (x5%)",
+            "roll": [
+              6,
+              6
+            ],
+            "label": "30% resistance, spells of 1st-6th level only",
+            "resistancePercent": 30,
+            "scope": "spells of 1st-6th level only",
+            "scopeChancePercent": 50
+          }
+        },
+        {
+          "name": "Amulet of Metaspell Influence",
+          "id": "jewels.amuletOfMetaspellInfluence",
+          "roll": null,
+          "xp": 3000,
+          "xpPrinted": "3,000",
+          "source": "TOM",
+          "classRestriction": [
+            "wizard"
+          ],
+          "hasDescription": true
+        },
+        {
+          "name": "Amulet of Perpetual Youth",
+          "id": "jewels.amuletOfPerpetualYouth",
+          "roll": null,
+          "xp": 2000,
+          "xpPrinted": "2,000",
+          "source": "TOM",
+          "hasDescription": true
+        },
+        {
+          "name": "Brooch of Number Numbing",
+          "id": "jewels.broochOfNumberNumbing",
+          "roll": null,
+          "xp": 4000,
+          "xpPrinted": "4,000",
+          "source": "TOM",
+          "hasDescription": true
+        },
+        {
+          "name": "Gem of Retaliation",
+          "id": "jewels.gemOfRetaliation",
+          "roll": null,
+          "xp": 2000,
+          "xpPrinted": "2,000",
+          "source": "TOM",
+          "hasDescription": true
+        },
+        {
+          "name": "Medallion of Spell Exchange",
+          "id": "jewels.medallionOfSpellExchange",
+          "roll": null,
+          "xp": 3000,
+          "xpPrinted": "3,000",
+          "source": "TOM",
+          "classRestriction": [
+            "wizard"
+          ],
+          "hasDescription": true
+        },
+        {
+          "name": "Necklace of Memory Enhancement",
+          "id": "jewels.necklaceOfMemoryEnhancement",
+          "roll": null,
+          "xp": 1000,
+          "xpPrinted": "1,000",
+          "source": "TOM",
+          "hasDescription": true
+        },
+        {
+          "name": "Scarab of Uncertainty",
+          "id": "jewels.scarabOfUncertainty",
+          "roll": null,
+          "xp": 1000,
+          "xpPrinted": "1,000",
+          "source": "TOM",
+          "hasDescription": true
+        },
+        {
+          "name": "Talisman of Memorization",
+          "id": "jewels.talismanOfMemorization",
+          "roll": null,
+          "xp": 1000,
+          "xpPrinted": "1,000",
+          "source": "TOM",
+          "classRestriction": [
+            "wizard"
+          ],
+          "hasDescription": true
         }
       ]
     },
@@ -5558,7 +7153,31 @@
       ],
       "footnotes": {
         "*": "Per plus"
-      }
+      },
+      "extraItems": [
+        {
+          "name": "Fur of Warmth",
+          "id": "cloaks.furOfWarmth",
+          "roll": null,
+          "xp": 5000,
+          "xpPrinted": "5,000",
+          "source": "TOM",
+          "hasDescription": true
+        },
+        {
+          "name": "Robe of Repetition",
+          "id": "cloaks.robeOfRepetition",
+          "roll": null,
+          "xp": 6000,
+          "xpPrinted": "6,000",
+          "source": "TOM",
+          "classRestriction": [
+            "priest",
+            "wizard"
+          ],
+          "hasDescription": true
+        }
+      ]
     },
     "98": {
       "table": 98,
@@ -6049,7 +7668,27 @@
       ],
       "footnotes": {
         "*": "Per AC of protection less than 10"
-      }
+      },
+      "extraItems": [
+        {
+          "name": "Bracers of Brandishing",
+          "id": "boots.bracersOfBrandishing",
+          "roll": null,
+          "xp": 3000,
+          "xpPrinted": "3,000",
+          "source": "TOM",
+          "hasDescription": true
+        },
+        {
+          "name": "Reglar's Gloves of Freedom",
+          "id": "boots.reglarsGlovesOfFreedom",
+          "roll": null,
+          "xp": 3000,
+          "xpPrinted": "3,000",
+          "source": "TOM",
+          "hasDescription": true
+        }
+      ]
     },
     "99": {
       "table": 99,
@@ -6487,7 +8126,177 @@
           ]
         }
       ],
-      "footnotes": {}
+      "footnotes": {},
+      "extraItems": [
+        {
+          "name": "School Cap (Abjuration)",
+          "id": "girdles.schoolCapAbjuration",
+          "roll": null,
+          "xp": 2000,
+          "xpPrinted": "2,000",
+          "source": "TOM",
+          "classRestriction": [
+            "wizard"
+          ],
+          "hasDescription": true,
+          "variantOf": "girdles.schoolCap",
+          "variant": {
+            "die": "d8",
+            "roll": [
+              1,
+              1
+            ],
+            "label": "Abjuration"
+          }
+        },
+        {
+          "name": "School Cap (Conjuration/Summoning)",
+          "id": "girdles.schoolCapConjurationSummoning",
+          "roll": null,
+          "xp": 2000,
+          "xpPrinted": "2,000",
+          "source": "TOM",
+          "classRestriction": [
+            "wizard"
+          ],
+          "hasDescription": true,
+          "variantOf": "girdles.schoolCap",
+          "variant": {
+            "die": "d8",
+            "roll": [
+              2,
+              2
+            ],
+            "label": "Conjuration/Summoning"
+          }
+        },
+        {
+          "name": "School Cap (Greater Divination)",
+          "id": "girdles.schoolCapGreaterDivination",
+          "roll": null,
+          "xp": 2000,
+          "xpPrinted": "2,000",
+          "source": "TOM",
+          "classRestriction": [
+            "wizard"
+          ],
+          "hasDescription": true,
+          "variantOf": "girdles.schoolCap",
+          "variant": {
+            "die": "d8",
+            "roll": [
+              3,
+              3
+            ],
+            "label": "Greater Divination"
+          }
+        },
+        {
+          "name": "School Cap (Enchantment/Charm)",
+          "id": "girdles.schoolCapEnchantmentCharm",
+          "roll": null,
+          "xp": 2000,
+          "xpPrinted": "2,000",
+          "source": "TOM",
+          "classRestriction": [
+            "wizard"
+          ],
+          "hasDescription": true,
+          "variantOf": "girdles.schoolCap",
+          "variant": {
+            "die": "d8",
+            "roll": [
+              4,
+              4
+            ],
+            "label": "Enchantment/Charm"
+          }
+        },
+        {
+          "name": "School Cap (Illusion)",
+          "id": "girdles.schoolCapIllusion",
+          "roll": null,
+          "xp": 2000,
+          "xpPrinted": "2,000",
+          "source": "TOM",
+          "classRestriction": [
+            "wizard"
+          ],
+          "hasDescription": true,
+          "variantOf": "girdles.schoolCap",
+          "variant": {
+            "die": "d8",
+            "roll": [
+              5,
+              5
+            ],
+            "label": "Illusion"
+          }
+        },
+        {
+          "name": "School Cap (Invocation/Evocation)",
+          "id": "girdles.schoolCapInvocationEvocation",
+          "roll": null,
+          "xp": 2000,
+          "xpPrinted": "2,000",
+          "source": "TOM",
+          "classRestriction": [
+            "wizard"
+          ],
+          "hasDescription": true,
+          "variantOf": "girdles.schoolCap",
+          "variant": {
+            "die": "d8",
+            "roll": [
+              6,
+              6
+            ],
+            "label": "Invocation/Evocation"
+          }
+        },
+        {
+          "name": "School Cap (Necromancy)",
+          "id": "girdles.schoolCapNecromancy",
+          "roll": null,
+          "xp": 2000,
+          "xpPrinted": "2,000",
+          "source": "TOM",
+          "classRestriction": [
+            "wizard"
+          ],
+          "hasDescription": true,
+          "variantOf": "girdles.schoolCap",
+          "variant": {
+            "die": "d8",
+            "roll": [
+              7,
+              7
+            ],
+            "label": "Necromancy"
+          }
+        },
+        {
+          "name": "School Cap (Alteration)",
+          "id": "girdles.schoolCapAlteration",
+          "roll": null,
+          "xp": 2000,
+          "xpPrinted": "2,000",
+          "source": "TOM",
+          "classRestriction": [
+            "wizard"
+          ],
+          "hasDescription": true,
+          "variantOf": "girdles.schoolCap",
+          "variant": {
+            "die": "d8",
+            "roll": [
+              8,
+              8
+            ],
+            "label": "Alteration"
+          }
+        }
+      ]
     },
     "100": {
       "table": 100,
@@ -6975,7 +8784,102 @@
       ],
       "footnotes": {
         "*": "See item description"
-      }
+      },
+      "extraItems": [
+        {
+          "name": "Bag of Bones (One-shot)",
+          "id": "bags.bagOfBonesOneShot",
+          "roll": null,
+          "xp": 3000,
+          "xpPrinted": "3,000",
+          "source": "TOM",
+          "classRestriction": [
+            "priest"
+          ],
+          "hasDescription": true,
+          "variantOf": "bags.bagOfBones",
+          "variant": {
+            "die": "d100",
+            "roll": [
+              1,
+              66
+            ],
+            "label": "One-shot"
+          }
+        },
+        {
+          "name": "Bag of Bones (Replenishes each sunset)",
+          "id": "bags.bagOfBonesReplenishesEachSunset",
+          "roll": null,
+          "xp": 3000,
+          "xpPrinted": "3,000",
+          "source": "TOM",
+          "classRestriction": [
+            "priest"
+          ],
+          "hasDescription": true,
+          "variantOf": "bags.bagOfBones",
+          "variant": {
+            "die": "d100",
+            "roll": [
+              67,
+              100
+            ],
+            "label": "Replenishes each sunset"
+          }
+        },
+        {
+          "name": "Flatbox",
+          "id": "bags.flatbox",
+          "roll": null,
+          "xp": 5000,
+          "xpPrinted": "5,000",
+          "source": "TOM",
+          "hasDescription": true
+        },
+        {
+          "name": "Jar of Preserving",
+          "id": "bags.jarOfPreserving",
+          "roll": null,
+          "xp": 500,
+          "xpPrinted": "500",
+          "source": "TOM",
+          "hasDescription": true
+        },
+        {
+          "name": "Nefradina's Identifier",
+          "id": "bags.nefradinasIdentifier",
+          "roll": null,
+          "xp": 1000,
+          "xpPrinted": "1,000",
+          "source": "TOM",
+          "classRestriction": [
+            "wizard"
+          ],
+          "hasDescription": true
+        },
+        {
+          "name": "Tenser's Portmanteau of Frugality",
+          "id": "bags.tensersPortmanteauOfFrugality",
+          "roll": null,
+          "xp": 6000,
+          "xpPrinted": "6,000",
+          "source": "TOM",
+          "classRestriction": [
+            "wizard"
+          ],
+          "hasDescription": true
+        },
+        {
+          "name": "Thought Bottle",
+          "id": "bags.thoughtBottle",
+          "roll": null,
+          "xp": 1000,
+          "xpPrinted": "1,000",
+          "source": "TOM",
+          "hasDescription": true
+        }
+      ]
     },
     "101": {
       "table": 101,
@@ -7247,7 +9151,90 @@
       ],
       "footnotes": {
         "*": "Per stone or pot of pigment"
-      }
+      },
+      "extraItems": [
+        {
+          "name": "Candle of Propitiousness",
+          "id": "dusts.candleOfPropitiousness",
+          "roll": null,
+          "xp": 750,
+          "xpPrinted": "750",
+          "source": "TOM",
+          "hasDescription": true
+        },
+        {
+          "name": "Dust of Mind Dulling",
+          "id": "dusts.dustOfMindDulling",
+          "roll": null,
+          "xp": 1000,
+          "xpPrinted": "1,000",
+          "source": "TOM",
+          "hasDescription": true
+        },
+        {
+          "name": "Powder of the Black Veil",
+          "id": "dusts.powderOfTheBlackVeil",
+          "roll": null,
+          "xp": 1000,
+          "xpPrinted": "1,000",
+          "source": "TOM",
+          "hasDescription": true
+        },
+        {
+          "name": "Powder of Coagulation",
+          "id": "dusts.powderOfCoagulation",
+          "roll": null,
+          "xp": 500,
+          "xpPrinted": "500",
+          "source": "TOM",
+          "hasDescription": true
+        },
+        {
+          "name": "Powder of the Hero's Heart",
+          "id": "dusts.powderOfTheHerosHeart",
+          "roll": null,
+          "xp": 750,
+          "xpPrinted": "750",
+          "source": "TOM",
+          "hasDescription": true
+        },
+        {
+          "name": "Powder of Magic Detection",
+          "id": "dusts.powderOfMagicDetection",
+          "roll": null,
+          "xp": 1000,
+          "xpPrinted": "1,000",
+          "source": "TOM",
+          "hasDescription": true
+        },
+        {
+          "name": "Puchezma's Powder of Edible Objects",
+          "id": "dusts.puchezmasPowderOfEdibleObjects",
+          "roll": null,
+          "xp": 1000,
+          "xpPrinted": "1,000",
+          "source": "TOM",
+          "hasDescription": true
+        },
+        {
+          "name": "Salves of Far Seeing",
+          "id": "dusts.salvesOfFarSeeing",
+          "roll": null,
+          "xp": 1000,
+          "xpPrinted": "1,000",
+          "source": "TOM",
+          "hasDescription": true
+        },
+        {
+          "name": "Warp Marble",
+          "id": "dusts.warpMarble",
+          "roll": null,
+          "xp": 5000,
+          "xpPrinted": "5,000",
+          "source": "TOM",
+          "hasDescription": true
+        }
+      ]
     },
     "102": {
       "table": 102,
@@ -7625,7 +9612,156 @@
           ]
         }
       ],
-      "footnotes": {}
+      "footnotes": {},
+      "extraItems": [
+        {
+          "name": "Crucible of Melting",
+          "id": "household.crucibleOfMelting",
+          "roll": null,
+          "xp": 1000,
+          "xpPrinted": "1,000",
+          "source": "TOM",
+          "classRestriction": [
+            "wizard"
+          ],
+          "hasDescription": true
+        },
+        {
+          "name": "Everbountiful Soup Kettle",
+          "id": "household.everbountifulSoupKettle",
+          "roll": null,
+          "xp": 1000,
+          "xpPrinted": "1,000",
+          "source": "TOM",
+          "hasDescription": true
+        },
+        {
+          "name": "Forge of Metal Protection",
+          "id": "household.forgeOfMetalProtection",
+          "roll": null,
+          "xp": 10000,
+          "xpPrinted": "10,000",
+          "source": "TOM",
+          "hasDescription": true
+        },
+        {
+          "name": "Glass of Preserved Words",
+          "id": "household.glassOfPreservedWords",
+          "roll": null,
+          "xp": 2000,
+          "xpPrinted": "2,000",
+          "source": "TOM",
+          "hasDescription": true
+        },
+        {
+          "name": "Hourglass of Fire and Ice",
+          "id": "household.hourglassOfFireAndIce",
+          "roll": null,
+          "xp": 2000,
+          "xpPrinted": "2,000",
+          "source": "TOM",
+          "classRestriction": [
+            "wizard"
+          ],
+          "hasDescription": true
+        },
+        {
+          "name": "Lens of Speed Reading",
+          "id": "household.lensOfSpeedReading",
+          "roll": null,
+          "xp": 500,
+          "xpPrinted": "500",
+          "source": "TOM",
+          "hasDescription": true
+        },
+        {
+          "name": "Lorloveim's Obsidian Mortar and Pestle",
+          "id": "household.lorloveimsObsidianMortarAndPestle",
+          "roll": null,
+          "xp": 500,
+          "xpPrinted": "500",
+          "source": "TOM",
+          "hasDescription": true
+        },
+        {
+          "name": "Mirror of Retention",
+          "id": "household.mirrorOfRetention",
+          "roll": null,
+          "xp": 1200,
+          "xpPrinted": "1,200",
+          "source": "TOM",
+          "hasDescription": true
+        },
+        {
+          "name": "Mirror of Simple Order",
+          "id": "household.mirrorOfSimpleOrder",
+          "roll": null,
+          "xp": null,
+          "xpPrinted": "--",
+          "source": "TOM",
+          "hasDescription": true
+        },
+        {
+          "name": "Mordom's Cauldron of Air",
+          "id": "household.mordomsCauldronOfAir",
+          "roll": null,
+          "xp": 3000,
+          "xpPrinted": "3,000",
+          "source": "TOM",
+          "hasDescription": true
+        },
+        {
+          "name": "Philosopher's Egg",
+          "id": "household.philosophersEgg",
+          "roll": null,
+          "xp": 1000,
+          "xpPrinted": "1,000",
+          "source": "TOM",
+          "classRestriction": [
+            "wizard"
+          ],
+          "hasDescription": true
+        },
+        {
+          "name": "Pick of Earth Parting",
+          "id": "household.pickOfEarthParting",
+          "roll": null,
+          "xp": 5000,
+          "xpPrinted": "5,000",
+          "source": "TOM",
+          "hasDescription": true
+        },
+        {
+          "name": "Skie's Locks and Bolts",
+          "id": "household.skiesLocksAndBolts",
+          "roll": null,
+          "xp": 1000,
+          "xpPrinted": "1,000",
+          "source": "TOM",
+          "hasDescription": true
+        },
+        {
+          "name": "Tapestry of Disease Warding",
+          "id": "household.tapestryOfDiseaseWarding",
+          "roll": null,
+          "xp": 2000,
+          "xpPrinted": "2,000",
+          "source": "TOM",
+          "hasDescription": true
+        },
+        {
+          "name": "Zwann's Watering Can",
+          "id": "household.zwannsWateringCan",
+          "roll": null,
+          "xp": 1000,
+          "xpPrinted": "1,000",
+          "source": "TOM",
+          "classRestriction": [
+            "priest"
+          ],
+          "hasDescription": true
+        }
+      ]
     },
     "103": {
       "table": 103,
@@ -8013,7 +10149,18 @@
       ],
       "footnotes": {
         "*": "Only if used by character of appropriate class."
-      }
+      },
+      "extraItems": [
+        {
+          "name": "Horn of Valor",
+          "id": "instruments.hornOfValor",
+          "roll": null,
+          "xp": 5000,
+          "xpPrinted": "5,000",
+          "source": "TOM",
+          "hasDescription": true
+        }
+      ]
     },
     "104": {
       "table": 104,
@@ -8533,9 +10680,411 @@
           "valueGp": null,
           "weightLbs": 0.02,
           "weightNote": "50 berries to the lb, so 0.02 lb each",
-          "hasDescription": false,
+          "hasDescription": true,
           "source": "owner-added",
           "xpSource": "owner-confirmed 0 XP"
+        },
+        {
+          "name": "Air Spores",
+          "id": "weird.airSpores",
+          "roll": null,
+          "xp": 500,
+          "xpPrinted": "500",
+          "source": "TOM",
+          "hasDescription": true
+        },
+        {
+          "name": "Bell's Palette of Identity",
+          "id": "weird.bellsPaletteOfIdentity",
+          "roll": null,
+          "xp": 1000,
+          "xpPrinted": "1,000",
+          "source": "TOM",
+          "hasDescription": true
+        },
+        {
+          "name": "Claw of Magic Stealing",
+          "id": "weird.clawOfMagicStealing",
+          "roll": null,
+          "xp": 3500,
+          "xpPrinted": "3,500",
+          "source": "TOM",
+          "classRestriction": [
+            "wizard"
+          ],
+          "hasDescription": true
+        },
+        {
+          "name": "Contracts of Nepthas",
+          "id": "weird.contractsOfNepthas",
+          "roll": null,
+          "xp": 1000,
+          "xpPrinted": "1,000",
+          "source": "TOM",
+          "hasDescription": true
+        },
+        {
+          "name": "Crystal Parrot",
+          "id": "weird.crystalParrot",
+          "roll": null,
+          "xp": 1500,
+          "xpPrinted": "1,500",
+          "source": "TOM",
+          "hasDescription": true
+        },
+        {
+          "name": "Dimensional Mine",
+          "id": "weird.dimensionalMine",
+          "roll": null,
+          "xp": null,
+          "xpPrinted": "--",
+          "source": "TOM",
+          "hasDescription": true
+        },
+        {
+          "name": "Disintegration Chamber (1' cube)",
+          "id": "weird.disintegrationChamber1Cube",
+          "roll": null,
+          "xp": 5000,
+          "xpPrinted": "5,000",
+          "source": "TOM",
+          "hasCharges": true,
+          "hasDescription": true,
+          "variantOf": "weird.disintegrationChamber",
+          "variant": {
+            "die": "d6",
+            "roll": [
+              1,
+              1
+            ],
+            "label": "1' cube"
+          }
+        },
+        {
+          "name": "Disintegration Chamber (2' x 2' x 3' box)",
+          "id": "weird.disintegrationChamber2X2X3Box",
+          "roll": null,
+          "xp": 5000,
+          "xpPrinted": "5,000",
+          "source": "TOM",
+          "hasCharges": true,
+          "hasDescription": true,
+          "variantOf": "weird.disintegrationChamber",
+          "variant": {
+            "die": "d6",
+            "roll": [
+              2,
+              2
+            ],
+            "label": "2' x 2' x 3' box"
+          }
+        },
+        {
+          "name": "Disintegration Chamber (3' x 3' x 6' box)",
+          "id": "weird.disintegrationChamber3X3X6Box",
+          "roll": null,
+          "xp": 5000,
+          "xpPrinted": "5,000",
+          "source": "TOM",
+          "hasCharges": true,
+          "hasDescription": true,
+          "variantOf": "weird.disintegrationChamber",
+          "variant": {
+            "die": "d6",
+            "roll": [
+              3,
+              3
+            ],
+            "label": "3' x 3' x 6' box"
+          }
+        },
+        {
+          "name": "Disintegration Chamber (3' x 5' x 6' box)",
+          "id": "weird.disintegrationChamber3X5X6Box",
+          "roll": null,
+          "xp": 5000,
+          "xpPrinted": "5,000",
+          "source": "TOM",
+          "hasCharges": true,
+          "hasDescription": true,
+          "variantOf": "weird.disintegrationChamber",
+          "variant": {
+            "die": "d6",
+            "roll": [
+              4,
+              4
+            ],
+            "label": "3' x 5' x 6' box"
+          }
+        },
+        {
+          "name": "Disintegration Chamber (5' x 5' x 10' box)",
+          "id": "weird.disintegrationChamber5X5X10Box",
+          "roll": null,
+          "xp": 5000,
+          "xpPrinted": "5,000",
+          "source": "TOM",
+          "hasCharges": true,
+          "hasDescription": true,
+          "variantOf": "weird.disintegrationChamber",
+          "variant": {
+            "die": "d6",
+            "roll": [
+              5,
+              5
+            ],
+            "label": "5' x 5' x 10' box"
+          }
+        },
+        {
+          "name": "Disintegration Chamber (10' x 10' x 10' box)",
+          "id": "weird.disintegrationChamber10X10X10Box",
+          "roll": null,
+          "xp": 5000,
+          "xpPrinted": "5,000",
+          "source": "TOM",
+          "hasCharges": true,
+          "hasDescription": true,
+          "variantOf": "weird.disintegrationChamber",
+          "variant": {
+            "die": "d6",
+            "roll": [
+              6,
+              6
+            ],
+            "label": "10' x 10' x 10' box"
+          }
+        },
+        {
+          "name": "Elemental Compass",
+          "id": "weird.elementalCompass",
+          "roll": null,
+          "xp": 10000,
+          "xpPrinted": "10,000",
+          "source": "TOM",
+          "hasDescription": true
+        },
+        {
+          "name": "Globe of Purification",
+          "id": "weird.globeOfPurification",
+          "roll": null,
+          "xp": 500,
+          "xpPrinted": "500",
+          "source": "TOM",
+          "classRestriction": [
+            "priest"
+          ],
+          "hasDescription": true
+        },
+        {
+          "name": "Globe of Serenity",
+          "id": "weird.globeOfSerenity",
+          "roll": null,
+          "xp": 500,
+          "xpPrinted": "500",
+          "source": "TOM",
+          "classRestriction": [
+            "priest"
+          ],
+          "hasDescription": true
+        },
+        {
+          "name": "Law's Banner",
+          "id": "weird.lawsBanner",
+          "roll": null,
+          "xp": 5000,
+          "xpPrinted": "5,000",
+          "source": "TOM",
+          "classRestriction": [
+            "warrior"
+          ],
+          "hasDescription": true
+        },
+        {
+          "name": "Liquid Road",
+          "id": "weird.liquidRoad",
+          "roll": null,
+          "xp": 500,
+          "xpPrinted": "500",
+          "source": "TOM",
+          "hasDescription": true
+        },
+        {
+          "name": "Mist Tent",
+          "id": "weird.mistTent",
+          "roll": null,
+          "xp": 2000,
+          "xpPrinted": "2,000",
+          "source": "TOM",
+          "hasDescription": true
+        },
+        {
+          "name": "Mouse Cart",
+          "id": "weird.mouseCart",
+          "roll": null,
+          "xp": 3500,
+          "xpPrinted": "3,500",
+          "source": "TOM",
+          "hasDescription": true
+        },
+        {
+          "name": "Portable Canoe",
+          "id": "weird.portableCanoe",
+          "roll": null,
+          "xp": 2000,
+          "xpPrinted": "2,000",
+          "source": "TOM",
+          "hasDescription": true
+        },
+        {
+          "name": "Prism of Light Splitting",
+          "id": "weird.prismOfLightSplitting",
+          "roll": null,
+          "xp": 1500,
+          "xpPrinted": "1,500",
+          "source": "TOM",
+          "hasDescription": true
+        },
+        {
+          "name": "Quill of Law",
+          "id": "weird.quillOfLaw",
+          "roll": null,
+          "xp": 7000,
+          "xpPrinted": "7,000",
+          "source": "TOM",
+          "hasDescription": true
+        },
+        {
+          "name": "Saddle of Flying",
+          "id": "weird.saddleOfFlying",
+          "roll": null,
+          "xp": 4000,
+          "xpPrinted": "4,000",
+          "source": "TOM",
+          "hasDescription": true
+        },
+        {
+          "name": "Teleportation Chamber (1' cube)",
+          "id": "weird.teleportationChamber1Cube",
+          "roll": null,
+          "xp": 10000,
+          "xpPrinted": "10,000",
+          "source": "TOM",
+          "hasCharges": true,
+          "hasDescription": true,
+          "variantOf": "weird.teleportationChamber",
+          "variant": {
+            "die": "d6",
+            "roll": [
+              1,
+              1
+            ],
+            "label": "1' cube"
+          }
+        },
+        {
+          "name": "Teleportation Chamber (2' x 2' x 3' box)",
+          "id": "weird.teleportationChamber2X2X3Box",
+          "roll": null,
+          "xp": 10000,
+          "xpPrinted": "10,000",
+          "source": "TOM",
+          "hasCharges": true,
+          "hasDescription": true,
+          "variantOf": "weird.teleportationChamber",
+          "variant": {
+            "die": "d6",
+            "roll": [
+              2,
+              2
+            ],
+            "label": "2' x 2' x 3' box"
+          }
+        },
+        {
+          "name": "Teleportation Chamber (3' x 3' x 6' box)",
+          "id": "weird.teleportationChamber3X3X6Box",
+          "roll": null,
+          "xp": 10000,
+          "xpPrinted": "10,000",
+          "source": "TOM",
+          "hasCharges": true,
+          "hasDescription": true,
+          "variantOf": "weird.teleportationChamber",
+          "variant": {
+            "die": "d6",
+            "roll": [
+              3,
+              3
+            ],
+            "label": "3' x 3' x 6' box"
+          }
+        },
+        {
+          "name": "Teleportation Chamber (3' x 5' x 6' box)",
+          "id": "weird.teleportationChamber3X5X6Box",
+          "roll": null,
+          "xp": 10000,
+          "xpPrinted": "10,000",
+          "source": "TOM",
+          "hasCharges": true,
+          "hasDescription": true,
+          "variantOf": "weird.teleportationChamber",
+          "variant": {
+            "die": "d6",
+            "roll": [
+              4,
+              4
+            ],
+            "label": "3' x 5' x 6' box"
+          }
+        },
+        {
+          "name": "Teleportation Chamber (5' x 5' x 10' box)",
+          "id": "weird.teleportationChamber5X5X10Box",
+          "roll": null,
+          "xp": 10000,
+          "xpPrinted": "10,000",
+          "source": "TOM",
+          "hasCharges": true,
+          "hasDescription": true,
+          "variantOf": "weird.teleportationChamber",
+          "variant": {
+            "die": "d6",
+            "roll": [
+              5,
+              5
+            ],
+            "label": "5' x 5' x 10' box"
+          }
+        },
+        {
+          "name": "Teleportation Chamber (10' x 10' x 10' box)",
+          "id": "weird.teleportationChamber10X10X10Box",
+          "roll": null,
+          "xp": 10000,
+          "xpPrinted": "10,000",
+          "source": "TOM",
+          "hasCharges": true,
+          "hasDescription": true,
+          "variantOf": "weird.teleportationChamber",
+          "variant": {
+            "die": "d6",
+            "roll": [
+              6,
+              6
+            ],
+            "label": "10' x 10' x 10' box"
+          }
+        },
+        {
+          "name": "Time Bomb",
+          "id": "weird.timeBomb",
+          "roll": null,
+          "xp": 1000,
+          "xpPrinted": "1,000",
+          "source": "TOM",
+          "hasDescription": true
         }
       ]
     },
@@ -12210,6 +14759,16 @@
       "title": "Weapons",
       "page": 59,
       "key": "13"
+    },
+    {
+      "title": "Aromatic Oils (Tome of Magic)",
+      "page": 4,
+      "key": "14"
+    },
+    {
+      "title": "Powders (Tome of Magic)",
+      "page": 6,
+      "key": "15"
     }
   ]
 }
