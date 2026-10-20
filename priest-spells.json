@@ -24,7 +24,8 @@
         "Feeblemind: Animal sphere added (owner-confirmed).",
         "Sphere additions (owner-confirmed): Anti-Vermin Barrier +Animal; Endure Heat/Endure Cold +Weather; Stone Tell +Elemental Earth; Meld +All; Elemental Forbiddance +Elemental Air/Fire/Earth/Water; Grounding +Weather; Fire Purge +Elemental Fire; Blessed Abundance +Animal, Plant; Age Plant +Plant; Aura of Comfort +Weather. Flame Walk reference set to PHB.",
         "Conjure Air Elemental and Conjure Water Elemental duplicated with reference HR (ids priest7.conjureAirElementalHr / priest7.conjureWaterElementalHr); originals keep POSM.",
-        "God-specific for Torm (owner): Compel, Hand of Torm, Bolt of Glory, Swordward (godSpecific set to Torm; references left blank)."
+        "God-specific for Torm (owner): Compel, Hand of Torm, Bolt of Glory, Swordward (godSpecific set to Torm; references left blank).",
+        "God-specific for Tyr (owner): Wolfjaws, Hammer of Justice, Sword and Hammer, Resplendence of Renewed Youth added; Message Mote removed from Tyr's list (godSpecific cleared; spell kept)."
       ],
       "otherSheets": "Sheets \"Mielikki Druid Ranger\" and \"Mielikki Ranger\" are god-specific lists and were not imported."
     },
@@ -4648,9 +4649,7 @@
       "location": "PSC II",
       "page": 404,
       "reference": "FA",
-      "godSpecific": [
-        "Tyr"
-      ]
+      "godSpecific": null
     },
     {
       "id": "priest2.messenger",
@@ -6054,7 +6053,9 @@
       "location": "PSC III",
       "page": 719,
       "reference": null,
-      "godSpecific": null
+      "godSpecific": [
+        "Tyr"
+      ]
     },
     {
       "id": "priest2.woodSword",
@@ -16048,7 +16049,9 @@
       "location": "PSC II",
       "page": 318,
       "reference": null,
-      "godSpecific": null
+      "godSpecific": [
+        "Tyr"
+      ]
     },
     {
       "id": "priest5.hardwater",
@@ -20816,7 +20819,9 @@
       "location": "PSC III",
       "page": 629,
       "reference": null,
-      "godSpecific": null
+      "godSpecific": [
+        "Tyr"
+      ]
     },
     {
       "id": "priest6.swordward",
@@ -22785,7 +22790,9 @@
       "location": "PSC II",
       "page": 499,
       "reference": null,
-      "godSpecific": null
+      "godSpecific": [
+        "Tyr"
+      ]
     },
     {
       "id": "priest7.restoration",
