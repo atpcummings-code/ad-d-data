@@ -4878,6 +4878,16 @@
             "longSword"
           ],
           "matchNote": "Added by the owner (not on the spreadsheet)."
+        },
+        {
+          "printed": "Short Bow",
+          "name": "Short bow",
+          "gearId": "shortBow",
+          "match": "exact",
+          "gearIds": [
+            "shortBow"
+          ],
+          "matchNote": "Added by the owner (not on the spreadsheet)."
         }
       ],
       "requiredProficiency": {
