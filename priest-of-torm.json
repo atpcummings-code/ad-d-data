@@ -1181,7 +1181,9 @@
         "reference": null,
         "godSpecific": [
           "Torm"
-        ]
+        ],
+        "includeInSpellSelection": true,
+        "selectionNote": "Must be included in the Priest of Torm spell selection, regardless of whether the spell is also given elsewhere (e.g. as a granted/bonus power) (owner)."
       },
       {
         "id": "priest3.continualLight",
@@ -1879,7 +1881,9 @@
         "reference": null,
         "godSpecific": [
           "Torm"
-        ]
+        ],
+        "includeInSpellSelection": true,
+        "selectionNote": "Must be included in the Priest of Torm spell selection, regardless of whether the spell is also given elsewhere (e.g. as a granted/bonus power) (owner)."
       },
       {
         "id": "priest4.joinWithAstralTraveler",
@@ -2391,7 +2395,9 @@
         "reference": null,
         "godSpecific": [
           "Torm"
-        ]
+        ],
+        "includeInSpellSelection": true,
+        "selectionNote": "Must be included in the Priest of Torm spell selection, regardless of whether the spell is also given elsewhere (e.g. as a granted/bonus power) (owner)."
       },
       {
         "id": "priest6.conjureAnimals",
@@ -2585,7 +2591,9 @@
         "reference": null,
         "godSpecific": [
           "Torm"
-        ]
+        ],
+        "includeInSpellSelection": true,
+        "selectionNote": "Must be included in the Priest of Torm spell selection, regardless of whether the spell is also given elsewhere (e.g. as a granted/bonus power) (owner)."
       },
       {
         "id": "priest6.wordOfRecall",
