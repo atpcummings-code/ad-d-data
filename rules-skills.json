@@ -2628,6 +2628,32 @@
             "requiredProficiencies": [
               "etiquette"
             ]
+          },
+          "priestOfSilvanus": {
+            "groups": [
+              "priest",
+              "warrior",
+              "general"
+            ],
+            "ownGroup": "priest",
+            "bonusProficiencies": [
+              "religion",
+              "survival",
+              "weatherSense"
+            ],
+            "requiredProficiencies": [
+              "animalLore"
+            ],
+            "requiredChoice": {
+              "count": 2,
+              "from": [
+                "brewing",
+                "cobbling",
+                "cooking",
+                "fishing",
+                "weaving"
+              ]
+            }
           }
         },
         "notYetCovered": {

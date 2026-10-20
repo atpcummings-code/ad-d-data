@@ -28,7 +28,8 @@
       "Worshipper alignments printed as text (for example Any (Trade focuses on gold, not alignment)) are kept as text.",
       "All proficiencies now exist in rules-skills.json; the 20 not on PHB Table 37 were added from the owner list.",
       "Torm (owner-changed): Warhammer and Mace removed from allowedWeapons (weapons now follow the generic cleric rule); required proficiency Etiquette (uses a slot); bonus proficiencies Religion, Heraldry and Riding, Land-based (no slots); Righteous Fury removed.",
-      "Silvanus (owner-changed): Sickle and Club removed from allowedWeapons (covered by the Druid class); Nature's Wrath removed."
+      "Silvanus (owner-changed): Sickle and Club removed from allowedWeapons (covered by the Druid class); Nature's Wrath removed.",
+      "Silvanus (owner-changed): required proficiencies Animal Lore plus two of Brewing, Cobbling, Cooking, Fishing, Weaving (slots); bonus Religion, Survival (Forest), Weather Sense (no slots). Herbalism removed."
     ]
   },
   "gods": [
@@ -1449,19 +1450,67 @@
       ],
       "worshipperAlignmentsPrinted": "LG, NG, CG, LN, N, CN",
       "allowedWeapons": [],
-      "requiredProficiency": {
-        "printed": "Survival (Forest)",
-        "name": "Survival",
-        "specialisation": "Forest",
-        "nonWeaponId": "survival",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Herbalism",
-        "name": "Herbalism",
-        "nonWeaponId": "herbalism",
-        "match": "exact"
-      },
+      "requiredProficiency": [
+        {
+          "printed": "Animal Lore",
+          "name": "Animal Lore",
+          "nonWeaponId": "animalLore",
+          "match": "exact",
+          "usesSlot": true
+        },
+        {
+          "printed": "Two of Brewing, Cobbling, Cooking, Fishing or Weaving",
+          "chooseCount": 2,
+          "options": [
+            {
+              "name": "Brewing",
+              "nonWeaponId": "brewing"
+            },
+            {
+              "name": "Cobbling",
+              "nonWeaponId": "cobbling"
+            },
+            {
+              "name": "Cooking",
+              "nonWeaponId": "cooking"
+            },
+            {
+              "name": "Fishing",
+              "nonWeaponId": "fishing"
+            },
+            {
+              "name": "Weaving",
+              "nonWeaponId": "weaving"
+            }
+          ],
+          "match": "exact",
+          "usesSlot": true
+        }
+      ],
+      "bonusProficiency": [
+        {
+          "printed": "Religion",
+          "name": "Religion",
+          "nonWeaponId": "religion",
+          "match": "exact",
+          "usesSlot": false
+        },
+        {
+          "printed": "Survival (Forest)",
+          "name": "Survival",
+          "specialisation": "Forest",
+          "nonWeaponId": "survival",
+          "match": "exact",
+          "usesSlot": false
+        },
+        {
+          "printed": "Weather Sense",
+          "name": "Weather Sense",
+          "nonWeaponId": "weatherSense",
+          "match": "exact",
+          "usesSlot": false
+        }
+      ],
       "innatePower": null,
       "source": {
         "sheet": "Human Pantheon",

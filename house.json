@@ -1218,6 +1218,95 @@
           "appHint": "Offer a 'tithe due' calculator on income entries."
         }
       }
+    },
+    "priestOfSilvanus": {
+      "alignmentPrefill": "Neutral",
+      "savesAs": "priest",
+      "turnUndead": false,
+      "saveModifiers": [
+        {
+          "vs": "fire",
+          "value": 2
+        },
+        {
+          "vs": "electrical",
+          "value": 2
+        }
+      ],
+      "source": "Druid abilities (owner: follows all Druid rules); 2e PHB druid Granted Powers (text supplied by owner), paraphrased",
+      "grantedPowers": [
+        {
+          "id": "d1",
+          "level": 1,
+          "text": "Saves as a priest, with a +2 bonus to all saving throws against fire or electrical attacks."
+        },
+        {
+          "id": "d2",
+          "level": 1,
+          "text": "Speaks the secret druidic language in addition to any other tongues. Its vocabulary is limited to nature and natural events. Under the optional proficiency rules it does not use a proficiency slot."
+        },
+        {
+          "id": "d3",
+          "level": 3,
+          "text": "Identifies plants, animals and pure water with perfect accuracy."
+        },
+        {
+          "id": "d4",
+          "level": 3,
+          "text": "Passes through overgrown areas (thick thorn bushes, tangled vines, briar patches, etc.) without leaving a trail and at normal movement rate."
+        },
+        {
+          "id": "d5",
+          "level": 3,
+          "text": "Can learn the languages of woodland creatures: one at 3rd level and one more for each level advanced above 3rd. Under the optional proficiency rules the druid chooses whether to spend a proficiency slot on these.",
+          "languageOptions": [
+            "centaurs",
+            "dryads",
+            "elves",
+            "fauns",
+            "gnomes",
+            "dragons",
+            "giants",
+            "lizard men",
+            "manticores",
+            "nixies",
+            "pixies",
+            "sprites",
+            "treants"
+          ]
+        },
+        {
+          "id": "d6",
+          "level": 7,
+          "text": "Immune to charm spells cast by woodland creatures (dryads, nixies, etc.)."
+        },
+        {
+          "id": "d7",
+          "level": 7,
+          "text": "Can shapechange into a reptile, bird or mammal up to three times per day; each of the three animal types can be used only once per day. Size ranges from a bullfrog or small bird up to a black bear. On assuming a new form the druid heals 10-60% (1d6 x 10%) of the damage he has suffered, rounding fractions down. Only normal, real-world animals in normal proportions, taking on all of the creature's characteristics (movement, abilities, AC, attacks, damage). Clothing and one item held in each hand become part of the new body and cannot be used until normal form resumes.",
+          "usesPerDay": 3,
+          "healing": {
+            "dice": "1d6",
+            "multiplierPct": 10,
+            "of": "damage suffered",
+            "rounding": "down"
+          }
+        }
+      ],
+      "sheetOnlyAbilities": [
+        {
+          "id": "s1",
+          "level": 3,
+          "text": "Can locate pure water within 1 mile + 1 mile per level above 3rd level (sheet wording ambiguous).",
+          "status": "on your sheets, not in the PHB text supplied: house addition?"
+        },
+        {
+          "id": "s2",
+          "level": 7,
+          "text": "Can converse with all neutral/non-aligned woodland creatures.",
+          "status": "on your sheets, not in the PHB text supplied: house addition?"
+        }
+      ]
     }
   },
   "classRecipes": {
@@ -1331,6 +1420,16 @@
         "alignmentPrefill": "Lawful Good",
         "pdfBase": "paladin",
         "weaponRowsNote": "5 rows, as the app prints for the Paladin (owner-confirmed)."
+      },
+      "priestOfSilvanus": {
+        "blocks": [
+          "druidPowers",
+          "wisBonusSpells"
+        ],
+        "weaponRows": 4,
+        "alignmentPrefill": "Neutral",
+        "bonusSpells": "wis",
+        "pdfBase": "druid"
       }
     },
     "notes": [
@@ -1396,7 +1495,8 @@
       "classes": [
         "cleric",
         "druid",
-        "priestOfTorm"
+        "priestOfTorm",
+        "priestOfSilvanus"
       ]
     },
     "int": {

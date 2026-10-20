@@ -41,7 +41,8 @@
     "priest": [
       "cleric",
       "druid",
-      "priestOfTorm"
+      "priestOfTorm",
+      "priestOfSilvanus"
     ],
     "rogue": [
       "thief",
@@ -58,7 +59,8 @@
       "status": "confirmed by owner (Monk_v1.docx)"
     },
     "illusionistNote": "Illusionist is a specialist wizard (see specialistWizards); it shares the wizard group.",
-    "priestOfTormNote": "Priest of Torm is a house class in the priest group (priest THAC0, priest saves, priest proficiency slots) because it follows the Cleric rules (owner)."
+    "priestOfTormNote": "Priest of Torm is a house class in the priest group (priest THAC0, priest saves, priest proficiency slots) because it follows the Cleric rules (owner).",
+    "priestOfSilvanusNote": "Priest of Silvanus is a house class in the priest group (priest THAC0, saves and proficiency slots) because it follows the Druid rules (owner)."
   },
   "classIds": {
     "fighter": {
@@ -122,6 +124,13 @@
       "name": "Priest of Torm",
       "sheetNames": [
         "Priest of Torm"
+      ],
+      "source": "house"
+    },
+    "priestOfSilvanus": {
+      "name": "Priest of Silvanus",
+      "sheetNames": [
+        "Priest of Silvanus"
       ],
       "source": "house"
     }
@@ -280,7 +289,8 @@
           "appliesTo": [
             "cleric",
             "druid",
-            "priestOfTorm"
+            "priestOfTorm",
+            "priestOfSilvanus"
           ],
           "excludes": [
             "paladin",
@@ -2945,6 +2955,10 @@
           "dwarf",
           "elf",
           "halfElf"
+        ],
+        "priestOfSilvanus": [
+          "human",
+          "halfElf"
         ]
       },
       "byRace": {
@@ -2959,7 +2973,8 @@
           "thief",
           "bard",
           "monk",
-          "priestOfTorm"
+          "priestOfTorm",
+          "priestOfSilvanus"
         ],
         "dwarf": [
           "fighter",
@@ -2989,7 +3004,8 @@
           "druid",
           "thief",
           "bard",
-          "priestOfTorm"
+          "priestOfTorm",
+          "priestOfSilvanus"
         ],
         "halfling": [
           "fighter",
@@ -3003,7 +3019,8 @@
         ]
       },
       "specialistSchoolsOtherThanIllusionist": "same as wizard (confirmed by owner)",
-      "priestOfTormNote": "Priest of Torm is limited to Human, Dwarf, Elf and Half-elf (owner). Not added to any multi-class combination; none was specified."
+      "priestOfTormNote": "Priest of Torm is limited to Human, Dwarf, Elf and Half-elf (owner). Not added to any multi-class combination; none was specified.",
+      "priestOfSilvanusNote": "Priest of Silvanus uses the Druid race list (owner: follows all Druid rules). Not added to any multi-class combination; none was specified."
     },
     "weaponAttackBonuses": {
       "status": "confirmed-by-owner (PHB text) and weapon list from the owner's weapons spreadsheet",
@@ -4404,12 +4421,204 @@
         },
         "classDropdown": {
           "category": "Priest",
-          "placeAfter": "monk"
+          "placeAfter": "priestOfSilvanus"
         },
         "pdfExport": {
           "base": "paladin",
           "notes": "Use the Paladin PDF as the base; XP table is this class's own; include spell sheets with the amendments, as for the Cleric (owner).",
           "title": "Priest of Torm Player Character Record (v7.0) Copyright Tradestands Ltd 2026"
+        }
+      },
+      "priestOfSilvanus": {
+        "abilityMinimums": {
+          "cha": 15,
+          "wis": 12
+        },
+        "optionalClass": true,
+        "minimumsSource": "PHB Table 13: Class Ability Minimums (image supplied by owner)",
+        "source": "Owner specification (Priest of Silvanus)",
+        "classGroup": "priest",
+        "allowedRaces": [
+          "human",
+          "halfElf"
+        ],
+        "primeRequisites": [
+          "wis",
+          "cha"
+        ],
+        "primeRequisitesNote": "Both Wisdom and Charisma are prime requisites (text supplied).",
+        "xpBonus": {
+          "percent": 10,
+          "requires": {
+            "wis": 16,
+            "cha": 16
+          },
+          "rule": "Charisma and Wisdom must both be 16 or more for a 10% experience bonus.",
+          "appliesWhen": "every prime requisite is 16 or more"
+        },
+        "allowedAlignments": [
+          "neutral"
+        ],
+        "alignmentNote": "Neutral required (see alignments); a Druid/Ranger multi-class must be Neutral Good.",
+        "armourRestrictions": {
+          "rule": "Only 'natural' armours: leather armour and wooden shields, including those with magical enhancements. All other armours are forbidden.",
+          "allowedArmourIds": [
+            "leather",
+            "padded",
+            "hide"
+          ],
+          "shields": "wooden shields only; ruling: all shield types can be wooden, so every shield is allowed",
+          "magicalEnhancementsAllowed": true,
+          "needsRuling": {
+            "shieldsNote": "Resolved: all shields allowed (owner ruling)."
+          },
+          "allowedShieldIds": [
+            "shieldBody",
+            "shieldBuckler",
+            "shieldMedium",
+            "shieldSmall"
+          ],
+          "shieldRuling": {
+            "status": "confirmed-by-owner",
+            "text": "Assume all shields can be wooden."
+          },
+          "excludedArmourIds": [
+            "bandedMail",
+            "brigandine",
+            "bronzePlateMail",
+            "chainMail",
+            "plateMail",
+            "ringMail",
+            "scaleMail",
+            "splintMail",
+            "studdedLeather"
+          ],
+          "ruling": {
+            "status": "confirmed-by-owner",
+            "text": "Padded armour and hide count as leather armour for a druid. Studded leather does not.",
+            "acNote": "By Table 46 these are AC leather 8, padded 8, hide 6 (without a shield)."
+          }
+        },
+        "weaponRestrictions": {
+          "rule": "Weapons limited to club, sickle, dart, spear, dagger, scimitar, sling and staff.",
+          "allowedWeaponIds": [
+            "club",
+            "sickle",
+            "dart",
+            "spear",
+            "daggerOrDirk",
+            "scimitar",
+            "sling",
+            "quarterstaff"
+          ],
+          "mapping": {
+            "staff": "quarterstaff (assumed; the weapons table has no weapon simply called 'staff', and 'staff sling' is a separate item)",
+            "dagger": "daggerOrDirk",
+            "sling": "sling (assumed to include sling bullets and sling stones as ammunition)"
+          },
+          "assumedAmmunition": [
+            "slingBullet",
+            "slingStone"
+          ],
+          "needsConfirming": [
+            "staff = quarterstaff",
+            "sling ammunition allowed"
+          ]
+        },
+        "hitDie": {
+          "sides": 8,
+          "perLevelFrom": 1,
+          "perLevelTo": 9
+        },
+        "nameLevel": 9,
+        "hitPointsAfterNameLevel": {
+          "perLevel": 2,
+          "conBonusApplies": false,
+          "conBonusNote": "Core rule: no CON bonus after name level, as for every class. Your house rule (house.json hitPointRules.conBonusAllLevels) gives the bonus at all levels.",
+          "source": "Owner statement",
+          "houseOverride": "house.json hitPointRules.conBonusAllLevels"
+        },
+        "houseClass": true,
+        "followsClassRules": "druid",
+        "patronGod": {
+          "godId": "silvanus",
+          "locked": true,
+          "rule": "Patron god is always Silvanus and is auto-selected; the player cannot choose another."
+        },
+        "alignmentRule": {
+          "mustAlwaysRemain": "neutral",
+          "prefill": "Neutral"
+        },
+        "nonWeaponProficiencies": {
+          "bonus": [
+            {
+              "id": "religion",
+              "name": "Religion",
+              "usesSlot": false
+            },
+            {
+              "id": "survival",
+              "name": "Survival",
+              "specialisation": "Forest",
+              "usesSlot": false
+            },
+            {
+              "id": "weatherSense",
+              "name": "Weather Sense",
+              "usesSlot": false
+            }
+          ],
+          "required": [
+            {
+              "id": "animalLore",
+              "name": "Animal Lore",
+              "usesSlot": true
+            },
+            {
+              "chooseCount": 2,
+              "options": [
+                {
+                  "id": "brewing",
+                  "name": "Brewing"
+                },
+                {
+                  "id": "cobbling",
+                  "name": "Cobbling"
+                },
+                {
+                  "id": "cooking",
+                  "name": "Cooking"
+                },
+                {
+                  "id": "fishing",
+                  "name": "Fishing"
+                },
+                {
+                  "id": "weaving",
+                  "name": "Weaving"
+                }
+              ],
+              "usesSlot": true,
+              "text": "Must choose two of Brewing, Cobbling, Cooking, Fishing or Weaving."
+            }
+          ],
+          "note": "Silvanus's god entry in gods.json carries the same proficiencies (owner: replaced there)."
+        },
+        "weaponRestrictionsNote": "Same as the Druid. Silvanus adds no weapons; Sickle and Club are already covered by the Druid list (owner).",
+        "spells": {
+          "spellProgression": "priest (same table as the Druid)",
+          "wisdomBonusSpells": true,
+          "listFile": "priest-of-silvanus.json"
+        },
+        "classDropdown": {
+          "category": "Priest",
+          "placeAfter": "monk",
+          "placeBefore": "priestOfTorm"
+        },
+        "pdfExport": {
+          "base": "druid",
+          "title": "Priest of Silvanus Player Character Record (v7.0) Copyright Tradestands Ltd 2026",
+          "notes": "Druid PDF as the base (owner)."
         }
       }
     },
@@ -4794,6 +5003,40 @@
           "9+20",
           "9+22"
         ]
+      },
+      "priestOfSilvanus": {
+        "maxLevel": 20,
+        "xp": [
+          0,
+          2000,
+          4000,
+          7500,
+          12500,
+          20000,
+          35000,
+          60000,
+          90000,
+          125000,
+          200000,
+          300000,
+          750000,
+          1500000,
+          3000000,
+          3500000
+        ],
+        "xpReset": {
+          "afterReaching": 16,
+          "resetTo": 1,
+          "thresholdsFromReset": {
+            "17": 500000,
+            "18": 1000000,
+            "19": 1500000,
+            "20": 2000000
+          },
+          "sheetMarker": "The asterisk on '500,000*' on the druid sheets marks this reset.",
+          "note": "XP is cumulative only up to level 16. After reaching 16th level the druid's XP resets to 1 and levels 17-20 are measured from that reset. Confirmed by owner. Reading assumed: 18th level needs 1,000,000 total since the reset (not 1,000,000 on top of the 500,000)."
+        },
+        "source": "Druid column (owner: follows all Druid rules), including the XP reset after level 16"
       }
     }
   },
@@ -6409,7 +6652,8 @@
       "appliesTo": [
         "cleric",
         "druid",
-        "priestOfTorm"
+        "priestOfTorm",
+        "priestOfSilvanus"
       ],
       "spellLevels": [
         1,
@@ -7708,6 +7952,12 @@
           "lawfulGood"
         ],
         "note": "Lawful Good is required for the Priest of Torm (owner)."
+      },
+      "priestOfSilvanus": {
+        "allowed": [
+          "neutral"
+        ],
+        "note": "Neutral is required for the Priest of Silvanus (owner)."
       }
     },
     "multiClassOverrides": [
