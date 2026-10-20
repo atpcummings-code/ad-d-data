@@ -8774,7 +8774,8 @@
                   }
                 ]
               },
-              "capacityNote": "Total weight limit 300 lb is stated; the 30 cu. ft. total is calculated from 30 pockets of 1 cu. ft. Each pocket holds 10 lb or 1 cu. ft., whichever is reached first. The description says the pouch weighs 1 lb empty and 4 lb when filled; weightLbs is 2, as set by the owner (the description's 1 lb empty / 4 lb full is not used)."
+              "capacityNote": "Total weight limit 300 lb is stated; the 30 cu. ft. total is calculated from 30 pockets of 1 cu. ft. Each pocket holds 10 lb or 1 cu. ft., whichever is reached first. The description says the pouch weighs 1 lb empty and 4 lb when filled; weightLbs is 2, as set by the owner (the description's 1 lb empty / 4 lb full is not used).",
+              "contentsCountForEncumbrance": false
             },
             {
               "roll": [
