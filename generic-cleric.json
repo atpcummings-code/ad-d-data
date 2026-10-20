@@ -18,19 +18,21 @@
     ],
     "minorAccessSpheres": [
       "Elemental Water",
-      "Elemental Earth"
+      "Elemental Earth",
+      "Elemental Air",
+      "Elemental Fire"
     ],
     "rules": [
       "Spell included if any of its spheres is a major-access sphere, or a minor-access sphere and the spell is 1st-3rd level (2e PHB minor access rule, owner-confirmed).",
-      "Only spells whose Original Reference is PHB, PHB1, TOM or UA are included.",
+      "Only spells whose Original Reference is PHB, PHB1, TOM, UA or HR are included.",
       "id matches the spell id in priest-spells.json.",
       "castingTime, range and savingThrow are copied from priest-spells.json."
     ],
-    "count": 141,
+    "count": 151,
     "countByLevel": {
-      "1": 27,
-      "2": 23,
-      "3": 27,
+      "1": 28,
+      "2": 28,
+      "3": 31,
       "4": 18,
       "5": 15,
       "6": 16,
@@ -284,6 +286,23 @@
           "Creation"
         ],
         "reference": "PHB"
+      },
+      {
+        "id": "priest1.logOfEverburning",
+        "name": "Log of Everburning",
+        "level": 1,
+        "reversible": false,
+        "castingTime": "4s",
+        "range": "TOUCH",
+        "savingThrow": "None",
+        "access": "minor",
+        "accessVia": [
+          "Elemental Fire"
+        ],
+        "spheres": [
+          "Elemental Fire"
+        ],
+        "reference": "TOM"
       },
       {
         "id": "priest1.magicalStone",
@@ -565,6 +584,23 @@
         "reference": "PHB"
       },
       {
+        "id": "priest2.cureModerateWounds",
+        "name": "Cure Moderate Wounds",
+        "level": 2,
+        "reversible": true,
+        "castingTime": "6s",
+        "range": "TOUCH",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Healing"
+        ],
+        "spheres": [
+          "Healing"
+        ],
+        "reference": "HR"
+      },
+      {
         "id": "priest2.detectCharm",
         "name": "Detect Charm",
         "level": 2,
@@ -650,6 +686,57 @@
         ],
         "spheres": [
           "Divination"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest2.fireTrap",
+        "name": "Fire Trap",
+        "level": 2,
+        "reversible": false,
+        "castingTime": "1 turn",
+        "range": "TOUCH",
+        "savingThrow": "0.5",
+        "access": "minor",
+        "accessVia": [
+          "Elemental Fire"
+        ],
+        "spheres": [
+          "Elemental Fire"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest2.flameBlade",
+        "name": "Flame Blade",
+        "level": 2,
+        "reversible": false,
+        "castingTime": "4s",
+        "range": "0",
+        "savingThrow": "None",
+        "access": "minor",
+        "accessVia": [
+          "Elemental Fire"
+        ],
+        "spheres": [
+          "Elemental Fire"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest2.heatMetal",
+        "name": "Heat Metal",
+        "level": 2,
+        "reversible": true,
+        "castingTime": "5s",
+        "range": "40YDS",
+        "savingThrow": "Special",
+        "access": "minor",
+        "accessVia": [
+          "Elemental Fire"
+        ],
+        "spheres": [
+          "Elemental Fire"
         ],
         "reference": "PHB"
       },
@@ -757,6 +844,23 @@
           "All"
         ],
         "reference": "TOM"
+      },
+      {
+        "id": "priest2.produceFlame",
+        "name": "Produce Flame",
+        "level": 2,
+        "reversible": false,
+        "castingTime": "5s",
+        "range": "0",
+        "savingThrow": "None",
+        "access": "minor",
+        "accessVia": [
+          "Elemental Fire"
+        ],
+        "spheres": [
+          "Elemental Fire"
+        ],
+        "reference": "PHB"
       },
       {
         "id": "priest2.resistFireResistCold",
@@ -1057,6 +1161,23 @@
         "reference": "PHB"
       },
       {
+        "id": "priest3.cureWounds",
+        "name": "Cure Wounds",
+        "level": 3,
+        "reversible": true,
+        "castingTime": "6s",
+        "range": "TOUCH",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Healing"
+        ],
+        "spheres": [
+          "Healing"
+        ],
+        "reference": "HR"
+      },
+      {
         "id": "priest3.deathSDoor",
         "name": "Death's Door",
         "level": 3,
@@ -1265,6 +1386,40 @@
         "reference": "PHB"
       },
       {
+        "id": "priest3.protectionFromFire",
+        "name": "Protection from Fire",
+        "level": 3,
+        "reversible": false,
+        "castingTime": "6s",
+        "range": "TOUCH",
+        "savingThrow": "None",
+        "access": "minor",
+        "accessVia": [
+          "Elemental Fire"
+        ],
+        "spheres": [
+          "Elemental Fire"
+        ],
+        "reference": "PHB"
+      },
+      {
+        "id": "priest3.pyrotechnics",
+        "name": "Pyrotechnics",
+        "level": 3,
+        "reversible": false,
+        "castingTime": "6s",
+        "range": "160YDS",
+        "savingThrow": "Special",
+        "access": "minor",
+        "accessVia": [
+          "Elemental Fire"
+        ],
+        "spheres": [
+          "Elemental Fire"
+        ],
+        "reference": "PHB"
+      },
+      {
         "id": "priest3.removeCurse",
         "name": "Remove Curse",
         "level": 3,
@@ -1363,6 +1518,7 @@
         "savingThrow": "None",
         "access": "minor",
         "accessVia": [
+          "Elemental Air",
           "Elemental Water"
         ],
         "spheres": [
@@ -1387,6 +1543,24 @@
           "Elemental Water"
         ],
         "reference": "PHB"
+      },
+      {
+        "id": "priest3.zoneOfSweetAir",
+        "name": "Zone of Sweet Air",
+        "level": 3,
+        "reversible": false,
+        "castingTime": "6s",
+        "range": "10YDS / Level",
+        "savingThrow": "None",
+        "access": "minor",
+        "accessVia": [
+          "Elemental Air"
+        ],
+        "spheres": [
+          "Wards",
+          "Elemental Air"
+        ],
+        "reference": "TOM"
       }
     ],
     "4": [

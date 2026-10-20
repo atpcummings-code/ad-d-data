@@ -10,7 +10,7 @@
     "minorAccessSpheres": [],
     "rules": [
       "Spell included if any of its spheres is a major-access sphere (Animal, Plant).",
-      "Only spells whose Original Reference is PHB, PHB1, TOM or UA are included.",
+      "Only spells whose Original Reference is PHB, PHB1, TOM, UA or HR are included.",
       "id matches the spell id in priest-spells.json.",
       "castingTime, range and savingThrow are copied from priest-spells.json.",
       "spellProgression is copied from rules-core.json (PHB Table 18). Spell levels 1-7 are listed as for the other classes; the ranger can only cast the levels given in spellProgression.spellLevels."
