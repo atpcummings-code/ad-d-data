@@ -15,14 +15,14 @@
       "castingTime, range and savingThrow are copied from priest-spells.json.",
       "spellProgression is copied from rules-core.json (PHB Table 18). Spell levels 1-7 are listed as for the other classes; the ranger can only cast the levels given in spellProgression.spellLevels."
     ],
-    "count": 48,
+    "count": 49,
     "countByLevel": {
       "1": 7,
       "2": 9,
       "3": 7,
       "4": 9,
       "5": 6,
-      "6": 6,
+      "6": 7,
       "7": 4
     }
   },
@@ -901,6 +901,24 @@
           "Protection"
         ],
         "reference": "PHB"
+      },
+      {
+        "id": "priest6.feeblemind",
+        "name": "Feeblemind",
+        "level": 6,
+        "reversible": false,
+        "castingTime": "9s",
+        "range": "160YDS",
+        "savingThrow": "Negates",
+        "access": "major",
+        "accessVia": [
+          "Animal"
+        ],
+        "spheres": [
+          "Charm",
+          "Animal"
+        ],
+        "reference": "PHB1"
       },
       {
         "id": "priest6.liveoak",

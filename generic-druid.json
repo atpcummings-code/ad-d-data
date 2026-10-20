@@ -24,14 +24,14 @@
       "id matches the spell id in priest-spells.json.",
       "castingTime, range and savingThrow are copied from priest-spells.json."
     ],
-    "count": 144,
+    "count": 145,
     "countByLevel": {
       "1": 24,
       "2": 24,
       "3": 26,
       "4": 22,
       "5": 19,
-      "6": 14,
+      "6": 15,
       "7": 15
     }
   },
@@ -2089,6 +2089,24 @@
           "Elemental Fire"
         ],
         "reference": "PHB"
+      },
+      {
+        "id": "priest6.feeblemind",
+        "name": "Feeblemind",
+        "level": 6,
+        "reversible": false,
+        "castingTime": "9s",
+        "range": "160YDS",
+        "savingThrow": "Negates",
+        "access": "major",
+        "accessVia": [
+          "Animal"
+        ],
+        "spheres": [
+          "Charm",
+          "Animal"
+        ],
+        "reference": "PHB1"
       },
       {
         "id": "priest6.fireSeeds",

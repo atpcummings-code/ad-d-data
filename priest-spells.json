@@ -19,7 +19,9 @@
         "Control Winds (5th): both rows replaced with the values the owner supplied (range 0, VSM, casting time 8, duration 1t/Lvl, area 40ft/Lvl radius, save None, PSC I p.148, PHB).",
         "Santuary (1st) merged into Sanctuary: spheres Protection and Charm (the typo had kept the two rows from merging).",
         "Converse with Sea Creaturs (3rd) merged into Converse with Sea Creature: spheres Animal and Divination.",
-        "Spelling corrected in names and area-of-effect text (Annihilation, Assassin, Creatures, Ethereal, Etherealness, Phylactery, Protection, Putrefaction, Sentinel, Strength, Temperature, Vengeance, Wondrous, Permanency, Crocodile, Voodoo, Dweomer, Amorphous, Variable, Vegetable). Spell ids were not changed."
+        "Spelling corrected in names and area-of-effect text (Annihilation, Assassin, Creatures, Ethereal, Etherealness, Phylactery, Protection, Putrefaction, Sentinel, Strength, Temperature, Vengeance, Wondrous, Permanency, Crocodile, Voodoo, Dweomer, Amorphous, Variable, Vegetable). Spell ids were not changed.",
+        "Breathe of Life renamed Breath of Life, reference set to TOM, marked reversible (owner-confirmed). Id left unchanged.",
+        "Feeblemind: Animal sphere added (owner-confirmed)."
       ],
       "otherSheets": "Sheets \"Mielikki Druid Ranger\" and \"Mielikki Ranger\" are god-specific lists and were not imported."
     },
@@ -19240,7 +19242,8 @@
       "level": 6,
       "reversible": false,
       "spheres": [
-        "Charm"
+        "Charm",
+        "Animal"
       ],
       "castingTime": "9s",
       "range": "160YDS",
@@ -21507,9 +21510,9 @@
     },
     {
       "id": "priest7.breatheOfLife",
-      "name": "Breathe of Life",
+      "name": "Breath of Life",
       "level": 7,
-      "reversible": false,
+      "reversible": true,
       "spheres": [
         "Necromantic"
       ],
@@ -21521,7 +21524,7 @@
       "components": "VSM",
       "location": "PSC I",
       "page": 85,
-      "reference": null,
+      "reference": "TOM",
       "godSpecific": null
     },
     {
