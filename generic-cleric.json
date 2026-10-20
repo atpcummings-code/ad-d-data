@@ -28,9 +28,9 @@
       "id matches the spell id in priest-spells.json.",
       "castingTime, range and savingThrow are copied from priest-spells.json."
     ],
-    "count": 151,
+    "count": 150,
     "countByLevel": {
-      "1": 28,
+      "1": 27,
       "2": 28,
       "3": 31,
       "4": 18,
@@ -487,26 +487,11 @@
         "savingThrow": "None",
         "access": "major",
         "accessVia": [
-          "Protection"
-        ],
-        "spheres": [
-          "Protection"
-        ],
-        "reference": "PHB"
-      },
-      {
-        "id": "priest1.santuary",
-        "name": "Santuary",
-        "level": 1,
-        "reversible": false,
-        "castingTime": "4s",
-        "range": "TOUCH",
-        "savingThrow": "None",
-        "access": "major",
-        "accessVia": [
+          "Protection",
           "Charm"
         ],
         "spheres": [
+          "Protection",
           "Charm"
         ],
         "reference": "PHB"
@@ -2122,7 +2107,7 @@
       },
       {
         "id": "priest5.unceasingVigilanceOfTheHolySentinal",
-        "name": "Unceasing Vigilance of the Holy Sentinal",
+        "name": "Unceasing Vigilance of the Holy Sentinel",
         "level": 5,
         "reversible": false,
         "castingTime": "1 turn",

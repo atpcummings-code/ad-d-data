@@ -1378,7 +1378,7 @@
       },
       {
         "id": "priest4.controlTemperture10Radius",
-        "name": "Control Temperture, 10' Radius",
+        "name": "Control Temperature, 10' Radius",
         "level": 4,
         "reversible": false,
         "castingTime": "7s",

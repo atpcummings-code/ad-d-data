@@ -433,7 +433,8 @@
           "Protection"
         ],
         "spheres": [
-          "Protection"
+          "Protection",
+          "Charm"
         ],
         "reference": "PHB"
       }

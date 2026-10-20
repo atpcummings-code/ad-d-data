@@ -3,7 +3,7 @@
     "title": "AD&D 2nd Edition Priest Spells (all spheres, levels 1-7)",
     "source": "Owner-supplied workbook Priest_spells_levels_1to7.xlsx, sheet \"All Spells\"",
     "status": "first-draft-from-spreadsheet",
-    "count": 1225,
+    "count": 1223,
     "notes": {
       "rows": "The sheet has one row per spell per sphere (1,478 rows). Rows with the same spell name and level were merged into one record whose spheres lists every sphere; other fields come from the first row that has a value.",
       "names": "\"(R)\" in a name is removed and sets reversible true. A trailing \"#\" is kept as nameMarker (meaning not stated in the workbook). Small words in names (of, the, to...) are lower-cased; otherwise names are as in the sheet.",
@@ -16,7 +16,10 @@
       "description": "The workbook has no spell descriptions, so none are included.",
       "ownerOverrides": [
         "Consequence (5th): stats taken from the Numbers row.",
-        "Control Winds (5th): both rows replaced with the values the owner supplied (range 0, VSM, casting time 8, duration 1t/Lvl, area 40ft/Lvl radius, save None, PSC I p.148, PHB)."
+        "Control Winds (5th): both rows replaced with the values the owner supplied (range 0, VSM, casting time 8, duration 1t/Lvl, area 40ft/Lvl radius, save None, PSC I p.148, PHB).",
+        "Santuary (1st) merged into Sanctuary: spheres Protection and Charm (the typo had kept the two rows from merging).",
+        "Converse with Sea Creaturs (3rd) merged into Converse with Sea Creature: spheres Animal and Divination.",
+        "Spelling corrected in names and area-of-effect text (Annihilation, Assassin, Creatures, Ethereal, Etherealness, Phylactery, Protection, Putrefaction, Sentinel, Strength, Temperature, Vengeance, Wondrous, Permanency, Crocodile, Voodoo, Dweomer, Amorphous, Variable, Vegetable). Spell ids were not changed."
       ],
       "otherSheets": "Sheets \"Mielikki Druid Ranger\" and \"Mielikki Ranger\" are god-specific lists and were not imported."
     },
@@ -2090,25 +2093,7 @@
       "level": 1,
       "reversible": false,
       "spheres": [
-        "Protection"
-      ],
-      "castingTime": "4s",
-      "range": "TOUCH",
-      "duration": "2rds + 1rd/Lvl",
-      "areaOfEffect": "Creature Touched",
-      "savingThrow": "None",
-      "components": "VSM",
-      "location": "PSC II",
-      "page": 522,
-      "reference": "PHB",
-      "godSpecific": null
-    },
-    {
-      "id": "priest1.santuary",
-      "name": "Santuary",
-      "level": 1,
-      "reversible": false,
-      "spheres": [
+        "Protection",
         "Charm"
       ],
       "castingTime": "4s",
@@ -2604,7 +2589,7 @@
     },
     {
       "id": "priest1.vooddoo",
-      "name": "Vooddoo",
+      "name": "Voodoo",
       "level": 1,
       "reversible": false,
       "spheres": [
@@ -3392,7 +3377,7 @@
     },
     {
       "id": "priest2.crocadileTears",
-      "name": "Crocadile Tears",
+      "name": "Crocodile Tears",
       "level": 2,
       "reversible": false,
       "spheres": [
@@ -3796,7 +3781,7 @@
     },
     {
       "id": "priest2.etheralBarrier",
-      "name": "Etheral Barrier",
+      "name": "Ethereal Barrier",
       "level": 2,
       "reversible": false,
       "spheres": [
@@ -3863,7 +3848,7 @@
       "castingTime": "5s",
       "range": "TOUCH",
       "duration": "Permanent",
-      "areaOfEffect": "Two Plants, Vegatables Or Fruit / Lvl",
+      "areaOfEffect": "Two Plants, Vegetables Or Fruit / Lvl",
       "savingThrow": "None",
       "components": "VS",
       "location": "PSC I",
@@ -5122,7 +5107,7 @@
     },
     {
       "id": "priest2.restoreStrenght",
-      "name": "Restore Strenght",
+      "name": "Restore Strength",
       "level": 2,
       "reversible": false,
       "spheres": [
@@ -5217,7 +5202,7 @@
     },
     {
       "id": "priest2.scentOfVengence",
-      "name": "Scent of Vengence",
+      "name": "Scent of Vengeance",
       "level": 2,
       "reversible": false,
       "spheres": [
@@ -6611,25 +6596,7 @@
       "level": 3,
       "reversible": false,
       "spheres": [
-        "Animal"
-      ],
-      "castingTime": "3s",
-      "range": "0",
-      "duration": "1rd / Lvl",
-      "areaOfEffect": "10Yd Radius / Lvl",
-      "savingThrow": "None",
-      "components": "VM",
-      "location": "PSC I",
-      "page": 149,
-      "reference": null,
-      "godSpecific": null
-    },
-    {
-      "id": "priest3.converseWithSeaCreaturs",
-      "name": "Converse with Sea Creaturs",
-      "level": 3,
-      "reversible": false,
-      "spheres": [
+        "Animal",
         "Divination"
       ],
       "castingTime": "3s",
@@ -7125,7 +7092,7 @@
     },
     {
       "id": "priest3.etheralness",
-      "name": "Etheralness",
+      "name": "Etherealness",
       "level": 3,
       "reversible": false,
       "spheres": [
@@ -8451,7 +8418,7 @@
     },
     {
       "id": "priest3.protrectionFromCold",
-      "name": "Protrection from Cold",
+      "name": "Protection from Cold",
       "level": 3,
       "reversible": false,
       "spheres": [
@@ -8672,7 +8639,7 @@
       "castingTime": "6s",
       "range": "TOUCH",
       "duration": "1rd / Lvl",
-      "areaOfEffect": "10Ft Rad Amphorous Cloud",
+      "areaOfEffect": "10Ft Rad Amorphous Cloud",
       "savingThrow": "None",
       "components": "VS",
       "location": "PSC II",
@@ -10759,7 +10726,7 @@
     },
     {
       "id": "priest4.controlTemperture10Radius",
-      "name": "Control Temperture, 10' Radius",
+      "name": "Control Temperature, 10' Radius",
       "level": 4,
       "reversible": false,
       "spheres": [
@@ -15075,7 +15042,7 @@
     },
     {
       "id": "priest5.cloudOfPutrefication",
-      "name": "Cloud of Putrefication",
+      "name": "Cloud of Putrefaction",
       "level": 5,
       "reversible": false,
       "spheres": [
@@ -15659,7 +15626,7 @@
     },
     {
       "id": "priest5.enchantPhylactry",
-      "name": "Enchant Phylactry",
+      "name": "Enchant Phylactery",
       "level": 5,
       "reversible": false,
       "spheres": [
@@ -18024,7 +17991,7 @@
     },
     {
       "id": "priest5.unceasingVigilanceOfTheHolySentinal",
-      "name": "Unceasing Vigilance of the Holy Sentinal",
+      "name": "Unceasing Vigilance of the Holy Sentinel",
       "level": 5,
       "reversible": false,
       "spheres": [
@@ -18588,7 +18555,7 @@
       "castingTime": "1rd",
       "range": "30YDS",
       "duration": "Instantaneous",
-      "areaOfEffect": "1 Vegatable Object",
+      "areaOfEffect": "1 Vegetable Object",
       "savingThrow": "Special",
       "components": "VS",
       "location": "PSC I",
@@ -20251,7 +20218,7 @@
     },
     {
       "id": "priest6.rootsOfTheAssasin",
-      "name": "Roots of the Assasin",
+      "name": "Roots of the Assassin",
       "level": 6,
       "reversible": false,
       "spheres": [
@@ -20480,7 +20447,7 @@
     },
     {
       "id": "priest6.spiritAnnhilation",
-      "name": "Spirit Annhilation",
+      "name": "Spirit Annihilation",
       "level": 6,
       "reversible": false,
       "spheres": [
@@ -21249,7 +21216,7 @@
     },
     {
       "id": "priest6.wonderousRecall",
-      "name": "Wonderous Recall",
+      "name": "Wondrous Recall",
       "level": 6,
       "reversible": false,
       "spheres": [
@@ -21288,7 +21255,7 @@
     },
     {
       "id": "priest6.wordOfVengence",
-      "name": "Word of Vengence",
+      "name": "Word of Vengeance",
       "level": 6,
       "reversible": false,
       "spheres": [
@@ -22022,7 +21989,7 @@
     },
     {
       "id": "priest7.dwoemerDivination",
-      "name": "Dwoemer Divination",
+      "name": "Dweomer Divination",
       "level": 7,
       "reversible": false,
       "spheres": [
@@ -22475,7 +22442,7 @@
       "castingTime": "1 turn",
       "range": "240YDS",
       "duration": "1D4 rds",
-      "areaOfEffect": "Varible",
+      "areaOfEffect": "Variable",
       "savingThrow": "Special",
       "components": "VM",
       "location": "PSC II",
@@ -22640,7 +22607,7 @@
     },
     {
       "id": "priest7.permancyPrayer",
-      "name": "Permancy Prayer",
+      "name": "Permanency Prayer",
       "level": 7,
       "reversible": false,
       "spheres": [
