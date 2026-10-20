@@ -53,6 +53,11 @@
     "allowedWeaponsNote": "No extension of allowed weapons is intended: Torm grants no additional weapons beyond those already allowed to the generic Cleric (blunt weapons only), so the god's allowedWeapons list is empty (owner)."
   },
   "class": "priestOfTorm",
+  "pdfExport": {
+    "base": "paladin",
+    "title": "Priest of Torm Player Character Record (v7.0) Copyright Tradestands Ltd 2026",
+    "notes": "Paladin PDF as base; the class's own XP table; spell sheets with the bonus spells, as for the Cleric."
+  },
   "spellsByLevel": {
     "1": [
       {

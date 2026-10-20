@@ -339,14 +339,9 @@
     ],
     "priestOfTorm": {
       "effectiveClericLevel": "priestOfTormLevel",
-      "note": "Turns undead as a cleric of the same level (owner: follows all Cleric rules)."
-    },
-    "commandUndead": {
-      "classes": [
-        "priestOfTorm"
-      ],
-      "text": "In addition to turning undead, the Priest of Torm can Command Undead.",
-      "mechanicsStatus": "Owner gave no table or procedure; show as a text ability until specified."
+      "note": "Turns undead as a cleric of the same level (owner: follows all Cleric rules). In addition to turning undead, the Priest of Torm can Command Undead; the two are one ability.",
+      "commandUndead": true,
+      "commandUndeadStatus": "Command Undead procedure not yet specified by the owner; show as text."
     }
   },
   "thiefSkills": {

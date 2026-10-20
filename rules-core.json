@@ -4408,7 +4408,8 @@
         },
         "pdfExport": {
           "base": "paladin",
-          "notes": "Use the Paladin PDF as the base; XP table is this class's own; include spell sheets with the amendments, as for the Cleric (owner)."
+          "notes": "Use the Paladin PDF as the base; XP table is this class's own; include spell sheets with the amendments, as for the Cleric (owner).",
+          "title": "Priest of Torm Player Character Record (v7.0) Copyright Tradestands Ltd 2026"
         }
       }
     },
