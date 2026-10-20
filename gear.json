@@ -4247,9 +4247,9 @@
         },
         {
           "id": "handCrossbow",
-          "label": "Hand crossbow",
+          "label": "Hand crossbow, hand quarrel",
           "weaponId": "handCrossbow",
-          "ammunitionId": null,
+          "ammunitionId": "handQuarrel",
           "rof": {
             "text": "1",
             "shots": 1,
@@ -4294,9 +4294,9 @@
         },
         {
           "id": "heavyCrossbow",
-          "label": "Heavy crossbow",
+          "label": "Heavy crossbow, heavy quarrel",
           "weaponId": "heavyCrossbow",
-          "ammunitionId": null,
+          "ammunitionId": "heavyQuarrel",
           "rof": {
             "text": "1/2",
             "shots": 1,
@@ -4341,9 +4341,9 @@
         },
         {
           "id": "lightCrossbow",
-          "label": "Light crossbow",
+          "label": "Light crossbow, light quarrel",
           "weaponId": "lightCrossbow",
-          "ammunitionId": null,
+          "ammunitionId": "lightQuarrel",
           "rof": {
             "text": "1",
             "shots": 1,
