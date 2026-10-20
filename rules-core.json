@@ -2944,10 +2944,7 @@
           "human",
           "dwarf",
           "elf",
-          "gnome",
-          "halfElf",
-          "halfling",
-          "halfOrc"
+          "halfElf"
         ]
       },
       "byRace": {
@@ -2982,8 +2979,7 @@
           "fighter",
           "illusionist",
           "cleric",
-          "thief",
-          "priestOfTorm"
+          "thief"
         ],
         "halfElf": [
           "fighter",
@@ -2998,18 +2994,16 @@
         "halfling": [
           "fighter",
           "cleric",
-          "thief",
-          "priestOfTorm"
+          "thief"
         ],
         "halfOrc": [
           "fighter",
           "cleric",
-          "thief",
-          "priestOfTorm"
+          "thief"
         ]
       },
       "specialistSchoolsOtherThanIllusionist": "same as wizard (confirmed by owner)",
-      "priestOfTormNote": "Priest of Torm uses the Cleric race list (owner: follows all Cleric rules). Not added to any multi-class combination; none was specified."
+      "priestOfTormNote": "Priest of Torm is limited to Human, Dwarf, Elf and Half-elf (owner). Not added to any multi-class combination; none was specified."
     },
     "weaponAttackBonuses": {
       "status": "confirmed-by-owner (PHB text) and weapon list from the owner's weapons spreadsheet",
@@ -4311,17 +4305,14 @@
           "rule": "Uses the fighter (warrior) Constitution hit point adjustment instead of the cleric's capped +2 (owner).",
           "source": "rules-core.json abilityScores.table.con.columns.hpAdjPerDieWarrior"
         },
-        "allowedRaces": "all",
+        "allowedRaces": "listed",
         "allowedRacesList": [
           "human",
           "dwarf",
           "elf",
-          "gnome",
-          "halfElf",
-          "halfling",
-          "halfOrc"
+          "halfElf"
         ],
-        "allowedRacesNote": "Same as the Cleric.",
+        "allowedRacesNote": "Human, Elf, Half-elf and Dwarf only (owner).",
         "allowedAlignments": [
           "lawfulGood"
         ],

@@ -32,7 +32,8 @@
       "castingTime, range and savingThrow are copied from priest-spells.json.",
       "bonusSpells are separate from the normal selection: they do not use spell slots and are not chosen from the list above. The sheet shows each in the panel for its spell level, in its own section.",
       "chooseOneGroup: spells sharing a group are alternatives; one use per day in total (owner).",
-      "Divination and protection sphere spells cast by this class have double duration (permanent and instantaneous unchanged)."
+      "Divination and protection sphere spells cast by this class have double duration (permanent and instantaneous unchanged).",
+      "No extension of allowed weapons is intended: Torm grants no additional weapons beyond those already allowed to the generic Cleric (blunt weapons only), so the god's allowedWeapons list is empty (owner)."
     ],
     "count": 153,
     "countByLevel": {
@@ -48,7 +49,8 @@
       "Divination",
       "Protection"
     ],
-    "bonusSpellsNote": "Wizard-list spells (Hold Portal, Mount, Power Word Stun, Power Word Blind) come from the wizard files; the rest from priest-spells.json. The owner chose the wizard Power Word, Stun."
+    "bonusSpellsNote": "Wizard-list spells (Hold Portal, Mount, Power Word Stun, Power Word Blind) come from the wizard files; the rest from priest-spells.json. The owner chose the wizard Power Word, Stun.",
+    "allowedWeaponsNote": "No extension of allowed weapons is intended: Torm grants no additional weapons beyond those already allowed to the generic Cleric (blunt weapons only), so the god's allowedWeapons list is empty (owner)."
   },
   "class": "priestOfTorm",
   "spellsByLevel": {
