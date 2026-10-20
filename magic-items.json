@@ -8856,7 +8856,10 @@
             "count": null,
             "restriction": null
           },
-          "capacityNote": "Stated in the description: internal volume of a box six feet deep (36 cu. ft.), maximum load 500 lb. Outside is about 3' x 2' x 2\"."
+          "capacityNote": "Stated in the description: internal volume of a box six feet deep (36 cu. ft.), maximum load 500 lb. Outside is about 3' x 2' x 2\".",
+          "weightLbs": 8,
+          "weightSource": "owner-set",
+          "contentsCountForEncumbrance": false
         },
         {
           "name": "Jar of Preserving",
