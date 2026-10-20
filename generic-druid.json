@@ -24,15 +24,15 @@
       "id matches the spell id in priest-spells.json.",
       "castingTime, range and savingThrow are copied from priest-spells.json."
     ],
-    "count": 145,
+    "count": 158,
     "countByLevel": {
-      "1": 24,
-      "2": 24,
-      "3": 26,
-      "4": 22,
-      "5": 19,
-      "6": 15,
-      "7": 15
+      "1": 26,
+      "2": 25,
+      "3": 27,
+      "4": 24,
+      "5": 23,
+      "6": 16,
+      "7": 17
     }
   },
   "class": "Generic Druid",
@@ -72,6 +72,24 @@
           "Animal"
         ],
         "reference": "PHB"
+      },
+      {
+        "id": "priest1.antiVerminBarrier",
+        "name": "Anti-Vermin Barrier",
+        "level": 1,
+        "reversible": false,
+        "castingTime": "1s",
+        "range": "30YDS",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Animal"
+        ],
+        "spheres": [
+          "Wards",
+          "Animal"
+        ],
+        "reference": "TOM"
       },
       {
         "id": "priest1.bless",
@@ -225,6 +243,24 @@
           "Animal"
         ],
         "reference": "PHB1"
+      },
+      {
+        "id": "priest1.endureHeatEndureCold",
+        "name": "Endure Heat/Endure Cold",
+        "level": 1,
+        "reversible": false,
+        "castingTime": "1rd",
+        "range": "TOUCH",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Weather"
+        ],
+        "spheres": [
+          "Protection",
+          "Weather"
+        ],
+        "reference": "PHB"
       },
       {
         "id": "priest1.entangle",
@@ -473,6 +509,24 @@
           "Divination"
         ],
         "reference": "PHB"
+      },
+      {
+        "id": "priest2.auraOfComfort",
+        "name": "Aura of Comfort",
+        "level": 2,
+        "reversible": true,
+        "castingTime": "2s",
+        "range": "TOUCH",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Weather"
+        ],
+        "spheres": [
+          "Travelers",
+          "Weather"
+        ],
+        "reference": "TOM"
       },
       {
         "id": "priest2.barkskin",
@@ -1014,6 +1068,23 @@
         "reference": "TOM"
       },
       {
+        "id": "priest3.flameWalk",
+        "name": "Flame Walk",
+        "level": 3,
+        "reversible": false,
+        "castingTime": "5s",
+        "range": "TOUCH",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Elemental Fire"
+        ],
+        "spheres": [
+          "Elemental Fire"
+        ],
+        "reference": "PHB"
+      },
+      {
         "id": "priest3.holdAnimal",
         "name": "Hold Animal",
         "level": 3,
@@ -1326,6 +1397,24 @@
     ],
     "4": [
       {
+        "id": "priest4.agePlant",
+        "name": "Age Plant",
+        "level": 4,
+        "reversible": false,
+        "castingTime": "1rd",
+        "range": "30YDS",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Plant"
+        ],
+        "spheres": [
+          "Time",
+          "Plant"
+        ],
+        "reference": "TOM"
+      },
+      {
         "id": "priest4.animalSummoningI",
         "name": "Animal Summoning I",
         "level": 4,
@@ -1409,6 +1498,24 @@
           "Healing"
         ],
         "reference": "PHB"
+      },
+      {
+        "id": "priest4.firePurge",
+        "name": "Fire Purge",
+        "level": 4,
+        "reversible": false,
+        "castingTime": "1 turn",
+        "range": "10YDS / Level",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Elemental Fire"
+        ],
+        "spheres": [
+          "Wards",
+          "Elemental Fire"
+        ],
+        "reference": "TOM"
       },
       {
         "id": "priest4.focus",
@@ -1791,6 +1898,26 @@
         "reference": "PHB"
       },
       {
+        "id": "priest5.blessedAbundance",
+        "name": "Blessed Abundance",
+        "level": 5,
+        "reversible": false,
+        "castingTime": "1rd",
+        "range": "TOUCH",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Animal",
+          "Plant"
+        ],
+        "spheres": [
+          "Creation",
+          "Animal",
+          "Plant"
+        ],
+        "reference": "TOM"
+      },
+      {
         "id": "priest5.cloudOfPurification",
         "name": "Cloud of Purification",
         "level": 5,
@@ -1880,6 +2007,48 @@
         "reference": "PHB"
       },
       {
+        "id": "priest5.elementalForbiddance",
+        "name": "Elemental Forbiddance",
+        "level": 5,
+        "reversible": false,
+        "castingTime": "1 turn",
+        "range": "Special",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Elemental Air",
+          "Elemental Fire",
+          "Elemental Earth",
+          "Elemental Water"
+        ],
+        "spheres": [
+          "Wards",
+          "Elemental Air",
+          "Elemental Fire",
+          "Elemental Earth",
+          "Elemental Water"
+        ],
+        "reference": "TOM"
+      },
+      {
+        "id": "priest5.grounding",
+        "name": "Grounding",
+        "level": 5,
+        "reversible": false,
+        "castingTime": "1 turn",
+        "range": "30YDS",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Weather"
+        ],
+        "spheres": [
+          "Wards",
+          "Weather"
+        ],
+        "reference": "TOM"
+      },
+      {
         "id": "priest5.insectPlague",
         "name": "Insect Plague",
         "level": 5,
@@ -1895,6 +2064,24 @@
           "Animal"
         ],
         "reference": "PHB"
+      },
+      {
+        "id": "priest5.meld",
+        "name": "Meld",
+        "level": 5,
+        "reversible": false,
+        "castingTime": "1 turn",
+        "range": "10YDS",
+        "savingThrow": "Special",
+        "access": "major",
+        "accessVia": [
+          "All"
+        ],
+        "spheres": [
+          "Charm",
+          "All"
+        ],
+        "reference": "TOM"
       },
       {
         "id": "priest5.moonbeam",
@@ -2211,6 +2398,24 @@
         "reference": "PHB"
       },
       {
+        "id": "priest6.stoneTell",
+        "name": "Stone Tell",
+        "level": 6,
+        "reversible": false,
+        "castingTime": "1 turn",
+        "range": "TOUCH",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Elemental Earth"
+        ],
+        "spheres": [
+          "Divination",
+          "Elemental Earth"
+        ],
+        "reference": "PHB"
+      },
+      {
         "id": "priest6.transmuteWaterToDust",
         "name": "Transmute Water to Dust",
         "level": 6,
@@ -2351,6 +2556,23 @@
         "reference": "PHB"
       },
       {
+        "id": "priest7.conjureAirElementalHr",
+        "name": "Conjure Air Elemental",
+        "level": 7,
+        "reversible": false,
+        "castingTime": "1 turn",
+        "range": "40YDS",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Elemental Air"
+        ],
+        "spheres": [
+          "Elemental Air"
+        ],
+        "reference": "HR"
+      },
+      {
         "id": "priest7.conjureEarthElemental",
         "name": "Conjure Earth Elemental",
         "level": 7,
@@ -2366,6 +2588,23 @@
           "Elemental Earth"
         ],
         "reference": "PHB"
+      },
+      {
+        "id": "priest7.conjureWaterElementalHr",
+        "name": "Conjure Water Elemental",
+        "level": 7,
+        "reversible": false,
+        "castingTime": "4s",
+        "range": "TOUCH",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Elemental Water"
+        ],
+        "spheres": [
+          "Elemental Water"
+        ],
+        "reference": "HR"
       },
       {
         "id": "priest7.controlWeather",

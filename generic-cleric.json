@@ -28,11 +28,11 @@
       "id matches the spell id in priest-spells.json.",
       "castingTime, range and savingThrow are copied from priest-spells.json."
     ],
-    "count": 151,
+    "count": 152,
     "countByLevel": {
       "1": 27,
       "2": 28,
-      "3": 31,
+      "3": 32,
       "4": 18,
       "5": 15,
       "6": 16,
@@ -246,7 +246,8 @@
           "Protection"
         ],
         "spheres": [
-          "Protection"
+          "Protection",
+          "Weather"
         ],
         "reference": "PHB"
       },
@@ -1250,6 +1251,23 @@
         "reference": "PHB"
       },
       {
+        "id": "priest3.flameWalk",
+        "name": "Flame Walk",
+        "level": 3,
+        "reversible": false,
+        "castingTime": "5s",
+        "range": "TOUCH",
+        "savingThrow": "None",
+        "access": "minor",
+        "accessVia": [
+          "Elemental Fire"
+        ],
+        "spheres": [
+          "Elemental Fire"
+        ],
+        "reference": "PHB"
+      },
+      {
         "id": "priest3.glyphOfWarding",
         "name": "Glyph of Warding",
         "level": 3,
@@ -1911,7 +1929,9 @@
           "Creation"
         ],
         "spheres": [
-          "Creation"
+          "Creation",
+          "Animal",
+          "Plant"
         ],
         "reference": "TOM"
       },
@@ -2030,10 +2050,12 @@
         "savingThrow": "Special",
         "access": "major",
         "accessVia": [
-          "Charm"
+          "Charm",
+          "All"
         ],
         "spheres": [
-          "Charm"
+          "Charm",
+          "All"
         ],
         "reference": "TOM"
       },
@@ -2383,7 +2405,8 @@
           "Divination"
         ],
         "spheres": [
-          "Divination"
+          "Divination",
+          "Elemental Earth"
         ],
         "reference": "PHB"
       },

@@ -15,13 +15,13 @@
       "castingTime, range and savingThrow are copied from priest-spells.json.",
       "spellProgression is copied from rules-core.json (PHB Table 18). Spell levels 1-7 are listed as for the other classes; the ranger can only cast the levels given in spellProgression.spellLevels."
     ],
-    "count": 49,
+    "count": 52,
     "countByLevel": {
-      "1": 7,
+      "1": 8,
       "2": 9,
       "3": 7,
-      "4": 9,
-      "5": 6,
+      "4": 10,
+      "5": 7,
       "6": 7,
       "7": 4
     }
@@ -218,6 +218,24 @@
           "Animal"
         ],
         "reference": "PHB"
+      },
+      {
+        "id": "priest1.antiVerminBarrier",
+        "name": "Anti-Vermin Barrier",
+        "level": 1,
+        "reversible": false,
+        "castingTime": "1s",
+        "range": "30YDS",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Animal"
+        ],
+        "spheres": [
+          "Wards",
+          "Animal"
+        ],
+        "reference": "TOM"
       },
       {
         "id": "priest1.detectSnaresPits",
@@ -605,6 +623,24 @@
     ],
     "4": [
       {
+        "id": "priest4.agePlant",
+        "name": "Age Plant",
+        "level": 4,
+        "reversible": false,
+        "castingTime": "1rd",
+        "range": "30YDS",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Plant"
+        ],
+        "spheres": [
+          "Time",
+          "Plant"
+        ],
+        "reference": "TOM"
+      },
+      {
         "id": "priest4.animalSummoningI",
         "name": "Animal Summoning I",
         "level": 4,
@@ -811,6 +847,26 @@
           "Plant"
         ],
         "reference": "PHB"
+      },
+      {
+        "id": "priest5.blessedAbundance",
+        "name": "Blessed Abundance",
+        "level": 5,
+        "reversible": false,
+        "castingTime": "1rd",
+        "range": "TOUCH",
+        "savingThrow": "None",
+        "access": "major",
+        "accessVia": [
+          "Animal",
+          "Plant"
+        ],
+        "spheres": [
+          "Creation",
+          "Animal",
+          "Plant"
+        ],
+        "reference": "TOM"
       },
       {
         "id": "priest5.communeWithNature",
