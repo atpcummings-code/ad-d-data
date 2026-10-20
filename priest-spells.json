@@ -25,7 +25,8 @@
         "Sphere additions (owner-confirmed): Anti-Vermin Barrier +Animal; Endure Heat/Endure Cold +Weather; Stone Tell +Elemental Earth; Meld +All; Elemental Forbiddance +Elemental Air/Fire/Earth/Water; Grounding +Weather; Fire Purge +Elemental Fire; Blessed Abundance +Animal, Plant; Age Plant +Plant; Aura of Comfort +Weather. Flame Walk reference set to PHB.",
         "Conjure Air Elemental and Conjure Water Elemental duplicated with reference HR (ids priest7.conjureAirElementalHr / priest7.conjureWaterElementalHr); originals keep POSM.",
         "God-specific for Torm (owner): Compel, Hand of Torm, Bolt of Glory, Swordward (godSpecific set to Torm; references left blank).",
-        "God-specific for Tyr (owner): Wolfjaws, Hammer of Justice, Sword and Hammer, Resplendence of Renewed Youth added; Message Mote removed from Tyr's list (godSpecific cleared; spell kept)."
+        "God-specific for Tyr (owner): Wolfjaws, Hammer of Justice, Sword and Hammer, Resplendence of Renewed Youth added; Message Mote removed from Tyr's list (godSpecific cleared; spell kept).",
+        "God-specific for Silvanus (owner): Briartangle, Oakheart, Smoke Ghost, Thorn Spray, Fireward (entered in the file as Fire Ward), Mulch, Death Chariot. Message Mote is not on Silvanus's list."
       ],
       "otherSheets": "Sheets \"Mielikki Druid Ranger\" and \"Mielikki Ranger\" are god-specific lists and were not imported."
     },
@@ -10410,7 +10411,9 @@
       "location": "PSC I",
       "page": 86,
       "reference": null,
-      "godSpecific": null
+      "godSpecific": [
+        "Silvanus"
+      ]
     },
     {
       "id": "priest4.cairn",
@@ -12500,7 +12503,9 @@
       "location": "PSC II",
       "page": 435,
       "reference": null,
-      "godSpecific": null
+      "godSpecific": [
+        "Silvanus"
+      ]
     },
     {
       "id": "priest4.oarsToSnakes",
@@ -13498,7 +13503,9 @@
       "location": "PSC II",
       "page": 552,
       "reference": null,
-      "godSpecific": null
+      "godSpecific": [
+        "Silvanus"
+      ]
     },
     {
       "id": "priest4.snakeskin",
@@ -14054,7 +14061,9 @@
       "location": "PSC III",
       "page": 641,
       "reference": null,
-      "godSpecific": null
+      "godSpecific": [
+        "Silvanus"
+      ]
     },
     {
       "id": "priest4.thornsOfBinding",
@@ -15836,7 +15845,9 @@
       "location": "PSC I",
       "page": 274,
       "reference": null,
-      "godSpecific": null
+      "godSpecific": [
+        "Silvanus"
+      ]
     },
     {
       "id": "priest5.flameHarvest",
@@ -16712,7 +16723,9 @@
       "location": "PSC II",
       "page": 427,
       "reference": null,
-      "godSpecific": null
+      "godSpecific": [
+        "Silvanus"
+      ]
     },
     {
       "id": "priest5.mysticLash",
@@ -21959,7 +21972,9 @@
       "location": "PSC I",
       "page": 185,
       "reference": null,
-      "godSpecific": null
+      "godSpecific": [
+        "Silvanus"
+      ]
     },
     {
       "id": "priest7.deathPact",

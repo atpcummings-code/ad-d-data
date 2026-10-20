@@ -27,7 +27,8 @@
       "No values were added beyond the spreadsheet. The dwarf, elf, gnome, halfling and orc sheets have no Godswar status column.",
       "Worshipper alignments printed as text (for example Any (Trade focuses on gold, not alignment)) are kept as text.",
       "All proficiencies now exist in rules-skills.json; the 20 not on PHB Table 37 were added from the owner list.",
-      "Torm (owner-changed): Warhammer and Mace removed from allowedWeapons (weapons now follow the generic cleric rule); required proficiency Etiquette (uses a slot); bonus proficiencies Religion, Heraldry and Riding, Land-based (no slots); Righteous Fury removed."
+      "Torm (owner-changed): Warhammer and Mace removed from allowedWeapons (weapons now follow the generic cleric rule); required proficiency Etiquette (uses a slot); bonus proficiencies Religion, Heraldry and Riding, Land-based (no slots); Righteous Fury removed.",
+      "Silvanus (owner-changed): Sickle and Club removed from allowedWeapons (covered by the Druid class); Nature's Wrath removed."
     ]
   },
   "gods": [
@@ -1447,26 +1448,7 @@
         "CN"
       ],
       "worshipperAlignmentsPrinted": "LG, NG, CG, LN, N, CN",
-      "allowedWeapons": [
-        {
-          "printed": "Sickle",
-          "name": "Sickle",
-          "gearId": "sickle",
-          "match": "exact",
-          "gearIds": [
-            "sickle"
-          ]
-        },
-        {
-          "printed": "Club",
-          "name": "Club",
-          "gearId": "club",
-          "match": "exact",
-          "gearIds": [
-            "club"
-          ]
-        }
-      ],
+      "allowedWeapons": [],
       "requiredProficiency": {
         "printed": "Survival (Forest)",
         "name": "Survival",
@@ -1480,21 +1462,12 @@
         "nonWeaponId": "herbalism",
         "match": "exact"
       },
-      "innatePower": {
-        "printed": "Nature's Wrath (Entangles targets, radius scales) - 1/day",
-        "frequency": {
-          "text": "1/day",
-          "type": "limited",
-          "uses": 1,
-          "per": "day"
-        },
-        "name": "Nature's Wrath",
-        "description": "Entangles targets, radius scales"
-      },
+      "innatePower": null,
       "source": {
         "sheet": "Human Pantheon",
         "row": 25
-      }
+      },
+      "allowedWeaponsNote": "No extension of allowed weapons is intended: Silvanus grants no additional weapons beyond those already allowed to the Druid class, so the god's allowedWeapons list is empty (owner). Sickle and Club removed because the Druid class already covers them."
     },
     {
       "id": "sune",
