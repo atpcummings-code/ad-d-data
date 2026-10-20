@@ -633,6 +633,31 @@
         ]
       },
       {
+        "id": "crossbowDisc",
+        "name": "Crossbow disc",
+        "parent": "Crossbow",
+        "kind": "ammunition",
+        "cost": {
+          "amount": 2,
+          "coin": "sp",
+          "costInCp": 20
+        },
+        "weightLbs": 0.1,
+        "weightMarker": "*",
+        "size": "S",
+        "type": [
+          "P"
+        ],
+        "speedFactor": null,
+        "damageSM": "1d6+1",
+        "damageL": "1d6",
+        "source": "Dra #169",
+        "usage": [
+          "missile"
+        ],
+        "note": "Owner-confirmed: cost and weight same as Heavy quarrel. Damage taken from the Disk crossbow row."
+      },
+      {
         "id": "daggerOrDirk",
         "name": "Dagger or dirk",
         "kind": "weapon",
@@ -3440,7 +3465,7 @@
         "damageL": null,
         "source": "Dra #169",
         "parent": "Crossbow",
-        "note": "Ammunition not named in the spreadsheet; damage is on the Table 45 row.",
+        "note": "Ammunition (crossbow disc) owner-confirmed; damage is on the Table 45 row.",
         "usage": [
           "missile"
         ]
@@ -3987,9 +4012,9 @@
         },
         {
           "id": "compShortBow",
-          "label": "Comp. short bow",
+          "label": "Comp. short bow, flight arrow",
           "weaponId": "compositeShortBow",
-          "ammunitionId": null,
+          "ammunitionId": "flightArrow",
           "rof": {
             "text": "2/1",
             "shots": 2,
@@ -4128,9 +4153,9 @@
         },
         {
           "id": "shortBow",
-          "label": "Short bow",
+          "label": "Short bow, flight arrow",
           "weaponId": "shortBow",
-          "ammunitionId": null,
+          "ammunitionId": "flightArrow",
           "rof": {
             "text": "2/1",
             "shots": 2,
@@ -4981,9 +5006,9 @@
         },
         {
           "id": "crossbowDisk",
-          "label": "Disk crossbow",
+          "label": "Disk crossbow, crossbow disc",
           "weaponId": "crossbowDisk",
-          "ammunitionId": null,
+          "ammunitionId": "crossbowDisc",
           "rof": {
             "text": "1",
             "shots": 1,
@@ -5028,9 +5053,9 @@
         },
         {
           "id": "crossbowDoubled",
-          "label": "Doubled crossbow (light x2)",
+          "label": "Doubled crossbow (light x2), light quarrel",
           "weaponId": "crossbowDoubled",
-          "ammunitionId": null,
+          "ammunitionId": "lightQuarrel",
           "rof": {
             "text": "1",
             "shots": 1,
