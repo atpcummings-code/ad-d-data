@@ -33,16 +33,17 @@
       "bonusSpells are separate from the normal selection: they do not use spell slots and are not chosen from the list above. The sheet shows each in the panel for its spell level, in its own section.",
       "chooseOneGroup: spells sharing a group are alternatives; one use per day in total (owner).",
       "Divination and protection sphere spells cast by this class have double duration (permanent and instantaneous unchanged).",
-      "No extension of allowed weapons is intended: Torm grants no additional weapons beyond those already allowed to the generic Cleric (blunt weapons only), so the god's allowedWeapons list is empty (owner)."
+      "No extension of allowed weapons is intended: Torm grants no additional weapons beyond those already allowed to the generic Cleric (blunt weapons only), so the god's allowedWeapons list is empty (owner).",
+      "God-specific spells for Torm (access 'god') are added regardless of sphere and reference: Compel, Hand of Torm, Bolt of Glory, Swordward (owner). Compel is also one of the bonus spells (once per day from level 5); both entries are kept."
     ],
-    "count": 153,
+    "count": 157,
     "countByLevel": {
       "1": 28,
       "2": 31,
-      "3": 34,
-      "4": 16,
+      "3": 35,
+      "4": 17,
       "5": 17,
-      "6": 15,
+      "6": 17,
       "7": 12
     },
     "durationDoubledSpheres": [
@@ -1163,6 +1164,26 @@
         "reference": "UA"
       },
       {
+        "id": "priest3.compel",
+        "name": "Compel",
+        "level": 3,
+        "reversible": false,
+        "castingTime": "1s",
+        "range": "30YDS",
+        "savingThrow": "None",
+        "access": "god",
+        "accessVia": [
+          "Torm"
+        ],
+        "spheres": [
+          "Charm"
+        ],
+        "reference": null,
+        "godSpecific": [
+          "Torm"
+        ]
+      },
+      {
         "id": "priest3.continualLight",
         "name": "Continual Light",
         "level": 3,
@@ -1841,6 +1862,26 @@
         "reference": "TOM"
       },
       {
+        "id": "priest4.handOfTorm",
+        "name": "Hand of Torm",
+        "level": 4,
+        "reversible": false,
+        "castingTime": "7s",
+        "range": "40YDS",
+        "savingThrow": "Special",
+        "access": "god",
+        "accessVia": [
+          "Torm"
+        ],
+        "spheres": [
+          "Protection"
+        ],
+        "reference": null,
+        "godSpecific": [
+          "Torm"
+        ]
+      },
+      {
         "id": "priest4.joinWithAstralTraveler",
         "name": "Join with Astral Traveler",
         "level": 4,
@@ -2333,6 +2374,26 @@
         "reference": "PHB"
       },
       {
+        "id": "priest6.boltOfGlory",
+        "name": "Bolt of Glory",
+        "level": 6,
+        "reversible": false,
+        "castingTime": "4s",
+        "range": "20YDS",
+        "savingThrow": "0.5",
+        "access": "god",
+        "accessVia": [
+          "Torm"
+        ],
+        "spheres": [
+          "Sun"
+        ],
+        "reference": null,
+        "godSpecific": [
+          "Torm"
+        ]
+      },
+      {
         "id": "priest6.conjureAnimals",
         "name": "Conjure Animals",
         "level": 6,
@@ -2504,6 +2565,27 @@
           "Elemental Earth"
         ],
         "reference": "PHB"
+      },
+      {
+        "id": "priest6.swordward",
+        "name": "Swordward",
+        "level": 6,
+        "reversible": false,
+        "castingTime": "1rd",
+        "range": "5YDS / Level",
+        "savingThrow": "None",
+        "access": "god",
+        "accessVia": [
+          "Torm"
+        ],
+        "spheres": [
+          "Protection",
+          "Necromantic"
+        ],
+        "reference": null,
+        "godSpecific": [
+          "Torm"
+        ]
       },
       {
         "id": "priest6.wordOfRecall",

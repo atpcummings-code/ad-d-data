@@ -23,7 +23,8 @@
         "Breathe of Life renamed Breath of Life, reference set to TOM, marked reversible (owner-confirmed). Id left unchanged.",
         "Feeblemind: Animal sphere added (owner-confirmed).",
         "Sphere additions (owner-confirmed): Anti-Vermin Barrier +Animal; Endure Heat/Endure Cold +Weather; Stone Tell +Elemental Earth; Meld +All; Elemental Forbiddance +Elemental Air/Fire/Earth/Water; Grounding +Weather; Fire Purge +Elemental Fire; Blessed Abundance +Animal, Plant; Age Plant +Plant; Aura of Comfort +Weather. Flame Walk reference set to PHB.",
-        "Conjure Air Elemental and Conjure Water Elemental duplicated with reference HR (ids priest7.conjureAirElementalHr / priest7.conjureWaterElementalHr); originals keep POSM."
+        "Conjure Air Elemental and Conjure Water Elemental duplicated with reference HR (ids priest7.conjureAirElementalHr / priest7.conjureWaterElementalHr); originals keep POSM.",
+        "God-specific for Torm (owner): Compel, Hand of Torm, Bolt of Glory, Swordward (godSpecific set to Torm; references left blank)."
       ],
       "otherSheets": "Sheets \"Mielikki Druid Ranger\" and \"Mielikki Ranger\" are god-specific lists and were not imported."
     },
@@ -6517,7 +6518,9 @@
       "location": "PSC I",
       "page": 133,
       "reference": null,
-      "godSpecific": null
+      "godSpecific": [
+        "Torm"
+      ]
     },
     {
       "id": "priest3.continualFaerieFire",
@@ -11707,7 +11710,9 @@
       "location": "PSC II",
       "page": 320,
       "reference": null,
-      "godSpecific": null
+      "godSpecific": [
+        "Torm"
+      ]
     },
     {
       "id": "priest4.healTrees",
@@ -18597,7 +18602,9 @@
       "location": "PSC I",
       "page": 82,
       "reference": null,
-      "godSpecific": null
+      "godSpecific": [
+        "Torm"
+      ]
     },
     {
       "id": "priest6.breakLimb",
@@ -20829,7 +20836,9 @@
       "location": "PSC III",
       "page": 629,
       "reference": null,
-      "godSpecific": null
+      "godSpecific": [
+        "Torm"
+      ]
     },
     {
       "id": "priest6.tameAnimal",
