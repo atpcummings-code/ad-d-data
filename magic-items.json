@@ -18,7 +18,7 @@
       "specialWeaponTypes": "Table 110 items carry weaponTypeOptions (gear.json weapon ids the item can be) and weaponTypeSelection: 'fixed' (one option), 'choice' (the app shows a selector) or 'none' (no gear.json item, e.g. nets). plus is the item's magical plus (null where it varies or isn't stated; plusNote explains). weightLbs and speedFactorBase/speedFactor on 'choice' items are not fixed by the item: when a type is selected take weight and speedFactorBase from that gear.json weapon and speedFactor = max(0, speedFactorBase - plus). Sun Blade is a bastard sword in appearance and damage but its weight and speed factor are those of a short sword (gearRef shortSword) per its description. Owner choices: generic swords may be any of the 12 gear.json Sword-group items; hammers may be Warhammer, Warhammer (Thrown) or Warhammer, two-handed; Hornblade may be Knife, Dagger or Short sword; Buckle Knife is Knife; crossbows may be any of the five gear.json crossbows (hand, light, heavy, disk, doubled); Bow +1 may be short, long, composite short or composite long.",
       "specialArmourTypes": "Table 107 items carry armourTypeOptions (gear.json armour ids the item can be) and armourTypeSelection ('fixed' = one option, 'choice' = the app shows a selector). plus is the item's magical AC plus (null where it is not fixed); plusOptions lists the allowed values where the plus is a choice (Elven Chain Mail +1 to +5, owner-set; Plate Mail of Vulnerability -2, -3 or -4 per its description); plusNote explains. On 'choice' items weightLbs is not fixed by the item: take weight from the selected gear.json armour. Owner choices: Armor of Blending and Armor of Missile Attraction may be any of the 12 body armours except Red Dragon Scale Armour; Shield, Large is Shield, Body; Shield -1, Missile Attractor may be any of the four shields. The armour and shield type tables are not in the data files.",
       "hasCharges": "true on items that carry charges (from the item description, or the Table 91 ring footnote 'limited by the number of charges'). The field is absent on all other items. The number of charges is not stored: it varies by item and is to be recorded by the app.",
-      "container": "type EquipmentContainer marks an item that holds other items, with capacity in the same form as gear.json equipment containers: weightLimitLbs, volume {dimensionsIn, printed, volumeCuIn}, count {max, of}, restriction (null = none or not supplied). compartments (new here) lists identical compartments as quantity x limits, for items that are several containers in one; the totals on capacity are the sum. A volume with derived true was calculated from stated dimensions.",
+      "container": "type EquipmentContainer marks an item that holds other items, with capacity in the same form as gear.json equipment containers: weightLimitLbs, volume {dimensionsIn, printed, volumeCuIn}, count {max, of}, restriction (null = none or not supplied). compartments (new here) lists identical compartments as quantity x limits, for items that are several containers in one; the totals on capacity are the sum. A volume with derived true was calculated from stated dimensions. contentsCountForEncumbrance false (owner rule): anything placed inside does not add to encumbrance; only the item's own weight counts. Absent on other containers, which count their contents normally.",
       "tomItems": "See meta.tomItems."
     },
     "typos": {
@@ -8007,7 +8007,8 @@
                   }
                 ]
               },
-              "capacityNote": "64 pouches (seven hidden behind each of eight visible ones); each holds up to 1 cu. ft. or 10 lb. Totals are calculated."
+              "capacityNote": "64 pouches (seven hidden behind each of eight visible ones); each holds up to 1 cu. ft. or 10 lb. Totals are calculated.",
+              "contentsCountForEncumbrance": false
             },
             {
               "roll": [
@@ -8379,7 +8380,8 @@
                 },
                 "count": null,
                 "restriction": null
-              }
+              },
+              "contentsCountForEncumbrance": false
             },
             {
               "roll": [
@@ -8413,7 +8415,8 @@
                 },
                 "count": null,
                 "restriction": null
-              }
+              },
+              "contentsCountForEncumbrance": false
             },
             {
               "roll": [
@@ -8447,7 +8450,8 @@
                 },
                 "count": null,
                 "restriction": null
-              }
+              },
+              "contentsCountForEncumbrance": false
             },
             {
               "roll": [
@@ -8481,7 +8485,8 @@
                 },
                 "count": null,
                 "restriction": null
-              }
+              },
+              "contentsCountForEncumbrance": false
             },
             {
               "roll": [
@@ -8691,7 +8696,8 @@
                   }
                 ]
               },
-              "capacityNote": "Totals are the sum of the compartments (weight 20+20+80, volume 2+2+8 cu. ft.). Weight and volume limits are both stated; the description gives each as an either/or limit."
+              "capacityNote": "Totals are the sum of the compartments (weight 20+20+80, volume 2+2+8 cu. ft.). Weight and volume limits are both stated; the description gives each as an either/or limit.",
+              "contentsCountForEncumbrance": false
             },
             {
               "roll": [
@@ -8730,7 +8736,8 @@
                 "count": null,
                 "restriction": null
               },
-              "capacityNote": "weightLimitLbs is null: the description says the cloth gains no weight and states no weight limit. Volume is calculated from the stated size (6 ft diameter, 10 ft deep): about 282.7 cu. ft."
+              "capacityNote": "weightLimitLbs is null: the description says the cloth gains no weight and states no weight limit. Volume is calculated from the stated size (6 ft diameter, 10 ft deep): about 282.7 cu. ft.",
+              "contentsCountForEncumbrance": false
             },
             {
               "roll": [
@@ -8835,7 +8842,21 @@
           "xp": 5000,
           "xpPrinted": "5,000",
           "source": "TOM",
-          "hasDescription": true
+          "hasDescription": true,
+          "weightLimitLbs": 500,
+          "volumeLimitCuFt": 36,
+          "type": "EquipmentContainer",
+          "capacity": {
+            "weightLimitLbs": 500,
+            "volume": {
+              "dimensionsIn": null,
+              "printed": "36 cubic feet",
+              "volumeCuIn": 62208
+            },
+            "count": null,
+            "restriction": null
+          },
+          "capacityNote": "Stated in the description: internal volume of a box six feet deep (36 cu. ft.), maximum load 500 lb. Outside is about 3' x 2' x 2\"."
         },
         {
           "name": "Jar of Preserving",
@@ -10574,7 +10595,8 @@
                   }
                 ]
               },
-              "capacityNote": "Three compartments with item-count limits only; no weight or volume limit is stated."
+              "capacityNote": "Three compartments with item-count limits only; no weight or volume limit is stated.",
+              "contentsCountForEncumbrance": false
             },
             {
               "roll": [
