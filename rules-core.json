@@ -40,7 +40,8 @@
     ],
     "priest": [
       "cleric",
-      "druid"
+      "druid",
+      "priestOfTorm"
     ],
     "rogue": [
       "thief",
@@ -56,7 +57,8 @@
       "proficiencySlots": "priest",
       "status": "confirmed by owner (Monk_v1.docx)"
     },
-    "illusionistNote": "Illusionist is a specialist wizard (see specialistWizards); it shares the wizard group."
+    "illusionistNote": "Illusionist is a specialist wizard (see specialistWizards); it shares the wizard group.",
+    "priestOfTormNote": "Priest of Torm is a house class in the priest group (priest THAC0, priest saves, priest proficiency slots) because it follows the Cleric rules (owner)."
   },
   "classIds": {
     "fighter": {
@@ -113,6 +115,13 @@
       "name": "Monk",
       "sheetNames": [
         "Monk"
+      ],
+      "source": "house"
+    },
+    "priestOfTorm": {
+      "name": "Priest of Torm",
+      "sheetNames": [
+        "Priest of Torm"
       ],
       "source": "house"
     }
@@ -270,7 +279,8 @@
           "label": "Bonus Spells (1st-4th)",
           "appliesTo": [
             "cleric",
-            "druid"
+            "druid",
+            "priestOfTorm"
           ],
           "excludes": [
             "paladin",
@@ -2929,6 +2939,15 @@
         ],
         "monk": [
           "human"
+        ],
+        "priestOfTorm": [
+          "human",
+          "dwarf",
+          "elf",
+          "gnome",
+          "halfElf",
+          "halfling",
+          "halfOrc"
         ]
       },
       "byRace": {
@@ -2942,25 +2961,29 @@
           "druid",
           "thief",
           "bard",
-          "monk"
+          "monk",
+          "priestOfTorm"
         ],
         "dwarf": [
           "fighter",
           "cleric",
-          "thief"
+          "thief",
+          "priestOfTorm"
         ],
         "elf": [
           "fighter",
           "ranger",
           "wizard",
           "cleric",
-          "thief"
+          "thief",
+          "priestOfTorm"
         ],
         "gnome": [
           "fighter",
           "illusionist",
           "cleric",
-          "thief"
+          "thief",
+          "priestOfTorm"
         ],
         "halfElf": [
           "fighter",
@@ -2969,20 +2992,24 @@
           "cleric",
           "druid",
           "thief",
-          "bard"
+          "bard",
+          "priestOfTorm"
         ],
         "halfling": [
           "fighter",
           "cleric",
-          "thief"
+          "thief",
+          "priestOfTorm"
         ],
         "halfOrc": [
           "fighter",
           "cleric",
-          "thief"
+          "thief",
+          "priestOfTorm"
         ]
       },
-      "specialistSchoolsOtherThanIllusionist": "same as wizard (confirmed by owner)"
+      "specialistSchoolsOtherThanIllusionist": "same as wizard (confirmed by owner)",
+      "priestOfTormNote": "Priest of Torm uses the Cleric race list (owner: follows all Cleric rules). Not added to any multi-class combination; none was specified."
     },
     "weaponAttackBonuses": {
       "status": "confirmed-by-owner (PHB text) and weapon list from the owner's weapons spreadsheet",
@@ -4187,6 +4214,211 @@
           "Weapon data for alkyls, atlatl, throwing stars and wakizashi (names only for now, owner decision)."
         ],
         "proficiencyNote": "Bonus non-weapon proficiencies: Endurance, Running, Religion (of chosen god). Weapon and non-weapon slots use the priest table. Can choose from General, Priest, Warrior and Rogue lists, not Wizard."
+      },
+      "priestOfTorm": {
+        "source": "Owner specification (Priest of Torm)",
+        "houseClass": true,
+        "optionalClass": true,
+        "followsClassRules": "cleric",
+        "classGroup": "priest",
+        "patronGod": {
+          "godId": "torm",
+          "locked": true,
+          "rule": "Patron god is always Torm and is auto-selected; the player cannot choose another."
+        },
+        "abilityMinimums": {
+          "con": 12,
+          "wis": 15
+        },
+        "primeRequisites": [
+          "con",
+          "wis"
+        ],
+        "xpBonus": {
+          "percent": 10,
+          "requires": {
+            "con": 16,
+            "wis": 16
+          },
+          "rule": "Constitution and Wisdom must both be 16 or more for a 10% experience bonus.",
+          "appliesWhen": "every prime requisite is 16 or more"
+        },
+        "armourRestrictions": {
+          "body": "any type of armour",
+          "shield": "any shield",
+          "restricted": false
+        },
+        "weaponRestrictions": {
+          "appliesTo": "standard clerics",
+          "rule": "Allowed to use only blunt, bludgeoning weapons (clerics are reluctant to shed blood or spread violence).",
+          "allowedWeaponTypes": [
+            "B"
+          ],
+          "derivation": "Derived from the Type column of the weapons table in gear.json. Marked for your review.",
+          "candidatesBludgeoningOnly": [
+            "club",
+            "footmansFlail",
+            "footmansMace",
+            "horsemansFlail",
+            "horsemansMace",
+            "quarterstaff",
+            "slingBullet",
+            "slingStone",
+            "warhammer"
+          ],
+          "needsRuling": {
+            "mixedTypeWithBludgeoning": [
+              "morningStar",
+              "becDeCorbin",
+              "lucernHammer"
+            ],
+            "mixedTypeNote": "These are listed as P/B (piercing or bludgeoning). Strictly they are not 'only bludgeoning'.",
+            "launchersWithoutType": [
+              "blowgun",
+              "shortBow",
+              "longBow",
+              "compositeShortBow",
+              "compositeLongBow",
+              "handCrossbow",
+              "lightCrossbow",
+              "heavyCrossbow",
+              "sling",
+              "staffSling"
+            ],
+            "launchersNote": "Bows, crossbows, sling and similar have no Type on the table (shown as a dash); ammunition has its own type. A ruling is needed on missile weapons."
+          },
+          "specialtyPriests": "Not covered: the text says 'standard clerics'. Specialty priests may differ."
+        },
+        "weaponRestrictionsNote": "Same as the Cleric (owner).",
+        "stillNeeded": [
+          "The ruling on mixed-type and missile weapons for the bludgeoning-only rule (same open item as the Cleric)."
+        ],
+        "hitDie": {
+          "sides": 8,
+          "perLevelFrom": 1,
+          "perLevelTo": 9
+        },
+        "nameLevel": 9,
+        "hitPointsAfterNameLevel": {
+          "perLevel": 2,
+          "conBonusApplies": true,
+          "conBonusNote": "From level 10 the character gains 2 hp per level PLUS his Constitution bonus (owner).",
+          "houseOverride": "house.json hitPointRules.conBonusAllLevels"
+        },
+        "constitutionHitPointBonus": {
+          "table": "warrior",
+          "column": "hpAdjPerDieWarrior",
+          "rule": "Uses the fighter (warrior) Constitution hit point adjustment instead of the cleric's capped +2 (owner).",
+          "source": "rules-core.json abilityScores.table.con.columns.hpAdjPerDieWarrior"
+        },
+        "allowedRaces": "all",
+        "allowedRacesList": [
+          "human",
+          "dwarf",
+          "elf",
+          "gnome",
+          "halfElf",
+          "halfling",
+          "halfOrc"
+        ],
+        "allowedRacesNote": "Same as the Cleric.",
+        "allowedAlignments": [
+          "lawfulGood"
+        ],
+        "alignmentRule": {
+          "mustAlwaysRemain": "lawfulGood",
+          "prefill": "Lawful Good"
+        },
+        "nonWeaponProficiencies": {
+          "bonus": [
+            {
+              "id": "religion",
+              "name": "Religion",
+              "usesSlot": false
+            },
+            {
+              "id": "heraldry",
+              "name": "Heraldry",
+              "usesSlot": false
+            },
+            {
+              "id": "ridingLandBased",
+              "name": "Riding, Land-based",
+              "usesSlot": false
+            }
+          ],
+          "required": [
+            {
+              "id": "etiquette",
+              "name": "Etiquette",
+              "usesSlot": true
+            }
+          ],
+          "note": "Torm's own required (Tactics) and bonus (Law) proficiencies from gods.json are NOT applied to this class (owner)."
+        },
+        "meleeAttacksPerRound": {
+          "appliesTo": "all melee weapons",
+          "meaning": "attacks / rounds, e.g. 3/2 = three attacks every two rounds",
+          "bands": [
+            {
+              "label": "1-6",
+              "levels": {
+                "from": 1,
+                "to": 6
+              },
+              "attacks": 1,
+              "perRounds": 1,
+              "printed": "1/round"
+            },
+            {
+              "label": "7-12",
+              "levels": {
+                "from": 7,
+                "to": 12
+              },
+              "attacks": 3,
+              "perRounds": 2,
+              "printed": "3/2 rounds"
+            },
+            {
+              "label": "13+",
+              "levels": {
+                "from": 13,
+                "to": null
+              },
+              "attacks": 2,
+              "perRounds": 1,
+              "printed": "2/round"
+            }
+          ]
+        },
+        "magicItems": {
+          "total": 10,
+          "armour": 1,
+          "shield": 1,
+          "weapons": 4,
+          "other": 4,
+          "note": "Same limit as the Paladin (owner). Arrows and bolts are not counted toward the weapon limit.",
+          "source": "house.json classAbilities.paladin.limits.magicalItems"
+        },
+        "tithe": {
+          "percent": 25,
+          "text": "Must tithe 25% of income and treasure to the church (owner).",
+          "appHint": "Offer a 'tithe due' calculator on income entries."
+        },
+        "spells": {
+          "spellProgression": "priest (same table as the Cleric)",
+          "wisdomBonusSpells": true,
+          "listFile": "priest-of-torm.json"
+        },
+        "classDropdown": {
+          "category": "Priest",
+          "placeAfter": "monk"
+        },
+        "pdfExport": {
+          "base": "paladin",
+          "notes": "Use the Paladin PDF as the base; XP table is this class's own; include spell sheets with the amendments, as for the Cleric (owner)."
+        }
       }
     },
     "stillNeededPerClass": [
@@ -4522,6 +4754,54 @@
           5000000
         ],
         "note": "Monk sheet states: no XP bonuses for high prime requisites."
+      },
+      "priestOfTorm": {
+        "maxLevel": 20,
+        "source": "owner (Expanded Priest Experience Levels, Specialty (d8) column)",
+        "xp": [
+          0,
+          2000,
+          4000,
+          7500,
+          12500,
+          20000,
+          35000,
+          60000,
+          90000,
+          125000,
+          200000,
+          300000,
+          750000,
+          1500000,
+          3000000,
+          3500000,
+          4000000,
+          4500000,
+          5000000,
+          5500000
+        ],
+        "hitDiceByLevel": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "9+2",
+          "9+4",
+          "9+6",
+          "9+8",
+          "9+10",
+          "9+12",
+          "9+14",
+          "9+16",
+          "9+18",
+          "9+20",
+          "9+22"
+        ]
       }
     }
   },
@@ -6136,7 +6416,8 @@
     "priest": {
       "appliesTo": [
         "cleric",
-        "druid"
+        "druid",
+        "priestOfTorm"
       ],
       "spellLevels": [
         1,
@@ -7429,6 +7710,12 @@
           "lawfulEvil"
         ],
         "note": "Any lawful (Monk_v1.docx)."
+      },
+      "priestOfTorm": {
+        "allowed": [
+          "lawfulGood"
+        ],
+        "note": "Lawful Good is required for the Priest of Torm (owner)."
       }
     },
     "multiClassOverrides": [

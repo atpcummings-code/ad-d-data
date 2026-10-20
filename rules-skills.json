@@ -19,7 +19,8 @@
     "status": "from-sheets",
     "classes": [
       "cleric",
-      "paladin"
+      "paladin",
+      "priestOfTorm"
     ],
     "clericLevelColumns": [
       {
@@ -335,7 +336,18 @@
           13
         ]
       }
-    ]
+    ],
+    "priestOfTorm": {
+      "effectiveClericLevel": "priestOfTormLevel",
+      "note": "Turns undead as a cleric of the same level (owner: follows all Cleric rules)."
+    },
+    "commandUndead": {
+      "classes": [
+        "priestOfTorm"
+      ],
+      "text": "In addition to turning undead, the Priest of Torm can Command Undead.",
+      "mechanicsStatus": "Owner gave no table or procedure; show as a text ability until specified."
+    }
   },
   "thiefSkills": {
     "status": "partial",
@@ -2605,6 +2617,21 @@
               "endurance",
               "running",
               "religion"
+            ]
+          },
+          "priestOfTorm": {
+            "groups": [
+              "priest",
+              "general"
+            ],
+            "ownGroup": "priest",
+            "bonusProficiencies": [
+              "religion",
+              "heraldry",
+              "ridingLandBased"
+            ],
+            "requiredProficiencies": [
+              "etiquette"
             ]
           }
         },

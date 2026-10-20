@@ -1078,6 +1078,97 @@
     },
     "cleric": {
       "turnUndead": true
+    },
+    "priestOfTorm": {
+      "alignmentPrefill": "Lawful Good",
+      "turnUndead": true,
+      "commandUndead": true,
+      "savesAs": "priest",
+      "source": "Owner specification (Priest of Torm)",
+      "rules": [
+        {
+          "id": "t1",
+          "text": "Must tithe 25% of income and treasure to the church."
+        },
+        {
+          "id": "t2",
+          "text": "Can have a maximum of 10 magical items (same as the Paladin).",
+          "mechanics": {
+            "total": 10,
+            "armour": 1,
+            "shield": 1,
+            "weapons": 4,
+            "other": 4
+          }
+        },
+        {
+          "id": "t3",
+          "text": "In addition to turning undead, can Command Undead."
+        },
+        {
+          "id": "t4",
+          "text": "Receives Constitution hit point adjustments to Hit Dice as if a warrior."
+        },
+        {
+          "id": "t5",
+          "text": "Henchmen treat the character as if his Charisma were 18 for loyalty, provided they worship, or at least respect, Torm.",
+          "mechanics": {
+            "effectiveCharismaForLoyalty": 18,
+            "condition": "henchman worships or respects Torm"
+          }
+        },
+        {
+          "id": "t6",
+          "text": "The duration of divination and protection sphere spells is doubled when cast by the character. Permanent spells stay permanent; instantaneous spells stay instantaneous.",
+          "mechanics": {
+            "durationMultiplier": 2,
+            "spheres": [
+              "Divination",
+              "Protection"
+            ],
+            "unchanged": [
+              "Permanent",
+              "Instantaneous"
+            ]
+          }
+        },
+        {
+          "id": "t7",
+          "level": 7,
+          "text": "Three melee attacks every two rounds (3/2).",
+          "mechanics": {
+            "attacks": 3,
+            "perRounds": 2
+          }
+        },
+        {
+          "id": "t8",
+          "level": 13,
+          "text": "Two melee attacks per round.",
+          "mechanics": {
+            "attacks": 2,
+            "perRounds": 1
+          }
+        }
+      ],
+      "bonusSpellsRef": "priest-of-torm.json bonusSpells",
+      "limits": {
+        "magicalItems": {
+          "total": 10,
+          "armour": 1,
+          "shield": 1,
+          "weapons": 4,
+          "other": 4,
+          "note": "Arrows and bolts are not counted toward the weapon limit."
+        }
+      },
+      "conduct": {
+        "tithe": {
+          "percent": 25,
+          "text": "Must tithe 25% of income and treasure to the church.",
+          "appHint": "Offer a 'tithe due' calculator on income entries."
+        }
+      }
     }
   },
   "classRecipes": {
@@ -1178,6 +1269,20 @@
           "noStrHitDmg",
           "noAdjustedAcLines"
         ]
+      },
+      "priestOfTorm": {
+        "blocks": [
+          "turnUndead",
+          "commandUndead",
+          "wisBonusSpells",
+          "tormPowers",
+          "tormBonusSpells"
+        ],
+        "weaponRows": 8,
+        "bonusSpells": "wis",
+        "alignmentPrefill": "Lawful Good",
+        "pdfBase": "paladin",
+        "weaponRowsNote": "8 rows inherited from the Paladin base; owner has not confirmed."
       }
     },
     "notes": [
@@ -1242,7 +1347,8 @@
       "table": "same bonus-spell table as INT (core WIS bonus spells, enter from PHB)",
       "classes": [
         "cleric",
-        "druid"
+        "druid",
+        "priestOfTorm"
       ]
     },
     "int": {

@@ -26,7 +26,8 @@
     "notes": [
       "No values were added beyond the spreadsheet. The dwarf, elf, gnome, halfling and orc sheets have no Godswar status column.",
       "Worshipper alignments printed as text (for example Any (Trade focuses on gold, not alignment)) are kept as text.",
-      "All proficiencies now exist in rules-skills.json; the 20 not on PHB Table 37 were added from the owner list."
+      "All proficiencies now exist in rules-skills.json; the 20 not on PHB Table 37 were added from the owner list.",
+      "Torm (owner-changed): Warhammer and Mace removed from allowedWeapons (weapons now follow the generic cleric rule); required proficiency Etiquette (uses a slot); bonus proficiencies Religion, Heraldry and Riding, Land-based (no slots); Righteous Fury removed."
     ]
   },
   "gods": [
@@ -635,51 +636,39 @@
         "LN"
       ],
       "worshipperAlignmentsPrinted": "LG, NG, LN",
-      "allowedWeapons": [
+      "allowedWeapons": [],
+      "requiredProficiency": {
+        "printed": "Etiquette",
+        "name": "Etiquette",
+        "nonWeaponId": "etiquette",
+        "match": "exact",
+        "usesSlot": true,
+        "matchNote": "Owner-set (replaces Tactics)."
+      },
+      "bonusProficiency": [
         {
-          "printed": "Warhammer",
-          "name": "Warhammer",
-          "gearId": "warhammer",
+          "printed": "Religion",
+          "name": "Religion",
+          "nonWeaponId": "religion",
           "match": "exact",
-          "gearIds": [
-            "warhammer"
-          ]
+          "usesSlot": false
         },
         {
-          "printed": "Mace",
-          "name": "Mace",
-          "gearId": null,
+          "printed": "Heraldry",
+          "name": "Heraldry",
+          "nonWeaponId": "heraldry",
           "match": "exact",
-          "gearIds": [
-            "footmansMace",
-            "horsemansMace"
-          ],
-          "matchNote": "Owner confirmed: both the Footman's and the Horseman's version are allowed."
+          "usesSlot": false
+        },
+        {
+          "printed": "Riding, Land-based",
+          "name": "Riding, Land-based",
+          "nonWeaponId": "ridingLandBased",
+          "match": "exact",
+          "usesSlot": false
         }
       ],
-      "requiredProficiency": {
-        "printed": "Tactics",
-        "name": "Tactics",
-        "nonWeaponId": "tactics",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Law",
-        "name": "Law",
-        "nonWeaponId": "law",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Righteous Fury (Attack bonuses scale to +3 max) - 1/day",
-        "frequency": {
-          "text": "1/day",
-          "type": "limited",
-          "uses": 1,
-          "per": "day"
-        },
-        "name": "Righteous Fury",
-        "description": "Attack bonuses scale to +3 max"
-      },
+      "innatePower": null,
       "source": {
         "sheet": "Human Pantheon",
         "row": 11
