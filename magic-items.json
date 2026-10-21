@@ -49,6 +49,23 @@
         "Trimia's Catalogue of Outer Plane Artifacts: the plane devices are per-use content and are not split.",
         "The Tome of Magic PDF lost fraction glyphs in two places; owner confirmed: Amulet of Extension '1½ rounds' and '1¼ rounds'; Warp Marble '(½-inch diameter)'. Descriptions corrected."
       ]
+    },
+    "ghaItems": {
+      "source": "Greyhawk Adventures, 'Magical Items of Greyhawk' (owner-supplied PDF GHA-items.pdf, 15 pages; book pages 73-88). description 'page' = PDF page (book page = PDF page + 72).",
+      "count": 112,
+      "placement": "Merged into the matching tables as extraItems (roll null, source GHA) using the owner-approved placement: rings 91; rods 92; staves 93; wands 94; amulets and neck/wrist jewellery 96; cloaks and robes 97; hats, crowns, headbands, turbans 99; bags/containers 100; household/tools/lantern 102; horns and whistle 103; the rest 104. Armour and shields in table 107 (extraItems), swords and other weapons in table 110 (extraItems at table level).",
+      "xp": "As printed; a printed dash is stored as null with xpPrinted '--'. gp value stored as valueGp. Armour/weapon XP is the full printed value (not additive).",
+      "classRestriction": "Markers C/F/M/T stored as priest/warrior/wizard/rogue; the PDF also says any sub-class can use items restricted to its major class (general rule added).",
+      "weights": "Owner-set only: wands 0.1, rods 3.5, staves 5. No other weights. Armour/weapons are linked to gear.json types where the text names them but carry no weight.",
+      "variants": "Oracles of Greyhawk (7 colours), Paints of Blackmoor (6 colours; xp/gp are per pot), Turbans of Tusmit (5, each with its own xp/gp). Each variant carries a full copy of the printed description. Ring of the Pomarj is not split (the wearer chooses the race on each use).",
+      "notes": [
+        "Lantern of Greyhawk prints '(800 X.P.; 7,000 g.p.)' in its heading and 3,000 XP / 25,000 gp at the end; owner chose 3,000 / 25,000.",
+        "Iron Gauntlet of Urnst and Razor Claws of Chakyik have no matching gear.json weapon and are unlinked.",
+        "Wand of Highfolk and Yatil Wand of Zooming are printed under the 'Amulets' heading because of the page layout; they are wands.",
+        "Text was typed from the page images with obvious OCR/typographic slips corrected (e.g. '1d' for 'ld', joined hyphenation); tables inside descriptions are flattened to text.",
+        "Healing Cap of Veluna: class marker unreadable in the PDF; owner confirmed priest only.",
+        "Goblin Shield of the Pomarj, Shield of Greyhawk and Thillonrian Shield of Berserking are printed as 'metal shield'; owner chose Medium Shield (gear.json shieldMedium)."
+      ]
     }
   },
   "tables": {
@@ -3711,6 +3728,49 @@
             ],
             "label": "Necromancy"
           }
+        },
+        {
+          "name": "Cursed Ring of the Great Kingdom",
+          "id": "rings.cursedGreatKingdom",
+          "roll": null,
+          "xp": null,
+          "xpPrinted": "--",
+          "valueGp": 2000,
+          "source": "GHA",
+          "hasDescription": true
+        },
+        {
+          "name": "Ring of the Pomarj",
+          "id": "rings.pomarj",
+          "roll": null,
+          "xp": 4000,
+          "xpPrinted": "4,000",
+          "valueGp": 20000,
+          "source": "GHA",
+          "hasDescription": true
+        },
+        {
+          "name": "Admundfort Ring of Leadership",
+          "id": "rings.admundfortLeadership",
+          "roll": null,
+          "xp": 1500,
+          "xpPrinted": "1,500",
+          "valueGp": 8500,
+          "source": "GHA",
+          "classRestriction": [
+            "warrior"
+          ],
+          "hasDescription": true
+        },
+        {
+          "name": "Lucky Ring of the Wild Coast",
+          "id": "rings.luckyWildCoast",
+          "roll": null,
+          "xp": 500,
+          "xpPrinted": "500",
+          "valueGp": 3500,
+          "source": "GHA",
+          "hasDescription": true
         }
       ]
     },
@@ -3935,6 +3995,67 @@
           "source": "TOM",
           "weightLbs": 3.5,
           "weightSource": "owner-set",
+          "hasDescription": true
+        },
+        {
+          "name": "Rod of Welkwood",
+          "id": "rods.welkwood",
+          "roll": null,
+          "xp": 5000,
+          "xpPrinted": "5,000",
+          "valueGp": 25000,
+          "source": "GHA",
+          "classRestriction": [
+            "priest"
+          ],
+          "weightLbs": 3.5,
+          "weightSource": "owner-set",
+          "hasCharges": true,
+          "hasDescription": true
+        },
+        {
+          "name": "Diplomacy Rod of Furyondy",
+          "id": "rods.furyondyDiplomacy",
+          "roll": null,
+          "xp": 4000,
+          "xpPrinted": "4,000",
+          "valueGp": 15000,
+          "source": "GHA",
+          "weightLbs": 3.5,
+          "weightSource": "owner-set",
+          "hasCharges": true,
+          "hasDescription": true
+        },
+        {
+          "name": "Rod of the Aerdi Sea",
+          "id": "rods.aerdiSea",
+          "roll": null,
+          "xp": 5000,
+          "xpPrinted": "5,000",
+          "valueGp": 25000,
+          "source": "GHA",
+          "classRestriction": [
+            "wizard"
+          ],
+          "weightLbs": 3.5,
+          "weightSource": "owner-set",
+          "hasCharges": true,
+          "hasDescription": true
+        },
+        {
+          "name": "Rod of Onnwal",
+          "id": "rods.onnwal",
+          "roll": null,
+          "xp": 4000,
+          "xpPrinted": "4,000",
+          "valueGp": 15000,
+          "source": "GHA",
+          "classRestriction": [
+            "wizard"
+          ],
+          "weightLbs": 3.5,
+          "weightSource": "owner-set",
+          "hasCharges": true,
           "hasDescription": true
         }
       ]
@@ -4298,6 +4419,71 @@
           "weightSource": "owner-set",
           "hasCharges": true,
           "hasDescription": true
+        },
+        {
+          "name": "Skull-Staff of Hepmonaland",
+          "id": "staves.hepmonalandSkullStaff",
+          "roll": null,
+          "xp": 5000,
+          "xpPrinted": "5,000",
+          "valueGp": 20000,
+          "source": "GHA",
+          "classRestriction": [
+            "priest",
+            "wizard"
+          ],
+          "weightLbs": 5,
+          "weightSource": "owner-set",
+          "hasCharges": true,
+          "hasDescription": true
+        },
+        {
+          "name": "Staff of Gnatmarsh",
+          "id": "staves.gnatmarsh",
+          "roll": null,
+          "xp": 4000,
+          "xpPrinted": "4,000",
+          "valueGp": 20000,
+          "source": "GHA",
+          "classRestriction": [
+            "priest",
+            "wizard"
+          ],
+          "weightLbs": 5,
+          "weightSource": "owner-set",
+          "hasCharges": true,
+          "hasDescription": true
+        },
+        {
+          "name": "Staff of Hornwood",
+          "id": "staves.hornwood",
+          "roll": null,
+          "xp": 4000,
+          "xpPrinted": "4,000",
+          "valueGp": 15000,
+          "source": "GHA",
+          "classRestriction": [
+            "wizard"
+          ],
+          "weightLbs": 5,
+          "weightSource": "owner-set",
+          "hasCharges": true,
+          "hasDescription": true
+        },
+        {
+          "name": "War Staff of Nyrond",
+          "id": "staves.nyrondWarStaff",
+          "roll": null,
+          "xp": 5000,
+          "xpPrinted": "5,000",
+          "valueGp": 30000,
+          "source": "GHA",
+          "classRestriction": [
+            "wizard"
+          ],
+          "weightLbs": 5,
+          "weightSource": "owner-set",
+          "hasDescription": true
         }
       ]
     },
@@ -4641,6 +4827,95 @@
           "xp": 5000,
           "xpPrinted": "5,000",
           "source": "TOM",
+          "weightLbs": 0.1,
+          "weightSource": "owner-set",
+          "hasCharges": true,
+          "hasDescription": true
+        },
+        {
+          "name": "Bisselite Wand of Peace",
+          "id": "wands.bisselitePeace",
+          "roll": null,
+          "xp": 3000,
+          "xpPrinted": "3,000",
+          "valueGp": 15000,
+          "source": "GHA",
+          "classRestriction": [
+            "priest"
+          ],
+          "weightLbs": 0.1,
+          "weightSource": "owner-set",
+          "hasDescription": true
+        },
+        {
+          "name": "Scant Wand of Storms",
+          "id": "wands.scantStorms",
+          "roll": null,
+          "xp": 6000,
+          "xpPrinted": "6,000",
+          "valueGp": 40000,
+          "source": "GHA",
+          "classRestriction": [
+            "wizard"
+          ],
+          "weightLbs": 0.1,
+          "weightSource": "owner-set",
+          "hasCharges": true,
+          "hasDescription": true
+        },
+        {
+          "name": "Dark Wand of the Sulhaut Mountains",
+          "id": "wands.sulhautDark",
+          "roll": null,
+          "xp": 1500,
+          "xpPrinted": "1,500",
+          "valueGp": 8000,
+          "source": "GHA",
+          "weightLbs": 0.1,
+          "weightSource": "owner-set",
+          "hasCharges": true,
+          "hasDescription": true
+        },
+        {
+          "name": "Fire Wand of Suloise",
+          "id": "wands.suloiseFire",
+          "roll": null,
+          "xp": 4000,
+          "xpPrinted": "4,000",
+          "valueGp": 35000,
+          "source": "GHA",
+          "classRestriction": [
+            "wizard"
+          ],
+          "weightLbs": 0.1,
+          "weightSource": "owner-set",
+          "hasCharges": true,
+          "hasDescription": true
+        },
+        {
+          "name": "Wand of Highfolk",
+          "id": "wands.highfolk",
+          "roll": null,
+          "xp": 4000,
+          "xpPrinted": "4,000",
+          "valueGp": 18000,
+          "source": "GHA",
+          "classRestriction": [
+            "priest",
+            "wizard"
+          ],
+          "weightLbs": 0.1,
+          "weightSource": "owner-set",
+          "hasDescription": true
+        },
+        {
+          "name": "Yatil Wand of Zooming",
+          "id": "wands.yatilZooming",
+          "roll": null,
+          "xp": 3500,
+          "xpPrinted": "3,500",
+          "valueGp": 17500,
+          "source": "GHA",
           "weightLbs": 0.1,
           "weightSource": "owner-set",
           "hasCharges": true,
@@ -6811,6 +7086,204 @@
             "wizard"
           ],
           "hasDescription": true
+        },
+        {
+          "name": "Amulet of the Cairn Hills",
+          "id": "jewels.amuletCairnHills",
+          "roll": null,
+          "xp": 2000,
+          "xpPrinted": "2,000",
+          "valueGp": 18000,
+          "source": "GHA",
+          "hasCharges": true,
+          "hasDescription": true
+        },
+        {
+          "name": "Amulet of Furyondy",
+          "id": "jewels.amuletFuryondy",
+          "roll": null,
+          "xp": 1400,
+          "xpPrinted": "1,400",
+          "valueGp": 7000,
+          "source": "GHA",
+          "hasCharges": true,
+          "hasDescription": true
+        },
+        {
+          "name": "Amulet of Spinecastle",
+          "id": "jewels.amuletSpinecastle",
+          "roll": null,
+          "xp": 900,
+          "xpPrinted": "900",
+          "valueGp": 4500,
+          "source": "GHA",
+          "hasDescription": true
+        },
+        {
+          "name": "Holy Symbol of Greyhawk",
+          "id": "jewels.holySymbolGreyhawk",
+          "roll": null,
+          "xp": 300,
+          "xpPrinted": "300",
+          "valueGp": 3000,
+          "source": "GHA",
+          "hasDescription": true
+        },
+        {
+          "name": "Collar of Tusmit",
+          "id": "jewels.collarTusmit",
+          "roll": null,
+          "xp": 1000,
+          "xpPrinted": "1,000",
+          "valueGp": 5000,
+          "source": "GHA",
+          "hasDescription": true
+        },
+        {
+          "name": "Disk of the Azure Sea",
+          "id": "jewels.diskAzureSea",
+          "roll": null,
+          "xp": 1000,
+          "xpPrinted": "1,000",
+          "valueGp": 10000,
+          "source": "GHA",
+          "hasDescription": true
+        },
+        {
+          "name": "Coruskian Stone",
+          "id": "jewels.coruskianStone",
+          "roll": null,
+          "xp": 1500,
+          "xpPrinted": "1,500",
+          "valueGp": 8000,
+          "source": "GHA",
+          "hasDescription": true
+        },
+        {
+          "name": "Holy Star of the Bright Desert",
+          "id": "jewels.holyStarBrightDesert",
+          "roll": null,
+          "xp": 1000,
+          "xpPrinted": "1,000",
+          "valueGp": 6000,
+          "source": "GHA",
+          "hasDescription": true
+        },
+        {
+          "name": "Holy Medallion of Almor",
+          "id": "jewels.holyMedallionAlmor",
+          "roll": null,
+          "xp": 1200,
+          "xpPrinted": "1,200",
+          "valueGp": 9000,
+          "source": "GHA",
+          "classRestriction": [
+            "priest"
+          ],
+          "hasDescription": true
+        },
+        {
+          "name": "Iron Pin of the Icy Sea",
+          "id": "jewels.ironPinIcySea",
+          "roll": null,
+          "xp": 500,
+          "xpPrinted": "500",
+          "valueGp": 4500,
+          "source": "GHA",
+          "hasDescription": true
+        },
+        {
+          "name": "Locket of the Great Kingdom",
+          "id": "jewels.locketGreatKingdom",
+          "roll": null,
+          "xp": 3500,
+          "xpPrinted": "3,500",
+          "valueGp": 25000,
+          "source": "GHA",
+          "classRestriction": [
+            "wizard"
+          ],
+          "hasDescription": true
+        },
+        {
+          "name": "Medallion of Malog",
+          "id": "jewels.medallionMalog",
+          "roll": null,
+          "xp": 1500,
+          "xpPrinted": "1,500",
+          "valueGp": 7500,
+          "source": "GHA",
+          "classRestriction": [
+            "wizard"
+          ],
+          "hasDescription": true
+        },
+        {
+          "name": "Medegian Bracelet of Lost Ships",
+          "id": "jewels.medegianBraceletLostShips",
+          "roll": null,
+          "xp": 1500,
+          "xpPrinted": "1,500",
+          "valueGp": 15000,
+          "source": "GHA",
+          "hasCharges": true,
+          "hasDescription": true
+        },
+        {
+          "name": "Necklace of Almor",
+          "id": "jewels.necklaceAlmor",
+          "roll": null,
+          "xp": null,
+          "xpPrinted": "--",
+          "valueGp": 2000,
+          "source": "GHA",
+          "hasDescription": true
+        },
+        {
+          "name": "Prism of Greyhawk",
+          "id": "jewels.prismGreyhawk",
+          "roll": null,
+          "xp": 1000,
+          "xpPrinted": "1,000",
+          "valueGp": 4500,
+          "source": "GHA",
+          "classRestriction": [
+            "wizard"
+          ],
+          "hasDescription": true
+        },
+        {
+          "name": "Purple Gem of the Vesve Forest",
+          "id": "jewels.purpleGemVesve",
+          "roll": null,
+          "xp": 3000,
+          "xpPrinted": "3,000",
+          "valueGp": 35000,
+          "source": "GHA",
+          "classRestriction": [
+            "warrior"
+          ],
+          "hasDescription": true
+        },
+        {
+          "name": "Star of Celene",
+          "id": "jewels.starCelene",
+          "roll": null,
+          "xp": 500,
+          "xpPrinted": "500",
+          "valueGp": 2000,
+          "source": "GHA",
+          "hasDescription": true
+        },
+        {
+          "name": "Tusmit's Battle Crescent",
+          "id": "jewels.tusmitBattleCrescent",
+          "roll": null,
+          "xp": 1000,
+          "xpPrinted": "1,000",
+          "valueGp": 18000,
+          "source": "GHA",
+          "hasDescription": true
         }
       ]
     },
@@ -7175,6 +7648,100 @@
             "priest",
             "wizard"
           ],
+          "hasDescription": true
+        },
+        {
+          "name": "Bear Cloak of the Sulhaut Mountains",
+          "id": "cloaks.bearCloakSulhaut",
+          "roll": null,
+          "xp": 1500,
+          "xpPrinted": "1,500",
+          "valueGp": 17500,
+          "source": "GHA",
+          "classRestriction": [
+            "priest",
+            "warrior"
+          ],
+          "hasDescription": true
+        },
+        {
+          "name": "Cheetah Cloak of Amedio",
+          "id": "cloaks.cheetahCloakAmedio",
+          "roll": null,
+          "xp": 1500,
+          "xpPrinted": "1,500",
+          "valueGp": 15000,
+          "source": "GHA",
+          "hasDescription": true
+        },
+        {
+          "name": "Cloak of the Hellfurnaces",
+          "id": "cloaks.cloakHellfurnaces",
+          "roll": null,
+          "xp": 2000,
+          "xpPrinted": "2,000",
+          "valueGp": 8000,
+          "source": "GHA",
+          "hasDescription": true
+        },
+        {
+          "name": "Robe of Veluna",
+          "id": "cloaks.robeVeluna",
+          "roll": null,
+          "xp": 2000,
+          "xpPrinted": "2,000",
+          "valueGp": 10000,
+          "source": "GHA",
+          "hasDescription": true
+        },
+        {
+          "name": "Scarf of the Dry Steppes",
+          "id": "cloaks.scarfDrySteppes",
+          "roll": null,
+          "xp": 2000,
+          "xpPrinted": "2,000",
+          "valueGp": 12500,
+          "source": "GHA",
+          "hasDescription": true
+        },
+        {
+          "name": "Tiger Cloak of Chakyik",
+          "id": "cloaks.tigerCloakChakyik",
+          "roll": null,
+          "xp": 1500,
+          "xpPrinted": "1,500",
+          "valueGp": 12500,
+          "source": "GHA",
+          "classRestriction": [
+            "priest",
+            "warrior",
+            "rogue"
+          ],
+          "hasDescription": true
+        },
+        {
+          "name": "Wolf Cloak of Wegwiur",
+          "id": "cloaks.wolfCloakWegwiur",
+          "roll": null,
+          "xp": 2000,
+          "xpPrinted": "2,000",
+          "valueGp": 15000,
+          "source": "GHA",
+          "classRestriction": [
+            "priest",
+            "warrior",
+            "rogue"
+          ],
+          "hasDescription": true
+        },
+        {
+          "name": "Wings of the Rakers",
+          "id": "cloaks.wingsRakers",
+          "roll": null,
+          "xp": 1000,
+          "xpPrinted": "1,000",
+          "valueGp": 9500,
+          "source": "GHA",
           "hasDescription": true
         }
       ]
@@ -8296,6 +8863,227 @@
             ],
             "label": "Alteration"
           }
+        },
+        {
+          "name": "Black Crown of Aerdy",
+          "id": "girdles.blackCrownAerdy",
+          "roll": null,
+          "xp": null,
+          "xpPrinted": "--",
+          "valueGp": 2000,
+          "source": "GHA",
+          "hasDescription": true
+        },
+        {
+          "name": "Crown of Blackmoor",
+          "id": "girdles.crownBlackmoor",
+          "roll": null,
+          "xp": null,
+          "xpPrinted": "--",
+          "valueGp": 80000,
+          "source": "GHA",
+          "hasDescription": true
+        },
+        {
+          "name": "Dream Cap of Veluna",
+          "id": "girdles.dreamCapVeluna",
+          "roll": null,
+          "xp": 1500,
+          "xpPrinted": "1,500",
+          "valueGp": 7500,
+          "source": "GHA",
+          "hasDescription": true
+        },
+        {
+          "name": "Golden Girdle of Urnst",
+          "id": "girdles.goldenGirdleUrnst",
+          "roll": null,
+          "xp": 500,
+          "xpPrinted": "500",
+          "valueGp": 3000,
+          "source": "GHA",
+          "hasDescription": true
+        },
+        {
+          "name": "Eyepatch of Tenh",
+          "id": "girdles.eyepatchTenh",
+          "roll": null,
+          "xp": 2000,
+          "xpPrinted": "2,000",
+          "valueGp": 15000,
+          "source": "GHA",
+          "hasDescription": true
+        },
+        {
+          "name": "Golden Circlet of Greyhawk",
+          "id": "girdles.goldenCircletGreyhawk",
+          "roll": null,
+          "xp": 2000,
+          "xpPrinted": "2,000",
+          "valueGp": 30000,
+          "source": "GHA",
+          "classRestriction": [
+            "wizard",
+            "rogue"
+          ],
+          "hasDescription": true
+        },
+        {
+          "name": "Headband of the Corusk Mountains",
+          "id": "girdles.headbandCorusk",
+          "roll": null,
+          "xp": 1800,
+          "xpPrinted": "1,800",
+          "valueGp": 18000,
+          "source": "GHA",
+          "hasDescription": true
+        },
+        {
+          "name": "Healing Cap of Veluna",
+          "id": "girdles.healingCapVeluna",
+          "roll": null,
+          "xp": 4000,
+          "xpPrinted": "4,000",
+          "valueGp": 22500,
+          "source": "GHA",
+          "hasDescription": true,
+          "classRestriction": [
+            "priest"
+          ]
+        },
+        {
+          "name": "Headband of the Jotens",
+          "id": "girdles.headbandJotens",
+          "roll": null,
+          "xp": 800,
+          "xpPrinted": "800",
+          "valueGp": 4500,
+          "source": "GHA",
+          "classRestriction": [
+            "priest",
+            "wizard"
+          ],
+          "hasDescription": true
+        },
+        {
+          "name": "Iron Crown of the Bandit Kingdoms",
+          "id": "girdles.ironCrownBanditKingdoms",
+          "roll": null,
+          "xp": 3000,
+          "xpPrinted": "3,000",
+          "valueGp": 35000,
+          "source": "GHA",
+          "hasDescription": true
+        },
+        {
+          "name": "Silver Crown of Veluna",
+          "id": "girdles.silverCrownVeluna",
+          "roll": null,
+          "xp": 2000,
+          "xpPrinted": "2,000",
+          "valueGp": 22500,
+          "source": "GHA",
+          "hasDescription": true
+        },
+        {
+          "name": "Brown Turban of Jann Summoning",
+          "id": "girdles.turbanBrownJann",
+          "roll": null,
+          "xp": 500,
+          "xpPrinted": "500",
+          "valueGp": 2000,
+          "source": "GHA",
+          "classRestriction": [
+            "priest",
+            "wizard"
+          ],
+          "hasDescription": true,
+          "variantOf": "girdles.turbans",
+          "variant": {
+            "die": null,
+            "roll": null,
+            "label": "Brown (Jann)"
+          }
+        },
+        {
+          "name": "Grey Turban of Djinni Summoning",
+          "id": "girdles.turbanGreyDjinni",
+          "roll": null,
+          "xp": 1000,
+          "xpPrinted": "1,000",
+          "valueGp": 3000,
+          "source": "GHA",
+          "classRestriction": [
+            "priest",
+            "wizard"
+          ],
+          "hasDescription": true,
+          "variantOf": "girdles.turbans",
+          "variant": {
+            "die": null,
+            "roll": null,
+            "label": "Grey (Djinni)"
+          }
+        },
+        {
+          "name": "Black Turban of Dao Summoning",
+          "id": "girdles.turbanBlackDao",
+          "roll": null,
+          "xp": 1000,
+          "xpPrinted": "1,000",
+          "valueGp": 2000,
+          "source": "GHA",
+          "classRestriction": [
+            "priest",
+            "wizard"
+          ],
+          "hasDescription": true,
+          "variantOf": "girdles.turbans",
+          "variant": {
+            "die": null,
+            "roll": null,
+            "label": "Black (Dao)"
+          }
+        },
+        {
+          "name": "Red Turban of Efreeti Summoning",
+          "id": "girdles.turbanRedEfreeti",
+          "roll": null,
+          "xp": 1000,
+          "xpPrinted": "1,000",
+          "valueGp": 2500,
+          "source": "GHA",
+          "classRestriction": [
+            "priest",
+            "wizard"
+          ],
+          "hasDescription": true,
+          "variantOf": "girdles.turbans",
+          "variant": {
+            "die": null,
+            "roll": null,
+            "label": "Red (Efreeti)"
+          }
+        },
+        {
+          "name": "White Turban of Marid Summoning",
+          "id": "girdles.turbanWhiteMarid",
+          "roll": null,
+          "xp": 1500,
+          "xpPrinted": "1,500",
+          "valueGp": 3000,
+          "source": "GHA",
+          "classRestriction": [
+            "priest",
+            "wizard"
+          ],
+          "hasDescription": true,
+          "variantOf": "girdles.turbans",
+          "variant": {
+            "die": null,
+            "roll": null,
+            "label": "White (Marid)"
+          }
         }
       ]
     },
@@ -8903,6 +9691,138 @@
           "xpPrinted": "1,000",
           "source": "TOM",
           "hasDescription": true
+        },
+        {
+          "name": "Casket of Furyondy",
+          "id": "bags.casketFuryondy",
+          "roll": null,
+          "xp": 2500,
+          "xpPrinted": "2,500",
+          "valueGp": 27500,
+          "source": "GHA",
+          "hasDescription": true
+        },
+        {
+          "name": "Chalice of the Shield Lands",
+          "id": "bags.chaliceShieldLands",
+          "roll": null,
+          "xp": 3000,
+          "xpPrinted": "3,000",
+          "valueGp": 25000,
+          "source": "GHA",
+          "hasDescription": true
+        },
+        {
+          "name": "Goblet of the Great Kingdom",
+          "id": "bags.gobletGreatKingdom",
+          "roll": null,
+          "xp": 1200,
+          "xpPrinted": "1,200",
+          "valueGp": 8000,
+          "source": "GHA",
+          "hasDescription": true
+        },
+        {
+          "name": "Paints of Blackmoor (Red)",
+          "id": "bags.paintsRed",
+          "roll": null,
+          "xp": 300,
+          "xpPrinted": "300***",
+          "valueGp": 2500,
+          "source": "GHA",
+          "hasDescription": true,
+          "variantOf": "bags.paints",
+          "variant": {
+            "die": null,
+            "roll": null,
+            "label": "Red"
+          },
+          "valueNote": "XP and gp are per pot of color (printed with ***)."
+        },
+        {
+          "name": "Paints of Blackmoor (Blue)",
+          "id": "bags.paintsBlue",
+          "roll": null,
+          "xp": 300,
+          "xpPrinted": "300***",
+          "valueGp": 2500,
+          "source": "GHA",
+          "hasDescription": true,
+          "variantOf": "bags.paints",
+          "variant": {
+            "die": null,
+            "roll": null,
+            "label": "Blue"
+          },
+          "valueNote": "XP and gp are per pot of color (printed with ***)."
+        },
+        {
+          "name": "Paints of Blackmoor (Green)",
+          "id": "bags.paintsGreen",
+          "roll": null,
+          "xp": 300,
+          "xpPrinted": "300***",
+          "valueGp": 2500,
+          "source": "GHA",
+          "hasDescription": true,
+          "variantOf": "bags.paints",
+          "variant": {
+            "die": null,
+            "roll": null,
+            "label": "Green"
+          },
+          "valueNote": "XP and gp are per pot of color (printed with ***)."
+        },
+        {
+          "name": "Paints of Blackmoor (Black)",
+          "id": "bags.paintsBlack",
+          "roll": null,
+          "xp": 300,
+          "xpPrinted": "300***",
+          "valueGp": 2500,
+          "source": "GHA",
+          "hasDescription": true,
+          "variantOf": "bags.paints",
+          "variant": {
+            "die": null,
+            "roll": null,
+            "label": "Black"
+          },
+          "valueNote": "XP and gp are per pot of color (printed with ***)."
+        },
+        {
+          "name": "Paints of Blackmoor (White)",
+          "id": "bags.paintsWhite",
+          "roll": null,
+          "xp": 300,
+          "xpPrinted": "300***",
+          "valueGp": 2500,
+          "source": "GHA",
+          "hasDescription": true,
+          "variantOf": "bags.paints",
+          "variant": {
+            "die": null,
+            "roll": null,
+            "label": "White"
+          },
+          "valueNote": "XP and gp are per pot of color (printed with ***)."
+        },
+        {
+          "name": "Paints of Blackmoor (Brown)",
+          "id": "bags.paintsBrown",
+          "roll": null,
+          "xp": 300,
+          "xpPrinted": "300***",
+          "valueGp": 2500,
+          "source": "GHA",
+          "hasDescription": true,
+          "variantOf": "bags.paints",
+          "variant": {
+            "die": null,
+            "roll": null,
+            "label": "Brown"
+          },
+          "valueNote": "XP and gp are per pot of color (printed with ***)."
         }
       ]
     },
@@ -9785,6 +10705,46 @@
             "priest"
           ],
           "hasDescription": true
+        },
+        {
+          "name": "Anvil of the Lortmil Mountains",
+          "id": "household.anvilLortmil",
+          "roll": null,
+          "xp": 3000,
+          "xpPrinted": "3,000",
+          "valueGp": 30000,
+          "source": "GHA",
+          "hasDescription": true
+        },
+        {
+          "name": "Gemcutter's Tools of Sunndi",
+          "id": "household.gemcuttersToolsSunndi",
+          "roll": null,
+          "xp": 3000,
+          "xpPrinted": "3,000",
+          "valueGp": 25000,
+          "source": "GHA",
+          "hasDescription": true
+        },
+        {
+          "name": "Lantern of Greyhawk",
+          "id": "household.lanternGreyhawk",
+          "roll": null,
+          "xp": 3000,
+          "xpPrinted": "3,000",
+          "valueGp": 25000,
+          "source": "GHA",
+          "hasDescription": true
+        },
+        {
+          "name": "Woodworker's Tools of Dyvers",
+          "id": "household.woodworkersToolsDyvers",
+          "roll": null,
+          "xp": 2000,
+          "xpPrinted": "2,000",
+          "valueGp": 24000,
+          "source": "GHA",
+          "hasDescription": true
         }
       ]
     },
@@ -10183,6 +11143,50 @@
           "xp": 5000,
           "xpPrinted": "5,000",
           "source": "TOM",
+          "hasDescription": true
+        },
+        {
+          "name": "Horn of the Azure Sea",
+          "id": "instruments.hornAzureSea",
+          "roll": null,
+          "xp": 750,
+          "xpPrinted": "750",
+          "valueGp": 5000,
+          "source": "GHA",
+          "hasDescription": true
+        },
+        {
+          "name": "Horn of the Barrier Peaks",
+          "id": "instruments.hornBarrierPeaks",
+          "roll": null,
+          "xp": 3000,
+          "xpPrinted": "3,000",
+          "valueGp": 18000,
+          "source": "GHA",
+          "hasDescription": true
+        },
+        {
+          "name": "Horn of the Vast Swamp",
+          "id": "instruments.hornVastSwamp",
+          "roll": null,
+          "xp": 1000,
+          "xpPrinted": "1,000",
+          "valueGp": 2500,
+          "source": "GHA",
+          "classRestriction": [
+            "priest",
+            "wizard"
+          ],
+          "hasDescription": true
+        },
+        {
+          "name": "Whistle of Axewood",
+          "id": "instruments.whistleAxewood",
+          "roll": null,
+          "xp": 3500,
+          "xpPrinted": "3,500",
+          "valueGp": 32000,
+          "source": "GHA",
           "hasDescription": true
         }
       ]
@@ -11111,6 +12115,235 @@
           "xpPrinted": "1,000",
           "source": "TOM",
           "hasDescription": true
+        },
+        {
+          "name": "Black Sails of Schnai",
+          "id": "weird.blackSailsSchnai",
+          "roll": null,
+          "xp": 1000,
+          "xpPrinted": "1,000",
+          "valueGp": 5000,
+          "source": "GHA",
+          "hasDescription": true
+        },
+        {
+          "name": "Coin of Almor",
+          "id": "weird.coinAlmor",
+          "roll": null,
+          "xp": null,
+          "xpPrinted": "--",
+          "valueGp": 500,
+          "source": "GHA",
+          "hasDescription": true
+        },
+        {
+          "name": "Flaming Mirror of Tenh",
+          "id": "weird.flamingMirrorTenh",
+          "roll": null,
+          "xp": 2000,
+          "xpPrinted": "2,000",
+          "valueGp": 8000,
+          "source": "GHA",
+          "classRestriction": [
+            "wizard"
+          ],
+          "hasCharges": true,
+          "hasDescription": true
+        },
+        {
+          "name": "Hasty Barge of Nyr Dyv",
+          "id": "weird.hastyBargeNyrDyv",
+          "roll": null,
+          "xp": 2500,
+          "xpPrinted": "2,500",
+          "valueGp": 30000,
+          "source": "GHA",
+          "hasDescription": true
+        },
+        {
+          "name": "Sceptre of the Forgotten City",
+          "id": "weird.sceptreForgottenCity",
+          "roll": null,
+          "xp": 1000,
+          "xpPrinted": "1,000",
+          "valueGp": 5500,
+          "source": "GHA",
+          "hasCharges": true,
+          "hasDescription": true
+        },
+        {
+          "name": "Timeglass of the Mage",
+          "id": "weird.timeglassMage",
+          "roll": null,
+          "xp": 5000,
+          "xpPrinted": "5,000",
+          "valueGp": 50000,
+          "source": "GHA",
+          "classRestriction": [
+            "wizard"
+          ],
+          "hasCharges": true,
+          "hasDescription": true
+        },
+        {
+          "name": "Storm Rider of the Gearnat Sea",
+          "id": "weird.stormRiderGearnat",
+          "roll": null,
+          "xp": 5000,
+          "xpPrinted": "5,000",
+          "valueGp": 50000,
+          "source": "GHA",
+          "hasDescription": true
+        },
+        {
+          "name": "Tapestry of Ekbir",
+          "id": "weird.tapestryEkbir",
+          "roll": null,
+          "xp": 1250,
+          "xpPrinted": "1,250",
+          "valueGp": 12500,
+          "source": "GHA",
+          "hasDescription": true
+        },
+        {
+          "name": "Oracles of Greyhawk (Red)",
+          "id": "weird.oraclesRed",
+          "roll": null,
+          "xp": 2000,
+          "xpPrinted": "2,000",
+          "valueGp": 12000,
+          "source": "GHA",
+          "classRestriction": [
+            "wizard"
+          ],
+          "hasDescription": true,
+          "variantOf": "weird.oracles",
+          "variant": {
+            "die": null,
+            "roll": null,
+            "label": "Red",
+            "areaOfKnowledge": "Horned Society"
+          }
+        },
+        {
+          "name": "Oracles of Greyhawk (Orange)",
+          "id": "weird.oraclesOrange",
+          "roll": null,
+          "xp": 2000,
+          "xpPrinted": "2,000",
+          "valueGp": 12000,
+          "source": "GHA",
+          "classRestriction": [
+            "wizard"
+          ],
+          "hasDescription": true,
+          "variantOf": "weird.oracles",
+          "variant": {
+            "die": null,
+            "roll": null,
+            "label": "Orange",
+            "areaOfKnowledge": "Wild Coast"
+          }
+        },
+        {
+          "name": "Oracles of Greyhawk (Yellow)",
+          "id": "weird.oraclesYellow",
+          "roll": null,
+          "xp": 2000,
+          "xpPrinted": "2,000",
+          "valueGp": 12000,
+          "source": "GHA",
+          "classRestriction": [
+            "wizard"
+          ],
+          "hasDescription": true,
+          "variantOf": "weird.oracles",
+          "variant": {
+            "die": null,
+            "roll": null,
+            "label": "Yellow",
+            "areaOfKnowledge": "Kingdom of Furyondy"
+          }
+        },
+        {
+          "name": "Oracles of Greyhawk (Green)",
+          "id": "weird.oraclesGreen",
+          "roll": null,
+          "xp": 2000,
+          "xpPrinted": "2,000",
+          "valueGp": 12000,
+          "source": "GHA",
+          "classRestriction": [
+            "wizard"
+          ],
+          "hasDescription": true,
+          "variantOf": "weird.oracles",
+          "variant": {
+            "die": null,
+            "roll": null,
+            "label": "Green",
+            "areaOfKnowledge": "Gnarley Forest"
+          }
+        },
+        {
+          "name": "Oracles of Greyhawk (Blue)",
+          "id": "weird.oraclesBlue",
+          "roll": null,
+          "xp": 2000,
+          "xpPrinted": "2,000",
+          "valueGp": 12000,
+          "source": "GHA",
+          "classRestriction": [
+            "wizard"
+          ],
+          "hasDescription": true,
+          "variantOf": "weird.oracles",
+          "variant": {
+            "die": null,
+            "roll": null,
+            "label": "Blue",
+            "areaOfKnowledge": "Shield Lands"
+          }
+        },
+        {
+          "name": "Oracles of Greyhawk (Violet)",
+          "id": "weird.oraclesViolet",
+          "roll": null,
+          "xp": 2000,
+          "xpPrinted": "2,000",
+          "valueGp": 12000,
+          "source": "GHA",
+          "classRestriction": [
+            "wizard"
+          ],
+          "hasDescription": true,
+          "variantOf": "weird.oracles",
+          "variant": {
+            "die": null,
+            "roll": null,
+            "label": "Violet",
+            "areaOfKnowledge": "City of Greyhawk"
+          }
+        },
+        {
+          "name": "Oracles of Greyhawk (Brown)",
+          "id": "weird.oraclesBrown",
+          "roll": null,
+          "xp": 2000,
+          "xpPrinted": "2,000",
+          "valueGp": 12000,
+          "source": "GHA",
+          "classRestriction": [
+            "wizard"
+          ],
+          "hasDescription": true,
+          "variantOf": "weird.oracles",
+          "variant": {
+            "die": null,
+            "roll": null,
+            "label": "Brown",
+            "areaOfKnowledge": "Cairn Hills"
+          }
         }
       ]
     },
@@ -11500,7 +12733,139 @@
         "Armor of Missile Attraction": "*",
         "Armor of Rage": "*"
       },
-      "xpNote": "A \"+\" XP value is added to the base armor value."
+      "xpNote": "A \"+\" XP value is added to the base armor value.",
+      "extraItems": [
+        {
+          "name": "Blue Armor of the Crystalmist Mountains +3",
+          "id": "specialArmor.blueArmorCrystalmist",
+          "roll": null,
+          "xp": 3000,
+          "xpPrinted": "3,000",
+          "valueGp": 17500,
+          "source": "GHA",
+          "classRestriction": [
+            "warrior"
+          ],
+          "hasDescription": true,
+          "plus": 3,
+          "gearRef": "chainMail",
+          "armourTypeOptions": [
+            "chainMail"
+          ],
+          "armourTypeSelection": "fixed"
+        },
+        {
+          "name": "Goblin Shield of the Pomarj +2",
+          "id": "specialArmor.goblinShieldPomarj",
+          "roll": null,
+          "xp": 1250,
+          "xpPrinted": "1,250",
+          "valueGp": 7500,
+          "source": "GHA",
+          "hasDescription": true,
+          "plus": 2,
+          "gearRef": "shieldMedium",
+          "armourTypeOptions": [
+            "shieldMedium"
+          ],
+          "armourTypeSelection": "fixed"
+        },
+        {
+          "name": "Keolish Plate Mail of the Seas +1",
+          "id": "specialArmor.keolishPlateMailSeas",
+          "roll": null,
+          "xp": 1500,
+          "xpPrinted": "1,500",
+          "valueGp": 7500,
+          "source": "GHA",
+          "classRestriction": [
+            "priest",
+            "warrior"
+          ],
+          "hasDescription": true,
+          "plus": 1,
+          "gearRef": "plateMail",
+          "armourTypeOptions": [
+            "plateMail"
+          ],
+          "armourTypeSelection": "fixed"
+        },
+        {
+          "name": "Red Armor of the Hellfurnaces +4",
+          "id": "specialArmor.redArmorHellfurnaces",
+          "roll": null,
+          "xp": 6000,
+          "xpPrinted": "6,000",
+          "valueGp": 35000,
+          "source": "GHA",
+          "classRestriction": [
+            "priest",
+            "warrior"
+          ],
+          "hasDescription": true,
+          "plus": 4,
+          "gearRef": "plateMail",
+          "armourTypeOptions": [
+            "plateMail"
+          ],
+          "armourTypeSelection": "fixed"
+        },
+        {
+          "name": "Shield of Greyhawk +3",
+          "id": "specialArmor.shieldGreyhawk",
+          "roll": null,
+          "xp": 1050,
+          "xpPrinted": "1,050",
+          "valueGp": 10500,
+          "source": "GHA",
+          "classRestriction": [
+            "warrior"
+          ],
+          "hasDescription": true,
+          "plus": 3,
+          "gearRef": "shieldMedium",
+          "armourTypeOptions": [
+            "shieldMedium"
+          ],
+          "armourTypeSelection": "fixed"
+        },
+        {
+          "name": "Thillonrian Shield of Berserking +2",
+          "id": "specialArmor.thillonrianShieldBerserking",
+          "roll": null,
+          "xp": 1200,
+          "xpPrinted": "1,200",
+          "valueGp": 12000,
+          "source": "GHA",
+          "hasDescription": true,
+          "plus": 2,
+          "gearRef": "shieldMedium",
+          "armourTypeOptions": [
+            "shieldMedium"
+          ],
+          "armourTypeSelection": "fixed"
+        },
+        {
+          "name": "White Armor of the Griff Mountains +3",
+          "id": "specialArmor.whiteArmorGriff",
+          "roll": null,
+          "xp": 2250,
+          "xpPrinted": "2,250",
+          "valueGp": 13500,
+          "source": "GHA",
+          "classRestriction": [
+            "priest",
+            "warrior"
+          ],
+          "hasDescription": true,
+          "plus": 3,
+          "gearRef": "scaleMail",
+          "armourTypeOptions": [
+            "scaleMail"
+          ],
+          "armourTypeSelection": "fixed"
+        }
+      ]
     },
     "108": {
       "table": 108,
@@ -13921,7 +15286,218 @@
       ],
       "footnotes": {
         "*": "See item description"
-      }
+      },
+      "extraItems": [
+        {
+          "name": "Equalizer of Gran March",
+          "id": "specialWeapons.equalizerGranMarch",
+          "roll": null,
+          "xp": 10000,
+          "xpPrinted": "10,000",
+          "valueGp": 50000,
+          "source": "GHA",
+          "hasDescription": true,
+          "plus": 1,
+          "gearRef": "longSword",
+          "weaponTypeOptions": [
+            "longSword"
+          ],
+          "weaponTypeSelection": "fixed"
+        },
+        {
+          "name": "Flying Scimitar of Tusmit +3",
+          "id": "specialWeapons.flyingScimitarTusmit",
+          "roll": null,
+          "xp": 8000,
+          "xpPrinted": "8,000",
+          "valueGp": 40000,
+          "source": "GHA",
+          "hasDescription": true,
+          "plus": 3,
+          "gearRef": "scimitar",
+          "weaponTypeOptions": [
+            "scimitar"
+          ],
+          "weaponTypeSelection": "fixed"
+        },
+        {
+          "name": "Rel Astran Sword of Enmity +1, +3 vs. Racial Enemies",
+          "id": "specialWeapons.relAstranSwordEnmity",
+          "roll": null,
+          "xp": 750,
+          "xpPrinted": "750",
+          "valueGp": 3750,
+          "source": "GHA",
+          "hasDescription": true,
+          "plus": 1,
+          "gearRef": "longSword",
+          "weaponTypeOptions": [
+            "longSword"
+          ],
+          "weaponTypeSelection": "fixed"
+        },
+        {
+          "name": "Stonefist Sword of Rage +2",
+          "id": "specialWeapons.stonefistSwordRage",
+          "roll": null,
+          "xp": 1000,
+          "xpPrinted": "1,000",
+          "valueGp": 5000,
+          "source": "GHA",
+          "hasDescription": true,
+          "plus": 2,
+          "gearRef": "twoHandedSword",
+          "weaponTypeOptions": [
+            "twoHandedSword"
+          ],
+          "weaponTypeSelection": "fixed"
+        },
+        {
+          "name": "Sword of the Wild Coast +3",
+          "id": "specialWeapons.swordWildCoast",
+          "roll": null,
+          "xp": null,
+          "xpPrinted": "--",
+          "valueGp": 1000,
+          "source": "GHA",
+          "hasDescription": true,
+          "plus": 3,
+          "gearRef": "twoHandedSword",
+          "weaponTypeOptions": [
+            "twoHandedSword"
+          ],
+          "weaponTypeSelection": "fixed"
+        },
+        {
+          "name": "Warlord Blade of the Shield Lands",
+          "id": "specialWeapons.warlordBladeShieldLands",
+          "roll": null,
+          "xp": 1600,
+          "xpPrinted": "1,600",
+          "valueGp": 8000,
+          "source": "GHA",
+          "classRestriction": [
+            "warrior"
+          ],
+          "hasDescription": true,
+          "plus": 2,
+          "gearRef": "broadSword",
+          "weaponTypeOptions": [
+            "broadSword"
+          ],
+          "weaponTypeSelection": "fixed"
+        },
+        {
+          "name": "Razor Claws of Chakyik +2",
+          "id": "specialWeapons.razorClawsChakyik",
+          "roll": null,
+          "xp": 1500,
+          "xpPrinted": "1,500",
+          "valueGp": 7500,
+          "source": "GHA",
+          "classRestriction": [
+            "warrior",
+            "rogue"
+          ],
+          "hasDescription": true,
+          "plus": 2
+        },
+        {
+          "name": "Cord of Ekbir +1",
+          "id": "specialWeapons.cordEkbir",
+          "roll": null,
+          "xp": 450,
+          "xpPrinted": "450",
+          "valueGp": 4500,
+          "source": "GHA",
+          "hasDescription": true,
+          "plus": 1,
+          "gearRef": "garrote",
+          "weaponTypeOptions": [
+            "garrote"
+          ],
+          "weaponTypeSelection": "fixed"
+        },
+        {
+          "name": "Iron Gauntlet of Urnst",
+          "id": "specialWeapons.ironGauntletUrnst",
+          "roll": null,
+          "xp": 2000,
+          "xpPrinted": "2,000",
+          "valueGp": 12000,
+          "source": "GHA",
+          "hasDescription": true,
+          "plus": null
+        },
+        {
+          "name": "Axe of Sulward +2",
+          "id": "specialWeapons.axeSulward",
+          "roll": null,
+          "xp": 400,
+          "xpPrinted": "400",
+          "valueGp": 2250,
+          "source": "GHA",
+          "hasDescription": true,
+          "plus": 2,
+          "gearRef": "battleAxe",
+          "weaponTypeOptions": [
+            "battleAxe"
+          ],
+          "weaponTypeSelection": "fixed"
+        },
+        {
+          "name": "Trident of the Oljatt Sea +2",
+          "id": "specialWeapons.tridentOljattSea",
+          "roll": null,
+          "xp": 1500,
+          "xpPrinted": "1,500",
+          "valueGp": 12000,
+          "source": "GHA",
+          "hasDescription": true,
+          "plus": 2,
+          "gearRef": "trident",
+          "weaponTypeOptions": [
+            "trident"
+          ],
+          "weaponTypeSelection": "fixed"
+        },
+        {
+          "name": "Black Arrow of Iuz +3",
+          "id": "specialWeapons.blackArrowIuz",
+          "roll": null,
+          "xp": 750,
+          "xpPrinted": "750",
+          "valueGp": 7500,
+          "source": "GHA",
+          "hasDescription": true,
+          "plus": 3,
+          "gearRef": [
+            "flightArrow",
+            "sheafArrow"
+          ],
+          "weaponTypeOptions": [
+            "flightArrow",
+            "sheafArrow"
+          ],
+          "weaponTypeSelection": "choice"
+        },
+        {
+          "name": "Whip of Zeif +3",
+          "id": "specialWeapons.whipZeif",
+          "roll": null,
+          "xp": 800,
+          "xpPrinted": "800",
+          "valueGp": 5000,
+          "source": "GHA",
+          "hasDescription": true,
+          "plus": 3,
+          "gearRef": "whip",
+          "weaponTypeOptions": [
+            "whip"
+          ],
+          "weaponTypeSelection": "fixed"
+        }
+      ]
     },
     "protectionScrolls": {
       "table": null,
@@ -14795,6 +16371,11 @@
       "title": "Powders (Tome of Magic)",
       "page": 6,
       "key": "15"
+    },
+    {
+      "title": "Class Restrictions (Greyhawk Adventures)",
+      "page": 1,
+      "key": "16"
     }
   ]
 }
