@@ -17,7 +17,6 @@
       "worshipperAlignments": "List of allowed worshipper alignments; null where the sheet gives text instead of codes (see worshipperAlignmentsPrinted).",
       "allowedWeapons[].match": "exact = the gear.json weapon(s) named in gearIds (more than one where the owner confirmed several versions are allowed, e.g. Mace = Footman's and Horseman's); spellingVariant = printed name differs from the gear name, owner confirmed (Staff = Quarterstaff); category / natural / none = not a single weapon; notInGear = no such weapon in gear.json. gearId is the single id where there is exactly one, otherwise null. armourIds is used where the item is a shield in gear.json armour.",
       "requiredProficiency / bonusProficiency": "nonWeaponId links to rules-skills.json proficiencies.nonWeapon.list. match: exact (matchNote records a confirmed spelling difference) or notInJson (no such nonweapon proficiency in the current JSON files). A bracketed part such as (Forest) is kept as specialisation.",
-      "innatePower": "printed is the sheet text. name, description and frequency are split from it. frequency.type: limited (uses per day or week), constant, atWill.",
       "godswarStatus": "Human Pantheon sheet only, as printed.",
       "bonusProficiency": "Usually a single object. A god may have a list of objects where several bonus proficiencies are given (Clangeddin Silverbeard, owner-supplied). appliesTo: who receives it (clerics).",
       "requiredProficiency": "A single object, or null where the god has no required proficiency (Clangeddin Silverbeard, owner-supplied)."
@@ -75,29 +74,6 @@
           "matchNote": "Owner confirmed: both the Footman's and the Horseman's version are allowed."
         }
       ],
-      "requiredProficiency": {
-        "printed": "Intimidation",
-        "name": "Intimidation",
-        "nonWeaponId": "intimidation",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Religion",
-        "name": "Religion",
-        "nonWeaponId": "religion",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Fear Touch (Scales +1 die size/4 lvls) - 1/day",
-        "frequency": {
-          "text": "1/day",
-          "type": "limited",
-          "uses": 1,
-          "per": "day"
-        },
-        "name": "Fear Touch",
-        "description": "Scales +1 die size/4 lvls"
-      },
       "source": {
         "sheet": "Human Pantheon",
         "row": 2
@@ -143,29 +119,6 @@
           ]
         }
       ],
-      "requiredProficiency": {
-        "printed": "Ancient History",
-        "name": "Ancient History",
-        "nonWeaponId": "ancientHistory",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Necrology",
-        "name": "Necrology",
-        "nonWeaponId": "necrology",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Scythe of Doom (+1 round duration/lvl) - 1/day",
-        "frequency": {
-          "text": "1/day",
-          "type": "limited",
-          "uses": 1,
-          "per": "day"
-        },
-        "name": "Scythe of Doom",
-        "description": "+1 round duration/lvl"
-      },
       "source": {
         "sheet": "Human Pantheon",
         "row": 3
@@ -209,29 +162,6 @@
           "matchNote": "Added to gear.json by the owner with empty statistics."
         }
       ],
-      "requiredProficiency": {
-        "printed": "Looting",
-        "name": "Looting",
-        "nonWeaponId": "looting",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Tracking",
-        "name": "Tracking",
-        "nonWeaponId": "tracking",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Murderous Strike (+1 damage/lvl) - 1/day",
-        "frequency": {
-          "text": "1/day",
-          "type": "limited",
-          "uses": 1,
-          "per": "day"
-        },
-        "name": "Murderous Strike",
-        "description": "+1 damage/lvl"
-      },
       "source": {
         "sheet": "Human Pantheon",
         "row": 4
@@ -269,29 +199,6 @@
           "gearIds": []
         }
       ],
-      "requiredProficiency": {
-        "printed": "Spellcraft",
-        "name": "Spellcraft",
-        "nonWeaponId": "spellcraft",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Reading/Writing",
-        "name": "Reading/Writing",
-        "nonWeaponId": "readingWriting",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Spell Shield (Absorbs 1 spell level/3 lvls) - 1/day",
-        "frequency": {
-          "text": "1/day",
-          "type": "limited",
-          "uses": 1,
-          "per": "day"
-        },
-        "name": "Spell Shield",
-        "description": "Absorbs 1 spell level/3 lvls"
-      },
       "source": {
         "sheet": "Human Pantheon",
         "row": 5
@@ -337,27 +244,6 @@
           ]
         }
       ],
-      "requiredProficiency": {
-        "printed": "Disguise",
-        "name": "Disguise",
-        "nonWeaponId": "disguise",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Information Gathering",
-        "name": "Information Gathering",
-        "nonWeaponId": "informationGathering",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Misdirection Passives scale up per level - Constant",
-        "frequency": {
-          "text": "Constant",
-          "type": "constant"
-        },
-        "name": "Misdirection Passives scale up per level",
-        "description": null
-      },
       "source": {
         "sheet": "Human Pantheon",
         "row": 6
@@ -402,29 +288,6 @@
           "matchNote": "Printed \"Staff\"; owner confirmed this is the Quarterstaff."
         }
       ],
-      "requiredProficiency": {
-        "printed": "Spellcraft",
-        "name": "Spellcraft",
-        "nonWeaponId": "spellcraft",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Reading/Writing",
-        "name": "Reading/Writing",
-        "nonWeaponId": "readingWriting",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Magic Missile (Count mirrors Wizard tier unlocks) - 3/day",
-        "frequency": {
-          "text": "3/day",
-          "type": "limited",
-          "uses": 3,
-          "per": "day"
-        },
-        "name": "Magic Missile",
-        "description": "Count mirrors Wizard tier unlocks"
-      },
       "source": {
         "sheet": "Human Pantheon",
         "row": 7
@@ -470,29 +333,6 @@
           ]
         }
       ],
-      "requiredProficiency": {
-        "printed": "Intimidation",
-        "name": "Intimidation",
-        "nonWeaponId": "intimidation",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Religion",
-        "name": "Religion",
-        "nonWeaponId": "religion",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Prince of Lies Aura (Fear radius scales +5ft/lvl) - 1/day",
-        "frequency": {
-          "text": "1/day",
-          "type": "limited",
-          "uses": 1,
-          "per": "day"
-        },
-        "name": "Prince of Lies Aura",
-        "description": "Fear radius scales +5ft/lvl"
-      },
       "source": {
         "sheet": "Human Pantheon",
         "row": 8
@@ -528,27 +368,6 @@
           ]
         }
       ],
-      "requiredProficiency": {
-        "printed": "Ancient History",
-        "name": "Ancient History",
-        "nonWeaponId": "ancientHistory",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Necrology",
-        "name": "Necrology",
-        "nonWeaponId": "necrology",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Grave Rest (Calms dead within 10ft/lvl) - At Will",
-        "frequency": {
-          "text": "At Will",
-          "type": "atWill"
-        },
-        "name": "Grave Rest",
-        "description": "Calms dead within 10ft/lvl"
-      },
       "source": {
         "sheet": "Human Pantheon",
         "row": 9
@@ -592,29 +411,6 @@
           ]
         }
       ],
-      "requiredProficiency": {
-        "printed": "Musical Instrument",
-        "name": "Musical Instrument",
-        "nonWeaponId": "musicalInstrument",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Poetry",
-        "name": "Poetry",
-        "nonWeaponId": "poetry",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Song of Renewal (Restores 1d4 HP/lvl, Cap 10d4) - 1/day",
-        "frequency": {
-          "text": "1/day",
-          "type": "limited",
-          "uses": 1,
-          "per": "day"
-        },
-        "name": "Song of Renewal",
-        "description": "Restores 1d4 HP/lvl, Cap 10d4"
-      },
       "source": {
         "sheet": "Human Pantheon",
         "row": 10
@@ -670,7 +466,6 @@
           "usesSlot": false
         }
       ],
-      "innatePower": null,
       "source": {
         "sheet": "Human Pantheon",
         "row": 11
@@ -707,27 +502,6 @@
           ]
         }
       ],
-      "requiredProficiency": {
-        "printed": "Observation",
-        "name": "Observation",
-        "nonWeaponId": "observation",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Alertness",
-        "name": "Alertness",
-        "nonWeaponId": "alertness",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Sentry Eyes (Negates surprise checks completely) - Constant",
-        "frequency": {
-          "text": "Constant",
-          "type": "constant"
-        },
-        "name": "Sentry Eyes",
-        "description": "Negates surprise checks completely"
-      },
       "source": {
         "sheet": "Human Pantheon",
         "row": 12
@@ -757,29 +531,6 @@
           "gearIds": []
         }
       ],
-      "requiredProficiency": {
-        "printed": "Appraising",
-        "name": "Appraising",
-        "nonWeaponId": "appraising",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Bargaining",
-        "name": "Bargaining",
-        "nonWeaponId": "bargaining",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Appraise Insight (Increases margin accuracy to 95% Cap) - 3/day",
-        "frequency": {
-          "text": "3/day",
-          "type": "limited",
-          "uses": 3,
-          "per": "day"
-        },
-        "name": "Appraise Insight",
-        "description": "Increases margin accuracy to 95% Cap"
-      },
       "source": {
         "sheet": "Human Pantheon",
         "row": 13
@@ -813,27 +564,6 @@
           ]
         }
       ],
-      "requiredProficiency": {
-        "printed": "Spelunking",
-        "name": "Spelunking",
-        "nonWeaponId": "spelunking",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Mining",
-        "name": "Mining",
-        "nonWeaponId": "mining",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Deep Vision (Infravision extension scales per level) - Constant",
-        "frequency": {
-          "text": "Constant",
-          "type": "constant"
-        },
-        "name": "Deep Vision",
-        "description": "Infravision extension scales per level"
-      },
       "source": {
         "sheet": "Human Pantheon",
         "row": 14
@@ -870,29 +600,6 @@
           ]
         }
       ],
-      "requiredProficiency": {
-        "printed": "Spellcraft",
-        "name": "Spellcraft",
-        "nonWeaponId": "spellcraft",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Reading/Writing",
-        "name": "Reading/Writing",
-        "nonWeaponId": "readingWriting",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Weave Mastery (+5% spell retention per level) - 1/day",
-        "frequency": {
-          "text": "1/day",
-          "type": "limited",
-          "uses": 1,
-          "per": "day"
-        },
-        "name": "Weave Mastery",
-        "description": "+5% spell retention per level"
-      },
       "source": {
         "sheet": "Human Pantheon",
         "row": 15
@@ -938,29 +645,6 @@
           ]
         }
       ],
-      "requiredProficiency": {
-        "printed": "Agriculture",
-        "name": "Agriculture",
-        "nonWeaponId": "agriculture",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Weather Sense",
-        "name": "Weather Sense",
-        "nonWeaponId": "weatherSense",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Bountiful Harvest (Restores dead crops, area scales) - 1/week",
-        "frequency": {
-          "text": "1/week",
-          "type": "limited",
-          "uses": 1,
-          "per": "week"
-        },
-        "name": "Bountiful Harvest",
-        "description": "Restores dead crops, area scales"
-      },
       "source": {
         "sheet": "Human Pantheon",
         "row": 16
@@ -995,27 +679,6 @@
           ]
         }
       ],
-      "requiredProficiency": {
-        "printed": "Reading/Writing",
-        "name": "Reading/Writing",
-        "nonWeaponId": "readingWriting",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Forging",
-        "name": "Forging",
-        "nonWeaponId": "forging",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Glyph Reading (Instant deciphering of seals) - At Will",
-        "frequency": {
-          "text": "At Will",
-          "type": "atWill"
-        },
-        "name": "Glyph Reading",
-        "description": "Instant deciphering of seals"
-      },
       "source": {
         "sheet": "Human Pantheon",
         "row": 17
@@ -1045,29 +708,6 @@
           "gearIds": []
         }
       ],
-      "requiredProficiency": {
-        "printed": "Blacksmithing",
-        "name": "Blacksmithing",
-        "nonWeaponId": "blacksmithing",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Engineering",
-        "name": "Engineering",
-        "nonWeaponId": "engineering",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Invention Spark (+10% craft check modifier per level) - 1/day",
-        "frequency": {
-          "text": "1/day",
-          "type": "limited",
-          "uses": 1,
-          "per": "day"
-        },
-        "name": "Invention Spark",
-        "description": "+10% craft check modifier per level"
-      },
       "source": {
         "sheet": "Human Pantheon",
         "row": 18
@@ -1100,27 +740,6 @@
           "gearIds": []
         }
       ],
-      "requiredProficiency": {
-        "printed": "Endurance",
-        "name": "Endurance",
-        "nonWeaponId": "endurance",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Healing",
-        "name": "Healing",
-        "nonWeaponId": "healing",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Empathic Transfer (Absorbs up to 2 HP/lvl of ally damage) - At Will",
-        "frequency": {
-          "text": "At Will",
-          "type": "atWill"
-        },
-        "name": "Empathic Transfer",
-        "description": "Absorbs up to 2 HP/lvl of ally damage"
-      },
       "source": {
         "sheet": "Human Pantheon",
         "row": 19
@@ -1157,29 +776,6 @@
           "matchNote": "Owner confirmed: both the Footman's and the Horseman's version are allowed."
         }
       ],
-      "requiredProficiency": {
-        "printed": "Local History",
-        "name": "Local History",
-        "nonWeaponId": "localHistory",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Healing",
-        "name": "Healing",
-        "nonWeaponId": "healing",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Boon of Dawn (Double healing throughput at sunrise) - 1/day",
-        "frequency": {
-          "text": "1/day",
-          "type": "limited",
-          "uses": 1,
-          "per": "day"
-        },
-        "name": "Boon of Dawn",
-        "description": "Double healing throughput at sunrise"
-      },
       "source": {
         "sheet": "Human Pantheon",
         "row": 20
@@ -1224,30 +820,6 @@
           ]
         }
       ],
-      "requiredProficiency": {
-        "printed": "Survival (Forest)",
-        "name": "Survival",
-        "specialisation": "Forest",
-        "nonWeaponId": "survival",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Tracking",
-        "name": "Tracking",
-        "nonWeaponId": "tracking",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Tree Stride (Teleport step scales +20ft/lvl) - 2/day",
-        "frequency": {
-          "text": "2/day",
-          "type": "limited",
-          "uses": 2,
-          "per": "day"
-        },
-        "name": "Tree Stride",
-        "description": "Teleport step scales +20ft/lvl"
-      },
       "source": {
         "sheet": "Human Pantheon",
         "row": 21
@@ -1282,29 +854,6 @@
           ]
         }
       ],
-      "requiredProficiency": {
-        "printed": "Poetry",
-        "name": "Poetry",
-        "nonWeaponId": "poetry",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Musical Instrument",
-        "name": "Musical Instrument",
-        "nonWeaponId": "musicalInstrument",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Harmonious Note (Calms aggression, duration scales) - 1/day",
-        "frequency": {
-          "text": "1/day",
-          "type": "limited",
-          "uses": 1,
-          "per": "day"
-        },
-        "name": "Harmonious Note",
-        "description": "Calms aggression, duration scales"
-      },
       "source": {
         "sheet": "Human Pantheon",
         "row": 22
@@ -1335,27 +884,6 @@
           ]
         }
       ],
-      "requiredProficiency": {
-        "printed": "Ancient History",
-        "name": "Ancient History",
-        "nonWeaponId": "ancientHistory",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Reading/Writing",
-        "name": "Reading/Writing",
-        "nonWeaponId": "readingWriting",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Loremaster Recall (Percent chance to know mythos scales) - At Will",
-        "frequency": {
-          "text": "At Will",
-          "type": "atWill"
-        },
-        "name": "Loremaster Recall",
-        "description": "Percent chance to know mythos scales"
-      },
       "source": {
         "sheet": "Human Pantheon",
         "row": 23
@@ -1403,27 +931,6 @@
           ]
         }
       ],
-      "requiredProficiency": {
-        "printed": "Astrology",
-        "name": "Astrology",
-        "nonWeaponId": "astrology",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Navigation",
-        "name": "Navigation",
-        "nonWeaponId": "navigation",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Moonlight Beacon (Illuminates absolute dark up to 60ft) - Constant",
-        "frequency": {
-          "text": "Constant",
-          "type": "constant"
-        },
-        "name": "Moonlight Beacon",
-        "description": "Illuminates absolute dark up to 60ft"
-      },
       "source": {
         "sheet": "Human Pantheon",
         "row": 24
@@ -1511,7 +1018,6 @@
           "usesSlot": false
         }
       ],
-      "innatePower": null,
       "source": {
         "sheet": "Human Pantheon",
         "row": 25
@@ -1556,27 +1062,6 @@
           ]
         }
       ],
-      "requiredProficiency": {
-        "printed": "Etiquette",
-        "name": "Etiquette",
-        "nonWeaponId": "etiquette",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Dancing",
-        "name": "Dancing",
-        "nonWeaponId": "dancing",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Allure Passive (Charisma modifier buff steps up) - Constant",
-        "frequency": {
-          "text": "Constant",
-          "type": "constant"
-        },
-        "name": "Allure Passive",
-        "description": "Charisma modifier buff steps up"
-      },
       "source": {
         "sheet": "Human Pantheon",
         "row": 26
@@ -1619,29 +1104,6 @@
           ]
         }
       ],
-      "requiredProficiency": {
-        "printed": "Gaming",
-        "name": "Gaming",
-        "nonWeaponId": "gaming",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Jumping",
-        "name": "Jumping",
-        "nonWeaponId": "jumping",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Lady Luck (Reroll 1 failed attack or save line) - 1/day",
-        "frequency": {
-          "text": "1/day",
-          "type": "limited",
-          "uses": 1,
-          "per": "day"
-        },
-        "name": "Lady Luck",
-        "description": "Reroll 1 failed attack or save line"
-      },
       "source": {
         "sheet": "Human Pantheon",
         "row": 27
@@ -1676,29 +1138,6 @@
           ]
         }
       ],
-      "requiredProficiency": {
-        "printed": "Tactics",
-        "name": "Tactics",
-        "nonWeaponId": "tactics",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Law",
-        "name": "Law",
-        "nonWeaponId": "law",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Hammer of Justice (Stuns target, duration scales) - 1/day",
-        "frequency": {
-          "text": "1/day",
-          "type": "limited",
-          "uses": 1,
-          "per": "day"
-        },
-        "name": "Hammer of Justice",
-        "description": "Stuns target, duration scales"
-      },
       "source": {
         "sheet": "Human Pantheon",
         "row": 28
@@ -1733,29 +1172,6 @@
           ]
         }
       ],
-      "requiredProficiency": {
-        "printed": "Malicious Rumors",
-        "name": "Malicious Rumors",
-        "nonWeaponId": "maliciousRumors",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Intimidation",
-        "name": "Intimidation",
-        "nonWeaponId": "intimidation",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Misfortune Curse (Imposes -1 penalty step/5 lvls) - 1/day",
-        "frequency": {
-          "text": "1/day",
-          "type": "limited",
-          "uses": 1,
-          "per": "day"
-        },
-        "name": "Misfortune Curse",
-        "description": "Imposes -1 penalty step/5 lvls"
-      },
       "source": {
         "sheet": "Human Pantheon",
         "row": 29
@@ -1799,29 +1215,6 @@
           ]
         }
       ],
-      "requiredProficiency": {
-        "printed": "Torture",
-        "name": "Torture",
-        "nonWeaponId": "torture",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Intimidation",
-        "name": "Intimidation",
-        "nonWeaponId": "intimidation",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Agony Touch (Stuns target via systemic shock) - 1/day",
-        "frequency": {
-          "text": "1/day",
-          "type": "limited",
-          "uses": 1,
-          "per": "day"
-        },
-        "name": "Agony Touch",
-        "description": "Stuns target via systemic shock"
-      },
       "source": {
         "sheet": "Human Pantheon",
         "row": 30
@@ -1862,27 +1255,6 @@
           ]
         }
       ],
-      "requiredProficiency": {
-        "printed": "Hunting",
-        "name": "Hunting",
-        "nonWeaponId": "hunting",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Tracking",
-        "name": "Tracking",
-        "nonWeaponId": "tracking",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Feral Speed (Movement speed increments +1 per 3 lvls) - Constant",
-        "frequency": {
-          "text": "Constant",
-          "type": "constant"
-        },
-        "name": "Feral Speed",
-        "description": "Movement speed increments +1 per 3 lvls"
-      },
       "source": {
         "sheet": "Human Pantheon",
         "row": 31
@@ -1920,27 +1292,6 @@
           ]
         }
       ],
-      "requiredProficiency": {
-        "printed": "Looting",
-        "name": "Looting",
-        "nonWeaponId": "looting",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Appraising",
-        "name": "Appraising",
-        "nonWeaponId": "appraising",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Shadow Blend (Stealth concealment steps up inside dark) - Constant",
-        "frequency": {
-          "text": "Constant",
-          "type": "constant"
-        },
-        "name": "Shadow Blend",
-        "description": "Stealth concealment steps up inside dark"
-      },
       "source": {
         "sheet": "Human Pantheon",
         "row": 32
@@ -1984,29 +1335,6 @@
           ]
         }
       ],
-      "requiredProficiency": {
-        "printed": "Secret Signs",
-        "name": "Secret Signs",
-        "nonWeaponId": "secretSigns",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Blind-fighting",
-        "name": "Blind-fighting",
-        "nonWeaponId": "blindFighting",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Blindness Aura (Radius extends outward with levels) - 1/day",
-        "frequency": {
-          "text": "1/day",
-          "type": "limited",
-          "uses": 1,
-          "per": "day"
-        },
-        "name": "Blindness Aura",
-        "description": "Radius extends outward with levels"
-      },
       "source": {
         "sheet": "Human Pantheon",
         "row": 33
@@ -2039,29 +1367,6 @@
           ]
         }
       ],
-      "requiredProficiency": {
-        "printed": "Herbalism",
-        "name": "Herbalism",
-        "nonWeaponId": "herbalism",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Brewing",
-        "name": "Brewing",
-        "nonWeaponId": "brewing",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Plague Vector (Deals toxic cloud damage per level) - 1/week",
-        "frequency": {
-          "text": "1/week",
-          "type": "limited",
-          "uses": 1,
-          "per": "week"
-        },
-        "name": "Plague Vector",
-        "description": "Deals toxic cloud damage per level"
-      },
       "source": {
         "sheet": "Human Pantheon",
         "row": 34
@@ -2104,29 +1409,6 @@
           ]
         }
       ],
-      "requiredProficiency": {
-        "printed": "Weather Sense",
-        "name": "Weather Sense",
-        "nonWeaponId": "weatherSense",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Intimidation",
-        "name": "Intimidation",
-        "nonWeaponId": "intimidation",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Lightning Call (Damage scales 1d6/lvl, Cap 10d6) - 1/day",
-        "frequency": {
-          "text": "1/day",
-          "type": "limited",
-          "uses": 1,
-          "per": "day"
-        },
-        "name": "Lightning Call",
-        "description": "Damage scales 1d6/lvl, Cap 10d6"
-      },
       "source": {
         "sheet": "Human Pantheon",
         "row": 35
@@ -2161,30 +1443,6 @@
           ]
         }
       ],
-      "requiredProficiency": {
-        "printed": "Swimming",
-        "name": "Swimming",
-        "nonWeaponId": "swimming",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Navigation (Marine)",
-        "name": "Navigation",
-        "specialisation": "Marine",
-        "nonWeaponId": "navigation",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Wave Crash (Knocks back maritime vessels, scale based) - 1/day",
-        "frequency": {
-          "text": "1/day",
-          "type": "limited",
-          "uses": 1,
-          "per": "day"
-        },
-        "name": "Wave Crash",
-        "description": "Knocks back maritime vessels, scale based"
-      },
       "source": {
         "sheet": "Human Pantheon",
         "row": 36
@@ -2220,29 +1478,6 @@
           ]
         }
       ],
-      "requiredProficiency": {
-        "printed": "Weather Sense",
-        "name": "Weather Sense",
-        "nonWeaponId": "weatherSense",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Navigation",
-        "name": "Navigation",
-        "nonWeaponId": "navigation",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Air Walk (Duration scales +10 mins per level) - 1/day",
-        "frequency": {
-          "text": "1/day",
-          "type": "limited",
-          "uses": 1,
-          "per": "day"
-        },
-        "name": "Air Walk",
-        "description": "Duration scales +10 mins per level"
-      },
       "source": {
         "sheet": "Human Pantheon",
         "row": 37
@@ -2277,29 +1512,6 @@
           ]
         }
       ],
-      "requiredProficiency": {
-        "printed": "Spelunking",
-        "name": "Spelunking",
-        "nonWeaponId": "spelunking",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Mining",
-        "name": "Mining",
-        "nonWeaponId": "mining",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Stone Skin (Absorbs 1 physical hit / 3 levels) - 1/day",
-        "frequency": {
-          "text": "1/day",
-          "type": "limited",
-          "uses": 1,
-          "per": "day"
-        },
-        "name": "Stone Skin",
-        "description": "Absorbs 1 physical hit / 3 levels"
-      },
       "source": {
         "sheet": "Human Pantheon",
         "row": 38
@@ -2335,30 +1547,6 @@
           ]
         }
       ],
-      "requiredProficiency": {
-        "printed": "Swimming",
-        "name": "Swimming",
-        "nonWeaponId": "swimming",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Navigation (Marine)",
-        "name": "Navigation",
-        "specialisation": "Marine",
-        "nonWeaponId": "navigation",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Purify Water (Volume scales 10 gallons per level) - 3/day",
-        "frequency": {
-          "text": "3/day",
-          "type": "limited",
-          "uses": 3,
-          "per": "day"
-        },
-        "name": "Purify Water",
-        "description": "Volume scales 10 gallons per level"
-      },
       "source": {
         "sheet": "Human Pantheon",
         "row": 39
@@ -2395,29 +1583,6 @@
           ]
         }
       ],
-      "requiredProficiency": {
-        "printed": "Fire-fighting",
-        "name": "Fire-fighting",
-        "nonWeaponId": "fireFighting",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Blacksmithing",
-        "name": "Blacksmithing",
-        "nonWeaponId": "blacksmithing",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Fire Shield (Warm/Chill choices scale in duration) - 1/day",
-        "frequency": {
-          "text": "1/day",
-          "type": "limited",
-          "uses": 1,
-          "per": "day"
-        },
-        "name": "Fire Shield",
-        "description": "Warm/Chill choices scale in duration"
-      },
       "source": {
         "sheet": "Human Pantheon",
         "row": 40
@@ -2459,29 +1624,6 @@
           "gearIds": []
         }
       ],
-      "requiredProficiency": {
-        "printed": "Brawling",
-        "name": "Brawling",
-        "nonWeaponId": "brawling",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Intimidation",
-        "name": "Intimidation",
-        "nonWeaponId": "intimidation",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Bloodrage (+2 hit/damage rolls, scales at high tiers) - 1/day",
-        "frequency": {
-          "text": "1/day",
-          "type": "limited",
-          "uses": 1,
-          "per": "day"
-        },
-        "name": "Bloodrage",
-        "description": "+2 hit/damage rolls, scales at high tiers"
-      },
       "source": {
         "sheet": "Human Pantheon",
         "row": 41
@@ -2525,27 +1667,6 @@
           ]
         }
       ],
-      "requiredProficiency": {
-        "printed": "Local History",
-        "name": "Local History",
-        "nonWeaponId": "localHistory",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Tracking",
-        "name": "Tracking",
-        "nonWeaponId": "tracking",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Vengeance Mark (Tracks targets across any distance) - Constant",
-        "frequency": {
-          "text": "Constant",
-          "type": "constant"
-        },
-        "name": "Vengeance Mark",
-        "description": "Tracks targets across any distance"
-      },
       "source": {
         "sheet": "Human Pantheon",
         "row": 42
@@ -2582,29 +1703,6 @@
           ]
         }
       ],
-      "requiredProficiency": {
-        "printed": "Spellcraft",
-        "name": "Spellcraft",
-        "nonWeaponId": "spellcraft",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Reading/Writing",
-        "name": "Reading/Writing",
-        "nonWeaponId": "readingWriting",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Portent (Provides +1/lvl bonus to initiative tracking) - 3/day",
-        "frequency": {
-          "text": "3/day",
-          "type": "limited",
-          "uses": 3,
-          "per": "day"
-        },
-        "name": "Portent",
-        "description": "Provides +1/lvl bonus to initiative tracking"
-      },
       "source": {
         "sheet": "Human Pantheon",
         "row": 43
@@ -2641,28 +1739,6 @@
           "matchNote": "Added to gear.json by the owner; statistics copied from Two-handed sword."
         }
       ],
-      "requiredProficiency": {
-        "printed": "Direction Sense",
-        "name": "Direction Sense",
-        "nonWeaponId": "directionSense",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Survival (Plains)",
-        "name": "Survival",
-        "specialisation": "Plains",
-        "nonWeaponId": "survival",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Portal Find (Detects dimensional portals within 30ft) - At Will",
-        "frequency": {
-          "text": "At Will",
-          "type": "atWill"
-        },
-        "name": "Portal Find",
-        "description": "Detects dimensional portals within 30ft"
-      },
       "source": {
         "sheet": "Human Pantheon",
         "row": 44
@@ -2698,29 +1774,6 @@
           ]
         }
       ],
-      "requiredProficiency": {
-        "printed": "Dancing",
-        "name": "Dancing",
-        "nonWeaponId": "dancing",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Local History",
-        "name": "Local History",
-        "nonWeaponId": "localHistory",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Catnap (Shortens long rest recovery cycle for party) - 1/day",
-        "frequency": {
-          "text": "1/day",
-          "type": "limited",
-          "uses": 1,
-          "per": "day"
-        },
-        "name": "Catnap",
-        "description": "Shortens long rest recovery cycle for party"
-      },
       "source": {
         "sheet": "Human Pantheon",
         "row": 45
@@ -2755,27 +1808,6 @@
           "matchNote": "Added to gear.json by the owner; statistics copied from Horseman's mace."
         }
       ],
-      "requiredProficiency": {
-        "printed": "Etiquette",
-        "name": "Etiquette",
-        "nonWeaponId": "etiquette",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Heraldry",
-        "name": "Heraldry",
-        "nonWeaponId": "heraldry",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Noble Aura (Commands respect, saving throw modifiers scale) - Constant",
-        "frequency": {
-          "text": "Constant",
-          "type": "constant"
-        },
-        "name": "Noble Aura",
-        "description": "Commands respect, saving throw modifiers scale"
-      },
       "source": {
         "sheet": "Human Pantheon",
         "row": 46
@@ -2812,27 +1844,6 @@
           "matchNote": "Added to gear.json by the owner; statistics copied from Sabre."
         }
       ],
-      "requiredProficiency": {
-        "printed": "Navigation",
-        "name": "Navigation",
-        "nonWeaponId": "navigation",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Weather Sense",
-        "name": "Weather Sense",
-        "nonWeaponId": "weatherSense",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Safe Passage (Prevents capsizing in storms) - Constant",
-        "frequency": {
-          "text": "Constant",
-          "type": "constant"
-        },
-        "name": "Safe Passage",
-        "description": "Prevents capsizing in storms"
-      },
       "source": {
         "sheet": "Human Pantheon",
         "row": 47
@@ -2875,28 +1886,6 @@
           ]
         }
       ],
-      "requiredProficiency": {
-        "printed": "Tracking",
-        "name": "Tracking",
-        "nonWeaponId": "tracking",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Survival (Forest)",
-        "name": "Survival",
-        "specialisation": "Forest",
-        "nonWeaponId": "survival",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Forest Stealth (+5% tracking evasion per level) - Constant",
-        "frequency": {
-          "text": "Constant",
-          "type": "constant"
-        },
-        "name": "Forest Stealth",
-        "description": "+5% tracking evasion per level"
-      },
       "source": {
         "sheet": "Human Pantheon",
         "row": 48
@@ -2928,29 +1917,6 @@
           "gearIds": []
         }
       ],
-      "requiredProficiency": {
-        "printed": "Animal Lore",
-        "name": "Animal Lore",
-        "nonWeaponId": "animalLore",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Healing",
-        "name": "Healing",
-        "nonWeaponId": "healing",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Healing Horn (Restores full HP to any beast type) - 1/day",
-        "frequency": {
-          "text": "1/day",
-          "type": "limited",
-          "uses": 1,
-          "per": "day"
-        },
-        "name": "Healing Horn",
-        "description": "Restores full HP to any beast type"
-      },
       "source": {
         "sheet": "Human Pantheon",
         "row": 49
@@ -2992,27 +1958,6 @@
           ]
         }
       ],
-      "requiredProficiency": {
-        "printed": "Tactics",
-        "name": "Tactics",
-        "nonWeaponId": "tactics",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Intimidation",
-        "name": "Intimidation",
-        "nonWeaponId": "intimidation",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Lion Courage (Immunity to fear arrays, transfers to allies) - Constant",
-        "frequency": {
-          "text": "Constant",
-          "type": "constant"
-        },
-        "name": "Lion Courage",
-        "description": "Immunity to fear arrays, transfers to allies"
-      },
       "source": {
         "sheet": "Human Pantheon",
         "row": 50
@@ -3045,29 +1990,6 @@
           ]
         }
       ],
-      "requiredProficiency": {
-        "printed": "Herbalism",
-        "name": "Herbalism",
-        "nonWeaponId": "herbalism",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Animal Training",
-        "name": "Animal Training",
-        "nonWeaponId": "animalTraining",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Verdant Growth (Instantly blooms woodland terrain) - 1/day",
-        "frequency": {
-          "text": "1/day",
-          "type": "limited",
-          "uses": 1,
-          "per": "day"
-        },
-        "name": "Verdant Growth",
-        "description": "Instantly blooms woodland terrain"
-      },
       "source": {
         "sheet": "Human Pantheon",
         "row": 51
@@ -3103,27 +2025,6 @@
           ]
         }
       ],
-      "requiredProficiency": {
-        "printed": "Ancient History",
-        "name": "Ancient History",
-        "nonWeaponId": "ancientHistory",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Reading/Writing",
-        "name": "Reading/Writing",
-        "nonWeaponId": "readingWriting",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Life Ledger (Instantly detects undead counts within 100ft) - At Will",
-        "frequency": {
-          "text": "At Will",
-          "type": "atWill"
-        },
-        "name": "Life Ledger",
-        "description": "Instantly detects undead counts within 100ft"
-      },
       "source": {
         "sheet": "Human Pantheon",
         "row": 52
@@ -3166,29 +2067,6 @@
           ]
         }
       ],
-      "requiredProficiency": {
-        "printed": "Herbalism",
-        "name": "Herbalism",
-        "nonWeaponId": "herbalism",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Intimidation",
-        "name": "Intimidation",
-        "nonWeaponId": "intimidation",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Spore Cloud (Blinds and chokes target targets) - 1/day",
-        "frequency": {
-          "text": "1/day",
-          "type": "limited",
-          "uses": 1,
-          "per": "day"
-        },
-        "name": "Spore Cloud",
-        "description": "Blinds and chokes target targets"
-      },
       "source": {
         "sheet": "Human Pantheon",
         "row": 53
@@ -3223,30 +2101,6 @@
           ]
         }
       ],
-      "requiredProficiency": {
-        "printed": "Survival (Arctic)",
-        "name": "Survival",
-        "specialisation": "Arctic",
-        "nonWeaponId": "survival",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Weather Sense",
-        "name": "Weather Sense",
-        "nonWeaponId": "weatherSense",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Glacier Grip (Freezes surface liquids, thickness scales) - 1/day",
-        "frequency": {
-          "text": "1/day",
-          "type": "limited",
-          "uses": 1,
-          "per": "day"
-        },
-        "name": "Glacier Grip",
-        "description": "Freezes surface liquids, thickness scales"
-      },
       "source": {
         "sheet": "Human Pantheon",
         "row": 54
@@ -3290,29 +2144,6 @@
           "matchNote": "Owner confirmed: both the Footman's and the Horseman's version are allowed."
         }
       ],
-      "requiredProficiency": {
-        "printed": "Blacksmithing",
-        "name": "Blacksmithing",
-        "nonWeaponId": "blacksmithing",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Armorer",
-        "name": "Armorer",
-        "nonWeaponId": "armorer",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Forge Shield: Scales up armor value +1 step per 3 levels (Cap AC 0). 1/day",
-        "name": "Forge Shield",
-        "description": "Scales up armor value +1 step per 3 levels (Cap AC 0).",
-        "frequency": {
-          "text": "1/day",
-          "type": "limited",
-          "uses": 1,
-          "per": "day"
-        }
-      },
       "source": {
         "sheet": "Dwarves",
         "row": 2
@@ -3354,29 +2185,6 @@
           ]
         }
       ],
-      "requiredProficiency": {
-        "printed": "Looting",
-        "name": "Looting",
-        "nonWeaponId": "looting",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Appraising",
-        "name": "Appraising",
-        "nonWeaponId": "appraising",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Steal Shadow: Scales up core thieving stealth checks by +5% per level. 1/day",
-        "name": "Steal Shadow",
-        "description": "Scales up core thieving stealth checks by +5% per level.",
-        "frequency": {
-          "text": "1/day",
-          "type": "limited",
-          "uses": 1,
-          "per": "day"
-        }
-      },
       "source": {
         "sheet": "Dwarves",
         "row": 3
@@ -3423,29 +2231,6 @@
           "matchNote": "Owner confirmed: both the Footman's and the Horseman's version are allowed."
         }
       ],
-      "requiredProficiency": {
-        "printed": "Local History",
-        "name": "Local History",
-        "nonWeaponId": "localHistory",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Cooking",
-        "name": "Cooking",
-        "nonWeaponId": "cooking",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Hearth Glow: Restores 1d8 HP +1 per level (Cap +10 bonus). 2/day",
-        "name": "Hearth Glow",
-        "description": "Restores 1d8 HP +1 per level (Cap +10 bonus).",
-        "frequency": {
-          "text": "2/day",
-          "type": "limited",
-          "uses": 2,
-          "per": "day"
-        }
-      },
       "source": {
         "sheet": "Dwarves",
         "row": 4
@@ -3487,34 +2272,6 @@
           ]
         }
       ],
-      "requiredProficiency": null,
-      "bonusProficiency": [
-        {
-          "printed": "Religion",
-          "name": "Religion",
-          "nonWeaponId": "religion",
-          "match": "exact",
-          "appliesTo": "clerics"
-        },
-        {
-          "printed": "Reading/Writing",
-          "name": "Reading/Writing",
-          "nonWeaponId": "readingWriting",
-          "match": "exact",
-          "appliesTo": "clerics"
-        }
-      ],
-      "innatePower": {
-        "printed": "Battle Cry: Grants +2 to attack hit lines, scaling up every 4 levels (Cap +4). 1/day",
-        "name": "Battle Cry",
-        "description": "Grants +2 to attack hit lines, scaling up every 4 levels (Cap +4).",
-        "frequency": {
-          "text": "1/day",
-          "type": "limited",
-          "uses": 1,
-          "per": "day"
-        }
-      },
       "source": {
         "sheet": "Dwarves",
         "row": 5
@@ -3559,29 +2316,6 @@
           "matchNote": "Added to gear.json by the owner; statistics copied from Footman's pick."
         }
       ],
-      "requiredProficiency": {
-        "printed": "Psionic Lore",
-        "name": "Psionic Lore",
-        "nonWeaponId": "psionicLore",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Intimidation",
-        "name": "Intimidation",
-        "nonWeaponId": "intimidation",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Mind Blast: Cone stun duration scales directly up with character level metrics. 1/day",
-        "name": "Mind Blast",
-        "description": "Cone stun duration scales directly up with character level metrics.",
-        "frequency": {
-          "text": "1/day",
-          "type": "limited",
-          "uses": 1,
-          "per": "day"
-        }
-      },
       "source": {
         "sheet": "Dwarves",
         "row": 6
@@ -3612,29 +2346,6 @@
           "gearIds": []
         }
       ],
-      "requiredProficiency": {
-        "printed": "Ancient History",
-        "name": "Ancient History",
-        "nonWeaponId": "ancientHistory",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Reading/Writing",
-        "name": "Reading/Writing",
-        "nonWeaponId": "readingWriting",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Invention Spark: Grants +10% engineering/craft success modifiers per level. 3/day",
-        "name": "Invention Spark",
-        "description": "Grants +10% engineering/craft success modifiers per level.",
-        "frequency": {
-          "text": "3/day",
-          "type": "limited",
-          "uses": 3,
-          "per": "day"
-        }
-      },
       "source": {
         "sheet": "Dwarves",
         "row": 7
@@ -3675,27 +2386,6 @@
           ]
         }
       ],
-      "requiredProficiency": {
-        "printed": "Spelunking",
-        "name": "Spelunking",
-        "nonWeaponId": "spelunking",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Mining",
-        "name": "Mining",
-        "nonWeaponId": "mining",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Ore Sense: Detects veins through rock, radius scales +10 ft/level. Constant Passive",
-        "name": "Ore Sense",
-        "description": "Detects veins through rock, radius scales +10 ft/level.",
-        "frequency": {
-          "text": "Constant Passive",
-          "type": "constant"
-        }
-      },
       "source": {
         "sheet": "Dwarves",
         "row": 8
@@ -3739,29 +2429,6 @@
           "matchNote": "Owner confirmed: Shield, Medium (an armour item in gear.json, not a weapon)."
         }
       ],
-      "requiredProficiency": {
-        "printed": "Observation",
-        "name": "Observation",
-        "nonWeaponId": "observation",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Alertness",
-        "name": "Alertness",
-        "nonWeaponId": "alertness",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Guardian Wall: Projects damage absorption barriers scaling per level. 1/day",
-        "name": "Guardian Wall",
-        "description": "Projects damage absorption barriers scaling per level.",
-        "frequency": {
-          "text": "1/day",
-          "type": "limited",
-          "uses": 1,
-          "per": "day"
-        }
-      },
       "source": {
         "sheet": "Dwarves",
         "row": 9
@@ -3803,30 +2470,6 @@
           ]
         }
       ],
-      "requiredProficiency": {
-        "printed": "Blind-fighting",
-        "name": "Blind-fighting",
-        "nonWeaponId": "blindFighting",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Weaponsmithing",
-        "name": "Weaponsmithing",
-        "nonWeaponId": "weaponsmithing",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Luck Step: Reroll failed saving throw lines (Unlocks 2/day at level 10). 1/day base",
-        "name": "Luck Step",
-        "description": "Reroll failed saving throw lines (Unlocks 2/day at level 10).",
-        "frequency": {
-          "text": "1/day base",
-          "type": "limited",
-          "uses": 1,
-          "per": "day",
-          "note": "base"
-        }
-      },
       "source": {
         "sheet": "Dwarves",
         "row": 10
@@ -3868,27 +2511,6 @@
           ]
         }
       ],
-      "requiredProficiency": {
-        "printed": "Armorer",
-        "name": "Armorer",
-        "nonWeaponId": "armorer",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Mining",
-        "name": "Mining",
-        "nonWeaponId": "mining",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Hardship Fortitude: Multiplies saving throw matrices +1 step per 4 levels. Constant Passive",
-        "name": "Hardship Fortitude",
-        "description": "Multiplies saving throw matrices +1 step per 4 levels.",
-        "frequency": {
-          "text": "Constant Passive",
-          "type": "constant"
-        }
-      },
       "source": {
         "sheet": "Dwarves",
         "row": 11
@@ -3931,29 +2553,6 @@
           ]
         }
       ],
-      "requiredProficiency": {
-        "printed": "Direction Sense",
-        "name": "Direction Sense",
-        "nonWeaponId": "directionSense",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Navigation",
-        "name": "Navigation",
-        "nonWeaponId": "navigation",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Trail Finder: Automatically bypasses wilderness movement penalties. 2/day",
-        "name": "Trail Finder",
-        "description": "Automatically bypasses wilderness movement penalties.",
-        "frequency": {
-          "text": "2/day",
-          "type": "limited",
-          "uses": 2,
-          "per": "day"
-        }
-      },
       "source": {
         "sheet": "Dwarves",
         "row": 12
@@ -3997,29 +2596,6 @@
           "matchNote": "Owner confirmed: both the Footman's and the Horseman's version are allowed."
         }
       ],
-      "requiredProficiency": {
-        "printed": "Healing",
-        "name": "Healing",
-        "nonWeaponId": "healing",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Herbalism",
-        "name": "Herbalism",
-        "nonWeaponId": "herbalism",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Moon Healed: Restores wounds at double rates when manifested inside night hours. 1/day",
-        "name": "Moon Healed",
-        "description": "Restores wounds at double rates when manifested inside night hours.",
-        "frequency": {
-          "text": "1/day",
-          "type": "limited",
-          "uses": 1,
-          "per": "day"
-        }
-      },
       "source": {
         "sheet": "Dwarves",
         "row": 13
@@ -4062,28 +2638,6 @@
           ]
         }
       ],
-      "requiredProficiency": {
-        "printed": "Survival (Jungle)",
-        "name": "Survival",
-        "specialisation": "Jungle",
-        "nonWeaponId": "survival",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Tracking",
-        "name": "Tracking",
-        "nonWeaponId": "tracking",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Jungle Stride: Completely ignores natural thick jungle flora obstacles. Constant Passive",
-        "name": "Jungle Stride",
-        "description": "Completely ignores natural thick jungle flora obstacles.",
-        "frequency": {
-          "text": "Constant Passive",
-          "type": "constant"
-        }
-      },
       "source": {
         "sheet": "Dwarves",
         "row": 14
@@ -4128,29 +2682,6 @@
           ]
         }
       ],
-      "requiredProficiency": {
-        "printed": "Appraising",
-        "name": "Appraising",
-        "nonWeaponId": "appraising",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Gem Cutting",
-        "name": "Gem Cutting",
-        "nonWeaponId": "gemCutting",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Gold Finder: Pinpoints exact metal concentrations, scanning radius scales. 1/day",
-        "name": "Gold Finder",
-        "description": "Pinpoints exact metal concentrations, scanning radius scales.",
-        "frequency": {
-          "text": "1/day",
-          "type": "limited",
-          "uses": 1,
-          "per": "day"
-        }
-      },
       "source": {
         "sheet": "Dwarves",
         "row": 15
@@ -4194,27 +2725,6 @@
           ]
         }
       ],
-      "requiredProficiency": {
-        "printed": "Spellcraft",
-        "name": "Spellcraft",
-        "nonWeaponId": "spellcraft",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Ancient History",
-        "name": "Ancient History",
-        "nonWeaponId": "ancientHistory",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Elven Grace: Grants +1 to AC and reflex checks per 4 levels. Constant Passive",
-        "name": "Elven Grace",
-        "description": "Grants +1 to AC and reflex checks per 4 levels.",
-        "frequency": {
-          "text": "Constant Passive",
-          "type": "constant"
-        }
-      },
       "source": {
         "sheet": "Elves",
         "row": 2
@@ -4258,29 +2768,6 @@
           ]
         }
       ],
-      "requiredProficiency": {
-        "printed": "Weather Sense",
-        "name": "Weather Sense",
-        "nonWeaponId": "weatherSense",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Navigation",
-        "name": "Navigation",
-        "nonWeaponId": "navigation",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Cloud Walk: Can walk on air/clouds, duration scales +5 mins/lvl. 1/day",
-        "name": "Cloud Walk",
-        "description": "Can walk on air/clouds, duration scales +5 mins/lvl.",
-        "frequency": {
-          "text": "1/day",
-          "type": "limited",
-          "uses": 1,
-          "per": "day"
-        }
-      },
       "source": {
         "sheet": "Elves",
         "row": 3
@@ -4325,29 +2812,6 @@
           ]
         }
       ],
-      "requiredProficiency": {
-        "printed": "Religion",
-        "name": "Religion",
-        "nonWeaponId": "religion",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Healing",
-        "name": "Healing",
-        "nonWeaponId": "healing",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Triune Shield: Creates defensive barrier absorbing 1d6 damage/3 lvls. 1/day",
-        "name": "Triune Shield",
-        "description": "Creates defensive barrier absorbing 1d6 damage/3 lvls.",
-        "frequency": {
-          "text": "1/day",
-          "type": "limited",
-          "uses": 1,
-          "per": "day"
-        }
-      },
       "source": {
         "sheet": "Elves",
         "row": 4
@@ -4391,28 +2855,6 @@
           "matchNote": "Added to gear.json by the owner with empty statistics."
         }
       ],
-      "requiredProficiency": {
-        "printed": "Swimming",
-        "name": "Swimming",
-        "nonWeaponId": "swimming",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Navigation (Marine)",
-        "name": "Navigation",
-        "specialisation": "Marine",
-        "nonWeaponId": "navigation",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Water Breathing: Grants underwater survival, scales dynamically. At Will",
-        "name": "Water Breathing",
-        "description": "Grants underwater survival, scales dynamically.",
-        "frequency": {
-          "text": "At Will",
-          "type": "atWill"
-        }
-      },
       "source": {
         "sheet": "Elves",
         "row": 5
@@ -4455,29 +2897,6 @@
           ]
         }
       ],
-      "requiredProficiency": {
-        "printed": "Gaming",
-        "name": "Gaming",
-        "nonWeaponId": "gaming",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Disguise",
-        "name": "Disguise",
-        "nonWeaponId": "disguise",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Trickster Leap: Short distance teleport step, range scales per level. 3/day",
-        "name": "Trickster Leap",
-        "description": "Short distance teleport step, range scales per level.",
-        "frequency": {
-          "text": "3/day",
-          "type": "limited",
-          "uses": 3,
-          "per": "day"
-        }
-      },
       "source": {
         "sheet": "Elves",
         "row": 6
@@ -4524,27 +2943,6 @@
           ]
         }
       ],
-      "requiredProficiency": {
-        "printed": "Survival",
-        "name": "Survival",
-        "nonWeaponId": "survival",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Hunting",
-        "name": "Hunting",
-        "nonWeaponId": "hunting",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Wild Hide: Blends into wilderness flora (+10% camouflage bonus). Constant Passive",
-        "name": "Wild Hide",
-        "description": "Blends into wilderness flora (+10% camouflage bonus).",
-        "frequency": {
-          "text": "Constant Passive",
-          "type": "constant"
-        }
-      },
       "source": {
         "sheet": "Elves",
         "row": 7
@@ -4578,29 +2976,6 @@
           ]
         }
       ],
-      "requiredProficiency": {
-        "printed": "Etiquette",
-        "name": "Etiquette",
-        "nonWeaponId": "etiquette",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Poetry",
-        "name": "Poetry",
-        "nonWeaponId": "poetry",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Aura of Beauty: Charmed gaze commands targets, save modifier scales. 1/day",
-        "name": "Aura of Beauty",
-        "description": "Charmed gaze commands targets, save modifier scales.",
-        "frequency": {
-          "text": "1/day",
-          "type": "limited",
-          "uses": 1,
-          "per": "day"
-        }
-      },
       "source": {
         "sheet": "Elves",
         "row": 8
@@ -4634,29 +3009,6 @@
           ]
         }
       ],
-      "requiredProficiency": {
-        "printed": "Ancient History",
-        "name": "Ancient History",
-        "nonWeaponId": "ancientHistory",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Astrology",
-        "name": "Astrology",
-        "nonWeaponId": "astrology",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Time Step: Can step forward 1 round in time per 5 levels to dodge. 1/day",
-        "name": "Time Step",
-        "description": "Can step forward 1 round in time per 5 levels to dodge.",
-        "frequency": {
-          "text": "1/day",
-          "type": "limited",
-          "uses": 1,
-          "per": "day"
-        }
-      },
       "source": {
         "sheet": "Elves",
         "row": 9
@@ -4699,30 +3051,6 @@
           ]
         }
       ],
-      "requiredProficiency": {
-        "printed": "Survival (Forest)",
-        "name": "Survival",
-        "specialisation": "Forest",
-        "nonWeaponId": "survival",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Herbalism",
-        "name": "Herbalism",
-        "nonWeaponId": "herbalism",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Oak Skin: Grants structural natural armor bonus scaling with level. 1/day",
-        "name": "Oak Skin",
-        "description": "Grants structural natural armor bonus scaling with level.",
-        "frequency": {
-          "text": "1/day",
-          "type": "limited",
-          "uses": 1,
-          "per": "day"
-        }
-      },
       "source": {
         "sheet": "Elves",
         "row": 10
@@ -4759,29 +3087,6 @@
           "matchNote": "Owner confirmed: both the Footman's and the Horseman's version are allowed."
         }
       ],
-      "requiredProficiency": {
-        "printed": "Astrology",
-        "name": "Astrology",
-        "nonWeaponId": "astrology",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Hypnotism",
-        "name": "Hypnotism",
-        "nonWeaponId": "hypnotism",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Dream Walk: Can send messages into sleeping minds across distances. 1/day",
-        "name": "Dream Walk",
-        "description": "Can send messages into sleeping minds across distances.",
-        "frequency": {
-          "text": "1/day",
-          "type": "limited",
-          "uses": 1,
-          "per": "day"
-        }
-      },
       "source": {
         "sheet": "Elves",
         "row": 11
@@ -4827,27 +3132,6 @@
           ]
         }
       ],
-      "requiredProficiency": {
-        "printed": "Tracking",
-        "name": "Tracking",
-        "nonWeaponId": "tracking",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Blind-fighting",
-        "name": "Blind-fighting",
-        "nonWeaponId": "blindFighting",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Drow Bane: Grants +1 hit/damage bonuses against dark elven entities. Constant Passive",
-        "name": "Drow Bane",
-        "description": "Grants +1 hit/damage bonuses against dark elven entities.",
-        "frequency": {
-          "text": "Constant Passive",
-          "type": "constant"
-        }
-      },
       "source": {
         "sheet": "Elves",
         "row": 12
@@ -4913,15 +3197,6 @@
         "nonWeaponId": "bowyerFletcher",
         "match": "exact"
       },
-      "innatePower": {
-        "printed": "True Shot: Adds +1 to ranged bow attack tables every 3 levels. Constant Passive",
-        "name": "True Shot",
-        "description": "Adds +1 to ranged bow attack tables every 3 levels.",
-        "frequency": {
-          "text": "Constant Passive",
-          "type": "constant"
-        }
-      },
       "source": {
         "sheet": "Elves",
         "row": 13
@@ -4968,29 +3243,6 @@
           ]
         }
       ],
-      "requiredProficiency": {
-        "printed": "Gem Cutting",
-        "name": "Gem Cutting",
-        "nonWeaponId": "gemCutting",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Appraising",
-        "name": "Appraising",
-        "nonWeaponId": "appraising",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Glittering Jest: Blinds target with gold dust, duration scales. 2/day",
-        "name": "Glittering Jest",
-        "description": "Blinds target with gold dust, duration scales.",
-        "frequency": {
-          "text": "2/day",
-          "type": "limited",
-          "uses": 2,
-          "per": "day"
-        }
-      },
       "source": {
         "sheet": "Gnomes",
         "row": 2
@@ -5035,30 +3287,6 @@
           ]
         }
       ],
-      "requiredProficiency": {
-        "printed": "Survival (Forest)",
-        "name": "Survival",
-        "specialisation": "Forest",
-        "nonWeaponId": "survival",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Animal Signs",
-        "name": "Animal Signs",
-        "nonWeaponId": "animalSigns",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Forest Companion: Summons small woodland animal ally based on tier. 1/day",
-        "name": "Forest Companion",
-        "description": "Summons small woodland animal ally based on tier.",
-        "frequency": {
-          "text": "1/day",
-          "type": "limited",
-          "uses": 1,
-          "per": "day"
-        }
-      },
       "source": {
         "sheet": "Gnomes",
         "row": 3
@@ -5104,29 +3332,6 @@
           ]
         }
       ],
-      "requiredProficiency": {
-        "printed": "Disguise",
-        "name": "Disguise",
-        "nonWeaponId": "disguise",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Alertness",
-        "name": "Alertness",
-        "nonWeaponId": "alertness",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Illusion Veil: Blurs form (+2 AC bonus, duration scales per level). 1/day",
-        "name": "Illusion Veil",
-        "description": "Blurs form (+2 AC bonus, duration scales per level).",
-        "frequency": {
-          "text": "1/day",
-          "type": "limited",
-          "uses": 1,
-          "per": "day"
-        }
-      },
       "source": {
         "sheet": "Gnomes",
         "row": 4
@@ -5174,29 +3379,6 @@
           ]
         }
       ],
-      "requiredProficiency": {
-        "printed": "Spelunking",
-        "name": "Spelunking",
-        "nonWeaponId": "spelunking",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Gem Cutting",
-        "name": "Gem Cutting",
-        "nonWeaponId": "gemCutting",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Stone Form: Skin hardens to granite, grants high damage reduction. 1/day",
-        "name": "Stone Form",
-        "description": "Skin hardens to granite, grants high damage reduction.",
-        "frequency": {
-          "text": "1/day",
-          "type": "limited",
-          "uses": 1,
-          "per": "day"
-        }
-      },
       "source": {
         "sheet": "Gnomes",
         "row": 5
@@ -5229,27 +3411,6 @@
           ]
         }
       ],
-      "requiredProficiency": {
-        "printed": "Weaponsmithing",
-        "name": "Weaponsmithing",
-        "nonWeaponId": "weaponsmithing",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Blacksmithing",
-        "name": "Blacksmithing",
-        "nonWeaponId": "blacksmithing",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Flame Forge: Immunity to mundane heat and forge fire damage types. Constant Passive",
-        "name": "Flame Forge",
-        "description": "Immunity to mundane heat and forge fire damage types.",
-        "frequency": {
-          "text": "Constant Passive",
-          "type": "constant"
-        }
-      },
       "source": {
         "sheet": "Gnomes",
         "row": 6
@@ -5283,27 +3444,6 @@
           ]
         }
       ],
-      "requiredProficiency": {
-        "printed": "Tactics",
-        "name": "Tactics",
-        "nonWeaponId": "tactics",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Observation",
-        "name": "Observation",
-        "nonWeaponId": "observation",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Iron Guard: Grants defensive counter-attack lines to adjacent allies. Constant Passive",
-        "name": "Iron Guard",
-        "description": "Grants defensive counter-attack lines to adjacent allies.",
-        "frequency": {
-          "text": "Constant Passive",
-          "type": "constant"
-        }
-      },
       "source": {
         "sheet": "Gnomes",
         "row": 7
@@ -5347,29 +3487,6 @@
           ]
         }
       ],
-      "requiredProficiency": {
-        "printed": "Ancient History",
-        "name": "Ancient History",
-        "nonWeaponId": "ancientHistory",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Animal Training",
-        "name": "Animal Training",
-        "nonWeaponId": "animalTraining",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Earth Call: Can command earth elementals or burrowing fauna. 1/day",
-        "name": "Earth Call",
-        "description": "Can command earth elementals or burrowing fauna.",
-        "frequency": {
-          "text": "1/day",
-          "type": "limited",
-          "uses": 1,
-          "per": "day"
-        }
-      },
       "source": {
         "sheet": "Gnomes",
         "row": 8
@@ -5411,29 +3528,6 @@
           "matchNote": "Added to gear.json by the owner; statistics from the Fist or Open Hand row."
         }
       ],
-      "requiredProficiency": {
-        "printed": "Intimidation",
-        "name": "Intimidation",
-        "nonWeaponId": "intimidation",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Brawling",
-        "name": "Brawling",
-        "nonWeaponId": "brawling",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Blood Craze: Enters absolute berzerker frenzy buffing hit profiles. 1/day",
-        "name": "Blood Craze",
-        "description": "Enters absolute berzerker frenzy buffing hit profiles.",
-        "frequency": {
-          "text": "1/day",
-          "type": "limited",
-          "uses": 1,
-          "per": "day"
-        }
-      },
       "source": {
         "sheet": "Gnomes",
         "row": 9
@@ -5477,29 +3571,6 @@
           ]
         }
       ],
-      "requiredProficiency": {
-        "printed": "Cooking",
-        "name": "Cooking",
-        "nonWeaponId": "cooking",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Etiquette",
-        "name": "Etiquette",
-        "nonWeaponId": "etiquette",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Matriarch Shield: Grants bonus step (+1) to saving throws every 3 levels. 1/day",
-        "name": "Matriarch Shield",
-        "description": "Grants bonus step (+1) to saving throws every 3 levels.",
-        "frequency": {
-          "text": "1/day",
-          "type": "limited",
-          "uses": 1,
-          "per": "day"
-        }
-      },
       "source": {
         "sheet": "Halflings",
         "row": 2
@@ -5542,27 +3613,6 @@
           ]
         }
       ],
-      "requiredProficiency": {
-        "printed": "Observation",
-        "name": "Observation",
-        "nonWeaponId": "observation",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Alertness",
-        "name": "Alertness",
-        "nonWeaponId": "alertness",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Sentry Focus: Complete immunity to ambush surprise matrices (Cap 1 hr duration). Constant Passive",
-        "name": "Sentry Focus",
-        "description": "Complete immunity to ambush surprise matrices (Cap 1 hr duration).",
-        "frequency": {
-          "text": "Constant Passive",
-          "type": "constant"
-        }
-      },
       "source": {
         "sheet": "Halflings",
         "row": 3
@@ -5608,29 +3658,6 @@
           ]
         }
       ],
-      "requiredProficiency": {
-        "printed": "Looting",
-        "name": "Looting",
-        "nonWeaponId": "looting",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Disguise",
-        "name": "Disguise",
-        "nonWeaponId": "disguise",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Shadow Blend: Upgrades hide checks by +5% per level milestone (Hard cap 90%). 2/day",
-        "name": "Shadow Blend",
-        "description": "Upgrades hide checks by +5% per level milestone (Hard cap 90%).",
-        "frequency": {
-          "text": "2/day",
-          "type": "limited",
-          "uses": 2,
-          "per": "day"
-        }
-      },
       "source": {
         "sheet": "Halflings",
         "row": 4
@@ -5676,29 +3703,6 @@
           ]
         }
       ],
-      "requiredProficiency": {
-        "printed": "Local History",
-        "name": "Local History",
-        "nonWeaponId": "localHistory",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Etiquette",
-        "name": "Etiquette",
-        "nonWeaponId": "etiquette",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Hearth Bond: Purges fatigue lines and heals nearby party members uniformly. 1/day",
-        "name": "Hearth Bond",
-        "description": "Purges fatigue lines and heals nearby party members uniformly.",
-        "frequency": {
-          "text": "1/day",
-          "type": "limited",
-          "uses": 1,
-          "per": "day"
-        }
-      },
       "source": {
         "sheet": "Halflings",
         "row": 5
@@ -5745,29 +3749,6 @@
           ]
         }
       ],
-      "requiredProficiency": {
-        "printed": "Agriculture",
-        "name": "Agriculture",
-        "nonWeaponId": "agriculture",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Herbalism",
-        "name": "Herbalism",
-        "nonWeaponId": "herbalism",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Green Growth: Roots targets via local plant lines, range scales per level. 1/day",
-        "name": "Green Growth",
-        "description": "Roots targets via local plant lines, range scales per level.",
-        "frequency": {
-          "text": "1/day",
-          "type": "limited",
-          "uses": 1,
-          "per": "day"
-        }
-      },
       "source": {
         "sheet": "Halflings",
         "row": 6
@@ -5815,29 +3796,6 @@
           "matchNote": "Added to gear.json by the owner; statistics copied from Guisarme."
         }
       ],
-      "requiredProficiency": {
-        "printed": "Ancient History",
-        "name": "Ancient History",
-        "nonWeaponId": "ancientHistory",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Reading/Writing",
-        "name": "Reading/Writing",
-        "nonWeaponId": "readingWriting",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Grave Ward: Grants +2 protection bonus on saves vs hostile necromancy loops. 3/day",
-        "name": "Grave Ward",
-        "description": "Grants +2 protection bonus on saves vs hostile necromancy loops.",
-        "frequency": {
-          "text": "3/day",
-          "type": "limited",
-          "uses": 3,
-          "per": "day"
-        }
-      },
       "source": {
         "sheet": "Halflings",
         "row": 7
@@ -5881,29 +3839,6 @@
           ]
         }
       ],
-      "requiredProficiency": {
-        "printed": "Intimidation",
-        "name": "Intimidation",
-        "nonWeaponId": "intimidation",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Tracking",
-        "name": "Tracking",
-        "nonWeaponId": "tracking",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Eye Bite: Blinds target, duration scales up +1 round per level. 1/day",
-        "name": "Eye Bite",
-        "description": "Blinds target, duration scales up +1 round per level.",
-        "frequency": {
-          "text": "1/day",
-          "type": "limited",
-          "uses": 1,
-          "per": "day"
-        }
-      },
       "source": {
         "sheet": "Orcs & Half-Orcs",
         "row": 2
@@ -5947,27 +3882,6 @@
           "matchNote": "Added to gear.json by the owner; statistics copied from Club."
         }
       ],
-      "requiredProficiency": {
-        "printed": "Endurance",
-        "name": "Endurance",
-        "nonWeaponId": "endurance",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Brawling",
-        "name": "Brawling",
-        "nonWeaponId": "brawling",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Brute Force: Temporarily raises effective Strength score +1 step per 5 levels. Constant Passive",
-        "name": "Brute Force",
-        "description": "Temporarily raises effective Strength score +1 step per 5 levels.",
-        "frequency": {
-          "text": "Constant Passive",
-          "type": "constant"
-        }
-      },
       "source": {
         "sheet": "Orcs & Half-Orcs",
         "row": 3
@@ -6011,29 +3925,6 @@
           ]
         }
       ],
-      "requiredProficiency": {
-        "printed": "Tactics",
-        "name": "Tactics",
-        "nonWeaponId": "tactics",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Intimidation",
-        "name": "Intimidation",
-        "nonWeaponId": "intimidation",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Horde Rally: Projects +1 combat hit bonus to all adjacent tactical allies. 1/day",
-        "name": "Horde Rally",
-        "description": "Projects +1 combat hit bonus to all adjacent tactical allies.",
-        "frequency": {
-          "text": "1/day",
-          "type": "limited",
-          "uses": 1,
-          "per": "day"
-        }
-      },
       "source": {
         "sheet": "Orcs & Half-Orcs",
         "row": 4
@@ -6077,27 +3968,6 @@
           ]
         }
       ],
-      "requiredProficiency": {
-        "printed": "Survival",
-        "name": "Survival",
-        "nonWeaponId": "survival",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Healing",
-        "name": "Healing",
-        "nonWeaponId": "healing",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Cave Healed: Doubles native execution of regeneration values while underground. Constant Passive",
-        "name": "Cave Healed",
-        "description": "Doubles native execution of regeneration values while underground.",
-        "frequency": {
-          "text": "Constant Passive",
-          "type": "constant"
-        }
-      },
       "source": {
         "sheet": "Orcs & Half-Orcs",
         "row": 5
@@ -6141,30 +4011,6 @@
           ]
         }
       ],
-      "requiredProficiency": {
-        "printed": "Looting",
-        "name": "Looting",
-        "nonWeaponId": "looting",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Blind-fight",
-        "name": "Blind-fighting",
-        "nonWeaponId": "blindFighting",
-        "match": "exact",
-        "matchNote": "Printed \"Blind-fight\"; owner confirmed this is Blind-fighting."
-      },
-      "innatePower": {
-        "printed": "Shadow Step: Teleport safely between ambient unlit areas, range scales +10 ft/level. 2/day",
-        "name": "Shadow Step",
-        "description": "Teleport safely between ambient unlit areas, range scales +10 ft/level.",
-        "frequency": {
-          "text": "2/day",
-          "type": "limited",
-          "uses": 2,
-          "per": "day"
-        }
-      },
       "source": {
         "sheet": "Orcs & Half-Orcs",
         "row": 6
@@ -6208,29 +4054,6 @@
           ]
         }
       ],
-      "requiredProficiency": {
-        "printed": "Herbalism",
-        "name": "Herbalism",
-        "nonWeaponId": "herbalism",
-        "match": "exact"
-      },
-      "bonusProficiency": {
-        "printed": "Ancient History",
-        "name": "Ancient History",
-        "nonWeaponId": "ancientHistory",
-        "match": "exact"
-      },
-      "innatePower": {
-        "printed": "Disease Cloud: Emanates infectious rot strains, damage scales per level. 1/week",
-        "name": "Disease Cloud",
-        "description": "Emanates infectious rot strains, damage scales per level.",
-        "frequency": {
-          "text": "1/week",
-          "type": "limited",
-          "uses": 1,
-          "per": "week"
-        }
-      },
       "source": {
         "sheet": "Orcs & Half-Orcs",
         "row": 7
