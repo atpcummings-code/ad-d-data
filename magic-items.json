@@ -19,7 +19,8 @@
       "specialArmourTypes": "Table 107 items carry armourTypeOptions (gear.json armour ids the item can be) and armourTypeSelection ('fixed' = one option, 'choice' = the app shows a selector). plus is the item's magical AC plus (null where it is not fixed); plusOptions lists the allowed values where the plus is a choice (Elven Chain Mail +1 to +5, owner-set; Plate Mail of Vulnerability -2, -3 or -4 per its description); plusNote explains. On 'choice' items weightLbs is not fixed by the item: take weight from the selected gear.json armour. Owner choices: Armor of Blending and Armor of Missile Attraction may be any of the 12 body armours except Red Dragon Scale Armour; Shield, Large is Shield, Body; Shield -1, Missile Attractor may be any of the four shields. The armour and shield type tables are not in the data files.",
       "hasCharges": "true on items that carry charges (from the item description, or the Table 91 ring footnote 'limited by the number of charges'). The field is absent on all other items. The number of charges is not stored: it varies by item and is to be recorded by the app.",
       "container": "type EquipmentContainer marks an item that holds other items, with capacity in the same form as gear.json equipment containers: weightLimitLbs, volume {dimensionsIn, printed, volumeCuIn}, count {max, of}, restriction (null = none or not supplied). compartments (new here) lists identical compartments as quantity x limits, for items that are several containers in one; the totals on capacity are the sum. A volume with derived true was calculated from stated dimensions. contentsCountForEncumbrance false (owner rule): anything placed inside does not add to encumbrance; only the item's own weight counts. Absent on other containers, which count their contents normally.",
-      "tomItems": "See meta.tomItems."
+      "tomItems": "See meta.tomItems.",
+      "doublesSpellLevels": "Ring of Wizardry variants only. List of wizard spell levels (1-9) for which the ring doubles the number of spells the wearer may prepare each day. Add the character's base slots at each listed level again (doubling) when the ring is carried by a wizard."
     },
     "typos": {
       "Gauntets of Fumbling": "corrected to Gauntlets of Fumbling",
@@ -3094,6 +3095,9 @@
                 ],
                 "label": "Doubles 1st-level spells"
               },
+              "doublesSpellLevels": [
+                1
+              ],
               "weightLbs": 0.015,
               "weightSource": "owner-supplied (placeholder, may be revised)"
             },
@@ -3120,6 +3124,9 @@
                 ],
                 "label": "Doubles 2nd-level spells"
               },
+              "doublesSpellLevels": [
+                2
+              ],
               "weightLbs": 0.015,
               "weightSource": "owner-supplied (placeholder, may be revised)"
             },
@@ -3146,6 +3153,9 @@
                 ],
                 "label": "Doubles 3rd-level spells"
               },
+              "doublesSpellLevels": [
+                3
+              ],
               "weightLbs": 0.015,
               "weightSource": "owner-supplied (placeholder, may be revised)"
             },
@@ -3172,6 +3182,10 @@
                 ],
                 "label": "Doubles 1st- and 2nd-level spells"
               },
+              "doublesSpellLevels": [
+                1,
+                2
+              ],
               "weightLbs": 0.015,
               "weightSource": "owner-supplied (placeholder, may be revised)"
             },
@@ -3198,6 +3212,9 @@
                 ],
                 "label": "Doubles 4th-level spells"
               },
+              "doublesSpellLevels": [
+                4
+              ],
               "weightLbs": 0.015,
               "weightSource": "owner-supplied (placeholder, may be revised)"
             },
@@ -3224,6 +3241,9 @@
                 ],
                 "label": "Doubles 5th-level spells"
               },
+              "doublesSpellLevels": [
+                5
+              ],
               "weightLbs": 0.015,
               "weightSource": "owner-supplied (placeholder, may be revised)"
             },
@@ -3250,6 +3270,11 @@
                 ],
                 "label": "Doubles 1st through 3rd-level spells"
               },
+              "doublesSpellLevels": [
+                1,
+                2,
+                3
+              ],
               "weightLbs": 0.015,
               "weightSource": "owner-supplied (placeholder, may be revised)"
             },
@@ -3276,6 +3301,10 @@
                 ],
                 "label": "Doubles 4th- and 5th-level spells"
               },
+              "doublesSpellLevels": [
+                4,
+                5
+              ],
               "weightLbs": 0.015,
               "weightSource": "owner-supplied (placeholder, may be revised)"
             },
