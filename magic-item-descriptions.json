@@ -375,11 +375,6 @@
       "page": 22,
       "text": "This ring contains three wish spells instead of a variable number. It is otherwise the same as a multiple wish ring except that 25% (01–25) of three wish rings contain only limited wish spells."
     },
-    "rings.wizardry": {
-      "heading": "Ring of Wizardry",
-      "page": 22,
-      "text": "This ring doubles the number of spells a wizard may prepare each day in one or more spell levels. Only wizards can benefit from a ring of wizardry . Other classes, even those with spell ability, can neither use nor understand the working of such a ring. To determine the properties of a given ring use the table below: 01–50 doubles 1st-level spells 51–75 doubles 2nd-level spells 76–82 doubles 3rd-level spells 83–88 doubles 1st-and 2nd-level spells 89–92 doubles 4th-level spells 93–95 doubles 5th-level spells 96–99 doubles 1stthrough 3rd-level spells 100 doubles 4thand 5th-level spells"
-    },
     "rings.xRayVision": {
       "heading": "Ring of X-Ray Vision",
       "page": 22,
@@ -5892,6 +5887,118 @@
       "page": 15,
       "text": "When wielded by a character proficient with the whip, this weapon strikes at +3 “to hit” and damage. It can also be cracked in the air to produce a deafening sound, causing all creatures under eight hit dice (except the wielder) in a 20' radius to save versus spell or be deafened for 2-5 turns. The sound can be heard up to 1000' away.",
       "source": "GHA"
+    },
+    "rings.wizardry1st": {
+      "heading": "Ring of Wizardry (Doubles 1st-level spells)",
+      "page": 22,
+      "text": "This ring doubles the number of spells a wizard may prepare each day in one or more spell levels. Only wizards can benefit from a ring of wizardry . Other classes, even those with spell ability, can neither use nor understand the working of such a ring. To determine the properties of a given ring use the table below: 01–50 doubles 1st-level spells 51–75 doubles 2nd-level spells 76–82 doubles 3rd-level spells 83–88 doubles 1st-and 2nd-level spells 89–92 doubles 4th-level spells 93–95 doubles 5th-level spells 96–99 doubles 1stthrough 3rd-level spells 100 doubles 4thand 5th-level spells",
+      "variantOf": "rings.wizardry",
+      "variant": {
+        "die": "d100",
+        "roll": [
+          1,
+          50
+        ],
+        "label": "Doubles 1st-level spells"
+      }
+    },
+    "rings.wizardry2nd": {
+      "heading": "Ring of Wizardry (Doubles 2nd-level spells)",
+      "page": 22,
+      "text": "This ring doubles the number of spells a wizard may prepare each day in one or more spell levels. Only wizards can benefit from a ring of wizardry . Other classes, even those with spell ability, can neither use nor understand the working of such a ring. To determine the properties of a given ring use the table below: 01–50 doubles 1st-level spells 51–75 doubles 2nd-level spells 76–82 doubles 3rd-level spells 83–88 doubles 1st-and 2nd-level spells 89–92 doubles 4th-level spells 93–95 doubles 5th-level spells 96–99 doubles 1stthrough 3rd-level spells 100 doubles 4thand 5th-level spells",
+      "variantOf": "rings.wizardry",
+      "variant": {
+        "die": "d100",
+        "roll": [
+          51,
+          75
+        ],
+        "label": "Doubles 2nd-level spells"
+      }
+    },
+    "rings.wizardry3rd": {
+      "heading": "Ring of Wizardry (Doubles 3rd-level spells)",
+      "page": 22,
+      "text": "This ring doubles the number of spells a wizard may prepare each day in one or more spell levels. Only wizards can benefit from a ring of wizardry . Other classes, even those with spell ability, can neither use nor understand the working of such a ring. To determine the properties of a given ring use the table below: 01–50 doubles 1st-level spells 51–75 doubles 2nd-level spells 76–82 doubles 3rd-level spells 83–88 doubles 1st-and 2nd-level spells 89–92 doubles 4th-level spells 93–95 doubles 5th-level spells 96–99 doubles 1stthrough 3rd-level spells 100 doubles 4thand 5th-level spells",
+      "variantOf": "rings.wizardry",
+      "variant": {
+        "die": "d100",
+        "roll": [
+          76,
+          82
+        ],
+        "label": "Doubles 3rd-level spells"
+      }
+    },
+    "rings.wizardry1stAnd2nd": {
+      "heading": "Ring of Wizardry (Doubles 1st- and 2nd-level spells)",
+      "page": 22,
+      "text": "This ring doubles the number of spells a wizard may prepare each day in one or more spell levels. Only wizards can benefit from a ring of wizardry . Other classes, even those with spell ability, can neither use nor understand the working of such a ring. To determine the properties of a given ring use the table below: 01–50 doubles 1st-level spells 51–75 doubles 2nd-level spells 76–82 doubles 3rd-level spells 83–88 doubles 1st-and 2nd-level spells 89–92 doubles 4th-level spells 93–95 doubles 5th-level spells 96–99 doubles 1stthrough 3rd-level spells 100 doubles 4thand 5th-level spells",
+      "variantOf": "rings.wizardry",
+      "variant": {
+        "die": "d100",
+        "roll": [
+          83,
+          88
+        ],
+        "label": "Doubles 1st- and 2nd-level spells"
+      }
+    },
+    "rings.wizardry4th": {
+      "heading": "Ring of Wizardry (Doubles 4th-level spells)",
+      "page": 22,
+      "text": "This ring doubles the number of spells a wizard may prepare each day in one or more spell levels. Only wizards can benefit from a ring of wizardry . Other classes, even those with spell ability, can neither use nor understand the working of such a ring. To determine the properties of a given ring use the table below: 01–50 doubles 1st-level spells 51–75 doubles 2nd-level spells 76–82 doubles 3rd-level spells 83–88 doubles 1st-and 2nd-level spells 89–92 doubles 4th-level spells 93–95 doubles 5th-level spells 96–99 doubles 1stthrough 3rd-level spells 100 doubles 4thand 5th-level spells",
+      "variantOf": "rings.wizardry",
+      "variant": {
+        "die": "d100",
+        "roll": [
+          89,
+          92
+        ],
+        "label": "Doubles 4th-level spells"
+      }
+    },
+    "rings.wizardry5th": {
+      "heading": "Ring of Wizardry (Doubles 5th-level spells)",
+      "page": 22,
+      "text": "This ring doubles the number of spells a wizard may prepare each day in one or more spell levels. Only wizards can benefit from a ring of wizardry . Other classes, even those with spell ability, can neither use nor understand the working of such a ring. To determine the properties of a given ring use the table below: 01–50 doubles 1st-level spells 51–75 doubles 2nd-level spells 76–82 doubles 3rd-level spells 83–88 doubles 1st-and 2nd-level spells 89–92 doubles 4th-level spells 93–95 doubles 5th-level spells 96–99 doubles 1stthrough 3rd-level spells 100 doubles 4thand 5th-level spells",
+      "variantOf": "rings.wizardry",
+      "variant": {
+        "die": "d100",
+        "roll": [
+          93,
+          95
+        ],
+        "label": "Doubles 5th-level spells"
+      }
+    },
+    "rings.wizardry1stTo3rd": {
+      "heading": "Ring of Wizardry (Doubles 1st through 3rd-level spells)",
+      "page": 22,
+      "text": "This ring doubles the number of spells a wizard may prepare each day in one or more spell levels. Only wizards can benefit from a ring of wizardry . Other classes, even those with spell ability, can neither use nor understand the working of such a ring. To determine the properties of a given ring use the table below: 01–50 doubles 1st-level spells 51–75 doubles 2nd-level spells 76–82 doubles 3rd-level spells 83–88 doubles 1st-and 2nd-level spells 89–92 doubles 4th-level spells 93–95 doubles 5th-level spells 96–99 doubles 1stthrough 3rd-level spells 100 doubles 4thand 5th-level spells",
+      "variantOf": "rings.wizardry",
+      "variant": {
+        "die": "d100",
+        "roll": [
+          96,
+          99
+        ],
+        "label": "Doubles 1st through 3rd-level spells"
+      }
+    },
+    "rings.wizardry4thAnd5th": {
+      "heading": "Ring of Wizardry (Doubles 4th- and 5th-level spells)",
+      "page": 22,
+      "text": "This ring doubles the number of spells a wizard may prepare each day in one or more spell levels. Only wizards can benefit from a ring of wizardry . Other classes, even those with spell ability, can neither use nor understand the working of such a ring. To determine the properties of a given ring use the table below: 01–50 doubles 1st-level spells 51–75 doubles 2nd-level spells 76–82 doubles 3rd-level spells 83–88 doubles 1st-and 2nd-level spells 89–92 doubles 4th-level spells 93–95 doubles 5th-level spells 96–99 doubles 1stthrough 3rd-level spells 100 doubles 4thand 5th-level spells",
+      "variantOf": "rings.wizardry",
+      "variant": {
+        "die": "d100",
+        "roll": [
+          100,
+          100
+        ],
+        "label": "Doubles 4th- and 5th-level spells"
+      }
     }
   },
   "generalRules": [
