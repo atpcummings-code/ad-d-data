@@ -169,7 +169,7 @@
     },
     {
       "id": "mystraOld",
-      "name": "Mystra (Old)",
+      "name": "Mystra",
       "pantheon": "human",
       "portfolio": "Magic, Spells",
       "portfolioList": [
@@ -251,7 +251,7 @@
     },
     {
       "id": "midnightMystra",
-      "name": "Midnight (Mystra)",
+      "name": "Midnight",
       "pantheon": "human",
       "portfolio": "Magic, Spells (Ascended)",
       "portfolioList": [
