@@ -5725,7 +5725,8 @@
               "id": "jewels.broochOfShielding",
               "hasDescription": true,
               "weightLbs": 0.05,
-              "weightSource": "owner-supplied (placeholder, may be revised)"
+              "weightSource": "owner-supplied (placeholder, may be revised)",
+              "hasCharges": true
             },
             {
               "roll": [
