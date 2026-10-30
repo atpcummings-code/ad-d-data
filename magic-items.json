@@ -20,7 +20,8 @@
       "hasCharges": "true on items that carry charges (from the item description, or the Table 91 ring footnote 'limited by the number of charges'). The field is absent on all other items. The number of charges is not stored: it varies by item and is to be recorded by the app.",
       "container": "type EquipmentContainer marks an item that holds other items, with capacity in the same form as gear.json equipment containers: weightLimitLbs, volume {dimensionsIn, printed, volumeCuIn}, count {max, of}, restriction (null = none or not supplied). compartments (new here) lists identical compartments as quantity x limits, for items that are several containers in one; the totals on capacity are the sum. A volume with derived true was calculated from stated dimensions. contentsCountForEncumbrance false (owner rule): anything placed inside does not add to encumbrance; only the item's own weight counts. Absent on other containers, which count their contents normally.",
       "tomItems": "See meta.tomItems.",
-      "doublesSpellLevels": "Ring of Wizardry variants only. List of wizard spell levels (1-9) for which the ring doubles the number of spells the wearer may prepare each day. Add the character's base slots at each listed level again (doubling) when the ring is carried by a wizard."
+      "doublesSpellLevels": "Ring of Wizardry variants only. List of wizard spell levels (1-9) for which the ring doubles the number of spells the wearer may prepare each day. Add the character's base slots at each listed level again (doubling) when the ring is carried by a wizard.",
+      "usableBy": "Rods, staves and wands (tables 92-94) only. Classes that can use the item: any of priest, wizard, warrior, rogue, druid (same values as classRestriction), or ['ALL'] where the table lists no class restriction. classRestriction is unchanged and is absent where usableBy is ['ALL']."
     },
     "typos": {
       "Gauntets of Fumbling": "corrected to Gauntlets of Fumbling",
@@ -4012,6 +4013,10 @@
                 "priest",
                 "wizard"
               ],
+              "usableBy": [
+                "priest",
+                "wizard"
+              ],
               "name": "Rod of Absorption",
               "xp": 7500,
               "xpPrinted": "7,500",
@@ -4024,6 +4029,9 @@
               "roll": [
                 3,
                 4
+              ],
+              "usableBy": [
+                "ALL"
               ],
               "name": "Rod of Alertness",
               "xp": 7000,
@@ -4043,6 +4051,11 @@
                 "rogue",
                 "wizard"
               ],
+              "usableBy": [
+                "priest",
+                "rogue",
+                "wizard"
+              ],
               "name": "Rod of Beguiling",
               "xp": 5000,
               "xpPrinted": "5,000",
@@ -4056,6 +4069,9 @@
                 6,
                 7
               ],
+              "usableBy": [
+                "ALL"
+              ],
               "name": "Rod of Cancellation",
               "xp": 10000,
               "xpPrinted": "10,000",
@@ -4067,6 +4083,9 @@
               "roll": [
                 8,
                 8
+              ],
+              "usableBy": [
+                "ALL"
               ],
               "name": "Rod of Flailing",
               "xp": 2000,
@@ -4084,6 +4103,9 @@
               "classRestriction": [
                 "warrior"
               ],
+              "usableBy": [
+                "warrior"
+              ],
               "name": "Rod of Lordly Might",
               "xp": 6000,
               "xpPrinted": "6,000",
@@ -4096,6 +4118,9 @@
               "roll": [
                 10,
                 10
+              ],
+              "usableBy": [
+                "ALL"
               ],
               "name": "Rod of Passage",
               "xp": 5000,
@@ -4113,6 +4138,9 @@
               "classRestriction": [
                 "priest"
               ],
+              "usableBy": [
+                "priest"
+              ],
               "name": "Rod of Resurrection",
               "xp": 10000,
               "xpPrinted": "10,000",
@@ -4126,6 +4154,9 @@
                 12,
                 12
               ],
+              "usableBy": [
+                "ALL"
+              ],
               "name": "Rod of Rulership",
               "xp": 8000,
               "xpPrinted": "8,000",
@@ -4138,6 +4169,9 @@
               "roll": [
                 13,
                 14
+              ],
+              "usableBy": [
+                "ALL"
               ],
               "name": "Rod of Security",
               "xp": 3000,
@@ -4156,6 +4190,10 @@
                 "priest",
                 "wizard"
               ],
+              "usableBy": [
+                "priest",
+                "wizard"
+              ],
               "name": "Rod of Smiting",
               "xp": 4000,
               "xpPrinted": "4,000",
@@ -4169,6 +4207,9 @@
                 17,
                 17
               ],
+              "usableBy": [
+                "ALL"
+              ],
               "name": "Rod of Splendor",
               "xp": 2500,
               "xpPrinted": "2,500",
@@ -4181,6 +4222,9 @@
               "roll": [
                 18,
                 19
+              ],
+              "usableBy": [
+                "ALL"
               ],
               "name": "Rod of Terror",
               "xp": 3000,
@@ -4209,6 +4253,9 @@
           "name": "Rod of Distortion",
           "id": "rods.distortion",
           "roll": null,
+          "usableBy": [
+            "ALL"
+          ],
           "xp": 5000,
           "xpPrinted": "5,000",
           "source": "TOM",
@@ -4227,6 +4274,9 @@
           "classRestriction": [
             "priest"
           ],
+          "usableBy": [
+            "priest"
+          ],
           "weightLbs": 3.5,
           "weightSource": "owner-set",
           "hasCharges": true,
@@ -4236,6 +4286,9 @@
           "name": "Diplomacy Rod of Furyondy",
           "id": "rods.furyondyDiplomacy",
           "roll": null,
+          "usableBy": [
+            "ALL"
+          ],
           "xp": 4000,
           "xpPrinted": "4,000",
           "valueGp": 15000,
@@ -4256,6 +4309,9 @@
           "classRestriction": [
             "wizard"
           ],
+          "usableBy": [
+            "wizard"
+          ],
           "weightLbs": 3.5,
           "weightSource": "owner-set",
           "hasCharges": true,
@@ -4270,6 +4326,9 @@
           "valueGp": 15000,
           "source": "GHA",
           "classRestriction": [
+            "wizard"
+          ],
+          "usableBy": [
             "wizard"
           ],
           "weightLbs": 3.5,
@@ -4294,6 +4353,9 @@
                 1,
                 2
               ],
+              "usableBy": [
+                "ALL"
+              ],
               "name": "Staff-Mace",
               "xp": 1500,
               "xpPrinted": "1,500",
@@ -4307,6 +4369,10 @@
                 3
               ],
               "classRestriction": [
+                "priest",
+                "wizard"
+              ],
+              "usableBy": [
                 "priest",
                 "wizard"
               ],
@@ -4326,6 +4392,9 @@
               "classRestriction": [
                 "priest"
               ],
+              "usableBy": [
+                "priest"
+              ],
               "name": "Staff of Curing",
               "xp": 6000,
               "xpPrinted": "6,000",
@@ -4340,6 +4409,9 @@
                 6
               ],
               "classRestriction": [
+                "wizard"
+              ],
+              "usableBy": [
                 "wizard"
               ],
               "name": "Staff of the Magi",
@@ -4358,6 +4430,9 @@
               "classRestriction": [
                 "wizard"
               ],
+              "usableBy": [
+                "wizard"
+              ],
               "name": "Staff of Power",
               "xp": 12000,
               "xpPrinted": "12,000",
@@ -4372,6 +4447,9 @@
                 8
               ],
               "classRestriction": [
+                "priest"
+              ],
+              "usableBy": [
                 "priest"
               ],
               "name": "Staff of the Serpent",
@@ -4389,6 +4467,9 @@
               "classRestriction": [
                 "priest"
               ],
+              "usableBy": [
+                "priest"
+              ],
               "name": "Staff of Slinging",
               "xp": 2000,
               "xpPrinted": "2,000",
@@ -4401,6 +4482,9 @@
               "roll": [
                 11,
                 12
+              ],
+              "usableBy": [
+                "ALL"
               ],
               "name": "Staff-Spear +1",
               "xp": 1000,
@@ -4424,6 +4508,9 @@
                 11,
                 12
               ],
+              "usableBy": [
+                "ALL"
+              ],
               "name": "Staff-Spear +2",
               "xp": 1500,
               "xpPrinted": "1,500",
@@ -4445,6 +4532,9 @@
               "roll": [
                 11,
                 12
+              ],
+              "usableBy": [
+                "ALL"
               ],
               "name": "Staff-Spear +3",
               "xp": 2000,
@@ -4468,6 +4558,9 @@
                 11,
                 12
               ],
+              "usableBy": [
+                "ALL"
+              ],
               "name": "Staff-Spear +4",
               "xp": 2500,
               "xpPrinted": "2,500",
@@ -4490,6 +4583,9 @@
                 11,
                 12
               ],
+              "usableBy": [
+                "ALL"
+              ],
               "name": "Staff-Spear +5",
               "xp": 3000,
               "xpPrinted": "3,000",
@@ -4511,6 +4607,9 @@
               "roll": [
                 11,
                 12
+              ],
+              "usableBy": [
+                "ALL"
               ],
               "name": "Staff-Spear +3*",
               "xp": 3500,
@@ -4538,6 +4637,10 @@
                 "priest",
                 "wizard"
               ],
+              "usableBy": [
+                "priest",
+                "wizard"
+              ],
               "name": "Staff of Striking",
               "xp": 6000,
               "xpPrinted": "6,000",
@@ -4555,6 +4658,10 @@
                 "priest",
                 "wizard"
               ],
+              "usableBy": [
+                "priest",
+                "wizard"
+              ],
               "name": "Staff of Swarming Insects",
               "xp": 100,
               "xpPrinted": "100**",
@@ -4569,6 +4676,9 @@
                 16,
                 16
               ],
+              "usableBy": [
+                "ALL"
+              ],
               "name": "Staff of Thunder & Lightning",
               "xp": 8000,
               "xpPrinted": "8,000",
@@ -4581,6 +4691,9 @@
               "roll": [
                 17,
                 18
+              ],
+              "usableBy": [
+                "ALL"
               ],
               "name": "Staff of Withering",
               "xp": 8000,
@@ -4596,6 +4709,9 @@
                 19
               ],
               "classRestriction": [
+                "druid"
+              ],
+              "usableBy": [
                 "druid"
               ],
               "name": "Staff of the Woodlands",
@@ -4634,6 +4750,9 @@
           "classRestriction": [
             "wizard"
           ],
+          "usableBy": [
+            "wizard"
+          ],
           "weightLbs": 5,
           "weightSource": "owner-set",
           "hasCharges": true,
@@ -4648,6 +4767,10 @@
           "valueGp": 20000,
           "source": "GHA",
           "classRestriction": [
+            "priest",
+            "wizard"
+          ],
+          "usableBy": [
             "priest",
             "wizard"
           ],
@@ -4668,6 +4791,10 @@
             "priest",
             "wizard"
           ],
+          "usableBy": [
+            "priest",
+            "wizard"
+          ],
           "weightLbs": 5,
           "weightSource": "owner-set",
           "hasCharges": true,
@@ -4684,6 +4811,9 @@
           "classRestriction": [
             "wizard"
           ],
+          "usableBy": [
+            "wizard"
+          ],
           "weightLbs": 5,
           "weightSource": "owner-set",
           "hasCharges": true,
@@ -4698,6 +4828,9 @@
           "valueGp": 30000,
           "source": "GHA",
           "classRestriction": [
+            "wizard"
+          ],
+          "usableBy": [
             "wizard"
           ],
           "weightLbs": 5,
@@ -4724,6 +4857,9 @@
               "classRestriction": [
                 "wizard"
               ],
+              "usableBy": [
+                "wizard"
+              ],
               "name": "Wand of Conjuration",
               "xp": 7000,
               "xpPrinted": "7,000",
@@ -4737,6 +4873,9 @@
                 2,
                 2
               ],
+              "usableBy": [
+                "ALL"
+              ],
               "name": "Wand of Earth and Stone",
               "xp": 1000,
               "xpPrinted": "1,000",
@@ -4749,6 +4888,9 @@
               "roll": [
                 3,
                 3
+              ],
+              "usableBy": [
+                "ALL"
               ],
               "name": "Wand of Enemy Detection",
               "xp": 2000,
@@ -4764,6 +4906,10 @@
                 4
               ],
               "classRestriction": [
+                "priest",
+                "wizard"
+              ],
+              "usableBy": [
                 "priest",
                 "wizard"
               ],
@@ -4783,6 +4929,9 @@
               "classRestriction": [
                 "wizard"
               ],
+              "usableBy": [
+                "wizard"
+              ],
               "name": "Wand of Fire",
               "xp": 4500,
               "xpPrinted": "4,500",
@@ -4795,6 +4944,9 @@
               "roll": [
                 6,
                 6
+              ],
+              "usableBy": [
+                "ALL"
               ],
               "name": "Wand of Flame Extinguishing",
               "xp": 1500,
@@ -4812,6 +4964,9 @@
               "classRestriction": [
                 "wizard"
               ],
+              "usableBy": [
+                "wizard"
+              ],
               "name": "Wand of Frost",
               "xp": 6000,
               "xpPrinted": "6,000",
@@ -4824,6 +4979,9 @@
               "roll": [
                 8,
                 8
+              ],
+              "usableBy": [
+                "ALL"
               ],
               "name": "Wand of Illumination",
               "xp": 2000,
@@ -4839,6 +4997,9 @@
                 9
               ],
               "classRestriction": [
+                "wizard"
+              ],
+              "usableBy": [
                 "wizard"
               ],
               "name": "Wand of Illusion",
@@ -4857,6 +5018,9 @@
               "classRestriction": [
                 "wizard"
               ],
+              "usableBy": [
+                "wizard"
+              ],
               "name": "Wand of Lightning",
               "xp": 4000,
               "xpPrinted": "4,000",
@@ -4869,6 +5033,9 @@
               "roll": [
                 11,
                 11
+              ],
+              "usableBy": [
+                "ALL"
               ],
               "name": "Wand of Magic Detection",
               "xp": 2500,
@@ -4883,6 +5050,9 @@
                 12,
                 12
               ],
+              "usableBy": [
+                "ALL"
+              ],
               "name": "Wand of Magic Missiles",
               "xp": 4000,
               "xpPrinted": "4,000",
@@ -4896,6 +5066,9 @@
                 13,
                 13
               ],
+              "usableBy": [
+                "ALL"
+              ],
               "name": "Wand of Metal and Mineral Detection",
               "xp": 1500,
               "xpPrinted": "1,500",
@@ -4908,6 +5081,9 @@
               "roll": [
                 14,
                 14
+              ],
+              "usableBy": [
+                "ALL"
               ],
               "name": "Wand of Negation",
               "xp": 3500,
@@ -4923,6 +5099,9 @@
                 15
               ],
               "classRestriction": [
+                "wizard"
+              ],
+              "usableBy": [
                 "wizard"
               ],
               "name": "Wand of Paralyzation",
@@ -4941,6 +5120,9 @@
               "classRestriction": [
                 "wizard"
               ],
+              "usableBy": [
+                "wizard"
+              ],
               "name": "Wand of Polymorphing",
               "xp": 3500,
               "xpPrinted": "3,500",
@@ -4953,6 +5135,9 @@
               "roll": [
                 17,
                 17
+              ],
+              "usableBy": [
+                "ALL"
               ],
               "name": "Wand of Secret Door and Trap Location",
               "xp": 5000,
@@ -4967,6 +5152,9 @@
                 18,
                 18
               ],
+              "usableBy": [
+                "ALL"
+              ],
               "name": "Wand of Size Alteration",
               "xp": 3000,
               "xpPrinted": "3,000",
@@ -4979,6 +5167,9 @@
               "roll": [
                 19,
                 19
+              ],
+              "usableBy": [
+                "ALL"
               ],
               "name": "Wand of Wonder",
               "xp": 6000,
@@ -5007,6 +5198,9 @@
           "name": "Wand of Corridors",
           "id": "wands.corridors",
           "roll": null,
+          "usableBy": [
+            "ALL"
+          ],
           "xp": 4000,
           "xpPrinted": "4,000",
           "source": "TOM",
@@ -5019,6 +5213,9 @@
           "name": "Wand of Element Transmogrification",
           "id": "wands.elementTransmogrification",
           "roll": null,
+          "usableBy": [
+            "ALL"
+          ],
           "xp": 2000,
           "xpPrinted": "2,000",
           "source": "TOM",
@@ -5031,6 +5228,9 @@
           "name": "Wand of Misplaced Objects",
           "id": "wands.misplacedObjects",
           "roll": null,
+          "usableBy": [
+            "ALL"
+          ],
           "xp": 2000,
           "xpPrinted": "2,000",
           "source": "TOM",
@@ -5043,6 +5243,9 @@
           "name": "Wand of Prime Material Pocket",
           "id": "wands.primeMaterialPocket",
           "roll": null,
+          "usableBy": [
+            "ALL"
+          ],
           "xp": 5000,
           "xpPrinted": "5,000",
           "source": "TOM",
@@ -5062,6 +5265,9 @@
           "classRestriction": [
             "priest"
           ],
+          "usableBy": [
+            "priest"
+          ],
           "weightLbs": 0.1,
           "weightSource": "owner-set",
           "hasDescription": true
@@ -5077,6 +5283,9 @@
           "classRestriction": [
             "wizard"
           ],
+          "usableBy": [
+            "wizard"
+          ],
           "weightLbs": 0.1,
           "weightSource": "owner-set",
           "hasCharges": true,
@@ -5086,6 +5295,9 @@
           "name": "Dark Wand of the Sulhaut Mountains",
           "id": "wands.sulhautDark",
           "roll": null,
+          "usableBy": [
+            "ALL"
+          ],
           "xp": 1500,
           "xpPrinted": "1,500",
           "valueGp": 8000,
@@ -5106,6 +5318,9 @@
           "classRestriction": [
             "wizard"
           ],
+          "usableBy": [
+            "wizard"
+          ],
           "weightLbs": 0.1,
           "weightSource": "owner-set",
           "hasCharges": true,
@@ -5123,6 +5338,10 @@
             "priest",
             "wizard"
           ],
+          "usableBy": [
+            "priest",
+            "wizard"
+          ],
           "weightLbs": 0.1,
           "weightSource": "owner-set",
           "hasDescription": true
@@ -5131,6 +5350,9 @@
           "name": "Yatil Wand of Zooming",
           "id": "wands.yatilZooming",
           "roll": null,
+          "usableBy": [
+            "ALL"
+          ],
           "xp": 3500,
           "xpPrinted": "3,500",
           "valueGp": 17500,
